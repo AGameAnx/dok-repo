@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap>
+	<map>*</map> <!-- allow to be loaded on any map -->
+	<!-- the following 4 don't do anything ATM -->
+	<name>TEST MAP</name>
+	<description>TEST MAP</description>
+	<authors>SSSS</authors>
+	<players>2</players>
+	
+	<spawns>
+		<!-- team 1 -->
+		<spawn team="0" index="0" x="0" z="0" angle="0"/>
+		<spawn team="0" index="1" x="0" z="0" angle="0"/>
+		<spawn team="0" index="2" x="0" z="0" angle="0"/>
+		<!-- team 2 -->
+		<spawn team="1" index="0" x="0" z="0" angle="0"/>
+		<spawn team="1" index="1" x="0" z="0" angle="0"/>
+		<spawn team="1" index="2" x="0" z="0" angle="0"/>
+	</spawns>
+	
+	<resources> 
+		<!-- type 0 = cus, type 1 = rus -->
+		<resource x="0" z="0" type="0" amount="99999" collectors="99"/>
+		<resource x="2000" z="0" type="1" amount="99999" collectors="99"/>
+		<resource x="0" z="2000" type="1" amount="99999" collectors="99"/>
+		<resource x="2000" z="2000" type="0" amount="99999" collectors="99"/>
+	</resources>
+	
+	<artifacts>
+		<artifact x="1000" z="1000"/>
+	</artifacts>
+	
+	<ezs>
+		<ez team="1" x="1000" z="1000" radius="500"/>
+		<ez team="0" x="1000" z="1000" radius="500"/>
+	</ezs>
+	
+	<units>
+		<unit team="0" index="0" type="C_Baserunner" x="1000" z="0" angle="0"/>
+		<unit team="0" index="1" type="C_Baserunner" x="1000" z="400" angle="60"/>
+		<unit team="0" index="2" type="C_Baserunner" x="1000" z="800" angle="120"/>
+		<unit team="1" index="0" type="C_Baserunner" x="1000" z="1200" angle="180"/>
+		<unit team="1" index="1" type="C_Baserunner" x="1000" z="1600" angle="240"/>
+		<unit team="1" index="2" type="C_Baserunner" x="1000" z="2000" angle="300"/>
+	</units>
+</dokmap>
