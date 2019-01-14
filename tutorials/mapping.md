@@ -88,7 +88,7 @@ The layout of maps are stored in XML, this is the XML for Kalash Wreck with Fath
 Node Name | Description | Notes
 ---|---|---
 name | name of the map | (does nothing as of now)
-map | map string ID | (does nothing as of now)
+map | allowed map string IDs | comma seperated list of the allowed map IDs, `*` means all maps
 description | description of the map | (does nothing as of now)
 authors | list of the map authors | (does nothing as of now)
 players | max players for this map | (does nothing as of now)
@@ -97,8 +97,8 @@ resource | represents both CU and RU points | `type` represents CU (=0) or RU (=
 artifact | represents an artifact | you can have as many or few artifacts as you want, not just 3
 ez | represents an extraction zone | only 1 per team is possible
 unit | represents a unit | `team` and `index` should be same as in `<spawn/>`, `type` is the name of the unit to spawn, `angle` works the same as in `<spawn/>` (note units will only spawn for a player if the player is in the game)
-
-`<spawns>` `<resources>` `<artifacts>` and `<ezs>` are optional. Positive x points towards 90 degrees in sensors while positive z points towards 0 degrees in sensors. `team="0"` is shown as `Team 1` in game while `team="1"` is shown as `Team 2` in game.
+blocker | represents a blocker | `mask` is a comma seperated list of unit classes that can't pass through the blocker, `blocklof` is a boolean that changes whether the blocker blocks line of sight, `verts` is a list of a cloud of coordinates that make a *convex* shape
+`<spawns>`, `<resources>`, `<artifacts>`, `<ezs>`, `<units>` and `<blockers>` are optional. Positive x points towards 90 degrees in sensors while positive z points towards 0 degrees in sensors. `team="0"` is shown as `Team 1` in game while `team="1"` is shown as `Team 2` in game.
 
 ## Calculating Object Locations
 
@@ -107,8 +107,8 @@ The problem now is how do you know what coordinates to give objects? Doing this 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <dokmap>
-	<name>Khashar Approach</name>
-	<map>M10</map>
+	<name>Calibration Map</name>
+	<map>*</map>
 	<description>Test Map</description>
 	<authors>SSSS</authors>
 	<players>6</players>
@@ -124,17 +124,18 @@ The problem now is how do you know what coordinates to give objects? Doing this 
 		<spawn team="1" index="2" x="0" z="0" angle="0"/>
 	</spawns>
 	
-	<artifacts>
-		<artifact x="0" z="0"/>
-		<artifact x="4000" z="0"/>
-		<artifact x="0" z="8000"/>
-	</artifacts>
+	<resources>
+		<resource x="0" z="0" type="0" amount="7500" collectors="2"/>
+		<resource x="4000" z="0" type="0" amount="7500" collectors="2"/>
+		<resource x="0" z="8000" type="0" amount="7500" collectors="2"/>
+		<resource x="4000" z="8000" type="0" amount="7500" collectors="2"/>
+	</resources>
 </dokmap>
 ```
 
 Start the map and take a picture looking straight down from as far as possible. This layout will allow you to find the origin, orientation and scale of the map in the image you just took. Its possible that the map isn't centered on (0, 0) and some of these artifacts may be off the map/non-existent. If that happens just play around with the values until everything is on the map.
 
-![Layout planning example](layout-planning.png)
+![Layout planning example](mapping/layout-planning.png)
 
 Next step is to plan the layout. First draw some axis onto the map to make things easier, then draw the locations you want everything to be in. The above image doesn't use any artifacts since I used spawn locations instead because this build did not have artifacts yet however artifacts are the way to go since they don't move.
 
@@ -142,6 +143,6 @@ The final step is to use the image to calculate the coordinates for all the obje
 
 The measuring tool should show the x and y distances as well as the direct distance. Use the x and y distances (x->x, y->z) with the help of the axes if it doesn't show negative distances to work out the coordinates. Measure from the origin of the map (e.i. where the axes cross).
 
-![Different planning option](m09-grid.jpg)
+![Different planning option](mapping/m09-grid.jpg)
 
 This is another way to do things, it can be a quicker way than the above method if you are able to generate such a grid.
