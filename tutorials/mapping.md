@@ -58,30 +58,28 @@ The layout of maps are stored in XML, this is the XML for Kalash Wreck with Fath
 	
 	<ezs>
 		<!-- extraction zones -->
-		<!-- only tested 1 per team but the code suggests you can only have 1 at a time -->
 		<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
 		<ez team="0" x="-1500" z="6500" radius="500"/>
 		<ez team="1" x="-5000" z="4500" radius="500"/>
 	</ezs>
   
-  <units>
-	<unit team="0" index="0" type="G_Fathership" x="-1000" z="4000" angle="0"/>
-	<unit team="0" index="0" type="G_SupportCruiser" x="-1000" z="3400" angle="0"/>
-	<unit team="0" index="0" type="G_Baserunner" x="-1000" z="3200" angle="0"/>
-	<unit team="0" index="0" type="G_Harvester" x="-1150" z="4600" angle="0"/>
-	<unit team="0" index="0" type="G_Harvester" x="-1050" z="4600" angle="0"/>
-	<unit team="0" index="0" type="G_Harvester" x="-950" z="4600" angle="0"/>
-	<unit team="0" index="0" type="G_Harvester" x="-850" z="4600" angle="0"/>
-	  
-	<unit team="1" index="0" type="G_Fathership" x="-5950" z="7200" angle="128"/>
-	<unit team="1" index="0" type="G_SupportCruiser" x="-6422" z="7569" angle="128"/>
-	<unit team="1" index="0" type="G_Baserunner" x="-6580" z="7692" angle="128"/>
-	<unit team="1" index="0" type="G_Harvester" x="-5417" z="6920" angle="128"/>
-	<unit team="1" index="0" type="G_Harvester" x="-5457" z="6860" angle="128"/>
-	<unit team="1" index="0" type="G_Harvester" x="-5497" z="6800" angle="128"/>
-	<unit team="1" index="0" type="G_Harvester" x="-5537" z="6740" angle="128"/>
-  </units>
-	
+	<units>
+		<unit team="0" index="0" type="G_Fathership" x="-1000" z="4000" angle="0"/>
+		<unit team="0" index="0" type="G_SupportCruiser" x="-1000" z="3400" angle="0"/>
+		<unit team="0" index="0" type="G_Baserunner" x="-1000" z="3200" angle="0"/>
+		<unit team="0" index="0" type="G_Harvester" x="-1150" z="4600" angle="0"/>
+		<unit team="0" index="0" type="G_Harvester" x="-1050" z="4600" angle="0"/>
+		<unit team="0" index="0" type="G_Harvester" x="-950" z="4600" angle="0"/>
+		<unit team="0" index="0" type="G_Harvester" x="-850" z="4600" angle="0"/>
+
+		<unit team="1" index="0" type="G_Fathership" x="-5950" z="7200" angle="128"/>
+		<unit team="1" index="0" type="G_SupportCruiser" x="-6422" z="7569" angle="128"/>
+		<unit team="1" index="0" type="G_Baserunner" x="-6580" z="7692" angle="128"/>
+		<unit team="1" index="0" type="G_Harvester" x="-5417" z="6920" angle="128"/>
+		<unit team="1" index="0" type="G_Harvester" x="-5457" z="6860" angle="128"/>
+		<unit team="1" index="0" type="G_Harvester" x="-5497" z="6800" angle="128"/>
+		<unit team="1" index="0" type="G_Harvester" x="-5537" z="6740" angle="128"/>
+	</units>
 </dokmap>
 ```
 
@@ -98,6 +96,7 @@ artifact | represents an artifact | you can have as many or few artifacts as you
 ez | represents an extraction zone | only 1 per team is possible
 unit | represents a unit | `team` and `index` should be same as in `<spawn/>`, `type` is the name of the unit to spawn, `angle` works the same as in `<spawn/>` (note units will only spawn for a player if the player is in the game)
 blocker | represents a blocker | `mask` is a comma seperated list of unit classes that can't pass through the blocker, `blocklof` is a boolean that changes whether the blocker blocks line of sight, `verts` is a list of a cloud of coordinates that make a *convex* shape
+blockers | adds extra navmesh options | `existing`: false means existing map blockers are removed, true is the default and means they aren't removed `carrier`: true is the default and has no effect, false means carrier blockers are removed but carries wont path around Ground class blockers (its fine for most maps but using `existing` and `blocker`s instead is the best way except on some maps where it doesnt make a difference)
 
 `<spawns>`, `<resources>`, `<artifacts>`, `<ezs>`, `<units>` and `<blockers>` are optional. Positive x points towards 90 degrees in sensors while positive z points towards 0 degrees in sensors. `team="0"` is shown as `Team 1` in game while `team="1"` is shown as `Team 2` in game.
 
