@@ -9,7 +9,7 @@ Please add a description for your uploads here and sort alphabetically by `Name`
 | kalash-spgaalsien | Begil, SSSS, Who | Spawn with a SP Gaalsien carrier and starting units |
 | old-cape | SSSS | The v0.16 edition |
 | old-epsilon | SSSS | The v0.10-0.16 edition |
-| test | SSSS | Can load onto any map for testing purposes |
+| test | SSSS | Dummy layout for testing purposes |
 
 ## Patches
 | Name | Authors | Description |

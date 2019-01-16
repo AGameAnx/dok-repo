@@ -1,17 +1,22 @@
 # Deserts of Kharak Mapping Tutorial
 In order to create custom maps you need the More Maps mod. Find the install directory of DoK `(Steam Client->Library->Right Click Deserts of Kharak->Properties...->Local Files->Browse Local Files)`. Then goto `Data/Managed/maps` (location for easy manual installation) where you should see a bunch of `.dokmap` files. To create the map mod modify the map file that belongs to the map you want to change. After each change to the file you only need to restart the level, you don't have to restart the whole game.
 
-## Map Layout Format
+Map Layout Format
+======
 The layout of maps are stored in XML, this is the XML for Kalash Wreck with Fathership:
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <dokmap>
-	<!-- the following 5 dont do anything atm -->
-	<name>Kalash Wreck</name>
 	<map>M05</map>
-	<description>1v1 fathership duel map</description>
+	<mode>Team</mode>
+	<!-- the following 4 don't do anything -->
+	<name>Kalash Wreck</name>
+	<description>Fathership duel map</description>
 	<authors>Begil, SSSS</authors>
 	<players>2</players>
+	
+	<heat>10</heat> <!-- optional -->
+	<bounds top="10000" right="2000" bottom="0" left="-8000"/> <!-- optional -->
 	
 	<spawns>
 		<!-- team 1 -->
@@ -83,24 +88,27 @@ The layout of maps are stored in XML, this is the XML for Kalash Wreck with Fath
 </dokmap>
 ```
 
-Node Name | Description | Notes
----|---|---
-name | name of the map | (does nothing as of now)
-map | allowed map string IDs | comma seperated list of the allowed map IDs, `*` means all maps
-description | description of the map | (does nothing as of now)
-authors | list of the map authors | (does nothing as of now)
-players | max players for this map | (does nothing as of now)
-spawn | represents a spawn point | `index` is the player index within a team which means the pair (`team`, `index`) must be unique, angle is the angle in degrees (same angles as in sensor manager)
-resource | represents both CU and RU points | `type` represents CU (=0) or RU (=1), `amount` is the amount of that resource and `collectors` is the max number of collectors that can mine at once
-artifact | represents an artifact | you can have as many or few artifacts as you want, not just 3
-ez | represents an extraction zone | only 1 per team is possible
-unit | represents a unit | `team` and `index` should be same as in `<spawn/>`, `type` is the name of the unit to spawn, `angle` works the same as in `<spawn/>` (note units will only spawn for a player if the player is in the game)
-blocker | represents a blocker | `mask` is a comma seperated list of unit classes that can't pass through the blocker, `blocklof` is a boolean that changes whether the blocker blocks line of sight, `verts` is a list of a cloud of coordinates that make a *convex* shape
-blockers | adds extra navmesh options | `existing`: false means existing map blockers are removed, true is the default and means they aren't removed `carrier`: true is the default and has no effect, false means carrier blockers are removed but carries won't path around Ground class blockers (its fine for most maps but using `existing` and `blocker`s instead is the best way except on some maps where it doesnt make a difference)
+| Node Name | Description | Notes |
+| --------- | ----------- | ----- |
+| name | name of the layout | (does nothing as of now) |
+| map | allowed map string IDs | comma separated list of the allowed map IDs, `*` means all maps (see [maps.txt](maps.txt) for a list of all map names) |
+| mode | the gamemode the layout is for | the options are `Team` and `FFA` - the layout won't load for another gamemode |
+| description | description of the layout | (does nothing as of now) |
+| authors | list of the layout authors | (does nothing as of now) |
+| players | max players for this layout | (does nothing as of now, the max is always 6 on all maps) |
+| bounds | sets the location for the edges of the map | `top` is the highest z bound - `bottom` is the lowest z bound - `right` is highest x bound - `left` is the lowest x bound |
+| spawn | represents a spawn point | `index` is the player index within a team which means the pair (`team`, `index`) must be unique (for FFA index is not needed, give each player its own team) - angle is the angle in degrees (same angles as in sensor manager) |
+| resource | represents both CU and RU points | `type` represents CU (=0) or RU (=1) - `amount` is the amount of that resource - `collectors` is the max number of collectors that can mine at once |
+| artifact | represents an artifact | you can have as many or few artifacts as you want (not only 3) |
+| ez | represents an extraction zone | only 1 per team is possible |
+| unit | represents a unit | `team` and `index` should be same as in `<spawn/>` - `type` is the name of the unit to spawn (for FFA index is not needed, just match `team` with the corresponding `team` in `<spawn/>`) - `angle` works the same as in `<spawn/>` (note units will only spawn for a player if the player is in the game - see [units.txt](units.txt) for a list of all unit names) |
+| blocker | represents a blocker | `mask` is a comma separated list of unit classes that can't pass through the blocker - `blocklof` is a boolean that changes whether the blocker blocks line of sight - `verts` is a cloud of coordinates that make a *convex* shape |
+| blockers | adds extra blocker options | `existing`: false means existing map blockers are removed, true is the default and means they aren't removed - `carrier`: true is the default and has no effect, false means carrier blockers are removed but carries won't path around Ground class blockers (its fine for most maps but using `existing` and `blocker`s instead is the best way except on some maps where it doesn't make a difference) |
 
 `<spawns>`, `<resources>`, `<artifacts>`, `<ezs>`, `<units>` and `<blockers>` are optional. Positive x points towards 90 degrees in sensors while positive z points towards 0 degrees in sensors. `team="0"` is shown as `Team 1` in game while `team="1"` is shown as `Team 2` in game.
 
-## Calculating Object Locations
+Calculating Object Locations
+======
 
 The problem now is how do you know what coordinates to give objects? Doing this by trial and error would take far too long. First setup some spawn points like this:
 
@@ -135,7 +143,7 @@ The problem now is how do you know what coordinates to give objects? Doing this 
 
 Start the map and take a picture looking straight down from as far as possible. This layout will allow you to find the origin, orientation and scale of the map in the image you just took. Its possible that the map isn't centered on (0, 0) and some of these artifacts may be off the map/non-existent. If that happens just play around with the values until everything is on the map.
 
-![Layout planning example](mapping/layout-planning.png)
+![Layout planning example](examples/layout-planning.png)
 
 Next step is to plan the layout. First draw some axis onto the map to make things easier, then draw the locations you want everything to be in. The above image doesn't use any artifacts since I used spawn locations instead because this build did not have artifacts yet however artifacts are the way to go since they don't move.
 
@@ -143,6 +151,8 @@ The final step is to use the image to calculate the coordinates for all the obje
 
 The measuring tool should show the x and y distances as well as the direct distance. Use the x and y distances (x->x, y->z) with the help of the axes if it doesn't show negative distances to work out the coordinates. Measure from the origin of the map (e.i. where the axes cross).
 
-![Different planning option](mapping/m09-grid.jpg)
+![Different planning option](examples/m09-grid.jpg)
+[Different planning option](beladin_sea_raiders.pptx)
 
-This is another way to do things, it can be a quicker way than the above method if you are able to generate such a grid.
+These are another way to do things, it can be a quicker way than the above method if you are able to generate such a grid. The PowerPoint shows how to make one.
+
