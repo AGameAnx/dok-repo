@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap>
+
+<mode>FFA</mode>
+	<name>Canyon Outpost 3 FFA</name>
+	<map>MP_07-Outpost-FFA</map>
+	<description>3player FFA</description>
+	<authors>FrostyTeeth</authors>
+	<players>3</players>
+	
+	<heat>10</heat> <!-- optional -->
+			
+	<spawns>
+		<!-- team 1 -->
+		<spawn team="0" x="1" z="4200" angle="180"/>
+		<spawn team="1" x="3100" z="-2200" angle="315"/>
+		<spawn team="2" x="-3100" z="-2200" angle="45"/>
+
+		<!-- team 2 -->
+		<spawn team="3" x="1000" z="1000" angle="0"/>
+		<spawn team="4" x="-1000" z="2000" angle="0"/>
+		<spawn team="5" x="-1000" z="1000" angle="0"/>
+	</spawns>
+	
+	<resources>
+		<!-- type 0 = cus, type 1 = rus, type 2 = wreck (wreck needs testing) -->
+		<!-- player 1 middle -->
+		<resource x="200" z="4000" type="0" amount="7000" collectors="2"/>
+		<resource x="200" z="4100" type="1" amount="3000" collectors="2"/>
+		<resource x="-200" z="4000" type="0" amount="7000" collectors="2"/>
+		<resource x="-200" z="4100" type="1" amount="3000" collectors="2"/>
+		<resource x="0" z="4600" type="0" amount="2600" collectors="2"/>
+
+		<!-- player 2 -->
+		<resource x="3100" z="-1900" type="0" amount="7000" collectors="2"/>
+		<resource x="3300" z="-2100" type="0" amount="7000" collectors="2"/>
+		<resource x="3200" z="-2000" type="1" amount="3000" collectors="2"/>
+
+		<!-- player 3 -->
+		<resource x="-3300" z="-2100" type="0" amount="7000" collectors="2"/>
+		<resource x="-3100" z="-1900" type="0" amount="7000" collectors="2"/>
+		<resource x="-3200" z="-2000" type="1" amount="3000" collectors="2"/>
+
+		<!-- Map Centre -->
+		<resource x="1" z="1" type="0" amount="20000" collectors="3"/>
+		<resource x="1" z="-100" type="1" amount="4000" collectors="3"/>
+
+		<!-- corners -->
+		<resource x="-4100" z="4200" type="0" amount="20000" collectors="3"/>
+		<resource x="-4200" z="4100" type="1" amount="4000" collectors="3"/>
+
+		<resource x="4100" z="4200" type="0" amount="20000" collectors="3"/>
+		<resource x="4200" z="4100" type="1" amount="4000" collectors="3"/>
+	</resources>
+	
+</dokmap>
