@@ -8,8 +8,8 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | **/l kalash-fathership** | Begil, SSSS | Spawn with a Fathership and SP Gaalsien starting units |
 | **/l kalash-sakala** | Begil, SSSS | Spawn with a Sakala and SP Coalition starting units |
 | **/l kalash-spgaalsien** | Begil, SSSS, Who | Spawn with a SP Gaalsien carrier and starting units |
-| **/l old-cape** | SSSS | The v0.16 edition |
-| **/l old-epsilon** | SSSS | The v0.10-0.16 edition |
+| **/l old-cape** | SSSS | The v0.16 default for Cape Wrath |
+| **/l old-epsilon** | SSSS | The v0.10-0.16 default for Epsilon Base |
 | **/l test** | SSSS | Dummy layout for testing purposes |
 
 ## Patches
