@@ -152,7 +152,7 @@ The final step is to use the image to calculate the coordinates for all the obje
 The measuring tool should show the x and y distances as well as the direct distance. Use the x and y distances (x->x, y->z) with the help of the axes if it doesn't show negative distances to work out the coordinates. Measure from the origin of the map (e.i. where the axes cross).
 
 ![Different planning option](examples/m09-grid.jpg)
-[Different planning option](beladin_sea_raiders.pptx)
+[Different planning option](exmaples/beladin_sea_raiders.pptx)
 
 These are another way to do things, it can be a quicker way than the above method if you are able to generate such a grid. The PowerPoint shows how to make one.
 
