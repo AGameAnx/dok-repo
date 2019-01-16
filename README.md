@@ -1,5 +1,7 @@
 # dok-repo: More Maps repository for layouts and patches
-Please add a description for your uploads here and sort alphabetically by `Name`:
+Please add a description for your uploads here and sort alphabetically by `Name`.
+If you want to upload a temporary testing layout or patch put a dash before its name and don't add it to the list.
+Use only dashes as spaces, not underscores, that way people won't have to remember which have dashes and which have underscores.
 
 ## Layouts
 | Name | Authors | Description |
