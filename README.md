@@ -1,4 +1,4 @@
-# dok-repo: More Maps repository for layouts and patches
+# Homeworld: Deserts of Kharak - More Maps Repository
 Please add a description for your uploads here and sort alphabetically by `Name`.
 If you want to upload a temporary testing layout or patch put a dash before its name and don't add it to the list.
 
