@@ -1,3 +1,3 @@
 # Help
-- [Commands](commands.md)
-- [Settings](settings.md)
+- [Commands](commands.md#commands)
+- [Settings](settings.md#settings)

@@ -1,5 +1,4 @@
 # Credits
-
 - **AGameAnx** (Subsystem developer)
 - **Begil** (Default map modder, Tester)
 - **Catharsis** (Tester)
