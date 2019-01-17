@@ -18,6 +18,7 @@ Team:
 FFA:
 
 | Command | Maps | Authors | Description
+| ------- | ---- | ------- | -----------
 | **/l canyon-outpost-FFA3** | Canyon Outpost | FrostyTeeth | A layout for 3 players on Canyon Outpost FFA [4]
 
 ## Patches
