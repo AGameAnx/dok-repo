@@ -1,5 +1,5 @@
 # Team
-| String ID          | Name                      | SP Name               |
+| String ID          | Name                      | Notes                 |
 | ------------------ | ------------------------- | --------------------- |
 | MP_05-Teeth        | Kalash Teeth [2]          |                       |
 | MP_01-Crater       | Torin Crater [2]          |                       |
@@ -30,12 +30,14 @@
 | M11                | Kashar Plateau [6]        | Kashar Plateau        |
 | M12                | Taiidan Crater [6]        | Torin Crater          |
 | M13                | Prime Anomaly [6]         | Khar-Toba             |
+| DEBUG_EmptyMap     | TEST Empty Map            | Doesn't load          |
 
 # FFA
-| String ID          | Name                     |
-| ------------------ | ------------------------ |
-| MP_05-Teeth-FFA    | FFA - Kalash Teeth [2]   |
-| MP_24_FFA          | FFA - Torin Crater [2]   |
-| MP_07-Outpost-FFA  | FFA - Canyon Outpost [4] |
-| MP_11-DuneSea-FFA  | FFA - Dune Sea [4]       |
-| MP_10-KharToba-FFA | FFA - Khar-Toba [6]      |
+| String ID          | Name                     | Notes                            |
+| ------------------ | ------------------------ | -------------------------------- |
+| MP_05-Teeth-FFA    | FFA - Kalash Teeth [2]   |                                  |
+| MP_01-Crater       | FFA - Torin Crater [2]   | Yes, same ID as the team version |
+| MP_07-Outpost-FFA  | FFA - Canyon Outpost [4] |                                  |
+| MP_11-DuneSea-FFA  | FFA - Dune Sea [4]       |                                  |
+| MP_10-KharToba-FFA | FFA - Khar-Toba [6]      |                                  |
+| MP_24_FFA          | MP_24_FFA                | Doesn't load                     |

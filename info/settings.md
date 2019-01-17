@@ -1,3 +1,5 @@
+# Settings
+
 _Zoom:_
 The value in `Data/Managed/settings/zoom.txt` is the amount to increase the max zoom by. 
 The default is 0 meaning your zoom is the same as vanilla. For reference, your vanilla max zoom is 1500.
