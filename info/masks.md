@@ -1,5 +1,6 @@
 # Masks
 | Unit Class       | Value      |
+| ---------------- | ---------- |
 | None             | 0          |
 | Air              | 1          |
 | Ground           | 2          |

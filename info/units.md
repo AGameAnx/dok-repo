@@ -18,14 +18,14 @@
 | C_GunShip_MP             |
 | C_HAC                    | AAV
 | C_HAC_MP                 | AAV
-| C_HAC_Upgrade01          | Missile Battery
-| C_HAC_Upgrade01_MP       | Missile Battery
+| C_HAC_Upgrade01          | Missile battery
+| C_HAC_Upgrade01_MP       | Missile battery
 | C_Harvester              |
 | C_Harvester_MP           |
-| C_Interceptor            | Strike Fighter
-| C_Interceptor_MP         | Strike Fighter
+| C_Interceptor            | Strike fighter
+| C_Interceptor_MP         | Strike fighter
 | C_Mine                   |
-| C_PopcapScanner          | Logistics Module
+| C_PopcapScanner          | Logistics module
 | C_Probe                  |
 | C_Probe_MP               |
 | C_Rachel                 |
@@ -41,13 +41,13 @@
 | C_Sob_Escort_MP          | Soban LAV
 | C_Sob_NukeEmitter_MP     |
 | C_Sob_NukeSight_MP       | The icon and sensor view for MWEs
-| C_Sob_PopcapScanner      | Armed Logistics Module
+| C_Sob_PopcapScanner      | ALM
 | C_Sob_Railgun_MP         |
 | C_Sob_SupportCruiser_MP  |
 | C_SupportCruiser         |
 | C_SupportCruiser_MP      |
-| G_ArtilleryCruiser       | Assault Cruiser
-| G_ArtilleryCruiser_MP    | Assault Cruiser
+| G_ArtilleryCruiser       | Assault cruiser
+| G_ArtilleryCruiser_MP    | Assault cruiser
 | G_Baserunner             |
 | G_Baserunner_MP          |
 | G_Battlecruiser          |
@@ -56,10 +56,10 @@
 | G_Bomber_MP              |
 | G_Carrier                |
 | G_Carrier_MP             |
-| G_Catamaran              | Assault Ship
-| G_Catamaran_MP           | Assault Ship
-| G_Catamaran_Upgrade01    | Missile Ship
-| G_Catamaran_Upgrade01_MP | Missile Ship
+| G_Catamaran              | Assault ship
+| G_Catamaran_MP           | Assault ship
+| G_Catamaran_Upgrade01    | Missile ship
+| G_Catamaran_Upgrade01_MP | Missile ship
 | G_ControlTower           |
 | G_Fathership             | The K'Had Sajuuk's carrier
 | G_Harvester              |
@@ -75,9 +75,9 @@
 | G_SandSkimmer_MP         |
 | G_Scanner                |
 | G_Scanner_MP             |
-| G_StarHull_Upgrade01     | Assault Railgun
-| G_StarHull_Upgrade01_MP  | Assault Railgun
-| G_StarHullTank           | Heavy Railgun
+| G_StarHull_Upgrade01     | Assault railgun
+| G_StarHull_Upgrade01_MP  | Assault railgun
+| G_StarHullTank           | Heavy railgun
 | G_StarHullTank_MP        | Heavy Railgun
 | G_SupportCruiser         |
 | G_SupportCruiser_MP      |
@@ -89,7 +89,7 @@
 | K_Baserunner_MP          |
 | K_Bomber_MP              |
 | K_Carrier_MP             |
-| K_ExplodingSkimmer_MP    | Blast Drone
+| K_ExplodingSkimmer_MP    | Blast drone
 | K_Harvester_MP           |
 | K_HeavyRailgun_MP        |
 | K_HonorGuard_MP          |
@@ -102,7 +102,7 @@
 | N_DemoCharge_AI          |
 | N_DemoCharge_MP          |
 | N_Displacer_MP           |
-| N_ECMField_MP            | Targeting Jammer
+| N_ECMField_MP            | Targeting jammer
 | N_Gun_Turret             |
 | N_Gun_Turret_MP          |
 | N_MissileBarrage_Sight   |

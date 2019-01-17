@@ -1,6 +1,5 @@
 # Commands
-Use commands in a multiplayer lobby once everyone has joined the lobby.
-(Calling any of the these commands with `<name>` being `none` will clear the layout or patch.)
+Use commands in a multiplayer lobby once everyone has joined the lobby (calling any of the these commands with `<name>` being `none` will clear the layout or patch.)
 
 | Command              | Description
 | -------------------- | -----------------------
