@@ -91,7 +91,7 @@ The layout of maps are stored in XML, this is the XML for Kalash Wreck with Fath
 | Node Name | Description | Notes |
 | --------- | ----------- | ----- |
 | name | name of the layout | (does nothing as of now) |
-| map | allowed map string IDs | comma separated list of the allowed map IDs, `*` means all maps (see [maps.txt](maps.txt) for a list of all map names) |
+| map | allowed map string IDs | comma separated list of the allowed map IDs, `*` means all maps (see [maps.md](maps.md) for a list of all map names) |
 | mode | the gamemode the layout is for | the options are `Team` and `FFA` - the layout won't load for another gamemode |
 | description | description of the layout | (does nothing as of now) |
 | authors | list of the layout authors | (does nothing as of now) |
@@ -101,8 +101,8 @@ The layout of maps are stored in XML, this is the XML for Kalash Wreck with Fath
 | resource | represents both CU and RU points | `type` represents CU (=0) or RU (=1) - `amount` is the amount of that resource - `collectors` is the max number of collectors that can mine at once |
 | artifact | represents an artifact | you can have as many or few artifacts as you want (not only 3) |
 | ez | represents an extraction zone | only 1 per team is possible |
-| unit | represents a unit | `team` and `index` should be same as in `<spawn/>` - `type` is the name of the unit to spawn (for FFA index is not needed, just match `team` with the corresponding `team` in `<spawn/>`) - `angle` works the same as in `<spawn/>` (note units will only spawn for a player if the player is in the game - see [units.txt](units.txt) for a list of all unit names) |
-| blocker | represents a blocker | `mask` is a comma separated list of unit classes that can't pass through the blocker (see [masks.txt](masks.txt) for a list of all unit class names) - `blocklof` is a boolean that changes whether the blocker blocks line of sight - `verts` is a cloud of coordinates that make a *convex* shape |
+| unit | represents a unit | `team` and `index` should be same as in `<spawn/>` - `type` is the name of the unit to spawn (for FFA index is not needed, just match `team` with the corresponding `team` in `<spawn/>`) - `angle` works the same as in `<spawn/>` (note units will only spawn for a player if the player is in the game - see [units.md](units.md) for a list of all unit names) |
+| blocker | represents a blocker | `mask` is a comma separated list of unit classes that can't pass through the blocker (see [masks.md](masks.md) for a list of all unit class names) - `blocklof` is a boolean that changes whether the blocker blocks line of sight - `verts` is a cloud of coordinates that make a *convex* shape |
 | blockers | adds extra blocker options | `existing`: false means existing map blockers are removed, true is the default and means they aren't removed - `carrier`: true is the default and has no effect, false means carrier blockers are removed but carries won't path around Ground class blockers (its fine for most maps but using `existing` and `blocker`s instead is the best way except on some maps where it doesn't make a difference) |
 
 `<spawns>`, `<resources>`, `<artifacts>`, `<ezs>`, `<units>` and `<blockers>` are optional. Positive x points towards 90 degrees in sensors while positive z points towards 0 degrees in sensors. `team="0"` is shown as `Team 1` in game while `team="1"` is shown as `Team 2` in game.
