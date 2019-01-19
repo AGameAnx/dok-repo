@@ -16,7 +16,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | **/l prime-anomaly-2112** | Kalash Site & Wreck | FrostyTeeth | Spawn with a SP Gaalsien carrier and starting units
 | **/l test** | All | SSSS | Dummy layout for testing purposes
 | **/l torin-crater-ffa4** | Torin Crater | FrostyTeeth | A FFA for 4 players
-| **/l torin-crater-inout** | Torin Crater | FrostyTeeth | 2v2 between a team in, and outside the crater
+| **/l torin-crater-inout** | Torin Crater | FrostyTeeth | 2v2 between a team in and outside the crater
 | **/l wg-2v2** | Whispering Gallery | FrostyTeeth | 2v2 layout for Whispering Gallery
 
 ## Patches
