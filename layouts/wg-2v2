@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap>
+	<!-- the following 5 dont do anything atm -->
+	<name>Whispering Gallery</name>
+	<map>M32</map>
+	<description>2v2League layout. carriers and artifacts have different shortest paths</description>
+	<authors>FrostyTeeth</authors>
+	<players>4</players>
+	
+	<spawns>
+		<!-- team 1 -->
+		<spawn team="0" index="0" x="-700" z="-1100" angle="90"/>
+		<spawn team="0" index="1" x="-2000" z="-5450" angle="0"/>
+
+		<!-- team 2 -->
+		<spawn team="1" index="0"  x="-5600" z="3600" angle="130"/>
+		<spawn team="1" index="1" x="-3200" z="8050" angle="0"/>
+
+	</spawns>
+	
+	<resources>
+		<!-- type 0 = cus, type 1 = rus, type 2 = wreck (wreck needs testing) -->
+		<!-- team 1 -->
+		<resource x="-780" z="-1300" type="0" amount="7500" collectors="2"/>
+		<resource x="-730" z="-1300" type="1" amount="3000" collectors="2"/>
+		<resource x="-680" z="-1300" type="0" amount="7500" collectors="2"/>
+
+		<resource x="4250" z="-5000" type="0" amount="10500" collectors="2"/>
+		<resource x="4250" z="-5050" type="1" amount="4000" collectors="2"/>
+
+		<resource x="4500" z="-1800" type="0" amount="10500" collectors="2"/>
+		<resource x="4550" z="-1800" type="1" amount="4000" collectors="2"/>
+
+		<resource x="-2200" z="-5500" type="0" amount="7500" collectors="2"/>
+		<resource x="-2200" z="-5450" type="1" amount="3000" collectors="2"/>
+		<resource x="-2200" z="-5400" type="0" amount="7500" collectors="2"/>
+
+		<resource x="-7000" z="-1350" type="0" amount="10500" collectors="2"/>
+		<resource x="-7050" z="-1350" type="1" amount="4000" collectors="2"/>
+
+		<resource x="-8500" z="500" type="0" amount="10500" collectors="2"/>
+		<resource x="-8560" z="540" type="1" amount="4000" collectors="2"/>
+
+		<!-- team 2 -->
+		<resource x="-5500" z="3900" type="0" amount="7500" collectors="2"/>
+		<resource x="-5540" z="3914" type="1" amount="3000" collectors="2"/>
+		<resource x="-5580" z="3928" type="0" amount="7500" collectors="2"/>
+
+		<resource x="500" z="800" type="0" amount="10500" collectors="2"/>
+		<resource x="500" z="850" type="1" amount="4000" collectors="2"/>
+
+		<resource x="10" z="6600" type="0" amount="10500" collectors="2"/>
+		<resource x="30" z="6612" type="1" amount="4000" collectors="2"/>
+
+		<resource x="-3000" z="8000" type="0" amount="7500" collectors="2"/>
+		<resource x="-3000" z="8050" type="1" amount="3000" collectors="2"/>
+		<resource x="-3000" z="8100" type="0" amount="7500" collectors="2"/>
+
+		<resource x="-9050" z="5900" type="0" amount="10500" collectors="2"/>
+		<resource x="-9000" z="5900" type="1" amount="4000" collectors="2"/>
+
+		<resource x="-7300" z="4050" type="0" amount="10500" collectors="2"/>
+		<resource x="-7300" z="4000" type="1" amount="4000" collectors="2"/>
+
+	</resources>
+	
+	<artifacts>
+		<artifact x="-1100" z="1600"/>
+		<artifact x="2210" z="-3000"/>
+		<!--artifact x="550" z="-300" -->
+	</artifacts>
+	
+	<ezs>
+		<!-- extraction zones -->
+		<!-- only tested 1 per team but the code suggests you can only have 1 at a time -->
+		<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+		<ez team="1" x="-1100" z="1600" radius="555"/>
+		<ez team="0" x="2210" z="-3000" radius="555"/>
+	</ezs>
+	
+
+</dokmap>
