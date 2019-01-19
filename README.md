@@ -4,8 +4,6 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 
 ## Layouts
 
-Team:
-
 | Command | Maps | Authors | Description
 | ------- | ---- | ------- | -----------
 | **/l canyon-outpost-ffa3** | Canyon Outpost FFA | FrostyTeeth | a Free-For-All for 3 players
@@ -15,12 +13,6 @@ Team:
 | **/l old-cape** | Cape Wrath | SSSS | The v0.16 default for Cape Wrath
 | **/l old-epsilon** | Epsilon Base | SSSS | The v0.10-0.16 default for Epsilon Base
 | **/l test** | All | SSSS | Dummy layout for testing purposes
-
-FFA:
-
-| Command | Maps | Authors | Description
-| ------- | ---- | ------- | -----------
-| **/l canyon-outpost-FFA3** | Canyon Outpost | FrostyTeeth | A layout for 3 players on Canyon Outpost FFA [4]
 
 ## Patches
 | Command | Authors | Description
