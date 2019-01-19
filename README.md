@@ -13,7 +13,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | **/l kalash-sakala** | Kalash Site & Wreck | Begil, SSSS | 1v1 using the Sakala and SP Coalition starting units
 | **/l kalash-spgaalsien** | Kalash Site & Wreck | Begil, SSSS, Who | 1v1 using the SP Gaalsien carrier and starting units
 | **/l prime-anomaly-2112** | Prime Anomaly | FrostyTeeth | 3v3 except one player from each team spawns on the enemies side
-| **/l test** | All | SSSS | Dummy layout for testing purposes
+| **/l test** | All nonFFA| SSSS | Dummy layout for testing purposes
 | **/l torin-crater-ffa4** | Torin Crater | FrostyTeeth | 4 player FFA
 | **/l torin-crater-inout** | Torin Crater | FrostyTeeth | 2v2 between a team in and outside the crater
 | **/l wg-2v2** | Whispering Gallery | FrostyTeeth | 2v2 layout for Whispering Gallery
