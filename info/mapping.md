@@ -155,3 +155,9 @@ The measuring tool should show the x and y distances as well as the direct dista
 [Different planning option](examples/beladin_sea_raiders.pptx)
 
 These are another way to do things, it can be a quicker way than the above method if you are able to generate such a grid. The PowerPoint shows how to make one.
+
+Community Map Tools
+======
+| Name | Authors | Description
+| ---- | ------- | -----------
+| [Layout Trigonometry Calculator](https://docs.google.com/spreadsheets/d/18sfTI52rmCuiPYDxbEvSLlov7KUSy49SlSkl22KOWAc/edit#gid=0) | FrostyTeeth | A spreadsheet to batch calculate rotations around a point across multiple different coordinates
