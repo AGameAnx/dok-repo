@@ -8,6 +8,7 @@ Team:
 
 | Command | Maps | Authors | Description
 | ------- | ---- | ------- | -----------
+| **/l canyon-outpost-ffa3** | Canyon Outpost FFA | FrostyTeeth | a Free-For-All for 3 players
 | **/l kalash-fathership** | Kalash Site & Wreck | Begil, SSSS | Spawn with a Fathership and SP Gaalsien starting units
 | **/l kalash-sakala** | Kalash Site & Wreck | Begil, SSSS | Spawn with a Sakala and SP Coalition starting units
 | **/l kalash-spgaalsien** | Kalash Site & Wreck | Begil, SSSS, Who | Spawn with a SP Gaalsien carrier and starting units
