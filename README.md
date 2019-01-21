@@ -23,6 +23,6 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 ## Patches
 | Command | Authors | Description
 | ------- | ------- | -----------
-| **/patch deserts** | pbobbert | Khraak Deserts Balance Patch
+| **/p deserts** | pbobbert | Khraak Deserts Balance Patch
 | **/p test** | SSSS | Dummy patch for testing purposes
 | **/p who** | Who | Who's patch
