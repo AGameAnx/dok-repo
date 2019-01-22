@@ -4,8 +4,8 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 
 ## Layouts
 
-| Command | Maps | Authors | Description
-| ------- | ---- | ------- | -----------
+| Command                    | Maps | Authors | Description
+| -------------------------- | ---- | ------- | -----------
 | **/l canyon-outpost-ffa3** | Canyon Outpost FFA | FrostyTeeth | 3 player FFA
 | **/l cape-wrath-old** | Cape Wrath | SSSS | 2v2 on the v0.16 default for Cape Wrath
 | **/l dune-sea-ffa3** | Dune Sea FFA | FrostyTeeth | 3 player FFA
