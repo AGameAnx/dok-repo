@@ -1,5 +1,34 @@
 {
 	"Entities": {
+		"Research_Buff_Power_1":   { "ResearchItemAttributes": { "Resource1Cost": 150 , "Resource2Cost": 60  } },
+		"Research_Buff_G_Power_1": { "ResearchItemAttributes": { "Resource1Cost": 150 , "Resource2Cost": 60  } },
+		"Research_S_Buff_Power_1": { "ResearchItemAttributes": { "Resource1Cost": 150 , "Resource2Cost": 60  } },
+		
+		"Research_Buff_Power_2":   { "ResearchItemAttributes": { "Resource1Cost": 300 , "Resource2Cost": 140 } },
+		"Research_Buff_G_Power_2": { "ResearchItemAttributes": { "Resource1Cost": 300 , "Resource2Cost": 140 } },
+		"Research_S_Buff_Power_2": { "ResearchItemAttributes": { "Resource1Cost": 300 , "Resource2Cost": 140 } },
+		
+		"Research_Buff_Power_3":   { "ResearchItemAttributes": { "Resource1Cost": 600 , "Resource2Cost": 220 } },
+		"Research_Buff_G_Power_3": { "ResearchItemAttributes": { "Resource1Cost": 600 , "Resource2Cost": 220 } },
+		"Research_S_Buff_Power_3": { "ResearchItemAttributes": { "Resource1Cost": 600 , "Resource2Cost": 220 } },
+		
+		"Research_Buff_Power_4":   { "ResearchItemAttributes": { "Resource1Cost": 900 , "Resource2Cost": 350 } },
+		"Research_Buff_G_Power_4": { "ResearchItemAttributes": { "Resource1Cost": 900 , "Resource2Cost": 350 } },
+		"Research_S_Buff_Power_4": { "ResearchItemAttributes": { "Resource1Cost": 900 , "Resource2Cost": 350 } },
+		
+		"Research_Buff_Power_5":   { "ResearchItemAttributes": { "Resource1Cost": 1200, "Resource2Cost": 700 } },
+		"Research_Buff_G_Power_5": { "ResearchItemAttributes": { "Resource1Cost": 1200, "Resource2Cost": 700 } },
+		"Research_S_Buff_Power_5": { "ResearchItemAttributes": { "Resource1Cost": 1000, "Resource2Cost": 500 } },
+		
+		"Research_Buff_Power_6":   { "ResearchItemAttributes": { "Resource1Cost": 1300, "Resource2Cost": 800 } },
+		"Research_Buff_G_Power_6": { "ResearchItemAttributes": { "Resource1Cost": 1300, "Resource2Cost": 800 } },
+		"Research_S_Buff_Power_6": { "ResearchItemAttributes": { "Resource1Cost": 1100, "Resource2Cost": 600 } },
+		
+		"Research_Buff_Power_7":   { "ResearchItemAttributes": { "Resource1Cost": 1400, "Resource2Cost": 900 } },
+		"Research_Buff_G_Power_7": { "ResearchItemAttributes": { "Resource1Cost": 1400, "Resource2Cost": 900 } },
+		"Research_S_Buff_Power_7": { "ResearchItemAttributes": { "Resource1Cost": 1200, "Resource2Cost": 700 } },
+		
+		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 13000
@@ -66,9 +95,6 @@
 				}
 			},
 			"WeaponAttributes": {
-				"C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
-					"BaseDamagePerRound": 225
-				},
 				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 225,
 					"BurstPeriodMaxTimeMS": 999,
@@ -80,7 +106,7 @@
 					"ReloadTimeMS": 3000
 				},
 				"C_Sob_CarrierMissiles_Weapon_A2G_MP": {
-					"RateOfFire": 2
+					"RateOfFire": 3
 				},
 				"C_Sob_Carrier_Weapon_Nuke_MP": {
 					"ExcludeFromHeightAdvantage": true,
@@ -92,14 +118,19 @@
 			}
 		},
 		"C_Sob_NukeEmitter_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 1350
+			},
 			"WeaponAttributes": {
 				"C_Sob_NukeEmitter_Weapon_G2G": {
 					"BurstPeriodMinTimeMS": 250,
 					"BurstPeriodMaxTimeMS": 250,
-					"BaseDamagePerRound": 50,
+					"CooldownTimeMS": 0,
+					"BaseDamagePerRound": 90,
 					"DamagePacketsPerShot": 0,
 					"StatusEffectsExcludeTargetType": "All",
-					"FriendlyFireDamageScalar": 1,
+					"FriendlyFireDamageScalar": 0.5,
+					"WeaponOwnerFriendlyFireDamageScalar": 1,
 					"Modifiers": {
 						"0": {
 							"TargetClass": "Strikecraft, Small, Harvester",
@@ -111,9 +142,12 @@
 							"TargetClass": "Carrier, Large, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 150
+							"Amount": 120
 						}
 					}
+				},
+				"C_Sob_NukeEmitter_Weapon_Self": {
+					"BaseDamagePerRound": 0
 				}
 			}
 		},
@@ -412,9 +446,18 @@
 			}
 		},
 		
+		"N_Gun_Turret_MP": {
+			"UnitAttributes": {
+				"SensorRadius": 1000
+			}
+		},
 		"C_Sob_PopcapScanner": {
 			"WeaponAttributes": {
 				"C_Sob_PopCapScanner_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 100,
+					"DamagePacketsPerShot": 2,
+					"AreaOfEffectRadius": 90,
+					"ReloadTimeMS": 3500,
 					"TargetPrioritizationAttributes": {
 						"AngleWeight": 10,
 						"DistanceWeight": 0.5
@@ -564,12 +607,6 @@
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
 					"ExcludeFromHeightAdvantage": true
 				}
-			}
-		},
-		
-		"N_Gun_Turret_MP": {
-			"UnitAttributes": {
-				"SensorRadius": 1000
 			}
 		},
 		
@@ -867,8 +904,7 @@
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 700,
+					"BaseDamagePerRound": 650,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 220,
 					"WindDownTimeMS": 250,
@@ -879,7 +915,8 @@
 					}
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
-					"WindUpTimeMS": 1500
+					"WindUpTimeMS": 1500,
+					"CooldownTimeMS": 3000
 				}
 			}
 		},
@@ -887,12 +924,20 @@
 			"UnitAttributes": {
 				"MaxHealth": 3000
 			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 6000
+			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 700,
+					"BaseDamagePerRound": 650,
 					"AreaOfEffectFalloffType": "Linear",
-					"AreaOfEffectRadius": 220
+					"AreaOfEffectRadius": 220,
+					"WindDownTimeMS": 250,
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 30,
+						"AngleWeight": 20,
+						"DistanceWeight": 0.05
+					}
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
 					"WindUpTimeMS": 1500,
@@ -1061,7 +1106,8 @@
 			"WeaponAttributes": {
 				"C_GunShip_Weapon_DefaultFire_MP": {
 					"DamagePacketsPerShot": 2,
-					"BaseDamagePerRound": 50,
+					"RateOfFire": 6,
+					"BaseDamagePerRound": 60,
 					"AreaOfEffectRadius": 200,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
