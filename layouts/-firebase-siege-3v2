@@ -2,21 +2,27 @@
 <dokmap>
 	
 	<name>Firebase Seige Fortress 3v2</name>
-	<map>MP_16-Firebase</map>
+	<map>MP_16_1v1-Firebase, MP_16-Firebase</map>
 	<description>Team 2 is under Siege and has 2 players</description>
 	<authors>FrostyTeeth</authors>
 	<players>6</players>
 
-	<!-- map centre =0 -->
-	<!-- map left boundary x=-4300 --> 
+	<!-- map centre x=0, z=0 -->
+	<!-- map left boundary x=-4450 --> 
+	<bounds left="-4450" right="4450" bottom="-4450" top="4450"/>	
+
+
+	<!-- The purpose of 2.0 is for adding blockers for carriers and units and line of sight -->
+	<!-- Also, write in the map bounds and make playalbe on both krill maps  -->
+
 
 	<spawns>
-		<!-- team 1 -->
-		<spawn team="0" index="0" x="2250" z="-2250" angle="0"/>
-		<spawn team="0" index="1" x="1200" z="-3600" angle="270"/>
-		<spawn team="0" index="2" x="3900" z="-1700" angle="0"/>
+		<!-- team 1 Sieging team-->
+		<spawn team="0" index="0" x="2700" z="-2700" angle="45"/>
+		<spawn team="0" index="1" x="2200" z="-3800" angle="270"/>
+		<spawn team="0" index="2" x="3900" z="-2300" angle="0"/>
 
-		<!-- team 2 -->
+		<!-- team 2 Defending team -->
 		<spawn team="1" index="0"  x="-3300" z="2500" angle="135"/>
 		<spawn team="1" index="1" x="-2500" z="3300" angle="135"/>
 		<spawn team="1" index="2" x="3900" z="-3900" angle="315"/>
@@ -24,15 +30,40 @@
 	
 	<resources>
 		<!-- type 0 = cus, type 1 = rus, type 2 = wreck (wreck needs testing) -->
-		<!-- team 1 -->
-		<resource x="4200" z="0" type="0" amount="16000" collectors="4"/>
+		<!-- defended resources -->
 		<resource x="-4200" z="0" type="0" amount="16000" collectors="4"/>
+		<resource x="-4200" z="100" type="1" amount="8000" collectors="4"/>
 
-		<resource x="0" z="-4250" type="1" amount="16000" collectors="4"/>
-		<resource x="0" z="4250" type="1" amount="16000" collectors="4"/>
+		<resource x="400" z="4250" type="0" amount="16000" collectors="4"/>
+		<resource x="300" z="4250" type="1" amount="8000" collectors="4"/>
+
+		<resource x="-1565" z="1635" type="0" amount="16000" collectors="4"/>
+		<resource x="-1635" z="1565" type="1" amount="8000" collectors="4"/>
+
+			<!-- team 1 -->
+				<!-- Main -->
+		<resource x="2840" z="-2840" type="1" amount="3000" collectors="2"/>
+		<resource x="2770" z="-2910" type="0" amount="7500" collectors="2"/>
+		<resource x="2910" z="-2770" type="0" amount="7500" collectors="2"/>
+
+		<resource x="2200" z="-4100" type="1" amount="3000" collectors="2"/>
+		<resource x="2100" z="-4100" type="0" amount="7500" collectors="2"/>
+		<resource x="2300" z="-4100" type="0" amount="7500" collectors="2"/>
+
+		<resource x="4100" z="-2200" type="1" amount="3000" collectors="2"/>
+		<resource x="4100" z="-2300" type="0" amount="7500" collectors="2"/>
+		<resource x="4100" z="-2100" type="0" amount="7500" collectors="2"/>
 
 
+				<!-- expand -->
+		<resource x="1065" z="-1135" type="1" amount="3000" collectors="2"/>
+		<resource x="1135" z="-1065" type="0" amount="7000" collectors="2"/>
 
+		<resource x="0" z="-4250" type="1" amount="3000" collectors="2"/>
+		<resource x="-100" z="-4250" type="0" amount="7000" collectors="2"/>
+
+		<resource x="4200" z="0" type="0" amount="3000" collectors="2"/>
+		<resource x="4200" z="100" type="1" amount="7000" collectors="2"/>
 
 			<!-- team 2 -->
 				<!-- Main -->
@@ -46,12 +77,17 @@
 
 				<!-- 2nd expand -->
 		<resource x="-4000" z="1200" type="1" amount="7000" collectors="2"/>
-		<resource x="-4000" z="1100" type="0" amount="18000" collectors="2"/>
-		<resource x="-4000" z="1300" type="0" amount="18000" collectors="2"/>
+		<resource x="-4100" z="1200" type="0" amount="18000" collectors="2"/>
 
-		<resource x="-1200" z="4000" type="1" amount="7000" collectors="2"/>
-		<resource x="-1100" z="4000" type="0" amount="18000" collectors="2"/>
-		<resource x="-1300" z="4000" type="0" amount="18000" collectors="2"/>
+		<resource x="-850" z="4110" type="1" amount="7000" collectors="2"/>
+		<resource x="-850" z="4010" type="0" amount="18000" collectors="2"/>
+
+				<!-- 3rd expand -->
+		<resource x="-4200" z="3700" type="1" amount="7000" collectors="2"/>
+		<resource x="-4200" z="3800" type="0" amount="18000" collectors="2"/>
+
+		<resource x="-3700" z="4200" type="1" amount="7000" collectors="2"/>
+		<resource x="-3800" z="4200" type="0" amount="18000" collectors="2"/>
 
 
 	</resources>
@@ -70,16 +106,17 @@
 
 	<units>
 		<!-- Defense -->
-	<unit team="1" index="0" type="G_Turret_Heavy" x="320" z="2180" angle="180"/>
+	<unit team="1" index="0" type="G_Turret_Heavy" x="320" z="2180" angle="151"/>
 
 	<unit team="1" index="0" type="G_Turret_Heavy_MP" x="-2000" z="1700" angle="135"/>
 	<unit team="1" index="0" type="G_ControlTower" x="-1730" z="1430" angle="135"/>
 
 	<unit team="1" index="0" type="G_Turret_Heavy_MP" x="-1990" z="-40" angle="135"/>
-	<unit team="1" index="0" type="G_Turret_Heavy" x="-2390" z="-350" angle="158"/>
+	<unit team="1" index="0" type="G_Turret_Heavy" x="-2290" z="-450" angle="181"/>
 
-	<unit team="1" index="0" type="N_Gun_Turret_MP" x="-3490" z="1790" angle="135"/>
-	<unit team="1" index="0" type="N_Gun_Turret_MP" x="-2940" z="2067" angle="158"/>
+	<unit team="1" index="0" type="N_Gun_Turret_MP" x="-3540" z="1740" angle="135"/>
+	<unit team="1" index="0" type="N_Gun_Turret_MP" x="-2890" z="2017" angle="158"/>
+	<unit team="1" index="0" type="N_Gun_Turret_MP" x="-90" z="4017" angle="130"/>
 
 	<unit team="1" index="0" type="N_Gun_Turret_MP" x="-1860" z="2790" angle="135"/>
 	<unit team="1" index="0" type="N_Gun_Turret_MP" x="-1240" z="2973" angle="105"/>
@@ -118,8 +155,6 @@
 
 
 		<!-- Castle infrastructure to make blocker -->
-	<unit team="1" index="0" type="C_PopcapScanner" x="-2000" z="2000" angle="135"/>
-	<unit team="1" index="0" type="C_PopcapScanner" x="-2100" z="2100" angle="135"/>
 	<unit team="1" index="0" type="C_PopcapScanner" x="-2200" z="2200" angle="135"/>
 	<unit team="1" index="0" type="C_PopcapScanner" x="-2300" z="2300" angle="135"/>
 	<unit team="1" index="0" type="C_PopcapScanner" x="-2400" z="2400" angle="135"/>
@@ -136,8 +171,7 @@
 	<unit team="1" index="0" type="C_PopcapScanner" x="-3500" z="3500" angle="135"/>
 	<unit team="1" index="0" type="C_PopcapScanner" x="-3600" z="3600" angle="135"/>
 
-	<unit team="1" index="1" type="C_PopcapScanner" x="-2000" z="2000" angle="135"/>
-	<unit team="1" index="1" type="C_PopcapScanner" x="-2100" z="2100" angle="135"/>
+
 	<unit team="1" index="1" type="C_PopcapScanner" x="-2200" z="2200" angle="135"/>
 	<unit team="1" index="1" type="C_PopcapScanner" x="-2300" z="2300" angle="135"/>
 	<unit team="1" index="1" type="C_PopcapScanner" x="-2400" z="2400" angle="135"/>
@@ -182,7 +216,14 @@
 	</units>
 	
 
-<blockers existing="false">
+	<blockers existing="true">
+		<!-- castle infrastructure is also a hinderance -->
+		<blocker mask="Carrier" blocklof="false" verts="-2001,2000;-3601,3601;-3599,3601;-1999,2000"/>
+		<blocker mask="Ground" blocklof="false" verts="-2001,2000;-3601,3601;-3599,3601;-1999,2000"/>
+
+		<!-- block off the mountain -->
+		<blocker mask="Carrier" blocklof="false" verts="4450,1700;4200,2100;4450,2401"/>
+		<blocker mask="Ground" blocklof="false" verts="4450,1700;4200,2100;4450,2401"/>
     </blockers>
 
 	
