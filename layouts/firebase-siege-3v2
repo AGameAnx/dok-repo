@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap>
+	
+	<name>Firebase Seige Fortress 3v2</name>
+	<map>*</map>
+	<description>Team 0 is under Seige</description>
+	<authors>FrostyTeeth</authors>
+	<players>6</players>
+
+	<spawns>
+		<!-- team 1 -->
+		<spawn team="0" index="0" x="0" z="0" angle="0"/>
+		<spawn team="0" index="1" x="0" z="0" angle="0"/>
+
+		<!-- team 2 -->
+		<spawn team="1" index="0"  x="0" z="0" angle="45"/>
+		<spawn team="1" index="1" x="0" z="0" angle="225"/>
+
+	</spawns>
+	
+	<resources>
+		<!-- type 0 = cus, type 1 = rus, type 2 = wreck (wreck needs testing) -->
+		<!-- team 1 -->
+		<resource x="0" z="0" type="0" amount="16000" collectors="4"/>
+		<resource x="4400" z="0" type="0" amount="16000" collectors="4"/>
+		<resource x="-4400" z="0" type="0" amount="16000" collectors="4"/>
+
+		<resource x="0" z="-4450" type="1" amount="16000" collectors="4"/>
+		<resource x="0" z="4450" type="1" amount="16000" collectors="4"/>
+	</resources>
+	
+	<artifacts>
+		<artifact x="1100" z="4600"/>
+
+	</artifacts>
+	
+	<ezs>
+		<!-- extraction zones -->
+		<ez team="0" x="4500" z="4500" radius="10"/>
+		<ez team="1" x="4500" z="4500" radius="10"/>
+
+
+	</ezs>
+
+	<units>
+	<unit team="1" index="0" type="G_Turret_Heavy" x="0" z="2000" angle="180"/>
+
+	</units>
+	
+	
+</dokmap>
