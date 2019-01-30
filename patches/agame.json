@@ -28,7 +28,6 @@
 		"Research_Buff_G_Power_7": { "ResearchItemAttributes": { "Resource1Cost": 1400, "Resource2Cost": 900 } },
 		"Research_S_Buff_Power_7": { "ResearchItemAttributes": { "Resource1Cost": 1200, "Resource2Cost": 700 } },
 		
-		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 13000
@@ -457,7 +456,7 @@
 					"BaseDamagePerRound": 100,
 					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 90,
-					"ReloadTimeMS": 3500,
+					"WindUpTimeMS": 2200,
 					"TargetPrioritizationAttributes": {
 						"AngleWeight": 10,
 						"DistanceWeight": 0.5
@@ -699,6 +698,28 @@
 		},
 		
 		"G_Catamaran_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 240,
+				"Resource2Cost": 45,
+				"MaxHealth": 900
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 28,
+					"AreaOfEffectRadius": 70,
+					"RangeAttributesShort": {
+						"Distance": 450
+					},
+					"RangeAttributesMedium": {
+						"Distance": 600
+					},
+					"RangeAttributesLong": {
+						"Distance": 745
+					}
+				}
+			}
+		},
+		"K_AssaultShip_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 240,
 				"Resource2Cost": 45,
