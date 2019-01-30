@@ -24,7 +24,8 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 ## Patches
 | Command | Authors | Description
 | ------- | ------- | -----------
+| **/p agame** | AGameAnx | [AGameAnx's balance patch](https://docs.google.com/document/d/1WulBuxTnjEn3-r0P7UrTQSzijdb_9oGVMEy1BMBU2iQ)
 | **/p deserts** | pbobbert | Khraak Deserts Balance Patch
 | **/p test** | SSSS | Dummy patch for testing purposes
 | **/p who** | Who | Who's patch
-| **/p agame** | AGameAnx | [AGameAnx's balance patch](https://docs.google.com/document/d/1WulBuxTnjEn3-r0P7UrTQSzijdb_9oGVMEy1BMBU2iQ)
+
