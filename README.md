@@ -6,7 +6,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 
 | Command | Maps | Authors | Description
 | ------- | ---- | ------- | -----------
-| **/l canyon-outpost-ffa3** | Canyon Outpost FFA | FrostyTeeth | 3 player FFA
+| **/l canyon-outpost-ffa3** | Canyon Outpost FFA | FrostyTeeth | [3 player FFA](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/canyon-outpost-ffa3.png)
 | **/l cape-wrath-old** | Cape Wrath | SSSS | 2v2 on the v0.16 default for Cape Wrath
 | **/l dune-sea-ffa3** | Dune Sea FFA | FrostyTeeth | 3 player FFA
 | **/l epsilon-base-1v1** | Epsilon Base | SSSS | 1v1 on the v0.10-0.16 default for Epsilon Base
