@@ -10,7 +10,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | **/l cape-wrath-old** | Cape Wrath | SSSS | 2v2 on the v0.16 default for Cape Wrath
 | **/l dune-sea-ffa3** | Dune Sea FFA | FrostyTeeth | [3 player FFA](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/dune-sea-ffa3.png)
 | **/l epsilon-base-1v1** | Epsilon Base | SSSS | 1v1 on the v0.10-0.16 default for Epsilon Base
-| **/l firebase-siege-3v2** | Firebase Kriil | FrostyTeeth | 3v2 attack on fortified position. Team "2" has 2 players
+| **/l firebase-siege-3v2** | Firebase Kriil | FrostyTeeth | [3v2 attack on fortified position. Team "2" has 2 players](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/firebase-siege-3v2.png)
 | **/l kalash-fathership** | Kalash Wreck, Kalash Site | Begil, SSSS | 1v1 each with K'Had Sajuuk's carrier 
 | **/l kalash-sakala** | Kalash Site & Wreck | Begil, SSSS | 1v1 using the Sakala and SP Coalition starting units
 | **/l kalash-spgaalsien** | Kalash Site & Wreck | Begil, SSSS, Who | 1v1 using the SP Gaalsien carrier and starting units
