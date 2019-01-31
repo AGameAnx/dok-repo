@@ -19,7 +19,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | **/l test** | All non-FFA | SSSS | Dummy layout for testing purposes
 | **/l torin-crater-ffa4** | Torin Crater FFA| FrostyTeeth | 4 player FFA
 | **/l torin-crater-inout** | Torin Crater | FrostyTeeth | 2v2 between a team in vs outside the crater
-| **/l wg-2v2** | Whispering Gallery | FrostyTeeth | 2v2 layout for Whispering Gallery
+| **/l wg-2v2** | Whispering Gallery | FrostyTeeth | [2v2 layout for Whispering Gallery](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/wg-2v2-image.png)
 
 ## Patches
 | Command | Authors | Description
