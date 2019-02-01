@@ -20,7 +20,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | **/l torin-crater-ffa4** | Torin Crater FFA| FrostyTeeth | [4 player FFA](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/torin-crater-ffa4.png)
 | **/l torin-crater-inout** | Torin Crater | FrostyTeeth | [2v2 between a team in vs outside the crater](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/torin-crater-inout.png)
 | **/l wg-2v2** | Whispering Gallery | FrostyTeeth | [2v2 layout for Whispering Gallery](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/wg-2v2-image.png)
-| **/l gaalsien-base1v1** | Gaalsien Base (4) | HottestManEver | [1v1 layout for Gaalsien Base](info/map-images/layout-images/gaalsien-base1v1.jpg)
+| **/l gbase1v1** | Gaalsien Base (4) | HottestManEver | [1v1 layout for Gaalsien Base](info/map-images/layout-images/gaalsien-base1v1.jpg)
 | **/l tombs3v3** | Tombs of the Antients (4) | HottestManEver | [3v3 layout for Tombs of the Antients](info/map-images/layout-images/tombs-of-the-antients3v3.jpg)
 
 ## Patches
