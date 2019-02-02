@@ -85,6 +85,17 @@ The layout of maps are stored in XML, this is the XML for Kalash Wreck with Fath
 		<unit team="1" index="0" type="G_Harvester" x="-5497" z="6800" angle="128"/>
 		<unit team="1" index="0" type="G_Harvester" x="-5537" z="6740" angle="128"/>
 	</units>
+	
+	
+	<blockers existing="false">
+		<!-- top wreck -->
+		<blocker mask="Ground" blocklof="true" verts="-300,140;-300,2150;810,2140;810,140"/>
+		<!-- bottom wreck -->
+		<blocker mask="Ground" blocklof="true" verts="-300,-270;-300,-1630;810,-810;810,-270"/>
+		<!-- block carrier -->
+		<blocker mask="Carrier" blocklof="true" verts="-300,-140;-300,140;810,140;810,-140"/>
+	</blockers>
+
 </dokmap>
 ```
 
