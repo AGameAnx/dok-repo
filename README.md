@@ -27,7 +27,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | Command | Authors | Description
 | ------- | ------- | -----------
 | **/p agame** | AGameAnx | [AGameAnx's balance patch](https://docs.google.com/document/d/1WulBuxTnjEn3-r0P7UrTQSzijdb_9oGVMEy1BMBU2iQ)
-| **/p deserts** | pbobbert | Khraak Deserts Balance Patch
+| **/p deserts** | pbobbert | [Khraak Deserts Balance Patch](https://cdn.discordapp.com/attachments/509996599955554305/541205762609774592/Balancing_a_Desert_TooTwo_version_18.pdf)
 | **/p test** | SSSS | Dummy patch for testing purposes
 | **/p who** | Who | Who's patch
 
