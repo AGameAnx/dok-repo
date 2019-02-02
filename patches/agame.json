@@ -4,17 +4,17 @@
 		"Research_Buff_G_Power_1": { "ResearchItemAttributes": { "Resource1Cost": 150 , "Resource2Cost": 60  } },
 		"Research_S_Buff_Power_1": { "ResearchItemAttributes": { "Resource1Cost": 150 , "Resource2Cost": 60  } },
 		
-		"Research_Buff_Power_2":   { "ResearchItemAttributes": { "Resource1Cost": 300 , "Resource2Cost": 140 } },
-		"Research_Buff_G_Power_2": { "ResearchItemAttributes": { "Resource1Cost": 300 , "Resource2Cost": 140 } },
-		"Research_S_Buff_Power_2": { "ResearchItemAttributes": { "Resource1Cost": 300 , "Resource2Cost": 140 } },
+		"Research_Buff_Power_2":   { "ResearchItemAttributes": { "Resource1Cost": 350 , "Resource2Cost": 160 } },
+		"Research_Buff_G_Power_2": { "ResearchItemAttributes": { "Resource1Cost": 350 , "Resource2Cost": 160 } },
+		"Research_S_Buff_Power_2": { "ResearchItemAttributes": { "Resource1Cost": 350 , "Resource2Cost": 160 } },
 		
-		"Research_Buff_Power_3":   { "ResearchItemAttributes": { "Resource1Cost": 600 , "Resource2Cost": 220 } },
-		"Research_Buff_G_Power_3": { "ResearchItemAttributes": { "Resource1Cost": 600 , "Resource2Cost": 220 } },
-		"Research_S_Buff_Power_3": { "ResearchItemAttributes": { "Resource1Cost": 600 , "Resource2Cost": 220 } },
+		"Research_Buff_Power_3":   { "ResearchItemAttributes": { "Resource1Cost": 650 , "Resource2Cost": 260 } },
+		"Research_Buff_G_Power_3": { "ResearchItemAttributes": { "Resource1Cost": 650 , "Resource2Cost": 260 } },
+		"Research_S_Buff_Power_3": { "ResearchItemAttributes": { "Resource1Cost": 650 , "Resource2Cost": 260 } },
 		
-		"Research_Buff_Power_4":   { "ResearchItemAttributes": { "Resource1Cost": 900 , "Resource2Cost": 350 } },
-		"Research_Buff_G_Power_4": { "ResearchItemAttributes": { "Resource1Cost": 900 , "Resource2Cost": 350 } },
-		"Research_S_Buff_Power_4": { "ResearchItemAttributes": { "Resource1Cost": 900 , "Resource2Cost": 350 } },
+		"Research_Buff_Power_4":   { "ResearchItemAttributes": { "Resource1Cost": 900 , "Resource2Cost": 400 } },
+		"Research_Buff_G_Power_4": { "ResearchItemAttributes": { "Resource1Cost": 900 , "Resource2Cost": 400 } },
+		"Research_S_Buff_Power_4": { "ResearchItemAttributes": { "Resource1Cost": 900 , "Resource2Cost": 400 } },
 		
 		"Research_Buff_Power_5":   { "ResearchItemAttributes": { "Resource1Cost": 1200, "Resource2Cost": 700 } },
 		"Research_Buff_G_Power_5": { "ResearchItemAttributes": { "Resource1Cost": 1200, "Resource2Cost": 700 } },
@@ -109,10 +109,7 @@
 				},
 				"C_Sob_Carrier_Weapon_Nuke_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"AreaOfEffectFalloffType": "Quadratic",
-					"RangeAttributesLong": {
-						"Distance": 7000
-					}
+					"AreaOfEffectFalloffType": "Quadratic"
 				}
 			}
 		},
@@ -258,18 +255,10 @@
 						"RotationSpeed": 200
 					},
 					"Modifiers": {
-						"1": {
-							"Remove": true
-						},
-						"2": {
-							"Remove": true
-						},
-						"3": {
-							"Remove": true
-						},
-						"4": {
-							"Remove": true
-						}
+						"1": { "Remove": true },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
 					}
 				}
 			},
@@ -286,7 +275,7 @@
 			"AbilityAttributes": {
 				"Ability_C_Baserunner_ECMField": {
 					"CooldownTimeSecs": 90,
-					"Resource1Cost": 50
+					"Resource1Cost": 0
 				}
 			},
 			"WeaponAttributes": {
@@ -310,18 +299,10 @@
 						"RotationSpeed": 200
 					},
 					"Modifiers": {
-						"1": {
-							"Remove": true
-						},
-						"2": {
-							"Remove": true
-						},
-						"3": {
-							"Remove": true
-						},
-						"4": {
-							"Remove": true
-						}
+						"1": { "Remove": true },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
 					}
 				}
 			}
@@ -356,18 +337,10 @@
 						"RotationSpeed": 200
 					},
 					"Modifiers": {
-						"1": {
-							"Remove": true
-						},
-						"2": {
-							"Remove": true
-						},
-						"3": {
-							"Remove": true
-						},
-						"4": {
-							"Remove": true
-						}
+						"1": { "Remove": true },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
 					}
 				},
 				"G_Baserunner_Weapon_HealingAura_MP": {
@@ -388,11 +361,6 @@
 		"K_Baserunner_MP": {
 			"UnitAttributes": {
 				"Resource2Cost": 50
-			},
-			"AbilityAttributes": {
-				"Ability_G_BaseRunnerPassiveRegen": {
-					"CooldownTimeSecs": 80
-				}
 			},
 			"WeaponAttributes": {
 				"G_Baserunner_Weapon_G2G_MP": {
@@ -415,31 +383,10 @@
 						"RotationSpeed": 200
 					},
 					"Modifiers": {
-						"1": {
-							"Remove": true
-						},
-						"2": {
-							"Remove": true
-						},
-						"3": {
-							"Remove": true
-						},
-						"4": {
-							"Remove": true
-						}
-					}
-				},
-				"G_Baserunner_Weapon_HealingAura_MP": {
-					"RateOfFire": 10,
-					"BaseDamagePerRound": 20,
-					"BurstPeriodMinTimeMS": 400,
-					"BurstPeriodMaxTimeMS": 400,
-					"CooldownTimeMS": 600,
-					"Modifiers": {
-						"0": {
-							"TargetClass": "Air",
-							"Modifier": "CanNotTarget"
-						}
+						"1": { "Remove": true },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
 					}
 				}
 			}
@@ -473,7 +420,29 @@
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"WindUpTimeMS": 50,
 					"RateOfFire": 1,
-					"ReloadTimeMS": 1600,
+					"ReloadTimeMS": 2000,
+					"CooldownTimeMS": 550,
+					"AreaOfEffectRadius": 80,
+					"RangeAttributesLong": {
+						"Distance": 1400
+					}
+				}
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeedTurnRadius": 85
+				}
+			}
+		},
+		"C_Sob_SupportCruiser_MP": {
+			"UnitAttributes": {
+				"PopCapCost": 5
+			},
+			"WeaponAttributes": {
+				"C_SupportCruiser_Weapon_G2A_MP": {
+					"WindUpTimeMS": 50,
+					"RateOfFire": 1,
+					"ReloadTimeMS": 2000,
 					"CooldownTimeMS": 550,
 					"AreaOfEffectRadius": 80,
 					"RangeAttributesLong": {
@@ -516,18 +485,10 @@
 						"Distance": 1135
 					},
 					"Modifiers": {
-						"1": {
-							"Remove": true
-						},
-						"2": {
-							"Remove": true
-						},
-						"3": {
-							"Remove": true
-						},
-						"4": {
-							"Remove": true
-						}
+						"1": { "Remove": true },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
 					}
 				}
 			}
@@ -548,18 +509,10 @@
 						"Distance": 1135
 					},
 					"Modifiers": {
-						"1": {
-							"Remove": true
-						},
-						"2": {
-							"Remove": true
-						},
-						"3": {
-							"Remove": true
-						},
-						"4": {
-							"Remove": true
-						}
+						"1": { "Remove": true },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
 					}
 				}
 			}
@@ -567,7 +520,7 @@
 		
 		"C_HAC_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 200,
+				"Resource1Cost": 240,
 				"MaxHealth": 1250,
 				"PopCapCost": 2
 			},
@@ -600,10 +553,11 @@
 				}
 			},
 			"WeaponAttributes": {
-				"C_HAC_Upgrade01_Weapon_G2A_MP": {
-					"ReloadTimeMS": 1600
-				},
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
+					"BaseDamagePerRound": 700,
+					"DamagePacketsPerShot": 6,
+					"AreaOfEffectRadius": 240,
+					"AreaOfEffectFalloffType": "Quadratic",
 					"ExcludeFromHeightAdvantage": true
 				}
 			}
@@ -613,6 +567,12 @@
 			"UnitAttributes": {
 				"AccuracyReceivedMultiplier": 0.55,
 				"MaxHealth": 165
+			}
+		},
+		
+		"K_ExplodingSkimmer_MP": {
+			"UnitAttributes": {
+				"ProductionTime": 30
 			}
 		},
 		
@@ -649,6 +609,8 @@
 		
 		"C_Railgun_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 220,
+				"Resource2Cost": 70,
 				"ProductionTime": 16
 			},
 			"DetectableAttributes": {
@@ -656,8 +618,9 @@
 			},
 			"WeaponAttributes": {
 				"C_Railgun_Weapon_G2G_MP": {
+					"ReloadTimeMS": 3000,
 					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 40,
+						"WeaponEffectivenessWeight": 50,
 						"AngleWeight": 10,
 						"DistanceWeight": 0.05
 					}
@@ -666,6 +629,9 @@
 		},
 		"C_Sob_Railgun_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 240,
+				"Resource2Cost": 70,
+				"Armour": 2,
 				"ProductionTime": 16
 			},
 			"DetectableAttributes": {
@@ -674,7 +640,7 @@
 			"WeaponAttributes": {
 				"C_Sob_Railgun_Weapon_G2G_MP": {
 					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 40,
+						"WeaponEffectivenessWeight": 50,
 						"AngleWeight": 10,
 						"DistanceWeight": 0.05
 					}
@@ -699,7 +665,7 @@
 		
 		"G_Catamaran_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 240,
+				"Resource1Cost": 260,
 				"Resource2Cost": 45,
 				"MaxHealth": 900
 			},
@@ -707,21 +673,15 @@
 				"G_Catamaran_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 28,
 					"AreaOfEffectRadius": 70,
-					"RangeAttributesShort": {
-						"Distance": 450
-					},
-					"RangeAttributesMedium": {
-						"Distance": 600
-					},
-					"RangeAttributesLong": {
-						"Distance": 745
-					}
+					"RangeAttributesShort":  { "Distance": 450 },
+					"RangeAttributesMedium": { "Distance": 600 },
+					"RangeAttributesLong":   { "Distance": 745 }
 				}
 			}
 		},
 		"K_AssaultShip_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 240,
+				"Resource1Cost": 260,
 				"Resource2Cost": 45,
 				"MaxHealth": 900
 			},
@@ -729,15 +689,9 @@
 				"G_Catamaran_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 28,
 					"AreaOfEffectRadius": 70,
-					"RangeAttributesShort": {
-						"Distance": 450
-					},
-					"RangeAttributesMedium": {
-						"Distance": 600
-					},
-					"RangeAttributesLong": {
-						"Distance": 745
-					}
+					"RangeAttributesShort":  { "Distance": 450 },
+					"RangeAttributesMedium": { "Distance": 600 },
+					"RangeAttributesLong":   { "Distance": 745 }
 				}
 			}
 		},
@@ -771,6 +725,60 @@
 				"ProductionTime": 24
 			},
 			"WeaponAttributes": {
+				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
+					"ReloadTimeMS": 1700,
+					"Turret": {
+						"RotationSpeed": 160,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1330
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
+					"ReloadTimeMS": 1700,
+					"Turret": {
+						"RotationSpeed": 240,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1500
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 175,
+					"AreaOfEffectRadius": 150,
+					"AreaOfEffectFalloffType": "Linear"
+				}
+			}
+		},
+		"K_MissileShip_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 350,
+				"ProductionTime": 24
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
+					"ReloadTimeMS": 1700,
+					"Turret": {
+						"RotationSpeed": 160,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1330
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
+					"ReloadTimeMS": 1700,
+					"Turret": {
+						"RotationSpeed": 240,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1500
+					}
+				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
 					"BaseDamagePerRound": 175,
@@ -793,7 +801,27 @@
 				"G_StarHull_Weapon_G2G_MP": {
 					"ReloadTimeMS": 300,
 					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 40,
+						"WeaponEffectivenessWeight": 50,
+						"AngleWeight": 10,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"K_HeavyRailgun_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 720,
+				"Resource1Cost": 300,
+				"Resource2Cost": 80
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 6000
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Weapon_G2G_MP": {
+					"ReloadTimeMS": 300,
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 50,
 						"AngleWeight": 10,
 						"DistanceWeight": 0.05
 					}
@@ -802,6 +830,21 @@
 		},
 		
 		"G_StarHull_Upgrade01_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 210,
+				"Resource2Cost": 40,
+				"ExperienceValue": 300,
+				"Armour": 4
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
+					"WindUpTimeMS": 600,
+					"WindDownTimeMS": 250,
+					"ReloadTimeMS": 1000
+				}
+			}
+		},
+		"K_AssaultRailgun_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 210,
 				"Resource2Cost": 40,
@@ -832,24 +875,103 @@
 		"G_Interceptor_MP": {
 			"UnitAttributes": {
 				"Armour": 3,
-				"Resource2Cost": 130
+				"Resource2Cost": 130,
+				"ProductionTime": 12
 			},
 			"WeaponAttributes": {
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
 					"BaseDamagePerRound": 100,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 4500
+					"ReloadTimeMS": 4000
+				}
+			}
+		},
+		"K_Interceptor_MP": {
+			"UnitAttributes": {
+				"Armour": 3,
+				"Resource2Cost": 130,
+				"ProductionTime": 12
+			},
+			"WeaponAttributes": {
+				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
+					"BaseDamagePerRound": 100,
+					"RateOfFire": 4,
+					"ReloadTimeMS": 4000
 				}
 			}
 		},
 		"Tier_2_G_Interceptor": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 450
+				"Resource1Cost": 450,
+				"ResearchTime": 60
 			}
 		},
 		"Research_Buff_G_Interceptor_Speed": {
 			"ResearchItemAttributes": {
 				"Resource2Cost": 170
+			}
+		},
+		
+		"C_Bomber_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 350,
+				"Resource2Cost": 200,
+				"MaxHealth": 1500,
+				"Armour": 12,
+				"PopCapCost": 4
+			},
+			"WeaponAttributes": {
+				"C_Bomber_Weapon_A2G_MP": {
+					"WindUpTimeMS": 0,
+					"BaseDamagePerRound": 1850,
+					"AreaOfEffectRadius": 220
+				}
+			}
+		},
+		"G_Bomber_MP": {
+			"UnitAttributes": {
+				"PopCapCost": 4
+			},
+			"WeaponAttributes": {
+				"G_Bomber_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 900,
+					"AreaOfEffectRadius": 120,
+					"AreaOfEffectFalloffType": "Quadratic"
+				}
+			}
+		},
+		"K_Bomber_MP": {
+			"UnitAttributes": {
+				"PopCapCost": 4
+			},
+			"WeaponAttributes": {
+				"G_Bomber_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 900,
+					"AreaOfEffectRadius": 120,
+					"AreaOfEffectFalloffType": "Quadratic"
+				}
+			}
+		},
+		
+		"C_GunShip_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 100,
+				"MaxHealth": 1250,
+				"Armour": 9,
+				"PopCapCost": 3,
+				"ProductionTime": 45
+			},
+			"WeaponAttributes": {
+				"C_GunShip_Weapon_DefaultFire_MP": {
+					"DamagePacketsPerShot": 2,
+					"BaseDamagePerRound": 56,
+					"AreaOfEffectRadius": 220,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesLong": {
+						"Distance": 1050
+					}
+				}
 			}
 		},
 		
@@ -1010,18 +1132,22 @@
 		},
 		"Tier_3_C_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"Resource2Cost": 400
+				"Resource2Cost": 400,
+				"ResearchTime": 100
 			}
 		},
 		"Tier_3_S_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"Resource2Cost": 400
+				"Resource2Cost": 400,
+				"ResearchTime": 100
 			}
 		},
 		
 		"C_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
 				"Resource2Cost": 200,
+				"MaxHealth": 2100,
+				"Armour": 6,
 				"ProductionTime": 60,
 				"PopCapCost": 4
 			},
@@ -1049,11 +1175,18 @@
 				}
 			}
 		},
+		"Tier_3_C_Artillery": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 85
+			}
+		},
 		
 		"G_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 500,
 				"Resource2Cost": 180,
+				"MaxHealth": 2100,
+				"Armour": 5,
 				"ProductionTime": 50,
 				"PopCapCost": 4
 			},
@@ -1079,7 +1212,14 @@
 		},
 		"Tier_3_G_Artillery_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"ResearchTime": 90
+				"Resource1Cost": 450,
+				"Resource2Cost": 400,
+				"ResearchTime": 75
+			}
+		},
+		"Tier_3_K_ArtilleryCruiser": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 100
 			}
 		},
 		"Research_Buff_G_Artillery_Barrage": {
@@ -1090,56 +1230,6 @@
 		"Research_Buff_K_Artillery_Barrage": {
 			"ResearchItemAttributes": {
 				"ResearchTime": 110
-			}
-		},
-		
-		"C_Bomber_MP": {
-			"UnitAttributes": {
-				"Resource1Cost": 350,
-				"Resource2Cost": 200,
-				"MaxHealth": 1500,
-				"Armour": 12,
-				"PopCapCost": 4
-			},
-			"WeaponAttributes": {
-				"C_Bomber_Weapon_A2G_MP": {
-					"WindUpTimeMS": 0,
-					"BaseDamagePerRound": 1850,
-					"AreaOfEffectRadius": 220
-				}
-			}
-		},
-		"G_Bomber_MP": {
-			"UnitAttributes": {
-				"PopCapCost": 4
-			},
-			"WeaponAttributes": {
-				"G_Bomber_Weapon_A2G_MP": {
-					"BaseDamagePerRound": 900,
-					"AreaOfEffectRadius": 120,
-					"AreaOfEffectFalloffType": "Quadratic"
-				}
-			}
-		},
-		
-		"C_GunShip_MP": {
-			"UnitAttributes": {
-				"Resource1Cost": 500,
-				"Resource2Cost": 100,
-				"MaxHealth": 1250,
-				"Armour": 8,
-				"PopCapCost": 3
-			},
-			"WeaponAttributes": {
-				"C_GunShip_Weapon_DefaultFire_MP": {
-					"DamagePacketsPerShot": 2,
-					"BaseDamagePerRound": 60,
-					"AreaOfEffectRadius": 200,
-					"AreaOfEffectFalloffType": "Quadratic",
-					"RangeAttributesLong": {
-						"Distance": 1050
-					}
-				}
 			}
 		}
 	}
