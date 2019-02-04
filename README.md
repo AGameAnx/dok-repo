@@ -6,10 +6,10 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 
 | Command | Maps | Authors | Description
 | ------- | ---- | ------- | -----------
+| **/l anomaly3v3** | Prime Anomaly (6) | HottestManEver | [3v3 layout for Prime Anomaly](info/map-images/layout-images/anomaly3v3.jpg)
 | **/l canyon1v1** | Canyon Outpost (4) | HottestManEver | [1v1 layout for Canyon Outpost](info/map-images/layout-images/canyon1v1.jpg)
 | **/l canyon-outpost-ffa3** | Canyon Outpost FFA | FrostyTeeth | [3 player FFA](info/map-images/layout-images/canyon-outpost-ffa3.png)
 | **/l cape-wrath-old** | Cape Wrath | SSSS | [2v2 on the v0.16 default for Cape Wrath](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/cape-wrath-old.png)
-| **/l anomaly3v3** | Prime Anomaly (6) | HottestManEver | [3v3 layout for Prime Anomaly](info/map-images/layout-images/anomaly3v3.jpg)
 | **/l crater2v2** | Torin Crater (2) | HottestManEver | [2v2 layout for Torin Crater](info/map-images/layout-images/crater2v2.jpg)
 | **/l dune-sea-ffa3** | Dune Sea FFA | FrostyTeeth | [3 player FFA](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/dune-sea-ffa3.png)
 | **/l epsilon-base-1v1** | Epsilon Base | SSSS | [1v1 on the v0.10-0.16 default for Epsilon Base](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/epsilon-base-1v1.png)
