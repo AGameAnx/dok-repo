@@ -25,6 +25,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | **/l anomaly3v3** | Prime Anomaly (6) | HottestManEver | [3v3 layout for Prime Anomaly](info/map-images/layout-images/anomaly3v3.jpg)
 | **/l wrath2v2** | Cape Wrath (2) | HottestManEver | [2v2 layout for Cape Wrath](info/map-images/layout-images/wrath2v2.jpg)
 | **/l toba1v1** | Khar-Toba (6) | HottestManEver | [1v1 layout for Khar-Toba](info/map-images/layout-images/toba1v1.jpg)
+| **/l canyon1v1** | Canyon Outpost (4) | HottestManEver | [1v1 layout for Canyon Outpost](info/map-images/layout-images/canyon1v1.jpg)
 
 ## Patches
 | Command | Authors | Description
