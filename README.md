@@ -26,6 +26,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | **/l wrath2v2** | Cape Wrath (2) | HottestManEver | [2v2 layout for Cape Wrath](info/map-images/layout-images/wrath2v2.jpg)
 | **/l toba1v1** | Khar-Toba (6) | HottestManEver | [1v1 layout for Khar-Toba](info/map-images/layout-images/toba1v1.jpg)
 | **/l canyon1v1** | Canyon Outpost (4) | HottestManEver | [1v1 layout for Canyon Outpost](info/map-images/layout-images/canyon1v1.jpg)
+| **/l crater2v2** | Torin Crater (2) | HottestManEver | [2v2 layout for Torin Crater](info/map-images/layout-images/crater2v2.jpg)
 
 ## Patches
 | Command | Authors | Description
