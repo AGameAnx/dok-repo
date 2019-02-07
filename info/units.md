@@ -39,7 +39,7 @@
 | C_Sob_Battlecruiser_MP   |
 | C_Sob_Carrier_MP         |
 | C_Sob_Escort_MP          | Soban LAV
-| C_Sob_NukeEmitter_MP     |
+| C_Sob_NukeEmitter_MP     | MWE
 | C_Sob_NukeSight_MP       | The icon and sensor view for MWEs
 | C_Sob_PopcapScanner      | ALM
 | C_Sob_Railgun_MP         |
@@ -79,8 +79,8 @@
 | G_StarHull_Upgrade01_MP  | Assault railgun
 | G_StarHullTank           | Heavy railgun
 | G_StarHullTank_MP        | Heavy Railgun
-| G_SupportCruiser         |
-| G_SupportCruiser_MP      |
+| G_SupportCruiser         | Production Cruiser
+| G_SupportCruiser_MP      | Production Cruiser
 | G_Turret_Heavy           |
 | G_Turret_Heavy_MP        |
 | K_ArtilleryCruiser_MP    |
@@ -96,18 +96,18 @@
 | K_Interceptor_MP         |
 | K_MissileShip_MP         |
 | K_Sandskimmer_MP         |
-| K_SupportCruiser_MP      |
+| K_SupportCruiser_MP      | Production Cruiser
 | N_CruiseMissile_Sight    | The icon and sensor view for nukes
 | N_DemoCharge             |
 | N_DemoCharge_AI          |
 | N_DemoCharge_MP          |
 | N_Displacer_MP           |
 | N_ECMField_MP            | Targeting jammer
-| N_Gun_Turret             |
-| N_Gun_Turret_MP          |
-| N_MissileBarrage_Sight   |
-| N_Missle_Turret          |
-| N_Missle_Turret_MP       |
-| N_Stationary_Turret      |
+| N_Gun_Turret             | Coalition turret
+| N_Gun_Turret_MP          | Coalition turret
+| N_MissileBarrage_Sight   | The icon and sensor view for missile barrages
+| N_Missle_Turret          | AA turret
+| N_Missle_Turret_MP       | AA turret
+| N_Stationary_Turret      | 
 | N_TargetDrone_Campaign   |
 | N_Tornado                |
