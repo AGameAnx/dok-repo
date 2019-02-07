@@ -1,5 +1,5 @@
 # Team
-| String ID          | Name                      | Notes                 |
+| Map ID             | Name                      | Notes                 |
 | ------------------ | ------------------------- | --------------------- |
 | MP_05-Teeth        | Kalash Teeth [2]          |                       |
 | MP_01-Crater       | Torin Crater [2]          |                       |
@@ -33,7 +33,7 @@
 | DEBUG_EmptyMap     | TEST Empty Map            | Doesn't load          |
 
 # FFA
-| String ID          | Name                     | Notes                            |
+| Map ID             | Name                     | Notes                            |
 | ------------------ | ------------------------ | -------------------------------- |
 | MP_05-Teeth-FFA    | FFA - Kalash Teeth [2]   |                                  |
 | MP_01-Crater       | FFA - Torin Crater [2]   | Yes, same ID as the team version |
