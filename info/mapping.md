@@ -1,6 +1,5 @@
 # Deserts of Kharak Mapping Tutorial
 In order to create custom maps you need the More Maps mod. Find the install directory of DoK `(Steam Client->Library->Right Click Deserts of Kharak->Properties...->Local Files->Browse Local Files)`. Then goto `Data/Managed/maps` (location for easy manual installation) where you should see a bunch of `.dokmap` files. To create the map mod modify the map file that belongs to the map you want to change. After each change to the file you only need to restart the level, you don't have to restart the whole game.
-
 Map Layout Format
 ======
 The layout of maps are stored in XML, this is the XML for Kalash Wreck with Fathership:
@@ -167,8 +166,11 @@ The measuring tool should show the x and y distances as well as the direct dista
 
 These are another way to do things, it can be a quicker way than the above method if you are able to generate such a grid. The PowerPoint shows how to make one.
 
-Community Map Tools
+Community Map Tools & Tutorials
 ======
 | Name | Authors | Description
 | ---- | ------- | -----------
 | [Layout Trigonometry Calculator](https://docs.google.com/spreadsheets/d/18sfTI52rmCuiPYDxbEvSLlov7KUSy49SlSkl22KOWAc/edit#gid=0) | FrostyTeeth | A spreadsheet to batch calculate rotations around a point across multiple different coordinates
+| [Layout Tutorial Part 1](https://www.youtube.com/watch?v=AB2XgMFBN_Y) | FrostyTeeth | An introduction to layout creation
+| [Layout Tutorial Part 2](https://www.youtube.com/watch?v=yvOF10prmuk) | FrostyTeeth | Setting up the grid
+| [What Else Can More Maps Do?](https://www.youtube.com/watch?v=cCKLKrMQRso) | FrostyTeeth | Bounds, units and none faction
