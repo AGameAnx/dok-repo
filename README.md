@@ -16,6 +16,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | **/l firebase-siege-3v2** | Firebase Kriil | FrostyTeeth | [3v2 attack on fortified position. Team "2" has 2 players](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/firebase-siege-3v2.png)
 | **/l gbase1v1** | Gaalsien Base (4) | HottestManEver | [1v1 layout for Gaalsien Base](info/map-images/layout-images/gbase1v1.jpg)
 | **/l khar-toba-ffa5** | Khar Toba FFA | FrostyTeeth | [5 player FFA with free population at the start](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/khar-toba-ffa5.png)
+| **/l ocean1v1** | Dune Ocean (6) | HottestManEver | [1v1 layout for Dune Ocean](info/map-images/layout-images/ocean1v1.jpg)
 | **/l prime-anomaly-2112** | Prime Anomaly | FrostyTeeth | [3v3 with middle spawn offset into enemy territory](https://github.com/S5SS/dok-repo/blob/master/info/map-images/layout-images/prime-anomaly-2112.png)
 | **/l test** | All non-FFA | SSSS | Dummy layout for testing purposes
 | **/l toba1v1** | Khar-Toba (6) | HottestManEver | [1v1 layout for Khar-Toba](info/map-images/layout-images/toba1v1.jpg)
