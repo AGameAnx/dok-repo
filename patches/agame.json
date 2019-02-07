@@ -30,7 +30,7 @@
 		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 13000
+				"MaxHealth": 12000
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -38,7 +38,7 @@
 				}
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
+				"TimeVisibleAfterFiring": 4500
 			},
 			"UnitHangarAttributes": {
 				"HangarBays": {
@@ -78,7 +78,7 @@
 				}
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
+				"TimeVisibleAfterFiring": 4500
 			},
 			"UnitHangarAttributes": {
 				"HangarBays": {
@@ -149,10 +149,10 @@
 		},
 		"G_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 11500
+				"MaxHealth": 11000
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
+				"TimeVisibleAfterFiring": 4500
 			},
 			"UnitHangarAttributes": {
 				"HangarBays": {
@@ -168,7 +168,15 @@
 			},
 			"WeaponAttributes": {
 				"G_Carrier_Weapon_BarrageMissile_MP": {
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 450,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"AreaOfEffectRadius": 240,
+					"Modifiers": {
+						"1": {
+							"Remove": true
+						}
+					}
 				}
 			}
 		},
@@ -181,7 +189,7 @@
 				}
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
+				"TimeVisibleAfterFiring": 4500
 			},
 			"WeaponAttributes": {
 				"K_Carrier_Weapon_BarrageMissile_MP": {
@@ -395,6 +403,17 @@
 		"N_Gun_Turret_MP": {
 			"UnitAttributes": {
 				"SensorRadius": 1000
+			},
+			"WeaponAttributes": {
+				"N_Gun_Turret_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 48,
+					"NumberOfBursts": 1,
+					"BurstPeriodMinTimeMS": 670,
+					"BurstPeriodMaxTimeMS": 760,
+					"RateOfFire": 9,
+					"WindUpTimeMS": 500,
+					"ReloadTimeMS": 1000
+				}
 			}
 		},
 		"C_Sob_PopcapScanner": {
@@ -420,7 +439,7 @@
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"WindUpTimeMS": 50,
 					"RateOfFire": 1,
-					"ReloadTimeMS": 2000,
+					"ReloadTimeMS": 4000,
 					"CooldownTimeMS": 550,
 					"AreaOfEffectRadius": 80,
 					"RangeAttributesLong": {
@@ -442,7 +461,7 @@
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"WindUpTimeMS": 50,
 					"RateOfFire": 1,
-					"ReloadTimeMS": 2000,
+					"ReloadTimeMS": 4000,
 					"CooldownTimeMS": 550,
 					"AreaOfEffectRadius": 80,
 					"RangeAttributesLong": {
@@ -521,12 +540,12 @@
 		"C_HAC_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 240,
-				"MaxHealth": 1250,
+				"MaxHealth": 1150,
 				"PopCapCost": 2
 			},
 			"WeaponAttributes": {
 				"C_HAC_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 17,
+					"BaseDamagePerRound": 18,
 					"BurstPeriodMaxTimeMS": 550,
 					"RateOfFire": 13
 				}
@@ -540,26 +559,6 @@
 		"Tier_2_S_ArmouredAssault": {
 			"ResearchItemAttributes": {
 				"ResearchTime": 60
-			}
-		},
-		
-		"C_HAC_Upgrade01_MP": {
-			"UnitAttributes": {
-				"Resource1Cost": 300
-			},
-			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 60
-				}
-			},
-			"WeaponAttributes": {
-				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
-					"BaseDamagePerRound": 700,
-					"DamagePacketsPerShot": 6,
-					"AreaOfEffectRadius": 200,
-					"AreaOfEffectFalloffType": "Linear",
-					"ExcludeFromHeightAdvantage": true
-				}
 			}
 		},
 		
@@ -580,11 +579,6 @@
 			"UnitAttributes": {
 				"ProductionTime": 9
 			},
-			"AbilityAttributes": {
-				"Ability_C_Nitrous_MP": {
-					"CooldownTimeSecs": 40
-				}
-			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
 					"CooldownTimeMS": 850
@@ -595,11 +589,6 @@
 			"UnitAttributes": {
 				"ProductionTime": 9
 			},
-			"AbilityAttributes": {
-				"Ability_C_Nitrous_MP": {
-					"CooldownTimeSecs": 40
-				}
-			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
 					"CooldownTimeMS": 850
@@ -607,21 +596,24 @@
 			}
 		},
 		
+		"Research_Buff_C_Escort_Damage01": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
+		"Research_Buff_C_Escort_Damage02": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
+		"Research_Buff_G_SandSkimmers_Damage01": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
+		"Research_Buff_G_SandSkimmers_Damage02": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
+		
 		"C_Railgun_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 220,
 				"Resource2Cost": 70,
+				"Armour": 2,
 				"ProductionTime": 16
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
+				"TimeVisibleAfterFiring": 4500
 			},
 			"WeaponAttributes": {
 				"C_Railgun_Weapon_G2G_MP": {
 					"ReloadTimeMS": 3200,
-					"RangeAttributesLong": {
-						"Distance": 2150
-					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 50,
 						"AngleWeight": 10,
@@ -634,17 +626,14 @@
 			"UnitAttributes": {
 				"Resource1Cost": 240,
 				"Resource2Cost": 70,
-				"Armour": 2,
+				"Armour": 1,
 				"ProductionTime": 16
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
+				"TimeVisibleAfterFiring": 4500
 			},
 			"WeaponAttributes": {
 				"C_Sob_Railgun_Weapon_G2G_MP": {
-					"RangeAttributesLong": {
-						"Distance": 2150
-					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 50,
 						"AngleWeight": 10,
@@ -669,11 +658,60 @@
 			}
 		},
 		
+		"G_StarHullTank_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 720,
+				"Resource1Cost": 300,
+				"Resource2Cost": 80,
+				"Armour": 2
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Weapon_G2G_MP": {
+					"ReloadTimeMS": 300,
+					"RangeAttributesLong": {
+						"Distance": 2070
+					},
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 50,
+						"AngleWeight": 10,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"K_HeavyRailgun_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 720,
+				"Resource1Cost": 300,
+				"Resource2Cost": 80,
+				"Armour": 2
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Weapon_G2G_MP": {
+					"ReloadTimeMS": 300,
+					"RangeAttributesLong": {
+						"Distance": 2070
+					},
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 50,
+						"AngleWeight": 10,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		
 		"G_Catamaran_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 260,
 				"Resource2Cost": 45,
-				"MaxHealth": 900
+				"MaxHealth": 940
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
@@ -689,7 +727,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 260,
 				"Resource2Cost": 45,
-				"MaxHealth": 900
+				"MaxHealth": 940
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
@@ -724,14 +762,38 @@
 			}
 		},
 		
+		"C_HAC_Upgrade01_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 300,
+				"Armour": 3
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 60
+				}
+			},
+			"WeaponAttributes": {
+				"C_HAC_Upgrade01_Weapon_G2A_MP": {
+					"ReloadTimeMS": 4000
+				},
+				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
+					"BaseDamagePerRound": 700,
+					"AreaOfEffectRadius": 220,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		
 		"G_Catamaran_Upgrade01_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 350,
-				"ProductionTime": 24
+				"ProductionTime": 24,
+				"Armour": 3
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
-					"ReloadTimeMS": 1700,
+					"ReloadTimeMS": 3500,
 					"Turret": {
 						"RotationSpeed": 160,
 						"FieldOfFire": 40
@@ -741,7 +803,7 @@
 					}
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
-					"ReloadTimeMS": 1700,
+					"ReloadTimeMS": 3500,
 					"Turret": {
 						"RotationSpeed": 240,
 						"FieldOfFire": 40
@@ -752,7 +814,7 @@
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 175,
+					"BaseDamagePerRound": 200,
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
 				}
@@ -761,11 +823,12 @@
 		"K_MissileShip_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 350,
-				"ProductionTime": 24
+				"ProductionTime": 24,
+				"Armour": 3
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
-					"ReloadTimeMS": 1700,
+					"ReloadTimeMS": 3500,
 					"Turret": {
 						"RotationSpeed": 160,
 						"FieldOfFire": 40
@@ -775,7 +838,7 @@
 					}
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
-					"ReloadTimeMS": 1700,
+					"ReloadTimeMS": 3500,
 					"Turret": {
 						"RotationSpeed": 240,
 						"FieldOfFire": 40
@@ -786,60 +849,26 @@
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 175,
+					"BaseDamagePerRound": 200,
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
 				}
 			}
 		},
 		
-		"G_StarHullTank_MP": {
-			"UnitAttributes": {
-				"MaxHealth": 720,
-				"Resource1Cost": 300,
-				"Resource2Cost": 80
-			},
-			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
-			},
-			"WeaponAttributes": {
-				"G_StarHull_Weapon_G2G_MP": {
-					"ReloadTimeMS": 300,
-					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 50,
-						"AngleWeight": 10,
-						"DistanceWeight": 0.05
-					}
-				}
-			}
-		},
-		"K_HeavyRailgun_MP": {
-			"UnitAttributes": {
-				"MaxHealth": 720,
-				"Resource1Cost": 300,
-				"Resource2Cost": 80
-			},
-			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
-			},
-			"WeaponAttributes": {
-				"G_StarHull_Weapon_G2G_MP": {
-					"ReloadTimeMS": 300,
-					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 50,
-						"AngleWeight": 10,
-						"DistanceWeight": 0.05
-					}
-				}
-			}
-		},
-		
 		"G_StarHull_Upgrade01_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 210,
+				"Resource1Cost": 220,
 				"Resource2Cost": 40,
+				"MaxHealth": 580,
 				"ExperienceValue": 300,
-				"Armour": 4
+				"Armour": 3
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"AccelerationTime": 0.89,
+					"BrakingTime": 0.89
+				}
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
@@ -851,10 +880,17 @@
 		},
 		"K_AssaultRailgun_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 210,
+				"Resource1Cost": 220,
 				"Resource2Cost": 40,
+				"MaxHealth": 580,
 				"ExperienceValue": 300,
-				"Armour": 4
+				"Armour": 3
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"AccelerationTime": 0.89,
+					"BrakingTime": 0.89
+				}
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
@@ -873,14 +909,13 @@
 		"C_Interceptor_MP": {
 			"UnitAttributes": {
 				"Armour": 2,
-				"Resource2Cost": 110
+				"ProductionTime": 20
 			}
 		},
 		
 		"G_Interceptor_MP": {
 			"UnitAttributes": {
 				"Armour": 3,
-				"Resource2Cost": 130,
 				"ProductionTime": 12
 			},
 			"WeaponAttributes": {
@@ -894,7 +929,6 @@
 		"K_Interceptor_MP": {
 			"UnitAttributes": {
 				"Armour": 3,
-				"Resource2Cost": 130,
 				"ProductionTime": 12
 			},
 			"WeaponAttributes": {
@@ -1036,6 +1070,18 @@
 				}
 			}
 		},
+		"Tier_3_C_AssaultCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 300
+			}
+		},
+		"Tier_3_S_AssaultCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 300
+			}
+		},
 		"Research_Buff_G_BattleCruiser_AntiAir": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
@@ -1048,7 +1094,7 @@
 				"MaxHealth": 3000
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
+				"TimeVisibleAfterFiring": 4500
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
@@ -1073,7 +1119,7 @@
 				"MaxHealth": 3000
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
+				"TimeVisibleAfterFiring": 4500
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
@@ -1114,6 +1160,13 @@
 				"Dynamics": {
 					"MaxSpeedTurnRadius": 130
 				}
+			},
+			"WeaponAttributes": {
+				"C_Battlecruiser_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 250,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"AreaOfEffectRadius": 55
+				}
 			}
 		},
 		"C_Sob_Battlecruiser_MP": {
@@ -1127,7 +1180,7 @@
 				}
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 6000
+				"TimeVisibleAfterFiring": 4500
 			},
 			"WeaponAttributes": {
 				"C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
@@ -1150,6 +1203,7 @@
 		
 		"C_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 350,
 				"Resource2Cost": 200,
 				"MaxHealth": 2100,
 				"Armour": 6,
@@ -1208,6 +1262,11 @@
 			}
 		},
 		"K_ArtilleryCruiser_MP": {
+			"AbilityAttributes": {
+				"Ability_K_ArtilleryBarrage_01_MP": {
+					"CooldownTimeSecs": 75
+				}
+			},
 			"WeaponAttributes": {
 				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
 					"ExcludeFromHeightAdvantage": true,
