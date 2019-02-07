@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap>
+    <!-- the following 5 dont do anything atm -->
+    <name>dune sea</name>
+    <map>*</map>
+    <description>Gaalsien Base 1v1</description>
+    <authors>HottestManEver</authors>
+    <players>2</players>
+   
+<bounds top="-3000" right="5000" bottom="-10000" left="-6000"/>
+ 
+    <spawns>
+        <!-- team 1 -->
+        <spawn team="0" index="0" x="3600" z="-5400" angle="0"/>
+ 
+        <!-- team 2 -->
+        <spawn team="1" index="0" x="-5000" z="-6800" angle="0"/>
+ 
+    </spawns>
+   
+    <resources>
+        <!-- type 0 = cus, type 1 = rus, type 2 = wreck (wreck needs testing) -->
+           
+
+       
+<!-- right -->
+ 
+ 
+<resource x="3850" z="-5250" type="0" amount="7500" collectors="2"/>
+<resource x="3850" z="-5400" type="1" amount="3000" collectors="2"/>
+<resource x="3850" z="-5550" type="0" amount="7500" collectors="2"/>
+
+<resource x="2950" z="-4400" type="1" amount="4000" collectors="2"/>
+<resource x="3050" z="-4300" type="0" amount="10500" collectors="2"/>
+
+<resource x="2150" z="-7700" type="1" amount="4000" collectors="2"/>
+<resource x="2050" z="-7600" type="0" amount="10500" collectors="2"/>
+ 
+ <!-- left -->
+ 
+ 
+<resource x="-5250" z="-6650" type="0" amount="7500" collectors="2"/>
+<resource x="-5250" z="-6800" type="1" amount="3000" collectors="2"/>
+<resource x="-5250" z="-6950" type="0" amount="7500" collectors="2"/>
+ 
+<resource x="-4550" z="-5800" type="1" amount="4000" collectors="2"/>
+<resource x="-4650" z="-5700" type="0" amount="10500" collectors="2"/>
+
+<resource x="-3250" z="-8800" type="0" amount="10500" collectors="2"/>
+<resource x="-3350" z="-8900" type="1" amount="4000" collectors="2"/>
+ 
+
+
+   </resources>
+   
+    <artifacts>
+
+        <artifact x="-2400" z="-3650"/>
+        <artifact x="-1300" z="-3650"/>
+        <artifact x="0" z="-3650"/>
+
+        <artifact x="3600" z="-5400"/>
+        <artifact x="-5000" z="-6800"/>
+ 
+    </artifacts>
+ 
+<ezs>
+        <!-- extraction zones -->
+        <!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+        <ez team="1" x="-1700" z="-8900" radius="500"/>
+        <ez team="0" x="750" z="-8120" radius="500"/>
+    </ezs>
+
+<blockers existing="true">
+ 
+
+<!-- plane -->
+
+<blocker mask="Ground" blocklof="true" verts="
+200,3500;
+300,3650;
+600,3000;
+500,3000;
+250,3250"/>
+
+</blockers>
+ 
+ 
+</dokmap>
