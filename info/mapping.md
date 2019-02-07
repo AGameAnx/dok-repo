@@ -1,5 +1,7 @@
 # Deserts of Kharak Mapping Tutorial
+
 In order to create custom maps you need the More Maps mod. Find the install directory of DoK `(Steam Client->Library->Right Click Deserts of Kharak->Properties...->Local Files->Browse Local Files)`. Then goto `Data/Managed/maps` (location for easy manual installation) where you should see a bunch of `.dokmap` files. To create the map mod modify the map file that belongs to the map you want to change. After each change to the file you only need to restart the level, you don't have to restart the whole game.
+
 Map Layout Format
 ======
 The layout of maps are stored in XML, this is the XML for Kalash Wreck with Fathership:
