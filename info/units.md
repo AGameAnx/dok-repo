@@ -78,9 +78,9 @@
 | G_StarHull_Upgrade01     | Assault railgun
 | G_StarHull_Upgrade01_MP  | Assault railgun
 | G_StarHullTank           | Heavy railgun
-| G_StarHullTank_MP        | Heavy Railgun
-| G_SupportCruiser         | Production Cruiser
-| G_SupportCruiser_MP      | Production Cruiser
+| G_StarHullTank_MP        | Heavy railgun
+| G_SupportCruiser         | Production cruiser
+| G_SupportCruiser_MP      | Production cruiser
 | G_Turret_Heavy           |
 | G_Turret_Heavy_MP        |
 | K_ArtilleryCruiser_MP    |
@@ -96,7 +96,7 @@
 | K_Interceptor_MP         |
 | K_MissileShip_MP         |
 | K_Sandskimmer_MP         |
-| K_SupportCruiser_MP      | Production Cruiser
+| K_SupportCruiser_MP      | Production cruiser
 | N_CruiseMissile_Sight    | The icon and sensor view for nukes
 | N_DemoCharge             |
 | N_DemoCharge_AI          |
