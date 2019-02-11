@@ -1,4 +1,4 @@
-# Miscelanous Information
+# Miscellaneous  Information
 
 ## Replays
 To share replays, share the `.dokreplay` and the `.dokreplayx` file with the same name.
