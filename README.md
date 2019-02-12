@@ -20,7 +20,6 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 | **/l ocean1v1** | Dune Ocean (6) | HottestManEver | [1v1 layout for Dune Ocean](info/map-images/layout-images/ocean1v1.jpg)
 | **/l prime-anomaly-2112** | Prime Anomaly | FrostyTeeth | [3v3 with middle spawn offset into enemy territory](info/map-images/layout-images/prime-anomaly-2112.png)
 | **/l taiidan1v1** | Taiidan Passage (2) Taiidan Crater (6) | HottestManEver | [1v1 layout for Taiidan Passage and Crater](info/map-images/layout-images/taiidan1v1.jpg)
-| **/l test** | All non-FFA | SSSS | Dummy layout for testing purposes
 | **/l toba1v1** | Khar-Toba (6) | HottestManEver | [1v1 layout for Khar-Toba](info/map-images/layout-images/toba1v1.jpg)
 | **/l tombs3v3** | Tombs of the Antients (4) | HottestManEver | [3v3 layout for Tombs of the Antients](info/map-images/layout-images/tombs3v3.jpg)
 | **/l torin-crater-ffa4** | Torin Crater FFA| FrostyTeeth | [4 player FFA](info/map-images/layout-images/torin-crater-ffa4.png)
