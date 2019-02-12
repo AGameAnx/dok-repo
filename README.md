@@ -7,6 +7,7 @@ All commands must be 16 characters or shorter.
 
 | Command | Maps | Authors | Description
 | ------- | ---- | ------- | -----------
+| **/l anomaly-2112** | Prime Anomaly | FrostyTeeth | [3v3 with middle spawn offset into enemy territory](info/map-images/layout-images/prime-anomaly-2112.png)
 | **/l anomaly3v3** | Prime Anomaly (6) | HottestManEver | [3v3 layout for Prime Anomaly](info/map-images/layout-images/anomaly3v3.jpg)
 | **/l canyon1v1** | Canyon Outpost (4) | HottestManEver | [1v1 layout for Canyon Outpost](info/map-images/layout-images/canyon1v1.jpg)
 | **/l canyon-ffa3** | Canyon Outpost FFA | FrostyTeeth | [3 player FFA](info/map-images/layout-images/canyon-outpost-ffa3.png)
@@ -19,7 +20,6 @@ All commands must be 16 characters or shorter.
 | **/l kalash3v3** | Kalash Site (6) <br/> Kalash Wreck (2) | HottestManEver | [3v3 layout for Kalash Site](info/map-images/layout-images/kalash3v3.jpg)
 | **/l khar-toba-ffa5** | Khar Toba FFA | FrostyTeeth | [5 player FFA with free population at the start](info/map-images/layout-images/khar-toba-ffa5.png)
 | **/l ocean1v1** | Dune Ocean (6) | HottestManEver | [1v1 layout for Dune Ocean](info/map-images/layout-images/ocean1v1.jpg)
-| **/l prime-anomaly-2112** | Prime Anomaly | FrostyTeeth | [3v3 with middle spawn offset into enemy territory](info/map-images/layout-images/prime-anomaly-2112.png)
 | **/l taiidan1v1** | Taiidan Passage (2) <br/> Taiidan Crater (6) | HottestManEver | [1v1 layout for Taiidan Passage and Crater](info/map-images/layout-images/taiidan1v1.jpg)
 | **/l toba1v1** | Khar-Toba (6) | HottestManEver | [1v1 layout for Khar-Toba](info/map-images/layout-images/toba1v1.jpg)
 | **/l tombs3v3** | Tombs of the Antients (4) | HottestManEver | [3v3 layout for Tombs of the Antients](info/map-images/layout-images/tombs3v3.jpg)
