@@ -5,7 +5,7 @@ All command arguments must be 16 characters or shorter.
 
 ## Layouts
 
-| Command | Maps | Players | Authors | Description
+| Command | Maps | Players<br/>`[min,max]` | Authors | Description
 | ------- | ---- | :-----: | ------- | -----------
 | **/l anomaly-2112** | Prime Anomaly | [6,6] | FrostyTeeth | [3v3 with middle spawn offset into enemy territory](info/map-images/layout-images/prime-anomaly-2112.png)
 | **/l anomaly3v3** | Prime Anomaly | [6,6] |  HottestManEver | [3v3 layout for Prime Anomaly](info/map-images/layout-images/anomaly3v3.jpg)
@@ -15,7 +15,7 @@ All command arguments must be 16 characters or shorter.
 | **/l crater2v2** | Torin Crater | [6,6] |  HottestManEver | [2v2 layout for Torin Crater](info/map-images/layout-images/crater2v2.jpg)
 | **/l dune-sea-ffa3** | FFA - Dune Sea | [6,6] |  FrostyTeeth | [3 player FFA](info/map-images/layout-images/dune-sea-ffa3.png)
 | **/l epsilon-base-old** | Epsilon Base | [1,1] |  SSSS | [The v0.10-0.16 default for Epsilon Base](info/map-images/layout-images/epsilon-base-1v1.png)
-| **/l firebase-siege-3v2** | Firebase Kriil | [5,5] |  FrostyTeeth | [3v2 attack on fortified position. Team "2" has 2 players](info/map-images/layout-images/firebase-siege-3v2.png)
+| **/l firebase-siege-3v2** | Firebase Kriil | [5,5] |  FrostyTeeth | [3v2 attack on fortified position<br/>Team 2 has 2 players](info/map-images/layout-images/firebase-siege-3v2.png)
 | **/l gbase1v1** | Gaalsien Base | [2,2] |  HottestManEver | [1v1 layout for Gaalsien Base](info/map-images/layout-images/gbase1v1.jpg)
 | **/l kalash3v3** | Kalash Site <br/> Kalash Wreck | [6,6] |  HottestManEver | [3v3 layout for Kalash Site](info/map-images/layout-images/kalash3v3.jpg)
 | **/l khar-toba-ffa5** | FFA - Khar-Toba | [5,5] | FrostyTeeth | [5 player FFA with free population at the start](info/map-images/layout-images/khar-toba-ffa5.png)
