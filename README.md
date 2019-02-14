@@ -5,7 +5,7 @@ All command arguments must be 16 characters or shorter.
 
 ## Layouts
 
-| Command | Maps | Players<br/>[`min`,`max`] | Authors | Description
+| Command | Maps | Players | Authors | Description
 | ------- | ---- | :-----: | ------- | -----------
 | **/l anomaly-2112** | Prime Anomaly | [6,6] | FrostyTeeth | [3v3 with middle spawn offset into enemy territory](info/map-images/layout-images/prime-anomaly-2112.png)
 | **/l anomaly3v3** | Prime Anomaly | [6,6] |  HottestManEver | [3v3 layout for Prime Anomaly](info/map-images/layout-images/anomaly3v3.jpg)
