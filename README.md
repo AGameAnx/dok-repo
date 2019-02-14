@@ -20,6 +20,7 @@ All commands must not wrap onto the following line.
 | **/l kalash3v3** | Kalash Site <br/> Kalash Wreck | [6,6] |  HottestManEver | [3v3 layout for Kalash Site](info/map-images/layout-images/kalash3v3.jpg)
 | **/l khar-toba-ffa5** | FFA - Khar-Toba | [5,5] | FrostyTeeth | [5 player FFA with free population<br/>at the start](info/map-images/layout-images/khar-toba-ffa5.png)
 | **/l ocean1v1** | Dune Ocean | [2,2] |  HottestManEver | [1v1 layout for Dune Ocean](info/map-images/layout-images/ocean1v1.jpg)
+| **/l rachels** | Kalash Teeth | [2,2] |  HottestManEver | [Rachels duels for Kalash Teeth](info/map-images/layout-images/rachels.jpg)
 | **/l taiidan1v1** | Taiidan Passage<br/>Taiidan Crater | [2,2] |  HottestManEver | [1v1 layout for Taiidan Passage<br/>and Crater](info/map-images/layout-images/taiidan1v1.jpg)
 | **/l toba1v1** | Khar-Toba | [2,2] | HottestManEver | [1v1 layout for Khar-Toba](info/map-images/layout-images/toba1v1.jpg)
 | **/l tombs3v3** | Tombs of the Ancients | [6,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](info/map-images/layout-images/tombs3v3.jpg)
