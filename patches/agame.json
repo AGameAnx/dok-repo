@@ -961,7 +961,7 @@
 			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
-					"RateOfFire": 16
+					"RateOfFire": 13
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"WindUpTimeMS": 50,
@@ -986,7 +986,7 @@
 			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
-					"RateOfFire": 16
+					"RateOfFire": 13
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"WindUpTimeMS": 50,
@@ -1124,7 +1124,7 @@
 				"C_Escort_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 17,
 					"RateOfFire": 4,
-					"CooldownTimeMS": 850
+					"BurstPeriodMaxTimeMS": 1000
 				}
 			}
 		},
@@ -1137,19 +1137,19 @@
 				"C_Escort_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 17,
 					"RateOfFire": 4,
-					"CooldownTimeMS": 850
+					"BurstPeriodMaxTimeMS": 1000
 				}
 			}
 		},
 		
 		"G_SandSkimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 610
+				"MaxHealth": 620
 			}
 		},
 		"K_Sandskimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 610
+				"MaxHealth": 620
 			}
 		},
 		
@@ -1804,9 +1804,10 @@
 			},
 			"WeaponAttributes": {
 				"C_ArtilleryCruiser_Weapon_Barrage_MP": {
-					"BaseDamagePerRound": 250,
-					"NumberOfBursts": 4,
+					"BaseDamagePerRound": 220,
+					"NumberOfBursts": 6,
 					"RateOfFire": 3,
+					"CooldownTimeMS": 900,
 					"BurstPeriodMinTimeMS": 1700,
 					"BurstPeriodMaxTimeMS": 1700,
 					"RangeAttributesLong": {
@@ -1858,9 +1859,10 @@
 			},
 			"WeaponAttributes": {
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"BaseDamagePerRound": 250,
-					"NumberOfBursts": 4,
+					"BaseDamagePerRound": 220,
+					"NumberOfBursts": 6,
 					"RateOfFire": 3,
+					"CooldownTimeMS": 900,
 					"BurstPeriodMinTimeMS": 1700,
 					"BurstPeriodMaxTimeMS": 1700,
 					"RangeAttributesLong": {
@@ -1897,7 +1899,7 @@
 							"TargetClass": "Small",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 50
+							"Amount": 65
 						}
 					}
 				}
