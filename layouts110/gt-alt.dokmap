@@ -5,13 +5,30 @@
 	      description="Alternate version of Gaalsien Territories"/>
 	
 	<layout map="MP_23" mode="Team" players="2, 3, 4, 5, 6">
-		<bounds top="6700" bottom="-2300" left="-1000" right="8000"/>
+		<bounds top="6500" bottom="-2500" left="-1000" right="8000"/>
+		<blockers>
+			<!-- dissallow moving to bottom into the base -->
+			<blocker class="All" blocklof="true" verts="-1000,-2500;-1000,600;8000,600;8000,-2500"/>
+		</blockers>
+		
+		<units>
+			<!-- to fix no units bug -->
+			<unit team="0" index="1" x="0" y="0" angle="0" type="C_Escort"/>
+			<unit team="0" index="2" x="0" y="0" angle="0" type="C_Escort"/>
+			<unit team="1" index="1" x="0" y="0" angle="0" type="C_Escort"/>
+			<unit team="1" index="2" x="0" y="0" angle="0" type="C_Escort"/>
+		</units>
+		
 		<spawns>
 			<!-- team 1 -->
 			<spawn team="0" index="0" x="0" y="5500" angle="180" camera="105"/>
+			<spawn team="0" index="1" x="0" y="5500" angle="180" camera="105" fleet="false"/>
+			<spawn team="0" index="2" x="0" y="5500" angle="180" camera="105" fleet="false"/>
 			
 			<!-- team 2 -->
 			<spawn team="1" index="0" x="7000" y="5500" angle="180" camera="255"/>
+			<spawn team="1" index="1" x="7000" y="5500" angle="180" camera="255" fleet="false"/>
+			<spawn team="1" index="2" x="7000" y="5500" angle="180" camera="255" fleet="false"/>
 		</spawns>
 	 
 		<resources>
@@ -27,14 +44,24 @@
 		</resources>
 		
 		<wrecks>
-			<wreck x="0" y="2500" angle="45">
-				<resource x="3570" y="1035" type="cu" amount="10500"/>
-				<resource x="3500" y="965" type="ru" amount="4000"/>
+			<wreck x="0" y="3500" angle="45">
+				<resource x="50" y="3640" type="cu" amount="10500"/>
+				<resource x="-50" y="3640" type="ru" amount="4000"/>
 			</wreck>
 			
-			<wreck x="7000" y="2500" angle="315">
-				<resource x="3200" y="1035" type="cu" amount="10500"/>
-				<resource x="3270" y="965" type="ru" amount="4000"/>
+			<wreck x="7000" y="3500" angle="315">
+				<resource x="6950" y="3640" type="cu" amount="10500"/>
+				<resource x="7050" y="3640" type="ru" amount="4000"/>
+			</wreck>
+			
+			<wreck x="1000" y="2000" angle="45">
+				<resource x="1050" y="2140" type="cu" amount="10500"/>
+				<resource x="950" y="2140" type="ru" amount="4000"/>
+			</wreck>
+			
+			<wreck x="6000" y="2000" angle="315">
+				<resource x="5950" y="2140" type="cu" amount="10500"/>
+				<resource x="6050" y="2140" type="ru" amount="4000"/>
 			</wreck>
 		</wrecks>
 	 
@@ -47,12 +74,8 @@
 		<ezs>
 			<!-- extraction zones -->
 			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
-			<ez team="0" x="2100" y="1150" radius="500"/>
-			<ez team="1" x="4900" y="1150" radius="500"/>
+			<ez team="0" x="2150" y="1150" radius="500"/>
+			<ez team="1" x="4850" y="1150" radius="500"/>
 		</ezs>
-		
-		<blockers>
-			<!--<blocker class="All" blocklof="true" verts=""/>-->
-		</blockers>
 	</layout>
 </dokmap>
