@@ -5,8 +5,8 @@
 	      authors="SSSS"
 	      description="Alternate version of Gaalsien Territories"/>
 	
-	<layout map="*" mode="Team" players="2, 3, 4, 5, 6">
-		<bounds top="7000" bottom="-2000" left="-1000" right="8000"/>
+	<layout map="MP_23" mode="Team" players="2, 3, 4, 5, 6">
+		<bounds top="6500" bottom="-2500" left="-1000" right="8000"/>
 		<spawns>
 			<!-- team 1 -->
 			<spawn team="0" index="0" x="0" y="6000" angle="180" camera="75"/>
@@ -28,7 +28,7 @@
 		</resources>
 		
 		<wrecks>
-			<wreck x="3635" y="900" angle="45">
+			<wreck x="0" y="900" angle="45">
 				<resource x="3570" y="1035" type="cu" amount="10500"/>
 				<resource x="3500" y="965" type="ru" amount="4000"/>
 			</wreck>
@@ -48,8 +48,12 @@
 		<ezs>
 			<!-- extraction zones -->
 			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
-			<ez team="0" x="2500" y="1300" radius="500"/>
-			<ez team="1" x="4500" y="1300" radius="500"/>
+			<ez team="0" x="2200" y="1200" radius="500"/>
+			<ez team="1" x="4800" y="1200" radius="500"/>
 		</ezs>
+		
+		<blockers>
+			<!--<blocker class="All" blocklof="true" verts=""/>-->
+		</blockers>
 	</layout>
 </dokmap>
