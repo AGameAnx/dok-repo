@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<meta name="Prime Anomaly Old [6,6]"
+	      authors="SSSS"
+	      description="Sarum dust clouds style map"/>
+		  
+	<layout map="M13" mode="Team" players="2, 3, 4, 5, 6">
+		<bounds top="8000" left="-7750" bottom="-8000" right="8250"/>
+	
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="2" x="7250" y="0" angle="-90"/>
+			<spawn team="0" index="1" x="4750" y="2500" angle="-90"/>
+			<spawn team="0" index="0" x="4750" y="-2500" angle="-90"/>
+			
+			<!-- team 2 -->
+			<spawn team="1" index="2" x="-6750" y="0" angle="90"/>
+			<spawn team="1" index="0" x="-4250" y="2500" angle="90"/>
+			<spawn team="1" index="1" x="-4250" y="-2500" angle="90"/>
+		</spawns>
+		
+		<resources>
+			<!-- type 0 = cus, type 1 = rus -->
+			<!-- team 1 -->
+			<resource x="7150" y="-300" type="cu" amount="7500"/>
+			<resource x="7250" y="-300" type="ru" amount="3000"/>
+			<resource x="7350" y="-300" type="cu" amount="7500"/>
+			
+			<resource x="4650" y="2200" type="cu" amount="7500"/>
+			<resource x="4750" y="2200" type="ru" amount="3000"/>
+			<resource x="4850" y="2200" type="cu" amount="7500"/>
+			
+			<resource x="4650" y="-2800" type="cu" amount="7500"/>
+			<resource x="4750" y="-2800" type="ru" amount="3000"/>
+			<resource x="4850" y="-2800" type="cu" amount="7500"/>
+			
+			<resource x="7200" y="2500" type="cu" amount="10500"/>
+			<resource x="7300" y="2500" type="ru" amount="4000"/>
+			
+			<resource x="7200" y="-2500" type="cu" amount="10500"/>
+			<resource x="7300" y="-2500" type="ru" amount="4000"/>
+			
+			<resource x="4700" y="250" type="cu" amount="10500"/>
+			<resource x="4800" y="250" type="ru" amount="4000"/>
+			
+			<resource x="4700" y="-250" type="cu" amount="10500"/>
+			<resource x="4800" y="-250" type="ru" amount="4000"/>
+			
+			<resource x="3465" y="3465" type="ru" amount="4000"/>
+			<resource x="3395" y="3395" type="cu" amount="10500"/>
+			
+			<resource x="3465" y="-3465" type="ru" amount="4000"/>
+			<resource x="3395" y="-3395" type="cu" amount="10500"/>
+			
+			<!-- team 2 -->
+			<resource x="-6850" y="-300" type="cu" amount="7500"/>
+			<resource x="-6750" y="-300" type="ru" amount="3000"/>
+			<resource x="-6650" y="-300" type="cu" amount="7500"/>
+			
+			<resource x="-4150" y="2200" type="cu" amount="7500"/>
+			<resource x="-4250" y="2200" type="ru" amount="3000"/>
+			<resource x="-4350" y="2200" type="cu" amount="7500"/>
+			
+			<resource x="-4150" y="-2800" type="cu" amount="7500"/>
+			<resource x="-4250" y="-2800" type="ru" amount="3000"/>
+			<resource x="-4350" y="-2800" type="cu" amount="7500"/>
+			
+			<resource x="-6950" y="2500" type="cu" amount="10500"/>
+			<resource x="-7050" y="2500" type="ru" amount="4000"/>
+			
+			<resource x="-6950" y="-2500" type="cu" amount="10500"/>
+			<resource x="-7050" y="-2500" type="ru" amount="4000"/>
+			
+			<resource x="-4200" y="250" type="cu" amount="10500"/>
+			<resource x="-4300" y="250" type="ru" amount="4000"/>
+			
+			<resource x="-4200" y="-250" type="cu" amount="10500"/>
+			<resource x="-4300" y="-250" type="ru" amount="4000"/>
+			
+			<resource x="-2965" y="3465" type="ru" amount="4000"/>
+			<resource x="-2895" y="3395" type="cu" amount="10500"/>
+			
+			<resource x="-2965" y="-3465" type="ru" amount="4000"/>
+			<resource x="-2895" y="-3395" type="cu" amount="10500"/>
+			
+			<!-- mid -->
+			<resource x="250" y="3850" type="cu" amount="10500"/>
+			<resource x="250" y="3950" type="ru" amount="4000"/>
+			
+			<resource x="250" y="-3850" type="cu" amount="10500"/>
+			<resource x="250" y="-3950" type="ru" amount="4000"/>
+		</resources>
+		
+		<artifacts>
+			<artifact x="250" y="-20"/>
+			<artifact x="250" y="2500"/>
+			<artifact x="250" y="-2500"/>
+		</artifacts>
+		
+		<ezs>
+			<!-- extraction zones -->
+			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+			<ez team="0" x="-500" y="6000" radius="750"/>
+			<ez team="1" x="1000" y="-6000" radius="750"/>
+		</ezs>
+		
+		<blockers existing="false">
+			<!-- top wreck -->
+			<blocker class="Ground" blocklof="true" verts="-300,140;-300,2150;810,2140;810,140"/>
+			<!-- bottom wreck -->
+			<blocker class="Ground" blocklof="true" verts="-300,-140;-300,-1630;810,-810;810,-140"/>
+			<!-- block carrier -->
+			<blocker class="Carrier" blocklof="true" verts="-300,-140;-300,-140;810,140;810,-140"/>
+		</blockers>
+	</layouts>
+</dokmap>
