@@ -7,7 +7,8 @@ All commands must not wrap onto the following line.
 
 | Command | Maps | Players | Authors | Description
 | ------- | ---- | :-----: | ------- | -----------
-| **/l anomaly-2112** | Prime Anomaly | [6,6] | FrostyTeeth | [3v3 with middle spawn offset<br/>into enemy territory](layouts/prime-anomaly-2112.png)
+| **/l anomaly-2112** | Prime Anomaly | [6,6] | FrostyTeeth | [3v3 with middle spawn offset<br/>into enemy territory](layouts/prime-2112.png)
+| **/l anomaly-old** | Prime Anomaly | [6,6] |  SSSS | [The v1.0 default for Prime Anomaly](layouts/anomaly-old.jpg)
 | **/l anomaly3v3** | Prime Anomaly | [6,6] |  HottestManEver | [3v3 layout for Prime Anomaly](layouts/anomaly3v3.jpg)
 | **/l canyon1v1** | Canyon Outpost | [2,2] |  HottestManEver | [1v1 layout for Canyon Outpost](layouts/canyon1v1.jpg)
 | **/l canyon-ffa3** | FFA - Canyon Outpost | [3,3] |  FrostyTeeth | [3 player FFA](layouts/canyon-outpost-ffa3.png)
