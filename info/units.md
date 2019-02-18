@@ -1,3 +1,6 @@
+# Units
+All units which end in `_MP` are the multiplayer variants however not all units have a `_MP` 
+meaning the multiplayer variant is the same as the singleplayer variant.
 | Unit ID                  | Description
 | ------------------------ | --------------------------
 | C_ArtilleryCruiser       |
@@ -12,7 +15,7 @@
 | C_Carrier_Generic        |
 | C_Carrier_Smoke_Free     |
 | C_Escort                 | LAV
-| C_Escort_Dummy           | LAV
+| C_Escort_Dummy           | LAV (unselectable)
 | C_Escort_MP              | LAV
 | C_GunShip                |
 | C_GunShip_MP             |
