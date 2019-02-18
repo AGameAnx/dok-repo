@@ -1,7 +1,7 @@
 # Units
 
 All units which end in `_MP` are the multiplayer variants however not all units have a `_MP` 
-meaning the multiplayer variant is the same as the singleplayer variant.
+variant meaning the multiplayer variant is the same as the singleplayer variant.
 
 | Unit ID                  | Description
 | ------------------------ | --------------------------
