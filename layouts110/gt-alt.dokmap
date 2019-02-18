@@ -5,18 +5,14 @@
 	      description="Alternate version of Gaalsien Territories"/>
 	
 	<layout map="MP_23" mode="Team" players="2, 3, 4, 5, 6">
-		<bounds top="6500" bottom="-2500" left="-1000" right="8000"/>
-		<blockers>
-			<!-- dissallow moving to bottom into the base -->
-			<blocker class="All" blocklof="true" verts="-1000,-2500;-1000,500;8000,500;8000,-2500"/>
-		</blockers>
+		<bounds top="6500" bottom="400" left="-1000" right="8000"/>
 		
 		<units>
-			<!-- to fix no units bug -->
-			<unit team="0" index="1" x="0" y="0" angle="0" type="N_DemoCharge"/>
-			<unit team="0" index="2" x="0" y="0" angle="0" type="N_DemoCharge"/>
-			<unit team="1" index="1" x="0" y="0" angle="0" type="N_DemoCharge"/>
-			<unit team="1" index="2" x="0" y="0" angle="0" type="N_DemoCharge"/>
+			<!-- spectator units -->
+			<unit team="0" index="1" x="0" y="400" angle="0" type="N_DemoCharge"/>
+			<unit team="0" index="2" x="0" y="400" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="1" x="0" y="400" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="2" x="0" y="400" angle="0" type="N_DemoCharge"/>
 		</units>
 		
 		<spawns>
