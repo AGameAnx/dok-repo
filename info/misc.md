@@ -1,8 +1,8 @@
-# Miscellaneous  Information
+# Miscellaneous Information
 
 ## Replays
 To share replays, share the `.dokreplay` and the `.dokreplayx` file with the same name.
-The dokreplayx file contains the layout and patch used on the map so that replays have the required information to work.
+The `.dokreplayx` file contains the layout and patch used on the map so that replays have the required information to work.
 
 ## Map Names
 Map names now have the format of `<map name> [<min players>,<max players>]`.

@@ -1,2 +1,2 @@
 # More Maps Vault
-Place for unused/obsolete resources.
+Place for unused/obsolete/miscellaneous resources.
