@@ -1701,7 +1701,7 @@
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
 					"WindUpTimeMS": 1500,
-					"ReloadTimeMS": 1500
+					"ReloadTimeMS": 3000
 				}
 			}
 		},
@@ -1728,7 +1728,7 @@
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
 					"WindUpTimeMS": 1500,
-					"ReloadTimeMS": 1500
+					"ReloadTimeMS": 3000
 				}
 			}
 		},
@@ -1819,6 +1819,12 @@
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
 							"Amount": 50
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
 						}
 					}
 				},
@@ -1826,6 +1832,20 @@
 					"ExcludeFromHeightAdvantage": true,
 					"RangeAttributesLong": {
 						"Distance": 2650
+					},
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
 					}
 				},
 				"C_ArtilleryCruiser_Weapon_G2G_MP": {
@@ -1874,11 +1894,31 @@
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
 							"Amount": 50
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
 						}
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 140
+					"BaseDamagePerRound": 140,
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
 				}
 			}
 		},
@@ -1900,6 +1940,12 @@
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
 							"Amount": 65
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 80
 						}
 					}
 				}
