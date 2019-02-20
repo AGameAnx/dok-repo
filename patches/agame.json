@@ -50,6 +50,15 @@
 			"AbilityAttributes": {
 				"Ability_C_CruiseMissile_MP": {
 					"CooldownTimeSecs": 150
+				},
+				"Ability_C_LaunchInterceptor_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchGunShip_MP": {
+					"AirSortie": { "LoiterLength": 40 }
 				}
 			},
 			"WeaponAttributes": {
@@ -262,6 +271,15 @@
 				"Ability_C_Sob_SobanNuke_MP": {
 					"CooldownTimeSecs": 110,
 					"Resource1Cost": 400
+				},
+				"Ability_C_LaunchInterceptor_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchGunShip_MP": {
+					"AirSortie": { "LoiterLength": 40 }
 				}
 			},
 			"WeaponAttributes": {
@@ -350,6 +368,12 @@
 			"AbilityAttributes": {
 				"Ability_G_MissileBarrage": {
 					"CooldownTimeSecs": 120
+				},
+				"Ability_G_LaunchInterceptor_Upgraded_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_G_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
 				}
 			},
 			"WeaponAttributes": {
@@ -541,6 +565,9 @@
 				"MaxHealth": 11500,
 				"Armour": 30
 			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
 			"UnitHangarAttributes": {
 				"HangarBays": {
 					"Interceptor": {
@@ -548,8 +575,13 @@
 					}
 				}
 			},
-			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 4500
+			"AbilityAttributes": {
+				"Ability_G_LaunchInterceptor_Upgraded_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_G_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
 			},
 			"WeaponAttributes": {
 				"K_Carrier_Weapon_G2All_MP": {
@@ -1155,6 +1187,8 @@
 		
 		"Research_Buff_C_Escort_Damage01": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
 		"Research_Buff_C_Escort_Damage02": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
+		"Research_Buff_S_Escort_Damage01": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
+		"Research_Buff_S_Escort_Damage02": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
 		"Research_Buff_G_SandSkimmers_Damage01": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
 		"Research_Buff_G_SandSkimmers_Damage02": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
 		
@@ -1355,6 +1389,7 @@
 		
 		"C_HAC_Upgrade01_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 300,
 				"Armour": 3
 			},
 			"UnitMovementAttributes": {
@@ -1413,7 +1448,7 @@
 		},
 		"K_MissileShip_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 380,
+				"Resource1Cost": 350,
 				"ProductionTime": 24,
 				"Armour": 3
 			},
@@ -1444,6 +1479,16 @@
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
 				}
+			}
+		},
+		"Research_Buff_G_CatamaranAA_GlobalMissiles": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 20
+			}
+		},
+		"Research_Buff_G_CatamaranAA_AOE": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 20
 			}
 		},
 		
@@ -1499,19 +1544,28 @@
 		
 		"C_Interceptor_MP": {
 			"UnitAttributes": {
-				"Armour": 2,
+				"Resource2Cost": 80,
+				"MaxHealth": 490,
+				"Armour": 5,
 				"ProductionTime": 20
+			}
+		},
+		"Tier_3_C_Interceptor_Bomber": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 400,
+				"Resource2Cost": 240
 			}
 		},
 		
 		"G_Interceptor_MP": {
 			"UnitAttributes": {
+				"Resource2Cost": 100,
 				"Armour": 3,
 				"ProductionTime": 12
 			},
 			"WeaponAttributes": {
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-					"BaseDamagePerRound": 115,
+					"BaseDamagePerRound": 110,
 					"RateOfFire": 4,
 					"ReloadTimeMS": 4000
 				}
@@ -1519,12 +1573,13 @@
 		},
 		"K_Interceptor_MP": {
 			"UnitAttributes": {
+				"Resource2Cost": 100,
 				"Armour": 3,
 				"ProductionTime": 12
 			},
 			"WeaponAttributes": {
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-					"BaseDamagePerRound": 100,
+					"BaseDamagePerRound": 110,
 					"RateOfFire": 4,
 					"ReloadTimeMS": 4000
 				}
@@ -1533,19 +1588,35 @@
 		"Tier_2_G_Interceptor": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 450,
-				"ResearchTime": 60
+				"ResearchTime": 70
 			}
 		},
 		"Research_Buff_G_Interceptor_Speed": {
 			"ResearchItemAttributes": {
-				"Resource2Cost": 170
+				"Resource1Cost": 250,
+				"Resource2Cost": 140,
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"0": { "Value": 40 },
+							"1": { "Value": -40 }
+						}
+					},
+					"1": {
+						"UnitType": "K_Interceptor_MP",
+						"BuffSet": {
+							"0": { "Value": 40 },
+							"1": { "Value": -40 }
+						}
+					}
+				}
 			}
 		},
 		
 		"C_Bomber_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 350,
-				"Resource2Cost": 200,
+				"Resource2Cost": 160,
 				"MaxHealth": 1500,
 				"Armour": 12,
 				"PopCapCost": 4
@@ -1554,32 +1625,79 @@
 				"C_Bomber_Weapon_A2G_MP": {
 					"WindUpTimeMS": 0,
 					"BaseDamagePerRound": 1850,
-					"AreaOfEffectRadius": 220
+					"AreaOfEffectRadius": 220,
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
 				}
 			}
 		},
+		"Tier_3_C_GunShip_Bomber": {
+			"ResearchItemAttributes": {
+				"Resource2Cost": 150,
+				"ResearchTime": 55
+			}
+		},
+		
 		"G_Bomber_MP": {
 			"UnitAttributes": {
-				"PopCapCost": 4
+				"Resource2Cost": 140,
+				"PopCapCost": 4,
+				"ProductionTime": 22
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 500
+				}
 			},
 			"WeaponAttributes": {
 				"G_Bomber_Weapon_A2G_MP": {
-					"BaseDamagePerRound": 900,
-					"AreaOfEffectRadius": 120,
+					"BaseDamagePerRound": 600,
+					"AreaOfEffectRadius": 140,
 					"AreaOfEffectFalloffType": "Quadratic"
 				}
 			}
 		},
 		"K_Bomber_MP": {
 			"UnitAttributes": {
-				"PopCapCost": 4
+				"Resource2Cost": 140,
+				"PopCapCost": 4,
+				"ProductionTime": 25
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 500
+				}
 			},
 			"WeaponAttributes": {
 				"G_Bomber_Weapon_A2G_MP": {
-					"BaseDamagePerRound": 900,
-					"AreaOfEffectRadius": 120,
+					"BaseDamagePerRound": 600,
+					"AreaOfEffectRadius": 140,
 					"AreaOfEffectFalloffType": "Quadratic"
 				}
+			}
+		},
+		"Tier_3_G_Bomber": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 175,
+				"ResearchTime": 45
+			}
+		},
+		"Research_Buff_G_Fighter_Repair": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"ResearchTime": 20
+			}
+		},
+		"Research_Buff_G_Bomber_Hold": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 400
 			}
 		},
 		
