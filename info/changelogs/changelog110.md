@@ -20,5 +20,6 @@
 - Spawn points can have camera angle modified (use the `camera="<angle>"` attribute in `<spawn/>`)
 - None faction removed but replaced with a layout specific option to despawn all starting units (use the `fleet="false"` attribute in `<spawn/>`)
 - Mission 6 from the campaign has been fixed
+- Correct map will be selected whenever the layout command is used
 - Updated Subsystem to 0.5.0
 - With the new tools it is now possible to recreate the existing maps (do `/l gt-alt` to see an alternate version of Gaalsien Territories)
