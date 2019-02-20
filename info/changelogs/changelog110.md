@@ -1,5 +1,8 @@
 # Homeworld: DoK - More Maps v1.1 Changelog
 - Added `FFA - Prime Anomaly [2,6]` (a 2, 3, 4, 5 and 6 player FFA map)
+- Replaced `Salvage Facility [2]` with `Salvage Facility [2,4]` by HottestManEver
+- Replaced `Cape Wrath [2]` with `Cape Wrath [2,4]` by HottestManEver
+  (Many thanks to HottestManEver for his maps and help!)
 - Added wrecks (wrap the resources you want to spawn in `<wreck> </wreck>` and specify an x, y and angle)
 - Added support for non-square rectangular map bounds
 - Removed `patch.json` from multiplayer to reduce chances for desyncs
@@ -8,6 +11,7 @@
 - Added ability to give different layouts depending on number of players (the brackets after a map name indicate the least and most allowed players)
 - Added ability to change which layout is presented depending on the gamemode and map to allow for map packs
 - All new maps have been updated to adapt to the number of players
+  (Many thanks to FrostyTeeth for help with this!)
 - Fixed artifact UI (a max of 4 artifacts may show in the UI)
 - Fixed black background when loading into a new map for the second time
 - Packed extra replay files into one file (instead of sharing 3 files just share the `.dokreplay` and `.dokreplayx` files)
