@@ -1,79 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dokmap>
-	<map>M03</map>
-	<!-- the following 4 don't do anything ATM -->
-	<name>Cape Wrath [4]</name>
-	<description>2v2 down a narrow valley</description>
-	<authors>SSSS</authors>
-	<players>4</players>
+<dokmap version="1.1">
+	<meta name="Cape Wrath Old [4,4]"
+	      authors="SSSS"
+	      description="Fight down a tornado ridden valley"/>
+		  
+	<layout map="M03" mode="Team" players="2, 3, 4, 5, 6">
+		<heat>30</heat>
 	
-	<heat>30</heat>
-	
-	<spawns>
-		<!-- team 1 -->
-		<spawn team="0" index="0" x="0" z="-5380" angle="90"/>
-		<spawn team="0" index="1" x="0" z="-5620" angle="90"/>
-		<spawn team="0" index="2" x="0" z="-5620" angle="90"/>
-		<!-- team 2 -->
-		<spawn team="1" index="0" x="-4600" z="-5700" angle="-135"/>
-		<spawn team="1" index="1" x="-4400" z="-5900" angle="-135"/>
-		<spawn team="1" index="2" x="-4400" z="-5900" angle="-135"/>
-	</spawns>
-	
-	<resources>
-		<!-- type 0 = cus, type 1 = rus -->
-		<!-- team 1 -->
-		<resource x="400" z="-5430" type="0" amount="25500" collectors="3"/>
-		<resource x="400" z="-5380" type="1" amount="10000" collectors="3"/>
-		<resource x="400" z="-5330" type="0" amount="25500" collectors="3"/>
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="0" y="-5380" angle="90"/>
+			<spawn team="0" index="1" x="0" y="-5620" angle="90"/>
+			<spawn team="0" index="2" x="0" y="-5620" angle="90"/>
+			
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="-4600" y="-5700" angle="-135"/>
+			<spawn team="1" index="1" x="-4400" y="-5900" angle="-135"/>
+			<spawn team="1" index="2" x="-4400" y="-5900" angle="-135"/>
+		</spawns>
 		
-		<resource x="400" z="-5670" type="0" amount="25500" collectors="3"/>
-		<resource x="400" z="-5620" type="1" amount="10000" collectors="3"/>
-		<resource x="400" z="-5570" type="0" amount="25500" collectors="3"/>
+		<resources>
+			<!-- team 1 -->
+			<resource x="400" y="-5430" type="cu" amount="25500" collectors="3"/>
+			<resource x="400" y="-5380" type="ru" amount="10000" collectors="3"/>
+			<resource x="400" y="-5330" type="cu" amount="25500" collectors="3"/>
+			
+			<resource x="400" y="-5670" type="cu" amount="25500" collectors="3"/>
+			<resource x="400" y="-5620" type="ru" amount="10000" collectors="3"/>
+			<resource x="400" y="-5570" type="cu" amount="25500" collectors="3"/>
+			
+			<!-- team 2 -->
+			<resource x="-4770" y="-5970" type="cu" amount="25500" collectors="3"/>
+			<resource x="-4820" y="-5920" type="ru" amount="10000" collectors="3"/>
+			<resource x="-4870" y="-5870" type="cu" amount="25500" collectors="3"/>
+			
+			<resource x="-4570" y="-6170" type="cu" amount="25500" collectors="3"/>
+			<resource x="-4620" y="-6120" type="ru" amount="10000" collectors="3"/>
+			<resource x="-4670" y="-6070" type="cu" amount="25500" collectors="3"/>
+			
+			<!-- mid -->
+			<resource x="-1850" y="-4970" type="cu" amount="25500" collectors="4"/>
+			<resource x="-1850" y="-5070" type="ru" amount="10000" collectors="4"/>
+			
+			<resource x="-2650" y="-5070" type="cu" amount="25500" collectors="4"/>
+			<resource x="-2620" y="-5190" type="ru" amount="10000" collectors="4"/>
+		</resources>
 		
+		<artifacts>
+			<artifact x="-2210" y="-5450"/>
+		</artifacts>
 		
-		<!-- team 2 -->
-		<resource x="-4770" z="-5970" type="0" amount="25500" collectors="3"/>
-		<resource x="-4820" z="-5920" type="1" amount="10000" collectors="3"/>
-		<resource x="-4870" z="-5870" type="0" amount="25500" collectors="3"/>
+		<ezs>
+			<!-- extraction zones -->
+			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+			<ez team="0" x="-2370" y="-4210" radius="300"/>
+			<ez team="1" x="-2370" y="-4210" radius="300"/>
+		</ezs>
 		
-		<resource x="-4570" z="-6170" type="0" amount="25500" collectors="3"/>
-		<resource x="-4620" z="-6120" type="1" amount="10000" collectors="3"/>
-		<resource x="-4670" z="-6070" type="0" amount="25500" collectors="3"/>
-		
-		<!-- mid -->
-		<resource x="-1850" z="-4970" type="0" amount="25500" collectors="4"/>
-		<resource x="-1850" z="-5070" type="1" amount="10000" collectors="4"/>
-		
-		<resource x="-2650" z="-5070" type="0" amount="25500" collectors="4"/>
-		<resource x="-2620" z="-5190" type="1" amount="10000" collectors="4"/>
-	</resources>
-	
-	<artifacts>
-		<artifact x="-2210" z="-5450"/>
-	</artifacts>
-	
-	<ezs>
-		<!-- extraction zones -->
-		<!-- only tested 1 per team but the code suggests you can only have 1 at a time -->
-		<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
-		<ez team="0" x="-2370" z="-4210" radius="300"/>
-		<ez team="1" x="-2370" z="-4210" radius="300"/>
-	</ezs>
-	
-	<units>
-		<!-- team 1 -->
-		<unit team="0" index="0" type="N_Tornado" x="850" z="-5200" angle="0"/>
-		<unit team="0" index="0" type="N_Tornado" x="850" z="-5500" angle="0"/>
-		<unit team="0" index="0" type="N_Tornado" x="850" z="-5800" angle="0"/>
-		
-		<!-- team 2 -->
-		<unit team="1" index="0" type="N_Tornado" x="-5300" z="-6200" angle="0"/>
-		<unit team="1" index="0" type="N_Tornado" x="-5100" z="-6400" angle="0"/>
-		<unit team="1" index="0" type="N_Tornado" x="-4900" z="-6600" angle="0"/>
-		
-		<!-- mid -->
-		<unit team="0" index="0" type="N_Tornado" x="-2270" z="-5000" angle="0"/>
-		<unit team="1" index="0" type="N_Tornado" x="-2270" z="-5000" angle="0"/>
-	</units>
+		<units>
+			<!-- team 1 -->
+			<unit team="0" index="0" x="850" y="-5200" angle="0" type="N_Tornado"/>
+			<unit team="0" index="0" x="850" y="-5500" angle="0" type="N_Tornado"/>
+			<unit team="0" index="0" x="850" y="-5800" angle="0" type="N_Tornado"/>
+			
+			<!-- team 2 -->
+			<unit team="1" index="0" x="-5300" y="-6200" angle="0" type="N_Tornado"/>
+			<unit team="1" index="0" x="-5100" y="-6400" angle="0" type="N_Tornado"/>
+			<unit team="1" index="0" x="-4900" y="-6600" angle="0" type="N_Tornado"/>
+			
+			<!-- mid -->
+			<unit team="0" index="0" x="-2270" y="-5000" angle="0" type="N_Tornado"/>
+			<unit team="1" index="0" x="-2270" y="-5000" angle="0" type="N_Tornado"/>
+		</units>
+	</layout>
 </dokmap>

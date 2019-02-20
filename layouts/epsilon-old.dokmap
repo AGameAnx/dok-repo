@@ -1,55 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dokmap>
-	<map>M01</map>
-	<!-- the following 4 don't do anything ATM -->
-	<name>Epsilon Base [2]</name>
-	<description>Close quarters 1v1 map</description>
-	<authors>SSSS</authors>
-	<players>2</players>
+<dokmap version="1.1">
+	<meta name="Epsilon Base Old [2,2]"
+	      authors="SSSS"
+	      description="Very close quarters 1v1 map"/>
 	
-	<!-- set the ambient heat of the level -->
-	<heat>30</heat>
-	
-	<spawns>
-		<!-- team 1 -->
-		<spawn team="0" index="0" x="-830" z="2370" angle="90"/>
-		<spawn team="0" index="1" x="-830" z="2370" angle="90"/>
-		<spawn team="0" index="2" x="-830" z="2370" angle="90"/>
-		<!-- team 2 -->
-		<spawn team="1" index="0" x="1600" z="720" angle="0"/>
-		<spawn team="1" index="1" x="1600" z="720" angle="0"/>
-		<spawn team="1" index="2" x="1600" z="720" angle="0"/>
-	</spawns>
-	
-	<resources>
-		<!-- type 0 = cus, type 1 = rus -->
-		<!-- team 1 -->
-		<resource x="-500" z="2520" type="0" amount="7500" collectors="2"/>
-		<resource x="-500" z="2370" type="1" amount="3000" collectors="2"/>
-		<resource x="-500" z="2220" type="0" amount="7500" collectors="2"/>
+	<layout map="M01" mode="Team" players="2, 3, 4, 5, 6">
+		<heat>30</heat>
 		
-		<resource x="-1200" z="2445" type="1" amount="4000" collectors="2"/>
-		<resource x="-1200" z="2295" type="0" amount="10500" collectors="2"/>
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="-830" y="2370" angle="90"/>
+			<spawn team="0" index="1" x="-830" y="2370" angle="90"/>
+			<spawn team="0" index="2" x="-830" y="2370" angle="90"/>
+			
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="1600" y="720" angle="0"/>
+			<spawn team="1" index="1" x="1600" y="720" angle="0"/>
+			<spawn team="1" index="2" x="1600" y="720" angle="0"/>
+		</spawns>
 		
+		<resources>
+			<!-- team 1 -->
+			<resource x="-500" y="2520" type="cu" amount="7500"/>
+			<resource x="-500" y="2370" type="ru" amount="3000"/>
+			<resource x="-500" y="2220" type="cu" amount="7500"/>
+			
+			<resource x="-1200" y="2445" type="ru" amount="4000"/>
+			<resource x="-1200" y="2295" type="cu" amount="10500"/>
+			
+			<!-- team 2 -->
+			<resource x="1750" y="1070" type="cu" amount="7500"/>
+			<resource x="1600" y="1070" type="ru" amount="3000"/>
+			<resource x="1450" y="1070" type="cu" amount="7500"/>
+			
+			<resource x="1675" y="370" type="ru" amount="4000"/>
+			<resource x="1525" y="370" type="cu" amount="10500"/>
+		</resources>
 		
-		<!-- team 2 -->
-		<resource x="1750" z="1070" type="0" amount="7500" collectors="2"/>
-		<resource x="1600" z="1070" type="1" amount="3000" collectors="2"/>
-		<resource x="1450" z="1070" type="0" amount="7500" collectors="2"/>
+		<artifacts>
+			<artifact x="900" y="2700"/>
+			<artifact x="1150" y="2525"/>
+		</artifacts>
 		
-		<resource x="1675" z="370" type="1" amount="4000" collectors="2"/>
-		<resource x="1525" z="370" type="0" amount="10500" collectors="2"/>
-	</resources>
-	
-	<artifacts>
-		<artifact x="900" z="2700"/>
-		<artifact x="1150" z="2525"/>
-	</artifacts>
-	
-	<ezs>
-		<!-- extraction zones -->
-		<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
-		<ez team="0" x="-175" z="920" radius="250"/>
-		<ez team="1" x="-175" z="920" radius="250"/>
-	</ezs>
+		<ezs>
+			<!-- extraction zones -->
+			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+			<ez team="0" x="-175" y="920" radius="250"/>
+			<ez team="1" x="-175" y="920" radius="250"/>
+		</ezs>
+	</layout>
 </dokmap>
