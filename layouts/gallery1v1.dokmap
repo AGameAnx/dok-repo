@@ -1,0 +1,143 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<!-- More Maps by SSSS -->
+	<meta name="Gallery1v1"
+	      authors="HottestManEver"
+	      description="Gallery1v1"/>
+	
+	<layout map="M09" mode="Team" players="2,3,4,5,6">   
+
+<bounds top="1000" right="10000" bottom="-5000" left="-8000"/>
+ 
+    <spawns>
+        <!-- team left -->
+        <spawn team="0" index="0" x="-5700" y="700" angle="135" camera="100"/>
+        <spawn team="0" index="1" x="-5700" y="700" angle="135" camera="100"/>
+        <spawn team="0" index="2" x="-5700" y="700" angle="135" camera="100"/>
+ 
+        <!-- team right -->
+        <spawn team="1" index="0" x="8700" y="-2150" angle="90" camera="260"/>
+        <spawn team="1" index="1" x="8700" y="-2150" angle="90" camera="260"/>
+        <spawn team="1" index="2" x="8700" y="-2150" angle="90" camera="260"/>
+ 
+    </spawns>
+
+   <resources>
+
+         <!-- Left -->
+        <resource x="-6000" y="600" type="cu" amount="7500"  />
+        <resource x="-5850" y="500" type="ru" amount="3000"  />
+        <resource x="-5700" y="400" type="cu" amount="7500"  />
+
+
+
+
+
+         <!-- Right -->
+        <resource x="8580" y="-2400" type="cu" amount="7500"  />
+        <resource x="8700" y="-2400" type="ru" amount="3000"  />
+        <resource x="8830" y="-2400" type="cu" amount="7500"  />
+
+
+
+
+
+
+</resources>
+
+		<wrecks>
+			<!-- left -->
+			<wreck x="-3320" y="220" angle="315">
+        <resource x="-3550" y="350" type="ru" amount="4000"  />
+        <resource x="-3550" y="150" type="cu" amount="10000"  />
+			</wreck>
+
+			<wreck x="-7000" y="-2550" angle="45">
+        <resource x="-7100" y="-2400"  type="ru" amount="4000"  />
+        <resource x="-6900" y="-2450"  type="cu" amount="10000"  />
+			</wreck>
+
+			<!-- right -->
+			<wreck x="7080" y="-950" angle="124">
+        <resource x="7250" y="-900" type="ru" amount="4000"  />
+        <resource x="7150" y="-1000" type="cu" amount="10000"  />
+			</wreck>
+
+			<!-- right -->
+			<wreck x="7480" y="-5480" angle="45">
+        <resource x="7400" y="-5350" type="ru" amount="4000"  />
+        <resource x="7550" y="-5350" type="cu" amount="10000"  />
+			</wreck>
+
+		</wrecks>
+
+	<artifacts>
+		<artifact x="-5000" y="-400"/>
+		<artifact x="-5700" y="-500"/>
+		<artifact x="-6400" y="-600"/>
+
+		<artifact x="7700" y="-2600"/>
+		<artifact x="8000" y="-3100"/>
+		<artifact x="8300" y="-3600"/>
+	</artifacts>
+	
+	<ezs>
+		<!-- extraction zones -->
+		<!-- only tested 1 per team but the code suggests you can only have 1 at a time -->
+		<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+		<ez team="1" x="1100" y="-4000" radius="400"/>
+		<ez team="0" x="1700" y="-4000" radius="400"/>
+	</ezs>
+
+blockers existing="true">
+ 
+        blocker class="Ground" blocklof="false" verts="-6500,-3000;-10000,-3500;-10000,5000;-6500,5000"/>
+
+    /blockers>
+
+<units>
+
+		<!-- left plato -->
+
+		<unit team="0" index="0" type="N_Tornado" x="-7200" y="3000" angle="0"/>
+		<unit team="1" index="0" type="N_Tornado" x="-9500" y="2000" angle="90"/>
+		<unit team="0" index="0" type="N_Tornado" x="-8200" y="2500" angle="0"/>
+		<unit team="1" index="0" type="N_Tornado" x="-7500" y="4200" angle="180"/>
+		<unit team="0" index="0" type="N_Tornado" x="-8500" y="3800" angle="2700"/>
+
+		<unit team="1" index="0" type="N_Tornado" x="-6300" y="6500" angle="0"/>
+		<unit team="0" index="0" type="N_Tornado" x="-6600" y="6800" angle="90"/>
+
+		<!-- left -->
+
+		<unit team="0" index="0" type="N_Tornado" x="-2050" y="4400" angle="90"/>
+		<unit team="1" index="0" type="N_Tornado" x="-2800" y="4650" angle="0"/>
+
+		<!-- center -->
+
+		<unit team="0" index="0" type="N_Tornado" x="-1370" y="950" angle="0"/>
+		<unit team="1" index="0" type="N_Tornado" x="-1000" y="900" angle="90"/>
+		<unit team="1" index="0" type="N_Tornado" x="-1100" y="1900" angle="270"/>
+
+		<!-- right -->
+
+		<unit team="0" index="0" type="N_Tornado" x="6200" y="-200" angle="0"/>
+		<unit team="1" index="0" type="N_Tornado" x="6350" y="1400" angle="180"/>
+
+		<!-- center plato -->
+
+		<unit team="0" index="0" type="N_Tornado" x="3100" y="3300" angle="0"/>
+		<unit team="0" index="0" type="N_Tornado" x="2800" y="3200" angle="90"/>
+
+		<unit team="1" index="0" type="N_Tornado" x="3300" y="5000" angle="0"/>
+
+		<unit team="0" index="0" type="N_Tornado" x="5300" y="2850" angle="90"/>
+		<unit team="1" index="0" type="N_Tornado" x="5650" y="2600" angle="190"/>
+
+		<unit team="1" index="0" type="N_Tornado" x="4550" y="4200" angle="0"/>
+
+</units>
+
+</layout>
+</dokmap>
