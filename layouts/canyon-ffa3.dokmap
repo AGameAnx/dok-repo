@@ -7,25 +7,46 @@
 	<layout map="MP_07-Outpost-FFA" mode="FFA" players="3">
 		<bounds top="6500" bottom="400" left="-1000" right="8000"/>
 		
-		<spawns>
-			<!-- 0 degrees -->
-			<spawn team="0" x="250" y="5000" angle="180" camera="255"/>
-			
-			<!-- 180 degrees -->
-			<spawn team="1" x="250" y="-5000" angle="360" camera="435"/>
-		</spawns>
+	<spawns>
+		<spawn team="0" x="1" y="4200" angle="180"/>
+		<spawn team="1" x="3100" y="-2200" angle="315"/>
+		<spawn team="2" x="-3100" y="-2200" angle="45"/>
+
+	</spawns>
+				
+	
+	<resources>
+		<!-- type 0 = cus, type 1 = rus, type 2 = wreck (wreck needs testing) -->
+		<!-- player 1 middle -->
+		<resource x="200" y="4000" type="cu" amount="7000" collectors="2"/>
+		<resource x="200" y="4100" type="ru" amount="3000" collectors="2"/>
+		<resource x="-200" y="4000" type="cu" amount="7000" collectors="2"/>
+		<resource x="-200" y="4100" type="ru" amount="3000" collectors="2"/>
+		<resource x="0" y="4600" type="cu" amount="2600" collectors="2"/>
+
+		<!-- player 2 -->
+		<resource x="3100" y="-1900" type="cu" amount="7000" collectors="2"/>
+		<resource x="3300" y="-2100" type="cu" amount="7000" collectors="2"/>
+		<resource x="3200" y="-2000" type="ru" amount="3000" collectors="2"/>
+
+		<!-- player 3 -->
+		<resource x="-3300" y="-2100" type="cu" amount="7000" collectors="2"/>
+		<resource x="-3100" y="-1900" type="cu" amount="7000" collectors="2"/>
+		<resource x="-3200" y="-2000" type="ru" amount="3000" collectors="2"/>
+
+		<!-- Map Centre -->
+		<resource x="1" y="1" type="cu" amount="20000" collectors="3"/>
+		<resource x="1" y="-100" type="ru" amount="4000" collectors="3"/>
+
+		<!-- corners -->
+		<resource x="-4100" y="4200" type="cu" amount="20000" collectors="3"/>
+		<resource x="-4200" y="4100" type="ru" amount="4000" collectors="3"/>
+
+		<resource x="4100" y="4200" type="cu" amount="20000" collectors="3"/>
+		<resource x="4200" y="4100" type="ru" amount="4000" collectors="3"/>
+	</resources>
+
 		
-		<resources>
-			<!-- 0 degrees -->
-			<resource x="550" y="4900" type="cu" amount="7500"/>
-			<resource x="550" y="5000" type="ru" amount="3000"/>
-			<resource x="550" y="5100" type="cu" amount="7500"/>
-			
-			<!-- 180 degrees -->
-			<resource x="-50" y="-4900" type="cu" amount="7500"/>
-			<resource x="-50" y="-5000" type="ru" amount="3000"/>
-			<resource x="-50" y="-5100" type="cu" amount="7500"/>
-		</resources>
 		
 		<wrecks>
 			<!-- 0 degrees -->
