@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap>
+
+	      <!-- more maps by SSSS -->
+	
+<meta name="Gbase1v1"
+	      authors="HottestManEver"
+	      description="Gbase1v1"/>
+
+     <layout map="M07" mode="Team" players="2,3,4,5,6">
+   
+<bounds top="1800" right="6000" bottom="-7500" left="-4000"/>
+ 
+    <spawns>
+        <!-- team right -->
+        <spawn team="0" index="0" x="5200" y="0" angle="0" camera="225"/>
+        <spawn team="0" index="1" x="5200" y="0" angle="0" camera="225"/>
+        <spawn team="0" index="2" x="5200" y="0" angle="0" camera="225"/>
+ 
+        <!-- team bot -->
+        <spawn team="1" index="0" x="-2500" y="-5650" angle="270" camera="45"/>
+       <spawn team="1" index="1" x="-2500" y="-5650" angle="270" camera="45"/>
+      <spawn team="1" index="2" x="-2500" y="-5650" angle="270" camera="45"/>
+ 
+    </spawns>
+   
+    <resources>
+           
+        <!-- RIGHT -->
+        <resource x="5500" y="-150" type="cu" amount="7500" collectors="2"/>
+        <resource x="5500" y="0" type="ru" amount="3000" collectors="2"/>
+        <resource x="5500" y="150" type="cu" amount="7500" collectors="2"/>
+ 
+
+ 
+
+ 
+        resource x="5500" y="-2200" type="cu" amount="10500" collectors="2"/>
+        resource x="5600" y="-2200" type="ru" amount="4000" collectors="2"/>
+       
+       
+        <!-- BOTTOM -->
+        <resource x="-2350" y="-5900" type="cu" amount="7500" collectors="2"/>
+        <resource x="-2500" y="-5900" type="ru" amount="3000" collectors="2"/>
+        <resource x="-2650" y="-5900" type="cu" amount="7500" collectors="2"/>
+ 
+
+ 
+
+ 
+        resource x="-350" y="-6900" type="ru" amount="10500" collectors="2"/>
+        resource x="-350" y="-6750" type="cu" amount="4000" collectors="2"/>
+ 
+   </resources>
+
+<wrecks>
+		<!-- bot -->
+		<wreck x="-3450" y="-3860" angle="315">
+        <resource x="-3400" y="-4000" type="cu" amount="10500" collectors="2"/>
+        <resource x="-3500" y="-4000" type="ru" amount="4000" collectors="2"/>
+		</wreck>
+
+		<wreck x="-3450" y="-1840" angle="315">
+        <resource x="-3400" y="-2000" type="cu" amount="10500" collectors="2"/>
+        <resource x="-3500" y="-2000" type="ru" amount="4000" collectors="2"/>
+		</wreck>
+
+		<!-- right -->
+		<wreck x="3940" y="1380" angle="315">
+        <resource x="3800" y="1300" type="cu" amount="10500" collectors="2"/>
+        <resource x="3800" y="1450" type="ru" amount="4000" collectors="2"/>
+		</wreck>
+
+		<wreck x="1660" y="1380" angle="315">
+        <resource x="1800" y="1300" type="cu" amount="10500" collectors="2"/>
+        <resource x="1800" y="1450" type="ru" amount="4000" collectors="2"/>
+		</wreck>
+
+</wrecks>
+    <artifacts>
+        <artifact x="2000" y="-6000"/>
+        <artifact x="3000" y="-5000"/>
+        <artifact x="4000" y="-4000"/>
+    </artifacts>
+ 
+<ezs>
+        <!-- extraction zones -->
+
+        <ez team="1" x="-2000" y="400" radius="500"/>
+        <ez team="0" x="-1300" y="650" radius="500"/>
+    </ezs>
+ 
+ 
+        <!-- top left path against carriers -->
+        <blocker class="Carrier" blocklof="false" verts="-3000,-1500;-3000,-500;-5000,-500;-5000,-1000"/>
+ 
+ 
+ 
+ 
+ 
+ </layout>
+</dokmap>
