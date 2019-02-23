@@ -13,12 +13,12 @@
         <!-- bot-->
         <spawn team="0" index="0" x="2000" y="1200" angle="270" camera="15"/>
         <spawn team="0" index="1" x="7000" y="1200" angle="90" camera="345"/>
-        <spawn team="0" index="2" x="7000" y="1200" angle="90" camera="15"/>
+        <spawn team="0" index="2" x="7000" y="1200" angle="90" camera="15" fleet="false" />
  
         <!-- top -->
         <spawn team="1" index="0" x="2000" y="8000" angle="270" camera="195"/>
         <spawn team="1" index="1" x="7000" y="8000" angle="90" camera="165"/>
-        <spawn team="1" index="2" x="7000" y="8000" angle="90" camera="195"/>
+        <spawn team="1" index="2" x="7000" y="8000" angle="90" camera="195" fleet="false" />
  
     </spawns>
    
@@ -104,7 +104,11 @@ resource x="8500" y="8600" type="ru" amount="4000" collectors="2"/>
         <ez team="1" x="4500" y="4000" radius="500"/>
         <ez team="0" x="4500" y="5000" radius="500"/>
     </ezs>
- 
+ 		<units>
+			<!-- spectator units -->
+			<unit team="0" index="2" x="0" y="400" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="2" x="0" y="400" angle="0" type="N_DemoCharge"/>
+		</units>
  
 </layout>
 </dokmap>
