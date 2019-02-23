@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dokmap>
-	<meta name="Salvage Facility [2,2]"
+<dokmap version="1.1">
+	<meta name="Salvage Facility [2,4]"
 	      authors="HottestManEver, SSSS"
-	      description="HottestFacilityEver"/>
+	      description="HottestFacilityEver3v3"/>
 		  
 	<layout map="M02" mode="Team" players="2,3,4,5,6">
 		<bounds top="5500" right="5000" bottom="-4000" left="-3400"/>
@@ -10,15 +10,13 @@
 		<spawns>
 			<!-- team left -->
 			<spawn team="0" index="0" x="-1730" y="2550" angle="35" camera="120"/>
-      <spawn team="0" index="1" x="-1730" y="2530" angle="45" camera="120"/>
-      <spawn team="0" index="2" x="-1530" y="1530" angle="45" camera="120"/>
+			<spawn team="0" index="1" x="-1730" y="1850" angle="35" camera="120"/>
+			<spawn team="0" index="2" x="-1030" y="1850" angle="35" camera="120"/>
 
-	 
 			<!-- team right -->
 			<spawn team="1" index="0" x="4210" y="-790" angle="12" camera="-60"/>
-      <spawn team="1" index="1" x="4000" y="-1300" angle="180" camera="-60"/>
-      <spawn team="1" index="2" x="3100" y="-1650" angle="180" camera="-60"/>
-        
+			<spawn team="1" index="1" x="4210" y="-1490" angle="12" camera="-60"/>
+			<spawn team="1" index="1" x="3510" y="-1490" angle="12" camera="-60"/>
 		</spawns>
 		
 		<resources>
@@ -27,10 +25,26 @@
 			<resource x="-1930" y="2720" type="ru" amount="3000"/>
 			<resource x="-2020" y="2610" type="cu" amount="7500"/>
 			
+			<resource x="-1840" y="2130" type="cu" amount="7500"/>
+			<resource x="-1930" y="2020" type="ru" amount="3000"/>
+			<resource x="-2020" y="1910" type="cu" amount="7500"/>
+			
+			<resource x="-1140" y="2130" type="cu" amount="7500"/>
+			<resource x="-1230" y="2020" type="ru" amount="3000"/>
+			<resource x="-1320" y="1910" type="cu" amount="7500"/>
+			
 			<!-- right -->
 			<resource x="4500" y="-700" type="cu" amount="7500"/>
 			<resource x="4470" y="-830" type="ru" amount="3000"/>
 			<resource x="4440" y="-960" type="cu" amount="7500"/>
+			
+			<resource x="4500" y="-1400" type="cu" amount="7500"/>
+			<resource x="4470" y="-1530" type="ru" amount="3000"/>
+			<resource x="4440" y="-1660" type="cu" amount="7500"/>
+			
+			<resource x="3800" y="-1400" type="cu" amount="7500"/>
+			<resource x="3770" y="-1530" type="ru" amount="3000"/>
+			<resource x="3740" y="-1660" type="cu" amount="7500"/>
 		</resources>
 		
 		<wrecks>
@@ -57,9 +71,11 @@
 			</wreck>
 
 			<!-- center -->
-			<wreck x="1230" y="760" angle="90">
-				<resource x="1160" y="700" type="cu" amount="10500"/>
-				<resource x="1300" y="650" type="ru" amount="4000"/>
+			<wreck x="1240" y="740" angle="30">
+				<resource x="1340" y="640" type="cu" amount="5250" collectors="1"/>
+				<resource x="1240" y="600" type="ru" amount="2000" collectors="1"/>
+				<resource x="1140" y="640" type="ru" amount="2000" collectors="1"/>
+				<resource x="1100" y="740" type="cu" amount="5250" collectors="1"/>
 			</wreck>
 		</wrecks>
 		
@@ -71,8 +87,9 @@
 
 		<ezs>
 			<!-- extraction zones -->
-			<ez team="0" x="1600" y="1150" radius="300"/>
-			<ez team="1" x="1300" y="1300" radius="300"/>
+			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+			<ez team="0" x="1670" y="1180" radius="300"/>
+			<ez team="1" x="1300" y="1380" radius="300"/>
 		</ezs>
 		
 		<blockers existing="false">
@@ -188,27 +205,19 @@
 		</blockers>
 	</layout>
 
-
-
-
-<!-- ********************************************************* 2v2 ****************************************************** -->
-
-
-
-
 	<layout map="M02" mode="Team" players="3, 4, 5, 6">
 		<bounds top="5500" right="5000" bottom="-4000" left="-3400"/>
 		
 		<spawns>
 			<!-- team left -->
 			<spawn team="0" index="0" x="-1730" y="2550" angle="35" camera="120"/>
-			<spawn team="0" index="1" x="-1730" y="1130" angle="45" camera="120"/>
-			<spawn team="0" index="2" x="-1730" y="2550" angle="45" camera="120"/>
+			<spawn team="0" index="1" x="-1930" y="1330" angle="45" camera="120"/>
+			<spawn team="0" index="2" x="-1730" y="2550" angle="35" camera="120"/>
 	 
 			<!-- team right -->
 			<spawn team="1" index="0" x="4210" y="-790" angle="12" camera="-60"/>
 			<spawn team="1" index="1" x="3710" y="-1790" angle="0" camera="-75"/>
-			<spawn team="1" index="2" x="4210" y="-790" angle="0" camera="-75"/>
+			<spawn team="1" index="2" x="4210" y="-790" angle="12" camera="-60"/>
 		</spawns>
 		
 		<resources>
@@ -217,9 +226,9 @@
 			<resource x="-1930" y="2720" type="ru" amount="3000"/>
 			<resource x="-2020" y="2610" type="cu" amount="7500"/>
 
-			<resource x="-1830" y="1350" type="cu" amount="7500"/>
-			<resource x="-1930" y="1240" type="ru" amount="3000"/>
-			<resource x="-2030" y="1130" type="cu" amount="7500"/>
+			<resource x="-2030" y="1550" type="cu" amount="7500"/>
+			<resource x="-2130" y="1440" type="ru" amount="3000"/>
+			<resource x="-2230" y="1330" type="cu" amount="7500"/>
 			
 			<!-- right -->
 			<resource x="4500" y="-700" type="cu" amount="7500"/>
@@ -255,9 +264,11 @@
 			</wreck>
 
 			<!-- center -->
-			<wreck x="1230" y="760" angle="90">
-				<resource x="1160" y="700" type="cu" amount="10500"/>
-				<resource x="1300" y="650" type="ru" amount="4000"/>
+			<wreck x="1240" y="740" angle="30">
+				<resource x="1340" y="640" type="cu" amount="5250" collectors="1"/>
+				<resource x="1240" y="600" type="ru" amount="2000" collectors="1"/>
+				<resource x="1140" y="640" type="ru" amount="2000" collectors="1"/>
+				<resource x="1100" y="740" type="cu" amount="5250" collectors="1"/>
 			</wreck>
 		</wrecks>
 		
@@ -270,8 +281,8 @@
 		<ezs>
 			<!-- extraction zones -->
 			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
-			<ez team="0" x="1600" y="1150" radius="300"/>
-			<ez team="1" x="1300" y="1300" radius="300"/>
+			<ez team="0" x="1670" y="1180" radius="300"/>
+			<ez team="1" x="1300" y="1380" radius="300"/>
 		</ezs>
 		
 		<blockers existing="false">
@@ -386,6 +397,4 @@
 			<blocker class="Carrier" blocklof="false" verts="4000,-5000;4000,-3000;4500,-2500;6000,-2500;6000,-5000"/>
 		</blockers>
 	</layout>
-
-
 </dokmap>
