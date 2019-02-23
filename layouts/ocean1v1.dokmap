@@ -11,14 +11,14 @@
  
     <spawns>
         <!-- team 1 -->
-        <spawn team="0" index="0" x="5300" z="-4400" angle="0"/>
-        <spawn team="0" index="1" x="5300" z="-4400" angle="0"/>
-        <spawn team="0" index="2" x="5300" z="-4400" angle="0"/>
+        <spawn team="0" index="0" x="5300" y="-4400" angle="0"/>
+        <spawn team="0" index="1" x="5300" y="-4400" angle="0"/>
+        <spawn team="0" index="2" x="5300" y="-4400" angle="0"/>
  
         <!-- team 2 -->
-        <spawn team="1" index="0" x="-7000" z="-7500" angle="0"/>
-        <spawn team="1" index="1" x="-7000" z="-7500" angle="0"/>
-        <spawn team="1" index="2" x="-7000" z="-7500" angle="0"/>
+        <spawn team="1" index="0" x="-7000" y="-7500" angle="0"/>
+        <spawn team="1" index="1" x="-7000" y="-7500" angle="0"/>
+        <spawn team="1" index="2" x="-7000" y="-7500" angle="0"/>
  
     </spawns>
    
@@ -27,9 +27,9 @@
 <!-- right -->
  
  
-<resource x="5500" z="-4250" type="0" amount="7500" collectors="2"/>
-<resource x="5500" z="-4400" type="1" amount="3000" collectors="2"/>
-<resource x="5500" z="-4550" type="0" amount="7500" collectors="2"/>
+<resource x="5500" y="-4250" type="cu" amount="7500" collectors="2"/>
+<resource x="5500" y="-4400" type="ru" amount="3000" collectors="2"/>
+<resource x="5500" y="-4550" type="cu" amount="7500" collectors="2"/>
  
 
  
@@ -38,9 +38,9 @@
  <!-- left -->
  
  
-<resource x="-7200" z="-7350" type="0" amount="7500" collectors="2"/>
-<resource x="-7200" z="-7500" type="1" amount="3000" collectors="2"/>
-<resource x="-7200" z="-7650" type="0" amount="7500" collectors="2"/>
+<resource x="-7200" y="-7350" type="cu" amount="7500" collectors="2"/>
+<resource x="-7200" y="-7500" type="ru" amount="3000" collectors="2"/>
+<resource x="-7200" y="-7650" type="cu" amount="7500" collectors="2"/>
  
 
  
@@ -53,44 +53,44 @@
 	<wrecks>
 			<!-- right -->
 			<wreck x="2770" y="-4250" angle="315">
-		<resource x="2900" z="-4300" type="1" amount="4000" collectors="2"/>
-		<resource x="2900" z="-4200" type="0" amount="10500" collectors="2"/>
+		<resource x="2900" y="-4300" type="ru" amount="4000" collectors="2"/>
+		<resource x="2900" y="-4200" type="cu" amount="10500" collectors="2"/>
 			</wreck>
 
 			<wreck x="-3050" y="-7800" angle="45">
-		<resource x="2950" z="-7700" type="1" amount="4000" collectors="2"/>
-		<resource x="2850" z="-7600" type="0" amount="10500" collectors="2"/>
+		<resource x="2950" y="-7700" type="ru" amount="4000" collectors="2"/>
+		<resource x="2850" y="-7600" type="cu" amount="10500" collectors="2"/>
 			</wreck>
 
 			<!-- left -->
 			<wreck x="-4820" y="-5780" angle="124">
-		<resource x="-4750" z="-5900" type="1" amount="4000" collectors="2"/>
-		<resource x="-4650" z="-6000" type="0" amount="10500" collectors="2"/>
+		<resource x="-4750" y="-5900" type="ru" amount="4000" collectors="2"/>
+		<resource x="-4650" y="-6000" type="cu" amount="10500" collectors="2"/>
 			</wreck>
 
 			<wreck x="-3200" y="-9000" angle="45">
-		<resource x="-3250" z="-8800" type="0" amount="10500" collectors="2"/>
-		<resource x="-3350" z="-8900" type="1" amount="4000" collectors="2"/>
+		<resource x="-3250" y="-8800" type="cu" amount="10500" collectors="2"/>
+		<resource x="-3350" y="-8900" type="ru" amount="4000" collectors="2"/>
 			</wreck>
 
 		</wrecks>
 
     <artifacts>
  
-        <artifact x="-2700" z="-3950"/>
-        <artifact x="-1300" z="-3650"/>
-        <artifact x="0" z="-3650"/>
+        <artifact x="-2700" y="-3950"/>
+        <artifact x="-1300" y="-3650"/>
+        <artifact x="0" y="-3650"/>
  
-        artifact x="5300" z="-4400"/>
-        artifact x="-7000" z="-7500"/>
+        artifact x="5300" y="-4400"/>
+        artifact x="-7000" y="-7500"/>
  
     </artifacts>
  
 <ezs>
         <!-- extraction zones -->
 
-        <ez team="0" x="-1700" z="-8900" radius="500"/>
-        <ez team="1" x="1250" z="-8120" radius="500"/>
+        <ez team="0" x="-1700" y="-8900" radius="500"/>
+        <ez team="1" x="1250" y="-8120" radius="500"/>
     </ezs>
  
     <blockers existing="true">
