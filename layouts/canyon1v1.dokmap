@@ -17,8 +17,8 @@
  
         <!-- team right -->
         <spawn team="1" index="0" x="4000" y="-3300" angle="90" camera="315"/>
-	            <spawn team="1" index="1" x="4000" y="-3300" angle="90" camera="315"/>
-	            <spawn team="1" index="2" x="4000" y="-3300" angle="90" camera="315"/>
+	            <spawn team="1" index="1" x="4000" y="-3300" angle="90" camera="315" fleet="false" />
+	            <spawn team="1" index="2" x="4000" y="-3300" angle="90" camera="315" fleet="false" />
  
     </spawns>
    
@@ -77,5 +77,14 @@
         <ez team="1" x="4500" y="1500" radius="700"/>
     </ezs>
  
+		
+		<units>
+			<!-- spectator units -->
+			<unit team="0" index="1" x="0" y="100" angle="0" type="N_DemoCharge"/>
+			<unit team="0" index="2" x="0" y="100" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="1" x="0" y="100" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="2" x="0" y="100" angle="0" type="N_DemoCharge"/>
+		</units>	
+		
  </layout>
 </dokmap>
