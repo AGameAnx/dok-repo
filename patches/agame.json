@@ -1156,7 +1156,7 @@
 				"C_Escort_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 17,
 					"RateOfFire": 4,
-					"BurstPeriodMaxTimeMS": 1000
+					"BurstPeriodMaxTimeMS": 1050
 				}
 			}
 		},
@@ -1169,7 +1169,7 @@
 				"C_Escort_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 17,
 					"RateOfFire": 4,
-					"BurstPeriodMaxTimeMS": 1000
+					"BurstPeriodMaxTimeMS": 1050
 				}
 			}
 		},
@@ -1413,9 +1413,34 @@
 		
 		"G_Catamaran_Upgrade01_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 380,
+				"Resource1Cost": 350,
 				"ProductionTime": 24,
 				"Armour": 3
+			},
+			"AbilityAttributes": {
+				"Ability_G_MissileCraft_CrowdControl_MP": {
+					"CooldownTimeSecs": 100
+				}
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							},
+							"1": {
+								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							}
+						}
+					}
+				}
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
@@ -1440,7 +1465,7 @@
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 180,
+					"BaseDamagePerRound": 170,
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
 				}
@@ -1452,6 +1477,31 @@
 				"ProductionTime": 24,
 				"Armour": 3
 			},
+			"AbilityAttributes": {
+				"Ability_G_MissileCraft_CrowdControl_MP": {
+					"CooldownTimeSecs": 100
+				}
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							},
+							"1": {
+								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							}
+						}
+					}
+				}
+			},
 			"WeaponAttributes": {
 				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
 					"ReloadTimeMS": 3500,
@@ -1475,7 +1525,7 @@
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 180,
+					"BaseDamagePerRound": 170,
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
 				}
@@ -1483,7 +1533,9 @@
 		},
 		"Research_Buff_G_CatamaranAA_GlobalMissiles": {
 			"ResearchItemAttributes": {
-				"ResearchTime": 20
+				"Resource1Cost": 220,
+				"Resource2Cost": 60,
+				"ResearchTime": 15
 			}
 		},
 		"Research_Buff_G_CatamaranAA_AOE": {
@@ -2000,7 +2052,7 @@
 					"BaseDamagePerRound": 220,
 					"NumberOfBursts": 6,
 					"RateOfFire": 3,
-					"CooldownTimeMS": 900,
+					"CooldownTimeMS": 1600,
 					"BurstPeriodMinTimeMS": 1700,
 					"BurstPeriodMaxTimeMS": 1700,
 					"RangeAttributesLong": {
@@ -2051,7 +2103,7 @@
 					"BaseDamagePerRound": 140,
 					"ExcludeFromHeightAdvantage": true,
 					"NumberOfBursts": 9,
-					"CooldownTimeMS": 1100,
+					"CooldownTimeMS": 1900,
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
