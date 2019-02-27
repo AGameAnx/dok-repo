@@ -24,6 +24,7 @@ All commands must not wrap onto the following line.
 | **/l rachels** | Kalash Teeth | [2,2] |  HottestManEver | [Rachels duels for Kalash Teeth](layouts/rachels.jpg)
 | **/l salvage-old** | Salvage Facility | [2,2] |  SSSS | [Spawn with 3 of all MP units to test units](layouts/taiidan1v1.jpg)
 | **/l salvage3v3** | Salvage Facility | [4,4] | HottestManEver | [3v3 layout for Salvage Facility]
+| **/l simple** | Khar-Toba | [2,6] | HottestManEver | [1v1 2v2 3v3 layout for newbies](layouts/simple.jpg)
 | **/l taiidan** | Taiidan Passage<br/>Taiidan Crater | [2,2] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage<br/>and Crater](layouts/taiidan1v1.jpg)
 | **/l toba1v1** | Khar-Toba | [2,2] | HottestManEver | [1v1 layout for Khar-Toba](layouts/toba1v1.jpg)
 | **/l tombs3v3** | Tombs of the Ancients | [6,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)
