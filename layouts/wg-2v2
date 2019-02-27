@@ -1,0 +1,90 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<meta name="Whispering Gallery Alternate [4,4]"
+	      authors="FrostyTeeth"
+	      description="Alternate version of Whispering Gallery that aims to centralize the canyon choke points. Carrier aggro is a different path from artifact pressure"/>
+	
+	<layout map="M09" mode="Team" players="4, 5, 6">
+		
+		<units>
+			<!-- spectator units -->
+			<unit team="0" index="2" x="6000" y="0" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="2" x="6000" y="0" angle="0" type="N_DemoCharge"/>
+		</units>
+
+
+	<spawns>
+		<!-- team 1 -->
+		<spawn team="0" index="0" x="-700" y="-1100" angle="90"/>
+		<spawn team="0" index="1" x="-2000" y="-5450" angle="0"/>
+			<spawn team="0" index="0" x="-700" y="-1100" angle="90" fleet="false"/>
+		<!-- team 2 -->
+		<spawn team="1" index="0"  x="-5600" y="3600" angle="130"/>
+		<spawn team="1" index="1" x="-3200" y="8050" angle="0"/>
+			<spawn team="1" index="0"  x="-5600" y="3600" angle="130" fleet="false"/>
+	</spawns>
+	
+	<resources>
+		<!-- team 1 -->
+		<resource x="-780" y="-1300" type="cu" amount="7500" collectors="2"/>
+		<resource x="-730" y="-1300" type="ru" amount="3000" collectors="2"/>
+		<resource x="-680" y="-1300" type="cu" amount="7500" collectors="2"/>
+
+		<resource x="4250" y="-5000" type="cu" amount="10500" collectors="2"/>
+		<resource x="4250" y="-5050" type="ru" amount="4000" collectors="2"/>
+
+		<resource x="4500" y="-1800" type="cu" amount="10500" collectors="2"/>
+		<resource x="4550" y="-1800" type="ru" amount="4000" collectors="2"/>
+
+		<resource x="-2200" y="-5500" type="cu" amount="7500" collectors="2"/>
+		<resource x="-2200" y="-5450" type="ru" amount="3000" collectors="2"/>
+		<resource x="-2200" y="-5400" type="cu" amount="7500" collectors="2"/>
+
+		<resource x="-7000" y="-1350" type="cu" amount="10500" collectors="2"/>
+		<resource x="-7050" y="-1350" type="ru" amount="4000" collectors="2"/>
+
+		<resource x="-8500" y="500" type="cu" amount="10500" collectors="2"/>
+		<resource x="-8560" y="540" type="ru" amount="4000" collectors="2"/>
+
+		<!-- team 2 -->
+		<resource x="-5500" y="3900" type="cu" amount="7500" collectors="2"/>
+		<resource x="-5540" y="3914" type="ru" amount="3000" collectors="2"/>
+		<resource x="-5580" y="3928" type="cu" amount="7500" collectors="2"/>
+
+		<resource x="500" y="800" type="cu" amount="10500" collectors="2"/>
+		<resource x="500" y="850" type="ru" amount="4000" collectors="2"/>
+
+		<resource x="10" y="6600" type="cu" amount="10500" collectors="2"/>
+		<resource x="30" y="6612" type="ru" amount="4000" collectors="2"/>
+
+		<resource x="-3000" y="8000" type="cu" amount="7500" collectors="2"/>
+		<resource x="-3000" y="8050" type="ru" amount="3000" collectors="2"/>
+		<resource x="-3000" y="8100" type="cu" amount="7500" collectors="2"/>
+
+		<resource x="-9050" y="5900" type="cu" amount="10500" collectors="2"/>
+		<resource x="-9000" y="5900" type="ru" amount="4000" collectors="2"/>
+
+		<resource x="-7300" y="4050" type="cu" amount="10500" collectors="2"/>
+		<resource x="-7300" y="4000" type="ru" amount="4000" collectors="2"/>
+
+	</resources>
+	
+	<artifacts>
+		<artifact x="-1100" y="1600"/>
+		<artifact x="2210" y="-3000"/>
+		<!--artifact x="550" y="-300" -->
+	</artifacts>
+	
+	<ezs>
+		<!-- extraction zones -->
+		<!-- only tested 1 per team but the code suggests you can only have 1 at a time -->
+		<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+		<ez team="1" x="-1100" y="1600" radius="555"/>
+		<ez team="0" x="2210" y="-3000" radius="555"/>
+	</ezs>
+	
+	</layout>
+</dokmap>
+
+
