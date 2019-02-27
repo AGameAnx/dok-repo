@@ -20,17 +20,17 @@ All commands must not wrap onto the following line.
 | **/l gbase1v1** | Gaalsien Base | [2,2] |  HottestManEver | [1v1 layout for Gaalsien Base](layouts/gbase1v1.jpg)
 | **/l kalash3v3** | Kalash Site <br/> Kalash Wreck | [6,6] |  HottestManEver | [3v3 layout for Kalash Site](layouts/kalash3v3.jpg)
 | **/l khar-toba-ffa5** | FFA - Khar-Toba | [5,5] | FrostyTeeth | [5 player FFA with free population<br/>at the start](layouts/khar-toba-ffa5.png)
-| **/l ocean1v1** | Dune Ocean | [2,2] |  HottestManEver | [1v1 layout for Dune Ocean](layouts/ocean1v1.jpg)
+| **/l ocean** | Dune Ocean | [2,2] |  HottestManEver | [1v1 2v2 3v3 layout for Dune Ocean](layouts/ocean1v1.jpg)
 | **/l rachels** | Kalash Teeth | [2,2] |  HottestManEver | [Rachels duels for Kalash Teeth](layouts/rachels.jpg)
 | **/l salvage-old** | Salvage Facility | [2,2] |  SSSS | [Spawn with 3 of all MP units to test units](layouts/taiidan1v1.jpg)
-| **/l taiidan1v1** | Taiidan Passage<br/>Taiidan Crater | [2,2] |  HottestManEver | [1v1 layout for Taiidan Passage<br/>and Crater](layouts/taiidan1v1.jpg)
+| **/l salvage3v3** | Salvage Facility | [4,4] | HottestManEver | [3v3 layout for Salvage Facility]
+| **/l taiidan** | Taiidan Passage<br/>Taiidan Crater | [2,2] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage<br/>and Crater](layouts/taiidan1v1.jpg)
 | **/l toba1v1** | Khar-Toba | [2,2] | HottestManEver | [1v1 layout for Khar-Toba](layouts/toba1v1.jpg)
 | **/l tombs3v3** | Tombs of the Ancients | [6,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)
 | **/l torin-crater-ffa4** | FFA - Torin Crater | [4,4] | FrostyTeeth | [4 player FFA](layouts/torin-crater-ffa4.png)
 | **/l torin-crater-inout** | Torin Crater | [4,4] | FrostyTeeth | [2v2 between a team in vs outside<br/>the crater](layouts/torin-crater-inout.png)
 | **/l wg-2v2** | Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2-image.png)
-| **/l wrath1v1** | Cape Wrath | [2,2] | HottestManEver | [1v1 layout for Cape Wrath](layouts/wrath1v1.jpg)
-| **/l wrath2v2** | Cape Wrath | [4,4] | HottestManEver | [2v2 layout for Cape Wrath](layouts/wrath2v2.jpg)
+| **/l wrath3v3** | Cape Wrath | [4,4] | HottestManEver | [2v2 layout for Cape Wrath](layouts/wrath2v2.jpg)
 
 
 
