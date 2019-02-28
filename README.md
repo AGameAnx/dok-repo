@@ -27,7 +27,7 @@ All commands must not wrap onto the following line.
 | **/l taiidan** | Taiidan Passage<br/>Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage<br/>and Crater](layouts/taiidan1v1.jpg)
 | **/l toba1v1** | Khar-Toba | [2,2] | HottestManEver | [1v1 layout for Khar-Toba](layouts/toba1v1.jpg)
 | **/l tombs3v3** | Tombs of the Ancients | [4,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)
-| **/l torin** | Torin Crater | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Torin Crater](layouts/crater2v2.jpg)
+| **/l torin** | Torin Crater | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Torin Crater](layouts/crater2v2.png)
 | **/l torin-crater-ffa4** | FFA - Torin Crater | [4,4] | FrostyTeeth | [4 player FFA](layouts/torin-crater-ffa4.png)
 | **/l torin-crater-inout** | Torin Crater | [4,4] | FrostyTeeth | [2v2 between a team in vs outside<br/>the crater](layouts/torin-crater-inout.png)
 | **/l wg-2v2** | Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2-image.png)
