@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<meta name="Khar Toba radial FFA [5]"
+	      authors="FrostyTEeth"
+	      description="The centre has logistics moduels for each player"/>
+		  
+	<layout map="MMP_10-KharToba-FFA, M13-FFA" mode="FFA" players="5,6">	
+
+	<bounds top="10000" left="-10000" bottom="-10000" right="10000"/>
+
+	<spawns>
+		<!-- team 1 -->
+		<spawn team="0" x="1607" y="4945" angle="108"/>
+		<spawn team="1" x="-4207" y="3056" angle="36"/>
+		<spawn team="2" x="-4207" y="-3056" angle="324"/>
+		<spawn team="3" x="1607" y="-4945" angle="252"/>
+		<spawn team="4" x="5200" y="0" angle="180"/>
+	</spawns>
+	
+	<resources>
+		<!-- type 0 = cus, type 1 = rus, type 2 = wreck (wreck needs testing) -->
+			<!-- batch 1 -->
+		<resource x="1545" y="4755" type="cu" amount="7000" collectors="2"/>
+		<resource x="-4045" y="2939" type="cu" amount="7000" collectors="2"/>
+		<resource x="-4045" y="-2939" type="cu" amount="7000" collectors="2"/>
+		<resource x="1545" y="-4755" type="cu" amount="7000" collectors="2"/>
+		<resource x="5000" y="0" type="cu" amount="7000" collectors="2"/>
+
+			<!-- batch 2 -->
+		<resource x="1669" y="5136" type="cu" amount="7000" collectors="2"/>
+		<resource x="-4369" y="3174" type="cu" amount="7000" collectors="2"/>
+		<resource x="-4369" y="-3174" type="cu" amount="7000" collectors="2"/>
+		<resource x="1669" y="-5136" type="cu" amount="7000" collectors="2"/>
+		<resource x="5400" y="0" type="cu" amount="7000" collectors="2"/>
+
+			<!-- batch 3 -->
+		<resource x="1574" y="5167" type="ru" amount="3000" collectors="2"/>
+		<resource x="-4427" y="3093" type="ru" amount="3000" collectors="2"/>
+		<resource x="-4310" y="-3255" type="ru" amount="3000" collectors="2"/>
+		<resource x="1764" y="-5105" type="ru" amount="3000" collectors="2"/>
+		<resource x="5400" y="100" type="ru" amount="3000" collectors="2"/>
+
+			<!-- batch 4 -->
+		<resource x="989" y="3043" type="cu" amount="20000" collectors="2"/>
+		<resource x="-2589" y="1881" type="cu" amount="20000" collectors="2"/>
+		<resource x="-2589" y="-1881" type="cu" amount="20000" collectors="2"/>
+		<resource x="989" y="-3043" type="cu" amount="20000" collectors="2"/>
+		<resource x="3200" y="0" type="cu" amount="20000" collectors="2"/>
+
+			<!-- batch 5 -->
+		<resource x="894" y="3074" type="cu" amount="4000" collectors="4"/>
+		<resource x="-2648" y="1800" type="cu" amount="4000" collectors="4"/>
+		<resource x="-2530" y="-1962" type="cu" amount="4000" collectors="4"/>
+		<resource x="1084" y="-3012" type="cu" amount="4000" collectors="4"/>
+		<resource x="3200" y="100" type="cu" amount="4000" collectors="4"/>
+
+			<!-- batch 6 -->
+		<resource x="2225" y="6848" type="ru" amount="10000" collectors="2"/>
+		<resource x="-5825" y="4232" type="ru" amount="10000" collectors="2"/>
+		<resource x="-5825" y="-4232" type="ru" amount="10000" collectors="2"/>
+		<resource x="2225" y="-6848" type="ru" amount="10000" collectors="2"/>
+		<resource x="7200" y="0" type="ru" amount="10000" collectors="2"/>
+
+			<!-- batch 6 -->
+		<resource x="2130" y="6879" type="ru" amount="2500" collectors="4"/>
+		<resource x="-5884" y="4151" type="ru" amount="2500" collectors="4"/>
+		<resource x="-5766" y="-4313" type="ru" amount="2500" collectors="4"/>
+		<resource x="2320" y="-6817" type="ru" amount="2500" collectors="4"/>
+		<resource x="7200" y="100" type="ru" amount="2500" collectors="4"/>
+	</resources>
+	
+
+<blockers existing="false">
+		<!-- top wreck -->
+		<blocker class="Ground" blocklof="true" verts="-300,140;-300,2150;810,2140;810,140"/>
+		<!-- bottom wreck -->
+		<blocker class="Ground" blocklof="true" verts="-300,-270;-300,-1630;810,-810;810,-270"/>
+		<!-- block carrier -->
+		<blocker class="Carrier" blocklof="true" verts="-300,-140;-300,140;810,140;810,-140"/>
+	</blockers>
+
+
+<units>
+		<!-- middle of the map assets -->
+		<unit team="0" type="C_PopcapScanner" x="-50" y="-187" angle="0"/>
+		<unit team="0" type="C_PopcapScanner" x="-50" y="-187" angle="0"/>
+		<unit team="0" type="C_PopcapScanner" x="-50" y="-187" angle="0"/>
+		<unit team="0" type="C_PopcapScanner" x="-50" y="-187" angle="0"/>
+		<unit team="0" type="C_PopcapScanner" x="-50" y="-187" angle="0"/>
+		<unit team="0" type="C_PopcapScanner" x="-50" y="-187" angle="0"/>
+		<unit team="0" type="C_PopcapScanner" x="-50" y="-187" angle="0"/>
+
+		<unit team="1" type="C_PopcapScanner" x="50" y="-187" angle="0"/>
+		<unit team="1" type="C_PopcapScanner" x="50" y="-187" angle="0"/>
+		<unit team="1" type="C_PopcapScanner" x="50" y="-187" angle="0"/>
+		<unit team="1" type="C_PopcapScanner" x="50" y="-187" angle="0"/>
+		<unit team="1" type="C_PopcapScanner" x="50" y="-187" angle="0"/>
+		<unit team="1" type="C_PopcapScanner" x="50" y="-187" angle="0"/>
+		<unit team="1" type="C_PopcapScanner" x="50" y="-187" angle="0"/>
+
+		<unit team="2" type="C_PopcapScanner" x="100" y="-100" angle="0"/>
+		<unit team="2" type="C_PopcapScanner" x="100" y="-100" angle="0"/>
+		<unit team="2" type="C_PopcapScanner" x="100" y="-100" angle="0"/>
+		<unit team="2" type="C_PopcapScanner" x="100" y="-100" angle="0"/>
+		<unit team="2" type="C_PopcapScanner" x="100" y="-100" angle="0"/>
+		<unit team="2" type="C_PopcapScanner" x="100" y="-100" angle="0"/>
+		<unit team="2" type="C_PopcapScanner" x="100" y="-100" angle="0"/>
+
+		<unit team="3" type="C_PopcapScanner" x="50" y="-13" angle="0"/>
+		<unit team="3" type="C_PopcapScanner" x="50" y="-13" angle="0"/>
+		<unit team="3" type="C_PopcapScanner" x="50" y="-13" angle="0"/>
+		<unit team="3" type="C_PopcapScanner" x="50" y="-13" angle="0"/>
+		<unit team="3" type="C_PopcapScanner" x="50" y="-13" angle="0"/>
+		<unit team="3" type="C_PopcapScanner" x="50" y="-13" angle="0"/>
+		<unit team="3" type="C_PopcapScanner" x="50" y="-13" angle="0"/>
+
+		<unit team="4" type="C_PopcapScanner" x="-50" y="-13" angle="0"/>
+		<unit team="4" type="C_PopcapScanner" x="-50" y="-13" angle="0"/>
+		<unit team="4" type="C_PopcapScanner" x="-50" y="-13" angle="0"/>
+		<unit team="4" type="C_PopcapScanner" x="-50" y="-13" angle="0"/>
+		<unit team="4" type="C_PopcapScanner" x="-50" y="-13" angle="0"/>
+		<unit team="4" type="C_PopcapScanner" x="-50" y="-13" angle="0"/>
+		<unit team="4" type="C_PopcapScanner" x="-50" y="-13" angle="0"/>
+
+
+		<unit team="0" type="N_Gun_Turret" x="-340" y="-1046" angle="0"/>
+		<unit team="1" type="N_Gun_Turret" x="890" y="-647" angle="0"/>
+		<unit team="2" type="N_Gun_Turret" x="890" y="647" angle="0"/>
+		<unit team="3" type="N_Gun_Turret" x="-340" y="1046" angle="0"/>
+		<unit team="4" type="N_Gun_Turret" x="-1250" y="-120" angle="0"/>
+
+		<unit team="0" type="N_Gun_Turret_MP" x="-371" y="-1141" angle="0"/>
+		<unit team="1" type="N_Gun_Turret_MP" x="971" y="-705" angle="0"/>
+		<unit team="2" type="N_Gun_Turret_MP" x="971" y="705" angle="0"/>
+		<unit team="3" type="N_Gun_Turret_MP" x="-371" y="1141" angle="0"/>
+		<unit team="4" type="N_Gun_Turret_MP" x="-1350" y="-120" angle="0"/>
+</units>
+
+
+</layout>
+</dokmap>
