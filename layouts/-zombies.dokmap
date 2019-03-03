@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dokmap>
+	<meta name="Zombie Mode"
+	      authors="SSSS"
+	      description="Can you survive the zombie apocalypse? Team 2 is the zombie team."/>
+	
+	<layout map="M13" mode="Team" players="2, 3, 4, 5, 6">
+		<bounds top="4750" bottom="-4750" left="-4500" right="5000"/>
+		
+		<spawns>
+			<spawn team="0" index="0" x="-3950" y="-3250" angle="0" camera="75"/>
+			<spawn team="0" index="1" x="-3000" y="-4200" angle="90" camera="15"/>
+			<spawn team="0" index="2" x="-3950" y="-3250" angle="0" camera="75" fleet="false"/>
+			
+			<spawn team="1" index="0" x="250" y="0" angle="0" camera="45" fleet="false"/>
+			<spawn team="1" index="1" x="250" y="0" angle="0" camera="45" fleet="false"/>
+			<spawn team="1" index="2" x="250" y="0" angle="0" camera="45" fleet="false"/>
+		</spawns>
+		
+		<resources>
+			<!-- team 1 -->
+			<resource x="-4250" y="-3130" type="cu" amount="7500"/>
+			<resource x="-4250" y="-3250" type="ru" amount="3000"/>
+			<resource x="-4250" y="-3370" type="cu" amount="7500"/>
+			
+			<resource x="-3120" y="-4500" type="cu" amount="7500"/>
+			<resource x="-3000" y="-4500" type="ru" amount="3000"/>
+			<resource x="-2880" y="-4500" type="cu" amount="7500"/>
+		
+			<!-- team 2 -->
+			<resource x="4750" y="4000" type="cu" amount="99999" collectors="8"/>
+			<resource x="4750" y="3500" type="cu" amount="99999" collectors="8"/>
+			<resource x="4750" y="3000" type="cu" amount="99999" collectors="8"/>
+			<resource x="4750" y="2500" type="cu" amount="99999" collectors="8"/>
+			
+			<resource x="4250" y="4500" type="cu" amount="99999" collectors="8"/>
+			<resource x="3750" y="4500" type="cu" amount="99999" collectors="8"/>
+			<resource x="3250" y="4500" type="cu" amount="99999" collectors="8"/>
+			<resource x="2750" y="4500" type="cu" amount="99999" collectors="8"/>
+		</resources>
+		
+		<wrecks>
+			<wreck x="-3950" y="750" angle="0">
+				<resource x="-3900" y="600" type="cu" amount="10500"/>
+				<resource x="-4000" y="600" type="ru" amount="4000"/>
+			<wreck>
+			
+			<wreck x="1000" y="-4200" angle="90">
+				<resource x="850" y="-4150" type="cu" amount="7500"/>
+				<resource x="850" y="-4250" type="ru" amount="7500"/>
+			<wreck>
+		</wrecks>
+		
+		<ezs>
+			<ez team="0" x="3250" y="3000" radius="500"/>
+		</ezs>
+		
+		<artifacts>
+			<artifact x="250" y="0"/>
+			<artifact x="4750" y="4500"/>
+		</artifacts>
+		
+		<blockers existing="false">
+			<!-- top wreck -->
+			<blocker class="Ground" blocklof="true" verts="-300,140;-300,2150;810,2140;810,140"/>
+			<!-- bottom wreck -->
+			<blocker class="Ground" blocklof="true" verts="-300,-140;-300,-1630;810,-810;810,-140"/>
+			<!-- block carrier -->
+			<blocker class="Carrier" blocklof="true" verts="-300,-140;-300,-140;810,140;810,-140"/>
+		</blockers>
+	</layout>
+</dokmap>
