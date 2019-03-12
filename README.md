@@ -27,24 +27,33 @@ Team Game by Map
 |     | Dune Ocean |    |      |
 | **/l gbase1v1** | Gaalsien Base | [2,2] |  HottestManEver | [1v1 layout for Gaalsien Base](layouts/gbase1v1.jpg)
 | **/l tombs3v3** | Tombs of the Ancients | [4,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)
-| **/l wg-2v2** | Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2-image.png)
+| **/l wg-2v2** | Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2.png)
 |     | Kashar Aproach |    |      |
 |     | Kashar Plateau |    |      |
-| **/l taiidan** | Taiidan Passage<br/>Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage<br/>and Crater](layouts/taiidan1v1.jpg)
+| **/l taiidan** | Taiidan Passage<br/>Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage and Crater](layouts/taiidan1v1.jpg)
 | **/l anomaly3v3** | Prime Anomaly | [6,6] |  HottestManEver | [3v3 layout for Prime Anomaly](layouts/anomaly3v3.jpg)
+| **/l anomaly-claw** | Prime Anomaly | [6,6] |  SSSS | [The v1.0 default for Prime Anomaly](layouts/anomaly-claw.jpg)
+| Command | Maps | Players | Authors | Description
+| ------- | ---- | :-----: | ------- | -----------
 
 
-| **/l anomaly-2112** | Prime Anomaly | [6,6] | FrostyTeeth | [3v3 with middle spawn offset<br/>into enemy territory](layouts/prime-2112.png)
-| **/l anomaly-old** | Prime Anomaly | [6,6] |  SSSS | [The v1.0 default for Prime Anomaly](layouts/anomaly-old.jpg)
+Free-For-All Game by Map
 
-
+| Command | Maps | Players | Authors | Description
+| ------- | ---- | :-----: | ------- | -----------
+|     | Kalash Teeth |    |      |
+| **/l torin-crater-ffa4** | FFA - Torin Crater | [4,4] | FrostyTeeth | [4 player FFA](layouts/torin-crater-ffa4.png)
 | **/l canyon-ffa3** | FFA - Canyon Outpost | [3,3] |  FrostyTeeth | [3 player FFA](layouts/canyon-outpost-ffa3.png)
-| **/l cape-old** | Cape Wrath | [4,4] |  SSSS | [The v0.16 default for Cape Wrath](layouts/cape-old.png)
 | **/l dune-sea-ffa3** | FFA - Dune Sea | [6,6] |  FrostyTeeth | [3 player FFA](layouts/dune-sea-ffa3.png)
-
-
-
 | **/l khar-toba-ffa5** | FFA - Khar-Toba | [5,5] | FrostyTeeth | [5 player FFA with free population<br/>at the start](layouts/khar-toba-ffa5.png)
+|     | Prime Anomaly |    |      |
+
+| **/l cape-old** | Cape Wrath | [4,4] |  SSSS | [The v0.16 default for Cape Wrath](layouts/cape-old.png)
+
+
+
+
+
 | **/l ocean** | Dune Ocean | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Dune Ocean](layouts/ocean1v1.jpg)
 
 
@@ -53,7 +62,7 @@ Team Game by Map
 | **/l toba1v1** | Khar-Toba | [2,2] | HottestManEver | [1v1 layout for Khar-Toba](layouts/toba1v1.jpg)
 
 
-| **/l torin-crater-ffa4** | FFA - Torin Crater | [4,4] | FrostyTeeth | [4 player FFA](layouts/torin-crater-ffa4.png)
+
 
 
 
