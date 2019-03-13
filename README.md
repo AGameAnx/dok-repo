@@ -6,7 +6,7 @@ All commands must not wrap onto the following line.
 ## Layouts 
 ### Team Game, sorted by Map
 
-| Map |Players| Authors | Description | **Command. &nbsp; &nbsp; &nbsp; Copy and paste this into the multiplayer chat window**|
+| Map |Players| Authors | Description | **Command line. &nbsp; &nbsp; &nbsp; Copy and paste this into the multiplayer chat window**|
 | :--- | --- | :--- | --- | :------------------------------------------------------------------------------------------------ 
 | Kalash Teeth | [2,6] |  HottestManEver | [Rachels duel](layouts/rachels.jpg) | **/l rachels** 
 | Torin Crater | [4,6] |  HottestManEver, FrostyTeeth | [2v2](layouts/crater2v2.png) allows 2 spectators | **/l crater2v2**
