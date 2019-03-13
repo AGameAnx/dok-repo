@@ -6,7 +6,7 @@ All commands must not wrap onto the following line.
 ## Layouts 
 ### Team Game, sorted by Map
 
-| Command        | Maps | Players (min,max) | Authors | Description
+| Command &nbsp; &nbsp; &nbsp;| Maps | Players (min,max) | Authors | Description
 | -------------- | ---- | :---: | ------- | -----------
 | **/l rachels** | Kalash Teeth | [2,6] |  HottestManEver | [Rachels duels for Kalash Teeth](layouts/rachels.jpg)
 | **/l torin** | Torin Crater | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Torin Crater](layouts/crater2v2.png)
