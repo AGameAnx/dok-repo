@@ -19,8 +19,8 @@ All commands must not wrap onto the following line.
 | **/l toba1v1** | Khar-Toba | [2,2] | HottestManEver | [1v1 layout for Khar-Toba](layouts/toba1v1.jpg)
 |     | Taiidan Passage |    |      |
 | **/l epsilon-inbase** | Epsilon Base | [2,2] |  SSSS | [The v0.10-0.16 default<br/>for Epsilon Base](layouts/epsilon-inbase.png)
-| **/l salvage-old** | Salvage Facility | [2,2] |  SSSS | [Spawn with 3 of all MP units to test units](layouts/taiidan1v1.jpg)
-| **/l salvage3v3** | Salvage Facility | [6,6] | HottestManEver | [3v3 layout for Salvage Facility]
+| **/l salvage-all-units** | Salvage Facility | [2,2] |  SSSS | [Spawn with 3 of all MP units to test units](layouts/salvage-all-units.png)
+| **/l salvage3v3** | Salvage Facility | [6,6] | HottestManEver | [3v3](layouts/salvage3v3) layout for Salvage Facility
 | **/l wrath3v3** | Cape Wrath | [6,6] | HottestManEver | [2v2 layout for Cape Wrath](layouts/wrath2v2.jpg)
 | **/l cape-valley** | Cape Wrath | [2,4] |  SSSS | [The v0.16 default for Cape Wrath](layouts/cape-valley.png)
 | **/l kalash3v3** | Kalash Site <br/> Kalash Wreck | [4,6] |  HottestManEver | [3v3 layout for Kalash Site](layouts/kalash3v3.jpg)
@@ -34,7 +34,7 @@ All commands must not wrap onto the following line.
 | **/l gallery1v1** | Whispering Gallery | HottestManEver, FrostyTeeth | 1v1 on Whispering Gallery
 |     | Kashar Aproach |    |      |
 |     | Kashar Plateau |    |      |
-| **/l taiidan** | Taiidan Passage<br/>Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage and Crater](layouts/taiidan1v1.jpg)
+| **/l taiidan** | Taiidan Passage<br/>Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage and Crater](layouts/taiidan.png)
 | **/l anomaly3v3** | Prime Anomaly | [6,6] |  HottestManEver | [3v3 layout for Prime Anomaly](layouts/anomaly3v3.jpg)
 | **/l anomaly-claw** | Prime Anomaly | [6,6] |  SSSS | [The v1.0 default for Prime Anomaly](layouts/anomaly-claw.jpg)
 | **/l simple** | Prime Anomaly | [2,6] | HottestManEver | [1v1 2v2 3v3 layout for newbies](layouts/simple.jpg)
