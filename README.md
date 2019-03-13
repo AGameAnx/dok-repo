@@ -6,9 +6,10 @@ All commands must not wrap onto the following line.
 ## Layouts 
 ### Team Game, sorted by Map
 
-| Map |Players| Authors | Description | Command &nbsp; &nbsp; &nbsp; copypaste|
+| Map |Players| Authors | Description | **Command &nbsp; &nbsp; &nbsp; copypaste**|
 | :--- | --- | :--- | :--- | :------------------------ 
-| Kalash Teeth | [2,6] |  HottestManEver | [Rachels duels for Kalash Teeth](layouts/rachels.jpg)| **/l rachels** 
+| Kalash Teeth | [2,6] |  HottestManEver | [Rachels duel](layouts/rachels.jpg) for Kalash Teeth| **/l rachels** 
+| Torin Crater | [4,6] |  HottestManEver, FrostyTeeth | [2v2](layouts/crater2v2.png) 4player Torin Crater| **/l crater2v2**
 | Torin Crater | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Torin Crater](layouts/crater2v2.png)| **/l torin** 
 | Torin Crater | [4,4] | FrostyTeeth | [2v2 between a team in vs outside<br/>the crater](layouts/torin-crater-inout.png) | **/l torin-crater-inout**
 | The Boneyard |    |      |    |     
@@ -28,9 +29,11 @@ All commands must not wrap onto the following line.
 | Dune Ocean | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Dune Ocean](layouts/ocean3v3.jpg)| **/l ocean** 
 | Dune Ocean | [5,6] |  HottestManEver, FrostyTeeth | [3v3](layouts/ocean3v3.jpg) layout for Dune Ocean. NO BLOCKERS!| **/l ocean3v3** 
 | Dune Ocean | [2,2] | HottestManEver, FrostyTeeth | [Gain easy resources by popping the furthest wreck from your base](layouts/dune1v1.png)| **/l dune1v1** 
+| Gaalsien Base | [2,2] |  SSSS | [Alternate 1v1](layouts/gt-alt.png) layout for Gaalsien Base]| **/l gbase1v1** 
 | Gaalsien Base | [2,2] |  HottestManEver | [1v1 layout for Gaalsien Base](layouts/gbase1v1.jpg)| **/l gbase1v1** 
 | Tombs of the Ancients | [4,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)| **/l tombs3v3** 
-| Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2.png)| **/l wg-2v2** 
+| Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2.png)| **/l wg-2v2**
+| Whispering Gallery | [2,6] | FrostyTeeth | [1v1](layouts/wg-1v1.png) layout for Whispering Gallery| **/l wg-1v1** 
 | Whispering Gallery | [2,6] |HottestManEver, FrostyTeeth | 1v1 on Whispering Gallery| **/l gallery1v1** 
 | Kashar Approach |    |      ||     
 | Kashar Plateau |    |      ||     
