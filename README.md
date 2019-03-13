@@ -11,7 +11,7 @@ All commands must not wrap onto the following line.
 | Kalash Teeth | [2,6] |  HottestManEver | [Rachels duel](layouts/rachels.jpg) | **/l rachels** 
 | Torin Crater | [4,6] |  HottestManEver, FrostyTeeth | [2v2](layouts/crater2v2.png) allows 2 spectators | **/l crater2v2**
 | Torin Crater | [2,6] |  HottestManEver | [1v1 2v2 3v3](layouts/crater2v2.png)| **/l torin** 
-| Torin Crater | [4,4] | FrostyTeeth | [Inside vs Outside] Outside has turrets but has to extract inwards(layouts/torin-crater-inout.png) | **/l torin-crater-inout**
+| Torin Crater | [4,4] | FrostyTeeth | [Inside vs Outside](layouts/torin-crater-inout.png)Outside has turrets but has to extract inwards | **/l torin-crater-inout**
 | The Boneyard |    |      |    |     
 | The Shallows |    |      |    |     
 | Firebase Kriil | [5,5] |  FrostyTeeth | 3v2 attack on [fortified position.](layouts/firebase-siege-3v2.png) Team 2 has 2 players | **/l firebase-siege-3v2** 
