@@ -4,7 +4,7 @@ If you want to upload a temporary testing layout or patch put a dash before its 
 All commands must not wrap onto the following line.
 
 ## Layouts 
-Team Game by Map
+### Team Game, sorted by Map
 
 | Command        | Maps | Players (min,max) | Authors | Description
 | -------------- | ---- | :---: | ------- | -----------
@@ -41,7 +41,7 @@ Team Game by Map
 
 
 
-Free-For-All Game by Map
+### Free-For-All Game, sorted by Map
 
 | Command | Maps | Players | Authors | Description
 | ------- | ---- | :-----: | ------- | -----------
