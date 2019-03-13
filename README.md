@@ -24,16 +24,16 @@ All commands must not wrap onto the following line.
 | Salvage Facility | [5,6] | HottestManEver | [3v3](layouts/salvage3v3)| **/l salvage3v3** 
 | Cape Wrath | [5,6] | HottestManEver | [3v3](layouts/wrath2v2.jpg)| **/l wrath3v3** 
 | Cape Wrath | [2,4] |  SSSS | [The v0.16 default](layouts/cape-valley.png)| **/l cape-valley** 
-| Kalash Site  | [4,6] |  HottestManEver | [3v3](layouts/kalash3v3.jpg)| **/l kalash3v3** 
+| Kalash Site, Kalash Wreck  | [4,6] |  HottestManEver | [3v3](layouts/kalash3v3.jpg)| **/l kalash3v3** 
 | Kalash Wreck |    |      ||     
 | Dune Ocean | [2,6] |  HottestManEver | [1v1 2v2 3v3](layouts/ocean3v3.jpg)| **/l ocean** 
 | Dune Ocean | [5,6] |  HottestManEver, FrostyTeeth | [3v3](layouts/ocean3v3.jpg) layout for Dune Ocean. NO BLOCKERS!| **/l ocean3v3** 
-| Dune Ocean | [2,2] | HottestManEver, FrostyTeeth | [Gain  resources](layouts/dune1v1.png) by popping the furthest wreck from your base| **/l dune1v1** 
+| Dune Ocean | [2,2] | HottestManEver, FrostyTeeth | [Gain access to easy resources](layouts/dune1v1.png) by popping the furthest wreck from your base| **/l dune1v1** 
 | Gaalsien Base | [2,2] |  SSSS | [Alternate 1v1](layouts/gt-alt.png) layout for Gaalsien Base]| **/l gbase1v1** 
 | Gaalsien Base | [2,2] |  HottestManEver | [1v1](layouts/gbase1v1.jpg)| **/l gbase1v1** 
 | Tombs of the Ancients | [4,6] | HottestManEver | [3v3](layouts/tombs3v3.jpg)| **/l tombs3v3** 
-| Whispering Gallery | [4,4] | FrostyTeeth | [2v2](layouts/wg-2v2.png)| **/l wg-2v2**
-| Whispering Gallery | [2,6] | FrostyTeeth | [1v1](layouts/wg-1v1.png) layout for Whispering Gallery| **/l wg-1v1** 
+| Whispering Gallery | [4,4] | FrostyTeeth | [2v2](layouts/wg-2v2.png) allows for spectators| **/l wg-2v2**
+| Whispering Gallery | [2,6] | FrostyTeeth | [1v1](layouts/wg-1v1.png) allows for spectators| **/l wg-1v1** 
 | Kashar Approach |    |      ||     
 | Kashar Plateau |    |      ||     
 | Taiidan Passage,Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2](layouts/taiidan.png)| **/l taiidan** 
