@@ -29,7 +29,7 @@ All commands must not wrap onto the following line.
 | Dune Ocean | [2,6] |  HottestManEver | [1v1 2v2 3v3](layouts/ocean3v3.jpg)| **/l ocean** 
 | Dune Ocean | [5,6] |  HottestManEver, FrostyTeeth | [3v3](layouts/ocean3v3.jpg) layout for Dune Ocean. NO BLOCKERS!| **/l ocean3v3** 
 | Dune Ocean | [2,2] | HottestManEver, FrostyTeeth | [Gain access to easy resources](layouts/dune1v1.png) by popping the furthest wreck from your base| **/l dune1v1** 
-| Gaalsien Base | [2,2] |  SSSS | [Alternate 1v1](layouts/gt-alt.png) layout for Gaalsien Base]| **/l gbase1v1** 
+| Gaalsien Base | [2,2] |  SSSS | [Alternate 1v1](layouts/gt-alt.png) layout for Gaalsien Base]| **/l gt-alt** 
 | Gaalsien Base | [2,2] |  HottestManEver | [1v1](layouts/gbase1v1.jpg)| **/l gbase1v1** 
 | Tombs of the Ancients | [4,6] | HottestManEver | [3v3](layouts/tombs3v3.jpg)| **/l tombs3v3** 
 | Whispering Gallery | [4,4] | FrostyTeeth | [2v2](layouts/wg-2v2.png) allows for spectators| **/l wg-2v2**
@@ -53,41 +53,6 @@ All commands must not wrap onto the following line.
 | FFA - Dune Sea | [6,6] |  FrostyTeeth | [3 player FFA](layouts/dune-sea-ffa3.png)| **/l dune-sea-ffa3** 
 | FFA - Khar-Toba | [5,5] | FrostyTeeth | [5 player FFA with free population<br/>at the start](layouts/khar-toba-ffa5.png)| **/l khar-toba-ffa5** 
 | Prime Anomaly |    |      ||     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
