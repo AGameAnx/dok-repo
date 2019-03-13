@@ -6,15 +6,15 @@ All commands must not wrap onto the following line.
 ## Layouts 
 ### Team Game, sorted by Map
 
-| Map |Players| Authors | Description | **Command &nbsp; &nbsp; &nbsp; copypaste**|
-| :--- | --- | :--- | --- | :------------------------ 
+| Map |Players| Authors | Description | **Command. &nbsp; &nbsp; &nbsp; Copy and paste this into the multiplayer chat window**|
+| :--- | --- | :--- | --- | :------------------------------------------------------------------------------------------------ 
 | Kalash Teeth | [2,6] |  HottestManEver | [Rachels duel](layouts/rachels.jpg) | **/l rachels** 
 | Torin Crater | [4,6] |  HottestManEver, FrostyTeeth | [2v2](layouts/crater2v2.png) allows 2 spectators | **/l crater2v2**
 | Torin Crater | [2,6] |  HottestManEver | [1v1 2v2 3v3](layouts/crater2v2.png)| **/l torin** 
-| Torin Crater | [4,4] | FrostyTeeth | [Inside vs Outside](layouts/torin-crater-inout.png)Outside has turrets but has to extract inwards | **/l torin-crater-inout**
+| Torin Crater | [4,4] | FrostyTeeth | [Inside vs Outside.](layouts/torin-crater-inout.png) Outside has turrets but has to extract inwards | **/l torin-crater-inout**
 | The Boneyard |    |      |    |     
 | The Shallows |    |      |    |     
-| Firebase Kriil | [5,5] |  FrostyTeeth | 3v2 attack on [fortified position.](layouts/firebase-siege-3v2.png) Team 2 has 2 players | **/l firebase-siege-3v2** 
+| Firebase Kriil | [5,5] |  FrostyTeeth | 3v2 attack on [fortified position.](layouts/firebase-siege-3v2.png) Team=2 has 2 players | **/l firebase-siege-3v2** 
 | Canyon Outpost | [2,2] |  HottestManEver | [1v1](layouts/canyon1v1.png)| **/l canyon1v1** 
 | Dune Sea |    |      ||     
 | Khar-Toba | [2,2] | HottestManEver | [1v1](layouts/toba1v1.jpg)| **/l toba1v1** 
@@ -37,10 +37,10 @@ All commands must not wrap onto the following line.
 | Whispering Gallery | [2,6] |HottestManEver, FrostyTeeth | 1v1 on Whispering Gallery| **/l gallery1v1** 
 | Kashar Approach |    |      ||     
 | Kashar Plateau |    |      ||     
-| Taiidan Passage<br/>Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage and Crater](layouts/taiidan.png)| **/l taiidan** 
-| Prime Anomaly | [6,6] |  HottestManEver | [3v3 layout for Prime Anomaly](layouts/anomaly3v3.jpg)| **/l anomaly3v3** 
-| Prime Anomaly | [6,6] |  SSSS | [The v1.0 default for Prime Anomaly](layouts/anomaly-claw.jpg)| **/l anomaly-claw** 
-| Prime Anomaly | [2,6] | HottestManEver | [1v1 2v2 3v3 layout for newbies](layouts/simple.jpg)| **/l simple** 
+| Taiidan Passage,Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2](layouts/taiidan.png)| **/l taiidan** 
+| Prime Anomaly | [6,6] |  HottestManEver | [3v3](layouts/anomaly3v3.jpg)| **/l anomaly3v3** 
+| Prime Anomaly | [6,6] |  SSSS | [The v1.0 default](layouts/anomaly-claw.jpg)| **/l anomaly-claw** 
+| Prime Anomaly | [2,6] | HottestManEver | [1v1 2v2 3v3 for newbies](layouts/simple.jpg)| **/l simple** 
 
 
 
