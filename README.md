@@ -6,28 +6,28 @@ All commands must not wrap onto the following line.
 ## Layouts 
 ### Team Game, sorted by Map
 
-| Command &nbsp; &nbsp; &nbsp; copypaste| Map |Players (min,max)| Authors | Description
-| :------------------------ | :--- | --- | :--- | :---
-| **/l rachels** | Kalash Teeth | [2,6] |  HottestManEver | [Rachels duels for Kalash Teeth](layouts/rachels.jpg)
-| **/l torin** | Torin Crater | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Torin Crater](layouts/crater2v2.png)
-| **/l torin-crater-inout** | Torin Crater | [4,4] | FrostyTeeth | [2v2 between a team in vs outside<br/>the crater](layouts/torin-crater-inout.png)
-|     | The Boneyard |    |      |    
-|     | The Shallows |    |      |    
-| **/l firebase-siege-3v2** | Firebase Kriil | [5,5] |  FrostyTeeth | [3v2 attack on fortified position<br/>Team 2 has 2 players](layouts/firebase-siege-3v2.png) 
-| **/l canyon1v1** | Canyon Outpost | [2,2] |  HottestManEver | [1v1 layout for Canyon Outpost](layouts/canyon1v1.png)
-|     | Dune Sea |    |      |
-| **/l toba1v1** | Khar-Toba | [2,2] | HottestManEver | [1v1 layout for Khar-Toba](layouts/toba1v1.jpg)
-|     | Taiidan Passage |    |      |
-| **/l epsilon-inbase** | Epsilon Base | [2,2] |  SSSS | [The v0.10-0.16 default<br/>for Epsilon Base](layouts/epsilon-inbase.png)
-| **/l salvage-all-units** | Salvage Facility | [2,2] |  SSSS | [Spawn with 3 of all MP units to test units](layouts/salvage-all-units.png)
-| **/l salvage3v3** | Salvage Facility | [6,6] | HottestManEver | [3v3](layouts/salvage3v3) layout for Salvage Facility
-| **/l wrath3v3** | Cape Wrath | [6,6] | HottestManEver | [2v2 layout for Cape Wrath](layouts/wrath2v2.jpg)
-| **/l cape-valley** | Cape Wrath | [2,4] |  SSSS | [The v0.16 default for Cape Wrath](layouts/cape-valley.png)
-| **/l kalash3v3** | Kalash Site <br/> Kalash Wreck | [4,6] |  HottestManEver | [3v3 layout for Kalash Site](layouts/kalash3v3.jpg)
-|     | Kalash Wreck |    |      |
-| **/l ocean** | Dune Ocean | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Dune Ocean](layouts/ocean3v3.jpg)
-| **/l ocean3v3** | Dune Ocean | [5,6] |  HottestManEver, FrostyTeeth | [3v3](layouts/ocean3v3.jpg) layout for Dune Ocean. NO BLOCKERS!
-| **/l dune1v1** | Dune Ocean | [2,2] | HottestManEver, FrostyTeeth | [Gain easy resources by popping the furthest wreck from your base](layouts/dune1v1.png)
+| Map |Players (min,max)| Authors | Description | Command &nbsp; &nbsp; &nbsp; copypaste|
+| :--- | --- | :--- | :--- | :------------------------ 
+| Kalash Teeth | [2,6] |  HottestManEver | [Rachels duels for Kalash Teeth](layouts/rachels.jpg)| **/l rachels** 
+| Torin Crater | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Torin Crater](layouts/crater2v2.png)| **/l torin** 
+| Torin Crater | [4,4] | FrostyTeeth | [2v2 between a team in vs outside<br/>the crater](layouts/torin-crater-inout.png) | **/l torin-crater-inout**
+| The Boneyard |    |      |    |     
+| The Shallows |    |      |    |     
+| Firebase Kriil | [5,5] |  FrostyTeeth | [3v2 attack on fortified position<br/>Team 2 has 2 players](layouts/firebase-siege-3v2.png) | **/l firebase-siege-3v2** 
+| Canyon Outpost | [2,2] |  HottestManEver | [1v1 layout for Canyon Outpost](layouts/canyon1v1.png)| **/l canyon1v1** 
+| Dune Sea |    |      ||     
+| Khar-Toba | [2,2] | HottestManEver | [1v1 layout for Khar-Toba](layouts/toba1v1.jpg)| **/l toba1v1** 
+| Taiidan Passage |    |      | |     
+| Epsilon Base | [2,2] |  SSSS | [The v0.10-0.16 default<br/>for Epsilon Base](layouts/epsilon-inbase.png)| **/l epsilon-inbase** 
+| Salvage Facility | [2,2] |  SSSS | [Spawn with 3 of all MP units to test units](layouts/salvage-all-units.png)| **/l salvage-all-units** 
+| Salvage Facility | [6,6] | HottestManEver | [3v3](layouts/salvage3v3) layout for Salvage Facility| **/l salvage3v3** 
+| Cape Wrath | [6,6] | HottestManEver | [2v2 layout for Cape Wrath](layouts/wrath2v2.jpg)| **/l wrath3v3** 
+| Cape Wrath | [2,4] |  SSSS | [The v0.16 default for Cape Wrath](layouts/cape-valley.png)| **/l cape-valley** 
+| Kalash Site <br/> Kalash Wreck | [4,6] |  HottestManEver | [3v3 layout for Kalash Site](layouts/kalash3v3.jpg)| **/l kalash3v3** 
+| Kalash Wreck |    |      ||     
+| Dune Ocean | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Dune Ocean](layouts/ocean3v3.jpg)| **/l ocean** 
+| Dune Ocean | [5,6] |  HottestManEver, FrostyTeeth | [3v3](layouts/ocean3v3.jpg) layout for Dune Ocean. NO BLOCKERS!| **/l ocean3v3** 
+| Dune Ocean | [2,2] | HottestManEver, FrostyTeeth | [Gain easy resources by popping the furthest wreck from your base](layouts/dune1v1.png)| **/l dune1v1** 
 | **/l gbase1v1** | Gaalsien Base | [2,2] |  HottestManEver | [1v1 layout for Gaalsien Base](layouts/gbase1v1.jpg)
 | **/l tombs3v3** | Tombs of the Ancients | [4,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)
 | **/l wg-2v2** | Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2.png)
