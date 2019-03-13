@@ -21,8 +21,8 @@ All commands must not wrap onto the following line.
 | Taiidan Passage |    |      | |     
 | Epsilon Base | [2,2] |  SSSS | [The v0.10-0.16 default](layouts/epsilon-inbase.png)| **/l epsilon-inbase** 
 | Salvage Facility | [2,2] |  SSSS | [Spawn with 3 of all MP units to test](layouts/salvage-all-units.png)| **/l salvage-all-units** 
-| Salvage Facility | [6,6] | HottestManEver | [3v3](layouts/salvage3v3)| **/l salvage3v3** 
-| Cape Wrath | [6,6] | HottestManEver | [2v2](layouts/wrath2v2.jpg)| **/l wrath3v3** 
+| Salvage Facility | [5,6] | HottestManEver | [3v3](layouts/salvage3v3)| **/l salvage3v3** 
+| Cape Wrath | [5,6] | HottestManEver | [3v3](layouts/wrath2v2.jpg)| **/l wrath3v3** 
 | Cape Wrath | [2,4] |  SSSS | [The v0.16 default](layouts/cape-valley.png)| **/l cape-valley** 
 | Kalash Site  | [4,6] |  HottestManEver | [3v3](layouts/kalash3v3.jpg)| **/l kalash3v3** 
 | Kalash Wreck |    |      ||     
@@ -34,7 +34,6 @@ All commands must not wrap onto the following line.
 | Tombs of the Ancients | [4,6] | HottestManEver | [3v3](layouts/tombs3v3.jpg)| **/l tombs3v3** 
 | Whispering Gallery | [4,4] | FrostyTeeth | [2v2](layouts/wg-2v2.png)| **/l wg-2v2**
 | Whispering Gallery | [2,6] | FrostyTeeth | [1v1](layouts/wg-1v1.png) layout for Whispering Gallery| **/l wg-1v1** 
-| Whispering Gallery | [2,6] |HottestManEver, FrostyTeeth | 1v1 on Whispering Gallery| **/l gallery1v1** 
 | Kashar Approach |    |      ||     
 | Kashar Plateau |    |      ||     
 | Taiidan Passage,Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2](layouts/taiidan.png)| **/l taiidan** 
