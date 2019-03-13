@@ -11,13 +11,13 @@
     <spawns>
         <!-- team left -->
         <spawn team="0" index="0" x="-5700" y="700" angle="135" camera="100"/>
-        <spawn team="0" index="1" x="-5700" y="700" angle="135" camera="100"/>
-        <spawn team="0" index="2" x="-5700" y="700" angle="135" camera="100"/>
+        	<spawn team="0" index="1" x="-5700" y="700" angle="135" camera="100" fleet="false"/>
+        	<spawn team="0" index="2" x="-5700" y="700" angle="135" camera="100" fleet="false"/>
  
         <!-- team right -->
         <spawn team="1" index="0" x="8700" y="-2150" angle="90" camera="260"/>
-        <spawn team="1" index="1" x="8700" y="-2150" angle="90" camera="260"/>
-        <spawn team="1" index="2" x="8700" y="-2150" angle="90" camera="260"/>
+        	<spawn team="1" index="1" x="8700" y="-2150" angle="90" camera="260" fleet="false"/>
+        	<spawn team="1" index="2" x="8700" y="-2150" angle="90" camera="260" fleet="false"/>
  
     </spawns>
 
@@ -79,7 +79,13 @@
 		<ez team="0" x="1700" y="-4000" radius="400"/>
 	</ezs>
 
-
+		<units>
+			<!-- spectator units -->
+			<unit team="0" index="1" x="-5700" y="700" angle="0" type="N_DemoCharge"/>
+			<unit team="0" index="2" x="-5700" y="700" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="1" x="8700" y="-2150" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="2" x="8700" y="-2150" angle="0" type="N_DemoCharge"/>
+		</units>
 
 </layout>
 </dokmap>
