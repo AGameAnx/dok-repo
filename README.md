@@ -32,7 +32,7 @@ All commands must not wrap onto the following line.
 | Tombs of the Ancients | [4,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)| **/l tombs3v3** 
 | Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2.png)| **/l wg-2v2** 
 | Whispering Gallery | [2,6] |HottestManEver, FrostyTeeth | 1v1 on Whispering Gallery| **/l gallery1v1** 
-| Kashar Aproach |    |      ||     
+| Kashar Approach |    |      ||     
 | Kashar Plateau |    |      ||     
 | Taiidan Passage<br/>Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage and Crater](layouts/taiidan.png)| **/l taiidan** 
 | Prime Anomaly | [6,6] |  HottestManEver | [3v3 layout for Prime Anomaly](layouts/anomaly3v3.jpg)| **/l anomaly3v3** 
