@@ -7,32 +7,32 @@ All commands must not wrap onto the following line.
 ### Team Game, sorted by Map
 
 | Map |Players| Authors | Description | **Command &nbsp; &nbsp; &nbsp; copypaste**|
-| :--- | --- | :--- | :--- | :------------------------ 
-| Kalash Teeth | [2,6] |  HottestManEver | [Rachels duel](layouts/rachels.jpg) for Kalash Teeth| **/l rachels** 
-| Torin Crater | [4,6] |  HottestManEver, FrostyTeeth | [2v2](layouts/crater2v2.png) 4player Torin Crater| **/l crater2v2**
+| :--- | --- | :--- | --- | :------------------------ 
+| Kalash Teeth | [2,6] |  HottestManEver | [Rachels duel](layouts/rachels.jpg) | **/l rachels** 
+| Torin Crater | [4,6] |  HottestManEver, FrostyTeeth | [2v2](layouts/crater2v2.png) allows 2 spectators | **/l crater2v2**
 | Torin Crater | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Torin Crater](layouts/crater2v2.png)| **/l torin** 
-| Torin Crater | [4,4] | FrostyTeeth | [2v2 between a team in vs outside<br/>the crater](layouts/torin-crater-inout.png) | **/l torin-crater-inout**
+| Torin Crater | [4,4] | FrostyTeeth | [Inside vs Outside](layouts/torin-crater-inout.png) | **/l torin-crater-inout**
 | The Boneyard |    |      |    |     
 | The Shallows |    |      |    |     
-| Firebase Kriil | [5,5] |  FrostyTeeth | [3v2 attack on fortified position<br/>Team 2 has 2 players](layouts/firebase-siege-3v2.png) | **/l firebase-siege-3v2** 
-| Canyon Outpost | [2,2] |  HottestManEver | [1v1 layout for Canyon Outpost](layouts/canyon1v1.png)| **/l canyon1v1** 
+| Firebase Kriil | [5,5] |  FrostyTeeth | 3v2 attack on [fortified position.](layouts/firebase-siege-3v2.png) Team 2 has 2 players | **/l firebase-siege-3v2** 
+| Canyon Outpost | [2,2] |  HottestManEver | [1v1](layouts/canyon1v1.png)| **/l canyon1v1** 
 | Dune Sea |    |      ||     
-| Khar-Toba | [2,2] | HottestManEver | [1v1 layout for Khar-Toba](layouts/toba1v1.jpg)| **/l toba1v1** 
+| Khar-Toba | [2,2] | HottestManEver | [1v1](layouts/toba1v1.jpg)| **/l toba1v1** 
 | Taiidan Passage |    |      | |     
-| Epsilon Base | [2,2] |  SSSS | [The v0.10-0.16 default<br/>for Epsilon Base](layouts/epsilon-inbase.png)| **/l epsilon-inbase** 
-| Salvage Facility | [2,2] |  SSSS | [Spawn with 3 of all MP units to test units](layouts/salvage-all-units.png)| **/l salvage-all-units** 
-| Salvage Facility | [6,6] | HottestManEver | [3v3](layouts/salvage3v3) layout for Salvage Facility| **/l salvage3v3** 
-| Cape Wrath | [6,6] | HottestManEver | [2v2 layout for Cape Wrath](layouts/wrath2v2.jpg)| **/l wrath3v3** 
-| Cape Wrath | [2,4] |  SSSS | [The v0.16 default for Cape Wrath](layouts/cape-valley.png)| **/l cape-valley** 
-| Kalash Site <br/> Kalash Wreck | [4,6] |  HottestManEver | [3v3 layout for Kalash Site](layouts/kalash3v3.jpg)| **/l kalash3v3** 
+| Epsilon Base | [2,2] |  SSSS | [The v0.10-0.16 default](layouts/epsilon-inbase.png)| **/l epsilon-inbase** 
+| Salvage Facility | [2,2] |  SSSS | [Spawn with 3 of all MP units to test](layouts/salvage-all-units.png)| **/l salvage-all-units** 
+| Salvage Facility | [6,6] | HottestManEver | [3v3](layouts/salvage3v3)| **/l salvage3v3** 
+| Cape Wrath | [6,6] | HottestManEver | [2v2](layouts/wrath2v2.jpg)| **/l wrath3v3** 
+| Cape Wrath | [2,4] |  SSSS | [The v0.16 default](layouts/cape-valley.png)| **/l cape-valley** 
+| Kalash Site  | [4,6] |  HottestManEver | [3v3](layouts/kalash3v3.jpg)| **/l kalash3v3** 
 | Kalash Wreck |    |      ||     
-| Dune Ocean | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Dune Ocean](layouts/ocean3v3.jpg)| **/l ocean** 
+| Dune Ocean | [2,6] |  HottestManEver | [1v1 2v2 3v3](layouts/ocean3v3.jpg)| **/l ocean** 
 | Dune Ocean | [5,6] |  HottestManEver, FrostyTeeth | [3v3](layouts/ocean3v3.jpg) layout for Dune Ocean. NO BLOCKERS!| **/l ocean3v3** 
-| Dune Ocean | [2,2] | HottestManEver, FrostyTeeth | [Gain easy resources by popping the furthest wreck from your base](layouts/dune1v1.png)| **/l dune1v1** 
+| Dune Ocean | [2,2] | HottestManEver, FrostyTeeth | [Gain  resources](layouts/dune1v1.png) by popping the furthest wreck from your base| **/l dune1v1** 
 | Gaalsien Base | [2,2] |  SSSS | [Alternate 1v1](layouts/gt-alt.png) layout for Gaalsien Base]| **/l gbase1v1** 
-| Gaalsien Base | [2,2] |  HottestManEver | [1v1 layout for Gaalsien Base](layouts/gbase1v1.jpg)| **/l gbase1v1** 
-| Tombs of the Ancients | [4,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)| **/l tombs3v3** 
-| Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2.png)| **/l wg-2v2**
+| Gaalsien Base | [2,2] |  HottestManEver | [1v1](layouts/gbase1v1.jpg)| **/l gbase1v1** 
+| Tombs of the Ancients | [4,6] | HottestManEver | [3v3](layouts/tombs3v3.jpg)| **/l tombs3v3** 
+| Whispering Gallery | [4,4] | FrostyTeeth | [2v2](layouts/wg-2v2.png)| **/l wg-2v2**
 | Whispering Gallery | [2,6] | FrostyTeeth | [1v1](layouts/wg-1v1.png) layout for Whispering Gallery| **/l wg-1v1** 
 | Whispering Gallery | [2,6] |HottestManEver, FrostyTeeth | 1v1 on Whispering Gallery| **/l gallery1v1** 
 | Kashar Approach |    |      ||     
