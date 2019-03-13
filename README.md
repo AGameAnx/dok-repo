@@ -6,7 +6,7 @@ All commands must not wrap onto the following line.
 ## Layouts 
 ### Team Game, sorted by Map
 
-| Map |Players (min,max)| Authors | Description | Command &nbsp; &nbsp; &nbsp; copypaste|
+| Map |Players| Authors | Description | Command &nbsp; &nbsp; &nbsp; copypaste|
 | :--- | --- | :--- | :--- | :------------------------ 
 | Kalash Teeth | [2,6] |  HottestManEver | [Rachels duels for Kalash Teeth](layouts/rachels.jpg)| **/l rachels** 
 | Torin Crater | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Torin Crater](layouts/crater2v2.png)| **/l torin** 
@@ -31,7 +31,7 @@ All commands must not wrap onto the following line.
 | Gaalsien Base | [2,2] |  HottestManEver | [1v1 layout for Gaalsien Base](layouts/gbase1v1.jpg)| **/l gbase1v1** 
 | Tombs of the Ancients | [4,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)| **/l tombs3v3** 
 | Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2.png)| **/l wg-2v2** 
-| Whispering Gallery | HottestManEver, FrostyTeeth | 1v1 on Whispering Gallery| **/l gallery1v1** 
+| Whispering Gallery | [2,6] |HottestManEver, FrostyTeeth | 1v1 on Whispering Gallery| **/l gallery1v1** 
 | Kashar Aproach |    |      ||     
 | Kashar Plateau |    |      ||     
 | Taiidan Passage<br/>Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage and Crater](layouts/taiidan.png)| **/l taiidan** 
