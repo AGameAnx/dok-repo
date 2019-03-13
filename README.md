@@ -28,29 +28,29 @@ All commands must not wrap onto the following line.
 | Dune Ocean | [2,6] |  HottestManEver | [1v1 2v2 3v3 layout for Dune Ocean](layouts/ocean3v3.jpg)| **/l ocean** 
 | Dune Ocean | [5,6] |  HottestManEver, FrostyTeeth | [3v3](layouts/ocean3v3.jpg) layout for Dune Ocean. NO BLOCKERS!| **/l ocean3v3** 
 | Dune Ocean | [2,2] | HottestManEver, FrostyTeeth | [Gain easy resources by popping the furthest wreck from your base](layouts/dune1v1.png)| **/l dune1v1** 
-| **/l gbase1v1** | Gaalsien Base | [2,2] |  HottestManEver | [1v1 layout for Gaalsien Base](layouts/gbase1v1.jpg)
-| **/l tombs3v3** | Tombs of the Ancients | [4,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)
-| **/l wg-2v2** | Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2.png)
-| **/l gallery1v1** | Whispering Gallery | HottestManEver, FrostyTeeth | 1v1 on Whispering Gallery
-|     | Kashar Aproach |    |      |
-|     | Kashar Plateau |    |      |
-| **/l taiidan** | Taiidan Passage<br/>Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage and Crater](layouts/taiidan.png)
-| **/l anomaly3v3** | Prime Anomaly | [6,6] |  HottestManEver | [3v3 layout for Prime Anomaly](layouts/anomaly3v3.jpg)
-| **/l anomaly-claw** | Prime Anomaly | [6,6] |  SSSS | [The v1.0 default for Prime Anomaly](layouts/anomaly-claw.jpg)
-| **/l simple** | Prime Anomaly | [2,6] | HottestManEver | [1v1 2v2 3v3 layout for newbies](layouts/simple.jpg)
+| Gaalsien Base | [2,2] |  HottestManEver | [1v1 layout for Gaalsien Base](layouts/gbase1v1.jpg)| **/l gbase1v1** 
+| Tombs of the Ancients | [4,6] | HottestManEver | [3v3 layout for Tombs of the Ancients](layouts/tombs3v3.jpg)| **/l tombs3v3** 
+| Whispering Gallery | [4,4] | FrostyTeeth | [2v2 layout for Whispering Gallery](layouts/wg-2v2.png)| **/l wg-2v2** 
+| Whispering Gallery | HottestManEver, FrostyTeeth | 1v1 on Whispering Gallery| **/l gallery1v1** 
+| Kashar Aproach |    |      ||     
+| Kashar Plateau |    |      ||     
+| Taiidan Passage<br/>Taiidan Crater | [2,4] |  HottestManEver | [1v1 2v2 layout for Taiidan Passage and Crater](layouts/taiidan.png)| **/l taiidan** 
+| Prime Anomaly | [6,6] |  HottestManEver | [3v3 layout for Prime Anomaly](layouts/anomaly3v3.jpg)| **/l anomaly3v3** 
+| Prime Anomaly | [6,6] |  SSSS | [The v1.0 default for Prime Anomaly](layouts/anomaly-claw.jpg)| **/l anomaly-claw** 
+| Prime Anomaly | [2,6] | HottestManEver | [1v1 2v2 3v3 layout for newbies](layouts/simple.jpg)| **/l simple** 
 
 
 
 ### Free-For-All Game, sorted by Map
 
-| Command | Maps | Players | Authors | Description
-| ------- | ---- | :-----: | ------- | -----------
-|     | Kalash Teeth |    |      |
-| **/l torin-crater-ffa4** | FFA - Torin Crater | [4,4] | FrostyTeeth | [4 player FFA](layouts/torin-crater-ffa4.png)
-| **/l canyon-ffa3** | FFA - Canyon Outpost | [3,3] |  FrostyTeeth | [3 player FFA](layouts/canyon-ffa3.png)
-| **/l dune-sea-ffa3** | FFA - Dune Sea | [6,6] |  FrostyTeeth | [3 player FFA](layouts/dune-sea-ffa3.png)
-| **/l khar-toba-ffa5** | FFA - Khar-Toba | [5,5] | FrostyTeeth | [5 player FFA with free population<br/>at the start](layouts/khar-toba-ffa5.png)
-|     | Prime Anomaly |    |      |
+| Maps | Players | Authors | Description| Command 
+| ---- | :-----: | ------- | -----------| ------- 
+| Kalash Teeth |    |      ||     
+| FFA - Torin Crater | [4,4] | FrostyTeeth | [4 player FFA](layouts/torin-crater-ffa4.png)| **/l torin-crater-ffa4** 
+| FFA - Canyon Outpost | [3,3] |  FrostyTeeth | [3 player FFA](layouts/canyon-ffa3.png)| **/l canyon-ffa3** 
+| FFA - Dune Sea | [6,6] |  FrostyTeeth | [3 player FFA](layouts/dune-sea-ffa3.png)| **/l dune-sea-ffa3** 
+| FFA - Khar-Toba | [5,5] | FrostyTeeth | [5 player FFA with free population<br/>at the start](layouts/khar-toba-ffa5.png)| **/l khar-toba-ffa5** 
+| Prime Anomaly |    |      ||     
 
 
 
