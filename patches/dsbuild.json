@@ -453,11 +453,14 @@
 				"Ability_C_DeployTurret_MP": {
 					"CooldownTimeSecs": 60
 				},
+				"Ability_C_DeployTurret_AA_MP": {
+					"CooldownTimeSecs": 60
+				},
 				"Ability_C_DeployTurret_BeginCooldownToggle_MP": {
 					"CooldownTimeSecs": 90
 				},
 				"Ability_C_DeployTurret_BeginCooldown_MP": {
-					"CooldownTimeSecs": 60
+					"CooldownTimeSecs": 90
 				}
 			},
 			"WeaponAttributes": {
@@ -845,7 +848,7 @@
 					"WindDownTimeMS": 500,
 					"ReloadTimeMS": 0,
 					"AreaOfEffectRadius": 80,
-					"AreaOfEffectFalloffType": 0
+					"AreaOfEffectFalloffType": 2
 				}
 			}
 		},
@@ -2409,7 +2412,7 @@
 						"Distance": 600
 					},
 					"RangeAttributesLong": {
-						"Distance": 730
+						"Distance": 710
 					}
 				}
 			}
@@ -3605,14 +3608,15 @@
 				"MaxHealth": 650,
 				"Armour": 0,
 				"SensorRadius": 1100,
-				"ContactRadius": 1350
+				"ContactRadius": 1350,
+				"PriorityAsTarget": 3
 			}
 		},
 	 		
 		"K_Baserunner_MP": {
 			"AbilityAttributes": {
 				"Ability_K_ProduceExplodingSkimmer_MP": {
-					"CooldownTimeSecs" : 40
+					"CooldownTimeSecs" : 20
 				}
 			},
 			"WeaponAttributes": {
@@ -3638,13 +3642,14 @@
 		
 		"K_ExplodingSkimmer_MP": {
 			"UnitAttributes": {
-				"Class": "Ground, Hover, Medium, Strikecraft",
+				"Class": "Ground, Hover, Small, Strikecraft",
 				"ProductionTime": 20,
 				"Resource1Cost": 150,
 				"Resource2Cost": 0,
-				"PopCapCost": 2,
+				"PopCapCost": 0,
 				"MaxHealth": 500,
-				"Armour": 0
+				"Armour": 0,
+				"PriorityAsTarget": 4
 			},
 			"WeaponAttributes": {
 				"K_ExplodingSkimmer_Weapon_G2G_MP": {
@@ -3684,7 +3689,8 @@
 				"Resource2Cost": 35,
 				"PopCapCost": 3,
 				"MaxHealth": 1400,
-				"Armour": 6
+				"Armour": 6,
+				"PriorityAsTarget": 0
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
@@ -4268,9 +4274,11 @@
 					},
 					"RangeAttributesMedium": {
 						"Remove": true
+					  
 					},
 					"RangeAttributesLong": {
 						"Remove": true
+					  
 					}
 				}
 			}
