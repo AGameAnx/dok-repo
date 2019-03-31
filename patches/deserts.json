@@ -429,7 +429,10 @@
 		"C_Escort_MP": {
 			"UnitAttributes": {
 				"Class": "Ground, Small, Strikecraft",
-				"ProductionTime": 9
+				"ProductionTime": 9,
+				"Resource1Cost": 100,
+				"Resource2Cost": 0,
+				"MaxHealth": 535
 			},
 			"AbilityAttributes": {
 				"Ability_C_Nitrous_MP": {
@@ -438,8 +441,29 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
+					"ExcludeFromAutoTargetAcquisition": false,
+					"ExcludeFromAutoFire": false,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 14,
-					"DamagePacketsPerShot": 1
+					"DamagePacketsPerShot": 1,
+					"RateOfFire": 5,
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 1200,
+					"WindUpTimeMS": 50,
+					"CooldownTimeMS": 800,
+					"WindDownTimeMS": 500,
+					"ReloadTimeMS": 1000,
+                    "TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 10,
+						"TargetThreatWeight": 4,
+						"DistanceWeight": 0.6,
+						"AngleWeight": 0,
+						"TargetPriorityWeight": 100,
+						"AutoTargetStickyBias": 1750,
+						"TargetSameCommanderBias": 0,
+						"TargetWithinFOVBias": 0
+                    }
 				}
 			}
 		},
@@ -448,6 +472,20 @@
 			"UnitAttributes": {
 				"Class": "Ground, Large, Support",
 				"Armour": 4
+			},
+			"AbilityAttributes": {
+				"Ability_C_DeployTurret_MP": {
+					"CooldownTimeSecs": 60
+				},
+				"Ability_C_DeployTurret_AA_MP": {
+					"CooldownTimeSecs": 60
+				},
+				"Ability_C_DeployTurret_BeginCooldownToggle_MP": {
+					"CooldownTimeSecs": 90
+				},
+				"Ability_C_DeployTurret_BeginCooldown_MP": {
+					"CooldownTimeSecs": 90
+				}
 			},
 			"WeaponAttributes": {
 				"C_Baserunner_Weapon_G2G_MP": {
@@ -579,12 +617,12 @@
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
 					"ExcludeFromHeightAdvantage": true,
 					"BaseDamagePerRound": 560,
-					"DamagePacketsPerShot": 14,
+					"DamagePacketsPerShot": 16,
 					"AreaOfEffectRadius": 180,
 					"AreaOfEffectFalloffType": 0,
 					"RangeAttributesLong": {
 						"Accuracy": 100,
-						"Distance": 1425
+						"Distance": 1325
 					}
 				}
 			}
@@ -601,7 +639,7 @@
 				"Armour": 3
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 3300
+				"TimeVisibleAfterFiring": 3400
 			},
 			"WeaponAttributes": {
 				"C_Railgun_Weapon_G2G_MP": {
@@ -820,8 +858,21 @@
 					}
 				},
 				"C_SupportCruiser_Weapon_Repair_Small_MP":{
+					"ExcludeFromAutoTargetAcquisition": true,
+					"ExcludeFromAutoFire": false,
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 1,
+					"DamagePacketsPerShot": 1,
+					"RateOfFire": 10,
+					"NumberOfBursts": 1,
+					"BurstPeriodMinTimeMS": 10000,
+					"BurstPeriodMaxTimeMS": 10000,
+					"WindUpTimeMS": 0,
+					"CooldownTimeMS": 0,
+					"WindDownTimeMS": 500,
+					"ReloadTimeMS": 0,
 					"AreaOfEffectRadius": 80,
-					"AreaOfEffectFalloffType": 0
+					"AreaOfEffectFalloffType": 2
 				}
 			}
 		},
@@ -1372,7 +1423,7 @@
 							"TargetClass": "XLarge, Carrier",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 200
+							"Amount": 175
 						},
 						"2": {
 							"TargetClass": "Harvester",
@@ -1457,9 +1508,11 @@
 		
 		"C_Sob_Escort_MP": {
 			"UnitAttributes": {
+				"Class": "Ground, Small, Strikecraft",
 				"ProductionTime": 9,
 				"Resource1Cost": 100,
-				"Resource2Cost": 0
+				"Resource2Cost": 0,
+				"MaxHealth": 535
 			},
 			"AbilityAttributes": {
 				"Ability_S_Nitrous_MP": {
@@ -1468,8 +1521,19 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
+					"ExcludeFromAutoTargetAcquisition": false,
+					"ExcludeFromAutoFire": false,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 14,
 					"DamagePacketsPerShot": 1,
+					"RateOfFire": 5,
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 1200,
+					"WindUpTimeMS": 50,
+					"CooldownTimeMS": 800,
+					"WindDownTimeMS": 500,
+					"ReloadTimeMS": 1000,
                     "TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 10,
 						"TargetThreatWeight": 4,
@@ -1542,7 +1606,7 @@
 				"Armour": 4
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 3300
+				"TimeVisibleAfterFiring": 3400
 			},
 			"WeaponAttributes": {
 				"C_Sob_Railgun_Weapon_G2G_MP": {
@@ -1641,7 +1705,7 @@
                 }
             },
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 3300
+				"TimeVisibleAfterFiring": 3400
 			},
 			"WeaponAttributes": {
 				"C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
@@ -2385,7 +2449,7 @@
 						"Distance": 600
 					},
 					"RangeAttributesLong": {
-						"Distance": 730
+						"Distance": 710
 					}
 				}
 			}
@@ -2484,7 +2548,7 @@
 					"AreaOfEffectFalloffType": 1,
 					"RangeAttributesShort": {
 						"Accuracy": 1,
-						"Distance": 1200
+						"Distance": 1100
 					}
 				}
 			}
@@ -2534,7 +2598,7 @@
 				"Armour": 3
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 3300
+				"TimeVisibleAfterFiring": 3400
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Weapon_G2G_MP": {
@@ -2598,18 +2662,22 @@
 					"BurstPeriodMaxTimeMS": 1000,
 					"WindUpTimeMS": 0,
 					"CooldownTimeMS": 0,
-					"WindDownTimeMS": 500,
+					"WindDownTimeMS": 0,
 					"ReloadTimeMS": 2000,
 					"AreaOfEffectRadius": 80,
 					"AreaOfEffectFalloffType": 2,
 					"FriendlyFireDamageScalar": 0,
 					"WeaponOwnerFriendlyFireDamageScalar": 0,
-					"LeadsTarget": "LeadTarget",
+					"LeadsTarget": "DirectAtTarget",
+					"Turret": {
+						"FieldOfFire": 100,
+						"FieldOfView": 100,
+						"RotationSpeed": 0
+					},
 					"RangeAttributesShort": {
 						"Accuracy": 3,
 						"Distance": 1350,
-						"MinDistance": 0,
-						"Remove": false
+						"MinDistance": 0
 					},
 					"RangeAttributesMedium": {
 						"Accuracy": 3,
@@ -2913,7 +2981,7 @@
 				}
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 3300
+				"TimeVisibleAfterFiring": 3400
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
@@ -2943,17 +3011,25 @@
 					"ReloadTimeMS": 1000,
 					"AreaOfEffectRadius": 80,
 					"AreaOfEffectFalloffType": 1,
+					"Turret": {
+						"FieldOfFire": 360,
+						"FieldOfView": 360,
+						"RotationSpeed": 200
+					},
 					"RangeAttributesShort": {
 						"Accuracy": 100,
-						"Distance": 1400
+						"Distance": 1400,
+						"MinDistance": 0
 					},
 					"RangeAttributesMedium": {
 						"Accuracy": 100,
-						"Distance": 1400
+						"Distance": 1400,
+						"MinDistance": 0
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 100,
-						"Distance": 1400
+						"Distance": 1400,
+						"MinDistance": 0
 					}
 				}
 			}	
@@ -3575,11 +3651,17 @@
 				"MaxHealth": 650,
 				"Armour": 0,
 				"SensorRadius": 1100,
-				"ContactRadius": 1350
+				"ContactRadius": 1350,
+				"PriorityAsTarget": 3
 			}
 		},
 	 		
 		"K_Baserunner_MP": {
+			"AbilityAttributes": {
+				"Ability_K_ProduceExplodingSkimmer_MP": {
+					"CooldownTimeSecs" : 20
+				}
+			},
 			"WeaponAttributes": {
 				"G_Baserunner_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
@@ -3603,13 +3685,14 @@
 		
 		"K_ExplodingSkimmer_MP": {
 			"UnitAttributes": {
-				"Class": "Ground, Hover, Small, Strikecraft, Support",
+				"Class": "Ground, Hover, Small, Strikecraft",
 				"ProductionTime": 20,
 				"Resource1Cost": 150,
 				"Resource2Cost": 0,
 				"PopCapCost": 0,
 				"MaxHealth": 500,
-				"Armour": 0
+				"Armour": 0,
+				"PriorityAsTarget": 4
 			},
 			"WeaponAttributes": {
 				"K_ExplodingSkimmer_Weapon_G2G_MP": {
@@ -3649,7 +3732,8 @@
 				"Resource2Cost": 35,
 				"PopCapCost": 3,
 				"MaxHealth": 1400,
-				"Armour": 6
+				"Armour": 6,
+				"PriorityAsTarget": 0
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
@@ -3762,7 +3846,7 @@
 					"AreaOfEffectFalloffType": 1,
 					"RangeAttributesShort": {
 						"Accuracy": 1,
-						"Distance": 1200
+						"Distance": 1100
 					}
 				}
 			}
@@ -3812,7 +3896,7 @@
 				"Armour": 3
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 3300
+				"TimeVisibleAfterFiring": 3400
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Weapon_G2G_MP": {
@@ -3876,18 +3960,22 @@
 					"BurstPeriodMaxTimeMS": 1000,
 					"WindUpTimeMS": 0,
 					"CooldownTimeMS": 0,
-					"WindDownTimeMS": 500,
+					"WindDownTimeMS": 0,
 					"ReloadTimeMS": 2000,
 					"AreaOfEffectRadius": 80,
 					"AreaOfEffectFalloffType": 2,
 					"FriendlyFireDamageScalar": 0,
 					"WeaponOwnerFriendlyFireDamageScalar": 0,
-					"LeadsTarget": "LeadTarget",
+					"LeadsTarget": "DirectAtTarget",
+					"Turret": {
+						"FieldOfFire": 100,
+						"FieldOfView": 100,
+						"RotationSpeed": 0
+					},
 					"RangeAttributesShort": {
 						"Accuracy": 3,
 						"Distance": 1350,
-						"MinDistance": 0,
-						"Remove": false
+						"MinDistance": 0
 					},
 					"RangeAttributesMedium": {
 						"Accuracy": 3,
@@ -4191,7 +4279,7 @@
 				}
 			},
 			"DetectableAttributes": {
-				"TimeVisibleAfterFiring": 3300
+				"TimeVisibleAfterFiring": 3400
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
@@ -4221,17 +4309,25 @@
 					"ReloadTimeMS": 1000,
 					"AreaOfEffectRadius": 80,
 					"AreaOfEffectFalloffType": 1,
+					"Turret": {
+						"FieldOfFire": 360,
+						"FieldOfView": 360,
+						"RotationSpeed": 200
+					},
 					"RangeAttributesShort": {
 						"Accuracy": 100,
-						"Distance": 1400
+						"Distance": 1400,
+						"MinDistance": 0
 					},
 					"RangeAttributesMedium": {
 						"Accuracy": 100,
-						"Distance": 1400
+						"Distance": 1400,
+						"MinDistance": 0
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 100,
-						"Distance": 1400
+						"Distance": 1400,
+						"MinDistance": 0
 					}
 				}
 			}
