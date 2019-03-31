@@ -3922,7 +3922,12 @@
 					"AreaOfEffectFalloffType": 2,
 					"FriendlyFireDamageScalar": 0,
 					"WeaponOwnerFriendlyFireDamageScalar": 0,
-					"LeadsTarget": "LeadTarget",
+					"LeadsTarget": "DirectAtTarget",
+					"Turret": {
+						"FieldOfFire": 100,
+						"FieldOfView": 100,
+						"RotationSpeed": 0
+					},
 					"RangeAttributesShort": {
 						"Accuracy": 3,
 						"Distance": 1350,
@@ -3931,12 +3936,14 @@
 					"RangeAttributesMedium": {
 						"Accuracy": 3,
 						"Distance": 1350,
-						"MinDistance": 0
+						"MinDistance": 0,
+						"Remove": true
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 3,
 						"Distance": 1350,
-						"MinDistance": 0
+						"MinDistance": 0,
+						"Remove": true
 					}
 				}
 			},
