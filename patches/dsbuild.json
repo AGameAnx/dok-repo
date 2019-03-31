@@ -429,7 +429,10 @@
 		"C_Escort_MP": {
 			"UnitAttributes": {
 				"Class": "Ground, Small, Strikecraft",
-				"ProductionTime": 9
+				"ProductionTime": 9,
+				"Resource1Cost": 100,
+				"Resource2Cost": 0,
+				"MaxHealth": 535
 			},
 			"AbilityAttributes": {
 				"Ability_C_Nitrous_MP": {
@@ -438,8 +441,29 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
+					"ExcludeFromAutoTargetAcquisition": false,
+					"ExcludeFromAutoFire": false,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 14,
-					"DamagePacketsPerShot": 1
+					"DamagePacketsPerShot": 1,
+					"RateOfFire": 5,
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 1200,
+					"WindUpTimeMS": 50,
+					"CooldownTimeMS": 800,
+					"WindDownTimeMS": 500,
+					"ReloadTimeMS": 1000,
+                    "TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 10,
+						"TargetThreatWeight": 4,
+						"DistanceWeight": 0.6,
+						"AngleWeight": 0,
+						"TargetPriorityWeight": 100,
+						"AutoTargetStickyBias": 1750,
+						"TargetSameCommanderBias": 0,
+						"TargetWithinFOVBias": 0
+                    }
 				}
 			}
 		},
@@ -593,12 +617,12 @@
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
 					"ExcludeFromHeightAdvantage": true,
 					"BaseDamagePerRound": 560,
-					"DamagePacketsPerShot": 14,
+					"DamagePacketsPerShot": 16,
 					"AreaOfEffectRadius": 180,
 					"AreaOfEffectFalloffType": 0,
 					"RangeAttributesLong": {
 						"Accuracy": 100,
-						"Distance": 1425
+						"Distance": 1325
 					}
 				}
 			}
@@ -1484,9 +1508,11 @@
 		
 		"C_Sob_Escort_MP": {
 			"UnitAttributes": {
+				"Class": "Ground, Small, Strikecraft",
 				"ProductionTime": 9,
 				"Resource1Cost": 100,
-				"Resource2Cost": 0
+				"Resource2Cost": 0,
+				"MaxHealth": 535
 			},
 			"AbilityAttributes": {
 				"Ability_S_Nitrous_MP": {
@@ -1495,8 +1521,19 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
+					"ExcludeFromAutoTargetAcquisition": false,
+					"ExcludeFromAutoFire": false,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 14,
 					"DamagePacketsPerShot": 1,
+					"RateOfFire": 5,
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 1200,
+					"WindUpTimeMS": 50,
+					"CooldownTimeMS": 800,
+					"WindDownTimeMS": 500,
+					"ReloadTimeMS": 1000,
                     "TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 10,
 						"TargetThreatWeight": 4,
@@ -2511,7 +2548,7 @@
 					"AreaOfEffectFalloffType": 1,
 					"RangeAttributesShort": {
 						"Accuracy": 1,
-						"Distance": 1200
+						"Distance": 1100
 					}
 				}
 			}
@@ -3809,7 +3846,7 @@
 					"AreaOfEffectFalloffType": 1,
 					"RangeAttributesShort": {
 						"Accuracy": 1,
-						"Distance": 1200
+						"Distance": 1100
 					}
 				}
 			}
