@@ -3924,8 +3924,8 @@
 					"WeaponOwnerFriendlyFireDamageScalar": 0,
 					"LeadsTarget": "LeadTarget",
 					"Turret": {
-						"FieldOfFire": 180,
-						"FieldOfView": 180,
+						"FieldOfFire": 100,
+						"FieldOfView": 100,
 						"RotationSpeed": 0
 					},
 					"RangeAttributesShort": {
@@ -3944,6 +3944,14 @@
 						"Distance": 1350,
 						"MinDistance": 0,
 						"Remove": true
+					},
+					"Modifiers": {
+						"13": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "LeadsTarget",
+							"Amount": "DirectAtTarget"
+						}
 					}
 				}
 			},
