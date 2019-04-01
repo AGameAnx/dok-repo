@@ -64,3 +64,5 @@ All commands must not wrap onto the following line.
 | **/p deserts** | pbobbert | [Khraak Deserts Balance Patch](https://cdn.discordapp.com/attachments/509996599955554305/541211898771931136/Balancing_a_Desert_TooTwo_version_18.pdf)
 | **/p who** | Who | Who's patch
 
+.  
+.  
