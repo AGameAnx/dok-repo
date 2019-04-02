@@ -64,7 +64,7 @@
 			"WeaponAttributes": {
 				"C_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 20,
-					"RateOfFire": 6,
+					"RateOfFire": 8,
 					"RangeAttributesShort": { "Accuracy": 14 },
 					"RangeAttributesMedium": { "Accuracy": 10 },
 					"RangeAttributesLong": { "Accuracy": 7 },
@@ -148,7 +148,7 @@
 				},
 				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
 					"BaseDamagePerRound": 33,
-					"RateOfFire": 6,
+					"RateOfFire": 8,
 					"RangeAttributesShort": { "Accuracy": 14 },
 					"RangeAttributesMedium": { "Accuracy": 10 },
 					"RangeAttributesLong": { "Accuracy": 7 },
@@ -246,6 +246,102 @@
 						"Distance": 4500
 					}
 				}
+			},
+			"PowerShuntAttributes": {
+				"PowerSystems": {
+					
+					"1": { // Weapon Systems. Changed buffs affect PD rate of fire
+						"PowerLevels": {
+							
+							"1": {
+								"StatusEffectsToApply": {
+									"C_Weapons_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 50 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 50 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"2": {
+								"StatusEffectsToApply": {
+									"C_Weapons_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 100 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 100 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 100 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 100 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"3": {
+								"StatusEffectsToApply": {
+									"C_Weapons_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 150 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 150 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 150 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 150 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"4": {
+								"StatusEffectsToApply": {
+									"C_Weapons_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 250 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 250 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 250 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 250 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"5": {
+								"StatusEffectsToApply": {
+									"C_Weapons_5_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 250 }, // TURRET_BR_APBULLETS
+													"2": { "Mode": "AddPercent", "Value": 250 }, // TURRET_BL_APBULLETS
+													"3": { "Mode": "AddPercent", "Value": 250 }, // TURRET_FL_APBULLETS
+													"4": { "Mode": "AddPercent", "Value": 250 }  // TURRET_FR_APBULLETS
+												}
+											}
+										}
+									}
+								}
+							}
+							
+						}
+					}
+					
+				}
 			}
 		},
 		"C_Sob_Carrier_MP": {
@@ -289,25 +385,25 @@
 				},
 				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 195,
-					"BurstPeriodMaxTimeMS": 999,
-					"BurstPeriodMinTimeMS": 999,
+					"BurstPeriodMaxTimeMS": 250,
+					"BurstPeriodMinTimeMS": 250,
 					"NumberOfBursts": 2,
 					"WindUpTimeMS": 1600,
 					"WindDownTimeMS": 500,
 					
-					"CooldownTimeMS": 6000,
-					"ReloadTimeMS": 12000,
+					"CooldownTimeMS": 10000,
+					"ReloadTimeMS": 15000,
 					"RangeAttributesShort": {
 						"Distance": 300,
-						"Accuracy": 5
+						"Accuracy": 5.6
 					},
 					"RangeAttributesMedium": {
 						"Distance": 550,
-						"Accuracy": 4.5
+						"Accuracy": 5.0
 					},
 					"RangeAttributesLong": {
 						"Distance": 850,
-						"Accuracy": 3.5
+						"Accuracy": 4.5
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 50,
@@ -427,7 +523,7 @@
 						"PowerLevels": {
 							
 							"1": {
-								"LocalizedShortDescriptionStringID": "Missile Systems Enabled. 25% Rate of Fire bonus, 15% Accuracy bonus",
+								"LocalizedShortDescriptionStringID": "Missile Systems Enabled. 40% Reload bonus, 15% Accuracy bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_1_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -437,29 +533,29 @@
 													"2": { "Remove": true }, // Sets damage on TURRET_BR weapon
 													
 													// TURRET_BR
-													"3": { "Mode": "AddPercent", "Value": -25 }, // Cooldown
-													"4": { "Mode": "AddPercent", "Value": -25 }, // Reload
+													"3": { "Mode": "AddPercent", "Value": -40 }, // Cooldown
+													"4": { "Mode": "AddPercent", "Value": -40 }, // Reload
 													"5": { "Value": 15 }, // Accuracy Short
 													"6": { "Value": 15 }, // Accuracy Medium
 													"7": { "Value": 15 }, // Accuracy Long
 													
 													// TURRET_BL
-													"8": { "Mode": "AddPercent", "Value": -25 }, // Cooldown
-													"9": { "Mode": "AddPercent", "Value": -25, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"8": { "Mode": "AddPercent", "Value": -40 }, // Cooldown
+													"9": { "Mode": "AddPercent", "Value": -40, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
 													"10": { "Value": 15 }, // Accuracy Short
 													"11": { "Value": 15 }, // Accuracy Medium
 													"12": { "Value": 15 }, // Accuracy Long
 													
 													// TURRET_FL
-													"13": { "Mode": "AddPercent", "Value": -25 }, // Cooldown
-													"14": { "Mode": "AddPercent", "Value": -25, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"13": { "Mode": "AddPercent", "Value": -40 }, // Cooldown
+													"14": { "Mode": "AddPercent", "Value": -40, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
 													"15": { "Value": 15 }, // Accuracy Short
 													"16": { "Value": 15 }, // Accuracy Medium
 													"17": { "Value": 15 }, // Accuracy Long
 													
 													// TURRET_FR
-													"18": { "Mode": "AddPercent", "Value": -25 }, // Cooldown
-													"19": { "Mode": "AddPercent", "Value": -25 }, // Reload
+													"18": { "Mode": "AddPercent", "Value": -40 }, // Cooldown
+													"19": { "Mode": "AddPercent", "Value": -40 }, // Reload
 													"20": { "Value": 15 }, // Accuracy Short
 													"21": { "Value": 15 }, // Accuracy Medium
 													"22": { "Value": 15 } // Accuracy Long
@@ -471,7 +567,7 @@
 							},
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "50% Rate of Fire bonus, 25% Accuracy bonus",
+								"LocalizedShortDescriptionStringID": "65% Reload bonus, 25% Accuracy bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_2_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -480,29 +576,29 @@
 													"1": { "Remove": true }, // Sets damage on the dummy weapon
 													
 													// TURRET_BR
-													"2": { "Mode": "AddPercent", "Value": -50 }, // Cooldown
-													"3": { "Mode": "AddPercent", "Value": -50 }, // Reload
+													"2": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -65 }, // Reload
 													"4": { "Value": 25 }, // Accuracy Short
 													"5": { "Value": 25 }, // Accuracy Medium
 													"6": { "Value": 25 }, // Accuracy Long
 													
 													// TURRET_BL
-													"7": { "Mode": "AddPercent", "Value": -50 }, // Cooldown
-													"8": { "Mode": "AddPercent", "Value": -50 }, // Reload
+													"7": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -65 }, // Reload
 													"9": { "Value": 25 }, // Accuracy Short
 													"10": { "Value": 25 }, // Accuracy Medium
 													"11": { "Value": 25 }, // Accuracy Long
 													
 													// TURRET_FL
-													"12": { "Mode": "AddPercent", "Value": -50 }, // Cooldown
-													"13": { "Mode": "AddPercent", "Value": -50 }, // Reload
+													"12": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -65 }, // Reload
 													"14": { "Value": 25 }, // Accuracy Short
 													"15": { "Value": 25 }, // Accuracy Medium
 													"16": { "Value": 25 }, // Accuracy Long
 													
 													// TURRET_FR
-													"17": { "Mode": "AddPercent", "Value": -50 }, // Cooldown
-													"18": { "Mode": "AddPercent", "Value": -50, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"17": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -65, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
 													"19": { "Value": 25 }, // Accuracy Short
 													"20": { "Value": 25 }, // Accuracy Medium
 													"21": { "Value": 25 } // Accuracy Long
@@ -514,7 +610,7 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "65% Rate of Fire bonus, 35% Accuracy bonus",
+								"LocalizedShortDescriptionStringID": "80% Reload bonus, 35% Accuracy bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_3_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -524,29 +620,29 @@
 													"2": { "Remove": true }, // Duplicate cooldown buff for TURRET_BR weapon
 													
 													// TURRET_BR
-													"3": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
-													"4": { "Mode": "AddPercent", "Value": -65 }, // Reload
+													"3": { "Mode": "AddPercent", "Value": -80 }, // Cooldown
+													"4": { "Mode": "AddPercent", "Value": -80 }, // Reload
 													"5": { "Value": 35 }, // Accuracy Short
 													"6": { "Value": 35 }, // Accuracy Medium
 													"7": { "Value": 35 }, // Accuracy Long
 													
 													// TURRET_BL
-													"8": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
-													"9": { "Mode": "AddPercent", "Value": -65 }, // Reload
+													"8": { "Mode": "AddPercent", "Value": -80 }, // Cooldown
+													"9": { "Mode": "AddPercent", "Value": -80 }, // Reload
 													"10": { "Value": 35 }, // Accuracy Short
 													"11": { "Value": 35 }, // Accuracy Medium
 													"12": { "Value": 35 }, // Accuracy Long
 													
 													// TURRET_FL
-													"13": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
-													"14": { "Mode": "AddPercent", "Value": -65 }, // Reload
+													"13": { "Mode": "AddPercent", "Value": -80 }, // Cooldown
+													"14": { "Mode": "AddPercent", "Value": -80 }, // Reload
 													"15": { "Value": 35 }, // Accuracy Short
 													"16": { "Value": 35 }, // Accuracy Medium
 													"17": { "Value": 35 }, // Accuracy Long
 													
 													// TURRET_FR
-													"18": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
-													"19": { "Mode": "AddPercent", "Value": -65 }, // Reload
+													"18": { "Mode": "AddPercent", "Value": -80 }, // Cooldown
+													"19": { "Mode": "AddPercent", "Value": -80 }, // Reload
 													"20": { "Value": 35 }, // Accuracy Short
 													"21": { "Value": 35 }, // Accuracy Medium
 													"22": { "Value": 35 } // Accuracy Long
@@ -558,7 +654,7 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "75% Rate of Fire bonus, 45% Accuracy bonus",
+								"LocalizedShortDescriptionStringID": "90% Reload bonus, 45% Accuracy bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -567,29 +663,29 @@
 													"1": { "Remove": true }, // Sets damage on the dummy weapon
 													
 													// TURRET_BR
-													"2": { "Mode": "AddPercent", "Value": -75 }, // Cooldown
-													"3": { "Mode": "AddPercent", "Value": -75 }, // Reload
+													"2": { "Mode": "AddPercent", "Value": -90 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -90 }, // Reload
 													"4": { "Value": 45 }, // Accuracy Short
 													"5": { "Value": 45 }, // Accuracy Medium
 													"6": { "Value": 45 }, // Accuracy Long
 													
 													// TURRET_BL
-													"7": { "Mode": "AddPercent", "Value": -75 }, // Cooldown
-													"8": { "Mode": "AddPercent", "Value": -75 }, // Reload
+													"7": { "Mode": "AddPercent", "Value": -90 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -90 }, // Reload
 													"9": { "Value": 45 }, // Accuracy Short
 													"10": { "Value": 45 }, // Accuracy Medium
 													"11": { "Value": 45 }, // Accuracy Long
 													
 													// TURRET_FL
-													"12": { "Mode": "AddPercent", "Value": -75 }, // Cooldown
-													"13": { "Mode": "AddPercent", "Value": -75 }, // Reload
+													"12": { "Mode": "AddPercent", "Value": -90 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -90 }, // Reload
 													"14": { "Value": 45 }, // Accuracy Short
 													"15": { "Value": 45 }, // Accuracy Medium
 													"16": { "Value": 45 }, // Accuracy Long
 													
 													// TURRET_FR
-													"17": { "Mode": "AddPercent", "Value": -75 }, // Cooldown
-													"18": { "Mode": "AddPercent", "Value": -75 }, // Reload
+													"17": { "Mode": "AddPercent", "Value": -90 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -90 }, // Reload
 													"19": { "Value": 45 }, // Accuracy Short
 													"20": { "Value": 45 }, // Accuracy Medium
 													"21": { "Value": 45 } // Accuracy Long
@@ -601,7 +697,7 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "90% Rate of Fire bonus, 55% Accuracy bonus",
+								"LocalizedShortDescriptionStringID": "95% Reload bonus, 55% Accuracy bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -610,29 +706,29 @@
 													"1": { "Remove": true }, // Sets damage on the dummy weapon
 													
 													// TURRET_BR
-													"2": { "Mode": "AddPercent", "Value": -90 }, // Cooldown
-													"3": { "Mode": "AddPercent", "Value": -90 }, // Reload
+													"2": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -95 }, // Reload
 													"4": { "Value": 55 }, // Accuracy Short
 													"5": { "Value": 55 }, // Accuracy Medium
 													"6": { "Value": 55 }, // Accuracy Long
 													
 													// TURRET_BL
-													"7": { "Mode": "AddPercent", "Value": -90 }, // Cooldown
-													"8": { "Mode": "AddPercent", "Value": -90 }, // Reload
+													"7": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -95 }, // Reload
 													"9": { "Value": 55 }, // Accuracy Short
 													"10": { "Value": 55 }, // Accuracy Medium
 													"11": { "Value": 55 }, // Accuracy Long
 													
 													// TURRET_FL
-													"12": { "Mode": "AddPercent", "Value": -90 }, // Cooldown
-													"13": { "Mode": "AddPercent", "Value": -90 }, // Reload
+													"12": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -95 }, // Reload
 													"14": { "Value": 55 }, // Accuracy Short
 													"15": { "Value": 55 }, // Accuracy Medium
 													"16": { "Value": 55 }, // Accuracy Long
 													
 													// TURRET_FR
-													"17": { "Mode": "AddPercent", "Value": -90 }, // Cooldown
-													"18": { "Mode": "AddPercent", "Value": -90 }, // Reload
+													"17": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -95 }, // Reload
 													"19": { "Value": 55 }, // Accuracy Short
 													"20": { "Value": 55 }, // Accuracy Medium
 													"21": { "Value": 55 } // Accuracy Long
@@ -711,6 +807,20 @@
 										}
 									}
 								}
+							},
+							
+							"5": {
+								"StatusEffectsToApply": {
+									"Armour_6_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "Set", "Value": 70 }
+												}
+											}
+										}
+									}
+								}
 							}
 							
 						}
@@ -720,11 +830,11 @@
 						"PowerLevels": {
 							
 							"0": {
-								"LocalizedShortDescriptionStringID": "Turret Range: 850m"
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 850m"
 							},
 							
 							"1": {
-								"LocalizedShortDescriptionStringID": "Turret Range: 1100m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1100m",
 								"StatusEffectsToApply": {
 									"Range_1_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
@@ -769,7 +879,7 @@
 							},
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Turret Range: 1450m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1450m",
 								"StatusEffectsToApply": {
 									"Range_2_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
@@ -814,7 +924,7 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Turret Range: 1800m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1800m",
 								"StatusEffectsToApply": {
 									"Range_3_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
@@ -859,7 +969,7 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Turret Range: 2000m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 2000m",
 								"StatusEffectsToApply": {
 									"Range_4_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
@@ -904,7 +1014,7 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Turret Range: 2200m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 2200m",
 								"StatusEffectsToApply": {
 									"Range_5_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
@@ -982,7 +1092,7 @@
 			"WeaponAttributes": {
 				"G_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 20,
-					"RateOfFire": 8,
+					"RateOfFire": 10,
 					"RangeAttributesShort": { "Accuracy": 14 },
 					"RangeAttributesMedium": { "Accuracy": 10 },
 					"RangeAttributesLong": { "Accuracy": 7 },
@@ -1066,7 +1176,7 @@
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
 					"BaseDamagePerRound": 33,
-					"RateOfFire": 8,
+					"RateOfFire": 10,
 					"RangeAttributesShort": { "Accuracy": 14 },
 					"RangeAttributesMedium": { "Accuracy": 10 },
 					"RangeAttributesLong": { "Accuracy": 7 },
@@ -1161,6 +1271,102 @@
 						"Distance": 4500
 					}
 				}
+			},
+			"PowerShuntAttributes": {
+				"PowerSystems": {
+					
+					"1": { // Weapon Systems. Changed buffs affect PD rate of fire
+						"PowerLevels": {
+							
+							"1": {
+								"StatusEffectsToApply": {
+									"G_Weapons_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BR
+													"1": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BL
+													"2": { "Mode": "AddPercent", "Value": 50 }, // TURRET_FL
+													"3": { "Mode": "AddPercent", "Value": 50 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"2": {
+								"StatusEffectsToApply": {
+									"G_Weapons_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 100 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 100 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 100 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 100 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"3": {
+								"StatusEffectsToApply": {
+									"G_Weapons_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 150 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 150 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 150 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 150 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"4": {
+								"StatusEffectsToApply": {
+									"G_Weapons_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 200 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 200 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 200 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 200 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"5": {
+								"StatusEffectsToApply": {
+									"G_Weapons_5_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 200 }, // TURRET_FL_APBULLETS
+													"2": { "Mode": "AddPercent", "Value": 200 }, // TURRET_FR_APBULLETS
+													"3": { "Mode": "AddPercent", "Value": 200 }, // TURRET_BR_APBULLETS
+													"4": { "Mode": "AddPercent", "Value": 200 }  // TURRET_BL_APBULLETS
+												}
+											}
+										}
+									}
+								}
+							}
+							
+						}
+					}
+					
+				}
 			}
 		},
 		"K_Carrier_MP": {
@@ -1190,12 +1396,15 @@
 				}
 			},
 			"WeaponAttributes": {
+				"G_Carrier_Weapon_G2All_Dummy_MP": {
+					"BaseDamagePerRound": 20
+				},
 				"K_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 20,
-					"RateOfFire": 8,
-					"RangeAttributesShort": { "Accuracy": 14 },
-					"RangeAttributesMedium": { "Accuracy": 10 },
-					"RangeAttributesLong": { "Accuracy": 7 },
+					"RateOfFire": 6,
+					"RangeAttributesShort": { "Accuracy": 14, "Distance": 350 },
+					"RangeAttributesMedium": { "Accuracy": 10, "Distance": 650 },
+					"RangeAttributesLong": { "Accuracy": 7, "Distance": 950 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
@@ -1273,10 +1482,10 @@
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
 					"BaseDamagePerRound": 33,
-					"RateOfFire": 8,
-					"RangeAttributesShort": { "Accuracy": 14 },
-					"RangeAttributesMedium": { "Accuracy": 10 },
-					"RangeAttributesLong": { "Accuracy": 7 },
+					"RateOfFire": 6,
+					"RangeAttributesShort": { "Accuracy": 14, "Distance": 350 },
+					"RangeAttributesMedium": { "Accuracy": 10, "Distance": 650 },
+					"RangeAttributesLong": { "Accuracy": 7, "Distance": 950 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
@@ -1352,6 +1561,9 @@
 						}
 					}
 				},
+				"K_Carrier_Weapon_DefaultMissile_MP": {
+					"RangeAttributesLong": { "Distance": 950 }
+				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
 					"ExcludeFromHeightAdvantage": true,
 					"BaseDamagePerRound": 480,
@@ -1364,7 +1576,8 @@
 			},
 			"PowerShuntAttributes": {
 				"PowerSystems": {
-					"0": {
+					
+					"0": { // Speed Boost. Changed buffs affect radius
 						"PowerLevels": {
 							"1": {
 								"StatusEffectsToApply": {
@@ -1417,7 +1630,99 @@
 								}
 							}
 						}
+					},
+					
+					"3": { // Weapon Systems. Changed buffs affect PD rate of fire
+						"PowerLevels": {
+							
+							"1": {
+								"StatusEffectsToApply": {
+									"K_Weapons_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BR
+													"1": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BL
+													"2": { "Mode": "AddPercent", "Value": 50 }, // TURRET_FL
+													"3": { "Mode": "AddPercent", "Value": 50 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"2": {
+								"StatusEffectsToApply": {
+									"K_Weapons_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 150 }, // TURRET_BR
+													"1": { "Mode": "AddPercent", "Value": 150 }, // TURRET_BL
+													"2": { "Mode": "AddPercent", "Value": 150 }, // TURRET_FL
+													"3": { "Mode": "AddPercent", "Value": 150 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"3": {
+								"StatusEffectsToApply": {
+									"K_Weapons_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 300 }, // TURRET_BR
+													"1": { "Mode": "AddPercent", "Value": 300 }, // TURRET_BL
+													"2": { "Mode": "AddPercent", "Value": 300 }, // TURRET_FL
+													"3": { "Mode": "AddPercent", "Value": 300 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"4": {
+								"StatusEffectsToApply": {
+									"K_Weapons_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 450 }, // TURRET_BR
+													"1": { "Mode": "AddPercent", "Value": 450 }, // TURRET_BL
+													"2": { "Mode": "AddPercent", "Value": 450 }, // TURRET_FL
+													"3": { "Mode": "AddPercent", "Value": 450 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"5": {
+								"StatusEffectsToApply": {
+									"K_Weapons_5_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 450 }, // TURRET_FL_APBULLETS
+													"1": { "Mode": "AddPercent", "Value": 450 }, // TURRET_FR_APBULLETS
+													"2": { "Mode": "AddPercent", "Value": 450 }, // TURRET_BR_APBULLETS
+													"3": { "Mode": "AddPercent", "Value": 450 }  // TURRET_BL_APBULLETS
+												}
+											}
+										}
+									}
+								}
+							}
+							
+						}
 					}
+					
 				}
 			}
 		},
@@ -2842,7 +3147,6 @@
 			},
 			"WeaponAttributes": {
 				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
-					"BaseDamagePerRound": 140,
 					"ExcludeFromHeightAdvantage": true,
 					"NumberOfBursts": 9,
 					"CooldownTimeMS": 1900,
