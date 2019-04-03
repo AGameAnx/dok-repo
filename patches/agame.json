@@ -1,20 +1,20 @@
 {
 	"Entities": {
-		/*"Research_Buff_Power_1":   { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0  } },
-		"Research_Buff_G_Power_1": { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0  } },
-		"Research_S_Buff_Power_1": { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0  } },
+		/*"Research_Buff_Power_1":   { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_Buff_G_Power_1": { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_S_Buff_Power_1": { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
 		
-		"Research_Buff_Power_2":   { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0 } },
-		"Research_Buff_G_Power_2": { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0 } },
-		"Research_S_Buff_Power_2": { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_Buff_Power_2":   { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_Buff_G_Power_2": { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_S_Buff_Power_2": { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
 		
-		"Research_Buff_Power_3":   { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0 } },
-		"Research_Buff_G_Power_3": { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0 } },
-		"Research_S_Buff_Power_3": { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_Buff_Power_3":   { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_Buff_G_Power_3": { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_S_Buff_Power_3": { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
 		
-		"Research_Buff_Power_4":   { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0 } },
-		"Research_Buff_G_Power_4": { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0 } },
-		"Research_S_Buff_Power_4": { "ResearchItemAttributes": { "Resource1Cost": 0 , "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_Buff_Power_4":   { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_Buff_G_Power_4": { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
+		"Research_S_Buff_Power_4": { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
 		
 		"Research_Buff_Power_5":   { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
 		"Research_Buff_G_Power_5": { "ResearchItemAttributes": { "Resource1Cost": 0, "Resource2Cost": 0, "ResearchTime": 0 } },
@@ -309,7 +309,8 @@
 													"1": { "Mode": "AddPercent", "Value": 25 }, // TURRET_BR_APBULLETS
 													"2": { "Mode": "AddPercent", "Value": 25 }, // TURRET_BL_APBULLETS
 													"3": { "Mode": "AddPercent", "Value": 25 }, // TURRET_FL_APBULLETS
-													"4": { "Mode": "AddPercent", "Value": 25 }  // TURRET_FR_APBULLETS
+													"4": { "Mode": "AddPercent", "Value": 25 }, // TURRET_FR_APBULLETS
+													"5": { "Value": 2 } // Fire rate display
 												}
 											}
 										}
@@ -1294,7 +1295,8 @@
 													"1": { "Remove": true }, // TURRET_FL_APBULLETS
 													"2": { "Remove": true }, // TURRET_FR_APBULLETS
 													"3": { "Remove": true }, // TURRET_BR_APBULLETS
-													"4": { "Remove": true }  // TURRET_BL_APBULLETS
+													"4": { "Remove": true }, // TURRET_BL_APBULLETS
+													"5": { "Value": 1 } // Fire rate display
 												}
 											}
 										}
@@ -1551,7 +1553,8 @@
 													"0": { "Mode": "AddPercent", "Value": 100 }, // TURRET_BR
 													"1": { "Mode": "AddPercent", "Value": 100 }, // TURRET_BL
 													"2": { "Mode": "AddPercent", "Value": 100 }, // TURRET_FL
-													"3": { "Mode": "AddPercent", "Value": 100 }  // TURRET_FR
+													"3": { "Mode": "AddPercent", "Value": 100 },  // TURRET_FR
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 2 } // Missiles ROF
 												}
 											}
 										}
@@ -1569,7 +1572,8 @@
 													"0": { "Mode": "AddPercent", "Value": 200 }, // TURRET_BR
 													"1": { "Mode": "AddPercent", "Value": 200 }, // TURRET_BL
 													"2": { "Mode": "AddPercent", "Value": 200 }, // TURRET_FL
-													"3": { "Mode": "AddPercent", "Value": 200 }  // TURRET_FR
+													"3": { "Mode": "AddPercent", "Value": 200 }, // TURRET_FR
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 3 } // Missiles ROF
 												}
 											}
 										}
@@ -1587,7 +1591,8 @@
 													"0": { "Mode": "AddPercent", "Value": 300 }, // TURRET_BR
 													"1": { "Mode": "AddPercent", "Value": 300 }, // TURRET_BL
 													"2": { "Mode": "AddPercent", "Value": 300 }, // TURRET_FL
-													"3": { "Mode": "AddPercent", "Value": 300 }  // TURRET_FR
+													"3": { "Mode": "AddPercent", "Value": 300 }, // TURRET_FR
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 4 } // Missiles ROF
 												}
 											}
 										}
@@ -1605,7 +1610,12 @@
 													"0": { "Mode": "AddPercent", "Value": 50 }, // TURRET_FL_APBULLETS
 													"1": { "Mode": "AddPercent", "Value": 50 }, // TURRET_FR_APBULLETS
 													"2": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BR_APBULLETS
-													"3": { "Mode": "AddPercent", "Value": 50 }  // TURRET_BL_APBULLETS
+													"3": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BL_APBULLETS
+													"4": { "Value": 2 }, // Fire rate display
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 4 }, // Missiles ROF
+													"6": { "Remove": true },
+													"7": { "Remove": true },
+													"8": { "Remove": true }
 												}
 											}
 										}
@@ -1947,7 +1957,7 @@
 			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
-					"RateOfFire": 13
+					"RateOfFire": 12
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"WindUpTimeMS": 50,
@@ -1972,7 +1982,7 @@
 			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
-					"RateOfFire": 13
+					"RateOfFire": 12
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"WindUpTimeMS": 50,
@@ -2522,6 +2532,7 @@
 		
 		"C_Interceptor_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 180,
 				"Resource2Cost": 85,
 				"MaxHealth": 490,
 				"Armour": 5,
@@ -3049,6 +3060,7 @@
 			},
 			"WeaponAttributes": {
 				"K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
+					"AreaOfEffectRadius": 175,
 					"AreaOfEffectFalloffType": "Quadratic"
 				},
 				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
