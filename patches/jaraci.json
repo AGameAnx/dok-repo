@@ -3051,22 +3051,29 @@
 		},
 		"K_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 3050
+				"MaxHealth": 3050,
+				"Armour": 12
 			},
 			"AbilityAttributes": {
 				"Ability_K_ArtilleryBarrage_01_MP": {
-					"CooldownTimeSecs": 75
+					"CooldownTimeSecs": 65
 				}
 			},
 			"WeaponAttributes": {
 				"K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"AreaOfEffectRadius": 175,
+					"AreaOfEffectRadius": 210,
+					"BaseDamagePerRound": 150,
+					"NumberOfBursts": 2,
 					"AreaOfEffectFalloffType": "Quadratic"
 				},
 				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"NumberOfBursts": 9,
-					"CooldownTimeMS": 1900,
+					"NumberOfBursts": 4,
+					"CooldownTimeMS": 2500,
+					"BaseDamagePerRound": 280,
+					"DamagePacketsPerShot": 2,
+					"AreaOfEffectRadius": 240,
+					"AreaOfEffectFalloffType": "Quadratic",
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
@@ -3089,11 +3096,6 @@
 				"Resource1Cost": 450,
 				"Resource2Cost": 350,
 				"ResearchTime": 65
-			}
-		},
-		"Tier_3_K_ArtilleryCruiser": {
-			"ResearchItemAttributes": {
-				"ResearchTime": 100
 			}
 		},
 		"Research_Buff_G_Artillery_Barrage": {
