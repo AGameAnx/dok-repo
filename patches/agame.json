@@ -1795,6 +1795,37 @@
 				"Resource1Cost": 200
 			}
 		},
+		"N_ECMField_MP": {
+			"DetectableAttributes": {
+				"MinimumStateAfterDetection": "Hidden"
+			},
+			"UnitAttributes": {
+				"ContactRadius": 400,
+				"SensorRadius": 270
+			}
+		},
+		"ECMField_StatusEffect": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"4": { "Value": -20 }, // MaxSpeed
+							"5": { "Value": -10 }, // MaxSpeedTurnRadius
+							"6": {
+								"Attribute": "UnitDynamics_AccelerationTime",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"7": {
+								"Attribute": "UnitCombatBehaviour_MinDesiredCombatRange",
+								"Mode": "Set",
+								"Value": 400
+							}
+						}
+					}
+				}
+			}
+		},
 		"C_Probe_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 170,
@@ -2677,7 +2708,7 @@
 				"Resource2Cost": 85,
 				"MaxHealth": 490,
 				"Armour": 4,
-				"ProductionTime": 25
+				"ProductionTime": 21
 			},
 			"StorageAttributes": {
 				"C_Interceptor_StorageAttributesAsset_MP": {
@@ -2686,6 +2717,21 @@
 							"Capacity": 8,
 							"StartingAmount": 8
 						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"C_Interceptor_Weapon_A2G_MP": {
+					"BurstPeriodMinTimeMS": 667,
+					"BurstPeriodMaxTimeMS": 667,
+					"ReloadTimeMS": 3332,
+					"RateOfFire": 3,
+					"Turret": {
+						"FieldOfView": 55,
+						"FieldOfFire": 55
+					},
+					"RangeAttributesShort": {
+						"Distance": 1250
 					}
 				}
 			}
