@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<!-- More Maps by SSSS -->
+	<meta name="Gaalsien Base [2,4]"
+	      authors="FrostyTeeth"
+	      description="Close range brawl with scarce resources"/>
+	
+	<layout map="M07" mode="Team" players="2">
+		<bounds top="8400" bottom="495" left="-650" right="7380"/>
+		<blockers carrier="false"/>
+	   
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="738" y="4467" angle="0" camera="75"/>
+			
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="6241" y="4467" angle="0" camera="285"/>
+		</spawns>
+	 
+		<resources>
+			<!-- team 1 -->
+			<resource x="438" y="4567" type="cu" amount="7500"/>
+			<resource x="438" y="4467" type="ru" amount="3000"/>
+			<resource x="438" y="4367" type="cu" amount="7500"/>
+	 
+			<!-- team 2 -->
+			<resource x="6541" y="4567" type="cu" amount="7500"/>
+			<resource x="6541" y="4467" type="ru" amount="3000"/>
+			<resource x="6541" y="4367" type="cu" amount="7500"/>
+		</resources>
+		
+		<wrecks>
+			<wreck x="3635" y="900" angle="45">
+				<resource x="3570" y="1035" type="cu" amount="10500"/>
+				<resource x="3500" y="965" type="ru" amount="4000"/>
+			</wreck>
+			
+			<wreck x="3135" y="900" angle="315">
+				<resource x="3200" y="1035" type="cu" amount="10500"/>
+				<resource x="3270" y="965" type="ru" amount="4000"/>
+			</wreck>
+		</wrecks>
+	 
+		<artifacts>
+			<artifact x="3365" y="5500"/>
+			<artifact x="3365" y="4200"/>
+		</artifacts>
+	   
+		<ezs>
+			<!-- extraction zones -->
+			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+			<ez team="0" x="3105" y="6711" radius="400"/>
+			<ez team="1" x="3625" y="6711" radius="400"/>
+		</ezs>
+
+		<blockers existing="true">
+		<!-- west -->
+		<blocker mask="Carrier" blocklof="true" verts="2038,8399;2038,496;2048,8399;2048,496"/>
+		<!-- east -->
+		<blocker mask="Carrier" blocklof="true" verts="4941,8399;4941,496;4931,8399;4931,496"/>
+	</blockers>
+	</layout>
+	
+	<layout map="M07" mode="Team" players="3, 4, 5, 6">
+		<bounds top="8400" bottom="495" left="-650" right="7380"/>
+		<blockers carrier="false"/>
+	   
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="1238" y="4467" angle="0" camera="75"/>
+			<spawn team="0" index="1" x="-50" y="4467" angle="0" camera="75"/>
+			<spawn team="0" index="2" x="1238" y="4467" angle="0" camera="75"/>
+			
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="5741" y="4467" angle="0" camera="285"/>
+			<spawn team="1" index="1" x="6816" y="4467" angle="0" camera="285"/>
+			<spawn team="1" index="2" x="5741" y="4467" angle="0" camera="285"/>
+		</spawns>
+	 
+		<resources>
+			<!-- team 1 -->
+			<resource x="938" y="4567" type="cu" amount="2"/>
+			<resource x="938" y="4467" type="ru" amount="3000"/>
+			<resource x="938" y="4367" type="cu" amount="2"/>
+	 
+			<resource x="-350" y="4567" type="cu" amount="7500"/>
+			<resource x="-350" y="4467" type="ru" amount="3000"/>
+			<resource x="-350" y="4367" type="cu" amount="7500"/>
+	 
+			<!-- team 2 -->
+			<resource x="6041" y="4567" type="cu" amount="7500"/>
+			<resource x="6041" y="4467" type="ru" amount="3000"/>
+			<resource x="6041" y="4367" type="cu" amount="7500"/>
+			
+			<resource x="7116" y="4567" type="cu" amount="2"/>
+			<resource x="7116" y="4467" type="ru" amount="3000"/>
+			<resource x="7116" y="4367" type="cu" amount="2"/>
+		</resources>
+		
+		<wrecks>
+			<wreck x="3635" y="900" angle="45">
+				<resource x="3570" y="1035" type="cu" amount="10500"/>
+				<resource x="3500" y="965" type="ru" amount="4000"/>
+			</wreck>
+			
+			<wreck x="3135" y="900" angle="315">
+				<resource x="3200" y="1035" type="cu" amount="10500"/>
+				<resource x="3270" y="965" type="ru" amount="4000"/>
+			</wreck>
+		</wrecks>
+	 
+		<artifacts>
+			<artifact x="3365" y="5500"/>
+			<artifact x="3365" y="4200"/>
+		</artifacts>
+	   
+		<ezs>
+			<!-- extraction zones -->
+			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+			<ez team="0" x="3105" y="6711" radius="400"/>
+			<ez team="1" x="3625" y="6711" radius="400"/>
+		</ezs>
+
+		<blockers>
+		<!-- west -->
+		<blocker mask="Carrier" blocklof="true" verts="2038,8399;2038,496;2048,8399;2048,496"/>
+		<!-- east -->
+		<blocker mask="Carrier" blocklof="true" verts="4941,8399;4941,496;4931,8399;4931,496"/>
+	</blockers>
+	</layout>
+</dokmap>
