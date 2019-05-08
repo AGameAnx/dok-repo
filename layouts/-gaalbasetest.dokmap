@@ -8,7 +8,11 @@
 	<layout map="M07" mode="Team" players="2">
 		<bounds top="8400" bottom="495" left="-650" right="7380"/>
 		<blockers carrier="false"/>
-	   
+	   	<!-- west -->
+		<blocker mask="Carrier" blocklof="true" verts="2038,8399;2038,496;2048,8399;2048,496"/>
+		<!-- east -->
+		<blocker mask="Carrier" blocklof="true" verts="4941,8399;4941,496;4931,8399;4931,496"/>
+		</blockers>
 		<spawns>
 			<!-- team 1 -->
 			<spawn team="0" index="0" x="738" y="4467" angle="0" camera="75"/>
@@ -115,12 +119,5 @@
 			<ez team="0" x="3105" y="6711" radius="400"/>
 			<ez team="1" x="3625" y="6711" radius="400"/>
 		</ezs>
-
-		<blockers>
-		<!-- west -->
-		<blocker mask="Carrier" blocklof="true" verts="2038,8399;2038,496;2048,8399;2048,496"/>
-		<!-- east -->
-		<blocker mask="Carrier" blocklof="true" verts="4941,8399;4941,496;4931,8399;4931,496"/>
-	</blockers>
 	</layout>
 </dokmap>
