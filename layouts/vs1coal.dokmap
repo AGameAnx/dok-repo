@@ -1002,57 +1002,11 @@
        </layout>
 
 	<meta name="Khashar Approach [2,6]"
-	      authors="SSSS"
+	      authors="SSSS, EmptySoul01, FrostyTeeth"
 	      description="3v3 with unique roles for each position"/>
 	
-	<layout map="M10" mode="Team" players="2">
-		<spawns>
-			<!-- team 1 -->
-			<spawn team="0" index="0" x="-4690" y="945" angle="90" camera="165"/>
-			
-			<!-- team 2 -->
-			<spawn team="1" index="0" x="2655" y="-4245" angle="0" camera="-75"/>
-		</spawns>
-		
-		<resources>
-			<!-- team 1 -->
-			<resource x="-4790" y="1245" type="cu" amount="7500"/>
-			<resource x="-4690" y="1245" type="ru" amount="3000"/>
-			<resource x="-4590" y="1245" type="cu" amount="7500"/>
-
-			<resource x="-2900" y="80" type="cu" amount="10500"/>
-			<resource x="-3000" y="80" type="ru" amount="4000"/>
-			
-			<resource x="-6225" y="-310" type="cu" amount="10500"/>
-			<resource x="-6325" y="-310" type="ru" amount="4000"/>
-			
-			<!-- team 2 -->
-			<resource x="2955" y="-4145" type="cu" amount="7500"/>
-			<resource x="2955" y="-4245" type="ru" amount="3000"/>
-			<resource x="2955" y="-4345" type="cu" amount="7500"/>
-			
-			<resource x="1475" y="-3050" type="cu" amount="10500"/>
-			<resource x="1475" y="-3150" type="ru" amount="4000"/>
-			
-			<resource x="1800" y="-5490" type="cu" amount="10500"/>
-			<resource x="1800" y="-5590" type="ru" amount="4000"/>
-		</resources>
-		
-		<artifacts>
-			<artifact x="-1950" y="-3300"/>
-			<artifact x="-770" y="-1475"/>
-			<artifact x="-2200" y="-3114"/>
-		</artifacts>
-		
-		<ezs>
-			<!-- extraction zones -->
-			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
-			<ez team="0" x="-4525" y="-7475" radius="1000"/>
-			<ez team="1" x="-4525" y="-7475" radius="1000"/>
-		</ezs>
-	</layout>
 	
-	<layout map="M10" mode="Team" players="3, 4">
+	<layout map="M10" mode="Team" players="2, 3, 4">
 		<spawns>
 			<!-- team 1 -->
 			<spawn team="0" index="0" x="-4690" y="945" angle="90" camera="165"/>
@@ -1236,67 +1190,13 @@
                        <unit team="0" index="0" type="C_PopcapScanner" x="-2600" y="2300" angle="90"/>
               </units>
 	</layout>
-</dokmap>
 
-
-<?xml version="1.0" encoding="UTF-8"?>
-<dokmap version="1.1">
 	<meta name="Khashar Plateau [2,6]"
 	      authors="SSSS"
 	      description="Tug of war along the flat strip of the plateau"/>
-		  
-	<layout map="M11" mode="Team" players="2">
-		<bounds top="7500" left="-7000" bottom="-5500" right="6000"/>
-		
-		<spawns>
-			<!-- team 1 -->
-			<spawn team="0" index="0" x="-4380" y="3920" angle="90" camera="165"/>
-			
-			<!-- team 2 -->
-			<spawn team="1" index="0" x="2900" y="-1500" angle="0" camera="-75"/>
-		</spawns>
-		
-		<resources>
-			<!-- team 1 -->
-			<resource x="-4280" y="4220" type="cu" amount="7500"/>
-			<resource x="-4380" y="4220" type="ru" amount="3000"/>
-			<resource x="-4480" y="4220" type="cu" amount="7500"/>
-			
-			<resource x="-4430" y="2900" type="ru" amount="3000"/>
-			<resource x="-4330" y="2900" type="cu" amount="7500"/>
-			
-			<!-- team 2 -->
-			<resource x="3200" y="-1400" type="cu" amount="7500"/>
-			<resource x="3200" y="-1500" type="ru" amount="3000"/>
-			<resource x="3200" y="-1600" type="cu" amount="7500"/>
-			
-			<resource x="1820" y="-1550" type="ru" amount="4000"/>
-			<resource x="1820" y="-1450" type="cu" amount="10500"/>
-		</resources>
-		
-		<artifacts>
-			<artifact x="-660" y="1560"/>
-			<artifact x="-1300" y="720"/>
-		</artifacts>
-		
-		<ezs>
-			<!-- extraction zones -->
-			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
-			<ez team="0" x="-10" y="510" radius="500"/>
-			<ez team="1" x="-1910" y="1910" radius="500"/>
-		</ezs>
-		
-		<blockers>
-			<!-- bottom zone -->
-			<blocker class="Ground" blocklof="false" verts="-7000,-5500;-7000,4450;6000,-5000;6000,-5500"/>
-			<!-- top zone -->
-			<blocker class="Ground" blocklof="false" verts="-7000,7500;6000,7500;6000,-2770;-7000,6700"/>		
-			<!-- tri -->
-			<blocker class="Ground" blocklof="false" verts="6000,-5000;3800,-3400;6000,-2770"/>
-		</blockers>
-	</layout>
 
-	<layout map="M11" mode="Team" players="3, 4">
+
+	<layout map="M11" mode="Team" players="2, 3, 4">
 		<bounds top="7500" left="-7000" bottom="-5500" right="6000"/>
 		
 		<spawns>
@@ -1478,88 +1378,13 @@
 			<blocker class="Ground" blocklof="false" verts="6000,-5000;3800,-3400;6000,-2770"/>
 		</blockers>
 	</layout>
-</dokmap>
-
-
-<?xml version="1.0" encoding="UTF-8"?>
-<dokmap version="1.1">
-	<meta name="Taiidan Crater [2,6]"
-	      authors="SSSS"
-	      description="Gigantic economy focused BGH map"/>
-		  
-	<layout map="M12" mode="Team" players="2">
-		<bounds left="-9000" top="10000" bottom="-8000" right="9000"/>
-		
-		<spawns>
-			<!-- team 1 -->
-			<spawn team="0" index="0" x="-7370" y="3400" angle="180" camera="105"/>
-			
-			<!-- team 2 -->
-			<spawn team="1" index="0" x="5070" y="-3760" angle="-90" camera="-15"/>
-		</spawns>
-		
-		<resources>
-			<!-- team 1 -->
-			<resource x="-7670" y="3300" type="cu" amount="7500"/>
-			<resource x="-7670" y="3400" type="ru" amount="3000"/>
-			<resource x="-7670" y="3500" type="cu" amount="7500"/>
-			
-			<resource x="-7670" y="4350" type="cu" amount="10500"/>
-			<resource x="-7670" y="4450" type="ru" amount="4000"/>
-			
-			<resource x="-7670" y="2350" type="cu" amount="10500"/>
-			<resource x="-7670" y="2450" type="ru" amount="4000"/>
-			
-			<!-- team 2 -->
-			<resource x="4970" y="-4060" type="cu" amount="7500"/>
-			<resource x="5070" y="-4060" type="ru" amount="3000"/>
-			<resource x="5170" y="-4060" type="cu" amount="7500"/>
-			
-			<resource x="4020" y="-4060" type="cu" amount="10500"/>
-			<resource x="4120" y="-4060" type="ru" amount="4000"/>
-
-			<resource x="6020" y="-4060" type="cu" amount="10500"/>
-			<resource x="6120" y="-4060" type="ru" amount="4000"/>
-		</resources>
-		
-		<wrecks>
-			<!-- top -->
-			<wreck x="3600" y="8000" angle="36">
-				<resource x="3500" y="7900" type="ru" amount="3000" collectors="1"/>
-				<resource x="3600" y="7860" type="ru" amount="3000" collectors="1"/>
-				<resource x="3460" y="8000" type="cu" amount="7500" collectors="1"/>
-				<resource x="3700" y="7900" type="cu" amount="7500" collectors="1"/>
-			</wreck>
-			
-			<!-- mid -->
-			<wreck x="-2430" y="-3030" angle="36">
-				<resource x="-2430" y="-2900" type="ru" amount="3000" collectors="1"/>
-				<resource x="-2560" y="-3030" type="ru" amount="3000" collectors="1"/>
-				<resource x="-2430" y="-3160" type="ru" amount="3000" collectors="1"/>
-				<resource x="-2300" y="-3030" type="ru" amount="3000" collectors="1"/>
-				<resource x="-2330" y="-3130" type="cu" amount="7500" collectors="1"/>
-				<resource x="-2530" y="-3130" type="cu" amount="7500" collectors="1"/>
-				<resource x="-2330" y="-2930" type="cu" amount="7500" collectors="1"/>
-				<resource x="-2530" y="-2930" type="cu" amount="7500" collectors="1"/>
-			</wreck>
-		</wrecks>
-		
-		<artifacts>
-			<artifact x="-1500" y="-3150"/>
-			<artifact x="-2970" y="-3900"/>
-			<artifact x="-2900" y="-2200"/>
-			<artifact x="-880" y="-400"/>
-		</artifacts>
-		
-		<ezs>
-			<!-- extraction zones -->
-			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
-			<ez team="0" x="920" y="5400" radius="1000"/>
-			<ez team="1" x="2630" y="4360" radius="1000"/>
-		</ezs>
-	</layout>
 	
-	<layout map="M12" mode="Team" players="3, 4">
+	<meta name="Taiidan Crater [2,6]"
+	      authors="SSSS, EmptySoul01, FrostyTeeth"
+	      description="Gigantic economy focused BGH map"/>
+	
+	
+	<layout map="M12" mode="Team" players="2, 3, 4">
 		<bounds left="-9000" top="10000" bottom="-8000" right="9000"/>
 		
 		<spawns>
@@ -1799,92 +1624,12 @@
               
               </units>
 </layout>
-</dokmap>
 
-
-<?xml version="1.0" encoding="UTF-8"?>
-<dokmap version="1.1">
 	<meta name="Primary Anomaly [2,6]"
-	      authors="SSSS, FrostyTeeth"
+	      authors="SSSS, FrostyTeeth, EmptySoul01"
 	      description="Alternate version of Khar-Toba with closer spawns"/>
-	
-	<layout map="M13" mode="Team" players="2">
-		<bounds top="5000" left="-6750" bottom="-8000" right="7250"/>
-		
-		<spawns>
-			<!-- team 1 -->
-			<spawn team="0" index="0" x="4750" y="-2500" angle="-90" camera="-15"/>
-			
-			<!-- team 2 -->
-			<spawn team="1" index="0" x="-4250" y="-2500" angle="90" camera="15"/>
-		</spawns>
-		
-		<resources>
-			<!-- team 1 -->
-			<resource x="4650" y="-2800" type="cu" amount="7500"/>
-			<resource x="4750" y="-2800" type="ru" amount="3000"/>
-			<resource x="4850" y="-2800" type="cu" amount="7500"/>
-			
-			<!-- team 2 -->
-			<resource x="-4150" y="-2800" type="cu" amount="7500"/>
-			<resource x="-4250" y="-2800" type="ru" amount="3000"/>
-			<resource x="-4350" y="-2800" type="cu" amount="7500"/>
-		</resources>
-		
-		<wrecks>
-			<!-- team 1 -->
-			<wreck x="3750" y="0" angle="270">
-				<resource x="3700" y="-140" type="cu" amount="10500"/>
-				<resource x="3800" y="-140" type="ru" amount="4000"/>
-			</wreck>
 
-			<wreck x="2830" y="-4030" angle="135">
-				<resource x="2965" y="-3965" type="ru" amount="4000"/>
-				<resource x="2895" y="-3895" type="cu" amount="10500"/>
-			</wreck>
-		
-			<!-- team 2 -->
-			<wreck x="-3250" y="0" angle="90">
-				<resource x="-3200" y="-140" type="cu" amount="10500"/>
-				<resource x="-3300" y="-140" type="ru" amount="4000"/>
-			</wreck>
-			
-			<wreck x="-2339" y="-4030" angle="-135">
-				<resource x="-2465" y="-3965" type="ru" amount="4000"/>
-				<resource x="-2395" y="-3895" type="cu" amount="10500"/>
-			</wreck>
-		
-			<!-- mid -->
-			<wreck x="250" y="4000" angle="0">
-				<resource x="200" y="3860" type="cu" amount="10500"/>
-				<resource x="300" y="3860" type="ru" amount="4000"/>
-			</wreck>
-		</wrecks>
-		
-		<artifacts>
-			<artifact x="250" y="-20"/>
-			<artifact x="250" y="2500"/>
-			<artifact x="250" y="-2500"/>
-		</artifacts>
-		
-		<ezs>
-			<!-- extraction zones -->
-			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
-			<ez team="0" x="1000" y="-6000" radius="750"/>
-			<ez team="1" x="-500" y="-6000" radius="750"/>
-		</ezs>
-		
-		<blockers existing="false">
-			<!-- top wreck -->
-			<blocker class="Ground" blocklof="true" verts="-300,140;-300,2150;810,2140;810,140"/>
-			<!-- bottom wreck -->
-			<blocker class="Ground" blocklof="true" verts="-300,-140;-300,-1630;810,-810;810,-140"/>
-			<!-- block carrier -->
-			<blocker class="Carrier" blocklof="true" verts="-300,-140;-300,-140;810,140;810,-140"/>
-		</blockers>
-	</layout>
-
-	<layout map="M13" mode="Team" players="3, 4">
+	<layout map="M13" mode="Team" players="2, 3, 4">
 		<bounds top="8000" left="-7750" bottom="-8000" right="8250"/>
 		
 		<spawns>
