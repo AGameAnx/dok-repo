@@ -58,7 +58,7 @@
 		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 11700
+				"MaxHealth": 12300
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -2373,6 +2373,11 @@
 				"Resource2Cost": 40
 			}
 		},
+		"Research_Buff_K_ProductionCruiserResourcer": {
+			"ResearchItemAttributes": {
+				"Resource2Cost": 40
+			}
+		},
 		
 		"C_HAC_MP": {
 			"UnitAttributes": {
@@ -2475,6 +2480,87 @@
 		"Research_Buff_G_SandSkimmers_Damage01": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
 		"Research_Buff_G_SandSkimmers_Damage02": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
 		
+		"Research_Buff_C_Escort_VehicleArmor01": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_C_Escort_VehicleArmor02": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_S_Escort_VehicleArmor01": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_S_Escort_VehicleArmor02": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_G_SandSkimmer_VehicleArmor01": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_G_SandSkimmer_VehicleArmor02": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		
 		"C_Railgun_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 220,
@@ -2565,10 +2651,21 @@
 			"ResearchItemAttributes": {
 				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 2 on Armored Assault, Railgun and Missile Battery",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 2 } } },
-					"1": { "BuffSet": { "0": { "Value": 2 } } },
-					"2": { "BuffSet": { "0": { "Value": 2 } } },
-					"3": { "BuffSet": { "0": { "Value": 2 } } }
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
+				}
+			}
+		},
+		"Research_Buff_C_TrackedUnits_Armor02": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
 				}
 			}
 		},
@@ -2635,16 +2732,58 @@
 		},
 		"Research_Buff_G_RailGunUnits_Armor1": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 2 on Assault Railgun and Heavy Railgun",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 on Assault Railgun and Heavy Railgun.",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 2 } } },
-					"1": { "BuffSet": { "0": { "Value": 2 } } },
-					"2": { "BuffSet": { "0": { "Value": 2 } } },
-					"3": { "BuffSet": { "0": { "Value": 2 } } }
+					"0": { "BuffSet": { "0": { "Value": 1 } } }, // G_StarHull_Upgrade01_MP
+					"1": { "BuffSet": { "0": { "Value": 1 } } }, // G_StarHullTank_MP
+					"2": { "BuffSet": { "0": { "Value": 1 } } }, // K_AssaultRailgun
+					"3": { "BuffSet": { "0": { "Value": 1 } } } // K_HeavyRailgun
 				}
 			}
 		},
-		"Research_Buff_G_RailGunUnits_Armor3": { "ResearchItemAttributes": { "Resource2Cost": 400 } },
+		"Research_Buff_G_RailGunUnits_Armor2": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun, armor by 1 and hull integrity by 50 on Assault Railgun.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { // G_StarHull_Upgrade01_MP
+						"0": { "Value": 1 },
+						"1": { "Value": 50 }
+					} },
+					"1": { "BuffSet": { // G_StarHullTank_MP
+						"0": { "Value": 1 }
+					} },
+					"2": { "BuffSet": { // K_AssaultRailgun
+						"0": { "Value": 1 },
+						"1": { "Value": 50 }
+					} },
+					"3": { "BuffSet": { // K_HeavyRailgun
+						"0": { "Value": 1 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_G_RailGunUnits_Armor3": {
+			"ResearchItemAttributes": {
+				"Resource2Cost": 400,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 200 on Heavy Railgun, armor by 1 and hull integrity by 100 on Assault Railgun.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { // G_StarHull_Upgrade01_MP
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"1": { "BuffSet": { // G_StarHullTank_MP
+						"0": { "Value": 1 }
+					} },
+					"2": { "BuffSet": { // K_AssaultRailgun
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"3": { "BuffSet": { // K_HeavyRailgun
+						"0": { "Value": 1 }
+					} }
+				}
+			}
+		},
 		
 		"G_Catamaran_MP": {
 			"UnitAttributes": {
@@ -2688,25 +2827,33 @@
 		"Research_Buff_G_ShipUnits_Armor1": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 150,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all ARMORED class units.\n\n[84a1e8]Increases armor by 2 on Assault Ship and Missile Ship",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 on Assault Ship and Missile Ship",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 2 } } },
-					"1": { "BuffSet": { "0": { "Value": 2 } } },
-					"2": { "BuffSet": { "0": { "Value": 2 } } },
-					"3": { "BuffSet": { "0": { "Value": 2 } } }
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
 				}
 			}
 		},
 		"Research_Buff_G_ShipUnits_Armor2": {
 			"ResearchItemAttributes": {
-				"Resource2Cost": 150
+				"Resource2Cost": 150,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Ship and Missile Ship",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
+				}
 			}
 		},
 		"Research_Buff_G_ShipUnits_Armor3": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 250,
 				"Resource2Cost": 200,
-				"ResearchTime": 25
+				"ResearchTime": 25,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 200 on Assault Ship and Missile Ship"
 			}
 		},
 		
@@ -2871,10 +3018,10 @@
 			"UnitAttributes": {
 				"Resource1Cost": 220,
 				"Resource2Cost": 50,
-				"MaxHealth": 620,
+				"MaxHealth": 660,
 				"ExperienceValue": 350,
 				"ProductionTime": 20,
-				"Armour": 5
+				"Armour": 6
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -2895,10 +3042,10 @@
 			"UnitAttributes": {
 				"Resource1Cost": 220,
 				"Resource2Cost": 50,
-				"MaxHealth": 620,
+				"MaxHealth": 660,
 				"ExperienceValue": 350,
 				"ProductionTime": 20,
-				"Armour": 5
+				"Armour": 6
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -2965,7 +3112,8 @@
 		"Tier_3_C_Interceptor_Bomber": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 450,
-				"Resource2Cost": 280
+				"Resource2Cost": 280,
+				"ResearchTime": 80
 			}
 		},
 		
