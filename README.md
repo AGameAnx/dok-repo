@@ -41,6 +41,14 @@ All commands must not wrap onto the following line.
 | Prime Anomaly | [6,6] |  SSSS | [The v1.0 default](layouts/anomaly-claw.jpg)| **/l anomaly-claw** 
 | Prime Anomaly | [2,6] | HottestManEver | [1v1 2v2 3v3 for newbies](layouts/simple.jpg)| **/l simple** 
 
+### Faction-Specific Layout
+
+| Maps | Players | Authors | Description| Command 
+| ---- | :-----: | ------- | -----------| ------- 
+| All New Maps |3,4 |EmptySoul01, FrostyTeeth |1(T1) player with faces 2 or 3 players with equal # of coalition carriers| vs1coal
+| All New Maps |3,4 |EmptySoul01, FrostyTeeth |1(T1) player with faces 2 or 3 players with equal # of soban carriers| vs1soban
+| All New Maps |3,4 |EmptySoul01, FrostyTeeth |1(T1) player with faces 2 or 3 players with equal # of gaalsien carriers| vs1gaal
+| All New Maps |3,4 |EmptySoul01, FrostyTeeth |1(T1) player with faces 2 or 3 players with equal # of khaaneph carriers| vs1khaan
 
 
 ### Free-For-All Game, sorted by Map
