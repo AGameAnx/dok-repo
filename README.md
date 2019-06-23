@@ -50,7 +50,7 @@ All commands must not wrap onto the following line.
 | All New Maps |3,4 |EmptySoul01, FrostyTeeth |1(T1) player with faces 2 or 3 players with equal # of gaalsien carriers| **/lvs 1gaal**
 | All New Maps |3,4 |EmptySoul01, FrostyTeeth |1(T1) player with faces 2 or 3 players with equal # of khaaneph carriers| **/l vs1khaan**
 |    |  |   | |  
-| Plateau, |2 |FrostyTeeth |1v1 each player has 3 carriers| **/l tripletake_coalvscoal**
+| Plateaa |2 |FrostyTeeth |1v1 each player has 3 carriers.Team1 Coalition, Team 2 Coalition| **/l tripletake_coalvscoal**
 
 
 ### Free-For-All Game, sorted by Map
