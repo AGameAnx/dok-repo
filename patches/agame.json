@@ -433,7 +433,7 @@
 					"BurstPeriodMaxTimeMS": 250,
 					"BurstPeriodMinTimeMS": 250,
 					"NumberOfBursts": 2,
-					"WindUpTimeMS": 1600,
+					"WindUpTimeMS": 800,
 					"WindDownTimeMS": 500,
 					
 					"ReloadTimeMS": 15000,
@@ -2076,7 +2076,7 @@
 						"RotationSpeed": 200
 					},
 					"Modifiers": {
-						"1": { "Remove": true },
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
 						"2": { "Remove": true },
 						"3": { "Remove": true },
 						"4": { "Remove": true }
@@ -2123,7 +2123,7 @@
 						"RotationSpeed": 200
 					},
 					"Modifiers": {
-						"1": { "Remove": true },
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
 						"2": { "Remove": true },
 						"3": { "Remove": true },
 						"4": { "Remove": true }
@@ -2161,7 +2161,7 @@
 						"RotationSpeed": 200
 					},
 					"Modifiers": {
-						"1": { "Remove": true },
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
 						"2": { "Remove": true },
 						"3": { "Remove": true },
 						"4": { "Remove": true }
@@ -2211,7 +2211,7 @@
 						"RotationSpeed": 200
 					},
 					"Modifiers": {
-						"1": { "Remove": true },
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
 						"2": { "Remove": true },
 						"3": { "Remove": true },
 						"4": { "Remove": true }
@@ -2295,7 +2295,7 @@
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 9,
+					"RateOfFire": 10,
 					"RangeAttributesShort": {
 						"Accuracy": 70
 					},
@@ -2304,10 +2304,10 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 45,
-						"Distance": 1135
+						"Distance": 1180
 					},
 					"Modifiers": {
-						"1": { "Remove": true },
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
 						"2": { "Remove": true },
 						"3": { "Remove": true },
 						"4": { "Remove": true }
@@ -2323,7 +2323,7 @@
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 9,
+					"RateOfFire": 10,
 					"RangeAttributesShort": {
 						"Accuracy": 70
 					},
@@ -2332,10 +2332,10 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 45,
-						"Distance": 1135
+						"Distance": 1180
 					},
 					"Modifiers": {
-						"1": { "Remove": true },
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
 						"2": { "Remove": true },
 						"3": { "Remove": true },
 						"4": { "Remove": true }
@@ -2401,6 +2401,9 @@
 					"Turret": {
 						"RotationSpeed": 250
 					},
+					"Modifiers": {
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 }
+					},
 					"OutputDPS": true
 				}
 			}
@@ -2420,6 +2423,9 @@
 					"BurstPeriodMaxTimeMS": 1050,
 					"Turret": {
 						"RotationSpeed": 250
+					},
+					"Modifiers": {
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 }
 					}
 				}
 			}
@@ -2455,8 +2461,9 @@
 		"Research_Buff_C_Escort_Damage02": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
 		"Research_Buff_S_Escort_Damage01": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
 		"Research_Buff_S_Escort_Damage02": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
+		"Research_Buff_G_SandSkimmers_Speed": { "ResearchItemAttributes": { "ResearchTime": 40 } },
 		"Research_Buff_G_SandSkimmers_Damage01": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
-		"Research_Buff_G_SandSkimmers_Damage02": { "ResearchItemAttributes": { "Resource1Cost": 400 } },
+		"Research_Buff_G_SandSkimmers_Damage02": { "ResearchItemAttributes": { "Resource1Cost": 400, "ResearchTime": 45 } },
 		
 		"Research_Buff_C_Escort_VehicleArmor01": {
 			"ResearchItemAttributes": {
@@ -2763,10 +2770,24 @@
 			}
 		},
 		
+		"Research_Buff_G_RailGunScope": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"ResearchTime": 45
+			}
+		},
+		"Research_Buff_G_RailGunStun": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 100,
+				"ResearchTime": 30
+			}
+		},
+		
 		"G_Catamaran_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 260,
-				"Resource2Cost": 40,
+				"Resource2Cost": 35,
 				"Armour": 8,
 				"MaxHealth": 960
 			},
@@ -2783,9 +2804,9 @@
 		"K_AssaultShip_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 260,
-				"Resource2Cost": 40,
-				"Armour": 7,
-				"MaxHealth": 940
+				"Resource2Cost": 35,
+				"Armour": 8,
+				"MaxHealth": 960
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
@@ -3049,7 +3070,8 @@
 		
 		"Research_Buff_G_RailGun_Ability": {
 			"ResearchItemAttributes": {
-				"ResearchTime": 45
+				"Resource2Cost": 70,
+				"ResearchTime": 30
 			}
 		},
 		
@@ -3131,8 +3153,9 @@
 		},
 		"Research_Buff_G_Interceptor_Speed": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 250,
-				"Resource2Cost": 140,
+				"Resource1Cost": 200,
+				"Resource2Cost": 120,
+				"ResearchTime": 40,
 				"LocalizedLongDescriptionStringID": "Interceptor employs afterburner jets, greatly increasing maximum speed.\n\n[84a1e8]Maximum speed increased by 40%",
 				"UnitTypeBuffs": {
 					"0": {
@@ -3430,7 +3453,8 @@
 		"Research_Buff_G_HonorCruiser_Defenses": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"Resource2Cost": 300
+				"Resource2Cost": 200,
+				"ResearchTime": 45
 			}
 		},
 		
