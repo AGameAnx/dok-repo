@@ -30,7 +30,7 @@
 		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 12300
+				"MaxHealth": 12000
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -64,7 +64,7 @@
 			"WeaponAttributes": {
 				"C_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 18,
-					"RateOfFire": 8,
+					"RateOfFire": 7,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -119,7 +119,7 @@
 				},
 				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
 					"BaseDamagePerRound": 45,
-					"RateOfFire": 8,
+					"RateOfFire": 7,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -181,7 +181,7 @@
 							"TargetClass": "Carrier, Large, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 160
+							"Amount": 180
 						}
 					},
 					"RangeAttributesLong": {
@@ -1145,7 +1145,7 @@
 			"WeaponAttributes": {
 				"G_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 18,
-					"RateOfFire": 10,
+					"RateOfFire": 9,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -1194,7 +1194,7 @@
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
 					"BaseDamagePerRound": 45,
-					"RateOfFire": 10,
+					"RateOfFire": 9,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -1678,11 +1678,8 @@
 				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 460,
 					"Modifiers": {
-						"1": {
-							"Remove": true
-						}
+						"1": { "Remove": true }
 					}
 				}
 			},
@@ -1975,7 +1972,7 @@
 		"C_Probe_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 170,
-				"SensorRadius": 1100
+				"SensorRadius": 1130
 			}
 		},
 		"K_ExplodingSkimmer_MP": {
@@ -2227,7 +2224,7 @@
 		
 		"C_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 540,
+				"Resource1Cost": 580,
 				"Resource2Cost": 40,
 				"Armour": 3,
 				"PopCapCost": 5
@@ -2255,7 +2252,7 @@
 		},
 		"C_Sob_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 540,
+				"Resource1Cost": 580,
 				"Resource2Cost": 40,
 				"Armour": 3,
 				"PopCapCost": 5
@@ -2296,7 +2293,7 @@
 		
 		"G_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 600,
+				"Resource1Cost": 640,
 				"Resource2Cost": 60
 			},
 			"WeaponAttributes": {
@@ -2324,7 +2321,7 @@
 		},
 		"K_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 600,
+				"Resource1Cost": 640,
 				"Resource2Cost": 60
 			},
 			"WeaponAttributes": {
@@ -2397,6 +2394,7 @@
 		"C_Escort_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 570,
+				"Armour": 1,
 				"ProductionTime": 9
 			},
 			"WeaponAttributes": {
@@ -2420,6 +2418,7 @@
 		"C_Sob_Escort_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 570,
+				"Armour": 1,
 				"ProductionTime": 9
 			},
 			"WeaponAttributes": {
@@ -2442,7 +2441,8 @@
 		
 		"G_SandSkimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 620
+				"MaxHealth": 620,
+				"Armour": 1
 			},
 			"WeaponAttributes": {
 				"G_SandSkimmer_Weapon_G2G_MP": {
@@ -2455,7 +2455,8 @@
 		},
 		"K_Sandskimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 620
+				"MaxHealth": 620,
+				"Armour": 1
 			},
 			"WeaponAttributes": {
 				"G_SandSkimmer_Weapon_G2G_MP": {
@@ -2575,7 +2576,7 @@
 			"WeaponAttributes": {
 				"C_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 195,
-					"ReloadTimeMS": 2750,
+					"ReloadTimeMS": 2450,
 					"RangeAttributesMedium": {
 						"Accuracy": 5.0
 					},
@@ -2612,8 +2613,8 @@
 			"WeaponAttributes": {
 				"C_Sob_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 135,
-					"CooldownTimeMS": 1650,
-					"ReloadTimeMS": 2450,
+					"CooldownTimeMS": 1500,
+					"ReloadTimeMS": 2000,
 					"RangeAttributesMedium": {
 						"Accuracy": 5.0
 					},
@@ -2881,8 +2882,8 @@
 				},
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
 					"BaseDamagePerRound": 660,
-					"AreaOfEffectRadius": 220,
-					"DamagePacketsPerShot": 30,
+					"AreaOfEffectRadius": 205,
+					"DamagePacketsPerShot": 40,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"ExcludeFromHeightAdvantage": true
 				}
@@ -3391,7 +3392,7 @@
 		"G_HonorGuard_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 250,
+				"Resource2Cost": 270,
 				"MaxHealth": 2700,
 				"ProductionTime": 55
 			},
@@ -3425,7 +3426,7 @@
 		"K_HonorGuard_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 250,
+				"Resource2Cost": 270,
 				"MaxHealth": 2700,
 				"ProductionTime": 55
 			},
@@ -3481,9 +3482,10 @@
 			},
 			"WeaponAttributes": {
 				"C_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 270,
+					"BaseDamagePerRound": 180,
 					"AreaOfEffectFalloffType": "Quadratic",
-					"AreaOfEffectRadius": 55
+					"AreaOfEffectRadius": 55,
+					"ReloadTimeMS": 4250
 				}
 			}
 		},
@@ -3516,12 +3518,17 @@
 		
 		"C_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 350,
+				"Resource1Cost": 450,
 				"Resource2Cost": 200,
 				"MaxHealth": 2100,
 				"Armour": 6,
 				"ProductionTime": 60,
 				"PopCapCost": 4
+			},
+			"AbilityAttributes": {
+				"Ability_C_ArtilleryBarrage_Precise": {
+					"Resource1Cost": 0
+				}
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3595,8 +3602,8 @@
 		
 		"G_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 500,
-				"Resource2Cost": 180,
+				"Resource1Cost": 400,
+				"Resource2Cost": 160,
 				"MaxHealth": 2100,
 				"Armour": 5,
 				"ProductionTime": 50,
@@ -3649,7 +3656,7 @@
 		"K_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 3050,
-				"Armour": 12
+				"Armour": 13
 			},
 			"AbilityAttributes": {
 				"Ability_K_ArtilleryBarrage_01_MP": {
