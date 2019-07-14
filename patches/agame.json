@@ -1114,7 +1114,8 @@
 		},
 		"G_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 11000
+				"MaxHealth": 11000,
+				"Armour": 35
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -2507,6 +2508,10 @@
 					"0": { "BuffSet": {
 						"0": { "Value": 1 },
 						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
 					} }
 				}
 			}
@@ -2517,6 +2522,10 @@
 				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 40.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+					} },
+					"1": { "BuffSet": {
 						"0": { "Value": 1 },
 						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
 					} }
@@ -2869,6 +2878,7 @@
 		"C_HAC_Upgrade01_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 300,
+				"Resource2Cost": 90,
 				"Armour": 3
 			},
 			"UnitMovementAttributes": {
@@ -2893,6 +2903,7 @@
 		"G_Catamaran_Upgrade01_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 350,
+				"Resource2Cost": 90,
 				"ProductionTime": 24,
 				"Armour": 3
 			},
@@ -2953,6 +2964,7 @@
 		"K_MissileShip_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 350,
+				"Resource2Cost": 90,
 				"ProductionTime": 24,
 				"Armour": 3
 			},
@@ -3041,6 +3053,7 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 45,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
 					"ReloadTimeMS": 1000
@@ -3065,6 +3078,7 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 45,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
 					"ReloadTimeMS": 1000
@@ -3318,14 +3332,20 @@
 		
 		"G_BattleCruiser_MP": {
 			"UnitAttributes": {
-				"Resource2Cost": 230,
-				"Armour": 13,
+				"Resource1Cost": 400,
+				"Resource2Cost": 220,
+				"MaxHealth": 2800,
+				"Armour": 12,
 				"PopCapCost": 4
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 74,
-					"AreaOfEffectRadius": 70
+					"BaseDamagePerRound": 50,
+					"NumberOfBursts": 3,
+					"CooldownTimeMS": 0,
+					"WindUpTimeMS": 500,
+					"ReloadTimeMS": 1500,
+					"AreaOfEffectRadius": 75
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
 					"ExcludeFromHeightAdvantage": true
@@ -3345,14 +3365,20 @@
 		},
 		"C_Sob_AssaultCruiser_MP": {
 			"UnitAttributes": {
-				"Resource2Cost": 230,
-				"Armour": 13,
+				"Resource1Cost": 400,
+				"Resource2Cost": 220,
+				"MaxHealth": 2800,
+				"Armour": 12,
 				"PopCapCost": 4
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 74,
-					"AreaOfEffectRadius": 70
+					"BaseDamagePerRound": 50,
+					"NumberOfBursts": 3,
+					"CooldownTimeMS": 0,
+					"WindUpTimeMS": 500,
+					"ReloadTimeMS": 1500,
+					"AreaOfEffectRadius": 75
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
 					"ExcludeFromHeightAdvantage": true
@@ -3372,20 +3398,20 @@
 		},
 		"Tier_3_C_AssaultCruiser": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 550,
+				"Resource1Cost": 500,
 				"Resource2Cost": 300
 			}
 		},
 		"Tier_3_S_AssaultCruiser": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 550,
+				"Resource1Cost": 500,
 				"Resource2Cost": 300
 			}
 		},
 		"Research_Buff_G_BattleCruiser_AntiAir": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"Resource2Cost": 250
+				"Resource2Cost": 150
 			}
 		},
 		
@@ -3406,9 +3432,9 @@
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 630,
+					"BaseDamagePerRound": 550,
 					"ReloadTimeMS": 4500,
-					"AreaOfEffectFalloffType": "Linear",
+					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 220,
 					"WindDownTimeMS": 250,
 					"TargetPrioritizationAttributes": {
@@ -3472,12 +3498,17 @@
 		
 		"C_Battlecruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 700,
-				"MaxHealth": 6200
+				"Resource1Cost": 550,
+				"Resource1Cost": 250,
+				"MaxHealth": 6200,
+				"Armour": 16
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeedTurnRadius": 130
+					"MaxSpeed": 54,
+					"MaxSpeedTurnRadius": 130,
+					"AccelerationTime": 1.2,
+					"BrakingTime": 0.9
 				}
 			},
 			"WeaponAttributes": {
@@ -3485,18 +3516,26 @@
 					"BaseDamagePerRound": 180,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 55,
-					"ReloadTimeMS": 4250
+					"ReloadTimeMS": 4250,
+					"RangeAttributesLong": {
+						"Distance": 1350
+					}
 				}
 			}
 		},
 		"C_Sob_Battlecruiser_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource1Cost": 250,
 				"MaxHealth": 5800,
-				"Resource1Cost": 650
+				"Armour": 16
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeedTurnRadius": 130
+					"MaxSpeed": 54,
+					"MaxSpeedTurnRadius": 130,
+					"AccelerationTime": 1.2,
+					"BrakingTime": 0.9
 				}
 			},
 			"DetectableAttributes": {
@@ -3505,14 +3544,16 @@
 		},
 		"Tier_3_C_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"Resource2Cost": 400,
-				"ResearchTime": 100
+				"Resource1Cost": 550,
+				"Resource2Cost": 350,
+				"ResearchTime": 110
 			}
 		},
 		"Tier_3_S_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"Resource2Cost": 400,
-				"ResearchTime": 100
+				"Resource1Cost": 550,
+				"Resource2Cost": 350,
+				"ResearchTime": 110
 			}
 		},
 		
