@@ -2479,11 +2479,11 @@
 		"Research_Buff_C_Escort_VehicleArmor01": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 40.",
+				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
 					} }
 				}
 			}
@@ -2491,11 +2491,11 @@
 		"Research_Buff_C_Escort_VehicleArmor02": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 40.",
+				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
 					} }
 				}
 			}
@@ -2503,15 +2503,15 @@
 		"Research_Buff_S_Escort_VehicleArmor01": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 40.",
+				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
 					} },
 					"1": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
 					} }
 				}
 			}
@@ -2519,15 +2519,15 @@
 		"Research_Buff_S_Escort_VehicleArmor02": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 40.",
+				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
 					} },
 					"1": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
 					} }
 				}
 			}
@@ -2535,15 +2535,15 @@
 		"Research_Buff_G_SandSkimmer_VehicleArmor01": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 40.",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
 					} },
 					"1": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
 					} }
 				}
 			}
@@ -2551,15 +2551,15 @@
 		"Research_Buff_G_SandSkimmer_VehicleArmor02": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 40.",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
 					} },
 					"1": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 40 }
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
 					} }
 				}
 			}
@@ -3341,11 +3341,13 @@
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 50,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 800,
 					"NumberOfBursts": 3,
 					"CooldownTimeMS": 0,
 					"WindUpTimeMS": 500,
-					"ReloadTimeMS": 1500,
-					"AreaOfEffectRadius": 75
+					"ReloadTimeMS": 1700,
+					"OutputDPS": true
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
 					"ExcludeFromHeightAdvantage": true
@@ -3374,11 +3376,12 @@
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 50,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 800,
 					"NumberOfBursts": 3,
 					"CooldownTimeMS": 0,
 					"WindUpTimeMS": 500,
-					"ReloadTimeMS": 1500,
-					"AreaOfEffectRadius": 75
+					"ReloadTimeMS": 1700
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
 					"ExcludeFromHeightAdvantage": true
@@ -3466,7 +3469,7 @@
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 630,
+					"BaseDamagePerRound": 550,
 					"ReloadTimeMS": 4500,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 220,
@@ -3573,7 +3576,10 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeedTurnRadius": 90
+					"MaxSpeedTurnRadius": 90,
+					"MaxSpeed": 56,
+					"AccelerationTime": 1.2,
+					"BrakingTime": 0.9
 				}
 			},
 			"WeaponAttributes": {
