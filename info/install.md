@@ -1,4 +1,4 @@
-**Mac OS Install**
+**Mac OS Install**  
 It's a copy/paste procedure. Paste the unzipped folder at the following location:  
 
 User/Library/Application Support/Steam/steamapps/common/Deserts of Kharak/  
