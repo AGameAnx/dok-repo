@@ -196,7 +196,7 @@
 						"PowerLevels": {
 							
 							"0": {
-								"LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 8"
+								"LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 7"
 							},
 							
 							"1": {
@@ -1353,7 +1353,7 @@
 						"PowerLevels": {
 							
 							"0": {
-								"LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 10"
+								"LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 9"
 							},
 							
 							"1": {
@@ -2375,9 +2375,10 @@
 			},
 			"WeaponAttributes": {
 				"C_HAC_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 18,
+					"BaseDamagePerRound": 17,
 					"BurstPeriodMaxTimeMS": 550,
-					"RateOfFire": 13
+					"RateOfFire": 14,
+					"OutputDPS": true
 				}
 			}
 		},
@@ -2585,7 +2586,7 @@
 			"WeaponAttributes": {
 				"C_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 195,
-					"ReloadTimeMS": 2450,
+					"ReloadTimeMS": 2300,
 					"RangeAttributesMedium": {
 						"Accuracy": 5.0
 					},
@@ -2623,7 +2624,7 @@
 				"C_Sob_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 135,
 					"CooldownTimeMS": 1500,
-					"ReloadTimeMS": 2000,
+					"ReloadTimeMS": 1850,
 					"RangeAttributesMedium": {
 						"Accuracy": 5.0
 					},
@@ -3340,13 +3341,13 @@
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 50,
-					"BurstPeriodMinTimeMS": 500,
-					"BurstPeriodMaxTimeMS": 500,
+					"BaseDamagePerRound": 55,
+					"BurstPeriodMinTimeMS": 700,
+					"BurstPeriodMaxTimeMS": 700,
+					"RateOfFire": 3,
 					"NumberOfBursts": 4,
-					"CooldownTimeMS": 0,
-					"WindUpTimeMS": 350,
-					"ReloadTimeMS": 1200,
+					"WindUpTimeMS": 250,
+					"ReloadTimeMS": 3500,
 					"OutputDPS": true
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
@@ -3355,7 +3356,18 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
-					"CooldownTimeSecs": 40
+					"CooldownTimeSecs": 40,
+					"ApplyStatusEffect": {
+						"ArmorBonus_StatusEffect": {
+							"BuffsToApplyToTarget": {
+								"0": {
+									"BuffSet": {
+										"0": { "Value": 25 } // % Armor bonus
+									}
+								}
+							}
+						}
+					}
 				},
 				"Ability_G_BattleCruiser_Missile_MP": {
 					"CooldownTimeSecs": 40
@@ -3375,13 +3387,13 @@
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 50,
-					"BurstPeriodMinTimeMS": 500,
-					"BurstPeriodMaxTimeMS": 500,
+					"BaseDamagePerRound": 55,
+					"BurstPeriodMinTimeMS": 700,
+					"BurstPeriodMaxTimeMS": 700,
+					"RateOfFire": 3,
 					"NumberOfBursts": 4,
-					"CooldownTimeMS": 0,
-					"WindUpTimeMS": 350,
-					"ReloadTimeMS": 1200
+					"WindUpTimeMS": 250,
+					"ReloadTimeMS": 3500
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
 					"ExcludeFromHeightAdvantage": true
@@ -3389,7 +3401,18 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
-					"CooldownTimeSecs": 40
+					"CooldownTimeSecs": 40,
+					"ApplyStatusEffect": {
+						"ArmorBonus_StatusEffect": {
+							"BuffsToApplyToTarget": {
+								"0": {
+									"BuffSet": {
+										"0": { "Value": 25 } // % Armor bonus
+									}
+								}
+							}
+						}
+					}
 				},
 				"Ability_G_BattleCruiser_Missile_MP": {
 					"CooldownTimeSecs": 40
