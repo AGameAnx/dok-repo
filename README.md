@@ -1,7 +1,7 @@
 # Homeworld: Deserts of Kharak - More Maps Repository
 Please add a description for your uploads here and sort 
 If you want to upload a temporary testing layout or patch put a dash before its name and don't add it to the list.
-All commands must not wrap onto the following line.
+All commands must not wrap onto the following line.  
 [Mac install](info/install.md)
 
 ## Layouts 
