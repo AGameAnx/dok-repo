@@ -17,18 +17,19 @@ All commands must not wrap onto the following line.
 | The Shallows |    |      |    |     
 | Firebase Kriil | [5,5] |  FrostyTeeth | 3v2 attack on [fortified position.](layouts/firebase-siege-3v2.png) Team=2 has 2 players | **/l firebase-siege-3v2** 
 | Canyon Outpost | [2,2] |  HottestManEver | [1v1](layouts/canyon1v1.png)| **/l canyon1v1** 
-| Dune Sea |    |      ||     
-| Khar-Toba | [2,2] | HottestManEver | [1v1](layouts/toba1v1.jpg)| **/l toba1v1** 
-| Taiidan Passage |    |      | |     
+| Dune Sea |    |      || 
+| Khar-Toba | [2,2] | AGameAnx | [preview](layouts/kt-alt.png). Allows for spectators. Competitive 1v1 layout | **/l kt-alt** 
+| Khar-Toba | [2,2] | HottestManEver | [1v1](layouts/toba1v1.png)| **/l toba1v1** 
+| Taiidan Passage |    |      | | 
 | Epsilon Base | [2,2] |  SSSS | [The v0.10-0.16 default](layouts/epsilon-inbase.png)| **/l epsilon-inbase** 
 | Salvage Facility | [2,2] |  SSSS | [Spawn with 3 of all MP units to test](layouts/salvage-all-units.png)| **/l salvage-all-units** 
-| Salvage Facility | [5,6] | HottestManEver | [3v3](layouts/salvage3v3)| **/l salvage3v3** 
-| Cape Wrath | [5,6] | HottestManEver | [3v3](layouts/wrath2v2.jpg)| **/l wrath3v3** 
+| Salvage Facility | [5,6] | HottestManEver | [3v3](layouts/salvage3v3.png)| **/l salvage3v3** 
+| Cape Wrath | [5,6] | HottestManEver | 3v3 | **/l wrath3v3** 
 | Cape Wrath | [2,4] |  SSSS | [The v0.16 default](layouts/cape-valley.png)| **/l cape-valley** 
 | Kalash Site, Kalash Wreck  | [4,6] |  HottestManEver | [3v3](layouts/kalash3v3.jpg)| **/l kalash3v3** 
 | Kalash Wreck |    |      ||     
-| Dune Ocean | [2,6] |  HottestManEver | [1v1 2v2 3v3](layouts/ocean3v3.jpg)| **/l ocean** 
-| Dune Ocean | [5,6] |  HottestManEver, FrostyTeeth | [3v3](layouts/ocean3v3.jpg) layout for Dune Ocean. NO BLOCKERS!| **/l ocean3v3** 
+| Dune Ocean | [2,6] |  HottestManEver | 1v1 2v2 3v3 | **/l ocean** 
+| Dune Ocean | [5,6] |  HottestManEver, FrostyTeeth | 3v3 layout for Dune Ocean. NO BLOCKERS!| **/l ocean3v3** 
 | Dune Ocean | [2,2] | HottestManEver, FrostyTeeth | [Gain access to easy resources](layouts/dune1v1.png) by popping the furthest wreck from your base| **/l dune1v1** 
 | Gaalsien Base | [2,2] |  SSSS | [Alternate 1v1](layouts/gt-alt.png) layout for Gaalsien Base]| **/l gt-alt** 
 | Gaalsien Base | [2,2] |  HottestManEver | [1v1](layouts/gbase1v1.jpg)| **/l gbase1v1** 
