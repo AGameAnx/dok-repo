@@ -6,11 +6,11 @@
 	<layout map="MP_10-KharToba" mode="Team" players="2,3,4,5,6">
 		<bounds top="4900" right="2650" bottom="-4900" left="-5750"/>
 		<spawns>
-			<!-- team bot -->
+			<!-- team top -->
 			<spawn team="0" index="0" x="1180" y="3680" angle="225" camera="135"/>
 			<spawn team="0" index="1" x="1180" y="3680" angle="225" camera="135" fleet="false"/>
 			<spawn team="0" index="2" x="1180" y="3680" angle="225" camera="135" fleet="false"/>
-			<!-- team top -->
+			<!-- team bot -->
 			<spawn team="1" index="0" x="1180" y="-3680" angle="315" camera="45"/>
 			<spawn team="1" index="1" x="1180" y="-3680" angle="315" camera="45" fleet="false"/>
 			<spawn team="1" index="2" x="1180" y="-3680" angle="315" camera="45" fleet="false"/>
@@ -23,17 +23,17 @@
 			<unit team="1" index="2" x="0" y="4900" angle="0" type="N_DemoCharge"/>
 		</units>
 		<resources>
-			<!-- bot -->
+			<!-- top -->
 			<resource x="1260" y="3420" type="cu" amount="7500" collectors="2"/>
 			<resource x="1380" y="3550" type="ru" amount="3000" collectors="2"/>
 			<resource x="1500" y="3670" type="cu" amount="7500" collectors="2"/>
-			<!-- top -->
+			<!-- bot -->
 			<resource x="1260" y="-3420" type="cu" amount="7500" collectors="2"/>
 			<resource x="1380" y="-3550" type="ru" amount="3000" collectors="2"/>
 			<resource x="1500" y="-3670" type="cu" amount="7500" collectors="2"/>
 		</resources>
 		<wrecks>
-			<!-- bot -->
+			<!-- top -->
 			<wreck x="100" y="2250" angle="315">
 				<resource x="-160" y="2300" type="cu" amount="10500" collectors="2"/>
 				<resource x="-60" y="2200" type="ru" amount="4000" collectors="2"/>
@@ -42,7 +42,7 @@
 				<resource x="-1750" y="3980" type="ru" amount="4000" collectors="2"/>
 				<resource x="-1750" y="3830" type="cu" amount="10500" collectors="2"/>
 			</wreck>
-			<!-- top -->
+			<!-- bot -->
 			<wreck x="100" y="-2250" angle="45">
 				<resource x="-160" y="-2300" type="cu" amount="10500" collectors="2"/>
 				<resource x="-60" y="-2200" type="ru" amount="4000" collectors="2"/>
@@ -59,8 +59,8 @@
 		</artifacts>
 		<ezs>
 			<!-- extraction zones -->
-			<ez team="1" x="-4550" y="-2000" radius="500"/>
-			<ez team="0" x="-4550" y="2000" radius="500"/>
+			<ez team="0" x="-4550" y="-2000" radius="500"/>
+			<ez team="1" x="-4550" y="2000" radius="500"/>
 		</ezs>
 	</layout>
 </dokmap>
