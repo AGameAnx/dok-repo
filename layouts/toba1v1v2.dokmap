@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<!-- More Maps by SSSS -->
+	<meta name="toba1v1v2" authors="AGameAnx" description="toba1v1v2"/>
+	
+	<layout map="MP_10-KharToba" mode="Team" players="2,3,4,5,6">
+		<bounds top="4900" right="2650" bottom="-4900" left="-5750"/>
+		<spawns>
+			<!-- team bot -->
+			<spawn team="0" index="0" x="1180" y="3680" angle="225" camera="135"/>
+			<spawn team="0" index="1" x="1180" y="3680" angle="225" camera="135" fleet="false"/>
+			<spawn team="0" index="2" x="1180" y="3680" angle="225" camera="135" fleet="false"/>
+			<!-- team top -->
+			<spawn team="1" index="0" x="1180" y="-3680" angle="315" camera="45"/>
+			<spawn team="1" index="1" x="1180" y="-3680" angle="315" camera="45" fleet="false"/>
+			<spawn team="1" index="2" x="1180" y="-3680" angle="315" camera="45" fleet="false"/>
+		</spawns>
+		<units>
+			<!-- spectator units -->
+			<unit team="0" index="1" x="0" y="4900" angle="0" type="N_DemoCharge"/>
+			<unit team="0" index="2" x="0" y="4900" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="1" x="0" y="4900" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="2" x="0" y="4900" angle="0" type="N_DemoCharge"/>
+		</units>
+		<resources>
+			<!-- bot -->
+			<resource x="1260" y="3420" type="cu" amount="7500" collectors="2"/>
+			<resource x="1380" y="3550" type="ru" amount="3000" collectors="2"/>
+			<resource x="1500" y="3670" type="cu" amount="7500" collectors="2"/>
+			<!-- top -->
+			<resource x="1260" y="-3420" type="cu" amount="7500" collectors="2"/>
+			<resource x="1380" y="-3550" type="ru" amount="3000" collectors="2"/>
+			<resource x="1500" y="-3670" type="cu" amount="7500" collectors="2"/>
+		</resources>
+		<wrecks>
+			<!-- bot -->
+			<wreck x="100" y="2250" angle="315">
+				<resource x="-160" y="2300" type="cu" amount="10500" collectors="2"/>
+				<resource x="-60" y="2200" type="ru" amount="4000" collectors="2"/>
+			</wreck>
+			<wreck x="-1600" y="3900" angle="45">
+				<resource x="-1750" y="3980" type="ru" amount="4000" collectors="2"/>
+				<resource x="-1750" y="3830" type="cu" amount="10500" collectors="2"/>
+			</wreck>
+			<!-- top -->
+			<wreck x="100" y="-2250" angle="45">
+				<resource x="-160" y="-2300" type="cu" amount="10500" collectors="2"/>
+				<resource x="-60" y="-2200" type="ru" amount="4000" collectors="2"/>
+			</wreck>
+			<wreck x="-1600" y="-3900" angle="315">
+				<resource x="-1750" y="-3980" type="ru" amount="4000" collectors="2"/>
+				<resource x="-1750" y="-3830" type="cu" amount="10500" collectors="2"/>
+			</wreck>
+		</wrecks>
+		<artifacts>
+			<artifact x="0" y="-70"/>
+			<artifact x="-1950" y="1150"/>
+			<artifact x="-1950" y="-1150"/>
+		</artifacts>
+		<ezs>
+			<!-- extraction zones -->
+			<ez team="1" x="-4550" y="-2000" radius="500"/>
+			<ez team="0" x="-4550" y="2000" radius="500"/>
+		</ezs>
+	</layout>
+</dokmap>
