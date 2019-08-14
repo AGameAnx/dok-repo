@@ -51,12 +51,12 @@ variant meaning the multiplayer variant is the same as the singleplayer variant.
 | C_Sob_SupportCruiser_MP  |
 | C_SupportCruiser         |
 | C_SupportCruiser_MP      |
-| G_ArtilleryCruiser       | Assault cruiser
-| G_ArtilleryCruiser_MP    | Assault cruiser
+| G_ArtilleryCruiser       | Gaalsien Artillery Cruiser
+| G_ArtilleryCruiser_MP    | Gaalsien Artillery Cruiser
 | G_Baserunner             |
 | G_Baserunner_MP          |
-| G_Battlecruiser          |
-| G_Battlecruiser_MP       |
+| G_Battlecruiser          | Assault Cruiser
+| G_Battlecruiser_MP       | Assault Cruiser
 | G_Bomber                 |
 | G_Bomber_MP              |
 | G_Carrier                |
