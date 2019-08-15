@@ -16,7 +16,7 @@ All commands must not wrap onto the following line.
 | The Boneyard |    |      |    |     
 | The Shallows |    |      |    |     
 | Firebase Kriil | [5,5] |  FrostyTeeth | 3v2 attack on [fortified position.](layouts/firebase-siege-3v2.png) Team=2 has 2 players | **/l firebase-siege-3v2** 
-| Canyon Outpost | [2,2] |  AGameAnx | [1v1](layouts/canyon-alt.png)| **/l canyon-alt** 
+| Canyon Outpost | [2,2] |  AGameAnx | [preview](layouts/canyon-alt.png) Allows for spectators. Competitive 1v1 layout | **/l canyon-alt** 
 | Canyon Outpost | [2,2] |  HottestManEver | [1v1](layouts/canyon1v1.png)| **/l canyon1v1** 
 | Dune Sea |    |      || 
 | Khar-Toba | [2,2] | AGameAnx | [preview](layouts/kt-alt.png). Allows for spectators. Competitive 1v1 layout | **/l kt-alt** 
