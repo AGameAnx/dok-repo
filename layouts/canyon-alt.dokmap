@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<!-- More Maps by SSSS -->
+	<meta name="canyon-alt" authors="AGameAnx" description="canyon-alt"/>
+	<layout map="MP_07-Output" mode="Team" players="2,3,4,5,6">
+		<bounds top="4150" right="3780" bottom="-5000" left="-3780"/>
+		<spawns>
+			<!-- left -->
+			<spawn team="0" index="0" x="-2750" y="-1400" angle="180" camera="45"/>
+			<spawn team="0" index="1" x="-2750" y="-1400" angle="180" camera="45" fleet="false"/>
+			<spawn team="0" index="2" x="-2750" y="-1400" angle="180" camera="45" fleet="false"/>
+			<!-- right -->
+			<spawn team="1" index="0" x="2750" y="-1400" angle="0" camera="315"/>
+			<spawn team="1" index="1" x="2750" y="-1400" angle="0" camera="315" fleet="false"/>
+			<spawn team="1" index="2" x="2750" y="-1400" angle="0" camera="315" fleet="false"/>
+		</spawns>
+		<resources>
+			<!-- left -->
+			<resource x="-3000" y="-1350" type="cu" amount="7500" collectors="2"/>
+			<resource x="-3000" y="-1450" type="ru" amount="3000" collectors="2"/>
+			<resource x="-3000" y="-1550" type="cu" amount="7500" collectors="2"/>
+			<!-- right -->
+			<resource x="3000" y="-1350" type="cu" amount="7500" collectors="2"/>
+			<resource x="3000" y="-1450" type="ru" amount="3000" collectors="2"/>
+			<resource x="3000" y="-1550" type="cu" amount="7500" collectors="2"/>
+		</resources>
+		<wrecks>
+			<!-- left -->
+			<wreck x="-3200" y="-3380" angle="315">
+				<resource x="-3350" y="-3320" type="ru" amount="4000" collectors="2"/>
+				<resource x="-3350" y="-3420" type="cu" amount="10500" collectors="2"/>
+			</wreck>
+			<wreck x="-1760" y="-4620" angle="45">
+				<resource x="-1910" y="-4570" type="ru" amount="4000" collectors="2"/>
+				<resource x="-1910" y="-4670" type="cu" amount="10500" collectors="2"/>
+			</wreck>
+			<!-- right -->
+			<wreck x="3200" y="-3380" angle="124">
+				<resource x="3350" y="-3320" type="ru" amount="4000" collectors="2"/>
+				<resource x="3350" y="-3420" type="cu" amount="10500" collectors="2"/>
+			</wreck>
+			<wreck x="1760" y="-4620" angle="45">
+				<resource x="1910" y="-4570" type="ru" amount="4000" collectors="2"/>
+				<resource x="1910" y="-4670" type="cu" amount="10500" collectors="2"/>
+			</wreck>
+		</wrecks>
+		<artifacts>
+			<artifact x="-14" y="10"/>
+			<artifact x="903" y="-1930"/>
+			<artifact x="-1038" y="-1920"/>
+		</artifacts>
+		<ezs>
+			<!-- extraction zones -->
+			<ez team="0" x="2030" y="3625" radius="500"/>
+			<ez team="1" x="-2150" y="3625" radius="500"/>
+		</ezs>
+		<units>
+			<!-- spectator units -->
+			<unit team="0" index="1" x="-3779" y="-4999" angle="0" type="N_DemoCharge"/>
+			<unit team="0" index="2" x="-3779" y="-4999" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="1" x="3779" y="-4999" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="2" x="3779" y="-4999" angle="0" type="N_DemoCharge"/>
+		</units>
+	</layout>
+</dokmap>
