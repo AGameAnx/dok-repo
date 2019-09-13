@@ -18,15 +18,15 @@
 		
 		"Research_Buff_Power_5":   { "ResearchItemAttributes": { "Resource1Cost": 1200, "Resource2Cost": 600 } },
 		"Research_Buff_G_Power_5": { "ResearchItemAttributes": { "Resource1Cost": 1200, "Resource2Cost": 600 } },
-		"Research_S_Buff_Power_5": { "ResearchItemAttributes": { "Resource1Cost": 1000, "Resource2Cost": 450 } },
+		"Research_S_Buff_Power_5": { "ResearchItemAttributes": { "Resource1Cost": 1200, "Resource2Cost": 600 } },
 		
 		"Research_Buff_Power_6":   { "ResearchItemAttributes": { "Resource1Cost": 1300, "Resource2Cost": 700 } },
 		"Research_Buff_G_Power_6": { "ResearchItemAttributes": { "Resource1Cost": 1300, "Resource2Cost": 700 } },
-		"Research_S_Buff_Power_6": { "ResearchItemAttributes": { "Resource1Cost": 1100, "Resource2Cost": 550 } },
+		"Research_S_Buff_Power_6": { "ResearchItemAttributes": { "Resource1Cost": 1300, "Resource2Cost": 700 } },
 		
 		"Research_Buff_Power_7":   { "ResearchItemAttributes": { "Resource1Cost": 1400, "Resource2Cost": 800 } },
 		"Research_Buff_G_Power_7": { "ResearchItemAttributes": { "Resource1Cost": 1400, "Resource2Cost": 800 } },
-		"Research_S_Buff_Power_7": { "ResearchItemAttributes": { "Resource1Cost": 1200, "Resource2Cost": 650 } },
+		"Research_S_Buff_Power_7": { "ResearchItemAttributes": { "Resource1Cost": 1400, "Resource2Cost": 800 } },
 		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
@@ -433,7 +433,7 @@
 					"BurstPeriodMaxTimeMS": 250,
 					"BurstPeriodMinTimeMS": 250,
 					"NumberOfBursts": 2,
-					"WindUpTimeMS": 800,
+					"WindUpTimeMS": 1000,
 					"WindDownTimeMS": 500,
 					
 					"ReloadTimeMS": 15000,
@@ -1681,6 +1681,7 @@
 					}
 				},
 				"K_Carrier_Weapon_DefaultMissile_MP": {
+					"WindUpTimeMS": 500,
 					"RangeAttributesLong": { "Distance": 950 }
 				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
@@ -2296,6 +2297,9 @@
 		},
 		
 		"C_Harvester_MP": {
+			"UnitAttributes": {
+				"Armour": 2
+			},
 			"StorageAttributes": {
 				"C_Harvester_StorageAttributesAsset_MP": {
 					"InventoryLoadout": {
@@ -2536,6 +2540,35 @@
 			}
 		},
 		
+		"Research_Buff_Support_T1_ProductionBoost": {
+			"ResearchItemAttributes": {
+				"Resource2Cost": 50,
+				"ResearchTime": 40,
+				"Dependencies": []
+			}
+		},
+		"Research_Buff_Support_T2_ProductionBoost": {
+			"ResearchItemAttributes": {
+				"Resource2Cost": 50,
+				"ResearchTime": 40,
+				"Dependencies": ["Research_Buff_Support_T1_ProductionBoost"]
+			}
+		},
+		"Research_Buff_S_Support_T1_ProductionBoost": {
+			"ResearchItemAttributes": {
+				"Resource2Cost": 50,
+				"ResearchTime": 40,
+				"Dependencies": []
+			}
+		},
+		"Research_Buff_S_Support_T2_ProductionBoost": {
+			"ResearchItemAttributes": {
+				"Resource2Cost": 50,
+				"ResearchTime": 40,
+				"Dependencies": ["Research_Buff_S_Support_T1_ProductionBoost"]
+			}
+		},
+		
 		"C_SupportCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 580,
@@ -2548,13 +2581,13 @@
 					"RateOfFire": 12
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
+					"BaseDamagePerRound": 175,
 					"WindUpTimeMS": 50,
 					"RateOfFire": 1,
-					"ReloadTimeMS": 4000,
-					"CooldownTimeMS": 550,
+					"ReloadTimeMS": 3000,
 					"AreaOfEffectRadius": 80,
 					"RangeAttributesLong": {
-						"Distance": 1400
+						"Distance": 1350
 					}
 				}
 			},
@@ -2576,13 +2609,13 @@
 					"RateOfFire": 12
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
+					"BaseDamagePerRound": 175,
 					"WindUpTimeMS": 50,
 					"RateOfFire": 1,
-					"ReloadTimeMS": 4000,
-					"CooldownTimeMS": 550,
+					"ReloadTimeMS": 3000,
 					"AreaOfEffectRadius": 80,
 					"RangeAttributesLong": {
-						"Distance": 1400
+						"Distance": 1350
 					}
 				}
 			},
@@ -2710,7 +2743,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 570,
 				"Armour": 1,
-				"ProductionTime": 9
+				"ProductionTime": 11
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
@@ -2734,7 +2767,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 570,
 				"Armour": 1,
-				"ProductionTime": 9
+				"ProductionTime": 11
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
@@ -3149,10 +3182,10 @@
 		
 		"G_Catamaran_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 260,
-				"Resource2Cost": 40,
-				"Armour": 7,
-				"MaxHealth": 960
+				"Resource1Cost": 280,
+				"Resource2Cost": 35,
+				"Armour": 8,
+				"MaxHealth": 920
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
@@ -3161,16 +3194,16 @@
 					"AreaOfEffectFalloffType": "Linear",
 					"RangeAttributesShort":  { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
-					"RangeAttributesLong":   { "Distance": 735 }
+					"RangeAttributesLong":   { "Distance": 740 }
 				}
 			}
 		},
 		"K_AssaultShip_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 260,
-				"Resource2Cost": 40,
-				"Armour": 7,
-				"MaxHealth": 960
+				"Resource1Cost": 280,
+				"Resource2Cost": 35,
+				"Armour": 8,
+				"MaxHealth": 920
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
@@ -3179,7 +3212,7 @@
 					"AreaOfEffectFalloffType": "Linear",
 					"RangeAttributesShort":  { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
-					"RangeAttributesLong":   { "Distance": 735 }
+					"RangeAttributesLong":   { "Distance": 740 }
 				}
 			}
 		},
@@ -3447,11 +3480,11 @@
 		
 		"C_Interceptor_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 180,
+				"Resource1Cost": 200,
 				"Resource2Cost": 85,
 				"MaxHealth": 490,
 				"Armour": 4,
-				"ProductionTime": 21
+				"ProductionTime": 25
 			},
 			"StorageAttributes": {
 				"C_Interceptor_StorageAttributesAsset_MP": {
@@ -3482,7 +3515,7 @@
 		"Tier_3_C_Interceptor_Bomber": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 450,
-				"Resource2Cost": 280,
+				"Resource2Cost": 250,
 				"ResearchTime": 80
 			}
 		},
@@ -3497,7 +3530,7 @@
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
 					"BaseDamagePerRound": 110,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 4000
+					"ReloadTimeMS": 3800
 				}
 			}
 		},
@@ -3511,7 +3544,7 @@
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
 					"BaseDamagePerRound": 110,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 4000
+					"ReloadTimeMS": 3800
 				}
 			}
 		},
@@ -3678,9 +3711,10 @@
 		
 		"G_BattleCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 400,
+				"Resource1Cost": 450,
 				"Resource2Cost": 220,
 				"MaxHealth": 2900,
+				"ProductionTime": 60,
 				"Armour": 12,
 				"PopCapCost": 4
 			},
@@ -3696,12 +3730,23 @@
 					"OutputDPS": true
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
-					"ExcludeFromHeightAdvantage": true
+					"AreaOfEffectFalloffType": "Quadratic",
+					"AreaOfEffectRadius": 140,
+					"ExcludeFromHeightAdvantage": true,
+					"RangeAttributesLong": { "Distance": 1200 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
 				}
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
-					"CooldownTimeSecs": 40,
+					"CooldownTimeSecs": 50,
 					"ApplyStatusEffect": {
 						"ArmorBonus_StatusEffect": {
 							"BuffsToApplyToTarget": {
@@ -3716,18 +3761,19 @@
 				},
 				"Ability_G_BattleCruiser_Missile_MP": {
 					"Resource1Cost": 0,
-					"CooldownTimeSecs": 40
+					"CooldownTimeSecs": 50
 				},
 				"Ability_G_BattleCruiserActiveRegen": {
-					"CooldownTimeSecs": 40
+					"CooldownTimeSecs": 50
 				}
 			}
 		},
 		"C_Sob_AssaultCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 400,
+				"Resource1Cost": 450,
 				"Resource2Cost": 220,
 				"MaxHealth": 2900,
+				"ProductionTime": 60,
 				"Armour": 12,
 				"PopCapCost": 4
 			},
@@ -3742,12 +3788,23 @@
 					"ReloadTimeMS": 3500
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
-					"ExcludeFromHeightAdvantage": true
+					"AreaOfEffectFalloffType": "Quadratic",
+					"AreaOfEffectRadius": 140,
+					"ExcludeFromHeightAdvantage": true,
+					"RangeAttributesLong": { "Distance": 1200 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
 				}
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
-					"CooldownTimeSecs": 40,
+					"CooldownTimeSecs": 50,
 					"ApplyStatusEffect": {
 						"ArmorBonus_StatusEffect": {
 							"BuffsToApplyToTarget": {
@@ -3762,10 +3819,10 @@
 				},
 				"Ability_G_BattleCruiser_Missile_MP": {
 					"Resource1Cost": 0,
-					"CooldownTimeSecs": 40
+					"CooldownTimeSecs": 50
 				},
 				"Ability_G_BattleCruiserActiveRegen": {
-					"CooldownTimeSecs": 40
+					"CooldownTimeSecs": 50
 				}
 			}
 		},
@@ -3782,6 +3839,12 @@
 			}
 		},
 		"Research_Buff_G_BattleCruiser_AntiAir": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 150
+			}
+		},
+		"Research_Buff_S_AssaultCruiser_AntiAir": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
 				"Resource2Cost": 150
@@ -3874,6 +3937,7 @@
 				"Resource1Cost": 550,
 				"Resource2Cost": 250,
 				"MaxHealth": 4200,
+				"ProductionTime": 65,
 				"Armour": 16
 			},
 			"UnitMovementAttributes": {
@@ -3898,10 +3962,11 @@
 		},
 		"C_Sob_Battlecruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 550,
-				"Resource2Cost": 250,
-				"MaxHealth": 4200,
-				"Armour": 16
+				"Resource1Cost": 520,
+				"Resource2Cost": 280,
+				"MaxHealth": 3800,
+				"ProductionTime": 65,
+				"Armour": 15
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3913,6 +3978,12 @@
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
+					"RangeAttributesShort":  { "Accuracy": 7 },
+					"RangeAttributesMedium": { "Accuracy": 6 }
+				}
 			}
 		},
 		"Tier_3_C_BattleCruiser": {
@@ -4019,22 +4090,30 @@
 		
 		"G_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 400,
-				"Resource2Cost": 160,
+				"Resource1Cost": 300,
+				"Resource2Cost": 120,
 				"MaxHealth": 2100,
 				"Armour": 5,
-				"ProductionTime": 50,
+				"ProductionTime": 30,
 				"PopCapCost": 4
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 65,
+					"AccelerationTime": 1.25,
+					"BrakingTime": 1.25
+				}
 			},
 			"WeaponAttributes": {
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"NumberOfBursts": 6,
-					"RateOfFire": 3,
+					"BaseDamagePerRound": 160,
+					"NumberOfBursts": 4,
+					"RateOfFire": 4,
 					"CooldownTimeMS": 1600,
 					"BurstPeriodMinTimeMS": 1700,
 					"BurstPeriodMaxTimeMS": 1700,
 					"RangeAttributesLong": {
-						"Distance": 2250
+						"Distance": 1850
 					},
 					"Modifiers": {
 						"1": {
@@ -4115,8 +4194,8 @@
 		"Tier_3_G_Artillery_BattleCruiser": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 450,
-				"Resource2Cost": 350,
-				"ResearchTime": 65
+				"Resource2Cost": 150,
+				"ResearchTime": 55
 			}
 		},
 		"Research_Buff_G_Artillery_Barrage": {
