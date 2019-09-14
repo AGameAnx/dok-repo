@@ -1174,7 +1174,7 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 * **Cooldown:** `0.398s => 0.22s`
 * **Max burst:** `1s => 0.9s`
 
-## Upgrades
+### Upgrades
 > *These changes are part of the effort of reducing supply blocking due to upgrades for gaalsien.*
 
 * **Raiding upgrade research time:** `50s => 40s`
@@ -1233,7 +1233,7 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
     * **Base turret rotation speed:** `240 => 160`
     * **Upgraded turret rotation speed:** `180 => 240`
 
-## Direct missile barrage
+### Direct missile barrage
 > *Direct missile barrage is now much better at hitting enemy strike craft and also more potent at dealing good damage to medium vehicles. The recharge upgrade was considerably underutilized and for good reason. Reducing cost and time to purchase the upgrade, making it less of a commitment and more of a quality of life upgrade to occasionally get in case there are already multiple MS out on the field.
 
 * **Weapon:**
@@ -1404,7 +1404,7 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 
 ## Precision bomber
 
-## General stats
+### General stats
 > *Improved accessibility of tech and the unit itself should make this tech path much more desirable. Precision bomber has incredible maneuverability parameters, curbing those to make the unit harder to control and slower to deliver follow-up bombs on target. The damage characteristics have been updated to make the bomber worse at destroying enemy AA vehicles but still potent at dealing with enemy cruisers. Area of effect improved, but modifier against small targets added to prevent the bombers from becoming too strong against strike craft and salvagers.*
 
 * **Research cost:** `400CU 275RU => 300CU 175RU`
