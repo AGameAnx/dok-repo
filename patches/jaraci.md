@@ -1,6 +1,25 @@
 # Table of contents
 
 - [Summary](#summary)
+- [Recent changes](#recent-changes)
+  * [2019-09-14](#2019-09-14)
+    + [Coalition/Soban](#coalition-soban)
+  * [2019-09-13](#2019-09-13)
+    + [Coalition/Soban](#coalition-soban-1)
+    + [Soban](#soban)
+    + [Gaalsien/Khaaneph](#gaalsien-khaaneph)
+    + [Gaalsien](#gaalsien)
+    + [Khaaneph](#khaaneph)
+  * [2019-09-12](#2019-09-12)
+    + [Soban](#soban-1)
+    + [Khaaneph](#khaaneph-1)
+  * [2019-09-01](#2019-09-01)
+    + [Coalition/Soban](#coalition-soban-2)
+    + [Coalition](#coalition)
+    + [Soban](#soban-2)
+    + [Gaalsien\Khaaneph](#gaalsien-khaaneph)
+    + [Gaalsien](#gaalsien-1)
+    + [Khaaneph](#khaaneph-2)
 - [General changes](#general-changes)
   * [Carriers](#carriers)
     + [Power level upgrades](#power-level-upgrades)
@@ -66,8 +85,8 @@
     + [AA upgrade](#aa-upgrade)
   * [Battlecruiser](#battlecruiser)
     + [Common](#common)
-    + [Coalition](#coalition)
-    + [Soban](#soban)
+    + [Coalition](#coalition-1)
+    + [Soban](#soban-3)
   * [Artillery cruiser](#artillery-cruiser)
     + [General stats](#general-stats-3)
     + [Autofire](#autofire)
@@ -272,6 +291,154 @@
     * Cost reductions
     * Easier to use in terms of maneuverability
     * Coalition battlecruiser base damage decreased but area of effect increased slightly
+
+# Recent changes
+
+## 2019-09-14
+*Not yet reflected in main changelog*
+### Coalition/Soban
+* **Assault cruiser AA upgrade research time:** `65s => 45s`
+
+## 2019-09-13
+*Not yet reflected in main changelog*
+### Coalition/Soban
+* **Salvager armor:** `5 => 2`
+* **LAV build time:** `9s => 11s`
+* **Production upgrades:**
+    * **Cost:** `500CU => 500CU 50RU`
+    * **Research time:** => `30s => 40s`
+    * **Requirements:** `Railgun/AAV techs => None`
+* **Support cruiser AA:**
+    * **Damage:** `250 => 175`
+    * **Reload:** `4s => 3s`
+    * **Range:** `1400 => 1350`
+* **Strike fighter:**
+    * **Tech research cost:** `450CU 280RU => 450CU 250RU`
+    * **Cost:** `180CU 85RU => 200CU 85RU`
+    * **Production time:** `21s => 25s`
+* **Assault cruiser:**
+    * **Cost:** `400CU 220RU => 450CU 220RU`
+    * **Production time:** `65s => 60s`
+    * **Ability cooldowns:** `40s => 50s`
+    * **Tactical missile barrage reworked:**
+        * **AOE:** `120 => 140`
+        * **Falloff:** `None => Quadratic`
+        * **Range:** `1350 => 1200`
+        * **Damage against small targets:** `100% => 60%`
+* **Battlecruiser production time:** `75s => 65s`
+### Soban
+* **Fixed an issue of assault cruiser AA upgrade not being modified**
+* **Carrier:**
+    * **Power level upgrade costs are no longer different from other factions**
+    * **PD railgun wind-up:** `0.8s => 1s`
+* **Battlecruiser:**
+    * **Cost** `550CU 250RU => 520CU 280RU`
+    * **Hitpoints** `4200 => 3800`
+    * **Armor** 16 => 15
+    * **Accuracy:**
+        * **Short:** `4% => 7%`
+        * **Medium:** `4% => 6%`
+### Gaalsien/Khaaneph
+* **Assault ship:**
+    * **Cost:** `260CU 40RU => 280CU 35RU`
+    * **Hitpoints:** `960 => 920`
+    * **Armor:** `7 => 8`
+    * **Range:** `735 => 740`
+* **Interceptor reload time:** `4s => 3.8s`
+### Gaalsien
+* **Siege cruiser:**
+    * **Tech cost:** `450CU 350RU => 450CU 150RU`
+    * **Tech research time:** `65s => 55s`
+    * **Cost:** `400CU 160RU => 300CU 120RU`
+    * **Production time:** `50s => 30s`
+    * **Movement attributes:**
+        * **Max speed:** `55 => 65`
+        * **Acceleration time:** `1.5s => 1.25s`
+        * **Braking time:** `1.5s => 1.25s`
+    * **Barrage:**
+        * **Damage:** `200 => 160`
+        * **Rate of fire:** `3 => 4`
+        * **Number of bursts:** `6 => 4`
+        * **Range:** `2250 => 1850`
+### Khaaneph
+* **Carrier missile systems wind-up:** `0.25s => 0.5s`
+
+## 2019-09-12
+### Soban
+* **Fixed an issue where vehicle armor upgrades weren’t modified as intended**
+### Khaaneph
+* **Fixed an issue where Blast Drone build time wasn’t modified from 40s to 45s as intended**
+
+## 2019-09-01
+*Not yet reflected in main changelog*
+### Coalition/Soban
+* **Railgun max movement speed:** `57 => 66`
+* **Assault cruiser:**
+    * **Hitpoints:** `2800 => 2900`
+    * **Tactical missile barrage cost:** `250CU => Free`
+### Coalition
+* **Battlecruiser damage:** `180 => 200`
+* **Railgun cost:** `220CU 85RU => 240CU 85RU`
+### Soban
+* **Railgun cost:** `240CU 85RU => 250CU 85RU`
+### Gaalsien\Khaaneph
+* **Skimmer:**
+    * **Hitpoints:** `620 => 590`
+    * **Sensor radius:** `1000 => 1050`
+* **Assault ship:**
+    * **Range:** `745 => 735`
+    * **AOE:** `70 => 90`
+    * **Falloff:** `None => Linear`
+* **Heavy railgun EMP ability:**
+    * **Wind-up:** `1s => 0.75s`
+    * **AOE:** `100 => 150`
+    * **Range:** `1200 => 1350`
+    * **Duration:** `1.5s => 2.5s`
+* **Missile ship barrage AOE:** `150 => 160`
+### Gaalsien
+* **Baserunner scanner:**
+    * **Recharge:** `200s => 120s`
+    * **Hitpoints:** `600 => 250`
+### Khaaneph
+* **Carrier:**
+    * **Hitpoints:** `11500 => 10500`
+    * **Armor:** `30 => 25`
+    * **Sensor radius:** `800 => 1000`
+    * **Max speed:** `40 => 30`
+    * **Mobility support system:**
+        * **Renamed to:** `Mobility and Sensors Support`
+        * **Now grants sensors range to all medium and large units (meaning entire fleet except strike craft and workers)**
+        * **Now has double effectiveness for the carrier itself**
+        * **AOE radius:**
+            * **Level 1:** `420 => 600`
+            * **Level 2:** `420 => 600`
+            * **Level 3:** `560 => 750`
+            * **Level 4:** `560 => 750`
+            * **Level 5:** `840 => 1000`
+        * **Added sensors range bonus:**
+            * **Level 1:** `+70 sensors range`
+            * **Level 2:** `+110 sensors range`
+            * **Level 3:** `+150 sensors range`
+            * **Level 4:** `+200 sensors range`
+            * **Level 5:** `+250 sensors range`
+    * **Cruise missile systems:**
+        * **Damage:** `400 => 450`
+        * **Range bonuses:**
+            * **Level 2:** `0 => 100`
+            * **Level 3:** `0 => 200`
+            * **Level 4:** `0 => 350`
+            * **Level 5:** `36% => 500`
+        * **Reload bonuses:**
+            * **Level 2:** `1 => 0`
+            * **Level 3:** `2 => 1`
+            * **Level 4:** `3 => 2`
+            * **Level 5:** `4 => 3`
+* **Blast drone:**
+    * **Build time:** `40s => 45s`
+    * **Damage packets:** `20 => 15`
+* **Baserunner smoke ability:**
+    * **Recharge:** `180s => 70s`
+    * **Burst count:** `4 => 3`
 
 # General changes
 
