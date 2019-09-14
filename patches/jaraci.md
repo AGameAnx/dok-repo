@@ -114,7 +114,7 @@
   * [Sandskimmer](#sandskimmer)
     + [General stats](#general-stats-6)
     + [Weapon](#weapon-1)
-  * [Upgrades](#upgrades)
+    + [Upgrades](#upgrades)
   * [Production cruiser](#production-cruiser)
     + [Costs](#costs)
     + [AA weapon:](#aa-weapon-)
@@ -122,7 +122,7 @@
   * [Missile ship](#missile-ship)
     + [General stats](#general-stats-7)
     + [Radar guided missiles upgrade](#radar-guided-missiles-upgrade)
-  * [Direct missile barrage](#direct-missile-barrage)
+    + [Direct missile barrage](#direct-missile-barrage)
   * [Vehicle armor upgrade cost](#vehicle-armor-upgrade-cost)
   * [Assault railgun](#assault-railgun)
   * [Heavy railgun](#heavy-railgun)
@@ -144,7 +144,7 @@
     + [Weapon](#weapon-3)
     + [Anti-air](#anti-air-1)
   * [Precision bomber](#precision-bomber)
-  * [General stats](#general-stats-11)
+    + [General stats](#general-stats-11)
     + [Upgrades](#upgrades-1)
 
 # Summary
