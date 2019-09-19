@@ -322,15 +322,17 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Production Upgrade:
         * Cost: `500CU 50RU => 500CU 40RU`
         * Research Time: `40s => 50s`
-    * LAV: (DPS: `32.3689 => 32.6877`)
-        * Damage: `16 => 11`
-        * ROF: `4 => 6`
-        * Burst: `0.95-1.05s => 0.8-0.9s`
+    * LAV: (DPS: `32.3689 => 32.6036`)
+        * Damage: `16 => 13`
+        * ROF: `4 => 5`
+        * Burst: `0.95-1.05s => 0.9-1.03s`
+        * Cooldown: `0.42s => 0.4s`
 * Gaalsien/Khaaneph:
     * Sandskimmer: (DPS: `27.9070 => 28.1561`)
         * Damage: `15 => 13`
         * ROF: `3 => 4`
         * Burst: `0.67-0.9s => 0.71-0.76s`
+    * Assault ship falloff: `Linear => Quadratic`
     * Production cruiser AA range: `1180 => 1250`
 
 ## 2019-09-14
