@@ -159,7 +159,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 * Armor upgrades ![↓↓](nerf.png) (1 armor per upgrade in all cases)
 * Carriers:
-    * Movement speed ![↓↓](nerf.png) (except Khaaneph)
+    * Movement speed ![↓↓](nerf.png)
     * PD/Missile system ranges ![↓↓](nerf.png) (except Khaaneph/Soban)
     * Power upgrade cost ![↓↓](nerf.png)
     * PD effectiveness early ![↑↑](buff.png) late ![↓↓](nerf.png)
