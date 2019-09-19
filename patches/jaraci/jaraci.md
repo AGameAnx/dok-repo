@@ -315,6 +315,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 # Recent changes
 
 ## 2019-09-19 (tournament version)
+*Not reflected in the main changelog*
 * Coalition/Soban:
     * Strike fighter and gunship fabrication:
         * Upgrade research time: `80s => 70s`
@@ -322,19 +323,22 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Production Upgrade:
         * Cost: `500CU 50RU => 500CU 40RU`
         * Research Time: `40s => 50s`
-    * LAV: (DPS: `32.3689 => 32.6036`)
-        * Damage: `16 => 13`
+    * LAV: (DPS: `32.3689 => 31.3739`)
+        * Tech research time: `35s => 40s`
+        * Production time: `11s => 13s`
+        * Armor: `1 => 0`
+        * Damage: `16 => 12`
         * ROF: `4 => 5`
-        * Burst: `0.95-1.05s => 0.9-1.03s`
         * Cooldown: `0.42s => 0.4s`
+    * AAV tech research time: `55s => 50s`
 * Gaalsien/Khaaneph:
-    * Sandskimmer: (DPS: `27.9070 => 28.1561`)
+    * Sandskimmer: (DPS: `27.9070 => 27.8268`)
         * Damage: `15 => 13`
         * ROF: `3 => 4`
-        * Burst: `0.67-0.9s => 0.71-0.76s`
+        * Burst: `0.67-0.9s => 0.71-0.75s`
     * Assault ship:
         * Falloff: `Linear => Quadratic`
-        * AOE: `90 => 100`
+        * AOE: `90 => 110`
     * Production cruiser AA range: `1180 => 1250`
 
 ## 2019-09-14
@@ -883,7 +887,6 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Pricing
 > *AAV timing on small maps is a bit too oppressive. Due to an increase of unit's lategame utility, the base cost is going up slightly. AAV are not very effective late game units and are cheap, their population cost doesn't reflect this.*
 
-* Tech research time: `50s => 55s`
 * Cost: `180CU 30RU => 240CU 25RU`
 * Production time: `14s => 16s`
 * Population: `3 => 2`
