@@ -332,7 +332,9 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Damage: `15 => 13`
         * ROF: `3 => 4`
         * Burst: `0.67-0.9s => 0.71-0.76s`
-    * Assault ship falloff: `Linear => Quadratic`
+    * Assault ship:
+        * Falloff: `Linear => Quadratic`
+        * AOE: `90 => 100`
     * Production cruiser AA range: `1180 => 1250`
 
 ## 2019-09-14
