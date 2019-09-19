@@ -1,151 +1,157 @@
-# Table of contents
+# Introduction <!-- omit in toc -->
+
+Use the following command in match setup chat to load the mod using [SSSS more-maps mod](https://github.com/S5SS/dok-patch/releases/) (version 1.1t required):
+
+**`/p jaraci`**
+
+If you want the latest (experimental) changes and not the tournament version use the following command:
+
+**`/p agame`**
+
+Special thanks to Majiir and SSSS for paving the way towards a balance mod being possible, to Descara for being an awesome support, discussion and playtest help.
+
+## Mod releases <!-- omit in toc -->
+
+* Tournament: [jaraci.json](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci.json)
+* Development: [agame.json](https://github.com/S5SS/dok-repo/blob/master/patches/agame.json)
+
+# Table of contents <!-- omit in toc -->
 
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
-  * [2019-09-14](#2019-09-14)
-    + [Coalition/Soban](#coalition-soban)
-  * [2019-09-13](#2019-09-13)
-    + [Coalition/Soban](#coalition-soban-1)
-    + [Soban](#soban)
-    + [Gaalsien/Khaaneph](#gaalsien-khaaneph)
-    + [Gaalsien](#gaalsien)
-    + [Khaaneph](#khaaneph)
-  * [2019-09-12](#2019-09-12)
-    + [Soban](#soban-1)
-    + [Khaaneph](#khaaneph-1)
-  * [2019-09-01](#2019-09-01)
-    + [Coalition/Soban](#coalition-soban-2)
-    + [Coalition](#coalition)
-    + [Soban](#soban-2)
-    + [Gaalsien\Khaaneph](#gaalsien-khaaneph)
-    + [Gaalsien](#gaalsien-1)
-    + [Khaaneph](#khaaneph-2)
+    - [2019-09-19 (tournament version)](#2019-09-19-tournament-version)
+    - [2019-09-14](#2019-09-14)
+    - [2019-09-13](#2019-09-13)
+    - [2019-09-12](#2019-09-12)
+    - [2019-09-01](#2019-09-01)
 - [General changes](#general-changes)
-  * [Carriers](#carriers)
-    + [Power level upgrades](#power-level-upgrades)
-    + [Range power systems (Gaalsien/Coalition)](#range-power-systems--gaalsien-coalition-)
-    + [Point defense weapons](#point-defense-weapons)
-    + [Missile systems](#missile-systems)
-    + [Indirect fire systems (nukes)](#indirect-fire-systems--nukes-)
-  * [Unit upgrades](#unit-upgrades)
-    + [Medium vehicle armor](#medium-vehicle-armor)
-    + [Strike craft damage](#strike-craft-damage)
-    + [Strike craft armor](#strike-craft-armor)
-  * [Quality of life](#quality-of-life)
-    + [Fog of war reveal duration after firing](#fog-of-war-reveal-duration-after-firing)
-    + [Railgun target prioritization](#railgun-target-prioritization)
-    + [Air sorties](#air-sorties)
-  * [Generic balance changes](#generic-balance-changes)
-    + [Small arms anti-air weapons](#small-arms-anti-air-weapons)
-    + [Salvager RU hold size](#salvager-ru-hold-size)
-    + [Baserunner cost](#baserunner-cost)
-    + [Baserunner anti-air](#baserunner-anti-air)
-    + [Artillery barrages (except Khaaneph)](#artillery-barrages--except-khaaneph-)
-- [Coalition / Soban](#coalition---soban)
-  * [Coalition carrier](#coalition-carrier)
-    + [General statistics](#general-statistics)
-    + [Cruise missile:](#cruise-missile-)
-    + [Point defense weapons](#point-defense-weapons-1)
-  * [Soban carrier](#soban-carrier)
-    + [General statistics](#general-statistics-1)
-    + [Amor system power shunt](#amor-system-power-shunt)
-    + [Point defense railguns](#point-defense-railguns)
-    + [Turret network power shunt](#turret-network-power-shunt)
-    + [Range systems power shunt](#range-systems-power-shunt)
-    + [ALM](#alm)
-    + [ALM power shunt](#alm-power-shunt)
-    + [Microwave emitter:](#microwave-emitter-)
-  * [Support cruiser](#support-cruiser)
-    + [General stats](#general-stats)
-    + [Anti-air](#anti-air)
-  * [Baserunner](#baserunner)
-    + [Probe](#probe)
-    + [AA turret](#aa-turret)
-    + [Gun turret](#gun-turret)
-    + [Gun turret weapon](#gun-turret-weapon)
-    + [Targeting jammer](#targeting-jammer)
-  * [Tank armor upgrades](#tank-armor-upgrades)
-  * [LAV](#lav)
-  * [AAV](#aav)
-    + [Survivability](#survivability)
-    + [Pricing](#pricing)
-    + [Weapon](#weapon)
-  * [Railgun](#railgun)
-    + [Tech](#tech)
-    + [Movement speed](#movement-speed)
-    + [Accuracy](#accuracy)
-    + [Range](#range)
-    + [Coalition railgun](#coalition-railgun)
-    + [Soban railgun](#soban-railgun)
-  * [Missile battery](#missile-battery)
-    + [General stats](#general-stats-1)
-    + [Mortar ability](#mortar-ability)
-  * [Assault cruiser](#assault-cruiser)
-    + [General stats](#general-stats-2)
-    + [AA upgrade](#aa-upgrade)
-  * [Battlecruiser](#battlecruiser)
-    + [Common](#common)
-    + [Coalition](#coalition-1)
-    + [Soban](#soban-3)
-  * [Artillery cruiser](#artillery-cruiser)
-    + [General stats](#general-stats-3)
-    + [Autofire](#autofire)
-    + [Barrages](#barrages)
-  * [Fighter and gunship fabrication](#fighter-and-gunship-fabrication)
-    + [Tech](#tech-1)
-    + [Strike fighter](#strike-fighter)
-    + [Gunship](#gunship)
-  * [Tactical bomber](#tactical-bomber)
-- [Gaalsien / Khaaneph](#gaalsien---khaaneph)
-  * [Gaalsien carrier](#gaalsien-carrier)
-    + [General stats](#general-stats-4)
-    + [Point defense weapons](#point-defense-weapons-2)
-  * [Gaalsien carrier speed](#gaalsien-carrier-speed)
-    + [Hyper-sonic missile barrage](#hyper-sonic-missile-barrage)
-  * [Khaaneph carrier](#khaaneph-carrier)
-    + [General stats](#general-stats-5)
-    + [Cruise missiles](#cruise-missiles)
-    + [Weapon systems](#weapon-systems)
-    + [Speed suppor aura power shunt](#speed-suppor-aura-power-shunt)
-  * [Baserunner](#baserunner-1)
-    + [Heal aura ability](#heal-aura-ability)
-    + [Deploy sensor ability](#deploy-sensor-ability)
-    + [Blast drone](#blast-drone)
-  * [Sandskimmer](#sandskimmer)
-    + [General stats](#general-stats-6)
-    + [Weapon](#weapon-1)
-    + [Upgrades](#upgrades)
-  * [Production cruiser](#production-cruiser)
-    + [Costs](#costs)
-    + [AA weapon:](#aa-weapon-)
-  * [Assault ship](#assault-ship)
-  * [Missile ship](#missile-ship)
-    + [General stats](#general-stats-7)
-    + [Radar guided missiles upgrade](#radar-guided-missiles-upgrade)
-    + [Direct missile barrage](#direct-missile-barrage)
-  * [Vehicle armor upgrade cost](#vehicle-armor-upgrade-cost)
-  * [Assault railgun](#assault-railgun)
-  * [Heavy railgun](#heavy-railgun)
-    + [General stats](#general-stats-8)
-    + [EMP rounds upgrade](#emp-rounds-upgrade)
-    + [Ranged calibration upgrade](#ranged-calibration-upgrade)
-  * [Railgun armor level 3 upgrade cost](#railgun-armor-level-3-upgrade-cost)
-  * [Interceptor](#interceptor)
-    + [General stats](#general-stats-9)
-    + [Weapon](#weapon-2)
-    + [Afterburner upgrade:](#afterburner-upgrade-)
-  * [Siege cruiser](#siege-cruiser)
-    + [Range upgrade](#range-upgrade)
-    + [Gaalsien siege cruiser](#gaalsien-siege-cruiser)
-    + [Gaalsien siege cruiser autofire](#gaalsien-siege-cruiser-autofire)
-    + [Khaaneph siege cruiser](#khaaneph-siege-cruiser)
-  * [Honourguard cruiser](#honourguard-cruiser)
-    + [General stats](#general-stats-10)
-    + [Weapon](#weapon-3)
-    + [Anti-air](#anti-air-1)
-  * [Precision bomber](#precision-bomber)
-    + [General stats](#general-stats-11)
-    + [Upgrades](#upgrades-1)
+    - [Carriers](#carriers)
+        - [Power level upgrades](#power-level-upgrades)
+        - [Range power systems (Gaalsien/Coalition)](#range-power-systems-gaalsiencoalition)
+        - [Point defense weapons](#point-defense-weapons)
+        - [Missile systems](#missile-systems)
+        - [Indirect fire systems (nukes)](#indirect-fire-systems-nukes)
+    - [Unit upgrades](#unit-upgrades)
+        - [Medium vehicle armor](#medium-vehicle-armor)
+        - [Strike craft damage](#strike-craft-damage)
+        - [Strike craft armor](#strike-craft-armor)
+    - [Quality of life](#quality-of-life)
+        - [Fog of war reveal duration after firing](#fog-of-war-reveal-duration-after-firing)
+        - [Railgun target prioritization](#railgun-target-prioritization)
+        - [Air sorties](#air-sorties)
+    - [Generic balance changes](#generic-balance-changes)
+        - [Small arms anti-air weapons](#small-arms-anti-air-weapons)
+        - [Salvager RU hold size](#salvager-ru-hold-size)
+        - [Baserunner cost](#baserunner-cost)
+        - [Baserunner anti-air](#baserunner-anti-air)
+        - [Artillery barrages (except Khaaneph)](#artillery-barrages-except-khaaneph)
+- [Coalition / Soban](#coalition--soban)
+    - [Coalition carrier](#coalition-carrier)
+        - [General statistics](#general-statistics)
+        - [Cruise missile:](#cruise-missile)
+        - [Point defense weapons](#point-defense-weapons-1)
+    - [Soban carrier](#soban-carrier)
+        - [General statistics](#general-statistics-1)
+        - [Armor system power shunt](#armor-system-power-shunt)
+        - [Point defense railguns](#point-defense-railguns)
+        - [Turret network power shunt](#turret-network-power-shunt)
+        - [Range systems power shunt](#range-systems-power-shunt)
+        - [ALM](#alm)
+        - [ALM power shunt](#alm-power-shunt)
+        - [Microwave emitter](#microwave-emitter)
+    - [Salvager](#salvager)
+    - [Production upgrades](#production-upgrades)
+    - [Support cruiser](#support-cruiser)
+        - [General stats](#general-stats)
+        - [Anti-air](#anti-air)
+    - [Baserunner](#baserunner)
+        - [Probe](#probe)
+        - [AA turret](#aa-turret)
+        - [Gun turret](#gun-turret)
+        - [Gun turret weapon](#gun-turret-weapon)
+        - [Targeting jammer](#targeting-jammer)
+    - [Tank armor upgrades](#tank-armor-upgrades)
+    - [LAV](#lav)
+    - [AAV](#aav)
+        - [Survivability](#survivability)
+        - [Pricing](#pricing)
+        - [Weapon](#weapon)
+    - [Railgun](#railgun)
+        - [Tech](#tech)
+        - [Accuracy](#accuracy)
+        - [Range](#range)
+        - [Coalition railgun](#coalition-railgun)
+        - [Soban railgun](#soban-railgun)
+    - [Missile battery](#missile-battery)
+        - [General stats](#general-stats-1)
+        - [Mortar ability](#mortar-ability)
+    - [Assault cruiser](#assault-cruiser)
+        - [General stats](#general-stats-2)
+        - [AA upgrade](#aa-upgrade)
+    - [Battlecruiser](#battlecruiser)
+        - [Common](#common)
+        - [Coalition](#coalition)
+        - [Soban](#soban)
+    - [Artillery cruiser](#artillery-cruiser)
+        - [General stats](#general-stats-3)
+        - [Autofire](#autofire)
+        - [Barrages](#barrages)
+    - [Fighter and gunship fabrication](#fighter-and-gunship-fabrication)
+        - [Tech](#tech-1)
+        - [Strike fighter](#strike-fighter)
+        - [Gunship](#gunship)
+    - [Tactical bomber](#tactical-bomber)
+- [Gaalsien / Khaaneph](#gaalsien--khaaneph)
+    - [Gaalsien carrier](#gaalsien-carrier)
+        - [General stats](#general-stats-4)
+        - [Point defense weapons](#point-defense-weapons-2)
+    - [Gaalsien carrier speed](#gaalsien-carrier-speed)
+        - [Hyper-sonic missile barrage](#hyper-sonic-missile-barrage)
+    - [Khaaneph carrier](#khaaneph-carrier)
+        - [General stats](#general-stats-5)
+        - [Cruise missiles systems](#cruise-missiles-systems)
+        - [Weapon systems](#weapon-systems)
+        - [Mobility support system](#mobility-support-system)
+    - [Baserunner](#baserunner-1)
+        - [Heal aura ability](#heal-aura-ability)
+        - [Deploy sensor ability](#deploy-sensor-ability)
+        - [Smoke ability](#smoke-ability)
+        - [Blast drone](#blast-drone)
+    - [Sandskimmer](#sandskimmer)
+        - [General stats](#general-stats-6)
+        - [Weapon](#weapon-1)
+        - [Upgrades](#upgrades)
+    - [Production cruiser](#production-cruiser)
+        - [Costs](#costs)
+        - [AA weapon](#aa-weapon)
+    - [Assault ship](#assault-ship)
+    - [Missile ship](#missile-ship)
+        - [General stats](#general-stats-7)
+        - [Radar guided missiles upgrade](#radar-guided-missiles-upgrade)
+        - [Direct missile barrage](#direct-missile-barrage)
+    - [Vehicle armor upgrade cost](#vehicle-armor-upgrade-cost)
+    - [Assault railgun](#assault-railgun)
+    - [Heavy railgun](#heavy-railgun)
+        - [General stats](#general-stats-8)
+        - [EMP rounds](#emp-rounds)
+        - [Ranged calibration upgrade](#ranged-calibration-upgrade)
+    - [Railgun armor level 3 upgrade cost](#railgun-armor-level-3-upgrade-cost)
+    - [Interceptor](#interceptor)
+        - [General stats](#general-stats-9)
+        - [Weapon](#weapon-2)
+        - [Afterburner upgrade:](#afterburner-upgrade)
+    - [Siege cruiser](#siege-cruiser)
+        - [Range upgrade](#range-upgrade)
+        - [Gaalsien siege cruiser](#gaalsien-siege-cruiser)
+        - [Gaalsien siege cruiser autofire](#gaalsien-siege-cruiser-autofire)
+        - [Khaaneph siege cruiser](#khaaneph-siege-cruiser)
+    - [Honourguard cruiser](#honourguard-cruiser)
+        - [General stats](#general-stats-10)
+        - [Weapon](#weapon-3)
+        - [Anti-air](#anti-air-1)
+    - [Precision bomber](#precision-bomber)
+        - [General stats](#general-stats-11)
+        - [Upgrades](#upgrades-1)
 
 # Summary
 
@@ -158,7 +164,7 @@
     * Power upgrades slightly more expensive in terms of CU
     * All carrier PDs reworked (more effective early, more effective vs armored units)
     * Khaaneph carrier armor increased
-    * Khaaneph PD and missile base range increased by quite a bit, but dps on level 1 and 0 weapon power levels is now weakest out of all carriers
+    * Khaaneph PD and missile base range increased by quite a bit, but DPS on level 1 and 0 weapon power levels is now weakest out of all carriers
 * Nukes have seen reworks for all carriers:
     * Cooldowns increased
     * High ground damage removed
@@ -191,7 +197,7 @@
         * Considerably larger hitpoint pool (still lower than skimmers)
     * Skimmers:
         * Slightly reduced base hitpoints
-        * Slightly more dps
+        * Slightly more DPS
 * Baserunners:
     * Now cost 60RU in addition to their base cost
     * Have much stronger AA capabilities
@@ -294,151 +300,167 @@
 
 # Recent changes
 
+## 2019-09-19 (tournament version)
+* **Coalition/Soban:**
+    * **Strike fighter and gunship fabrication:**
+        * **Upgrade research time:** `80s => 70s`
+        * **Strike fighter production time:** `25s => 26s`
+    * **Production Upgrade:**
+        * **Cost:** `500CU 50RU => 500CU 40RU`
+        * **Research Time:** `40s => 50s`
+    * **LAV:** (DPS: `32.3689 => 32.6877`)
+        * **Damage:** `16 => 11`
+        * **ROF:** `4 => 6`
+        * **Burst:** `0.95-1.05s => 0.8-0.9s`
+* **Gaalsien/Khaaneph:**
+    * **Sandskimmer:** (DPS: `27.9070 => 28.1561`)
+        * **Damage:** `15 => 13`
+        * **ROF:** `3 => 4`
+        * **Burst:** `0.67-0.9s => 0.71-0.76s`
+    * **Production cruiser AA range:** `1180 => 1250`
+
 ## 2019-09-14
-*Not yet reflected in main changelog*
-### Coalition/Soban
-* **Assault cruiser AA upgrade research time:** `65s => 45s`
+* **Coalition/Soban:**
+    * **Assault cruiser AA upgrade research time:** `65s => 45s`
 
 ## 2019-09-13
-*Not yet reflected in main changelog*
-### Coalition/Soban
-* **Salvager armor:** `5 => 2`
-* **LAV build time:** `9s => 11s`
-* **Production upgrades:**
-    * **Cost:** `500CU => 500CU 50RU`
-    * **Research time:** => `30s => 40s`
-    * **Requirements:** `Railgun/AAV techs => None`
-* **Support cruiser AA:**
-    * **Damage:** `250 => 175`
-    * **Reload:** `4s => 3s`
-    * **Range:** `1400 => 1350`
-* **Strike fighter:**
-    * **Tech research cost:** `450CU 280RU => 450CU 250RU`
-    * **Cost:** `180CU 85RU => 200CU 85RU`
-    * **Production time:** `21s => 25s`
-* **Assault cruiser:**
-    * **Cost:** `400CU 220RU => 450CU 220RU`
-    * **Production time:** `65s => 60s`
-    * **Ability cooldowns:** `40s => 50s`
-    * **Tactical missile barrage reworked:**
-        * **AOE:** `120 => 140`
-        * **Falloff:** `None => Quadratic`
-        * **Range:** `1350 => 1200`
-        * **Damage against small targets:** `100% => 60%`
-* **Battlecruiser production time:** `75s => 65s`
-### Soban
-* **Fixed an issue of assault cruiser AA upgrade not being modified**
-* **Carrier:**
-    * **Power level upgrade costs are no longer different from other factions**
-    * **PD railgun wind-up:** `0.8s => 1s`
-* **Battlecruiser:**
-    * **Cost** `550CU 250RU => 520CU 280RU`
-    * **Hitpoints** `4200 => 3800`
-    * **Armor** 16 => 15
-    * **Accuracy:**
-        * **Short:** `4% => 7%`
-        * **Medium:** `4% => 6%`
-### Gaalsien/Khaaneph
-* **Assault ship:**
-    * **Cost:** `260CU 40RU => 280CU 35RU`
-    * **Hitpoints:** `960 => 920`
-    * **Armor:** `7 => 8`
-    * **Range:** `735 => 740`
-* **Interceptor reload time:** `4s => 3.8s`
-### Gaalsien
-* **Siege cruiser:**
-    * **Tech cost:** `450CU 350RU => 450CU 150RU`
-    * **Tech research time:** `65s => 55s`
-    * **Cost:** `400CU 160RU => 300CU 120RU`
-    * **Production time:** `50s => 30s`
-    * **Movement attributes:**
-        * **Max speed:** `55 => 65`
-        * **Acceleration time:** `1.5s => 1.25s`
-        * **Braking time:** `1.5s => 1.25s`
-    * **Barrage:**
-        * **Damage:** `200 => 160`
-        * **Rate of fire:** `3 => 4`
-        * **Number of bursts:** `6 => 4`
-        * **Range:** `2250 => 1850`
-### Khaaneph
-* **Carrier missile systems wind-up:** `0.25s => 0.5s`
+* **Coalition/Soban:**
+    * **Salvager armor:** `5 => 2`
+    * **LAV build time:** `9s => 11s`
+    * **Production upgrades:**
+        * **Cost:** `500CU => 500CU 50RU`
+        * **Research time:** => `30s => 40s`
+        * **Requirements:** `Railgun/AAV techs => None`
+    * **Support cruiser AA:**
+        * **Damage:** `250 => 175`
+        * **Reload:** `4s => 3s`
+        * **Range:** `1400 => 1350`
+    * **Strike fighter:**
+        * **Tech research cost:** `450CU 280RU => 450CU 250RU`
+        * **Cost:** `180CU 85RU => 200CU 85RU`
+        * **Production time:** `21s => 25s`
+    * **Assault cruiser:**
+        * **Cost:** `400CU 220RU => 450CU 220RU`
+        * **Production time:** `65s => 60s`
+        * **Ability cooldowns:** `40s => 50s`
+        * **Tactical missile barrage reworked:**
+            * **AOE:** `120 => 140`
+            * **Falloff:** `None => Quadratic`
+            * **Range:** `1350 => 1200`
+            * **Damage against small targets:** `100% => 60%`
+    * **Battlecruiser production time:** `75s => 65s`
+* **Soban:**
+    * **Fixed an issue of assault cruiser AA upgrade not being modified**
+    * **Carrier:**
+        * **Power level upgrade costs are no longer different from other factions**
+        * **PD railgun wind-up:** `0.8s => 1s`
+    * **Battlecruiser:**
+        * **Cost** `550CU 250RU => 520CU 280RU`
+        * **Hitpoints** `4200 => 3800`
+        * **Armor** `16 => 15`
+        * **Accuracy:**
+            * **Short:** `4% => 7%`
+            * **Medium:** `4% => 6%`
+* **Gaalsien/Khaaneph:**
+    * **Assault ship:**
+        * **Cost:** `260CU 40RU => 280CU 35RU`
+        * **Hitpoints:** `960 => 920`
+        * **Armor:** `7 => 8`
+        * **Range:** `735 => 740`
+    * **Interceptor reload time:** `4s => 3.8s`
+* **Gaalsien:**
+    * **Siege cruiser:**
+        * **Tech cost:** `450CU 350RU => 450CU 150RU`
+        * **Tech research time:** `65s => 55s`
+        * **Cost:** `400CU 160RU => 300CU 120RU`
+        * **Production time:** `50s => 30s`
+        * **Movement attributes:**
+            * **Max speed:** `55 => 65`
+            * **Acceleration time:** `1.5s => 1.25s`
+            * **Braking time:** `1.5s => 1.25s`
+        * **Barrage:**
+            * **Damage:** `200 => 160`
+            * **Rate of fire:** `3 => 4`
+            * **Number of bursts:** `6 => 4`
+            * **Range:** `2250 => 1850`
+* **Khaaneph:**
+    * **Carrier missile systems wind-up:** `0.25s => 0.5s`
 
 ## 2019-09-12
-### Soban
-* **Fixed an issue where vehicle armor upgrades weren’t modified as intended**
-### Khaaneph
-* **Fixed an issue where Blast Drone build time wasn’t modified from 40s to 45s as intended**
+* **Soban:**
+    * **Fixed an issue where vehicle armor upgrades weren’t modified as intended**
+* **Khaaneph:**
+    * **Fixed an issue where Blast Drone build time wasn’t modified from 40s to 45s as intended**
 
 ## 2019-09-01
-*Not yet reflected in main changelog*
-### Coalition/Soban
-* **Railgun max movement speed:** `57 => 66`
-* **Assault cruiser:**
-    * **Hitpoints:** `2800 => 2900`
-    * **Tactical missile barrage cost:** `250CU => Free`
-### Coalition
-* **Battlecruiser damage:** `180 => 200`
-* **Railgun cost:** `220CU 85RU => 240CU 85RU`
-### Soban
-* **Railgun cost:** `240CU 85RU => 250CU 85RU`
-### Gaalsien\Khaaneph
-* **Skimmer:**
-    * **Hitpoints:** `620 => 590`
-    * **Sensor radius:** `1000 => 1050`
-* **Assault ship:**
-    * **Range:** `745 => 735`
-    * **AOE:** `70 => 90`
-    * **Falloff:** `None => Linear`
-* **Heavy railgun EMP ability:**
-    * **Wind-up:** `1s => 0.75s`
-    * **AOE:** `100 => 150`
-    * **Range:** `1200 => 1350`
-    * **Duration:** `1.5s => 2.5s`
-* **Missile ship barrage AOE:** `150 => 160`
-### Gaalsien
-* **Baserunner scanner:**
-    * **Recharge:** `200s => 120s`
-    * **Hitpoints:** `600 => 250`
-### Khaaneph
-* **Carrier:**
-    * **Hitpoints:** `11500 => 10500`
-    * **Armor:** `30 => 25`
-    * **Sensor radius:** `800 => 1000`
-    * **Max speed:** `40 => 30`
-    * **Mobility support system:**
-        * **Renamed to:** `Mobility and Sensors Support`
-        * **Now grants sensors range to all medium and large units (meaning entire fleet except strike craft and workers)**
-        * **Now has double effectiveness for the carrier itself**
-        * **AOE radius:**
-            * **Level 1:** `420 => 600`
-            * **Level 2:** `420 => 600`
-            * **Level 3:** `560 => 750`
-            * **Level 4:** `560 => 750`
-            * **Level 5:** `840 => 1000`
-        * **Added sensors range bonus:**
-            * **Level 1:** `+70 sensors range`
-            * **Level 2:** `+110 sensors range`
-            * **Level 3:** `+150 sensors range`
-            * **Level 4:** `+200 sensors range`
-            * **Level 5:** `+250 sensors range`
-    * **Cruise missile systems:**
-        * **Damage:** `400 => 450`
-        * **Range bonuses:**
-            * **Level 2:** `0 => 100`
-            * **Level 3:** `0 => 200`
-            * **Level 4:** `0 => 350`
-            * **Level 5:** `36% => 500`
-        * **Reload bonuses:**
-            * **Level 2:** `1 => 0`
-            * **Level 3:** `2 => 1`
-            * **Level 4:** `3 => 2`
-            * **Level 5:** `4 => 3`
-* **Blast drone:**
-    * **Build time:** `40s => 45s`
-    * **Damage packets:** `20 => 15`
-* **Baserunner smoke ability:**
-    * **Recharge:** `180s => 70s`
-    * **Burst count:** `4 => 3`
+* **Coalition/Soban:**
+    * **Railgun max movement speed:** `57 => 66`
+    * **Assault cruiser:**
+        * **Hitpoints:** `2800 => 2900`
+        * **Tactical missile barrage cost:** `250CU => Free`
+* **Coalition:**
+    * **Battlecruiser damage:** `180 => 200`
+    * **Railgun cost:** `220CU 85RU => 240CU 85RU`
+* **Soban:**
+    * **Railgun cost:** `240CU 85RU => 250CU 85RU`
+* **Gaalsien\Khaaneph:**
+    * **Skimmer:**
+        * **Hitpoints:** `620 => 590`
+        * **Sensor radius:** `1000 => 1050`
+    * **Assault ship:**
+        * **Range:** `745 => 735`
+        * **AOE:** `70 => 90`
+        * **Falloff:** `None => Linear`
+    * **Heavy railgun EMP ability:**
+        * **Wind-up:** `1s => 0.75s`
+        * **AOE:** `100 => 150`
+        * **Range:** `1200 => 1350`
+        * **Duration:** `1.5s => 2.5s`
+    * **Missile ship barrage AOE:** `150 => 160`
+* **Gaalsien:**
+    * **Baserunner scanner:**
+        * **Recharge:** `200s => 120s`
+        * **Hitpoints:** `600 => 250`
+* **Khaaneph:**
+    * **Carrier:**
+        * **Hitpoints:** `11500 => 10500`
+        * **Armor:** `30 => 25`
+        * **Sensor radius:** `800 => 1000`
+        * **Max speed:** `40 => 30`
+        * **Mobility support system:**
+            * **Renamed to:** `Mobility and Sensors Support`
+            * **Now grants sensors range to all medium and large units (meaning entire fleet except strike craft and workers)**
+            * **Now has double effectiveness for the carrier itself**
+            * **AOE radius:**
+                * **Level 1:** `420 => 600`
+                * **Level 2:** `420 => 600`
+                * **Level 3:** `560 => 750`
+                * **Level 4:** `560 => 750`
+                * **Level 5:** `840 => 1000`
+            * **Added sensors range bonus:**
+                * **Level 1:** `+70 sensors range`
+                * **Level 2:** `+110 sensors range`
+                * **Level 3:** `+150 sensors range`
+                * **Level 4:** `+200 sensors range`
+                * **Level 5:** `+250 sensors range`
+        * **Cruise missile systems:**
+            * **Damage:** `400 => 450`
+            * **Range bonuses:**
+                * **Level 2:** `0 => 100`
+                * **Level 3:** `0 => 200`
+                * **Level 4:** `0 => 350`
+                * **Level 5:** `36% => 500`
+            * **Reload bonuses:**
+                * **Level 2:** `1 => 0`
+                * **Level 3:** `2 => 1`
+                * **Level 4:** `3 => 2`
+                * **Level 5:** `4 => 3`
+    * **Blast drone:**
+        * **Build time:** `40s => 45s`
+        * **Damage packets:** `20 => 15`
+    * **Baserunner smoke ability:**
+        * **Recharge:** `180s => 70s`
+        * **Burst count:** `4 => 3`
 
 # General changes
 
@@ -577,8 +599,6 @@
 * **Damage against carriers:** `100% => 60%`
 * **Autofire:** `Has same modifiers as main barrage`
 * **Burst:** `1s => 1.7s`
-* **Rate of fire:** `4 => 3`
-* **Number of bursts:** `8(3) => 6`
 * **Cooldown:** `0.5s => 1.6s`
 
 # Coalition / Soban
@@ -586,7 +606,7 @@
 ## Coalition carrier
 
 ### General statistics
-> *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coinside with railgun nerfs, however. Movement speed nerf is part of an effort to fix a particularly strong early game 1 base carrier timing push.*
+> *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however. Movement speed nerf is part of an effort to fix a particularly strong early game 1 base carrier timing push.*
 
 * **Hitpoints:** `15000 => 12000`
 * **Movement speed:** `60 => 53`
@@ -613,13 +633,13 @@
 ## Soban carrier
 
 ### General statistics
-> *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. The soban carrier hitpoint nerf is larger than other carriers because it gets strong railgun weaponry from the beginning of the game and extra range for safer positioning. Movement speed and armor changes are part of an effort to fix a particularly strong early game 1 base carrier timing push*
+> *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. The Soban carrier hitpoint nerf is larger than other carriers because it gets strong railgun weaponry from the beginning of the game and extra range for safer positioning. Movement speed and armor changes are part of an effort to fix a particularly strong early game 1 base carrier timing push*
 
 * **Hitpoints:** `15000 => 10700`
 * **Movement speed:** `60 => 53`
 * **Base armor:** `25 => 15`
 
-### Amor system power shunt
+### Armor system power shunt
 > *Soban carrier is particularly strong for the carrier rush. It is meant to be a long range support carrier and thus it is getting its armor reduced across all levels of armor power shunt, including the base armor*
 
 * **Level 1:** `30 => 25`
@@ -628,14 +648,14 @@
 * **Level 4:** `100 => 70`
 
 ### Point defense railguns
-> *The new iteration of these railguns works much closer to how soban railgun units work.*
+> *The new iteration of these railguns works much closer to how Soban railgun units work.*
 
 * **Damage:** `165 => 195`
 * **Number of bursts:** `10 => 2`
 * **Burst:** `1s => 0.25s`
 * **Cooldown:** `5s => 10s`
 * **Reload:** `10s => 15s`
-* **Wind-up:** `1.6s => 0.8s`
+* **Wind-up:** `1.6s => 1s`
 * **Range:**
     * **Medium:** `600 => 550`
     * **Long:** `900 => 850`
@@ -644,7 +664,7 @@
     * **Long:** `5% => 4.5%`
 
 ### Turret network power shunt
-> *The goal is to make soban carrier a relatively powerful brawler against armored targets, while keeping its overall damage output at bay and keeping the carrier weak against strike craft.*
+> *The goal is to make Soban carrier a relatively powerful brawler against armored targets, while keeping its overall damage output at bay and keeping the carrier weak against strike craft.*
 
 * **Level 1:**
     * **Reload:** `'Set to 10s => 'decrease by 35%'`
@@ -719,7 +739,7 @@
     * **Level 4:** `10 => 30`
     * **Level 5:** `20 => 50`
 
-### Microwave emitter:
+### Microwave emitter
 > *Microwave emitter is the weakest nuke-class weapon and therefore is receiving some buffs.*
 
 * **Cooldown:** `90s => 110s`
@@ -732,6 +752,18 @@
 * **Damage against strike craft and salvagers:** `100% => 50%`
 * **Damage against Carrier, XLarge and Large class targets:** `100% => 120%`
 * **Removed the 500 damage per second status affect on friendly units**
+
+## Salvager
+> *Due to increased Support Cruiser repair rate in the mod, killing C/S salvagers was a bit too difficult.*
+
+* **Armor:** `5 => 2`
+
+## Production upgrades
+> *It has become quite commonplace to get railgun or AAV tech just to get the last level of production for C/S factions. This will open up C/S options significantly, it will allow for more optimized and committed midgame pushes and deadlier timings. Nevertheless, extra cost and other changes will make these pushes require well designed build orders to pull off properly.*
+
+* **Requirements:** `Railgun/AAV techs => None`
+* **Cost:** `500CU => 500CU 40RU`
+* **Research time:** => `30s => 50s`
 
 ## Support cruiser
 
@@ -748,10 +780,13 @@
 > *Support cruiser AA is the strongest AA in the game by a large margin. Such a high hitpoint body shouldn't have strong AA capability. This capability is also achieved through a single upgrade while SC is already a very useful and needed unit. The strength of this upgrade currently makes most other AA sources obsolete, and is a very easy and obvious choice of an upgrade to purchase.*
 
 * **Upgrade cost:** `500CU 320RU => 450CU 250RU`
-* **Wind-up:** `0ms => 50ms`
-* **Rate of fire:** `2 => 1`
-* **AOE:** `40 => 80`
-* **Range:** `1550 => 1400`
+* **Weapon:**
+    * **Damage:** `250 => 175`
+    * **Rate of fire:** `2 => 1`
+    * **Reload:** `4s => 3s`
+    * **Wind-up:** `0ms => 50ms`
+    * **AOE:** `40 => 80`
+    * **Range:** `1550 => 1350`
 
 ## Baserunner
 
@@ -805,15 +840,15 @@
 * **Level 3 cost:** `300CU 300RU => 300CU 400RU`
 
 ## LAV
-> *LAV have been revealed as a centerpoint of effective coalition play. Oppressive early game strategies along with LAV providing a strong mid/late game defensive core for the coalition army is the main reasoning behind the reduction of overall LAV effectiveness. Due to the mod increasing the power of various strike craft counters, LAV have become extremely fragile in the lategame and their large discrepancy with sandskimmer hitpoints has been a big issue in balancing various area of effect units. New LAV hitpoints will make them sustain damage a bit better. New LAV weapon makes them slightly weaker against lightly armored targets but slightly more effective against armored ones.*
+> *LAV have been revealed as a center point of effective coalition play. Oppressive early game strategies along with LAV providing a strong mid/late game defensive core for the coalition army is the main reasoning behind the reduction of overall LAV effectiveness. Due to the mod increasing the power of various strike craft counters, LAV have become extremely fragile in the lategame and their large discrepancy with sandskimmer hitpoints has been a big issue in balancing various area of effect units. New LAV hitpoints will make them sustain damage a bit better. Production time is increased substantially due to production upgrade being available earlier and it was needed to curb the power of LAV openers in general. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
 
-* **Build time:** `8s => 9s`
+* **Build time:** `8s => 11s`
 * **Hitpoints:** `500 => 570`
 * **Armor:** `0 => 1`
 * **Weapon:**
-    * **Base damage:** `15 => 16`
-    * **Rate of fire:** `5 => 4`
-    * **Burst:** `0.8s-1.2s => 0.95s-1.05s`
+    * **Base damage:** `15 => 11`
+    * **Rate of fire:** `5 => 6`
+    * **Burst:** `0.8-1.2s => 0.8-0.9s`
     * **Burst count:** `4 => 2`
     * **Cooldown:** `0.8s => 0.42s`
     * **Turret rotation speed:** `180 => 250`
@@ -851,11 +886,6 @@
 * **Build time:** `14s => 16s`
 * **Mag accelerator upgrade cost:** `280CU 165RU => 280CU 190RU`
 
-### Movement speed
-> *The speed now matches gaalsien heavy railgun speed. This makes it possible to retreat the gaalsien railguns from a fight.*
-
-* **Max speed:** `66 => 57`
-
 ### Accuracy
 > *These changes are part of an effort to make high ground more impactful for railguns (as it affects unit accuracy).*
 
@@ -871,7 +901,7 @@
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role.
 Coalition railguns have also seen some reload time buffs to go alongside target priority & reveal time changes to bring cost / damage output closer to the insanely high values that gaalsien railguns have in that category.*
 
-* **Cost:** `200CU 60RU => 220CU 85RU`
+* **Cost:** `200CU 60RU => 240CU 85RU`
 * **Hitpoints:** `670 => 750`
 * **Armor:** `3 => 2`
 * **Experience value:** `350 => 450`
@@ -880,9 +910,9 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 ### Soban railgun
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role.
-Soban railguns are extremely powerful, they have superior dps, superior hitpoint pool, superior armor and mag accelerator upgrade benefits them more than the coalition railgun. Additionally, they have mark target ability which comes for free. The gap between coalition and soban railgun performance has been lessened significantly, but soban railgun remains the most cost efficient railgun in the game.*
+Soban railguns are extremely powerful, they have superior DPS, superior hitpoint pool, superior armor and mag accelerator upgrade benefits them more than the coalition railgun. Additionally, they have mark target ability which comes for free. The gap between coalition and Soban railgun performance has been lessened significantly, but soban railgun remains the most cost efficient railgun in the game.*
 
-* **Cost:** `210CU 60RU => 240CU 85RU`
+* **Cost:** `210CU 60RU => 250CU 85RU`
 * **Hitpoints:** `680 => 750`
 * **Armor:** `4 => 1`
 * **Experience value:** `350 => 470`
@@ -893,7 +923,7 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 ## Missile battery
 
 ### General stats
-> *The largest factor of AA doing its work vs normal air strategies is the first shot. Increased reload duration means AA will have a much harder time quickly killing off large numbers of air and heavy air and both of those strategies are underused, however it won't affect the early game air rush situations very much. Additionally rebalancing cost, lowering armor to make out of position batteries more punishable and increasiing speed to ease the use of this unit*
+> *The largest factor of AA doing its work vs normal air strategies is the first shot. Increased reload duration means AA will have a much harder time quickly killing off large numbers of air and heavy air and both of those strategies are underused, however it won't affect the early game air rush situations very much. Additionally rebalancing cost, lowering armor to make out of position batteries more punishable and increasing speed to ease the use of this unit*
 
 * **Cost:** `350CU 80RU => 300CU 90RU`
 * **Speed:** `50 => 60`
@@ -914,17 +944,23 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 ### General stats
 > *Assault cruiser becomes slightly worse at brawling against other cruisers and armored vehicles but gets help in other areas such as its cost, its hitpoints and its abilities. Weapon and armor changes will allow mid-tier units to soft-counter out of position assault cruisers in some fringe situations, whereas previously assault cruisers were very hard to weed out even by much superior numbers when they were positioned behind dunes.*
 
-* **Tech research cost:** `600CU 350RU to 500CU 300RU`
-* **Cost:** `500CU 250RU to 400CU 220RU`
-* **Population:** `6 to 4`
-* **Hitpoints:** `2700 to 2800`
-* **Armor:** `15 to 12`
+* **Tech research cost:** `600CU 350RU => 450CU 300RU`
+* **Production time:** `65s => 60s`
+* **Cost:** `500CU 250RU => 400CU 220RU`
+* **Population:** `6 => 4`
+* **Hitpoints:** `2700 => 2900`
+* **Armor:** `15 => 12`
 * **Missile barrage benefits high ground:** `Yes => No`
 * **Cooldowns:**
-    * **Missile barrage:** `60s => 40s`
-    * **Active regeneration:** `50s => 40s`
-    * **Overdrive:** `80s => 40s`
+    * **Missile barrage:** `60s => 50s`
+    * **Overdrive:** `80s => 50s`
 * **Overdrive armor bonus:** `100% => 25%`
+* * **Tactical missile barrage reworked:**
+    * **Cost:** `250CU => Free`
+    * **AOE:** `120 => 140`
+    * **Falloff:** `None => Quadratic`
+    * **Range:** `1350 => 1200`
+    * **Damage against small targets:** `100% => 60%`
 * **Weapon:**
     * **Damage:** `70 => 55`
     * **Rate of fire:** `2 => 3`
@@ -934,9 +970,10 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
     * **Burst:** `1s => 0.7s`
 
 ### AA upgrade
-> *This upgrade is very weak, especially because the AA weapon is weaker than normal AA, a cost reduction should make it more desirable.*
+> *This upgrade is very weak, especially because the AA weapon is weaker than normal AA. Cost reduction should make it more desirable.*
 
-* **AA upgrade cost:** `500CU 340RU => 300CU 150RU`
+* **Cost:** `500CU 340RU => 300CU 150RU`
+* **Research time:** `65s => 45s`
 
 ## Battlecruiser
 
@@ -944,6 +981,7 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 > *The unit is overall unreasonably expensive for utility and options that it provides for the player. Area of effect changes allow battlecruisers to deal somewhat meaningful damage against strike craft forces. Unit is receiving large tech and production cost reductions but reduced survivability*
 
 * **Tech cost:** `700CU 450RU => 550CU 350RU`
+* **Production time:** `75s => 65s`
 * **Armor:** `25 => 16`
 * **Movement dynamics characteristics:**
     * **Max speed:** `50 => 54`
@@ -956,17 +994,21 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 
 * **Cost:** `800CU 225RU => 550CU 250RU`
 * **Hitpoints:** `6500 => 4200`
-* **Damage:** `300 => 180`
+* **Damage:** `300 => 200`
 * **Reload :** `7s => 5s`
 * **Falloff:** `Linear => Quadratic`
 * **AOE:** `50 => 55`
 * **Range:** `1250 => 1300`
 
 ### Soban
-> *Long range high damage unit. Very dangerous to have such a unit be also extremely survivable.*
+> *Long range high damage unit. Very dangerous to have such a unit be also extremely survivable. Improving close range accuracy, this unit had higher accuracy on Distant range than Short and Medium.*
 
-* **Cost:** `780CU 220RU => 550CU 250RU`
-* **Hitpoints:** `6500 => 4200`
+* **Cost:** `780CU 220RU => 520CU 280RU`
+* **Hitpoints:** `6500 => 3800`
+* **Armor** `16 => 15`
+* **Accuracy:**
+	* **Short:** `4% => 7%`
+	* **Medium:** `4% => 6%`
 
 ## Artillery cruiser
 
@@ -994,6 +1036,8 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 ### Barrages
 > *Barrages were pretty difficult to use on most maps against railguns, increased range should help with artillery cruiser usability on a larger variety of maps.*
 
+* **Rate of fire:** `4 => 3`
+* **Number of bursts:** `8 => 6`
 * **Barrage and precision barrage ranges:** `2400 => 2650`
 * **Precision barrage:**
     * **Benefits from high ground:** `Yes => No`
@@ -1002,23 +1046,24 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 ## Fighter and gunship fabrication
 
 ### Tech
-> *Extremely potent tech for air rushes. Rush potential is reduced substantially but some of its strength is returned through strike fighter, gunship and bomber buffs.*
-* **Research cost:** `500CU 200RU => 450CU 280RU`
-* **Research time:** `70s => 80s`
+> *Slight cost rebalance to require higher RU commitment, RU costs of units in this tech is reduced.*
+
+* **Research cost:** `500CU 200RU => 450CU 250RU`
 
 ### Strike fighter
-> *Strike Fighter timings are extremely powerful and strike fighter numbers can grow very fast. These changes aim to reduce strike fighter timing attack strength (especially in CvC matchups, but also against gaalsien railgun openings), and make soft countering strike fighters easier (hitpoint reduction).*
+> *Strike Fighter timings are extremely powerful and their numbers can grow very fast. These changes aim to reduce strike fighter timing attack strength (especially in CvC matchups, but also against gaalsien railgun openings), and make soft countering strike fighters easier (hitpoint reduction).*
 
-* **Production time:** `15s => 21s`
-* **Cost:** `150CU 100RU => 180CU 85RU`
+* **Cost:** `150CU 100RU => 200CU 85RU`
+* **Production time:** `15s => 26s`
 * **Hitpoints:** `650 => 490`
 * **Armor:** `2 => 4`
-* **Rocket count:** `10 => 8`
-* **Rate of fire:** `2 => 3`
-* **Burst:** `1000ms => 667ms`
-* **Reload:** `3000ms => 3332ms`
-* **Field of fire:** `50 => 55`
-* **Range:** `1200 => 1250`
+* **Weapon:**
+    * **Rocket count:** `10 => 8`
+    * **Rate of fire:** `2 => 3`
+    * **Burst:** `1000ms => 667ms`
+    * **Reload:** `3000ms => 3332ms`
+    * **Field of fire:** `50 => 55`
+    * **Range:** `1200 => 1250`
 * **Max hangar size:** `15 => 12`
 
 ### Gunship
@@ -1054,7 +1099,7 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 ## Gaalsien carrier
 
 ### General stats
-> *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coinside with railgun nerfs, however.*
+> *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however.*
 
 * **Hitpoints:** `12500 => 11000`
 * **Armor:** ``40 => 35`
@@ -1091,23 +1136,37 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 ## Khaaneph carrier
 
 ### General stats
-> *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coinside with railgun nerfs, however. Khaaneph armor was abnormally low compared to other carrier which, combined with its slow speed, was a bit too punishable in some situations.*
+> *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however. Khaaneph armor was abnormally low compared to other carrier which, combined with its slow speed, was a bit too punishable in some situations. The new mobility support makes this carrier considerably faster, adds sensors range and speed*
 
-* **Hitpoints:** `12500 => 11500`
-* **Armor:** `20 => 30`
+* **Hitpoints:** `12500 => 10500`
+* **Armor:** `20 => 25`
+* **Sensor radius:** `800 => 1000`
+* **Max speed:** `40 => 30`
 
-### Cruise missiles
-> *Khaaneph cruise missiles have proven themselves to be extremely powerful overal and especially against enemy carriers.*
+### Cruise missiles systems
+> *Khaaneph cruise missiles have proven themselves to be extremely powerful overall and especially against enemy carriers.*
 
+* **Damage:** `400 => 450`
 * **Damage against carriers:** `150% => 100%`
 * **Affected by high ground:** `Yes => No`
+* **Range bonuses:**
+    * **Level 2:** `0 => 100`
+    * **Level 3:** `0 => 200`
+    * **Level 4:** `0 => 350`
+    * **Level 5:** `36% => 500`
+* **Reload bonuses:**
+    * **Level 2:** `1 => 0`
+    * **Level 3:** `2 => 1`
+    * **Level 4:** `3 => 2`
+    * **Level 5:** `4 => 3`
 
 ### Weapon systems
-> *Khaaneph carrier does not have range systems on it, meaning the range of its basic weaponry can never be increased. This meant that weapons systems power shunt was mostly useless as it could never get range on the opponent. Increasing base range of carrier weapons can be dangerous for early game therefore khaan carrier is receiving some nerfs to its basic weapons for low levels. High power level PDs receive the highest available rate of fire compared to other carriers, however, to make this system more desirable.*
+> *Khaaneph carrier does not have range systems on it, meaning the range of its basic weaponry can never be increased. This meant that weapons systems power shunt was mostly useless as it could never get range on the opponent. Increasing base range of carrier weapons can be dangerous for early game therefore Khaaneph carrier is receiving some nerfs to its basic weapons for low levels. High power level PDs receive the highest available rate of fire compared to other carriers, however, to make this system more desirable.*
 
 * **PD rate of fire:** `8 => 6`
 * **PD ranges:** `250/500/750 => 350/650/950`
 * **Missile systems range:** `750 => 950`
+* **Missile systems wind-up:** `0.25s => 0.5s`
 * **Power shunt now provides extra fire rate to missile systems**
 * **Rate of fire bonuses:**
     * **Level 1:** `'set to 17' => 'increase by 50%'`
@@ -1117,15 +1176,24 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
     * **Level 5:** `'set to 38' => 'increase by 50%'`
 * **Fixed a bug where level 5 weapon system power shunt would decrease the range of one of the PD weapons**
 
-### Speed suppor aura power shunt
-> *The diameter of level 5 speed boost was larger than the range of a railgun. In team games this would allow for somewhat oppressive speed boost blobbing strategies which should now be slightly more difficult to execute correctly.*
+### Mobility support system
+> *The diameter of level 5 speed boost was larger than the range of a railgun. In team games this would allow for somewhat oppressive speed boost blobbing strategies which should now be slightly more difficult to execute correctly. Despite this, this system was generally extremely underutilized and is therefore getting secondary functionality which makes this system desirable over other systems in both a lategame head to head carrier brawl and early game skirmishing.*
 
-* **Aura area of effect:**
-    * **Level 1:** `600 => 420`
-    * **Level 2:** `600 => 420`
-    * **Level 3:** `800 => 560`
-    * **Level 4:** `800 => 560`
-    * **Level 5:** `1200 => 840`
+* **Renamed to:** `Mobility and Sensors Support`
+* **Now grants sensors range to all medium and large units (meaning entire fleet except strike craft and workers)**
+* **Now has double effectiveness for the carrier itself**
+* **AOE radius:**
+    * **Level 1:** `420 => 600`
+    * **Level 2:** `420 => 600`
+    * **Level 3:** `800 => 750`
+    * **Level 4:** `800 => 750`
+    * **Level 5:** `1200 => 1000`
+* **Added sensors range bonus:**
+    * **Level 1:** `+70 sensors range`
+    * **Level 2:** `+110 sensors range`
+    * **Level 3:** `+150 sensors range`
+    * **Level 4:** `+200 sensors range`
+    * **Level 5:** `+250 sensors range`
 
 ## Baserunner
 
@@ -1146,33 +1214,44 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 > *Slight ease of use improvement for this ability as it is considerably weaker than the combination of Khaaneph baserunner abilities*
 
 * **Deployment range:** `2350 => 2600`
+* **Recharge:** `200s => 120s`
+* **Hitpoints:** `600 => 250`
+
+### Smoke ability
+> *Baserunners could survive on their own a bit too much. On the other hand, the recharge of this ability was rather long and could be tuned down.*
+
+* **Recharge:** `180s => 70s`
+* **Burst count:** `4 => 3`
 
 ### Blast drone
 > *A 1PC skimmer together with blast drones rush was nearly impossible to stop even with perfect response and good micro. Additionally, late game BD use was limited and expensive. The new BD iteration should hopefully provide extra motivation for getting them later in the game while fixing the issues with early game rushes.*
 
 * **Cost:** `150CU => 100CU`
 * **Hitpoints:** `500 => 400`
-* **Construction time:** `20s => 40s`
+* **Construction time:** `20s => 45s`
 * **Population:** `0 => 1`
 * **Falloff:** `None => Quadratic`
 * **AOE:** `200 => 260`
 * **Damage:** `650 => 680`
-* **Damage packets:** `10 => 20`
+* **Damage packets:** `10 => 15`
 
 ## Sandskimmer
 
 ### General stats
-> *Discrepancy between LAV and Skimmer hitpoints was very large and caused almost every area of effect weapon to be extremely difficult to balance. Skimmers also needed a slight decrease in power.*
+> *Discrepancy between LAV and Skimmer hitpoints was very large and caused almost every area of effect weapon to be extremely difficult to balance. Skimmers also needed a slight decrease in power. Slightly increased sensors range should help skimmers avoid AAV and other early game threats easier.*
 
-* **Hitpoints:** `650 => 620`
+* **Hitpoints:** `650 => 590`
+* **Sensor radius:** `1000 => 1050`
 * **Armor:** `0 => 1`
 
 ### Weapon
-> *It is generally easier to counter strike craft in the mod, the extra dps was introduced in order to bring back the rock-paper-scissors mechanic, meaning strike craft will be capable of countering enemy railguns.*
+> *It is generally easier to counter strike craft in the mod, the extra DPS was introduced in order to bring back the rock-paper-scissors mechanic, meaning strike craft will be capable of countering enemy railguns. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
 
+* **Damage:** `15 => 13`
+* **ROF:** `3 => 4`
 * **Reload:** `0.1s => 0.5s`
 * **Cooldown:** `0.398s => 0.22s`
-* **Max burst:** `1s => 0.9s`
+* **Burst:** `0.67-1s => 0.71-0.77s`
 
 ### Upgrades
 > *These changes are part of the effort of reducing supply blocking due to upgrades for gaalsien.*
@@ -1188,11 +1267,11 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 * **Refinery tech cost:** `700CU => 600CU 40RU`
 * **Cost:** `600CU => 640CU 60RU`
 
-### AA weapon:
+### AA weapon
 > *DPS was rebalanced slightly to be lower on short and medium range but stronger on long range, an additional slight range increase is introduced in order to help mitigate early game air plays. This should ensure that air is a bit harder to control and will most likely be bleeding hitpoints when attempting to operate close to production cruisers.*
 
 * **Rate of fire:** `15 => 10`
-* **Range:** `1100 => 1180`
+* **Range:** `1100 => 1250`
 * **Accuracy:**
     * **Short:** `55% => 70%`
     * **Medium:** `40% => 60%`
@@ -1201,15 +1280,16 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 * **Damage against probes:** `100% => 50%`
 
 ## Assault ship
-> *Slightly reducing tech cost to make it this tech path more desirable in more situations. Range increase should help with unit usability issues as well as improve overall effectiveness, particularly against units it's intended to counter. The unit is extremely strong when it can get into position to fire, so, to reduce the impact of assault ship rushes and assault ship early game dominance, hitpoints of the assault ship are getting reduced. To mitigate midgame assault ship spam and all-in aggro strategies, their cost is getting increased. Additionally, now that assault ships have good range to do consistent damage to strike craft, their large area of effect is no longer required for them to be effective at countering them. Extra damage on the main gun makes assault ships extremely deadly against enemy workers with aoe, as well as more potent at countering enemy armor.*
+> *Slightly reducing tech cost to make it this tech path more desirable in more situations. Range increase should help with unit usability issues as well as improve overall effectiveness, particularly against units it's intended to counter. The unit is extremely strong when it can get into position to fire, so, to reduce the impact of assault ship rushes and assault ship early game dominance, hitpoints of the assault ship are getting reduced. To mitigate midgame assault ship spam and all-in aggro strategies, their cost is getting increased. Additionally, now that assault ships have good range to do consistent damage to strike craft, their large area of effect is no longer required for them to be effective at countering them, therefore it is getting falloff. Extra damage on the main gun makes assault ships extremely deadly against enemy workers, as well as more potent at countering enemy armor.*
 
 * **Tech cost:** `600CU 100RU => 500CU 100RU`
-* **Cost:** `220CU 40RU => 260CU 40RU`
-* **Hitpoints:** `1400 => 960`
-* **Armor:** `6 => 7`
+* **Cost:** `220CU 40RU => 280CU 35RU`
+* **Hitpoints:** `1400 => 920`
+* **Armor:** `6 => 8`
 * **Damage:** `24 => 29`
-* **AOE:** `80 => 70`
-* **Range:** `700 => 745`
+* **AOE:** `80 => 90`
+* **Falloff:** `None => Linear`
+* **Range:** `700 => 740`
 
 ## Missile ship
 
@@ -1239,7 +1319,7 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 * **Weapon:**
     * **Recharge:** `60s => 90s`
     * **Damage:** `150 => 170`
-    * **AOE:** `80 => 150`
+    * **AOE:** `80 => 160`
     * **Falloff:** `None => Linear`
     * **Benefits from high ground:** `Yes => No`
 * **Recharge upgrade cost and research time:** `300CU 85RU 30s => 220CU 60RU 15s`
@@ -1285,11 +1365,15 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 * **Experience value:** `450 => 550`
 * **Range:** `2100 => 1860`
 
-### EMP rounds upgrade
-> *This upgrade has seen very little use throughout the game's history. Giving slight buffs and large research time reductions to make it more desirable.*
+### EMP rounds
+> *This upgrade has seen very little use throughout the game's history. Effectiveness buffs and large research time reductions to make it more desirable.*
 
-* **Cost:** `250CU 150RU => 200CU 100RU`
-* **Research time:** `45s => 30s`
+* **Upgrade cost:** `250CU 150RU => 200CU 100RU`
+* **Upgrade research time:** `45s => 30s`
+* **Wind-up:** `1s => 0.75s`
+* **AOE:** `100 => 150`
+* **Range:** `1200 => 1350`
+* **Duration:** `1.5s => 2.5s`
 
 ### Ranged calibration upgrade
 > *This upgrade has seen very little use throughout the game's history. Giving slight buffs and large research time reductions to make it more desirable.*
@@ -1316,7 +1400,7 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 ### Weapon
 > *Interceptor reload time was abnormally short (compared to 8s reload time of strike fighters), often allowing it to fire off the start of a second volley within a single pass over its target. This also made interceptors incredibly strong in dogfights and when they would circle very large targets (carriers), or when chasing the enemy. Overall rocket count per plane isn't changed, but 4 rockets are shot per burst instead of 3, decreasing the total number of bursts from 4 to 3. These changes will decrease the overall damage payload of interceptors per sortie. It will also decrease the RNG nature of interceptors fighting ground targets as more rockets will land resulting in more fair spread of damage to the intended targets. Damage per burst is going down from 450 to 440 (intent is to not change this very much), damage per sortie is going down from 1800 to 1320. Additionally, this set of changes will help mitigate the carrier sniping strategies utilized in team games.*
 
-* **Reload:** `2s => 4s`
+* **Reload:** `2s => 3.8s`
 * **Weapon base damage:** `150 => 110`
 * **Weapon rate of fire:** `3 => 4`
 
@@ -1336,16 +1420,24 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 * **Research time:** `135s => 110s`
 
 ### Gaalsien siege cruiser
-> *Getting to artillery should now be much faster and easier. This is designed this way to allow for players to play against enemy railguns without the need of using own railguns, albeit in a still risky way, especially against midgame railgun pushes. Due to hitpoint changes, artillery battles will get resolved faster , this makes countering artillery with own artillery less desirable as it's more risky. Additionally, sniping artillery cruisers was too difficult overall.*
+> *Getting to artillery should now be much faster and easier. This is designed this way to allow for players to play against enemy railguns without the need of using own railguns, albeit in a still risky way, especially against midgame railgun pushes. Due to hitpoint changes, artillery battles will get resolved faster. This makes countering artillery with own artillery less desirable as it's more risky. Additionally, sniping artillery cruisers was too difficult overall. Gaalsien siege cruiser is becoming a lot less cheap and more mobile, at the cost of decreased barrage effectiveness.*
 
-* **Tech research cost:** `600CU 450RU => 450CU 350RU`
-* **Tech research time:** `90s => 65s`
-* **Cost:** `600CU 200RU => 400CU 160RU`
-* **Production time:** `60s => 50s`
+* **Tech research cost:** `600CU 450RU => 450CU 150RU`
+* **Tech research time:** `90s => 55s`
+* **Cost:** `600CU 200RU => 300CU 120RU`
+* **Production time:** `60s => 30s`
 * **Population:** `3 => 4`
 * **Hitpoints:** `2500 => 2100`
 * **Armor:** `3 => 5`
-* **Barrage range:** `2000 => 2250`
+* **Barrage:**
+    * **Damage:** `200 => 160`
+    * **Rate of fire:** `3 => 4`
+    * **Number of bursts:** `6 => 4`
+    * **Range:** `2000 => 1850`
+* **Movement attributes:**
+    * **Max speed:** `55 => 65`
+    * **Acceleration time:** `1.5s => 1.25s`
+    * **Braking time:** `1.5s => 1.25s`
 
 ### Gaalsien siege cruiser autofire
 > *Autofire is an extremely unsatisfying mechanic, exceptionally annoying to deal with for an opposing player while requiring little-to-no effort on the part of artillery cruiser users to be effective. It'll remain useful for forcing enemy to constantly micro their units and force the opponent to displace if they are in range, but will ultimately be less punishing and easier to deal with.*
@@ -1353,7 +1445,7 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 * **Autofire damage:** `200 => 140`
 
 ### Khaaneph siege cruiser
-> *Khaaneph siege cruiser is very strong and becomes problematic when spammed in team games, besides being very strong on maps with certain topology which allows siege cruisers to constrict players completely in their base. These changes should increase the critical mass required for siege cruisers to be able to counter its counters such as railguns, and reduce the potential of providing free damage on the enemy while keeping the barrage feeling powerful. Getting hit by KSC main weapon should be slightly less punishing overall, and microing against it is easier. However, the damage is applied over a considerably larger area, making it more consistent for the situations where units are trying to dodge it. Additionally, this cruiser was impossible to weed out from behind dunes. Armor reduction means that this cruiser can get swarmed even by lower damage weapon using units.*
+> *Khaaneph siege cruiser is very strong and becomes problematic when spammed in team games, besides being very strong on maps with certain topology which allows siege cruisers to constrict players completely in their base. These changes should increase the critical mass required for siege cruisers to be able to counter its counters such as railguns, and reduce the potential of providing free damage on the enemy while keeping the barrage feeling powerful. Getting hit by KSC main weapon should be slightly less punishing overall, and micro against it is easier. However, the damage is applied over a considerably larger area, making it more consistent for the situations where units are trying to dodge it. Additionally, this cruiser was impossible to weed out from behind dunes. Armor reduction means that this cruiser can get swarmed even by lower damage weapon using units.*
 
 * **Hitpoints:** `3350 => 3050`
 * **Armor:** `15 => 13`
@@ -1369,14 +1461,14 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
     * **AOE:** `150 => 240`
     * **Damage against small targets:** `100% => 65%`
     * **Damage against carriers:** `100% => 80%`
-    * **Number of bursts:** `8 => 4`
+    * **Number of bursts:** `3 => 4`
     * **Cooldown:** `0.8s => 2.5s`
     * **Recharge:** `50s => 65s`
 
 ## Honourguard cruiser
 
 ### General stats
-> *It should now be easier to field honourguard cruisers and overall weapon performance is more more consistent. A rebalance to unit's hitpoint pool was required to curb the overall tankiness and make it slightly easier to counter.*
+> *It should now be easier to field honourguard cruisers and overall weapon performance is more more consistent. A rebalance to unit's hitpoint pool was required to curb the overall survivability and make it slightly easier to counter.*
 
 * **Tech time:** `75s => 65s`
 * **Cost:** `700CU 240RU => 550CU 270RU`
@@ -1385,7 +1477,7 @@ Soban railguns are extremely powerful, they have superior dps, superior hitpoint
 * **Max speed:** `60 => 54`
 
 ### Weapon
-> *Honourguard cruisers had the potential to one-shot enemy strike craft force from long range when firing at them from high ground, which could often end the game very quickly. The damage that the weapon had also made its overall dps extremely low, meaning it was very bad at countering anything which had a meaningful hitpoint pool. The weapon should now perform much more consistently and feel powerful even against bulkier targets.*
+> *Honourguard cruisers had the potential to one-shot enemy strike craft force from long range when firing at them from high ground, which could often end the game very quickly. The damage that the weapon had also made its overall DPS extremely low, meaning it was very bad at countering anything which had a meaningful hitpoint pool. The weapon should now perform much more consistently and feel powerful even against bulkier targets.*
 
 * **Main weapon:**
     * **AOE:** `200 => 220`
