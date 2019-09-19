@@ -140,18 +140,18 @@ Special thanks to Majiir and SSSS for paving the way towards a balance mod being
         - [General stats](#general-stats-9)
         - [Weapon](#weapon-2)
         - [Afterburner upgrade:](#afterburner-upgrade)
+    - [Precision bomber](#precision-bomber)
+        - [General stats](#general-stats-10)
+        - [Upgrades](#upgrades-1)
     - [Siege cruiser](#siege-cruiser)
         - [Range upgrade](#range-upgrade)
         - [Gaalsien siege cruiser](#gaalsien-siege-cruiser)
         - [Gaalsien siege cruiser autofire](#gaalsien-siege-cruiser-autofire)
         - [Khaaneph siege cruiser](#khaaneph-siege-cruiser)
     - [Honourguard cruiser](#honourguard-cruiser)
-        - [General stats](#general-stats-10)
+        - [General stats](#general-stats-11)
         - [Weapon](#weapon-3)
         - [Anti-air](#anti-air-1)
-    - [Precision bomber](#precision-bomber)
-        - [General stats](#general-stats-11)
-        - [Upgrades](#upgrades-1)
 
 # Summary
 
@@ -224,7 +224,8 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Soban railgun: DPS ![↓↓](nerf.png)
 * Assault railgun:
     * Cost ![↓↓](nerf.png)
-    * Maneuverability ![↓↓](nerf.png)
+    * Movement speed ![↓↓](nerf.png)
+    * Acceleration ![↓↓](nerf.png)
     * Dart maneuver tech ![↑↑](buff.png)
     * Hitpoints ![↑↑](buff.png)
     * Armor upgrade hitpoints granted ![↓↓](nerf.png) (+50, +100)
@@ -258,6 +259,8 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Tech ![↑↑](buff.png)
     * Cost ![↑↑](buff.png)
     * Damage ![↓↓](nerf.png)
+    * Coalition bomber hitpoints ![↑↑](buff.png)
+    * Gaalsien bomber maneuverability ![↓↓](nerf.png)
     * AOE ![↑↑](buff.png)
 * Coalition artillery cruiser:
     * Tech ![↑↑](buff.png)
@@ -306,6 +309,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Cost ![~~](adjust.png)
     * Weapon: Falloff ![↓↓](nerf.png)![↓↓](nerf.png), AOE ![↑↑](buff.png), damage ![↑↑](buff.png), ROF ![↑↑](buff.png), wind-up ![↑↑](buff.png)
     * Hitpoints ![↓↓](nerf.png)![↓↓](nerf.png)
+    * Movement speed ![↓↓](nerf.png)
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
@@ -1422,6 +1426,33 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Max speed bonus: `60% => 40%`
 * Turn radius reduction: `60% => 40%`
 
+## Precision bomber
+
+### General stats
+> *Improved accessibility of tech and the unit itself should make this tech path much more desirable. Precision bomber has incredible maneuverability parameters, curbing those to make the unit harder to control and slower to deliver follow-up bombs on target. The damage characteristics have been updated to make the bomber worse at destroying enemy AA vehicles but still potent at dealing with enemy cruisers. Area of effect improved, but modifier against small targets added to prevent the bombers from becoming too strong against strike craft and salvagers.*
+
+* Research cost: `400CU 275RU => 300CU 175RU`
+* Research time: `65s => 45s`
+* Cost: `300CU 220RU => 300CU 140RU`
+* Production time: `32s => 22s`
+* Population: `2 => 3`
+* Hitpoints: `1250 => 1050`
+* Max speed: `550 => 450`
+* Turn radius: `225 => 300`
+* Damage: `1000 to 800`
+* Reload: `1.5s => 3.5s`
+* Damage against small targets: `100% => 60%`
+* AOE: `60 => 140`
+* Falloff: `None => Quadratic`
+
+### Upgrades
+> *Extremely expensive to fully upgrade gaalsien bombers, making these upgrades very undesirable unless all-inning. Bomber usability falls off as counters get added to the battlefield, investing into both bomber count and their upgrades normally is a very bad idea, these changes along with other air and anti-air rebalances should help with these upgrades become more desirable.*
+
+* Rearm upgrade:
+    * Cost: `350CU 70RU => 200CU 70RU`
+    * Research time: `40s => 20s`
+* Payload upgrade cost: `500CU 200RU => 400CU 200RU`
+
 ## Siege cruiser
 
 ### Range upgrade
@@ -1503,30 +1534,3 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Research cost: `600CU 370RU => 300CU 200RU`
 * Wind-up: `3s => 1.5s`
 * Reload: `0 => 3s`
-
-## Precision bomber
-
-### General stats
-> *Improved accessibility of tech and the unit itself should make this tech path much more desirable. Precision bomber has incredible maneuverability parameters, curbing those to make the unit harder to control and slower to deliver follow-up bombs on target. The damage characteristics have been updated to make the bomber worse at destroying enemy AA vehicles but still potent at dealing with enemy cruisers. Area of effect improved, but modifier against small targets added to prevent the bombers from becoming too strong against strike craft and salvagers.*
-
-* Research cost: `400CU 275RU => 300CU 175RU`
-* Research time: `65s => 45s`
-* Cost: `300CU 220RU => 300CU 140RU`
-* Production time: `32s => 22s`
-* Population: `2 => 3`
-* Hitpoints: `1250 => 1050`
-* Max speed: `550 => 450`
-* Turn radius: `225 => 300`
-* Damage: `1000 to 800`
-* Reload: `1.5s => 3.5s`
-* Damage against small targets: `100% => 60%`
-* AOE: `60 => 140`
-* Falloff: `None => Quadratic`
-
-### Upgrades
-> *Extremely expensive to fully upgrade gaalsien bombers, making these upgrades very undesirable unless all-inning. Bomber usability falls off as counters get added to the battlefield, investing into both bomber count and their upgrades normally is a very bad idea, these changes along with other air and anti-air rebalances should help with these upgrades become more desirable.*
-
-* Rearm upgrade:
-    * Cost: `350CU 70RU => 200CU 70RU`
-    * Research time: `40s => 20s`
-* Payload upgrade cost: `500CU 200RU => 400CU 200RU`
