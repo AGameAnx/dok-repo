@@ -1,6 +1,31 @@
-# Introduction <!-- omit in toc -->
+# Introduction
 
-Use the following command in match setup chat to load the mod using [SSSS more-maps mod](https://github.com/S5SS/dok-patch/releases/) (version 1.1t required):
+## About
+
+**Jaraci patch** is a **Homeworld: Deserts of Kharak** modification created by AGameAnx with the help of some of the
+best competitive Deserts of Kharak players. The mod focuses on improving faction and unit interactions/balance
+throughout the game while retaining most of the intuitive Deserts of Kharak feel.
+
+Please join [Homeworld Universe discord](https://discord.gg/homeworld) for usage help, to discuss the mod, download
+replays and participate in mod tournaments!
+
+Casts of previous **Jaraci Cup** games can be found on [Bozocow's youtube channel](https://www.youtube.com/user/Bozothcow/videos).
+
+Deserts of Kharak unofficial ranked ladder, which also includes **Jaraci patch ranked ladder** and downloadable replays [can be found here](https://docs.google.com/spreadsheets/d/1_F2TLo5-lys_RwV6Ql6kVzlgnUqdZJTW2Kiex31WAHY).
+
+The mod is created using [Subsystem](https://github.com/AGameAnx/Subsystem). It is not recommended to install Subsystem
+on its own, however. Subsystem comes as part of the more-maps mod (see [how to play](#how-to-play)).
+
+Special thanks to Majiir and SSSS for paving the way towards a balance mod being possible, to Descara and Bozocow for
+being awesome support, discussion and playtest help.
+
+## How to play
+
+It is recommended to play Jaraci patch using the [SSSS more-maps mod](https://github.com/S5SS/dok-repo/releases/download/maps-v1.1/more-maps-v1.1.zip) (version 1.1t required)
+
+More-maps mod allows players to load custom layouts and attribute patches directly in multiplayer lobbies. It does not affect your ability to play vanilla Deserts of Kharak games.
+
+Use the following command in match setup chat to load the mod:
 
 **`/p jaraci`**
 
@@ -8,15 +33,18 @@ If above version is not up to date with the recent changes, its version will be 
 
 **`/p agame`**
 
-Special thanks to Majiir and SSSS for paving the way towards a balance mod being possible, to Descara for being an awesome support, discussion and playtest help.
-
-## Mod releases <!-- omit in toc -->
+## Mod releases
 
 * Tournament: [jaraci.json](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci.json)
 * Development: [agame.json](https://github.com/S5SS/dok-repo/blob/master/patches/agame.json)
 
-# Table of contents <!-- omit in toc -->
+# Table of contents
 
+- [Introduction](#introduction)
+    - [About](#about)
+    - [How to play](#how-to-play)
+    - [Mod releases](#mod-releases)
+- [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
     - [2019-09-19 (tournament version)](#2019-09-19-tournament-version)
@@ -160,9 +188,9 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Armor upgrades ![↓↓](nerf.png) (1 armor per upgrade in all cases)
 * Carriers:
     * Movement speed ![↓↓](nerf.png)
-    * PD/Missile system ranges ![↓↓](nerf.png) (except Khaaneph/Soban)
     * Power upgrade cost ![↓↓](nerf.png)
     * PD effectiveness early ![↑↑](buff.png) late ![↓↓](nerf.png)
+    * PD/Missile system ranges ![↓↓](nerf.png) (except Khaaneph/Soban)
     * Soban carrier: armor ![↓↓](nerf.png), DPS ![↑↑](buff.png)![↑↑](buff.png), Range ![↑↑](buff.png)
     * Khaaneph PD and missile range ![↑↑](buff.png)
 * Nukes:
@@ -191,6 +219,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Sandskimmer: damage per shot ![↓↓](nerf.png), DPS ![↑↑](buff.png), hitpoints ![↓↓](nerf.png)
 * Baserunners: cost ![↓↓](nerf.png) (RU cost added), AA ![↑↑](buff.png)![↑↑](buff.png)
 * Gaalsien baserunner regeneration ability ![~~](adjust.png)
+* Gaalsien baserunner deploy sensor ability: range ![↑↑](buff.png), recharge ![↑↑](buff.png), hitpoints ![↓↓](nerf.png)
 * Soban baserunner jammer: Cost ![↑↑](buff.png)![↑↑](buff.png) (Free), slow effect ![↑↑](buff.png), vision radius ![↑↑](buff.png)
 * Coalition probe: cost ![↓↓](nerf.png), survivability ![~~](adjust.png), sensors ![↑↑](buff.png)
 * Coalition turret: sensors ![↓↓](nerf.png), weapon ![~~](adjust.png)
