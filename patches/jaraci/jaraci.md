@@ -315,9 +315,8 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 # Recent changes
 
 ## 2019-09-19 (tournament version)
-*Not reflected in the main changelog*
 * Coalition/Soban:
-    * Strike fighter and gunship fabrication:
+    * Fighter and gunship fabrication:
         * Upgrade research time: `80s => 70s`
         * Strike fighter production time: `25s => 26s`
     * Production Upgrade:
@@ -335,7 +334,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Sandskimmer: (DPS: `27.9070 => 27.8268`)
         * Damage: `15 => 13`
         * ROF: `3 => 4`
-        * Burst: `0.67-0.9s => 0.71-0.75s`
+        * Burst: `0.67-0.9s => 0.7-0.76s`
     * Assault ship:
         * Falloff: `Linear => Quadratic`
         * AOE: `90 => 110`
@@ -864,15 +863,14 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ## LAV
 > *LAV have been revealed as a center point of effective coalition play. Oppressive early game strategies along with LAV providing a strong mid/late game defensive core for the coalition army is the main reasoning behind the reduction of overall LAV effectiveness. Due to the mod increasing the power of various strike craft counters, LAV have become extremely fragile in the lategame and their large discrepancy with sandskimmer hitpoints has been a big issue in balancing various area of effect units. New LAV hitpoints will make them sustain damage a bit better. Production time is increased substantially due to production upgrade being available earlier and it was needed to curb the power of LAV openers in general. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
 
-* Build time: `8s => 11s`
+* Tech research time: `35s => 40s`
+* Build time: `8s => 13s`
 * Hitpoints: `500 => 570`
-* Armor: `0 => 1`
 * Weapon:
-    * Base damage: `15 => 11`
-    * Rate of fire: `5 => 6`
-    * Burst: `0.8-1.2s => 0.8-0.9s`
+    * Base damage: `15 => 12`
+    * Burst: `0.8-1.2s => 0.95-1.05s`
     * Burst count: `4 => 2`
-    * Cooldown: `0.8s => 0.42s`
+    * Cooldown: `0.8s => 0.4s`
     * Turret rotation speed: `180 => 250`
     * Damage against probes: `100% => 50%`
 
@@ -1272,7 +1270,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * ROF: `3 => 4`
 * Reload: `0.1s => 0.5s`
 * Cooldown: `0.398s => 0.22s`
-* Burst: `0.67-1s => 0.71-0.77s`
+* Burst: `0.67-1s => 0.7-0.76s`
 
 ### Upgrades
 > *These changes are part of the effort of reducing supply blocking due to upgrades for gaalsien.*
@@ -1308,7 +1306,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Hitpoints: `1400 => 920`
 * Armor: `6 => 8`
 * Damage: `24 => 29`
-* AOE: `80 => 90`
+* AOE: `80 => 110`
 * Falloff: `None => Linear`
 * Range: `700 => 740`
 
