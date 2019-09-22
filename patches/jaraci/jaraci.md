@@ -47,7 +47,8 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
-    - [2019-09-19 (tournament version)](#2019-09-19-tournament-version)
+    - [2019-09-22 (tournament version)](#2019-09-22-tournament-version)
+    - [2019-09-19](#2019-09-19)
     - [2019-09-14](#2019-09-14)
     - [2019-09-13](#2019-09-13)
     - [2019-09-12](#2019-09-12)
@@ -343,7 +344,22 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
-## 2019-09-19 (tournament version)
+## 2019-09-22 (tournament version)
+* Coalition/Soban:
+    * LAV production time: `13s => 12s`
+* Gaalsien/Khaaneph:
+    * Production cruiser AA: (DPS `67.5838/57.9289/43.4467 => 79.2208/62.2449/45.2690`)
+        * Rate of fire: `10 => 12`
+        * Damage against probes: `50% => 35%`
+        * Accuracy:
+            * Medium: `60 => 55`
+            * Long: `45 => 40`
+* Gaalsien:
+    * Siege cruiser:
+        * Hitpoints: `2100 => 1600`
+        * Number of bursts: `4 => 3`
+
+## 2019-09-19
 * Coalition/Soban:
     * Fighter and gunship fabrication:
         * Upgrade research time: `80s => 70s`
@@ -893,7 +909,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 > *LAV have been revealed as a center point of effective coalition play. Oppressive early game strategies along with LAV providing a strong mid/late game defensive core for the coalition army is the main reasoning behind the reduction of overall LAV effectiveness. Due to the mod increasing the power of various strike craft counters, LAV have become extremely fragile in the lategame and their large discrepancy with sandskimmer hitpoints has been a big issue in balancing various area of effect units. New LAV hitpoints will make them sustain damage a bit better. Production time is increased substantially due to production upgrade being available earlier and it was needed to curb the power of LAV openers in general. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
 
 * Tech research time: `35s => 40s`
-* Build time: `8s => 13s`
+* Build time: `8s => 12s`
 * Hitpoints: `500 => 570`
 * Weapon:
     * Base damage: `15 => 12`
@@ -1318,12 +1334,12 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 ### AA weapon
 > *DPS was rebalanced slightly to be lower on short and medium range but stronger on long range, an additional slight range increase is introduced in order to help mitigate early game air plays. This should ensure that air is a bit harder to control and will most likely be bleeding hitpoints when attempting to operate close to production cruisers.*
 
-* Rate of fire: `15 => 10`
+* Rate of fire: `15 => 12`
 * Range: `1100 => 1250`
 * Accuracy:
     * Short: `55% => 70%`
-    * Medium: `40% => 60%`
-    * Long: `25% => 45%`
+    * Medium: `40% => 55%`
+    * Long: `25% => 40%`
 * Hidden accuracy modifiers against probes removed
 * Damage against probes: `100% => 50%`
 
@@ -1502,12 +1518,12 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Cost: `600CU 200RU => 300CU 120RU`
 * Production time: `60s => 30s`
 * Population: `3 => 4`
-* Hitpoints: `2500 => 2100`
+* Hitpoints: `2500 => 1600`
 * Armor: `3 => 5`
 * Barrage:
     * Damage: `200 => 160`
     * Rate of fire: `3 => 4`
-    * Number of bursts: `6 => 4`
+    * Number of bursts: `6 => 3`
     * Range: `2000 => 1850`
 * Movement attributes:
     * Max speed: `55 => 65`
