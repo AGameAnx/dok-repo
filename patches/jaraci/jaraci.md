@@ -1166,7 +1166,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however.*
 
 * Hitpoints: `12500 => 11000`
-* Armor: ``40 => 35`
+* Armor: `40 => 35`
 
 ### Point defense weapons
 > *Lower level PD performance increased, but higher level rate of fire reduced (due to damage rework of carrier PD weapons)*
