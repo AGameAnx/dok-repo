@@ -47,7 +47,8 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
-    - [2019-09-22 (tournament version)](#2019-09-22-tournament-version)
+    - [2019-09-28 (tournament version)](#2019-09-28-tournament-version)
+    - [2019-09-22](#2019-09-22)
     - [2019-09-19](#2019-09-19)
     - [2019-09-14](#2019-09-14)
     - [2019-09-13](#2019-09-13)
@@ -168,7 +169,7 @@ If above version is not up to date with the recent changes, its version will be 
     - [Interceptor](#interceptor)
         - [General stats](#general-stats-9)
         - [Weapon](#weapon-2)
-        - [Afterburner upgrade:](#afterburner-upgrade)
+        - [Afterburner upgrade](#afterburner-upgrade)
     - [Precision bomber](#precision-bomber)
         - [General stats](#general-stats-10)
         - [Upgrades](#upgrades-1)
@@ -344,7 +345,15 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
-## 2019-09-22 (tournament version)
+## 2019-09-28 (tournament version)
+* Gaalsien/Khaaneph:
+    * Siege cruiser range upgrade research time: `110s => 50s`
+* Gaalsien:
+    * Siege cruiser:
+        * Damage: `160 => 150`
+        * Range: `1850 => 2000`
+
+## 2019-09-22
 * Coalition/Soban:
     * LAV production time: `13s => 12s`
 * Gaalsien/Khaaneph:
@@ -1468,7 +1477,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Weapon base damage: `150 => 110`
 * Weapon rate of fire: `3 => 4`
 
-### Afterburner upgrade:
+### Afterburner upgrade
 > *Afterburner upgrade is incredibly effective and can be oppressive in situations where a player can get it while being ahead in the game. Toned down its effects and increased the cost to make this upgrade more of a commitment.*
 
 * Cost: `350CU 90RU => 200CU 120RU`
@@ -1508,7 +1517,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 ### Range upgrade
 > *This is the longest research in the game, abnormally so.*
 
-* Research time: `135s => 110s`
+* Research time: `135s => 50s`
 
 ### Gaalsien siege cruiser
 > *Getting to artillery should now be much faster and easier. This is designed this way to allow for players to play against enemy railguns without the need of using own railguns, albeit in a still risky way, especially against midgame railgun pushes. Due to hitpoint changes, artillery battles will get resolved faster. This makes countering artillery with own artillery less desirable as it's more risky. Additionally, sniping artillery cruisers was too difficult overall. Gaalsien siege cruiser is becoming a lot less cheap and more mobile, at the cost of decreased barrage effectiveness.*
@@ -1521,10 +1530,9 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Hitpoints: `2500 => 1600`
 * Armor: `3 => 5`
 * Barrage:
-    * Damage: `200 => 160`
+    * Damage: `200 => 150`
     * Rate of fire: `3 => 4`
     * Number of bursts: `6 => 3`
-    * Range: `2000 => 1850`
 * Movement attributes:
     * Max speed: `55 => 65`
     * Acceleration time: `1.5s => 1.25s`
