@@ -347,7 +347,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 ## 2019-09-28 (tournament version)
 * Gaalsien/Khaaneph:
-    * Siege cruiser range upgrade research time: `110s => 50s`
+    * Siege cruiser upgrades:
+        * Range research time: `110s => 50s`
+        * EMP shell:
+            * Cost: `450CU 125RU => 250CU 100RU`
+            * Research time: `55s => 35s`
 * Gaalsien:
     * Siege cruiser:
         * Damage: `160 => 150`
