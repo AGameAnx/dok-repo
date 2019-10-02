@@ -248,6 +248,7 @@
               "1": {
                 "LocalizedShortDescriptionStringID": "Missiles Enabled",
                 "StatusEffectsToApply": { // we need to make sure we override Vanilla's desire to increase the firerate
+                  // FIXME: dummy weapon still thinks he is getting extra fire-rate
                   "C_Weapons_1_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
@@ -442,7 +443,396 @@
     // Soban //
     // ~~~~~ //
 
-    // fixme: do this
+    // brick all power reserves
+    "Research_S_Buff_Power_1": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Research_S_Buff_Power_2" ]
+      }
+    },
+
+    // brick LAV fab
+    "Tier_1_S_Escorts": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 10000,
+        "Resource2Cost": 10000
+      }
+    },
+
+    // production upgrades
+    "Research_Buff_S_Support_T1_ProductionBoost": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 250,
+        "ResearchTime": 60,
+        "Dependencies": []
+      }
+    },
+
+    "Research_Buff_S_Support_T2_ProductionBoost": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 250,
+        "ResearchTime": 60,
+        "Dependencies": [ "Research_Buff_S_Support_T1_ProductionBoost" ]
+      }
+    },
+
+    // support cruiser anti air
+    "Research_Buff_S_SupportCruiser_AA": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 50
+      }
+    },
+
+    // soban salvager
+    /* fixme: does this really just use the coal salv? */
+
+    // soban baserunner
+    "C_Sob_Baserunner_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 100
+      },
+      "WeaponAttributes": {
+        "C_Baserunner_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": true
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_C_Baserunner_ECMField": {
+          "Resource1Cost": 0,
+          "Resource2Cost": 50
+        },
+        "Ability_C_LaunchProbe_MP": {
+          "Resource1Cost": 0,
+          "Resource2Cost": 25
+        }
+      }
+    },
+
+    // soban support cruiser
+    "C_Sob_SupportCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 250
+      }
+    },
+
+    // soban armed logistics module
+    "C_Sob_PopcapScanner": {
+      "WeaponAttributes": {
+        "C_Sob_PopCapScanner_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 200,
+          "DamagePacketsPerShot": 20, // wow that's a lot eh? we don't want ALM spam to kill carriers
+          "AreaOfEffectRadius": 25,
+          "TargetPrioritizationAttributes": { // honestly I don't know what this does but if AGameAnx did it in Jaraci patch I imagine it's a good idea
+            "AngleWeight": 10,
+            "DistanceWeight": 0.5
+          }
+        }
+      }
+    },
+
+    // soban carrier
+    "C_Sob_Carrier_MP": {
+      "UnitAttributes": {
+        "MaxHealth": 10000,
+        "Armour": 10
+      },
+      "WeaponAttributes": {
+        "C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
+          "BaseDamagePerRound": 225
+        },
+        "C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 225,
+          "BurstPeriodMaxTimeMS": 0,
+          "BurstPeriodMinTimeMS": 0, // bursts on railguns rofl
+          // I get that this is how it works in vanilla but I want sob carrier dmg output to be more consistent.
+          "ReloadTimeMS": 0,
+          "CooldownTimeMS": 5000
+        }
+      },
+      "PowerShuntAttributes": {
+        "PowerSystems": {
+          "0": { // power in ALM's
+            "PowerLevels": {
+              "0": {
+                "LocalizedShortDescriptionStringID": "Logistics Modules Disarmed"
+              },
+              "1": {
+                "LocalizedShortDescriptionStringID": "Logistics Modules Armed",
+                "StatusEffectsToApply": {
+                  "ScannerShunt_1_StatusEffect": {
+                    "UnitTypeBuffsToApply": {
+                      "0": {
+                        "BuffSet": {
+                          "0": {
+                            "Value": 2000
+                          }, // Sensor Radius
+                          "1": {
+                            "Value": 2200
+                          }, // Contact Radius
+                          "5": {
+                            "Value": 1000
+                          } // Reload time
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "2": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "3": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "4": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "5": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              }
+            }
+          },
+          "1": { // power in weapons
+            "PowerLevels": {
+              "0": {
+                "LocalizedShortDescriptionStringID": "Missiles Disabled"
+              },
+              "1": {
+                "LocalizedShortDescriptionStringID": "Missiles Enabled",
+                "StatusEffectsToApply": { // we need to make sure we override Vanilla's desire to increase the firerate, accuracy, dmg, etc.
+                  "C_Sob_Weapons_1_StatusEffect": {
+                    "BuffsToApplyToTarget": {
+                      "0": {
+                        "BuffSet": {
+                          "1": {
+                            "Remove": true // would have set damage on the dummy weapon but we want rail damage to be unchanged
+                          },
+                          // FIXME: dummy weapon still thinks he is getting extra fire-rate
+                          "2": {
+                            "Remove": true // I'm... not sure what this would have done rofl
+                          },
+                          // 3 - 7: buffs to back right turret
+                          "3": {
+                            "Remove": true
+                          },
+                          "4": {
+                            "Remove": true
+                          },
+                          "5": {
+                            "Remove": true
+                          },
+                          "6": {
+                            "Remove": true
+                          },
+                          "7": {
+                            "Remove": true
+                          },
+                          // 8 - 12: buffs to back left turret
+                          "8": {
+                            "Remove": true
+                          },
+                          "9": {
+                            "Remove": true
+                          },
+                          "10": {
+                            "Remove": true
+                          },
+                          "11": {
+                            "Remove": true
+                          },
+                          "12": {
+                            "Remove": true
+                          },
+                          // 13 - 17: buffs to front left turret
+                          "13": {
+                            "Remove": true
+                          },
+                          "14": {
+                            "Remove": true
+                          },
+                          "15": {
+                            "Remove": true
+                          },
+                          "16": {
+                            "Remove": true
+                          },
+                          "17": {
+                            "Remove": true
+                          },
+                          // 18 - 22: buffs to front right turret
+                          "18": {
+                            "Remove": true
+                          },
+                          "19": {
+                            "Remove": true
+                          },
+                          "20": {
+                            "Remove": true
+                          },
+                          "21": {
+                            "Remove": true
+                          },
+                          "22": {
+                            "Remove": true
+                          }
+                          // wow that's exhausting
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "2": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "3": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "4": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "5": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              }
+            }
+          },
+          "2": { // power in armor
+            "PowerLevels": {
+              "0": {
+                "LocalizedShortDescriptionStringID": "Armor: 10"
+              },
+              "1": {
+                "LocalizedShortDescriptionStringID": "Armor: 40"
+              },
+              "2": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "3": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "4": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "5": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              }
+            }
+          },
+          "3": { // power in range
+            "PowerLevels": {
+              "0": {
+                "LocalizedShortDescriptionStringID": "Range: 500m" // FIXME: actually zero? rofl
+              },
+              "1": {
+                "LocalizedShortDescriptionStringID": "Range: 1500m",
+                "StatusEffectsToApply": {
+                  "Range_1_StatusEffect_Gaalsi_MP": {
+                    "BuffsToApplyToTarget": {
+                      "0": {
+                        "BuffSet": {
+                          // TURRET_FL
+                          "0": {
+                            "Value": 1500
+                          }, // long range
+                          "1": {
+                            "Value": 1500
+                          }, // APBULLETS long range
+                          "2": {
+                            "Value": 1250
+                          }, // medium range
+                          "3": {
+                            "Value": 1250
+                          }, // APBULLETS medium range
+                          "4": {
+                            "Value": 1000
+                          }, // short range
+                          "5": {
+                            "Value": 1000
+                          }, // APBULLETS short range
+                          // TURRET_FR
+                          "6": {
+                            "Value": 1500
+                          }, // long range
+                          "7": {
+                            "Value": 1500
+                          }, // APBULLETS long range
+                          "8": {
+                            "Value": 1250
+                          }, // medium range
+                          "9": {
+                            "Value": 1250
+                          }, // APBULLETS medium range
+                          "10": {
+                            "Value": 1000
+                          }, // short range
+                          "11": {
+                            "Value": 1000
+                          }, // APBULLETS short range
+                          // TURRET_BR
+                          "12": {
+                            "Value": 1500
+                          }, // long range
+                          "13": {
+                            "Value": 1500
+                          }, // APBULLETS long range
+                          "14": {
+                            "Value": 1250
+                          }, // medium range
+                          "15": {
+                            "Value": 1250
+                          }, // APBULLETS medium range
+                          "16": {
+                            "Value": 1000
+                          }, // short range
+                          "17": {
+                            "Value": 1000
+                          }, // APBULLETS short range
+                          // TURRET_BL
+                          "18": {
+                            "Value": 1500
+                          }, // long range
+                          "19": {
+                            "Value": 1500
+                          }, // APBULLETS long range
+                          "20": {
+                            "Value": 1250
+                          }, // medium range
+                          "21": {
+                            "Value": 1250
+                          }, // APBULLETS medium range
+                          "22": {
+                            "Value": 1000
+                          }, // short range
+                          "23": {
+                            "Value": 1000
+                          } // APBULLETS short range
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "2": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "3": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "4": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "5": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              }
+            }
+          }
+        }
+      }
+    },
 
     // ~~~~~~~~ //
     // Gaalsien //
@@ -814,12 +1204,280 @@
           }
         }
       }
-    }
+    },
 
     // ~~~~~~~~ //
     // Khaaneph //
     // ~~~~~~~~ //
 
+    // brick all power reserves
+    // apparently uses gaalsien power reserves upgrade?
+
+    // brick skimmer fab
+    // apparently uses gaalsien skimmer fab upgrade?
+
+    // refinery mode
+    "Research_Buff_K_ProductionCruiserResourcer": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 400
+      }
+    },
+
+    // khaaneph salvager
+    "K_Harvester_MP": {
+      "UnitAttributes": {
+        "Armour": 0
+      },
+      "WeaponAttributes": {
+        "C_Harvester_Weapon_DemoCharge_MP": {
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 500
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
+        }
+      }
+    },
+
+    // khaaneph blast drone
+    "K_ExplodingSkimmer_MP": {
+      "UnitAttributes": { // cost has to be handled here
+        "Resource1Cost": 0,
+        "Resource2Cost": 50
+      }
+    },
+
+    // khaaneph baserunner
+    "K_Baserunner_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 100
+      },
+      "WeaponAttributes": {
+        "G_Baserunner_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": true
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_K_BaseRunnerSmoke": {
+          "Resource2Cost": 10
+        }
+      }
+    },
+
+    // khaaneph carrier
+    "K_Carrier_MP": {
+      "UnitAttributes": {
+        "MaxHealth": 10000,
+        "Armour": 10
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 30 // slow boy
+        }
+      },
+      "WeaponAttributes": {
+        "G_Carrier_Weapon_G2All_Dummy_MP": {
+          "BaseDamagePerRound": 18
+        },
+        "K_Carrier_Weapon_G2All_MP": {
+          "BaseDamagePerRound": 18,
+          "RateOfFire": 6,
+          "TargetStyle": "Flak",
+          "RangeAttributesShort": {
+            "Accuracy": 50,
+            "Distance": 350
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 45,
+            "Distance": 650
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 35,
+            "Distance": 950
+          },
+          "Modifiers": {
+            "1": {
+              "TargetClass": "Medium",
+              "ClassOperator": "Or",
+              "Modifier": "AccuracyShortPercent",
+              "Amount": 115
+            },
+            "2": {
+              "TargetClass": "Medium",
+              "ClassOperator": "Or",
+              "Modifier": "AccuracyMediumPercent",
+              "Amount": 115
+            },
+            "3": {
+              "TargetClass": "Medium",
+              "ClassOperator": "Or",
+              "Modifier": "AccuracyLongPercent",
+              "Amount": 115
+            },
+            "4": {
+              "TargetClass": "Large, Carrier, XLarge",
+              "ClassOperator": "Or",
+              "Modifier": "AccuracyShortPercent",
+              "Amount": 130
+            },
+            "5": {
+              "TargetClass": "Large, Carrier, XLarge",
+              "ClassOperator": "Or",
+              "Modifier": "AccuracyMediumPercent",
+              "Amount": 130
+            },
+            "6": {
+              "TargetClass": "Large, Carrier, XLarge",
+              "ClassOperator": "Or",
+              "Modifier": "AccuracyLongPercent",
+              "Amount": 130
+            }
+          }
+        }
+      },
+      "PowerShuntAttributes": {
+        "PowerSystems": {
+          "0": { // power in mobility support
+            "PowerLevels": {
+              "0": {
+                "LocalizedShortDescriptionStringID": "Mobility Support Disabled"
+              },
+              "1": {
+                "LocalizedShortDescriptionStringID": "Mobility Support Enabled: +15 speed",
+                "StatusEffectsToApply": {
+                  "K_MovementShuntCarrier_1_StatusEffect": {
+                    "BuffsToApplyToTarget": {
+                      "0": {
+                        "UnitType": "",
+                        "UseAsPrefix": true,
+                        "BuffSet": {
+                          "0": {
+                            "Attribute": "UnitDynamics_MaxSpeed",
+                            "Mode": "Add",
+                            "Value": 15
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "2": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "3": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "4": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "5": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              }
+            }
+          },
+          "1": {
+            "PowerLevels": { // power in cruise missiles
+              "0": {
+                "LocalizedShortDescriptionStringID": "Cruise Missile Systems Disabled"
+              },
+              "1": {
+                "LocalizedShortDescriptionStringID": "Cruise Missile Systems Enabled"
+              },
+              "2": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "3": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "4": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "5": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              }
+            }
+          },
+          "2": {
+            "PowerLevels": { // power in self healing
+              "0": {
+                "LocalizedShortDescriptionStringID": "Self Repair Systems Disabled"
+              },
+              "1": { // this level of self repair is a bit weak sauce; Khaaneph don't have BR healing so this is maybe something to look at
+                "LocalizedShortDescriptionStringID": "Self Repair Systems Enabled"
+              },
+              "2": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "3": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "4": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "5": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              }
+            }
+          },
+          "3": {
+            "PowerLevels": { // power in weapons
+              "0": {
+                "LocalizedShortDescriptionStringID": "Missiles Disabled"
+              },
+              "1": {
+                "LocalizedShortDescriptionStringID": "Missiles Enabled",
+                "StatusEffectsToApply": { // we need to make sure we override Vanilla's desire to increase the firerate
+                  "K_Weapons_1_StatusEffect": {
+                    "BuffsToApplyToTarget": {
+                      "0": {
+                        "BuffSet": {
+                          "1": {
+                            "Mode": "AddPercent",
+                            "Value": 0
+                          },
+                          "2": {
+                            "Mode": "AddPercent",
+                            "Value": 0
+                          },
+                          "3": {
+                            "Mode": "AddPercent",
+                            "Value": 0
+                          },
+                          "4": {
+                            "Mode": "AddPercent",
+                            "Value": 0
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "2": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "3": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "4": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              },
+              "5": {
+                "LocalizedShortDescriptionStringID": "Unavailable"
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
