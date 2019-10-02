@@ -18,6 +18,22 @@
           "AreaOfEffectRadius": 250,
           "BaseDamagePerRound": 750
         }
+      },
+      "UnitAttributes": {
+        "Class": "Ground, Strikecraft, Small"
+      }
+    },
+
+    // targeting jammer
+    "N_ECMField_MP": {
+      "WeaponAttributes": {
+        "N_ECMField_Weapon_G2G": {
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air, Carrier, Strikecraft"
+            }
+          }
+        }
       }
     },
 
@@ -94,6 +110,11 @@
           "RangeAttributesLong": {
             "Remove": true
           }
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_Common_DemoChargeLay_MP": {
+          "CooldownTimeSecs": 30
         }
       }
     },
@@ -521,6 +542,10 @@
 
     // soban armed logistics module
     "C_Sob_PopcapScanner": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 100
+      },
       "WeaponAttributes": {
         "C_Sob_PopCapScanner_Weapon_G2G_MP": {
           "BaseDamagePerRound": 200,
@@ -546,11 +571,11 @@
         },
         "C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
           "BaseDamagePerRound": 225,
-          "BurstPeriodMaxTimeMS": 0,
-          "BurstPeriodMinTimeMS": 0, // bursts on railguns rofl
-          // I get that this is how it works in vanilla but I want sob carrier dmg output to be more consistent.
-          "ReloadTimeMS": 0,
-          "CooldownTimeMS": 5000
+          "NumberOfBursts": 1,
+          "WindUpTimeMS": 1500,
+          "BurstPeriodMinTimeMS": 1000,
+          "BurstPeriodMaxTimeMS": 1000,
+          "ReloadTimeMS": 0
         }
       },
       "PowerShuntAttributes": {
@@ -613,7 +638,7 @@
                           },
                           // FIXME: dummy weapon still thinks he is getting extra fire-rate
                           "2": {
-                            "Remove": true // I'm... not sure what this would have done rofl
+                            "Remove": true
                           },
                           // 3 - 7: buffs to back right turret
                           "3": {
@@ -879,6 +904,11 @@
             "Remove": true
           }
         }
+      },
+      "AbilityAttributes": {
+        "Ability_Common_DemoChargeLay_MP": {
+          "CooldownTimeSecs": 30
+        }
       }
     },
 
@@ -1091,7 +1121,7 @@
               }
             }
           },
-          "3": {
+          "3": { // power in range
             "PowerLevels": {
               "0": {
                 "LocalizedShortDescriptionStringID": "Range: 500m"
@@ -1242,6 +1272,34 @@
             "Remove": true
           }
         }
+      },
+      "AbilityAttributes": {
+        "Ability_Common_DemoChargeLay_MP": {
+          "CooldownTimeSecs": 30
+        }
+      }
+    },
+
+    // khaaneph mobility support
+    "K_MovementBuff_StatusEffect_01": {
+      "StatusEffectAttributes": {
+        "BuffsToApplyToTarget": {
+          "0": {
+            "BuffSet": {
+              "0": {
+                "Value": 15
+              }
+            }
+          }
+        }
+      }
+    },
+
+    // khaaneph production cruiser
+    "K_SupportCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 250
       }
     },
 
@@ -1350,24 +1408,7 @@
                 "LocalizedShortDescriptionStringID": "Mobility Support Disabled"
               },
               "1": {
-                "LocalizedShortDescriptionStringID": "Mobility Support Enabled: +15 speed",
-                "StatusEffectsToApply": {
-                  "K_MovementShuntCarrier_1_StatusEffect": {
-                    "BuffsToApplyToTarget": {
-                      "0": {
-                        "UnitType": "",
-                        "UseAsPrefix": true,
-                        "BuffSet": {
-                          "0": {
-                            "Attribute": "UnitDynamics_MaxSpeed",
-                            "Mode": "Add",
-                            "Value": 15
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
+                "LocalizedShortDescriptionStringID": "Mobility Support Enabled: +15 speed"
               },
               "2": {
                 "LocalizedShortDescriptionStringID": "Unavailable"
