@@ -234,8 +234,10 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Weapon ![↑↑](buff.png)
 * AS:
     * Tech cost ![↑↑](buff.png)
+    * Tech research time ![↓↓](nerf.png)
     * Cost ![↓↓](nerf.png)![~~](adjust.png)
-    * Hitpoints ![↓↓](nerf.png)
+    * Production time ![↑↑](buff.png)
+    * Hitpoints ![↓↓](nerf.png)![↓↓](nerf.png)
     * Range ![↑↑](buff.png)
     * Damage ![↑↑](buff.png)
     * AOE ![↑↑](buff.png)
@@ -303,11 +305,13 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Precision barrage cost ![↑↑](buff.png)![↑↑](buff.png) (free)
 * Gaalsien siege cruiser:
     * Tech ![↑↑](buff.png)![↑↑](buff.png)
-    * Hitpoints ![↓↓](nerf.png)
+    * Cost ![↑↑](buff.png)![↑↑](buff.png)
+    * Hitpoints ![↓↓](nerf.png)![↓↓](nerf.png)
     * Maneuverability ![↑↑](buff.png)![↑↑](buff.png)
     * Autofire ![↓↓](nerf.png)
-    * Barrage: duration ![↑↑](buff.png), DPS ![↓↓](nerf.png), range ![↓↓](nerf.png)
-    * Range upgrade research time ![↑↑](buff.png)
+    * Barrage: duration ![↑↑](buff.png), DPS ![↓↓](nerf.png)![↓↓](nerf.png), range ![↓↓](nerf.png)![↓↓](nerf.png)
+    * Range upgrade research time ![↑↑](buff.png)![↑↑](buff.png)
+    * EMP upgrade research time ![↑↑](buff.png)
 * Khaaneph siege cruiser:
     * Main weapon: falloff ![↓↓](nerf.png)![↓↓](nerf.png), AOE ![↑↑](buff.png)
     * Barrage: damage ![↑↑](buff.png), DPS ![↓↓](nerf.png), AOE ![~~](adjust.png)
@@ -350,10 +354,17 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Gaalsien/Khaaneph:
     * Refinery mode upgrade cost: `600CU 40RU => 700CU 40RU`
     * Assault ship production time: `18s => 17s`
+    * Carrier:
+        * Re-establish systems regeneration rate:
+            * Level 2: `50 => 45`
+            * Level 3: `70 => 60`
+            * Level 4: `90 => 75`
+            * Level 5: `110 => 90`
 * Gaalsien:
     * Carrier:
         * Hitpoints: `11000 => 10500`
         * Armor: `35 => 30`
+        * Supersonic missile barrage damage: `400 => 360`
 * Coalition/Soban:
     * Baserunner probe sensors radius: `1130 => 1200`
     * AAV:
