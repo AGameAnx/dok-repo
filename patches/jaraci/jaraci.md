@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2019-10-18](#2019-10-18)
     - [2019-09-28 (tournament version)](#2019-09-28-tournament-version)
     - [2019-09-22](#2019-09-22)
     - [2019-09-19](#2019-09-19)
@@ -344,6 +345,24 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2019-10-18
+* Gaalsien/Khaaneph:
+    * Refinery mode upgrade cost: `600CU 40RU => 700CU 40RU`
+    * Assault ship production time: `18s => 17s`
+* Gaalsien:
+    * Carrier:
+        * Hitpoints: `11000 => 10500`
+        * Armor: `35 => 30`
+* Coalition/Soban:
+    * Baserunner probe sensors radius: `1130 => 1200`
+    * AAV:
+        * Hitpoints: `1200 => 1300`
+        * Armor: `10 => 9`
+* Coalition:
+    * Railgun cost: `240CU 85RU => 250CU 80RU`
+* Soban:
+    * Railgun cost: `250CU 85RU => 260CU 80RU`
 
 ## 2019-09-28 (tournament version)
 * Gaalsien/Khaaneph:
