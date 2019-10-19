@@ -2478,7 +2478,7 @@
 						"ModifierType": "HealthOverTime",
 						"HealthOverTimeAttributes": {
 							"ID": "G_BaseRunner_HealAura_HealOT_StatusEffect_MP",
-							"Amount": 10,
+							"Amount": 4,
 							"MSTickDuration": 50,
 							"DamageType": "Heal"
 						}
@@ -2576,7 +2576,26 @@
 					"CooldownTimeSecs": 120
 				},
 				"Ability_G_BaseRunnerPassiveRegen": {
-					"CooldownTimeSecs": 80
+					"CooldownTimeSecs": 60,
+					"ApplyStatusEffect": {
+						"0": {
+							"Lifetime": "Finite",
+							"Duration": 10.005,
+							"MaxStacks": 1,
+							"StackingBehaviour": "Replace",
+							"Modifiers": {
+								"0": {
+									"ModifierType": "HealthOverTime",
+									"HealthOverTimeAttributes": {
+										"ID": "G_BaseRunner_HealAura_HealOT_StatusEffect_MP",
+										"Amount": 4,
+										"MSTickDuration": 50,
+										"DamageType": "Heal"
+									}
+								}
+							}
+						}
+					}
 				}
 			},
 			"WeaponAttributes": {
@@ -2608,10 +2627,12 @@
 				},
 				"G_Baserunner_Weapon_HealingAura_MP": {
 					"RateOfFire": 10,
-					"BaseDamagePerRound": 5,
-					"BurstPeriodMinTimeMS": 400,
-					"BurstPeriodMaxTimeMS": 400,
-					"CooldownTimeMS": 600,
+					"BaseDamagePerRound": 2,
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1000,
+					"CooldownTimeMS": 0,
+					"FriendlyFireDamageScalar": 1,
+					"WeaponOwnerFriendlyFireDamageScalar": 1,
 					"StatusEffectsTargetAlignment": "Friend",
 					"StatusEffectsSets": {
 						"0": { "StatusEffects": ["G_BaseRunner_HealAura_HealOT_StatusEffect_MP"] }
@@ -3321,17 +3342,18 @@
 				"Resource1Cost": 280,
 				"Resource2Cost": 35,
 				"ProductionTime": 17,
-				"Armour": 8,
-				"MaxHealth": 920
+				"Armour": 6,
+				"MaxHealth": 960
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 28,
+					"BaseDamagePerRound": 35,
+					"RateOfFire": 4,
 					"AreaOfEffectRadius": 110,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesShort":  { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
-					"RangeAttributesLong":   { "Distance": 740 }
+					"RangeAttributesLong":   { "Distance": 755 }
 				}
 			}
 		},
@@ -3340,17 +3362,18 @@
 				"Resource1Cost": 280,
 				"Resource2Cost": 35,
 				"ProductionTime": 17,
-				"Armour": 8,
-				"MaxHealth": 920
+				"Armour": 6,
+				"MaxHealth": 960
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 28,
+					"BaseDamagePerRound": 35,
+					"RateOfFire": 4,
 					"AreaOfEffectRadius": 110,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesShort":  { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
-					"RangeAttributesLong":   { "Distance": 740 }
+					"RangeAttributesLong":   { "Distance": 755 }
 				}
 			}
 		},
@@ -3570,10 +3593,17 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 45,
+					"BaseDamagePerRound": 60,
+					"BurstPeriodMinTimeMS": 110,
+					"BurstPeriodMaxTimeMS": 110,
+					"NumberOfBursts": 4,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 1000
+					"ReloadTimeMS": 2400,
+					"RangeAttributesShort":  { "Accuracy": 16 },
+					"RangeAttributesMedium": { "Accuracy": 15 },
+					"RangeAttributesLong":   { "Accuracy": 14 },
+					"OutputDPS": true
 				}
 			}
 		},
@@ -3595,10 +3625,17 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 45,
+					"BaseDamagePerRound": 60,
+					"BurstPeriodMinTimeMS": 110,
+					"BurstPeriodMaxTimeMS": 110,
+					"NumberOfBursts": 4,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 1000
+					"ReloadTimeMS": 2400,
+					"RangeAttributesShort":  { "Accuracy": 16 },
+					"RangeAttributesMedium": { "Accuracy": 15 },
+					"RangeAttributesLong":   { "Accuracy": 14 },
+					"OutputDPS": true
 				}
 			}
 		},
