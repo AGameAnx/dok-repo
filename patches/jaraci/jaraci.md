@@ -47,15 +47,11 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2019-10-27](#2019-10-27)
+    - [2019-10-20](#2019-10-20)
     - [2019-10-19](#2019-10-19)
     - [2019-10-18](#2019-10-18)
     - [2019-09-28 (tournament version)](#2019-09-28-tournament-version)
-    - [2019-09-22](#2019-09-22)
-    - [2019-09-19](#2019-09-19)
-    - [2019-09-14](#2019-09-14)
-    - [2019-09-13](#2019-09-13)
-    - [2019-09-12](#2019-09-12)
-    - [2019-09-01](#2019-09-01)
 - [General changes](#general-changes)
     - [Carriers](#carriers)
         - [Power level upgrades](#power-level-upgrades)
@@ -352,6 +348,56 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
+## 2019-10-27
+* General:
+    * Baserunner hitpoints: `3350 => 2500`
+* Coalition/Soban:
+    * Fighter and Gunship fabrication tech research time: `70s => 65s`
+* Coalition:
+    * Carrier:
+        * Range Systems PD and missile range:
+            * Level 2: `1100 => 1050`
+            * Level 3: `1350 => 1250`
+            * Level 4: `1550 => 1450`
+            * Level 5: `1750 => 1650`
+            * Fixed an issue where Level 5 range systems weren't granting correct missile range bonuses
+        * Weapon Systems PD ROF bonus:
+            * Level 3: `100% => 75%`
+            * Level 4: `150% => 100%`
+* Gaalsien:
+    * Carrier:
+        * Supersonic Missile Barrage damage: `360 => 300`
+        * Range Systems PD and missile range:
+            * Level 2: `1100 => 1050`
+            * Level 3: `1350 => 1250`
+            * Level 4: `1550 => 1450`
+            * Level 5: `1750 => 1650`
+            * Fixed an issue where Level 5 range systems weren't granting correct missile range bonuses
+        * Weapon Systems PD ROF bonus:
+            * Level 2: `50% => 45%`
+            * Level 3: `75% => 65%`
+            * Level 4: `125% => 90%`
+* Soban:
+    * Carrier:
+        * Hitpoints: `10700 => 10000`
+        * Max speed: `53 => 60`
+        * Range Systems PD range:
+            * Level 2: `1450 => 1350`
+            * Level 3: `1650 => 1550`
+            * Level 4: `1850 => 1750`
+            * Level 5: `2050 => 1950`
+* Khaaneph:
+    * Carrier:
+        * Weapon Systems PD ROF bonus:
+            * Level 3: `200% => 150%`
+            * Level 4: `300% => 200%`
+
+## 2019-10-20
+* Coalition/Soban:
+    * AAV hitpoints: `1300 => 1250`
+* Gaalsien:
+    * Baserunner heal aura ability cooldown: `60s => 80s`
+
 ## 2019-10-19
 * Gaalsien/Khaaneph:
     * Assault ship (DPS: `67.4526 => 63.2632`):
@@ -415,190 +461,6 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Damage: `160 => 150`
         * Range: `1850 => 2000`
 
-## 2019-09-22
-* Coalition/Soban:
-    * LAV production time: `13s => 12s`
-* Gaalsien/Khaaneph:
-    * Production cruiser AA: (DPS `67.5838/57.9289/43.4467 => 79.2208/62.2449/45.2690`)
-        * Rate of fire: `10 => 12`
-        * Damage against probes: `50% => 35%`
-        * Accuracy:
-            * Medium: `60 => 55`
-            * Long: `45 => 40`
-* Gaalsien:
-    * Siege cruiser:
-        * Hitpoints: `2100 => 1600`
-        * Number of bursts: `4 => 3`
-
-## 2019-09-19
-* Coalition/Soban:
-    * Fighter and gunship fabrication:
-        * Upgrade research time: `80s => 70s`
-        * Strike fighter production time: `25s => 26s`
-    * Production Upgrade:
-        * Cost: `500CU 50RU => 500CU 40RU`
-        * Research Time: `40s => 50s`
-    * LAV: (DPS: `32.3689 => 31.3739`)
-        * Tech research time: `35s => 40s`
-        * Production time: `11s => 13s`
-        * Armor: `1 => 0`
-        * Damage: `16 => 12`
-        * ROF: `4 => 5`
-        * Cooldown: `0.42s => 0.4s`
-    * AAV tech research time: `55s => 50s`
-* Gaalsien/Khaaneph:
-    * Sandskimmer: (DPS: `27.9070 => 27.8268`)
-        * Damage: `15 => 13`
-        * ROF: `3 => 4`
-        * Burst: `0.67-0.9s => 0.7-0.76s`
-    * Assault ship:
-        * Falloff: `Linear => Quadratic`
-        * AOE: `90 => 110`
-    * Production cruiser AA range: `1180 => 1250`
-
-## 2019-09-14
-* Coalition/Soban:
-    * Assault cruiser AA upgrade research time: `65s => 45s`
-
-## 2019-09-13
-* Coalition/Soban:
-    * Salvager armor: `5 => 2`
-    * LAV build time: `9s => 11s`
-    * Production upgrades:
-        * Cost: `500CU => 500CU 50RU`
-        * Research time: => `30s => 40s`
-        * Requirements: `Railgun/AAV techs => None`
-    * Support cruiser AA:
-        * Damage: `250 => 175`
-        * Reload: `4s => 3s`
-        * Range: `1400 => 1350`
-    * Strike fighter:
-        * Tech research cost: `450CU 280RU => 450CU 250RU`
-        * Cost: `180CU 85RU => 200CU 85RU`
-        * Production time: `21s => 25s`
-    * Assault cruiser:
-        * Cost: `400CU 220RU => 450CU 220RU`
-        * Production time: `65s => 60s`
-        * Ability cooldowns: `40s => 50s`
-        * Tactical missile barrage reworked:
-            * AOE: `120 => 140`
-            * Falloff: `None => Quadratic`
-            * Range: `1350 => 1200`
-            * Damage against small targets: `100% => 60%`
-    * Battlecruiser production time: `75s => 65s`
-* Soban:
-    * Fixed an issue of assault cruiser AA upgrade not being modified
-    * Carrier:
-        * Power level upgrade costs are no longer different from other factions
-        * PD railgun wind-up: `0.8s => 1s`
-    * Battlecruiser:
-        * Cost `550CU 250RU => 520CU 280RU`
-        * Hitpoints `4200 => 3800`
-        * Armor `16 => 15`
-        * Accuracy:
-            * Short: `4% => 7%`
-            * Medium: `4% => 6%`
-* Gaalsien/Khaaneph:
-    * Assault ship:
-        * Cost: `260CU 40RU => 280CU 35RU`
-        * Hitpoints: `960 => 920`
-        * Armor: `7 => 8`
-        * Range: `735 => 740`
-    * Interceptor reload time: `4s => 3.8s`
-* Gaalsien:
-    * Siege cruiser:
-        * Tech cost: `450CU 350RU => 450CU 150RU`
-        * Tech research time: `65s => 55s`
-        * Cost: `400CU 160RU => 300CU 120RU`
-        * Production time: `50s => 30s`
-        * Movement attributes:
-            * Max speed: `55 => 65`
-            * Acceleration time: `1.5s => 1.25s`
-            * Braking time: `1.5s => 1.25s`
-        * Barrage:
-            * Damage: `200 => 160`
-            * Rate of fire: `3 => 4`
-            * Number of bursts: `6 => 4`
-            * Range: `2250 => 1850`
-* Khaaneph:
-    * Carrier missile systems wind-up: `0.25s => 0.5s`
-
-## 2019-09-12
-* Soban:
-    * Fixed an issue where vehicle armor upgrades weren’t modified as intended
-* Khaaneph:
-    * Fixed an issue where Blast Drone build time wasn’t modified from 40s to 45s as intended
-
-## 2019-09-01
-* Coalition/Soban:
-    * Railgun max movement speed: `57 => 66`
-    * Assault cruiser:
-        * Hitpoints: `2800 => 2900`
-        * Tactical missile barrage cost: `250CU => Free`
-* Coalition:
-    * Battlecruiser damage: `180 => 200`
-    * Railgun cost: `220CU 85RU => 240CU 85RU`
-* Soban:
-    * Railgun cost: `240CU 85RU => 250CU 85RU`
-* Gaalsien\Khaaneph:
-    * Skimmer:
-        * Hitpoints: `620 => 590`
-        * Sensor radius: `1000 => 1050`
-    * Assault ship:
-        * Range: `745 => 735`
-        * AOE: `70 => 90`
-        * Falloff: `None => Linear`
-    * Heavy railgun EMP ability:
-        * Wind-up: `1s => 0.75s`
-        * AOE: `100 => 150`
-        * Range: `1200 => 1350`
-        * Duration: `1.5s => 2.5s`
-    * Missile ship barrage AOE: `150 => 160`
-* Gaalsien:
-    * Baserunner scanner:
-        * Recharge: `200s => 120s`
-        * Hitpoints: `600 => 250`
-* Khaaneph:
-    * Carrier:
-        * Hitpoints: `11500 => 10500`
-        * Armor: `30 => 25`
-        * Sensor radius: `800 => 1000`
-        * Max speed: `40 => 30`
-        * Mobility support system:
-            * Renamed to: `Mobility and Sensors Support`
-            * Now grants sensors range to all medium and large units (meaning entire fleet except strike craft and workers)
-            * Now has double effectiveness for the carrier itself
-            * AOE radius:
-                * Level 1: `420 => 600`
-                * Level 2: `420 => 600`
-                * Level 3: `560 => 750`
-                * Level 4: `560 => 750`
-                * Level 5: `840 => 1000`
-            * Added sensors range bonus:
-                * Level 1: `+70 sensors range`
-                * Level 2: `+110 sensors range`
-                * Level 3: `+150 sensors range`
-                * Level 4: `+200 sensors range`
-                * Level 5: `+250 sensors range`
-        * Cruise missile systems:
-            * Damage: `400 => 450`
-            * Range bonuses:
-                * Level 2: `0 => 100`
-                * Level 3: `0 => 200`
-                * Level 4: `0 => 350`
-                * Level 5: `36% => 500`
-            * Reload bonuses:
-                * Level 2: `1 => 0`
-                * Level 3: `2 => 1`
-                * Level 4: `3 => 2`
-                * Level 5: `4 => 3`
-    * Blast drone:
-        * Build time: `40s => 45s`
-        * Damage packets: `20 => 15`
-    * Baserunner smoke ability:
-        * Recharge: `180s => 70s`
-        * Burst count: `4 => 3`
-
 # General changes
 
 ## Carriers
@@ -616,19 +478,22 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Level 7: `1500CU 800RU => 1400CU 800RU`
 
 ### Range power systems (Gaalsien/Coalition)
-> *All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies.*
+> *All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies. Carrier ranges are reduced slightly more than railgun ranges.*
 
+* Level 2:
+    * Turret max range: `1100 => 1050`
+    * Missile max range bonus: `600 => 550`
 * Level 3:
-    * Turret max range: `1400 => 1350`
-    * Missile max range bonus: `900 => 850`
+    * Turret max range: `1400 => 1250`
+    * Missile max range bonus: `900 => 750`
     * Sight and contact range: `600 => 550`
 * Level 4:
-    * Turret max range: `1700 => 1550`
-    * Missile max range bonus: `1200 => 1050`
+    * Turret max range: `1700 => 1450`
+    * Missile max range bonus: `1200 => 950`
     * Sight and contact range bonuses: `900 => 800`
 * Level 5:
-    * Turret max range: `2000 => 1750`
-    * Missile max range bonus: `1500 => 1250`
+    * Turret max range: `2000 => 1650`
+    * Missile max range bonus: `1500 => 1150`
     * Sight and contact range bonuses: `1200 => 1050`
 
 ### Point defense weapons
@@ -763,8 +628,8 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Weapon Systems power shunt PD rate of fire bonuses:
     * Level 1: `'set to 5' => 'increase by 25%'`
     * Level 2: `'set to 10' => 'increase by 50%'`
-    * Level 3: `'set to 20' => 'increase by 100%'`
-    * Level 4: `'set to 40' => 'increase by 150%'`
+    * Level 3: `'set to 20' => 'increase by 75%'`
+    * Level 4: `'set to 40' => 'increase by 100%'`
     * Level 5: `'set to 40' => 'increase by 25%'`
 
 ## Soban carrier
@@ -772,8 +637,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### General statistics
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. The Soban carrier hitpoint nerf is larger than other carriers because it gets strong railgun weaponry from the beginning of the game and extra range for safer positioning. Movement speed and armor changes are part of an effort to fix a particularly strong early game 1 base carrier timing push*
 
-* Hitpoints: `15000 => 10700`
-* Movement speed: `60 => 53`
+* Hitpoints: `15000 => 10000`
 * Base armor: `25 => 15`
 
 ### Armor system power shunt
@@ -829,11 +693,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 > *Soban carrier receives slightly more range than other carriers across all power levels*
 
 * Ranges:
-    * Level 1: `800/550/300 => 1100/800/450`
-    * Level 2: `1100/750/400 => 1450/1200/700`
-    * Level 3: `1400/950/500 => 1650/1300/900`
-    * Level 4: `1700/1150/600 => 1850/1500/1100`
-    * Level 5: `2000/1350/700 => 2050/1800/1300`
+    * Level 1: `800/550/300 => 1100/750/450`
+    * Level 2: `1100/750/400 => 1350/1100/700`
+    * Level 3: `1400/950/500 => 1550/1300/900`
+    * Level 4: `1700/1150/600 => 1750/1400/1100`
+    * Level 5: `2000/1350/700 => 1950/1700/1300`
 * Fixed an issue where front right turret range wasn't updated correctly at Level 4 power level
 
 ### ALM
@@ -995,7 +859,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Survivability
 > *The hitpoints are reduced on AAV to make soft-countering them with units such as assault ships or interceptors more of an option than it previously was. Previously, AAV would drive past a lot of things to target the squishier targets such as enemy salvagers. This is still possible, but the enemy can react to it easier.*
 
-* Hitpoints: `1400 => 1300`
+* Hitpoints: `1400 => 1250`
 * Base armor : `8 => 9`
 
 ### Pricing
@@ -1184,6 +1048,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 > *Slight cost rebalance to require higher RU commitment, RU costs of units in this tech is reduced.*
 
 * Research cost: `500CU 200RU => 450CU 250RU`
+* Research time: `70s => 65s`
 
 ### Strike fighter
 > *Strike Fighter timings are extremely powerful and their numbers can grow very fast. These changes aim to reduce strike fighter timing attack strength (especially in CvC matchups, but also against gaalsien railgun openings), and make soft countering strike fighters easier (hitpoint reduction).*
@@ -1245,9 +1110,9 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Rate of fire: `10 => 9`
 * Weapon Systems power shunt PD rate of fire:
     * Level 1: `'set to 17' => 'increase by 25%'`
-    * Level 2: `'set to 24' => 'increase by 50%'`
-    * Level 3: `'set to 31' => 'increase by 75%'`
-    * Level 4: `'set to 38' => 'increase by 125%'`
+    * Level 2: `'set to 24' => 'increase by 45%'`
+    * Level 3: `'set to 31' => 'increase by 65%'`
+    * Level 4: `'set to 38' => 'increase by 90%'`
     * Level 5: `Bonus removed (30 => 10)`
 
 ### Re-establish systems regeneration rate
@@ -1314,8 +1179,8 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Rate of fire bonuses:
     * Level 1: `'set to 17' => 'increase by 50%'`
     * Level 2: `'set to 24' => 'increase by 100%'`
-    * Level 3: `'set to 31' => 'increase by 200%'`
-    * Level 4: `'set to 38' => 'increase by 300%'`
+    * Level 3: `'set to 31' => 'increase by 150%'`
+    * Level 4: `'set to 38' => 'increase by 200%'`
     * Level 5: `'set to 38' => 'increase by 50%'`
 * Fixed a bug where level 5 weapon system power shunt would decrease the range of one of the PD weapons
 
