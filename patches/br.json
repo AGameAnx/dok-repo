@@ -549,8 +549,8 @@
       "WeaponAttributes": {
         "C_Sob_PopCapScanner_Weapon_G2G_MP": {
           "BaseDamagePerRound": 200,
-          "DamagePacketsPerShot": 20, // wow that's a lot eh? we don't want ALM spam to kill carriers
-          "AreaOfEffectRadius": 25,
+          "DamagePacketsPerShot": 20,
+          "AreaOfEffectRadius": 0, // works amazingly
           "TargetPrioritizationAttributes": { // honestly I don't know what this does but if AGameAnx did it in Jaraci patch I imagine it's a good idea
             "AngleWeight": 10,
             "DistanceWeight": 0.5
@@ -597,10 +597,7 @@
                           }, // Sensor Radius
                           "1": {
                             "Value": 2200
-                          }, // Contact Radius
-                          "5": {
-                            "Value": 1000
-                          } // Reload time
+                          } // Contact Radius
                         }
                       }
                     }
@@ -968,9 +965,15 @@
           "BaseDamagePerRound": 18,
           "RateOfFire": 9,
           "TargetStyle": "Flak",
-          "RangeAttributesShort": { "Accuracy": 50 },
-          "RangeAttributesMedium": { "Accuracy": 45 },
-          "RangeAttributesLong": { "Accuracy": 35 },
+          "RangeAttributesShort": {
+            "Accuracy": 50
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 45
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 35
+          },
           "Modifiers": {
             "1": {
               "TargetClass": "Medium",
@@ -1022,14 +1025,14 @@
                 "LocalizedShortDescriptionStringID": "Max Speed: 40 km/h"
               },
               "1": {
-                "LocalizedShortDescriptionStringID": "Max Speed: 80 km/h",
+                "LocalizedShortDescriptionStringID": "Max Speed: 70 km/h",
                 "StatusEffectsToApply": {
                   "Movement_1_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
                           "0": {
-                            "Value": 40
+                            "Value": 30
                           }
                         }
                       }
@@ -1337,7 +1340,7 @@
       },
       "UnitMovementAttributes": {
         "Dynamics": {
-          "MaxSpeed": 30 // slow boy
+          "MaxSpeed": 30 // slow boy #khaanephproblems
         }
       },
       "WeaponAttributes": {
