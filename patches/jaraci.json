@@ -181,7 +181,7 @@
 							"TargetClass": "Carrier, Large, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 180
+							"Amount": 170
 						}
 					},
 					"RangeAttributesLong": {
@@ -1138,7 +1138,7 @@
 		},
 		"G_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 10500,
+				"MaxHealth": 10100,
 				"Armour": 30
 			},
 			"DetectableAttributes": {
@@ -3200,11 +3200,14 @@
 				"C_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 195,
 					"ReloadTimeMS": 2300,
+					"RangeAttributesShort": {
+						"Accuracy": 6.25
+					},
 					"RangeAttributesMedium": {
-						"Accuracy": 5.0
+						"Accuracy": 5.75
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 4.5,
+						"Accuracy": 5.5,
 						"Distance": 1900
 					},
 					"TargetPrioritizationAttributes": {
@@ -3238,11 +3241,14 @@
 					"BaseDamagePerRound": 135,
 					"CooldownTimeMS": 1500,
 					"ReloadTimeMS": 1850,
+					"RangeAttributesShort": {
+						"Accuracy": 6.25
+					},
 					"RangeAttributesMedium": {
-						"Accuracy": 5.0
+						"Accuracy": 5.75
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 4.5,
+						"Accuracy": 5.5,
 						"Distance": 1900
 					},
 					"TargetPrioritizationAttributes": {
@@ -3383,6 +3389,28 @@
 		"MiniStun_StatusEffect": {
 			"StatusEffectAttributes": {
 				"Duration": 2.5
+			}
+		},
+		"Scope_StatusEffect": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Value": 370
+							},
+							"1": {
+								"Value": 370
+							},
+							"2": {
+								"Value": 370
+							},
+							"3": {
+								"Value": 370
+							}
+						}
+					}
+				}
 			}
 		},
 		"Research_Buff_G_RailGunUnits_Armor1": {

@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-01-09](#2020-01-09)
     - [2019-10-31](#2019-10-31)
     - [2019-10-27](#2019-10-27)
     - [2019-10-20](#2019-10-20)
@@ -254,7 +255,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Reveal after firing ![↓↓](nerf.png)
     * Gaalsien HR: range ![↓↓](nerf.png), movement speed ![↓↓](nerf.png)
     * Gaalsien EMP ability: tech ![↑↑](buff.png), AOE ![↑↑](buff.png), wind-up ![↑↑](buff.png), duration ![↑↑](buff.png)
-    * Gaalsien ranged calibration ability: tech ![↑↑](buff.png)
+    * Gaalsien ranged calibration ability: tech ![↑↑](buff.png) range bonus ![↑↑](buff.png)
     * Soban railgun: DPS ![↓↓](nerf.png)
 * Assault railgun:
     * Cost ![↓↓](nerf.png)
@@ -349,6 +350,19 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-01-09
+* Coalition/Soban:
+    * Railgun accuracy:
+        * Long: `4.5% => 5.5%`
+        * Medium: `5.0% => 5.75%`
+        * Short: `5.6% => 6.25%`
+* Coalition:
+    * Cruise missile multiplier against Carrier, Large, XLarge targets: `1.8 => 1.7` (Damage: `4500 => 4250`)
+* Gaalsien/Khaaneph:
+    * Ranged calibration range bonus: `300 => 370`
+* Gaalsien:
+    * Carrier hitpoints: `10500 => 10100`
 
 ## 2019-10-31
 * General:
