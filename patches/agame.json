@@ -2983,6 +2983,9 @@
 					"NumberOfBursts": 2,
 					"BurstPeriodMinTimeMS": 950,
 					"BurstPeriodMaxTimeMS": 1050,
+					"RangeAttributesLong": {
+						"Accuracy": 62
+					},
 					"Turret": {
 						"RotationSpeed": 250
 					},
@@ -3006,6 +3009,9 @@
 					"NumberOfBursts": 2,
 					"BurstPeriodMinTimeMS": 950,
 					"BurstPeriodMaxTimeMS": 1050,
+					"RangeAttributesLong": {
+						"Accuracy": 62
+					},
 					"Turret": {
 						"RotationSpeed": 250
 					},
@@ -3181,7 +3187,7 @@
 		
 		"C_Railgun_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 250,
+				"Resource1Cost": 230,
 				"Resource2Cost": 80,
 				"MaxHealth": 750,
 				"Armour": 2,
@@ -3193,7 +3199,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 65
+					"MaxSpeed": 70
 				}
 			},
 			"WeaponAttributes": {
@@ -3221,7 +3227,7 @@
 		},
 		"C_Sob_Railgun_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 260,
+				"Resource1Cost": 240,
 				"Resource2Cost": 80,
 				"MaxHealth": 750,
 				"Armour": 1,
@@ -3233,7 +3239,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 65
+					"MaxSpeed": 70
 				}
 			},
 			"WeaponAttributes": {
@@ -3270,6 +3276,19 @@
 				"Resource2Cost": 165
 			}
 		},
+		"Research_Buff_C_Railgun": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 400,
+				"Resource2Cost": 100
+			}
+		},
+		"Research_Buff_S_Railgun": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 400,
+				"Resource2Cost": 100
+			}
+		},
+		
 		"Research_Buff_C_TrackedUnits_Armor01": {
 			"ResearchItemAttributes": {
 				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 on Armored Assault, Railgun and Missile Battery",
@@ -3396,18 +3415,10 @@
 				"BuffsToApplyToTarget": {
 					"0": {
 						"BuffSet": {
-							"0": {
-								"Value": 370
-							},
-							"1": {
-								"Value": 370
-							},
-							"2": {
-								"Value": 370
-							},
-							"3": {
-								"Value": 370
-							}
+							"0": { "Value": 370 },
+							"1": { "Value": 370 },
+							"2": { "Value": 370 },
+							"3": { "Value": 370 }
 						}
 					}
 				}

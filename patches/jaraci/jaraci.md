@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-01-10](#2020-01-10)
     - [2020-01-09](#2020-01-09)
     - [2019-10-31](#2019-10-31)
     - [2019-10-27](#2019-10-27)
@@ -219,7 +220,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Armor upgrades ![↑↑](buff.png)
     * Armor upgrade cost ![↓↓](nerf.png)
     * Damage upgrade cost ![↑↑](buff.png)
-    * LAV: damage per shot ![↓↓](nerf.png)![↓↓](nerf.png), DPS ![~~](adjust.png), production time ![↓↓](nerf.png)![↓↓](nerf.png), hitpoints ![↑↑](buff.png)
+    * LAV: damage per shot ![↓↓](nerf.png)![↓↓](nerf.png), DPS ![↓↓](nerf.png), production time ![↓↓](nerf.png)![↓↓](nerf.png), hitpoints ![↑↑](buff.png)
     * Sandskimmer: damage per shot ![↓↓](nerf.png), DPS ![↑↑](buff.png), hitpoints ![↓↓](nerf.png)
 * Baserunners: hitpoints ![↓↓](nerf.png)![↓↓](nerf.png) cost ![↓↓](nerf.png) (RU cost added), AA ![↑↑](buff.png)![↑↑](buff.png)
 * Gaalsien baserunner regeneration ability ![~~](adjust.png)
@@ -248,7 +249,6 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Cost ![↓↓](nerf.png)![↓↓](nerf.png)
     * Damage per shot ![↓↓](nerf.png)
     * Range ![↓↓](nerf.png)
-    * Accuracy ![~~](adjust.png)
     * Hitpoints ![↑↑](buff.png)
     * Armor ![↓↓](nerf.png)
     * Target prioritization ![↑↑](buff.png)
@@ -256,6 +256,8 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Gaalsien HR: range ![↓↓](nerf.png), movement speed ![↓↓](nerf.png)
     * Gaalsien EMP ability: tech ![↑↑](buff.png), AOE ![↑↑](buff.png), wind-up ![↑↑](buff.png), duration ![↑↑](buff.png)
     * Gaalsien ranged calibration ability: tech ![↑↑](buff.png) range bonus ![↑↑](buff.png)
+    * Coalition/Soban railgun accuracy ![↑↑](buff.png)
+    * Coalition/Soban railgun movement speed ![↑↑](buff.png)
     * Soban railgun: DPS ![↓↓](nerf.png)
 * Assault railgun:
     * Cost ![↓↓](nerf.png)
@@ -350,6 +352,17 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-01-10
+* Coalition/Soban:
+    * LAV long range accuracy: `56% => 62%` (DPS: `17.5694 => 19.4518`)
+    * Railgun:
+        * Max speed: `65 => 70`
+        * Mag accelerator cost: `280CU 165RU => 400CU 100RU`
+* Coalition:
+    * Railgun cost: `250CU 80RU => 230CU 80RU`
+* Soban:
+    * Railgun cost: `260CU 80RU => 240CU 80RU`
 
 ## 2020-01-09
 * Coalition/Soban:
@@ -912,6 +925,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Burst: `0.8-1.2s => 0.95-1.05s`
     * Burst count: `4 => 2`
     * Cooldown: `0.8s => 0.4s`
+    * Long range accuracy: `56% => 62%`
     * Turret rotation speed: `180 => 250`
     * Damage against probes: `100% => 50%`
 * Upgrade research time:
@@ -950,15 +964,16 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Build time: `14s => 16s`
 
 ### Movement speed
-> *Coalition and Soban railguns are generally less effective damage-wise for their cost, but they become a lot easier to micro than their gaalsien counterpart.*
+> *Coalition and Soban railguns are generally less effective damage-wise for their cost, they needed a slight nudge but it couldn't be in their raw performance. Movement speed buff will increase early game usability and general flexibility of the unit while not affecting the blobbing style too much.*
 
-* Max speed: `60 => 65`
+* Max speed: `60 => 70`
 
 ### Accuracy
-> *These changes are part of an effort to make high ground more impactful for railguns (as it affects unit accuracy).*
+> *A buff to accuracy to make coalition & soban railguns perform more consistently.*
 
-* Medium range: `5.3% => 5%`
-* Long range: `5% => 4.5%`
+* Short range: `5.6% => 6.25%`
+* Medium range: `5.3% => 5.75%`
+* Long range: `5% => 5.5%`
 
 ### Range
 > *All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies.*
@@ -969,7 +984,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role.
 Coalition railguns have also seen some reload time buffs to go alongside target priority & reveal time changes to bring cost / damage output closer to the insanely high values that gaalsien railguns have in that category.*
 
-* Cost: `200CU 60RU => 250CU 80RU`
+* Cost: `200CU 60RU => 230CU 80RU`
 * Hitpoints: `670 => 750`
 * Armor: `3 => 2`
 * Experience value: `350 => 450`
@@ -980,7 +995,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role.
 Soban railguns are extremely powerful, they have superior DPS, superior hitpoint pool, superior armor and mag accelerator upgrade benefits them more than the coalition railgun. Additionally, they have mark target ability which comes for free. The gap between coalition and Soban railgun performance has been lessened significantly, but soban railgun remains the most cost efficient railgun in the game.*
 
-* Cost: `210CU 60RU => 260CU 80RU`
+* Cost: `210CU 60RU => 240CU 80RU`
 * Hitpoints: `680 => 750`
 * Armor: `4 => 1`
 * Experience value: `350 => 470`
@@ -1450,7 +1465,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Range: `2100 => 1860`
 
 ### EMP rounds
-> *This upgrade has seen very little use throughout the game's history. Effectiveness buffs and large research time reductions to make it more desirable.*
+> *This upgrade has seen very little use throughout the game's history. Effectiveness buffs to make it more desirable.*
 
 * Upgrade cost: `250CU 150RU => 200CU 100RU`
 * Upgrade research time: `45s => 30s`
@@ -1460,10 +1475,11 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Duration: `1.5s => 2.5s`
 
 ### Ranged calibration upgrade
-> *This upgrade has seen very little use throughout the game's history. Giving slight buffs and large research time reductions to make it more desirable.*
+> *This upgrade has seen very little use throughout the game's history. Effectiveness buffs to make it more desirable.*
 
 * Cost: `250CU 150RU => 150CU 150RU`
 * Research time: `60s => 45s`
+* Range bonus: `300 => 370`
 
 ## Railgun armor level 3 upgrade cost
 > *It was previously too much of an obvious choice to always upgrade level 3 on railguns which massively increased their combat performance without much of an initial investment. It should be slightly less of an obvious choice and supporting railgun units with other units rather than just beefing up railguns themselves should be slightly more desirable.*
