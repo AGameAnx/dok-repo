@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-01-19](#2020-01-19)
     - [2020-01-11](#2020-01-11)
     - [2020-01-10](#2020-01-10)
     - [2020-01-09](#2020-01-09)
@@ -354,13 +355,17 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
+## 2020-01-19
+* Coalition/Soban:
+    * Tactical bomber damage: `1850 => 1700`
+
 ## 2020-01-11
 * General:
     * Made improvements to unit base target priority:
         * Carriers: reduced
         * Salvagers: reduced
-        * Heavy Railguns: increased
-        * Strike Craft: increased (to match HR)
+        * Heavy railguns: increased
+        * Strike craft: increased (to match HR)
         * Baserunners: reduced
         * Turret: reduced
         * AA turret: reduced
