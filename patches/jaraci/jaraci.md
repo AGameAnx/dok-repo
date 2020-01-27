@@ -47,7 +47,8 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
-    - [2020-01-19](#2020-01-19)
+    - [2020-01-22](#2020-01-22)
+    - [2020-01-19 (Tournament version)](#2020-01-19-tournament-version)
     - [2020-01-11](#2020-01-11)
     - [2020-01-10](#2020-01-10)
     - [2020-01-09](#2020-01-09)
@@ -355,7 +356,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
-## 2020-01-19
+## 2020-01-22
+* Gaalsien:
+    * Baserunner heal aura ability status effect heal per tick: `4 => 3` (Total healing: `1000 => 800`)
+
+## 2020-01-19 (Tournament version)
 * Coalition/Soban:
     * Tactical bomber damage: `1850 => 1700`
 
@@ -1182,7 +1187,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Range: `700 => 1050`
 
 ## Tactical bomber
-> *Very underused unit in the metagame. Costed extremely prohibitively for what it's capable of accomplishing. The rebalanced version of the unit should be very useful at destroying clumped up mid tier army units. Damage changes are made specifically so that 2 bombs are not enough to destroy a production or support cruiser, but double bombers should still be a solid choice for destroying out of position cruisers, with some follow-up (possibly strike fighter).*
+> *Very underused unit in the metagame. Costed extremely prohibitively for what it's capable of accomplishing. The rebalanced version of the unit should be very useful at destroying clumped up mid tier army units. Damage changes are made specifically so that they can't 1 shot AA batteries and 2 bombs are not enough to destroy a production or support cruiser. Double bombers should still be a solid choice for destroying out of position cruisers, with some follow-up.*
 
 * Research time: `75s => 55s`
 * Research cost: `550CU 200RU => 550CU 150RU`
@@ -1190,7 +1195,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Population: `2 to 4`
 * Hitpoints: `1050 => 1500`
 * Armor: `15 => 12`
-* Damage: `2500 => 1850`
+* Damage: `2500 => 1700`
 * Damage against Small: `100% => 60%`
 * AOE: `180 => 220`
 * Wind-up: `50ms => 0ms`
@@ -1307,7 +1312,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 ## Baserunner
 
 ### Heal aura ability
-> *It is no longer possible to abuse baserunner spam to quickly heal large amounts of hitpoints on targets such as the carrier, as the heal doesn't stack nearly as strongly as it used to. Overall effectiveness of this ability is increased immensely, however, heal amount per burst increased from 40 to 100, total heal amount increased from 400 to 1000*
+> *It is no longer possible to abuse baserunner spam to quickly heal large amounts of hitpoints on targets such as the carrier, as the heal doesn't stack nearly as strongly as it used to. Overall effectiveness of this ability is increased immensely, however, heal amount per burst increased from 40 to 100, total heal amount increased from 400 to 800*
 * Recharge time: `50s => 80s`
 * Rate of healing: `1 => 10`
 * Amount: `40 => 5`
@@ -1315,8 +1320,8 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Cooldown: `0 => 0.6s`
 * Now applies a non-stacking healing over time status effect to friendly units:
     * Rate of healing: `20`
-    * Duration: `0.1s`
-    * Healing: `10`
+    * Duration: `0.05s`
+    * Healing: `3`
 * Prevented from affecting air units
 
 ### Deploy sensor ability
