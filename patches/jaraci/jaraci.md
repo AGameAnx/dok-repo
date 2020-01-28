@@ -1087,7 +1087,6 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 
 * Tech cost: `700CU 450RU => 550CU 350RU`
 * Production time: `75s => 65s`
-* Armor: `25 => 16`
 * Movement dynamics characteristics:
     * Max speed: `50 => 54`
     * Acceleration time: `1.5s => 1.2s`
@@ -1099,6 +1098,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 
 * Cost: `800CU 225RU => 550CU 250RU`
 * Hitpoints: `6500 => 4200`
+* Armor: `25 => 16`
 * Damage: `300 => 200`
 * Reload : `7s => 5s`
 * Falloff: `Linear => Quadratic`
@@ -1110,7 +1110,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 
 * Cost: `780CU 220RU => 520CU 280RU`
 * Hitpoints: `6500 => 3800`
-* Armor `16 => 15`
+* Armor `25 => 15`
 * Accuracy:
 	* Short: `4% => 7%`
 	* Medium: `4% => 6%`
