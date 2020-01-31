@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-01-31](#2020-01-31)
     - [2020-01-22](#2020-01-22)
     - [2020-01-19 (Tournament version)](#2020-01-19-tournament-version)
     - [2020-01-11](#2020-01-11)
@@ -355,6 +356,52 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-01-31
+* General:
+    * Target priority:
+        * Baserunner: `reduced` (now lowest priority of all)
+        * Strike craft: `reduced` (now slightly higher than salvagers)
+        * Salvagers: `increased` (now slightly higher than 0)
+* Coalition/Soban:
+    * AAV max movement speed: `80 => 84`
+    * Assault cruiser tactical missile barrage max range: `1200 => 1000`
+* Coalition:
+    * Carrier:
+        * Max movement speed: `53 => 50`
+        * Cruise missile area of effect: `470 => 500`
+    * Railgun armor: `2 => 0`
+* Soban:
+    * Carrier max movement speed: `60 => 50`
+    * Railgun armor: `1 => 0`
+    * Battlecruiser:
+        * Hitpoints: `3800 => 3000`
+        * Armor: `15 => 13`
+        * Movement dynamics:
+            * Max movement speed: `54 => 62`
+            * Max speed turn radius: `130 => 160`
+            * Acceleration time: `1.2s => 1.9s`
+            * Braking time: `0.9s => 1.2s`
+* Gaalsien/Khaaneph:
+    * Production cruiser sensors range: `1000 => 1200`
+    * Railgun Tech research time: `50s => 45s`
+    * Heavy railgun EMP round damage: `200 => 150`
+    * Assault railgun:
+        * Hitpoints: `660 => 700`
+        * Production time: `20s => 19s`
+        * Armor: `6 => 3`
+        * Max movement speed: `92 => 100`
+    * Assault ship:
+        * Production time: `17s => 18s`
+        * Damage: `35 => 38`
+        * Area of effect falloff: `Quadratic => Linear`
+        * Max movement speed: `70 => 75`
+        * Max range: `755 => 750`
+    * Interceptor:
+        * Area of effect: `60 => 80`
+* Gaalsien:
+    * Carrier:
+        * Hyper-sonic missile barrage missile area of effect falloff: `Linear => Quadratic`
 
 ## 2020-01-22
 * Gaalsien:
