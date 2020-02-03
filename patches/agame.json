@@ -65,7 +65,7 @@
 			"WeaponAttributes": {
 				"C_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 18,
-					"RateOfFire": 7,
+					"RateOfFire": 8,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -120,7 +120,7 @@
 				},
 				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
 					"BaseDamagePerRound": 45,
-					"RateOfFire": 7,
+					"RateOfFire": 8,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -505,7 +505,7 @@
 												"BuffSet": {
 													"0": { "Value": 1000 }, // Sensor Radius
 													"1": { "Value": 1300 }, // Contact Radius
-													"5": { "Value": 7000 } // Reload time
+													"5": { "Value": 6500 } // Reload time
 												}
 											}
 										}
@@ -520,7 +520,7 @@
 												"BuffSet": {
 													"0": { "Value": 1100 },
 													"1": { "Value": 1400 },
-													"5": { "Value": 6000 }
+													"5": { "Value": 5500 }
 												}
 											},
 											"1": {
@@ -538,7 +538,7 @@
 												"BuffSet": {
 													"0": { "Value": 1200 },
 													"1": { "Value": 1500 },
-													"5": { "Value": 5000 }
+													"5": { "Value": 4500 }
 												}
 											},
 											"1": {
@@ -556,7 +556,7 @@
 												"BuffSet": {
 													"0": { "Value": 1300 },
 													"1": { "Value": 1700 },
-													"5": { "Value": 4000 },
+													"5": { "Value": 3500 },
 													"6": { "Value": 30 } // Damage bonus
 												}
 											},
@@ -575,7 +575,7 @@
 												"BuffSet": {
 													"0": { "Value": 1500 },
 													"1": { "Value": 1900 },
-													"5": { "Value": 3000 },
+													"5": { "Value": 2500 },
 													"6": { "Value": 50 }
 												}
 											},
@@ -2382,6 +2382,9 @@
 		},
 		
 		"C_Sob_PopcapScanner": {
+			"UnitAttributes": {
+				"WorldHeightOffset": 15
+			},
 			"WeaponAttributes": {
 				"C_Sob_PopCapScanner_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 120,
@@ -2389,7 +2392,7 @@
 					"AreaOfEffectRadius": 90,
 					"TargetPrioritizationAttributes": {
 						"AngleWeight": 10,
-						"DistanceWeight": 0.5
+						"DistanceWeight": -0.1
 					},
 					"RangeAttributesMedium": { "Accuracy": 100 },
 					"RangeAttributesLong": { "Accuracy": 100 }
@@ -2401,7 +2404,7 @@
 				"MaxHealth": 700,
 				"Armour": 2,
 				"SensorRadius": 1000,
-				"PriorityAsTarget": 500
+				"PriorityAsTarget": 50
 			},
 			"WeaponAttributes": {
 				"N_Gun_Turret_Weapon_G2G_MP": {
@@ -2412,9 +2415,9 @@
 					"BurstPeriodMaxTimeMS": 200,
 					"RateOfFire": 5,
 					"ReloadTimeMS": 2200,
-					"RangeAttributesShort": { "Accuracy": 100.0 },
-					"RangeAttributesMedium": { "Accuracy": 100.0 },
-					"RangeAttributesLong": { "Accuracy": 100.0 },
+					"RangeAttributesShort": { "Accuracy": 100 },
+					"RangeAttributesMedium": { "Accuracy": 100 },
+					"RangeAttributesLong": { "Accuracy": 100 },
 					"Turret": { "RotationSpeed": 150 },
 					"OutputDPS": true
 				}
@@ -2833,7 +2836,7 @@
 			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
-					"RateOfFire": 12
+					"RateOfFire": 11
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"BaseDamagePerRound": 175,
@@ -2861,7 +2864,7 @@
 			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
-					"RateOfFire": 12
+					"RateOfFire": 11
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"BaseDamagePerRound": 175,
@@ -3389,8 +3392,15 @@
 			"WeaponAttributes": {
 				"G_StarHull_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 195,
+					"RangeAttributesShort": {
+						"Accuracy": 6.25
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 5.75
+					},
 					"RangeAttributesLong": {
-						"Distance": 1860
+						"Accuracy": 5.5,
+						"Distance": 1900
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 80,
@@ -3429,8 +3439,15 @@
 			"WeaponAttributes": {
 				"G_StarHull_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 195,
+					"RangeAttributesShort": {
+						"Accuracy": 6.25
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 5.75
+					},
 					"RangeAttributesLong": {
-						"Distance": 1860
+						"Accuracy": 5.5,
+						"Distance": 1900
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 80,

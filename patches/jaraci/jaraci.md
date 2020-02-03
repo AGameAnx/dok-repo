@@ -75,6 +75,7 @@ If above version is not up to date with the recent changes, its version will be 
     - [Quality of life](#quality-of-life)
         - [Fog of war reveal duration after firing](#fog-of-war-reveal-duration-after-firing)
         - [Railgun target prioritization](#railgun-target-prioritization)
+        - [Unit priority as target](#unit-priority-as-target)
         - [Air sorties](#air-sorties)
     - [Generic balance changes](#generic-balance-changes)
         - [Small arms anti-air weapons](#small-arms-anti-air-weapons)
@@ -86,7 +87,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Coalition / Soban](#coalition--soban)
     - [Coalition carrier](#coalition-carrier)
         - [General statistics](#general-statistics)
-        - [Cruise missile:](#cruise-missile)
+        - [Cruise missile](#cruise-missile)
         - [Point defense weapons](#point-defense-weapons-1)
     - [Soban carrier](#soban-carrier)
         - [General statistics](#general-statistics-1)
@@ -361,19 +362,42 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 ## 2020-02-03
 * General:
-    * Railgun target prioritization:
-        * Weapon effectiveness weight: `50 => 80`
-        * Auto target sticky bias: `1750 => 200`
+    * Target prioritization:
+        * Heavy railguns:
+            * Weapon effectiveness weight: `50 => 80`
+            * Auto target sticky bias: `1750 => 200`
+        * ALM:
+            * Distance weight: `0.5 => -0.1`
+        * Gun turret:
+            * Priority as target: `500 => 50`
+* Coalition/Soban:
+    * Support cruiser repair rate: `12 => 11`
+* Coalition:
+    * Carrier PD rate of fire: `7 => 8`
 * Soban:
+    * ALM:
+        * World height offset: `0 => 15`
+        * Power shunt reload time:
+            * Level 1: `7s => 6.5s`
+            * Level 2: `6s => 5.5s`
+            * Level 3: `5s => 4.5s`
+            * Level 4: `4s => 3.5s`
+            * Level 5: `3s => 2.5s`
     * Baserunner ECM jammer:
         * Cost: `Free => 50CU`
         * Slow down effect: `40% => 65%`
         * Cooldown: `90s => 25s`
 * Gaalsien/Khaaneph:
-    * Heavy railgun EMP:
-        * Duration: `2.5s => 2s`
-        * Disables abilities: `No => Yes`
-        * Disables weapons: `No => Yes`
+    * Heavy railgun:
+        * Range: `1860 => 1900` (now matches C/S railgun again)
+        * Accuracy: (Now matches C/S railgun accuracy)
+            * Short: `6% => 6.25%`
+            * Medium: `5% => 5.75%`
+            * Long: `4% => 5.5%`
+        * EMP:
+            * Duration: `2.5s => 2s`
+            * Disables abilities: `No => Yes`
+            * Disables weapons: `No => Yes`
 
 ## 2020-02-01
 * Gaalsien/Khaaneph:
@@ -712,9 +736,25 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Railgun target prioritization
 > *Railgun target prioritization weights have been reworked to ensure more predictable and smart behavior. Range and angle make less of an impact on railgun target prioritization, but weapon effectiveness is now more important (meaning railguns will prioritize targets that have lower armor but also take high received accuracy from the railguns, which is most likely enemy railguns).*
 
-* Weapon effectiveness weight: `10 => 50`
-* Distance weight: `0.1 => 0.05`
-* Angle weight: `25 => 10`
+* Weapon effectiveness weight: `increased`
+* Distance weight: `decreased`
+* Angle weight: `decreased`
+* Auto target sticky bias: `decreased`
+
+### Unit priority as target
+> *Adjusting certain unit priority as targets to make targeting of these units more logical and less micro intensive.*
+> 
+> *Generally the result of automatic targeting of most units should be as follows: Strike craft > Salvagers > Small targets.*
+> 
+> *For railguns: Medium/Large targets > Carrier > Baserunner > Strike craft > Salvagers > Small targets*
+
+* Baserunner: `decreased`
+* Salvager: `increased`
+* Strike craft: `increased`
+* Railgun: `increased`
+* Carrier: `increased (inconsistencies fixed)`
+* Gun turret: `decreased`
+* Missile turret: `decreased`
 
 ### Air sorties
 > *The optimal way to use air is to always keep them in the air (as there is no fuel system in the game). The micro requirement for keeping air units in the air was to queue as many commands as possible to make the units fly back & forth and not return to carrier. This change should simply lessen the amount of tedious micromanagement required to use air optimally.*
@@ -781,7 +821,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Hitpoints: `15000 => 12000`
 * Movement speed: `60 => 53`
 
-### Cruise missile:
+### Cruise missile
 > *Coalition cruise missile's destructive potential is unmatched. A reduction of its effectiveness against smaller units should make it tougher to extract very high value from it on a consistent basis while keeping overall strategic value of an expensive nuke-class weapon appropriately high.*
 
 * Cooldown: `120s => 150s`
@@ -792,7 +832,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Point defense weapons
 > *Lower level PD performance increased (due to BD rush), but higher level rate of fire reduced (due to damage rework of carrier PD weapons)*
 
-* Rate of fire: `2 => 7`
+* Rate of fire: `2 => 8`
 * Weapon Systems power shunt PD rate of fire bonuses:
     * Level 1: `'set to 5' => 'increase by 25%'`
     * Level 2: `'set to 10' => 'increase by 50%'`
@@ -869,15 +909,16 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Fixed an issue where front right turret range wasn't updated correctly at Level 4 power level
 
 ### ALM
-> *It's a bit too difficult to micro around ALMs and they provide too much early game safety. To offset the reload and area of effect changes ALM damage is upped considerably.*
+> *It's a bit too difficult to micro around ALMs and they provide too much early game safety. To offset the reload and area of effect changes ALM damage is upped considerably. World height offset change is meant to make ALM more easily targetable when placed on a small hill*
 
 * Damage: `40 => 120`
 * Damage packets: `1 => 2`
 * Accuracy: `100%/90%/80% => 100%/100%/100%`
 * AOE: `100 => 90`
 * Target prioritization fixes:
-    * Distance weight: `0.1 => 0.25`
-    * Angle weight: `25 => 10`
+    * Distance weight: `decreased`
+    * Angle weight: `decreased`
+* World height offset: `0 => 15`
 
 ### ALM power shunt
 > *Generally, ALM should be much worse at stun-locking opponent units, but also more capable at dealing damage which helps win defensive engagements (see ALM unit changes below).*
@@ -895,11 +936,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Level 4: `2500 => 1700`
     * Level 5: `3000 => 1900`
 * Reload time:
-    * Level 1: `4s => 7s`
-    * Level 2: `3s => 6s`
-    * Level 3: `2s => 5s`
-    * Level 4: `1s => 4s`
-    * Level 5: `0.4s => 3s`
+    * Level 1: `4s => 6.5s`
+    * Level 2: `3s => 5.5s`
+    * Level 3: `2s => 4.5s`
+    * Level 4: `1s => 3.5s`
+    * Level 5: `0.4s => 2.5s`
 * Deployment range bonus:
     * Level 2: `1000 => 800`
     * Level 3: `1500 => 1000`
@@ -939,7 +980,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Turn radius: `100 => 85`
 * Population: `6 => 5`
 * Armor: `2 => 3`
-* Repair rate: `10 => 12`
+* Repair rate: `10 => 11`
 
 ### Anti-air
 > *Support cruiser AA is the strongest AA in the game by a large margin. Such a high hitpoint body shouldn't have strong AA capability. This capability is also achieved through a single upgrade while SC is already a very useful and needed unit. The strength of this upgrade currently makes most other AA sources obsolete, and is a very easy and obvious choice of an upgrade to purchase.*
@@ -989,13 +1030,14 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Targeting jammer
 > *Extremely situational ability which wasn't very useful even when used in its perfect case scenarios.*
 
-* Cost: `150CU => Free`
+* Cost: `150CU => 50CU`
 * Max deployment range: `1100 => 1250`
 * Sensors radius: `0 => 270`
 * Contact radius: `0 => 400`
+* Cooldown: `60s => 20s`
 * Fixed an issue of this unit always being "contacted"
 * Status effect:
-    * Max speed reduction: `10% => 40%`
+    * Max speed reduction: `10% => 65%`
     * Turn radius decrease: `5% => 35%`
     * Acceleration increase: `0 => 25%`
     * Added a unit behavior modifier which makes units try to keep a distance of 400 units away from their target while inside ECM field (this is to prevent AI from endlessly circling the ECM with strike craft)
@@ -1060,11 +1102,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Max speed: `60 => 70`
 
 ### Accuracy
-> *A buff to accuracy to make coalition & soban railguns perform more consistently.*
+> *All railguns have seen a general accuracy increase to reduce RNG of missing in railgun fights..*
 
-* Short range: `5.6% => 6.25%`
-* Medium range: `5.3% => 5.75%`
-* Long range: `5% => 5.5%`
+* Short: `5.6% => 6.25%`
+* Medium: `5.3% => 5.75%`
+* Long: `5% => 5.5%`
 
 ### Range
 > *All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies.*
@@ -1546,21 +1588,25 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 ## Heavy railgun
 
 ### General stats
-> *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role. All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies. Gaalsien railgun range is slightly lower than coalition as a quality of life change where coalition railguns have had a harder time chasing the enemy due to having to stop when given new attack orders (ctrl-boxing enemy rails for instance). Additionally, the range difference will help out against Gaalsien early game 1PC railgun timings.*
+> *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role. All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies. All railguns have seen a general accuracy increase to reduce RNG of missing in railgun fights.*
 
 * Cost: `280CU 90RU => 320CU 100RU`
 * Damage: `225 => 195`
 * Hitpoints: `670 => 750`
 * Max speed: `62 => 57`
 * Experience value: `450 => 550`
-* Range: `2100 => 1860`
+* Range: `2100 => 1900`
+* Accuracy:
+    * Short: `6% => 6.25%`
+    * Medium: `5% => 5.75%`
+    * Long: `4% => 5.5%`
 
 ### EMP
 > *This upgrade has seen very little use throughout the game's history. Effectiveness buffs to make it more desirable.*
 
 * Upgrade cost: `250CU 150RU => 200CU 100RU`
 * Upgrade research time: `45s => 30s`
-* Now disables enemy weapons and abilities
+* Disables enemy weapons and abilities: `No => Yes`
 * Wind-up: `1s => 0.75s`
 * AOE: `100 => 150`
 * Range: `1200 => 1350`
@@ -1703,6 +1749,11 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
     * Reload: `5s => 4.5s`
     * Falloff: `None => Linear`
     * Wind-down: `0.5s => 0.25s`
+    * Target prioritization:
+        * Weapon effectiveness weight: `increased`
+		* Distance weight: `decreased`
+		* Angle weight: `decreased`
+		* Auto target sticky bias: `decreased`
 
 ### Anti-air
 > *Honourguard cruiser anti-air is relatively weak and paying such a large sum for it is almost never worth it. The long wind-up also often meant that the target would fly out of range before the weapon could fire.*
