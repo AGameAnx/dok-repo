@@ -479,7 +479,7 @@
 					},
 					
 					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 50,
+						"WeaponEffectivenessWeight": 80,
 						"AngleWeight": 10,
 						"DistanceWeight": 0.05
 					}
@@ -2440,7 +2440,7 @@
 				"BuffsToApplyToTarget": {
 					"0": {
 						"BuffSet": {
-							"4": { "Value": -40 }, // MaxSpeed
+							"4": { "Value": -65 }, // MaxSpeed
 							"5": { "Value": -35 }, // MaxSpeedTurnRadius
 							"6": {
 								"Attribute": "UnitDynamics_AccelerationTime",
@@ -2614,8 +2614,8 @@
 			},
 			"AbilityAttributes": {
 				"Ability_C_Baserunner_ECMField": {
-					"CooldownTimeSecs": 90,
-					"Resource1Cost": 0
+					"CooldownTimeSecs": 30,
+					"Resource1Cost": 50
 				},
 				"Ability_C_LaunchProbe_MP": {
 					"Resource1Cost": 150
@@ -3220,7 +3220,8 @@
 				"Armour": 0,
 				"ExperienceValue": 450,
 				"ProductionTime": 16,
-				"PriorityAsTarget": 15
+				"PriorityAsTarget": 15,
+				"AggroRange": 1950
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -3245,7 +3246,8 @@
 						"Distance": 1900
 					},
 					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 50,
+						"WeaponEffectivenessWeight": 80,
+						"AutoTargetStickyBias": 200,
 						"AngleWeight": 10,
 						"DistanceWeight": 0.05
 					},
@@ -3261,7 +3263,8 @@
 				"Armour": 0,
 				"ExperienceValue": 470,
 				"ProductionTime": 16,
-				"PriorityAsTarget": 15
+				"PriorityAsTarget": 15,
+				"AggroRange": 1950
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -3287,7 +3290,8 @@
 						"Distance": 1900
 					},
 					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 50,
+						"WeaponEffectivenessWeight": 80,
+						"AutoTargetStickyBias": 200,
 						"AngleWeight": 10,
 						"DistanceWeight": 0.05
 					},
@@ -3371,7 +3375,8 @@
 				"Resource1Cost": 320,
 				"Resource2Cost": 100,
 				"ExperienceValue": 550,
-				"PriorityAsTarget": 25
+				"PriorityAsTarget": 25,
+				"AggroRange": 1950
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3388,13 +3393,15 @@
 						"Distance": 1860
 					},
 					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 50,
+						"WeaponEffectivenessWeight": 80,
+						"AutoTargetStickyBias": 200,
 						"AngleWeight": 10,
 						"DistanceWeight": 0.05
 					},
 					"OutputDPS": true
 				},
 				"G_StarHull_Weapon_G2GEMP_MP": {
+					"ExcludeFromHeightAdvantage": true,
 					"BaseDamagePerRound": 150,
 					"AreaOfEffectRadius": 150,
 					"WindUpTimeMS": 750,
@@ -3408,7 +3415,8 @@
 				"Resource1Cost": 320,
 				"Resource2Cost": 100,
 				"ExperienceValue": 550,
-				"PriorityAsTarget": 25
+				"PriorityAsTarget": 25,
+				"AggroRange": 1950
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3425,12 +3433,14 @@
 						"Distance": 1860
 					},
 					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 50,
+						"WeaponEffectivenessWeight": 80,
+						"AutoTargetStickyBias": 200,
 						"AngleWeight": 10,
 						"DistanceWeight": 0.05
 					}
 				},
 				"G_StarHull_Weapon_G2GEMP_MP": {
+					"ExcludeFromHeightAdvantage": true,
 					"BaseDamagePerRound": 150,
 					"AreaOfEffectRadius": 150,
 					"WindUpTimeMS": 750,
@@ -3440,7 +3450,15 @@
 		},
 		"MiniStun_StatusEffect": {
 			"StatusEffectAttributes": {
-				"Duration": 2.5
+				"Duration": 2,
+				"Modifiers": {
+					"1": {
+						"ModifierType": "DisableAbilities"
+					},
+					"2": {
+						"ModifierType": "DisableAllWeapons"
+					}
+				}
 			}
 		},
 		"Scope_StatusEffect": {
@@ -4250,6 +4268,7 @@
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 30,
 						"AngleWeight": 20,
+						"AutoTargetStickyBias": 200,
 						"DistanceWeight": 0.05
 					}
 				},
@@ -4284,6 +4303,7 @@
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 30,
 						"AngleWeight": 20,
+						"AutoTargetStickyBias": 200,
 						"DistanceWeight": 0.05
 					}
 				},

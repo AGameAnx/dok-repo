@@ -47,6 +47,8 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-03](#2020-02-03)
+    - [2020-02-01](#2020-02-01)
     - [2020-01-31](#2020-01-31)
     - [2020-01-22](#2020-01-22)
     - [2020-01-19 (Tournament version)](#2020-01-19-tournament-version)
@@ -170,7 +172,7 @@ If above version is not up to date with the recent changes, its version will be 
     - [Assault railgun](#assault-railgun)
     - [Heavy railgun](#heavy-railgun)
         - [General stats](#general-stats-8)
-        - [EMP rounds](#emp-rounds)
+        - [EMP](#emp)
         - [Ranged calibration upgrade](#ranged-calibration-upgrade)
     - [Railgun armor level 3 upgrade cost](#railgun-armor-level-3-upgrade-cost)
     - [Interceptor](#interceptor)
@@ -356,6 +358,26 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-02-03
+* General:
+    * Railgun target prioritization:
+        * Weapon effectiveness weight: `50 => 80`
+        * Auto target sticky bias: `1750 => 200`
+* Soban:
+    * Baserunner ECM jammer:
+        * Cost: `Free => 50CU`
+        * Slow down effect: `40% => 65%`
+        * Cooldown: `90s => 25s`
+* Gaalsien/Khaaneph:
+    * Heavy railgun EMP:
+        * Duration: `2.5s => 2s`
+        * Disables abilities: `No => Yes`
+        * Disables weapons: `No => Yes`
+
+## 2020-02-01
+* Gaalsien/Khaaneph:
+    * Heavy railgun EMP affected by high ground: `Yes => No`
 
 ## 2020-01-31
 * General:
@@ -1533,15 +1555,16 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Experience value: `450 => 550`
 * Range: `2100 => 1860`
 
-### EMP rounds
+### EMP
 > *This upgrade has seen very little use throughout the game's history. Effectiveness buffs to make it more desirable.*
 
 * Upgrade cost: `250CU 150RU => 200CU 100RU`
 * Upgrade research time: `45s => 30s`
+* Now disables enemy weapons and abilities
 * Wind-up: `1s => 0.75s`
 * AOE: `100 => 150`
 * Range: `1200 => 1350`
-* Duration: `1.5s => 2.5s`
+* Duration: `1.5s => 2s`
 
 ### Ranged calibration upgrade
 > *This upgrade has seen very little use throughout the game's history. Effectiveness buffs to make it more desirable.*
