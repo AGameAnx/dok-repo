@@ -1,0 +1,92 @@
+// =============== //
+// ~ ANOMALY DOK ~ //
+// --------------- //
+// by Bozocow      //
+// =============== //
+
+{
+  "Entities": {
+
+    // ~~~~~~~~ //
+    // Gaalsien //
+    // ~~~~~~~~ //
+
+    // FIXME: undo for release
+    "Tier_1_G_Sandskimmers": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+
+    "G_SandSkimmer_MP": {
+      "WeaponAttributes": {
+        "G_SandSkimmer_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": true,
+          "ProjectileEntityTypeToSpawn": "G_Artillery_Default_ProjectileAssetContainer_MP",
+          "IsTracer": false,
+          "TracerSpeed": 0,
+          "TracerLength": 5,
+          "RateOfFire": 1,
+          "BaseDamagePerRound": 200,
+          "LineOfSightRequired": false,
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 400,
+            "MinDistance": 300
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 100,
+            "Distance": 1000
+          }
+        }
+      }
+    },
+
+    // ~~~~~~~~~ //
+    // Coalition //
+    // ~~~~~~~~~ //
+
+    "Tier_1_C_Escorts": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+
+    "Research_Buff_C_Escort": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+
+    "C_Escort_MP": {
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 90
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_C_Nitrous_MP": {
+          "ApplyStatusEffect": {
+            "Nitrous_StatusEffect": {
+              "BuffsToApplyToTarget": {
+                "0": {
+                  "BuffSet": {
+                    "0": {
+                      "Value": 130
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
