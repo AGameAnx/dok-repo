@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-05 (not reflected in main changelog)](#2020-02-05-not-reflected-in-main-changelog)
     - [2020-02-03](#2020-02-03)
     - [2020-02-01](#2020-02-01)
     - [2020-01-31](#2020-01-31)
@@ -360,6 +361,37 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
+## 2020-02-05 (not reflected in main changelog)
+* General:
+    * Heavy railgun:
+        * Max range: `1900 => 2000`
+        * Population cost: `3 => 4`
+* Coalition/Soban:
+    * Missile battery mortar barrage:
+        * Damage packets: `40 => 35`
+        * Area of effect falloff: `Quadratic => Linear`
+        * Area of effect: `205 => 220`
+    * Assault cruiser population cost: `4 => 5`
+* Coalition:
+    * Battlecruiser population cost: `6 => 7`
+* Soban:
+    * Targeting jammer:
+        * Cost: `50CU => Free`
+        * Cooldown: `30s => 60s`
+        * Hitpoints: `500 => 1200`
+        * Speed reduction modifier: `65% => 45%`
+    * Battlecruiser population cost: `5 => 7`
+* Gaalsien/Khaaneph:
+    * Ranged calibration penalties:
+        * Max speed: `66% => 50%`
+        * Turn radius: `66% => 50%`
+    * Honourguard cruiser population cost: `5 => 7`
+* Gaalsien:
+    * Siege cruiser population cost: `4 => 5`
+* Khaaneph:
+    * Carrier cruise missile damage: `450 => 500`
+    * Siege cruiser population cost: `5 => 6`
+
 ## 2020-02-03
 * General:
     * Target prioritization:
@@ -386,7 +418,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Baserunner ECM jammer:
         * Cost: `Free => 50CU`
         * Slow down effect: `40% => 65%`
-        * Cooldown: `90s => 25s`
+        * Cooldown: `90s => 30s`
 * Gaalsien/Khaaneph:
     * Heavy railgun:
         * Range: `1860 => 1900` (now matches C/S railgun again)

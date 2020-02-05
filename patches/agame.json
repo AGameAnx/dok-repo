@@ -1804,7 +1804,7 @@
 					"RangeAttributesLong": { "Distance": 950 }
 				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
-					"BaseDamagePerRound": 450,
+					"BaseDamagePerRound": 500,
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
 						"1": { "Remove": true }
@@ -2434,6 +2434,7 @@
 				"MinimumStateAfterDetection": "Hidden"
 			},
 			"UnitAttributes": {
+				"MaxHealth": 1200,
 				"ContactRadius": 400,
 				"SensorRadius": 270
 			}
@@ -2443,7 +2444,7 @@
 				"BuffsToApplyToTarget": {
 					"0": {
 						"BuffSet": {
-							"4": { "Value": -65 }, // MaxSpeed
+							"4": { "Value": -45 }, // MaxSpeed
 							"5": { "Value": -35 }, // MaxSpeedTurnRadius
 							"6": {
 								"Attribute": "UnitDynamics_AccelerationTime",
@@ -2617,8 +2618,8 @@
 			},
 			"AbilityAttributes": {
 				"Ability_C_Baserunner_ECMField": {
-					"CooldownTimeSecs": 30,
-					"Resource1Cost": 50
+					"CooldownTimeSecs": 60,
+					"Resource1Cost": 0
 				},
 				"Ability_C_LaunchProbe_MP": {
 					"Resource1Cost": 150
@@ -3219,12 +3220,13 @@
 			"UnitAttributes": {
 				"Resource1Cost": 230,
 				"Resource2Cost": 80,
+				"PopCapCost": 4,
 				"MaxHealth": 750,
 				"Armour": 0,
 				"ExperienceValue": 450,
 				"ProductionTime": 16,
 				"PriorityAsTarget": 15,
-				"AggroRange": 1950
+				"AggroRange": 2050
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -3246,7 +3248,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 5.5,
-						"Distance": 1900
+						"Distance": 2000
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 80,
@@ -3262,12 +3264,13 @@
 			"UnitAttributes": {
 				"Resource1Cost": 240,
 				"Resource2Cost": 80,
+				"PopCapCost": 4,
 				"MaxHealth": 750,
 				"Armour": 0,
 				"ExperienceValue": 470,
 				"ProductionTime": 16,
 				"PriorityAsTarget": 15,
-				"AggroRange": 1950
+				"AggroRange": 2050
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -3290,7 +3293,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 5.5,
-						"Distance": 1900
+						"Distance": 2000
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 80,
@@ -3377,9 +3380,10 @@
 				"MaxHealth": 750,
 				"Resource1Cost": 320,
 				"Resource2Cost": 100,
+				"PopCapCost": 4,
 				"ExperienceValue": 550,
 				"PriorityAsTarget": 25,
-				"AggroRange": 1950
+				"AggroRange": 2050
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3400,7 +3404,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 5.5,
-						"Distance": 1900
+						"Distance": 2000
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 80,
@@ -3424,9 +3428,10 @@
 				"MaxHealth": 750,
 				"Resource1Cost": 320,
 				"Resource2Cost": 100,
+				"PopCapCost": 4,
 				"ExperienceValue": 550,
 				"PriorityAsTarget": 25,
-				"AggroRange": 1950
+				"AggroRange": 2050
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3447,7 +3452,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 5.5,
-						"Distance": 1900
+						"Distance": 2000
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 80,
@@ -3486,7 +3491,9 @@
 							"0": { "Value": 370 },
 							"1": { "Value": 370 },
 							"2": { "Value": 370 },
-							"3": { "Value": 370 }
+							"3": { "Value": 370 },
+							"4": { "Value": -50 }, // Max speed
+							"5": { "Value": -50 } // Turn radius
 						}
 					}
 				}
@@ -3550,7 +3557,8 @@
 		"Research_Buff_G_RailGunScope": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 150,
-				"ResearchTime": 45
+				"ResearchTime": 45,
+				"LocalizedLongDescriptionStringID": "Heavy Railguns gain the RANGED CALIBRATION ability - Increasing range at the cost of mobility.\n\n[84a1e8]Weapon and sight range increased by 370.\nMovement speed reduced by 50%."
 			}
 		},
 		"Research_Buff_G_RailGunStun": {
@@ -3666,9 +3674,9 @@
 				},
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
 					"BaseDamagePerRound": 660,
-					"AreaOfEffectRadius": 205,
-					"DamagePacketsPerShot": 40,
-					"AreaOfEffectFalloffType": "Quadratic",
+					"AreaOfEffectRadius": 220,
+					"DamagePacketsPerShot": 35,
+					"AreaOfEffectFalloffType": "Linear",
 					"ExcludeFromHeightAdvantage": true
 				}
 			}
@@ -4122,7 +4130,7 @@
 				"MaxHealth": 2900,
 				"ProductionTime": 60,
 				"Armour": 12,
-				"PopCapCost": 4
+				"PopCapCost": 5
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
@@ -4181,7 +4189,7 @@
 				"MaxHealth": 2900,
 				"ProductionTime": 60,
 				"Armour": 12,
-				"PopCapCost": 4
+				"PopCapCost": 5
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
@@ -4265,6 +4273,7 @@
 				"Resource1Cost": 550,
 				"Resource2Cost": 270,
 				"MaxHealth": 2700,
+				"PopCapCost": 7,
 				"ProductionTime": 55
 			},
 			"DetectableAttributes": {
@@ -4300,6 +4309,7 @@
 				"Resource1Cost": 550,
 				"Resource2Cost": 270,
 				"MaxHealth": 2700,
+				"PopCapCost": 7,
 				"ProductionTime": 55
 			},
 			"DetectableAttributes": {
@@ -4348,6 +4358,7 @@
 				"Resource1Cost": 550,
 				"Resource2Cost": 250,
 				"MaxHealth": 4200,
+				"PopCapCost": 7,
 				"ProductionTime": 65,
 				"Armour": 16
 			},
@@ -4376,6 +4387,7 @@
 				"Resource1Cost": 520,
 				"Resource2Cost": 280,
 				"MaxHealth": 3000,
+				"PopCapCost": 7,
 				"ProductionTime": 65,
 				"Armour": 13
 			},
@@ -4507,7 +4519,7 @@
 				"MaxHealth": 1600,
 				"Armour": 5,
 				"ProductionTime": 30,
-				"PopCapCost": 4
+				"PopCapCost": 5
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -4561,6 +4573,7 @@
 		"K_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 3050,
+				"PopCapCost": 6,
 				"Armour": 13
 			},
 			"AbilityAttributes": {
