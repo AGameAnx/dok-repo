@@ -47,7 +47,9 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
-    - [2020-02-05 (not reflected in main changelog)](#2020-02-05-not-reflected-in-main-changelog)
+    - [2020-02-08 (not yet reflected in main changelog)](#2020-02-08-not-yet-reflected-in-main-changelog)
+    - [2020-02-06 (not yet reflected in main changelog)](#2020-02-06-not-yet-reflected-in-main-changelog)
+    - [2020-02-05 (not yet reflected in main changelog)](#2020-02-05-not-yet-reflected-in-main-changelog)
     - [2020-02-03](#2020-02-03)
     - [2020-02-01](#2020-02-01)
     - [2020-01-31](#2020-01-31)
@@ -361,7 +363,79 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
-## 2020-02-05 (not reflected in main changelog)
+## 2020-02-08 (not yet reflected in main changelog)
+* Coalition/Soban:
+    * Production level 1 upgrade cost: `500CU 40RU => 400CU 40RU`
+    * Vehicle armor upgrade level 3 hitpoints granted: `200 => 100`
+    * LAV:
+        * Long range accuracy: `62 => 59`
+        * Tech:
+            * Cost: `300CU => 400CU`
+            * Research time: `40s => 30s`
+    * AAV:
+        * Armor: `9 => 8`
+        * Hitpoints: `1250 => 1200`
+        * Tech research time: `50s => 55s`
+    * Railgun:
+        * Production research time: `50s => 55s`
+        * Mag accelerator damage bonus: `60 => 40`
+        * Accuracy:
+            * Short: `6.25% => 8%`
+            * Medium: `5.75% => 7.5%`
+            * Long: `5.5 => 7%`
+    * Strike fighter cost: `200CU 85RU => 200CU 90RU`
+    * Assault cruiser:
+        * Cost: `450CU 220RU => 550CU 220RU`
+        * Max movement speed: `70 => 65`
+* Coalition:
+    * Turret:
+        * Rate of fire: `5 => 4`
+        * Burst: `0.2s => 0.25s`
+    * Railgun:
+        * Cost: `230CU 80RU => 240CU 80RU` (to match Soban railguns)
+        * Damage: `195 => 150`
+        * Reload time: `2.3s => 1s`
+* Soban:
+    * Railgun:
+        * Damage: `135 => 150`
+        * Cooldown: `1.5s => 0.2s`
+        * Reload: `1.85s => 2s`
+    * Targeting jammer:
+        * Hitpoints: `1200 => 1100`
+        * Cooldown: `60s => 80s`
+        * Projectile: `Mine => Scanner` (increased travel speed)
+* Gaalsien/Khaaneph:
+    * Skimmer:
+        * Tech research time: `35s => 25s`
+        * Sensors range: `1050 => 1100`
+    * Railgun armor upgrade level 3 hitpoints granted to heavy railguns: `200 => 100`
+    * Assault railgun:
+        * Cost: `220CU 50RU => 250CU 50RU`
+        * Hitpoints: `700 => 670`
+        * Max range: `1000 => 1100`
+    * Heavy railgun:
+        * Damage: `195 => 190`
+        * Movement speed: `57 => 65`
+        * Accuracy:
+            * Short: `6.25% => 10%`
+            * Medium: `5.75% => 9.5%`
+            * Long: `5.5% => 9%`
+    * Interceptor:
+        * Area of effect: `80 => 70`
+        * Damage against carriers: `100 => 60`
+    * Production cruiser contact radius: `1250 => 1350`
+* Gaalsien:
+    * Siege cruiser autofire:
+        * Damage: `140 => 120`
+        * Reload: `3s => 4s`
+
+## 2020-02-06 (not yet reflected in main changelog)
+* General:
+    * Heavy railgun population cost: `4 => 3`
+* Coalition/Soban:
+    * Battlecruiser population cost: `7 => 6`
+
+## 2020-02-05 (not yet reflected in main changelog)
 * General:
     * Heavy railgun:
         * Max range: `1900 => 2000`
