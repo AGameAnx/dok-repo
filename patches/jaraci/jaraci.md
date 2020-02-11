@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-11 (2) (not yet reflected in changelog)](#2020-02-11-2-not-yet-reflected-in-changelog)
     - [2020-02-11](#2020-02-11)
     - [2020-02-08](#2020-02-08)
     - [2020-02-06](#2020-02-06)
@@ -359,6 +360,12 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-02-11 (2) (not yet reflected in changelog)
+* Coalition:
+    * Railgun reload time: `1s => 1.5s`
+* Soban:
+    * Railgun reload time: `2s => 2.5s`
 
 ## 2020-02-11
 * Coalition/Soban:
