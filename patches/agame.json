@@ -34,9 +34,7 @@
 				"PriorityAsTarget": -40
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 50
-				}
+				"Dynamics": { "MaxSpeed": 50 }
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -175,7 +173,6 @@
 				},
 				"C_Carrier_Weapon_CruiseMissile_MP": {
 					"BaseDamagePerRound": 2500,
-					"AreaOfEffectRadius": 500,
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
 						"1": {
@@ -421,9 +418,7 @@
 				"PriorityAsTarget": -40
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 50
-				}
+				"Dynamics": { "MaxSpeed": 50 }
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -1144,6 +1139,9 @@
 				"Armour": 30,
 				"PriorityAsTarget": -40
 			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 15 }
+			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
 			},
@@ -1163,11 +1161,6 @@
 				},
 				"Ability_G_LaunchBomber_MP": {
 					"AirSortie": { "LoiterLength": 40 }
-				}
-			},
-			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 15
 				}
 			},
 			"WeaponAttributes": {
@@ -1672,9 +1665,7 @@
 				"PriorityAsTarget": -40
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 30
-				}
+				"Dynamics": { "MaxSpeed": 30 }
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -2378,6 +2369,11 @@
 				"C_Sob_NukeEmitter_Weapon_Self": {
 					"BaseDamagePerRound": 0
 				}
+			}
+		},
+		"N_MissileBarrage_Sight": {
+			"UnitAttributes": {
+				"PopCapCost": 0
 			}
 		},
 		
@@ -3647,13 +3643,11 @@
 				"Resource1Cost": 280,
 				"Resource2Cost": 30,
 				"ProductionTime": 18,
-				"Armour": 6,
-				"MaxHealth": 960
+				"Armour": 5,
+				"MaxHealth": 1100
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 75
-				}
+				"Dynamics": { "MaxSpeed": 75 }
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
@@ -3672,13 +3666,11 @@
 				"Resource1Cost": 280,
 				"Resource2Cost": 30,
 				"ProductionTime": 18,
-				"Armour": 6,
-				"MaxHealth": 960
+				"Armour": 5,
+				"MaxHealth": 1100
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 75
-				}
+				"Dynamics": { "MaxSpeed": 75 }
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
@@ -3694,7 +3686,9 @@
 		},
 		"Tier_1_G_Catamaran": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 500
+				"Resource1Cost": 500,
+				"Resource2Cost": 125,
+				"ResearchTime": 65
 			}
 		},
 		"Research_Buff_G_ShipUnits_Armor1": {

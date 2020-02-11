@@ -47,23 +47,16 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
-    - [2020-02-08 (not yet reflected in main changelog)](#2020-02-08-not-yet-reflected-in-main-changelog)
-    - [2020-02-06 (not yet reflected in main changelog)](#2020-02-06-not-yet-reflected-in-main-changelog)
-    - [2020-02-05 (not yet reflected in main changelog)](#2020-02-05-not-yet-reflected-in-main-changelog)
+    - [2020-02-11](#2020-02-11)
+    - [2020-02-08](#2020-02-08)
+    - [2020-02-06](#2020-02-06)
+    - [2020-02-05](#2020-02-05)
     - [2020-02-03](#2020-02-03)
     - [2020-02-01](#2020-02-01)
     - [2020-01-31](#2020-01-31)
     - [2020-01-22](#2020-01-22)
     - [2020-01-19 (Tournament version)](#2020-01-19-tournament-version)
     - [2020-01-11](#2020-01-11)
-    - [2020-01-10](#2020-01-10)
-    - [2020-01-09](#2020-01-09)
-    - [2019-10-31](#2019-10-31)
-    - [2019-10-27](#2019-10-27)
-    - [2019-10-20](#2019-10-20)
-    - [2019-10-19](#2019-10-19)
-    - [2019-10-18](#2019-10-18)
-    - [2019-09-28 (Jaraci Cup #3)](#2019-09-28-jaraci-cup-3)
 - [General changes](#general-changes)
     - [Carriers](#carriers)
         - [Power level upgrades](#power-level-upgrades)
@@ -101,6 +94,7 @@ If above version is not up to date with the recent changes, its version will be 
         - [ALM](#alm)
         - [ALM power shunt](#alm-power-shunt)
         - [Microwave emitter](#microwave-emitter)
+    - [Armored vehicle upgrades](#armored-vehicle-upgrades)
     - [Production upgrades](#production-upgrades)
     - [Support cruiser](#support-cruiser)
         - [General stats](#general-stats)
@@ -122,6 +116,7 @@ If above version is not up to date with the recent changes, its version will be 
         - [Movement speed](#movement-speed)
         - [Accuracy](#accuracy)
         - [Range](#range)
+        - [Mag accelerator upgrade](#mag-accelerator-upgrade)
         - [Coalition railgun](#coalition-railgun)
         - [Soban railgun](#soban-railgun)
     - [Missile battery](#missile-battery)
@@ -166,6 +161,7 @@ If above version is not up to date with the recent changes, its version will be 
         - [Upgrades](#upgrades)
     - [Production cruiser](#production-cruiser)
         - [Costs](#costs)
+        - [Sensors](#sensors)
         - [AA weapon](#aa-weapon)
     - [Assault ship](#assault-ship)
     - [Missile ship](#missile-ship)
@@ -173,11 +169,12 @@ If above version is not up to date with the recent changes, its version will be 
         - [Radar guided missiles upgrade](#radar-guided-missiles-upgrade)
         - [Direct missile barrage](#direct-missile-barrage)
     - [Vehicle armor upgrade cost](#vehicle-armor-upgrade-cost)
+    - [Railgun fabrication](#railgun-fabrication)
     - [Assault railgun](#assault-railgun)
     - [Heavy railgun](#heavy-railgun)
         - [General stats](#general-stats-8)
         - [EMP](#emp)
-        - [Ranged calibration upgrade](#ranged-calibration-upgrade)
+        - [Ranged calibration](#ranged-calibration)
     - [Railgun armor level 3 upgrade cost](#railgun-armor-level-3-upgrade-cost)
     - [Interceptor](#interceptor)
         - [General stats](#general-stats-9)
@@ -363,7 +360,22 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
-## 2020-02-08 (not yet reflected in main changelog)
+## 2020-02-11
+* Coalition/Soban:
+    * AAV:
+        * Armor: `8 => 6`
+        * Hitpoints: `1200 => 1250`
+    * Railgun production research time: `55s => 60s`
+* Gaalsien/Khaaneph:
+    * Assault ship:
+        * Tech cost: `500CU 100RU => 500CU 125RU`
+        * Tech research time: `60s => 65s`
+        * Hitpoints: `960 => 1100`
+        * Armor: `6 => 5`
+* Gaalsien:
+    * Fixed an issue where the entity which granted vision for hypersonic missile barrage had a population cost (`1 => 0`)
+
+## 2020-02-08
 * Coalition/Soban:
     * Production level 1 upgrade cost: `500CU 40RU => 400CU 40RU`
     * Vehicle armor upgrade level 3 hitpoints granted: `200 => 100`
@@ -373,11 +385,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
             * Cost: `300CU => 400CU`
             * Research time: `40s => 30s`
     * AAV:
+        * Tech research time: `50s => 55s`
         * Armor: `9 => 8`
         * Hitpoints: `1250 => 1200`
-        * Tech research time: `50s => 55s`
     * Railgun:
-        * Production research time: `50s => 55s`
+        * Tech research time: `50s => 55s`
         * Mag accelerator damage bonus: `60 => 40`
         * Accuracy:
             * Short: `6.25% => 8%`
@@ -429,13 +441,13 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Damage: `140 => 120`
         * Reload: `3s => 4s`
 
-## 2020-02-06 (not yet reflected in main changelog)
+## 2020-02-06
 * General:
     * Heavy railgun population cost: `4 => 3`
 * Coalition/Soban:
     * Battlecruiser population cost: `7 => 6`
 
-## 2020-02-05 (not yet reflected in main changelog)
+## 2020-02-05
 * General:
     * Heavy railgun:
         * Max range: `1900 => 2000`
@@ -536,7 +548,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
             * Braking time: `0.9s => 1.2s`
 * Gaalsien/Khaaneph:
     * Production cruiser sensors range: `1000 => 1200`
-    * Railgun Tech research time: `50s => 45s`
+    * Railgun tech research time: `50s => 45s`
     * Heavy railgun EMP round damage: `200 => 150`
     * Assault railgun:
         * Hitpoints: `660 => 700`
@@ -573,183 +585,6 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Baserunners: reduced
         * Turret: reduced
         * AA turret: reduced
-
-## 2020-01-10
-* Coalition/Soban:
-    * LAV long range accuracy: `56% => 62%` (DPS: `17.5694 => 19.4518`)
-    * Railgun:
-        * Max speed: `65 => 70`
-        * Mag accelerator cost: `280CU 165RU => 400CU 100RU`
-* Coalition:
-    * Railgun cost: `250CU 80RU => 230CU 80RU`
-* Soban:
-    * Railgun cost: `260CU 80RU => 240CU 80RU`
-
-## 2020-01-09
-* Coalition/Soban:
-    * Railgun accuracy:
-        * Long: `4.5% => 5.5%`
-        * Medium: `5.0% => 5.75%`
-        * Short: `5.6% => 6.25%`
-* Coalition:
-    * Cruise missile multiplier against Carrier, Large, XLarge targets: `1.8 => 1.7` (Damage: `4500 => 4250`)
-* Gaalsien/Khaaneph:
-    * Ranged calibration range bonus: `300 => 370`
-* Gaalsien:
-    * Carrier hitpoints: `10500 => 10100`
-
-## 2019-10-31
-* General:
-    * Salvager:
-        * Cost: `100CU => 150CU`
-        * Armor: `2 => 0`
-    * Baserunner:
-        * Max speed: `65 => 70`
-    * Carrier power level upgrade cost:
-        * Level 1: `150CU 60RU => 200CU 100RU`
-        * Level 2: `350CU 150RU => 400CU 175RU`
-        * Level 4: `900CU 350RU => 900CU 400RU`
-        * Level 5: `1200CU 600RU => 1200CU 550RU`
-        * Level 7: `1400CU 800RU => 1400CU 850RU`
-* Coalition/Soban:
-    * LAV upgrade research time:
-        * Speed boost: `50s => 40s`
-        * Damage level 1: `30s => 25s`
-        * Damage level 2: `60s => 45s`
-    * Railgun:
-        * Max speed: `60 => 65`
-        * Mag accelerator cost: `280CU 190RU => 280CU 165RU` (changes reverted)
-* Soban:
-    * ALM accuracy: `100%/90%/80% => 100%/100%/100%`
-    * Baserunner targeting jammer ability:
-        * Max deployment range: `1100 => 1250`
-        * Speed penalty: `20% => 40%`
-        * Acceleration time penalty: `10% => 25%`
-        * Turn radius reduction: `10% => 35%`
-* Gaalsien/Khaaneph:
-    * Sandskimmer:
-        * Level 1 damage upgrade research time: `30s => 25s`
-        * Hitpoints: `590 => 610`
-        * Armor: `1 => 0` (changes reverted)
-        * Self regen:
-            * Activation time: `3.5s => 5.5s`
-            * Amount healed per tick: `16 => 20`
-    * Assault ship cost: `280CU 35RU => 280CU 30RU`
-* Gaalsien:
-    * Baserunner scanner deploy ability range: `2600 => 2500`
-
-## 2019-10-27
-* General:
-    * Baserunner hitpoints: `3350 => 2500`
-* Coalition/Soban:
-    * Fighter and Gunship fabrication tech research time: `70s => 65s`
-* Coalition:
-    * Carrier:
-        * Range Systems PD and missile range:
-            * Level 2: `1100 => 1050`
-            * Level 3: `1350 => 1250`
-            * Level 4: `1550 => 1450`
-            * Level 5: `1750 => 1650`
-            * Fixed an issue where Level 5 range systems weren't granting correct missile range bonuses
-        * Weapon Systems PD ROF bonus:
-            * Level 3: `100% => 75%`
-            * Level 4: `150% => 100%`
-* Gaalsien:
-    * Carrier:
-        * Supersonic Missile Barrage damage: `360 => 300`
-        * Range Systems PD and missile range:
-            * Level 2: `1100 => 1050`
-            * Level 3: `1350 => 1250`
-            * Level 4: `1550 => 1450`
-            * Level 5: `1750 => 1650`
-            * Fixed an issue where Level 5 range systems weren't granting correct missile range bonuses
-        * Weapon Systems PD ROF bonus:
-            * Level 2: `50% => 45%`
-            * Level 3: `75% => 65%`
-            * Level 4: `125% => 90%`
-* Soban:
-    * Carrier:
-        * Hitpoints: `10700 => 10000`
-        * Max speed: `53 => 60`
-        * Range Systems PD range:
-            * Level 2: `1450 => 1350`
-            * Level 3: `1650 => 1550`
-            * Level 4: `1850 => 1750`
-            * Level 5: `2050 => 1950`
-* Khaaneph:
-    * Carrier:
-        * Weapon Systems PD ROF bonus:
-            * Level 3: `200% => 150%`
-            * Level 4: `300% => 200%`
-
-## 2019-10-20
-* Coalition/Soban:
-    * AAV hitpoints: `1300 => 1250`
-* Gaalsien:
-    * Baserunner heal aura ability cooldown: `60s => 80s`
-
-## 2019-10-19
-* Gaalsien/Khaaneph:
-    * Assault ship (DPS: `67.4526 => 63.2632`):
-        * Hitpoints: `920 => 960`
-        * Damage: `28 => 35`
-        * ROF: `5 => 4`
-        * Armor: `8 => 6`
-        * Range: `740 => 755`
-    * Assault railgun (DPS: `71.0526 => 70.3812`):
-        * Damage: `45 => 60`
-        * Burst duration: `0.1-0.1s => 0.11-0.11s`
-        * Number of Bursts: `3 => 4`
-        * Reload: `1s => 2.4s`
-        * Accuracy: `15%/13%/11% => 16%/15%/14%` (mostly affects strike craft matchup)
-* Gaalsien:
-    * Baserunner:
-        * Regeneration ability (total healing unchanged):
-            * Fixed an issue where baserunner heal wasn't applying its full value to friendly units
-            * Fixed an issue where baserunner itself wasn't receiving the healing status effect
-            * Cooldown between bursts: `0.6s => 0s`
-            * Burst duration: `0.4s => 1s`
-            * Healing per weapon tick: `5 => 2`
-            * Healing per status effect tick: `10 => 4`
-            * Cooldown: `80s => 60s`
-        * Deploy scanner ability cooldown: `120s => 140s`
-
-## 2019-10-18
-* Gaalsien/Khaaneph:
-    * Refinery mode upgrade cost: `600CU 40RU => 700CU 40RU`
-    * Assault ship production time: `18s => 17s`
-    * Carrier:
-        * Re-establish systems regeneration rate:
-            * Level 2: `50 => 45`
-            * Level 3: `70 => 60`
-            * Level 4: `90 => 75`
-            * Level 5: `110 => 90`
-* Gaalsien:
-    * Carrier:
-        * Hitpoints: `11000 => 10500`
-        * Armor: `35 => 30`
-        * Supersonic missile barrage damage: `400 => 360`
-* Coalition/Soban:
-    * Baserunner probe sensors radius: `1130 => 1200`
-    * AAV:
-        * Hitpoints: `1200 => 1300`
-        * Armor: `10 => 9`
-* Coalition:
-    * Railgun cost: `240CU 85RU => 250CU 80RU`
-* Soban:
-    * Railgun cost: `250CU 85RU => 260CU 80RU`
-
-## 2019-09-28 (Jaraci Cup #3)
-* Gaalsien/Khaaneph:
-    * Siege cruiser upgrades:
-        * Range research time: `110s => 50s`
-        * EMP shell:
-            * Cost: `450CU 125RU => 250CU 100RU`
-            * Research time: `55s => 35s`
-* Gaalsien:
-    * Siege cruiser:
-        * Damage: `160 => 150`
-        * Range: `1850 => 2000`
 
 # General changes
 
@@ -925,14 +760,13 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however. Movement speed nerf is part of an effort to fix a particularly strong early game 1 base carrier timing push.*
 
 * Hitpoints: `15000 => 12000`
-* Movement speed: `60 => 53`
+* Movement speed: `60 => 50`
 
 ### Cruise missile
 > *Coalition cruise missile's destructive potential is unmatched. A reduction of its effectiveness against smaller units should make it tougher to extract very high value from it on a consistent basis while keeping overall strategic value of an expensive nuke-class weapon appropriately high.*
 
 * Cooldown: `120s => 150s`
 * Damage: `5000 => 2500`
-* AOE: `500 => 470`
 * Damage against cruisers and carriers: `100% => 180%`
 
 ### Point defense weapons
@@ -952,6 +786,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. The Soban carrier hitpoint nerf is larger than other carriers because it gets strong railgun weaponry from the beginning of the game and extra range for safer positioning. Movement speed and armor changes are part of an effort to fix a particularly strong early game 1 base carrier timing push*
 
 * Hitpoints: `15000 => 10000`
+* Movement speed: `60 => 50`
 * Base armor: `25 => 15`
 
 ### Armor system power shunt
@@ -1070,11 +905,17 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Damage against Carrier, XLarge and Large class targets: `100% => 120%`
 * Removed the 500 damage per second status affect on friendly units
 
+## Armored vehicle upgrades
+> *Reducing strength of level 3 armor upgrade to both make railguns more susceptible to their counters throughout the game and to lower the power of AAV snowballing.*
+
+* Vehicle armor upgrade level 3 hitpoints granted: `200 => 100`
+
 ## Production upgrades
 > *It has become quite commonplace to get railgun or AAV tech just to get the last level of production for C/S factions. This will open up C/S options significantly, it will allow for more optimized and committed midgame pushes and deadlier timings. Nevertheless, extra cost and other changes will make these pushes require well designed build orders to pull off properly.*
 
 * Requirements: `Railgun/AAV techs => None`
-* Cost: `500CU => 500CU 40RU`
+* Level 1 upgrade cost: `500CU => 400CU 40RU`
+* Level 2 upgrade cost: `500CU => 500CU 40RU`
 * Research time: => `30s => 50s`
 
 ## Support cruiser
@@ -1125,10 +966,10 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 > *The goal of this rework is to make baserunner turret slightly more effective against armored targets and to also fix some issues with its performance such as it firing behind dunes. This new iteration of the turret will allow for greater micro potential against it with strike craft and it'll be slightly better at countering highly upgraded tanks. With accuracy always being 100% the turret will always 1-shot skimmers which aren't upgraded with level 2 armor or aren't pulled away.*
 
 * Base damage: `30 => 55`
-* Rate of fire: `14 => 5`
+* Rate of fire: `14 => 4`
 * Number of bursts: `2 => 12`
 * Cooldown: `0.1s => 0`
-* Burst: `0.8-1s => 0.2s`
+* Burst: `0.8-1s => 0.25s`
 * Reload: `2s => 2.2s`
 * Accuracy: `95%/85%/75% => 100%/100%/100%`
 * Turret rotation speed: `180 => 150`
@@ -1136,14 +977,16 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Targeting jammer
 > *Extremely situational ability which wasn't very useful even when used in its perfect case scenarios.*
 
-* Cost: `150CU => 50CU`
+* Cost: `150CU => Free`
+* Hitpoints: `500 => 1100`
 * Max deployment range: `1100 => 1250`
 * Sensors radius: `0 => 270`
 * Contact radius: `0 => 400`
-* Cooldown: `60s => 20s`
+* Cooldown: `60s => 80s`
+* Projectile: `Mine => Scanner` (increased travel speed)
 * Fixed an issue of this unit always being "contacted"
 * Status effect:
-    * Max speed reduction: `10% => 65%`
+    * Max speed reduction: `10% => 45%`
     * Turn radius decrease: `5% => 35%`
     * Acceleration increase: `0 => 25%`
     * Added a unit behavior modifier which makes units try to keep a distance of 400 units away from their target while inside ECM field (this is to prevent AI from endlessly circling the ECM with strike craft)
@@ -1156,7 +999,9 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ## LAV
 > *LAV have been revealed as a center point of effective coalition play. Oppressive early game strategies along with LAV providing a strong mid/late game defensive core for the coalition army is the main reasoning behind the reduction of overall LAV effectiveness. Due to the mod increasing the power of various strike craft counters, LAV have become extremely fragile in the lategame and their large discrepancy with sandskimmer hitpoints has been a big issue in balancing various area of effect units. New LAV hitpoints will make them sustain damage a bit better. Production time is increased substantially due to production upgrade being available earlier and it was needed to curb the power of LAV openers in general. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
 
-* Tech research time: `35s => 40s`
+* Tech:
+    * Cost: `300CU => 400CU`
+    * Research time: `35s => 30s`
 * Build time: `8s => 12s`
 * Hitpoints: `500 => 570`
 * Weapon:
@@ -1164,7 +1009,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Burst: `0.8-1.2s => 0.95-1.05s`
     * Burst count: `4 => 2`
     * Cooldown: `0.8s => 0.4s`
-    * Long range accuracy: `56% => 62%`
+    * Long range accuracy: `56% => 59%`
     * Turret rotation speed: `180 => 250`
     * Damage against probes: `100% => 50%`
 * Upgrade research time:
@@ -1178,11 +1023,13 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 > *The hitpoints are reduced on AAV to make soft-countering them with units such as assault ships or interceptors more of an option than it previously was. Previously, AAV would drive past a lot of things to target the squishier targets such as enemy salvagers. This is still possible, but the enemy can react to it easier.*
 
 * Hitpoints: `1400 => 1250`
-* Base armor : `8 => 9`
+* Armor : `8 => 6`
+* Max movement speed: `80 => 84`
 
 ### Pricing
 > *AAV timing on small maps is a bit too oppressive. Due to an increase of unit's lategame utility, the base cost is going up slightly. AAV are not very effective late game units and are cheap, their population cost doesn't reflect this.*
 
+* Tech research time: `50s => 55s`
 * Cost: `180CU 30RU => 240CU 25RU`
 * Production time: `14s => 16s`
 * Population: `3 => 2`
@@ -1200,6 +1047,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 > *These changes are part of an effort to fix a particularly strong early game 1 base carrier timing push. Additionally, mag accelerator is overall too much of a no-brainer upgrade and a cost increase will make it slightly more difficult to acquire, making it more of a decision in midgame to get it quickly.*
 
 * Research cost: `450CU 135RU => 450CU 165RU`
+* Research time: `50s => 60s`
 * Build time: `14s => 16s`
 
 ### Movement speed
@@ -1210,37 +1058,43 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Accuracy
 > *All railguns have seen a general accuracy increase to reduce RNG of missing in railgun fights..*
 
-* Short: `5.6% => 6.25%`
-* Medium: `5.3% => 5.75%`
-* Long: `5% => 5.5%`
+* Short: `5.6% => 8%`
+* Medium: `5.3% => 7.5%`
+* Long: `5% => 7%`
 
 ### Range
 > *All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies.*
 
-* Range: `2100 => 1900`
+* Range: `2100 => 2000`
+
+### Mag accelerator upgrade
+> *The upgrade was too impactful for early game performance. Railguns are still balanced around this upgrade being present, but the lack of this upgrade in the early game is now not as impactful as before.*
+
+* Damage bonus: `60 => 40`
 
 ### Coalition railgun
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role.
 Coalition railguns have also seen some reload time buffs to go alongside target priority & reveal time changes to bring cost / damage output closer to the insanely high values that gaalsien railguns have in that category.*
 
-* Cost: `200CU 60RU => 230CU 80RU`
+* Cost: `200CU 60RU => 240CU 80RU`
 * Hitpoints: `670 => 750`
-* Armor: `3 => 2`
+* Armor: `3 => 0`
 * Experience value: `350 => 450`
-* Damage: `225 => 195`
-* Reload: `3.5s => 2.3s`
+* Damage: `225 => 150`
+* Reload: `3.5s => 1s`
 
 ### Soban railgun
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role.
-Soban railguns are extremely powerful, they have superior DPS, superior hitpoint pool, superior armor and mag accelerator upgrade benefits them more than the coalition railgun. Additionally, they have mark target ability which comes for free. The gap between coalition and Soban railgun performance has been lessened significantly, but soban railgun remains the most cost efficient railgun in the game.*
+> 
+> *The gap between coalition and Soban railgun performance has been lessened significantly, but soban railgun remains the most cost efficient railgun in the game.*
 
 * Cost: `210CU 60RU => 240CU 80RU`
 * Hitpoints: `680 => 750`
-* Armor: `4 => 1`
+* Armor: `4 => 0`
 * Experience value: `350 => 470`
-* Damage: `165 => 135`
-* Cooldown: `2s => 1.5s`
-* Reload: `2.5s => 1.85s`
+* Damage: `165 => 150`
+* Cooldown: `2s => 0.2s`
+* Reload: `2.5s => 2s`
 
 ## Missile battery
 
@@ -1256,9 +1110,9 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 > *Mortar damage was extremely polarizing. When hitting enemy units from the high ground it had the potential to make game-winning plays of wiping entire enemy strike craft forces, but when hitting normally the damage could end up irrelevant. These changes should make this ability much more consistent in its performance, killing off strike craft in the center, and damaging a good chunk around them in a healthy area of effect.*
 
 * Benefits from high ground: `Yes => No`
-* Falloff: `None => Quadratic`
-* Damage packets: `20 to 40`
-* AOE: `180 to 205`
+* Falloff: `None => Linear`
+* Damage packets: `20 to 35`
+* AOE: `180 to 220`
 * Damage: `450 to 660`
 
 ## Assault cruiser
@@ -1266,12 +1120,13 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 ### General stats
 > *Assault cruiser becomes slightly worse at brawling against other cruisers and armored vehicles but gets help in other areas such as its cost, its hitpoints and its abilities. Weapon and armor changes will allow mid-tier units to soft-counter out of position assault cruisers in some fringe situations, whereas previously assault cruisers were very hard to weed out even by much superior numbers when they were positioned behind dunes.*
 
-* Tech research cost: `600CU 350RU => 450CU 300RU`
+* Tech research cost: `600CU 350RU => 550CU 300RU`
 * Production time: `65s => 60s`
 * Cost: `500CU 250RU => 400CU 220RU`
-* Population: `6 => 4`
+* Population: `6 => 5`
 * Hitpoints: `2700 => 2900`
 * Armor: `15 => 12`
+* Max movement speed: `70 => 65`
 * Missile barrage benefits high ground: `Yes => No`
 * Cooldowns:
     * Missile barrage: `60s => 50s`
@@ -1281,7 +1136,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
     * Cost: `250CU => Free`
     * AOE: `120 => 140`
     * Falloff: `None => Quadratic`
-    * Range: `1350 => 1200`
+    * Range: `1350 => 1000`
     * Damage against small targets: `100% => 60%`
 * Weapon:
     * Damage: `70 => 55`
@@ -1304,11 +1159,6 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 
 * Tech cost: `700CU 450RU => 550CU 350RU`
 * Production time: `75s => 65s`
-* Movement dynamics characteristics:
-    * Max speed: `50 => 54`
-    * Acceleration time: `1.5s => 1.2s`
-    * Braking time: `1s => 0.9s`
-    * Turn radius: `200 => 130`
 
 ### Coalition
 > *Damage is reduced in favor of higher rate of fire. This helps the unit deal with medium vehicles easier while also curbing its insane damage potential against carriers*
@@ -1321,13 +1171,24 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Falloff: `Linear => Quadratic`
 * AOE: `50 => 55`
 * Range: `1250 => 1300`
+* Movement dynamics:
+    * Max speed: `50 => 54`
+    * Turn radius: `200 => 130`
+    * Acceleration time: `1.5s => 1.2s`
+    * Braking time: `1s => 0.9s`
 
 ### Soban
 > *Long range high damage unit. Very dangerous to have such a unit be also extremely survivable. Improving close range accuracy, this unit had higher accuracy on Distant range than Short and Medium.*
 
 * Cost: `780CU 220RU => 520CU 280RU`
-* Hitpoints: `6500 => 3800`
-* Armor `25 => 15`
+* Hitpoints: `6500 => 3000`
+* Armor `25 => 13`
+* Population: `5 => 6`
+* Movement dynamics:
+    * Max movement speed: `50 => 62`
+    * Max speed turn radius: `200 => 160`
+    * Acceleration time: `1.5s => 1.9s`
+    * Braking time: `1s => 1.2s`
 * Accuracy:
 	* Short: `4% => 7%`
 	* Medium: `4% => 6%`
@@ -1376,7 +1237,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 ### Strike fighter
 > *Strike Fighter timings are extremely powerful and their numbers can grow very fast. These changes aim to reduce strike fighter timing attack strength (especially in CvC matchups, but also against gaalsien railgun openings), and make soft countering strike fighters easier (hitpoint reduction).*
 
-* Cost: `150CU 100RU => 200CU 85RU`
+* Cost: `150CU 100RU => 200CU 90RU`
 * Production time: `15s => 26s`
 * Hitpoints: `650 => 490`
 * Armor: `2 => 4`
@@ -1462,7 +1323,9 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Damage: `600 => 360`
 * Damage against carriers: `50% => 100%`
 * AOE: `200 => 230`
+* AOE falloff: `Linear => Quadratic`
 * Missile count per weapon: `10 => 8`
+* Fixed an issue where the entity which granted vision for the barrage had a population cost (`1 => 0`)
 
 ## Khaaneph carrier
 
@@ -1477,7 +1340,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 ### Cruise missiles systems
 > *Khaaneph cruise missiles have proven themselves to be extremely powerful overall and especially against enemy carriers.*
 
-* Damage: `400 => 450`
+* Damage: `400 => 500`
 * Damage against carriers: `150% => 100%`
 * Affected by high ground: `Yes => No`
 * Range bonuses:
@@ -1529,15 +1392,12 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 ## Baserunner
 
 ### Heal aura ability
-> *It is no longer possible to abuse baserunner spam to quickly heal large amounts of hitpoints on targets such as the carrier, as the heal doesn't stack nearly as strongly as it used to. Overall effectiveness of this ability is increased immensely, however, heal amount per burst increased from 40 to 100, total heal amount increased from 400 to 800*
+> *It is no longer possible to abuse baserunner spam to quickly heal large amounts of hitpoints on targets such as the carrier, as the heal doesn't stack nearly as strongly as it used to. Overall effectiveness of this ability is increased immensely, however. The stacking portion heals 200 hitpoints in total per 10 seconds. The non-stacking portion heals 600 hitpoints per 10 seconds. Total heal amount increases from 400 to 800.*
 * Recharge time: `50s => 80s`
 * Rate of healing: `1 => 10`
-* Amount: `40 => 5`
-* Burst: `1s => 0.4s`
-* Cooldown: `0 => 0.6s`
+* Amount: `40 => 2`
 * Now applies a non-stacking healing over time status effect to friendly units:
     * Rate of healing: `20`
-    * Duration: `0.05s`
     * Healing: `3`
 * Prevented from affecting air units
 
@@ -1571,8 +1431,9 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 ### General stats
 > *Discrepancy between LAV and Skimmer hitpoints was very large and caused almost every area of effect weapon to be extremely difficult to balance. Skimmers also needed a slight decrease in power. Slightly increased sensors range should help skimmers avoid AAV and other early game threats easier.*
 
+* Tech research time: `35s => 25s`
 * Hitpoints: `650 => 610`
-* Sensor radius: `1000 => 1050`
+* Sensor radius: `1000 => 1100`
 * Self regen:
     * Activation time: `3.5s => 5.5s`
     * Amount healed per tick: `16 => 20`
@@ -1601,6 +1462,12 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Refinery tech cost: `700CU => 700CU 40RU`
 * Cost: `600CU => 640CU 60RU`
 
+### Sensors
+> *Production cruisers can be ambushed quite easily by enemy assault ships or AAV which can cause game ending damage because production cruisers don't have high enough movement speed to escape, and even if the PC itself doesn't die, the units coming out of them do. The extra vision range makes PCs able to preemptively move back. This also helps with vision for early game pushes.*
+
+* Sensors radius: `1000 => 1200`
+* Contact radius: `1250 => 1350`
+
 ### AA weapon
 > *DPS was rebalanced slightly to be lower on short and medium range but stronger on long range, an additional slight range increase is introduced in order to help mitigate early game air plays. This should ensure that air is a bit harder to control and will most likely be bleeding hitpoints when attempting to operate close to production cruisers.*
 
@@ -1616,15 +1483,17 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 ## Assault ship
 > *Slightly reducing tech cost to make this tech path more desirable in more situations. Range increase should help with unit usability issues as well as improve overall effectiveness, particularly against units it's intended to counter. The unit is extremely strong when it can get into position to fire, so, to reduce the impact of assault ship rushes and assault ship early game dominance, hitpoints of the assault ship are getting reduced. To mitigate midgame assault ship spam and all-in aggro strategies, their cost is getting increased. Additionally, now that assault ships have good range to do consistent damage to strike craft, their large area of effect is no longer required for them to be effective at countering them, therefore it is getting falloff.*
 
-* Tech cost: `600CU 100RU => 500CU 100RU`
+* Tech cost: `600CU 100RU => 500CU 125RU`
+* Tech research time: `60s => 65s`
 * Cost: `220CU 40RU => 280CU 30RU`
-* Production time: `18s => 17s`
-* Hitpoints: `1400 => 960`
-* Damage: `24 => 35`
+* Hitpoints: `1400 => 1100`
+* Armor: `6 => 5`
+* Max movement speed: `70 => 75`
+* Damage: `24 => 38`
 * ROF: `5 => 4`
 * AOE: `80 => 110`
 * Falloff: `None => Linear`
-* Range: `700 => 755`
+* Range: `700 => 750`
 
 ## Missile ship
 
@@ -1666,12 +1535,18 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Level 2: `200CU 200RU 20s => 200CU 150RU 20s`
 * Level 3: `200CU 300RU 30s => 250CU 200RU 25s`
 
+## Railgun fabrication
+> *Having research take less time makes it easier to counter various rush strategies.*
+
+* Tech research time: `50s => 45s`
+
 ## Assault railgun
 > *Assault railguns are pretty difficult to deal with on some maps and reaching critical mass of them is rather easy. A slight rebalance to their survivability and cost to better place the unit in terms of how it lines up with things it's supposed to counter, and its counters. Maneuverability changes should allow strike craft and other units which normally have a hard time catching them to be more capable of doing it and promotes the use of dart maneuver ability. Damage is increased but reload also lengthened to frontload the damage output, this is to address mirror matchup defensive player having a hard time capitalizing on the safe haven of the carrier. Overall AR DPS is slightly reduced with other midgame unit balancing in mind, AR were a bit too good at countering a lot of them. Wind-up time reduced (and moved to reload) to make the weapon more responsive when AR are being flanked.*
 
-* Cost: `200CU 35RU => 220CU 50RU`
-* Production time: `24s => 20s`
-* Hitpoints: `550 => 660`
+* Cost: `200CU 35RU => 250CU 50RU`
+* Production time: `24s => 19s`
+* Hitpoints: `550 => 670`
+* Armor: `6 => 3`
 * Experience value: `610 => 350`
 * Armor upgrade hitpoint bonus:
     * Level 2: `100 => 50`
@@ -1679,13 +1554,13 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Movement dynamics characteristics:
     * Acceleration time: `0.85 => 0.93`
     * Breaking time: `0.85 => 0.93`
-    * Max speed: `100 => 92`
 * Damage: `50 => 60`
 * Burst duration: `0.1-0.1s => 0.11-0.11s`
 * Number of Bursts: `3 => 4`
 * Wind-up: `1s => 0.6s`
 * Wind-down: `0.5s => 0.25s`
 * Reload: `0.6s => 2.4s`
+* Max range: `1000 => 1100`
 * Accuracy: `15%/13%/11% => 16%/15%/14%`
 * Dart maneuver:
     * Tech time: `60s => 30s`
@@ -1697,15 +1572,16 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role. All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies. All railguns have seen a general accuracy increase to reduce RNG of missing in railgun fights.*
 
 * Cost: `280CU 90RU => 320CU 100RU`
-* Damage: `225 => 195`
+* Damage: `225 => 190`
 * Hitpoints: `670 => 750`
-* Max speed: `62 => 57`
+* Max speed: `62 => 65`
 * Experience value: `450 => 550`
-* Range: `2100 => 1900`
+* Range: `2100 => 2000`
 * Accuracy:
-    * Short: `6% => 6.25%`
-    * Medium: `5% => 5.75%`
-    * Long: `4% => 5.5%`
+    * Short: `6% => 10%`
+    * Medium: `5% => 9.5%`
+    * Long: `4% => 9%`
+* Railgun armor upgrade level 3 hitpoints granted: `200 => 100`
 
 ### EMP
 > *This upgrade has seen very little use throughout the game's history. Effectiveness buffs to make it more desirable.*
@@ -1718,12 +1594,14 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Range: `1200 => 1350`
 * Duration: `1.5s => 2s`
 
-### Ranged calibration upgrade
+### Ranged calibration
 > *This upgrade has seen very little use throughout the game's history. Effectiveness buffs to make it more desirable.*
 
 * Cost: `250CU 150RU => 150CU 150RU`
 * Research time: `60s => 45s`
 * Range bonus: `300 => 370`
+* Max speed penalty: `66% => 50%`
+* Turn radius penalty: `66% => 50%`
 
 ## Railgun armor level 3 upgrade cost
 > *It was previously too much of an obvious choice to always upgrade level 3 on railguns which massively increased their combat performance without much of an initial investment. It should be slightly less of an obvious choice and supporting railgun units with other units rather than just beefing up railguns themselves should be slightly more desirable.*
@@ -1747,6 +1625,8 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Reload: `2s => 3.8s`
 * Weapon base damage: `150 => 110`
 * Weapon rate of fire: `3 => 4`
+* Area of effect: `60 => 70`
+* Damage against carriers: `100 => 60`
 
 ### Afterburner upgrade
 > *Afterburner upgrade is incredibly effective and can be oppressive in situations where a player can get it while being ahead in the game. Toned down its effects and increased the cost to make this upgrade more of a commitment.*
@@ -1797,9 +1677,12 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Tech research time: `90s => 55s`
 * Cost: `600CU 200RU => 300CU 120RU`
 * Production time: `60s => 30s`
-* Population: `3 => 4`
+* Population: `6 => 5`
 * Hitpoints: `2500 => 1600`
 * Armor: `3 => 5`
+* Autofire:
+    * Damage: `200 => 120`
+    * Reload: `3s => 4s`
 * Barrage:
     * Damage: `200 => 150`
     * Rate of fire: `3 => 4`
@@ -1818,6 +1701,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 > *Khaaneph siege cruiser is very strong and becomes problematic when spammed in team games, besides being very strong on maps with certain topology which allows siege cruisers to constrict players completely in their base. These changes should increase the critical mass required for siege cruisers to be able to counter its counters such as railguns, and reduce the potential of providing free damage on the enemy while keeping the barrage feeling powerful. Getting hit by KSC main weapon should be slightly less punishing overall, and micro against it is easier. However, the damage is applied over a considerably larger area, making it more consistent for the situations where units are trying to dodge it. Additionally, this cruiser was impossible to weed out from behind dunes. Armor reduction means that this cruiser can get swarmed even by lower damage weapon using units.*
 
 * Hitpoints: `3350 => 3050`
+* Population: `5 => 6`
 * Armor: `15 => 13`
 * Main weapon:
     * Damage: `125 => 150`
@@ -1844,6 +1728,7 @@ Soban railguns are extremely powerful, they have superior DPS, superior hitpoint
 * Cost: `700CU 240RU => 550CU 270RU`
 * Production time: `70s => 55s`
 * Hitpoints: `3600 => 2700`
+* Population: `5 => 7`
 * Max speed: `60 => 54`
 
 ### Weapon
