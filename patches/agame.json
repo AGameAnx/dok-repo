@@ -1694,11 +1694,11 @@
 				},
 				"K_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 18,
-					"RateOfFire": 6,
+					"RateOfFire": 8,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
 					"RangeAttributesMedium": { "Accuracy": 45, "Distance": 650 },
-					"RangeAttributesLong": { "Accuracy": 35, "Distance": 950 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 1050 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Medium",
@@ -1740,7 +1740,7 @@
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
 					"BaseDamagePerRound": 45,
-					"RateOfFire": 6,
+					"RateOfFire": 8,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
 					"RangeAttributesMedium": { "Accuracy": 45, "Distance": 650 },
@@ -2755,7 +2755,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 70
+					"MaxSpeed": 80
 				}
 			},
 			"AbilityAttributes": {
@@ -2980,11 +2980,6 @@
 				"ProductionTime": 16,
 				"Armour": 8,
 				"PopCapCost": 2
-			},
-			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 84
-				}
 			},
 			"WeaponAttributes": {
 				"C_HAC_Weapon_G2G_MP": {
@@ -3251,8 +3246,9 @@
 			},
 			"WeaponAttributes": {
 				"C_Railgun_Weapon_G2G_MP": {
+					"WindUpTimeMS": 2000,
 					"BaseDamagePerRound": 150,
-					"ReloadTimeMS": 1500,
+					"ReloadTimeMS": 1400,
 					"RangeAttributesShort": {
 						"Accuracy": 8
 					},
@@ -3292,9 +3288,10 @@
 			},
 			"WeaponAttributes": {
 				"C_Sob_Railgun_Weapon_G2G_MP": {
+					"WindUpTimeMS": 2000,
 					"BaseDamagePerRound": 150,
-					"CooldownTimeMS": 200,
-					"ReloadTimeMS": 2500,
+					"CooldownTimeMS": 1200,
+					"ReloadTimeMS": 3200,
 					"RangeAttributesShort": {
 						"Accuracy": 8
 					},
@@ -3869,6 +3866,11 @@
 					"AreaOfEffectRadius": 160,
 					"AreaOfEffectFalloffType": "Linear"
 				}
+			}
+		},
+		"Tier_2_G_Catamaran_AA": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 45
 			}
 		},
 		"Research_Buff_G_CatamaranAA_GlobalMissiles": {

@@ -47,7 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
-    - [2020-02-11 (2) (not yet reflected in changelog)](#2020-02-11-2-not-yet-reflected-in-changelog)
+    - [2020-02-12](#2020-02-12)
     - [2020-02-11](#2020-02-11)
     - [2020-02-08](#2020-02-08)
     - [2020-02-06](#2020-02-06)
@@ -153,6 +153,7 @@ If above version is not up to date with the recent changes, its version will be 
         - [Mobility support system](#mobility-support-system)
     - [Baserunner](#baserunner-2)
         - [Heal aura ability](#heal-aura-ability)
+        - [Khaaneph baserunner speed](#khaaneph-baserunner-speed)
         - [Deploy sensor ability](#deploy-sensor-ability)
         - [Smoke ability](#smoke-ability)
         - [Blast drone](#blast-drone)
@@ -166,6 +167,7 @@ If above version is not up to date with the recent changes, its version will be 
         - [AA weapon](#aa-weapon)
     - [Assault ship](#assault-ship)
     - [Missile ship](#missile-ship)
+        - [Tech](#tech-2)
         - [General stats](#general-stats-7)
         - [Radar guided missiles upgrade](#radar-guided-missiles-upgrade)
         - [Direct missile barrage](#direct-missile-barrage)
@@ -361,11 +363,24 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
-## 2020-02-11 (2) (not yet reflected in changelog)
+## 2020-02-12
 * Coalition:
-    * Railgun reload time: `1s => 1.5s`
+    * AAV max speed: `84 => 80`
+    * Railgun:
+        * Wind-up: `1.6s => 2s`
+        * Reload time: `1s => 1.5s`
 * Soban:
-    * Railgun reload time: `2s => 2.5s`
+    * Railgun:
+        * Wind-up: `1.6s => 2s`
+        * Cooldown: `0.2s = 1.2s`
+        * Reload time: `2s => 3.2s`
+* Gaalsien/Khaaneph:
+    * Missile ship fabrication research time: `55s => 45s`
+* Khaaneph:
+    * Carrier PD:
+        * Rate of fire: `6 => 8`
+        * Range: `950 => 1050`
+    * Baserunner max speed: `70 => 80`
 
 ## 2020-02-11
 * Coalition/Soban:
@@ -1031,7 +1046,6 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 * Hitpoints: `1400 => 1250`
 * Armor : `8 => 6`
-* Max movement speed: `80 => 84`
 
 ### Pricing
 > *AAV timing on small maps is a bit too oppressive. Due to an increase of unit's lategame utility, the base cost is going up slightly. AAV are not very effective late game units and are cheap, their population cost doesn't reflect this.*
@@ -1088,7 +1102,8 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Armor: `3 => 0`
 * Experience value: `350 => 450`
 * Damage: `225 => 150`
-* Reload: `3.5s => 1s`
+* Wind-up: `1.6s => 2s`
+* Reload: `3.5s => 1.5s`
 
 ### Soban railgun
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role.
@@ -1100,8 +1115,9 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Armor: `4 => 0`
 * Experience value: `350 => 470`
 * Damage: `165 => 150`
-* Cooldown: `2s => 0.2s`
-* Reload: `2.5s => 2s`
+* Wind-up: `1.6s => 2s`
+* Cooldown: `2s => 1.2s`
+* Reload: `2.5s => 3.2s`
 
 ## Missile battery
 
@@ -1364,8 +1380,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ### Weapon systems
 > *Khaaneph carrier does not have range systems on it, meaning the range of its basic weaponry can never be increased. This meant that weapons systems power shunt was mostly useless as it could never get range on the opponent. Increasing base range of carrier weapons can be dangerous for early game therefore Khaaneph carrier is receiving some nerfs to its basic weapons for low levels. High power level PDs receive the highest available rate of fire compared to other carriers, however, to make this system more desirable.*
 
-* PD rate of fire: `8 => 6`
-* PD ranges: `250/500/750 => 350/650/950`
+* PD ranges: `250/500/750 => 350/650/1100`
 * Missile systems range: `750 => 950`
 * Missile systems wind-up: `0.25s => 0.5s`
 * Power shunt now provides extra fire rate to missile systems
@@ -1407,6 +1422,11 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
     * Rate of healing: `20`
     * Healing: `3`
 * Prevented from affecting air units
+
+### Khaaneph baserunner speed
+> *To improve early game scouting and improve baserunner interactions with early game units Khaaneph baserunner gets a slight speed advantage. This might also open up strong opportunities for artifact-based midgame strategies.*
+
+* Max speed: `70 => 80`
 
 ### Deploy sensor ability
 > *Slight ease of use improvement for this ability as it is considerably weaker than the combination of Khaaneph baserunner abilities*
@@ -1503,6 +1523,11 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Range: `700 => 750`
 
 ## Missile ship
+
+### Tech
+> *Even though the scouting window is existent in the mod, it was still incredibly short, despite strike fighter production time being increased drastically. Missing scouting, or being hit by an air timing attack, was unbelievably punishing as G/K. The following change is meant to reduce the impact of getting hit by air in those cases and also to make the scouting window larger.*
+
+* Missile ship fabrication research time: `55s => 45s`
 
 ### General stats
 > *Gaalsien AA tanks take significantly lower to tech into and produce, a small production time buff should help gaalsien prepare for enemy air plays more easily. The largest factor of AA doing its work vs normal air strategies is the first shot. Increased reload duration means AA will have a much harder time quickly killing off large numbers of air and heavy air and both of those strategies are underused, however it won't affect the early game air rush situations very much.*
