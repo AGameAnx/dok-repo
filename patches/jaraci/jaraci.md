@@ -365,6 +365,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 # Recent changes
 
 ## 2020-02-15 (not yet reflected in the changelog)
+* General:
+    * Heavy railgun target prioritization:
+        * Weapon effectiveness weight: `80 => 250`
+        * Auto target sticky bias: `200 => 50`
+        * Angle weight: `10 => 25`
 * Coalition/Soban:
     * LAV accuracy:
         * Short: `94% => 96%`
