@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-15 (not yet reflected in the changelog)](#2020-02-15-not-yet-reflected-in-the-changelog)
     - [2020-02-12](#2020-02-12)
     - [2020-02-11](#2020-02-11)
     - [2020-02-08](#2020-02-08)
@@ -362,6 +363,21 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-02-15 (not yet reflected in the changelog)
+* Coalition/Soban:
+    * LAV accuracy:
+        * Short: `94% => 96%`
+        * Medium: `82% => 85%`
+    * AAV:
+        * Hitpoints: `1250 => 1150`
+        * Armor: `6 => 8`
+* Gaalsien/Khaaneph:
+    * Heavy railgun population cost: `3 => 4`
+    * Assault railgun:
+        * Hitpoints: `670 => 750`
+        * Max speed: `100 => 90`
+        * Damage packets: `1 => 2`
 
 ## 2020-02-12
 * Coalition:
