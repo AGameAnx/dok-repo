@@ -367,17 +367,21 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ## 2020-02-15 (not yet reflected in the changelog)
 * General:
     * Heavy railgun target prioritization:
-        * Weapon effectiveness weight: `80 => 250`
+        * Weapon effectiveness weight: `80 => 500`
         * Auto target sticky bias: `200 => 50`
         * Angle weight: `10 => 25`
 * Coalition/Soban:
-    * LAV accuracy:
-        * Short: `94% => 96%`
-        * Medium: `82% => 85%`
+    * LAV:
+        * Tech cost: `400CU => 350CU`
+        * Accuracy:
+            * Short: `94% => 96%`
+            * Medium: `82% => 85%`
     * AAV:
+        * Tech cost: `350CU 85RU => 400CU 85RU`
         * Hitpoints: `1250 => 1150`
         * Armor: `6 => 8`
 * Gaalsien/Khaaneph:
+    * Sandskimmer tech research time: `25s => 30s`
     * Heavy railgun population cost: `3 => 4`
     * Assault railgun:
         * Hitpoints: `670 => 750`
