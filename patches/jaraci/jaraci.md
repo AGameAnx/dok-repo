@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-17 (not yet reflected in the changelog)](#2020-02-17-not-yet-reflected-in-the-changelog)
     - [2020-02-15 (not yet reflected in the changelog)](#2020-02-15-not-yet-reflected-in-the-changelog)
     - [2020-02-12](#2020-02-12)
     - [2020-02-11](#2020-02-11)
@@ -363,6 +364,49 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-02-17 (not yet reflected in the changelog)
+* General:
+    * Det pack:
+        * Cost: `50CU => 200CU`
+        * Damage: `175 => 350`
+        * Packets: `1 => 2`
+    * Baserunner:
+        * Cost: `220CU 60RU => 220CU 50RU`
+        * Hitpoints: `2500 => 2200`
+    * Priority as target:
+        * Carrier: `increased`
+        * HR: `increased`
+        * Baserunner: `decreased`
+* Coalition/Soban:
+    * LAV production time: `12s => 13s`
+    * AAV:
+        * Cost: `240CU 25RU => 260CU 25RU`
+        * Range: `800 => 900`
+        * Sensors: `1000 => 1100`
+        * Slow effect: `50% => 35%`
+    * Railgun tech cost: `400CU 165RU => 350CU 165RU`
+    * Support cruiser:
+        * Cost: `580CU 40RU => 500CU 50RU`
+        * Production time: `45s => 35s`
+        * Hitpoints: `4100 => 3000`
+        * Repair rate: `11 => 9`
+        * Armor: `3 => 7`
+        * Turn radius: `85 => 75`
+    * Tactical bomber damage: `1700 => 1500`
+* Gaalsien/Khaaneph:
+    * Production cruiser cost: `640CU 60RU => 600CU 60RU`
+    * Sandskimmer:
+        * Sensors range: `1100 => 1250`
+        * Contact range: `1250 => 1350`
+        * Production time: `11s => 12s`
+    * Assault ship:
+        * Hitpoints: `1100 => 1050`
+        * Range: `750 => 840`
+        * Area of effect: `110 => 120`
+        * Sensors: `1000 => 1100`
+        * Contact radius: `1200 => 1250`
+    * Railgun fabrication tech cost: `450CU 200RU => 350CU 250RU`
 
 ## 2020-02-15 (not yet reflected in the changelog)
 * General:
