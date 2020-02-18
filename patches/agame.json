@@ -30,7 +30,7 @@
 		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 12000,
+				"MaxHealth": 11000,
 				"PriorityAsTarget": -20
 			},
 			"UnitMovementAttributes": {
@@ -63,6 +63,7 @@
 			"WeaponAttributes": {
 				"C_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 18,
+					"ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 8,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
@@ -70,41 +71,26 @@
 					"RangeAttributesLong": { "Accuracy": 35 },
 					"Modifiers": {
 						"1": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyShortPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"2": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyMediumPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"3": {
-							"TargetClass": "Medium",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyLongPercent",
-							"Amount": 115
-						},
-						"4": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyShortPercent",
-							"Amount": 130
-						},
-						"5": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyMediumPercent",
-							"Amount": 130
-						},
-						"6": {
 							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyLongPercent",
 							"Amount": 130
 						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
 						"7": { "Remove": true },
 						"8": { "Remove": true },
 						"9": { "Remove": true },
@@ -118,6 +104,7 @@
 				},
 				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
 					"BaseDamagePerRound": 45,
+					"ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 8,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
@@ -125,41 +112,26 @@
 					"RangeAttributesLong": { "Accuracy": 35 },
 					"Modifiers": {
 						"1": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyShortPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"2": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyMediumPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"3": {
-							"TargetClass": "Medium",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyLongPercent",
-							"Amount": 115
-						},
-						"4": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyShortPercent",
-							"Amount": 130
-						},
-						"5": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyMediumPercent",
-							"Amount": 130
-						},
-						"6": {
 							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyLongPercent",
 							"Amount": 130
 						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
 						"7": { "Remove": true },
 						"8": { "Remove": true },
 						"9": { "Remove": true },
@@ -169,10 +141,11 @@
 					}
 				},
 				"C_CarrierMissiles_Weapon_A2G_MP": {
-					"WindUpTimeMS": 500
+					"WindUpTimeMS": 500,
+					"ExcludeFromHeightAdvantage": true
 				},
 				"C_Carrier_Weapon_CruiseMissile_MP": {
-					"BaseDamagePerRound": 2500,
+					"BaseDamagePerRound": 2400,
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
 						"1": {
@@ -413,7 +386,7 @@
 		},
 		"C_Sob_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 10000,
+				"MaxHealth": 9100,
 				"Armour": 15,
 				"PriorityAsTarget": -20
 			},
@@ -447,10 +420,12 @@
 			},
 			"WeaponAttributes": {
 				"C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
-					"BaseDamagePerRound": 195
+					"BaseDamagePerRound": 195,
+					"ExcludeFromHeightAdvantage": true
 				},
 				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 195,
+					"ExcludeFromHeightAdvantage": true,
 					"BurstPeriodMaxTimeMS": 250,
 					"BurstPeriodMinTimeMS": 250,
 					"NumberOfBursts": 2,
@@ -472,7 +447,6 @@
 						"Distance": 850,
 						"Accuracy": 4.5
 					},
-					
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 500,
 						"AutoTargetStickyBias": 50,
@@ -1136,7 +1110,7 @@
 		},
 		"G_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 10100,
+				"MaxHealth": 9200,
 				"Armour": 30,
 				"PriorityAsTarget": -20
 			},
@@ -1167,6 +1141,7 @@
 			"WeaponAttributes": {
 				"G_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 18,
+					"ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 9,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
@@ -1174,36 +1149,18 @@
 					"RangeAttributesLong": { "Accuracy": 35 },
 					"Modifiers": {
 						"1": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyShortPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"2": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyMediumPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"3": {
-							"TargetClass": "Medium",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyLongPercent",
-							"Amount": 115
-						},
-						"4": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyShortPercent",
-							"Amount": 130
-						},
-						"5": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyMediumPercent",
-							"Amount": 130
-						},
-						"6": {
 							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyLongPercent",
@@ -1216,6 +1173,7 @@
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
 					"BaseDamagePerRound": 45,
+					"ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 9,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
@@ -1223,41 +1181,26 @@
 					"RangeAttributesLong": { "Accuracy": 35 },
 					"Modifiers": {
 						"1": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyShortPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"2": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyMediumPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"3": {
-							"TargetClass": "Medium",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyLongPercent",
-							"Amount": 115
-						},
-						"4": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyShortPercent",
-							"Amount": 130
-						},
-						"5": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyMediumPercent",
-							"Amount": 130
-						},
-						"6": {
 							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyLongPercent",
 							"Amount": 130
 						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
 						"7": { "Remove": true },
 						"8": { "Remove": true },
 						"9": { "Remove": true },
@@ -1267,7 +1210,8 @@
 					}
 				},
 				"G_Carrier_Weapon_DefaultMissile_MP": {
-					"WindUpTimeMS": 500
+					"WindUpTimeMS": 500,
+					"ExcludeFromHeightAdvantage": true
 				},
 				"G_Carrier_Weapon_BarrageMissile_MP": {
 					"ExcludeFromHeightAdvantage": true,
@@ -1660,7 +1604,7 @@
 		},
 		"K_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 10500,
+				"MaxHealth": 9500,
 				"SensorRadius": 1000,
 				"Armour": 25,
 				"PriorityAsTarget": -20
@@ -1695,6 +1639,7 @@
 				},
 				"K_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 18,
+					"ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 8,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
@@ -1702,36 +1647,18 @@
 					"RangeAttributesLong": { "Accuracy": 35, "Distance": 1050 },
 					"Modifiers": {
 						"1": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyShortPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"2": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyMediumPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"3": {
-							"TargetClass": "Medium",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyLongPercent",
-							"Amount": 115
-						},
-						"4": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyShortPercent",
-							"Amount": 130
-						},
-						"5": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyMediumPercent",
-							"Amount": 130
-						},
-						"6": {
 							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyLongPercent",
@@ -1741,48 +1668,34 @@
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
 					"BaseDamagePerRound": 45,
+					"ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 8,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
 					"RangeAttributesMedium": { "Accuracy": 45, "Distance": 650 },
-					"RangeAttributesLong": { "Accuracy": 35, "Distance": 950 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 1050 },
 					"Modifiers": {
 						"1": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyShortPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"2": {
-							"TargetClass": "Medium",
+							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyMediumPercent",
-							"Amount": 115
+							"Amount": 130
 						},
 						"3": {
-							"TargetClass": "Medium",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyLongPercent",
-							"Amount": 115
-						},
-						"4": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyShortPercent",
-							"Amount": 130
-						},
-						"5": {
-							"TargetClass": "Large, Carrier, XLarge",
-							"ClassOperator": "Or",
-							"Modifier": "AccuracyMediumPercent",
-							"Amount": 130
-						},
-						"6": {
 							"TargetClass": "Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyLongPercent",
 							"Amount": 130
 						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
 						"7": { "Remove": true },
 						"8": { "Remove": true },
 						"9": { "Remove": true },
@@ -1793,6 +1706,7 @@
 				},
 				"K_Carrier_Weapon_DefaultMissile_MP": {
 					"WindUpTimeMS": 500,
+					"ExcludeFromHeightAdvantage": true,
 					"RangeAttributesLong": { "Distance": 950 }
 				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
@@ -2494,7 +2408,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
-					"Resource1Cost": 200
+					"Resource1Cost": 150
 				}
 			},
 			"StorageAttributes": {
@@ -2515,7 +2429,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
-					"Resource1Cost": 200
+					"Resource1Cost": 150
 				}
 			},
 			"StorageAttributes": {
@@ -2536,7 +2450,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
-					"Resource1Cost": 200
+					"Resource1Cost": 150
 				}
 			},
 			"StorageAttributes": {
@@ -2857,9 +2771,12 @@
 				"Resource1Cost": 500,
 				"Resource2Cost": 50,
 				"ProductionTime": 35,
-				"MaxHealth": 3000,
+				"MaxHealth": 3200,
 				"Armour": 7,
 				"PopCapCost": 5
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeedTurnRadius": 75 }
 			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
@@ -2875,9 +2792,6 @@
 						"Distance": 1350
 					}
 				}
-			},
-			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeedTurnRadius": 75 }
 			}
 		},
 		"C_Sob_SupportCruiser_MP": {
@@ -2885,9 +2799,12 @@
 				"Resource1Cost": 500,
 				"Resource2Cost": 50,
 				"ProductionTime": 35,
-				"MaxHealth": 3000,
+				"MaxHealth": 3200,
 				"Armour": 7,
 				"PopCapCost": 5
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeedTurnRadius": 75 }
 			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
@@ -2903,9 +2820,6 @@
 						"Distance": 1350
 					}
 				}
-			},
-			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeedTurnRadius": 75 }
 			}
 		},
 		"Research_Buff_SupportCruiser_AA": {
@@ -3031,12 +2945,14 @@
 		"Tier_2_C_ArmouredAssault": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 400,
+				"Resource2Cost": 115,
 				"ResearchTime": 55
 			}
 		},
 		"Tier_2_S_ArmouredAssault": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 400,
+				"Resource2Cost": 115,
 				"ResearchTime": 55
 			}
 		},
@@ -3122,7 +3038,7 @@
 		"G_SandSkimmer_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 610,
-				"SensorRadius": 1100,
+				"SensorRadius": 1150,
 				"ProductionTime": 12,
 				"PriorityAsTarget": 30
 			},
@@ -3151,7 +3067,7 @@
 		"K_Sandskimmer_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 610,
-				"SensorRadius": 1100,
+				"SensorRadius": 1150,
 				"ProductionTime": 12,
 				"PriorityAsTarget": 30
 			},
@@ -3384,10 +3300,10 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 400,
 				"Resource2Cost": 100,
-				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 40.",
+				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 25.",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 40 } } },
-					"1": { "BuffSet": { "0": { "Value": 40 } } }
+					"0": { "BuffSet": { "0": { "Value": 25 } } },
+					"1": { "BuffSet": { "0": { "Value": 25 } } }
 				}
 			}
 		},
@@ -3395,10 +3311,10 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 400,
 				"Resource2Cost": 100,
-				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 40.",
+				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 25.",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 40 } } },
-					"1": { "BuffSet": { "0": { "Value": 40 } } }
+					"0": { "BuffSet": { "0": { "Value": 25 } } },
+					"1": { "BuffSet": { "0": { "Value": 25 } } }
 				}
 			}
 		},
@@ -3428,7 +3344,6 @@
 		"Research_Buff_C_TrackedUnits_Armor03": {
 			"ResearchItemAttributes": {
 				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
-				"Resource2Cost": 400,
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
 						"0": { "Value": 1 },
@@ -3474,7 +3389,6 @@
 		"Research_Buff_S_TrackedUnits_Armor03": {
 			"ResearchItemAttributes": {
 				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
-				"Resource2Cost": 400,
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
 						"0": { "Value": 1 },
@@ -3507,7 +3421,7 @@
 		"G_StarHullTank_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 750,
-				"Resource1Cost": 320,
+				"Resource1Cost": 350,
 				"Resource2Cost": 100,
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
@@ -3553,7 +3467,7 @@
 		"K_HeavyRailgun_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 750,
-				"Resource1Cost": 320,
+				"Resource1Cost": 350,
 				"Resource2Cost": 100,
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
@@ -3639,6 +3553,7 @@
 		"Research_Buff_G_RailGunUnits_Armor2": {
 			"ResearchItemAttributes": {
 				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun, armor by 1 and hull integrity by 50 on Assault Railgun.",
+				"Resource1Cost": 250,
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { // G_StarHull_Upgrade01_MP
 						"0": { "Value": 1 },
@@ -3659,7 +3574,7 @@
 		},
 		"Research_Buff_G_RailGunUnits_Armor3": {
 			"ResearchItemAttributes": {
-				"Resource2Cost": 400,
+				"Resource1Cost": 300,
 				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { // G_StarHull_Upgrade01_MP
@@ -3814,8 +3729,8 @@
 		},
 		"Tier_1_G_Catamaran": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 500,
-				"Resource2Cost": 125,
+				"Resource1Cost": 450,
+				"Resource2Cost": 135,
 				"ResearchTime": 65
 			}
 		},

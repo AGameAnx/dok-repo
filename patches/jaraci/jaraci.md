@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-18 (not yet reflected in the changelog)](#2020-02-18-not-yet-reflected-in-the-changelog)
     - [2020-02-17 (not yet reflected in the changelog)](#2020-02-17-not-yet-reflected-in-the-changelog)
     - [2020-02-15 (not yet reflected in the changelog)](#2020-02-15-not-yet-reflected-in-the-changelog)
     - [2020-02-12](#2020-02-12)
@@ -365,10 +366,40 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
+## 2020-02-18 (not yet reflected in the changelog)
+* General:
+    * Carrier PD weapons:
+        * Accuracy against medium targets: `115% => 100%`
+        * Benefit from high ground: `Yes => No`
+* Coalition/Soban:
+    * Medium vehicle armor upgrade level 3 cost: `300CU 400RU => 300CU 300RU`
+    * AAV tech cost: `400CU 85RU => 400CU 115RU`
+    * Railgun
+        * Damage: `150 => 130`
+        * Mag accelerator damage bonus: `40 => 25`
+* Coalition:
+    * Carrier:
+        * Hitpoints: `12000 => 11000`
+        * Cruise missile damage: `2500 => 2400`
+* Soban:
+    * Carrier hitpoints: `10000 => 9000`
+* Gaalsien/Khaaneph:
+    * Assault ship tech cost: `500CU 125RU => 450CU 135RU`
+    * Railgun armor upgrades:
+        * Level 2 cost: `200CU 200RU => 250CU 200RU`
+        * Level 3 cost: `200CU 400RU => 300CU 300RU`
+    * Heavy railgun:
+        * Cost: `320CU 100RU => 350CU 100RU`
+        * Damage: `190 => 155`
+* Gaalsien:
+    * Carrier hitpoints: `10100 => 9200`
+* Khaaneph:
+    * Carrier hitpoints: `10500 => 9500`
+
 ## 2020-02-17 (not yet reflected in the changelog)
 * General:
-    * Det pack:
-        * Cost: `50CU => 200CU`
+    * Demo pack:
+        * Cost: `50CU => 150CU`
         * Damage: `175 => 350`
         * Packets: `1 => 2`
     * Baserunner:
@@ -389,16 +420,14 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Support cruiser:
         * Cost: `580CU 40RU => 500CU 50RU`
         * Production time: `45s => 35s`
-        * Hitpoints: `4100 => 3000`
-        * Repair rate: `11 => 9`
+        * Hitpoints: `4100 => 3200`
         * Armor: `3 => 7`
         * Turn radius: `85 => 75`
     * Tactical bomber damage: `1700 => 1500`
 * Gaalsien/Khaaneph:
     * Production cruiser cost: `640CU 60RU => 600CU 60RU`
     * Sandskimmer:
-        * Sensors range: `1100 => 1250`
-        * Contact range: `1250 => 1350`
+        * Sensors range: `1100 => 1150`
         * Production time: `11s => 12s`
     * Assault ship:
         * Hitpoints: `1100 => 1050`
