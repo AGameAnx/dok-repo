@@ -47,9 +47,10 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
-    - [2020-02-18 (not yet reflected in the changelog)](#2020-02-18-not-yet-reflected-in-the-changelog)
-    - [2020-02-17 (not yet reflected in the changelog)](#2020-02-17-not-yet-reflected-in-the-changelog)
-    - [2020-02-15 (not yet reflected in the changelog)](#2020-02-15-not-yet-reflected-in-the-changelog)
+    - [2020-02-22](#2020-02-22)
+    - [2020-02-18](#2020-02-18)
+    - [2020-02-17](#2020-02-17)
+    - [2020-02-15](#2020-02-15)
     - [2020-02-12](#2020-02-12)
     - [2020-02-11](#2020-02-11)
     - [2020-02-08](#2020-02-08)
@@ -366,7 +367,15 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
-## 2020-02-18 (not yet reflected in the changelog)
+## 2020-02-22
+*Not yet reflected in the changelog*
+* General:
+    * Demo pack damage: `350 => 275`
+* Gaalsien/Khaaneph:
+    * Honourguard cruiser damage: `550 => 500`
+
+## 2020-02-18
+*Not yet reflected in the changelog*
 * General:
     * Carrier PD weapons:
         * Accuracy against medium targets: `115% => 100%`
@@ -396,7 +405,8 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Khaaneph:
     * Carrier hitpoints: `10500 => 9500`
 
-## 2020-02-17 (not yet reflected in the changelog)
+## 2020-02-17
+*Not yet reflected in the changelog*
 * General:
     * Demo pack:
         * Cost: `50CU => 150CU`
@@ -437,7 +447,8 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Contact radius: `1200 => 1250`
     * Railgun fabrication tech cost: `450CU 200RU => 350CU 250RU`
 
-## 2020-02-15 (not yet reflected in the changelog)
+## 2020-02-15
+*Not yet reflected in the changelog*
 * General:
     * Heavy railgun target prioritization:
         * Weapon effectiveness weight: `80 => 500`
