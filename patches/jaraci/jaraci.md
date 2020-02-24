@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-23](#2020-02-23)
     - [2020-02-22](#2020-02-22)
     - [2020-02-18](#2020-02-18)
     - [2020-02-17](#2020-02-17)
@@ -366,6 +367,64 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-02-23
+*Not yet reflected in the changelog*
+* General:
+    * C/G Carrier level 0 range systems:
+        * PD & missile range: `500 => 700`
+        * Fixed an issue where power shunt description was incorrect and showed range as being 600, whereas it was only 500
+* Coalition/Soban:
+    * AAV hitpoints: `1150 => 1070`
+    * Mag accelerator cost: `400CU 100RU => 100CU 250RU`
+    * Strike fighter:
+        * Tech cost: `450CU 250RU => 450CU 200RU`
+        * Cost: `200CU 90RU => 200CU 85RU`
+        * Damage: `120 => 100`
+    * Assault cruiser:
+        * Tech cost: `500CU 300RU => 500CU 250RU`
+        * Damage: `55 => 50`
+        * Area of effect: `80 => 90`
+    * Battlecruiser:
+        * Tech cost: `550CU 350RU => 550CU 300RU`
+        * Production time: `65s => 60s`
+* Coalition:
+    * Battlecruiser:
+        * Hitpoints: `4200 => 3500`
+        * Armor: `16 => 15`
+        * Range: `1300 => 1400`
+* Soban:
+    * Battlecruiser:
+        * Tech research time: `110s => 95s`
+        * Hitpoints: `3000 => 2900`
+        * Range: `1750 => 1900`
+* Gaalsien/Khaaneph:
+    * Production cruiser hitpoints: `4100 => 3900`
+    * Fixed a bug where railgun tech cost wasn't modified (cost: `450CU 200RU => 350CU 250RU`)
+    * Assault ship:
+        * Tech cost: `450CU 135RU => 350CU 125RU`
+        * Max health: `1100 => 930`
+        * Armor: `5 => 6`
+        * Range: `840 => 940`
+        * Damage: `38 => 35`
+        * Area of effect: `120 => 140`
+        * Burst: `0.8-1s => 0.75s-0.85`
+    * Assault railgun:
+        * Cost: `250CU 50RU => 240CU 45RU`
+        * Production time: `19 => 16`
+        * Armor: `3 => 0`
+        * Damage: `60 => 55`
+        * Reload: `2.4s => 2.6s`
+    * Interceptor:
+        * Tech cost: `550CU 250RU => 450CU 250RU`
+        * Reload: `3.8s => 4.5s`
+* Gaalsien:
+    * Carrier:
+        * Armor: `30 => 20`
+        * Hypersonic missile barrage damage: `300 => 280`
+* Khaaneph:
+    * Fixed an issue where carrier weapon systems were incorrectly displaying base PD rate of fire (6 instead of 8)
+    * Blast drone max speed: `160 => 180`
 
 ## 2020-02-22
 *Not yet reflected in the changelog*

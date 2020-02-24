@@ -68,7 +68,7 @@
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
-					"RangeAttributesLong": { "Accuracy": 35 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 700 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Large, Carrier, XLarge",
@@ -109,7 +109,7 @@
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
-					"RangeAttributesLong": { "Accuracy": 35 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 700 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Large, Carrier, XLarge",
@@ -142,6 +142,7 @@
 				},
 				"C_CarrierMissiles_Weapon_A2G_MP": {
 					"WindUpTimeMS": 500,
+					"RangeAttributesLong": { "Distance": 700 },
 					"ExcludeFromHeightAdvantage": true
 				},
 				"C_Carrier_Weapon_CruiseMissile_MP": {
@@ -275,6 +276,10 @@
 					
 					"3": { // Range Systems
 						"PowerLevels": {
+							
+							"0": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 700m"
+							},
 							
 							"2": {
 								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1050m",
@@ -1111,8 +1116,8 @@
 		"G_Carrier_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 9200,
-				"Armour": 30,
-				"PriorityAsTarget": -20
+				"Armour": 20,
+				"PriorityAsTarget": -10
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 15 }
@@ -1146,7 +1151,7 @@
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
-					"RangeAttributesLong": { "Accuracy": 35 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 700 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Large, Carrier, XLarge",
@@ -1178,7 +1183,7 @@
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
-					"RangeAttributesLong": { "Accuracy": 35 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 700 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Large, Carrier, XLarge",
@@ -1211,11 +1216,12 @@
 				},
 				"G_Carrier_Weapon_DefaultMissile_MP": {
 					"WindUpTimeMS": 500,
+					"RangeAttributesLong": { "Distance": 700 },
 					"ExcludeFromHeightAdvantage": true
 				},
 				"G_Carrier_Weapon_BarrageMissile_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 300,
+					"BaseDamagePerRound": 280,
 					"AreaOfEffectRadius": 230,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"NumberOfBursts": 8,
@@ -1493,6 +1499,10 @@
 					
 					"3": { // Range Systems
 						"PowerLevels": {
+							
+							"0": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 700m"
+							},
 							
 							"2": {
 								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1050m",
@@ -2135,7 +2145,7 @@
 						"PowerLevels": {
 							
 							"0": {
-								"LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 6"
+								"LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 8"
 							},
 							
 							"1": {
@@ -2389,6 +2399,11 @@
 				"MaxHealth": 400,
 				"ProductionTime": 45,
 				"PopCapCost": 1
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 180
+				}
 			},
 			"WeaponAttributes": {
 				"K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
@@ -2837,6 +2852,7 @@
 		
 		"G_SupportCruiser_MP": {
 			"UnitAttributes": {
+				"MaxHealth": 3900,
 				"Resource1Cost": 600,
 				"Resource2Cost": 60,
 				"SensorRadius": 1200,
@@ -2867,6 +2883,7 @@
 		},
 		"K_SupportCruiser_MP": {
 			"UnitAttributes": {
+				"MaxHealth": 3900,
 				"Resource1Cost": 600,
 				"Resource2Cost": 60,
 				"SensorRadius": 1200,
@@ -2915,7 +2932,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 260,
 				"Resource2Cost": 25,
-				"MaxHealth": 1150,
+				"MaxHealth": 1070,
 				"SensorRadius": 1100,
 				"ProductionTime": 16,
 				"Armour": 8,
@@ -3298,8 +3315,8 @@
 		},
 		"Research_Buff_C_Railgun": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 400,
-				"Resource2Cost": 100,
+				"Resource1Cost": 100,
+				"Resource2Cost": 250,
 				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 25.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { "0": { "Value": 25 } } },
@@ -3309,8 +3326,8 @@
 		},
 		"Research_Buff_S_Railgun": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 400,
-				"Resource2Cost": 100,
+				"Resource1Cost": 100,
+				"Resource2Cost": 250,
 				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 25.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { "0": { "Value": 25 } } },
@@ -3410,7 +3427,7 @@
 			}
 		},
 		
-		"Tier_1_G_Railgun": {
+		"Tier_2_G_Railgun_U1": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
 				"Resource2Cost": 250,
@@ -3614,12 +3631,12 @@
 		
 		"G_StarHull_Upgrade01_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 250,
-				"Resource2Cost": 50,
+				"Resource1Cost": 240,
+				"Resource2Cost": 45,
 				"MaxHealth": 750,
 				"ExperienceValue": 350,
-				"ProductionTime": 19,
-				"Armour": 3
+				"ProductionTime": 16,
+				"Armour": 0
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3630,14 +3647,14 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 60,
+					"BaseDamagePerRound": 55,
 					"DamagePacketsPerShot": 2,
 					"BurstPeriodMinTimeMS": 110,
 					"BurstPeriodMaxTimeMS": 110,
 					"NumberOfBursts": 4,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 2400,
+					"ReloadTimeMS": 2600,
 					"RangeAttributesShort":  { "Accuracy": 16 },
 					"RangeAttributesMedium": { "Accuracy": 15 },
 					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
@@ -3646,12 +3663,12 @@
 		},
 		"K_AssaultRailgun_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 250,
-				"Resource2Cost": 50,
+				"Resource1Cost": 240,
+				"Resource2Cost": 45,
 				"MaxHealth": 750,
 				"ExperienceValue": 350,
-				"ProductionTime": 19,
-				"Armour": 3
+				"ProductionTime": 16,
+				"Armour": 0
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3662,14 +3679,14 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 60,
+					"BaseDamagePerRound": 55,
 					"DamagePacketsPerShot": 2,
 					"BurstPeriodMinTimeMS": 110,
 					"BurstPeriodMaxTimeMS": 110,
 					"NumberOfBursts": 4,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 2400,
+					"ReloadTimeMS": 2600,
 					"RangeAttributesShort":  { "Accuracy": 16 },
 					"RangeAttributesMedium": { "Accuracy": 15 },
 					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
@@ -3684,21 +3701,23 @@
 				"ProductionTime": 18,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
-				"Armour": 5,
-				"MaxHealth": 1100
+				"Armour": 6,
+				"MaxHealth": 930
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 75 }
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 38,
+					"BaseDamagePerRound": 35,
+					"BurstPeriodMinTimeMS": 750,
+					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
-					"AreaOfEffectRadius": 120,
+					"AreaOfEffectRadius": 140,
 					"AreaOfEffectFalloffType": "Linear",
 					"RangeAttributesShort":  { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
-					"RangeAttributesLong":   { "Distance": 840 }
+					"RangeAttributesLong":   { "Distance": 940 }
 				}
 			}
 		},
@@ -3709,28 +3728,30 @@
 				"ProductionTime": 18,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
-				"Armour": 5,
-				"MaxHealth": 1100
+				"Armour": 6,
+				"MaxHealth": 930
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 75 }
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 38,
+					"BaseDamagePerRound": 35,
+					"BurstPeriodMinTimeMS": 750,
+					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
-					"AreaOfEffectRadius": 120,
+					"AreaOfEffectRadius": 140,
 					"AreaOfEffectFalloffType": "Linear",
 					"RangeAttributesShort":  { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
-					"RangeAttributesLong":   { "Distance": 840 }
+					"RangeAttributesLong":   { "Distance": 940 }
 				}
 			}
 		},
 		"Tier_1_G_Catamaran": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 450,
-				"Resource2Cost": 135,
+				"Resource1Cost": 350,
+				"Resource2Cost": 125,
 				"ResearchTime": 65
 			}
 		},
@@ -3959,6 +3980,7 @@
 			},
 			"WeaponAttributes": {
 				"C_Interceptor_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 100,
 					"BurstPeriodMinTimeMS": 667,
 					"BurstPeriodMaxTimeMS": 667,
 					"ReloadTimeMS": 3332,
@@ -3976,7 +3998,7 @@
 		"Tier_3_C_Interceptor_Bomber": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 450,
-				"Resource2Cost": 250
+				"Resource2Cost": 200
 			}
 		},
 		
@@ -3991,7 +4013,7 @@
 					"BaseDamagePerRound": 110,
 					"AreaOfEffectRadius": 70,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 3800,
+					"ReloadTimeMS": 4500,
 					"Modifiers": {
 						"13": {
 							"TargetClass": "Carrier",
@@ -4014,7 +4036,7 @@
 					"BaseDamagePerRound": 110,
 					"AreaOfEffectRadius": 70,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 3800,
+					"ReloadTimeMS": 4500,
 					"Modifiers": {
 						"13": {
 							"TargetClass": "Carrier",
@@ -4028,7 +4050,7 @@
 		},
 		"Tier_2_G_Interceptor": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 550,
+				"Resource1Cost": 450,
 				"ResearchTime": 70
 			}
 		},
@@ -4202,7 +4224,8 @@
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 55,
+					"BaseDamagePerRound": 50,
+					"AreaOfEffectRadius": 90,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
 					"RateOfFire": 3,
@@ -4271,7 +4294,8 @@
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 55,
+					"BaseDamagePerRound": 50,
+					"AreaOfEffectRadius": 90,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
 					"RateOfFire": 3,
@@ -4322,13 +4346,13 @@
 		"Tier_3_C_AssaultCruiser": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 500,
-				"Resource2Cost": 300
+				"Resource2Cost": 250
 			}
 		},
 		"Tier_3_S_AssaultCruiser": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 500,
-				"Resource2Cost": 300
+				"Resource2Cost": 250
 			}
 		},
 		"Research_Buff_G_BattleCruiser_AntiAir": {
@@ -4435,10 +4459,10 @@
 			"UnitAttributes": {
 				"Resource1Cost": 550,
 				"Resource2Cost": 250,
-				"MaxHealth": 4200,
+				"MaxHealth": 3500,
 				"PopCapCost": 6,
-				"ProductionTime": 65,
-				"Armour": 16
+				"ProductionTime": 60,
+				"Armour": 15
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -4455,7 +4479,7 @@
 					"AreaOfEffectRadius": 55,
 					"ReloadTimeMS": 5000,
 					"RangeAttributesLong": {
-						"Distance": 1300
+						"Distance": 1400
 					}
 				}
 			}
@@ -4464,9 +4488,9 @@
 			"UnitAttributes": {
 				"Resource1Cost": 520,
 				"Resource2Cost": 280,
-				"MaxHealth": 3000,
+				"MaxHealth": 2900,
 				"PopCapCost": 6,
-				"ProductionTime": 65,
+				"ProductionTime": 60,
 				"Armour": 13
 			},
 			"UnitMovementAttributes": {
@@ -4490,6 +4514,7 @@
 					},
 					"RangeAttributesShort":  { "Accuracy": 7 },
 					"RangeAttributesMedium": { "Accuracy": 6 },
+					"RangeAttributesLong": { "Distance": 1900 },
 					"OutputDPS": true
 				}
 			}
@@ -4497,15 +4522,15 @@
 		"Tier_3_C_BattleCruiser": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 350,
+				"Resource2Cost": 300,
 				"ResearchTime": 110
 			}
 		},
 		"Tier_3_S_BattleCruiser": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 350,
-				"ResearchTime": 110
+				"Resource2Cost": 300,
+				"ResearchTime": 95
 			}
 		},
 		
