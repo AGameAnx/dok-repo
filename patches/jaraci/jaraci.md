@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-25](#2020-02-25)
     - [2020-02-23](#2020-02-23)
     - [2020-02-22](#2020-02-22)
     - [2020-02-18](#2020-02-18)
@@ -367,6 +368,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-02-25
+*Not yet reflected in the changelog*
+* General:
+    * C/G Carrier level 0 range systems PD & missile range: `700 => 650`
 
 ## 2020-02-23
 *Not yet reflected in the changelog*
