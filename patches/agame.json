@@ -31,7 +31,7 @@
 		"C_Carrier_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 11000,
-				"PriorityAsTarget": -20
+				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 50 }
@@ -48,7 +48,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_C_CruiseMissile_MP": {
-					"CooldownTimeSecs": 150
+					"CooldownTimeSecs": 170
 				},
 				"Ability_C_LaunchInterceptor_MP": {
 					"AirSortie": { "LoiterLength": 40 }
@@ -393,7 +393,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 9100,
 				"Armour": 15,
-				"PriorityAsTarget": -20
+				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 50 }
@@ -410,7 +410,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_C_Sob_SobanNuke_MP": {
-					"CooldownTimeSecs": 110,
+					"CooldownTimeSecs": 150,
 					"Resource1Cost": 400
 				},
 				"Ability_C_LaunchInterceptor_MP": {
@@ -1117,7 +1117,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 9200,
 				"Armour": 20,
-				"PriorityAsTarget": -10
+				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 15 }
@@ -1134,7 +1134,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_MissileBarrage": {
-					"CooldownTimeSecs": 120
+					"CooldownTimeSecs": 160
 				},
 				"Ability_G_LaunchInterceptor_Upgraded_MP": {
 					"AirSortie": { "LoiterLength": 40 }
@@ -1221,7 +1221,7 @@
 				},
 				"G_Carrier_Weapon_BarrageMissile_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 280,
+					"BaseDamagePerRound": 250,
 					"AreaOfEffectRadius": 230,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"NumberOfBursts": 8,
@@ -1617,7 +1617,7 @@
 				"MaxHealth": 9500,
 				"SensorRadius": 1000,
 				"Armour": 25,
-				"PriorityAsTarget": -20
+				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 30 }
@@ -2390,7 +2390,8 @@
 		},
 		"G_Scanner_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 250
+				"MaxHealth": 250,
+				"SensorRadius": 1350
 			}
 		},
 		"K_ExplodingSkimmer_MP": {
@@ -3709,7 +3710,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 35,
+					"BaseDamagePerRound": 32,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
@@ -3736,7 +3737,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 35,
+					"BaseDamagePerRound": 32,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
@@ -4461,7 +4462,7 @@
 				"Resource2Cost": 250,
 				"MaxHealth": 3500,
 				"PopCapCost": 6,
-				"ProductionTime": 60,
+				"ProductionTime": 55,
 				"Armour": 15
 			},
 			"UnitMovementAttributes": {
@@ -4479,7 +4480,7 @@
 					"AreaOfEffectRadius": 55,
 					"ReloadTimeMS": 5000,
 					"RangeAttributesLong": {
-						"Distance": 1400
+						"Distance": 1500
 					}
 				}
 			}
@@ -4544,6 +4545,9 @@
 				"PopCapCost": 4
 			},
 			"AbilityAttributes": {
+				"Ability_C_ArtilleryBarrage": {
+					"CooldownTimeSecs": 100
+				},
 				"Ability_C_ArtilleryBarrage_Precise": {
 					"Resource1Cost": 0
 				}
@@ -4602,7 +4606,7 @@
 					}
 				},
 				"C_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 140
+					"BaseDamagePerRound": 100
 				}
 			}
 		},
@@ -4626,9 +4630,14 @@
 				"Resource1Cost": 300,
 				"Resource2Cost": 120,
 				"MaxHealth": 1600,
-				"Armour": 5,
+				"Armour": 3,
 				"ProductionTime": 30,
 				"PopCapCost": 5
+			},
+			"AbilityAttributes": {
+				"Ability_G_ArtilleryBarrage_01_MP": {
+					"CooldownTimeSecs": 120
+				}
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -4639,7 +4648,7 @@
 			},
 			"WeaponAttributes": {
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"BaseDamagePerRound": 150,
+					"BaseDamagePerRound": 170,
 					"NumberOfBursts": 3,
 					"RateOfFire": 4,
 					"CooldownTimeMS": 1600,
@@ -4661,8 +4670,8 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 120,
-					"ReloadTimeMS": 4000,
+					"BaseDamagePerRound": 80,
+					"ReloadTimeMS": 10000,
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
@@ -4688,7 +4697,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_K_ArtilleryBarrage_01_MP": {
-					"CooldownTimeSecs": 65
+					"CooldownTimeSecs": 100
 				}
 			},
 			"WeaponAttributes": {
@@ -4702,7 +4711,7 @@
 					"ExcludeFromHeightAdvantage": true,
 					"NumberOfBursts": 4,
 					"CooldownTimeMS": 2500,
-					"BaseDamagePerRound": 260,
+					"BaseDamagePerRound": 280,
 					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 240,
 					"AreaOfEffectFalloffType": "Quadratic",

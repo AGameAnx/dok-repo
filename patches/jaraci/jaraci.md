@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-26](#2020-02-26)
     - [2020-02-25](#2020-02-25)
     - [2020-02-23](#2020-02-23)
     - [2020-02-22](#2020-02-22)
@@ -368,6 +369,38 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-02-26
+*Not yet reflected in the changelog*
+* Coalition/Soban:
+    * Artillery cruiser:
+        * Autofire damage: `140 => 100`
+        * Barrage recharge: `65s => 100s`
+* Coalition:
+    * Cruise missile recharge: `150s => 170s`
+    * Battlecruiser:
+        * Production time: `60s => 55s`
+        * Range: `1400 => 1500`
+* Soban:
+    * Microwave emitter recharge: `110s => 150s`
+* Gaalsien:
+    * Hyper-sonic missile barrage:
+        * Recharge: `120s => 160s`
+        * Damage: `280 => 260`
+    * Scanner sensors radius: `1400 => 1350`
+    * Assault ship damage: `35 => 32`
+    * Siege cruiser:
+        * Armor: `5 => 3`
+        * Autofire:
+            * Damage: `120 => 80`
+            * Reload: `4s => 10s`
+        * Barrage:
+            * Damage: `150 => 170`
+            * Recharge: `50s => 120s`
+* Khaaneph:
+    * Siege cruiser barrage:
+        * Damage: `260 => 280`
+        * Recharge: `65s => 100s`
 
 ## 2020-02-25
 *Not yet reflected in the changelog*
