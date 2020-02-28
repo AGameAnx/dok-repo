@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-28](#2020-02-28)
     - [2020-02-27](#2020-02-27)
     - [2020-02-26](#2020-02-26)
     - [2020-02-25](#2020-02-25)
@@ -371,6 +372,30 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
+## 2020-02-28
+*Not yet reflected in the changelog*
+* Coalition/Soban:
+    * LAV production time: `13s => 12s`
+    * Support cruiser G2G weapon:
+        * Range: `1100 => 950`
+        * Damage against air: `200% => 130%`
+* Gaalsien/Khaaneph:
+    * Skimmer production time: `12s => 11s`
+    * Production cruiser AA weapon:
+        * Can target ground: `Yes => No`
+        * Line of sight required: `Yes => No`
+        * Damage: `17 => 20`
+        * Rate of fire: `10 => 12`
+        * Range: `1200 => 1250`
+        * Accuracy: `55%/45%/35%=> 70%/55%/40%`
+        * Accuracy against non-small targets: `150% => 100%`
+        * Damage against air: `200% => 100%`
+        * Damage against probe: `45% => 35%`
+    * Heavy railgun EMP shell ability:
+        * Research cost: `200CU 100RU => 300CU 100RU`
+        * Research time: `30s => 35s`
+        * Range: `1350 => 1250`
+
 ## 2020-02-27
 *Not yet reflected in the changelog*
 * General:
@@ -415,7 +440,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * World height offset: `5 => 15`
 * Gaalsien/Khaaneph:
     * Refinery mode cost: `700CU 40RU => 600CU 80RU`
-    * Production cruiser AA weapon (DPS: `79-45 => 45-28`)
+    * Production cruiser AA weapon (DPS: `79-45 => 45-28`):
         * Can target ground: `No => Yes`
         * Line of sight required: `No => Yes`
         * Damage: `20 => 17`

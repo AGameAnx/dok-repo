@@ -2816,7 +2816,7 @@
 					"CooldownTimeMS": 500,
 					"ReloadTimeMS": 2000,
 					"RangeAttributesShort": { "Distance": 400, "Accuracy": 45 },
-					"RangeAttributesLong": { "Distance": 1100, "Accuracy": 35 },
+					"RangeAttributesLong": { "Distance": 950, "Accuracy": 35 },
 					"Turret": {
 						"FieldOfView": 360,
 						"FieldOfFire": 360,
@@ -2825,7 +2825,7 @@
 					"Modifiers": {
 						"0": {
 							"Modifier": "DamagePercent",
-							"Amount": 170
+							"Amount": 130
 						},
 						"1": {
 							"Modifier": "AccuracyShortPercent",
@@ -2885,7 +2885,7 @@
 					"CooldownTimeMS": 500,
 					"ReloadTimeMS": 2000,
 					"RangeAttributesShort": { "Distance": 400, "Accuracy": 45 },
-					"RangeAttributesLong": { "Distance": 1100, "Accuracy": 35 },
+					"RangeAttributesLong": { "Distance": 950, "Accuracy": 35 },
 					"Turret": {
 						"FieldOfView": 360,
 						"FieldOfFire": 360,
@@ -2894,22 +2894,21 @@
 					"Modifiers": {
 						"0": {
 							"Modifier": "DamagePercent",
-							"Amount": 200
+							"Amount": 130
 						},
-						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 20 },
-						"2": {
+						"1": {
 							"Modifier": "AccuracyShortPercent",
 							"TargetClass": "Medium, Large, XLarge",
 							"ClassOperator": "Or",
 							"Amount": 150
 						},
-						"3": {
+						"2": {
 							"Modifier": "AccuracyMediumPercent",
 							"TargetClass": "Medium, Large, XLarge",
 							"ClassOperator": "Or",
 							"Amount": 150
 						},
-						"4": {
+						"3": {
 							"Modifier": "AccuracyLongPercent",
 							"TargetClass": "Medium, Large, XLarge",
 							"ClassOperator": "Or",
@@ -2944,41 +2943,22 @@
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"LineOfSightRequired": true,
-					"TargetStyle": "Flak",
-					"BaseDamagePerRound": 17,
-					"RateOfFire": 10,
+					"RateOfFire": 12,
 					"RangeAttributesShort": {
-						"Accuracy": 55
+						"Accuracy": 70
 					},
 					"RangeAttributesMedium": {
-						"Accuracy": 40
+						"Accuracy": 55
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 35,
-						"Distance": 1200
+						"Accuracy": 40,
+						"Distance": 1250
 					},
 					"Modifiers": {
-						"0": { "TargetClass": "Air", "Modifier": "DamagePercent", "Amount": 200 },
-						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 20 },
-						"2": {
-							"Modifier": "AccuracyShortPercent",
-							"TargetClass": "Medium, Large, XLarge",
-							"ClassOperator": "Or",
-							"Amount": 150
-						},
-						"3": {
-							"Modifier": "AccuracyMediumPercent",
-							"TargetClass": "Medium, Large, XLarge",
-							"ClassOperator": "Or",
-							"Amount": 150
-						},
-						"4": {
-							"Modifier": "AccuracyLongPercent",
-							"TargetClass": "Medium, Large, XLarge",
-							"ClassOperator": "Or",
-							"Amount": 150
-						}
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 35 },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
 					}
 				}
 			}
@@ -2994,41 +2974,22 @@
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"LineOfSightRequired": true,
-					"TargetStyle": "Flak",
-					"BaseDamagePerRound": 17,
-					"RateOfFire": 10,
+					"RateOfFire": 12,
 					"RangeAttributesShort": {
-						"Accuracy": 55
+						"Accuracy": 70
 					},
 					"RangeAttributesMedium": {
-						"Accuracy": 40
+						"Accuracy": 55
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 35,
+						"Accuracy": 40,
 						"Distance": 1250
 					},
 					"Modifiers": {
-						"0": { "TargetClass": "Air", "Modifier": "DamagePercent", "Amount": 150 },
-						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 25 },
-						"2": {
-							"Modifier": "AccuracyShortPercent",
-							"TargetClass": "Medium, Large, XLarge",
-							"ClassOperator": "Or",
-							"Amount": 150
-						},
-						"3": {
-							"Modifier": "AccuracyMediumPercent",
-							"TargetClass": "Medium, Large, XLarge",
-							"ClassOperator": "Or",
-							"Amount": 150
-						},
-						"4": {
-							"Modifier": "AccuracyLongPercent",
-							"TargetClass": "Medium, Large, XLarge",
-							"ClassOperator": "Or",
-							"Amount": 150
-						}
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 35 },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
 					}
 				},
 				"K_SupportCruiser_WeaponBuff_G2G_MP": {
@@ -3099,7 +3060,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 570,
 				"Armour": 1,
-				"ProductionTime": 13,
+				"ProductionTime": 12,
 				"PriorityAsTarget": 20
 			},
 			"WeaponAttributes": {
@@ -3133,7 +3094,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 570,
 				"Armour": 1,
-				"ProductionTime": 13,
+				"ProductionTime": 12,
 				"PriorityAsTarget": 20
 			},
 			"WeaponAttributes": {
@@ -3179,7 +3140,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 610,
 				"SensorRadius": 1150,
-				"ProductionTime": 12,
+				"ProductionTime": 11,
 				"PriorityAsTarget": 20
 			},
 			"AbilityAttributes": {
@@ -3208,7 +3169,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 610,
 				"SensorRadius": 1150,
-				"ProductionTime": 12,
+				"ProductionTime": 11,
 				"PriorityAsTarget": 20
 			},
 			"AbilityAttributes": {
@@ -3600,7 +3561,7 @@
 					"BaseDamagePerRound": 100,
 					"AreaOfEffectRadius": 150,
 					"WindUpTimeMS": 750,
-					"RangeAttributesLong": { "Distance": 1350 }
+					"RangeAttributesLong": { "Distance": 1250 }
 				}
 			}
 		},
@@ -3646,7 +3607,7 @@
 					"BaseDamagePerRound": 100,
 					"AreaOfEffectRadius": 150,
 					"WindUpTimeMS": 750,
-					"RangeAttributesLong": { "Distance": 1350 }
+					"RangeAttributesLong": { "Distance": 1250 }
 				}
 			}
 		},
@@ -3689,9 +3650,9 @@
 		},
 		"Research_Buff_G_RailGunStun": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 200,
+				"Resource1Cost": 300,
 				"Resource2Cost": 100,
-				"ResearchTime": 30
+				"ResearchTime": 35
 			}
 		},
 		
