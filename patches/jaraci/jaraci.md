@@ -374,17 +374,42 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 ## 2020-02-28
 *Not yet reflected in the changelog*
+* General:
+    * Salvager:
+        * Hitpoints: `900 => 950`
+        * Cost: `100CU => 150CU`
+    * Demo pack cost: `200CU => 150CU`
 * Coalition/Soban:
-    * LAV production time: `13s => 12s`
+    * Baserunner hitpoints: `2200 => 2400`
+    * LAV (overall DPS increased by about 12%):
+        * Production time: `13s => 12s`
+        * Damage: `12 => 11`
+        * Rate of fire: `5 => 6`
+        * Short range accuracy: `100% => 90%`
+    * AAV:
+        * Hitpoints: `1070 => 1150`
+        * Weapon (DPS: `85 => 82`):
+            * Damage: `17 => 18`
+            * Rate of fire: `13 => 12`
     * Heavy railgun:
-        * Fixed an issue where damage was incorrectly set: `150 => 130`
+        * Fixed an issue where damage was set incorrectly: `150 => 130`
         * Accuracy: `8%/7.5%/7% => 7%/6.5%/6%`
+        * Turret rotation speed: `180 => 250`
     * Support cruiser G2G weapon:
         * Range: `1100 => 950`
         * Damage against air: `200% => 130%`
+* Coalition:
+    * Turret:
+        * Range: `1300 => 1400`
+        * Area of effect: `0 => 70`
+        * Area of effect falloff: `None => Linear`
 * Gaalsien/Khaaneph:
-    * Skimmer production time: `12s => 11s`
-    * Production cruiser AA weapon:
+    * Salvager armor: `0 => 3`
+    * Skimmer:
+        * Production time: `12s => 11s`
+        * Hitpoints: `610 => 630`
+        * Short range accuracy: `100% => 85%`
+    * Production cruiser AA weapon (anti-ground functionality reverted):
         * Can target ground: `Yes => No`
         * Line of sight required: `Yes => No`
         * Damage: `17 => 20`
@@ -395,15 +420,24 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Damage against air: `200% => 100%`
         * Damage against probe: `45% => 35%`
     * Heavy railgun:
-        * Fixed an issue where damage was incorrectly set: `190 => 155`
+        * Fixed an issue where damage was set incorrectly: `190 => 155`
         * Accuracy: `10%/9.5%/9% => 7%/6.5%/6%`
+        * Turn radius: `150 => 50`
         * EMP shell ability:
             * Research cost: `200CU 100RU => 300CU 100RU`
             * Research time: `30s => 35s`
+            * Recharge time: `45s => 100s`
             * Damage: `100 => 70`
             * Range: `1350 => 1250`
             * Stun duration: `2.5s => 2.2s`
             * Area of effect: `150 => 135`
+* Gaalsien:
+    * Carrier hitpoints: `9200 => 8800`
+    * Baserunner:
+        * Hitpoints: `2200 => 2000`
+        * Scanner:
+            * Ability cooldown: `120s => 140s`
+            * Sensors radius: `1350 => 1300`
 
 ## 2020-02-27
 *Not yet reflected in the changelog*

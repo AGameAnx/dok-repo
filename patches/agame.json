@@ -1115,7 +1115,7 @@
 		},
 		"G_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 9200,
+				"MaxHealth": 8800,
 				"Armour": 20,
 				"PriorityAsTarget": -2
 			},
@@ -2337,9 +2337,10 @@
 					"BurstPeriodMaxTimeMS": 334,
 					"RateOfFire": 3,
 					"ReloadTimeMS": 1650,
+					"AreaOfEffectRadius": 70,
 					"RangeAttributesShort": { "Accuracy": 100 },
 					"RangeAttributesMedium": { "Accuracy": 95 },
-					"RangeAttributesLong": { "Accuracy": 85, "Distance": 1300 },
+					"RangeAttributesLong": { "Accuracy": 85, "Distance": 1400 },
 					"Turret": { "RotationSpeed": 150 },
 					"OutputDPS": true
 				}
@@ -2392,7 +2393,7 @@
 		"G_Scanner_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 250,
-				"SensorRadius": 1350
+				"SensorRadius": 1300
 			}
 		},
 		"K_ExplodingSkimmer_MP": {
@@ -2419,12 +2420,14 @@
 		
 		"C_Harvester_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 150,
+				"MaxHealth": 950,
 				"Armour": 0,
 				"PriorityAsTarget": 5
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
-					"Resource1Cost": 200
+					"Resource1Cost": 150
 				}
 			},
 			"StorageAttributes": {
@@ -2439,12 +2442,14 @@
 		},
 		"G_Harvester_MP": {
 			"UnitAttributes": {
-				"Armour": 0,
+				"Resource1Cost": 150,
+				"MaxHealth": 950,
+				"Armour": 3,
 				"PriorityAsTarget": 5
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
-					"Resource1Cost": 200
+					"Resource1Cost": 150
 				}
 			},
 			"StorageAttributes": {
@@ -2459,8 +2464,9 @@
 		},
 		"K_Harvester_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 200,
-				"Armour": 0,
+				"Resource1Cost": 150,
+				"MaxHealth": 950,
+				"Armour": 3,
 				"PriorityAsTarget": 5
 			},
 			"AbilityAttributes": {
@@ -2513,7 +2519,7 @@
 		"C_Baserunner_MP": {
 			"UnitAttributes": {
 				"Resource2Cost": 50,
-				"MaxHealth": 2200,
+				"MaxHealth": 2400,
 				"PriorityAsTarget": -150
 			},
 			"UnitMovementAttributes": {
@@ -2558,7 +2564,7 @@
 		"C_Sob_Baserunner_MP": {
 			"UnitAttributes": {
 				"Resource2Cost": 50,
-				"MaxHealth": 2200,
+				"MaxHealth": 2400,
 				"PriorityAsTarget": -150
 			},
 			"UnitMovementAttributes": {
@@ -2613,7 +2619,7 @@
 		"G_Baserunner_MP": {
 			"UnitAttributes": {
 				"Resource2Cost": 50,
-				"MaxHealth": 2200,
+				"MaxHealth": 2000,
 				"PriorityAsTarget": -150
 			},
 			"UnitMovementAttributes": {
@@ -2623,7 +2629,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_DeployScanner_MP": {
-					"CooldownTimeSecs": 120
+					"CooldownTimeSecs": 140
 				},
 				"Ability_G_BaseRunnerPassiveRegen": {
 					"CooldownTimeSecs": 80,
@@ -3014,17 +3020,17 @@
 			"UnitAttributes": {
 				"Resource1Cost": 260,
 				"Resource2Cost": 25,
-				"MaxHealth": 1070,
+				"MaxHealth": 1150,
 				"SensorRadius": 1100,
 				"ProductionTime": 16,
-				"Armour": 8,
+				"Armour": 9,
 				"PopCapCost": 2
 			},
 			"WeaponAttributes": {
 				"C_HAC_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 17,
+					"BaseDamagePerRound": 18,
 					"BurstPeriodMaxTimeMS": 550,
-					"RateOfFire": 14,
+					"RateOfFire": 13,
 					"RangeAttributesLong": { "Distance": 900 },
 					"OutputDPS": true
 				}
@@ -3065,24 +3071,16 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 12,
-					"RateOfFire": 5,
+					"BaseDamagePerRound": 11,
+					"RateOfFire": 6,
 					"CooldownTimeMS": 400,
 					"NumberOfBursts": 2,
 					"BurstPeriodMinTimeMS": 950,
 					"BurstPeriodMaxTimeMS": 1050,
-					"RangeAttributesShort": {
-						"Accuracy": 100
-					},
-					"RangeAttributesMedium": {
-						"Accuracy": 85
-					},
-					"RangeAttributesLong": {
-						"Accuracy": 62
-					},
-					"Turret": {
-						"RotationSpeed": 250
-					},
+					"RangeAttributesShort": { "Accuracy": 90 },
+					"RangeAttributesMedium": { "Accuracy": 85 },
+					"RangeAttributesLong": { "Accuracy": 62 },
+					"Turret": { "RotationSpeed": 250 },
 					"Modifiers": {
 						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 }
 					},
@@ -3099,27 +3097,20 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 12,
-					"RateOfFire": 5,
+					"BaseDamagePerRound": 11,
+					"RateOfFire": 6,
 					"CooldownTimeMS": 400,
 					"NumberOfBursts": 2,
 					"BurstPeriodMinTimeMS": 950,
 					"BurstPeriodMaxTimeMS": 1050,
-					"RangeAttributesShort": {
-						"Accuracy": 100
-					},
-					"RangeAttributesMedium": {
-						"Accuracy": 85
-					},
-					"RangeAttributesLong": {
-						"Accuracy": 59
-					},
-					"Turret": {
-						"RotationSpeed": 250
-					},
+					"RangeAttributesShort": { "Accuracy": 90 },
+					"RangeAttributesMedium": { "Accuracy": 85 },
+					"RangeAttributesLong": { "Accuracy": 62 },
+					"Turret": { "RotationSpeed": 250 },
 					"Modifiers": {
 						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 }
-					}
+					},
+					"OutputDPS": true
 				}
 			}
 		},
@@ -3138,7 +3129,7 @@
 		
 		"G_SandSkimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 610,
+				"MaxHealth": 630,
 				"SensorRadius": 1150,
 				"ProductionTime": 11,
 				"PriorityAsTarget": 20
@@ -3161,13 +3152,14 @@
 					"BurstPeriodMaxTimeMS": 760,
 					"CooldownTimeMS": 220,
 					"ReloadTimeMS": 500,
+					"RangeAttributesShort": { "Accuracy": 85 },
 					"OutputDPS": true
 				}
 			}
 		},
 		"K_Sandskimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 610,
+				"MaxHealth": 630,
 				"SensorRadius": 1150,
 				"ProductionTime": 11,
 				"PriorityAsTarget": 20
@@ -3189,7 +3181,8 @@
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 760,
 					"CooldownTimeMS": 220,
-					"ReloadTimeMS": 500
+					"ReloadTimeMS": 500,
+					"RangeAttributesShort": { "Accuracy": 85 }
 				}
 			}
 		},
@@ -3330,6 +3323,9 @@
 						"Accuracy": 6,
 						"Distance": 2000
 					},
+					"Turret": {
+						"RotationSpeed": 250
+					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 500,
 						"AutoTargetStickyBias": 50,
@@ -3372,6 +3368,9 @@
 					"RangeAttributesLong": {
 						"Accuracy": 6,
 						"Distance": 2000
+					},
+					"Turret": {
+						"RotationSpeed": 250
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 500,
@@ -3530,10 +3529,18 @@
 				"AggroRange": 2050
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 57 }
+				"Dynamics": {
+					"MaxSpeed": 57,
+					"MaxSpeedTurnRadius": 50
+				}
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
+			},
+			"AbilityAttributes": {
+				"Ability_G_HeavyRailgunEMP_MP": {
+					"CooldownTimeSecs": 100
+				}
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Weapon_G2G_MP": {
@@ -3576,10 +3583,18 @@
 				"AggroRange": 2050
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 57 }
+				"Dynamics": {
+					"MaxSpeed": 57,
+					"MaxSpeedTurnRadius": 50
+				}
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
+			},
+			"AbilityAttributes": {
+				"Ability_G_HeavyRailgunEMP_MP": {
+					"CooldownTimeSecs": 100
+				}
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Weapon_G2G_MP": {
