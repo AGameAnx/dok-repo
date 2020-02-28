@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-27](#2020-02-27)
     - [2020-02-26](#2020-02-26)
     - [2020-02-25](#2020-02-25)
     - [2020-02-23](#2020-02-23)
@@ -370,6 +371,70 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
+## 2020-02-27
+*Not yet reflected in the changelog*
+* General:
+    * Salvager cost: `150CU => 100CU`
+    * Demo pack cost: `150CU => 200CU`
+* Coalition/Soban:
+    * Support cruiser:
+        * Repair rate: `11 => 9`
+        * G2G weapon (DPS: `4-2 => 37-29`):
+            * Damage: `3 => 17`
+            * Burst: `0.4-0.8s => 1.0-1.2s`
+            * Cooldown: `2s => 0.5s`
+            * Reload: `4s => 2s`
+            * Accuracy: `75%/55%/35% => 45%/35%/35%`
+            * Ranges: `300/600/900 => 400/600/1100`
+            * Can target air: `No => Yes`
+            * Damage against air: `100% => 200%`
+            * Damage against probes: `100% => 20%`
+            * Accuracy against non-small targets: `100% => 150%`
+            * Benefits from high ground: `Yes => No`
+            * Turret:
+                * Field of fire: `8 => 360`
+                * Field of view: `140 => 360`
+                * Rotation speed: `75 => 160`
+    * LAV:
+        * Armor: `0 => 1`
+        * Accuracy:
+            * Short: `96 => 100`
+            * Long: `59 => 62`
+    * AAV:
+        * Tech cost: `400CU 115RU => 400CU 65RU`
+        * Suppression ability slow effect: `35% => 42%`
+    * Gunship area of effect: `220 => 200`
+* Coalition:
+    * Baserunner turret:
+        * Damage: `55 => 65`
+        * Rate of fire: `4 => 3`
+        * Burst duration: `0.25s => 0.334s`
+        * Reload: `2.2s => 1.65s`
+        * Range: `1200 => 1300`
+        * Accuracy: `100%/100%/100% => 100%/95%/85%`
+        * World height offset: `5 => 15`
+* Gaalsien/Khaaneph:
+    * Refinery mode cost: `700CU 40RU => 600CU 80RU`
+    * Production cruiser AA weapon (DPS: `79-45 => 45-28`)
+        * Can target ground: `No => Yes`
+        * Line of sight required: `No => Yes`
+        * Damage: `20 => 17`
+        * Rate of fire: `12 => 10`
+        * Range: `1250 => 1200`
+        * Accuracy: `70%/55%/40% => 55%/45%/35%`
+        * Accuracy against non-small targets: `100% => 150%`
+        * Damage against air: `100% => 200%`
+        * Damage against probe: `35% => 45%`
+    * Assault ship:
+        * Tech cost: `350CU 115RU => 450CU 80RU`
+        * Damage: `32 => 30`
+    * Assault railgun:
+        * Range: `1100 => 1150`
+        * Dart maneuver duration: `2s => 3s`
+    * Heavy railgun EMP ability:
+        * Damage: `150 => 100`
+        * Status effect duration: `2s => 2.5s`
+
 ## 2020-02-26
 *Not yet reflected in the changelog*
 * Coalition/Soban:
@@ -378,17 +443,16 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Barrage recharge: `65s => 100s`
 * Coalition:
     * Cruise missile recharge: `150s => 170s`
-    * Battlecruiser:
-        * Production time: `60s => 55s`
-        * Range: `1400 => 1500`
+    * Battlecruiser production time: `60s => 55s`
 * Soban:
     * Microwave emitter recharge: `110s => 150s`
+* Gaalsien/Khaaneph:
+    * Assault ship damage: `35 => 32`
 * Gaalsien:
     * Hyper-sonic missile barrage:
         * Recharge: `120s => 160s`
         * Damage: `280 => 260`
     * Scanner sensors radius: `1400 => 1350`
-    * Assault ship damage: `35 => 32`
     * Siege cruiser:
         * Armor: `5 => 3`
         * Autofire:
