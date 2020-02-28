@@ -376,6 +376,9 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 *Not yet reflected in the changelog*
 * Coalition/Soban:
     * LAV production time: `13s => 12s`
+    * Heavy railgun:
+        * Fixed an issue where damage was incorrectly set: `150 => 130`
+        * Accuracy: `8%/7.5%/7% => 7%/6.5%/6%`
     * Support cruiser G2G weapon:
         * Range: `1100 => 950`
         * Damage against air: `200% => 130%`
@@ -391,10 +394,16 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Accuracy against non-small targets: `150% => 100%`
         * Damage against air: `200% => 100%`
         * Damage against probe: `45% => 35%`
-    * Heavy railgun EMP shell ability:
-        * Research cost: `200CU 100RU => 300CU 100RU`
-        * Research time: `30s => 35s`
-        * Range: `1350 => 1250`
+    * Heavy railgun:
+        * Fixed an issue where damage was incorrectly set: `190 => 155`
+        * Accuracy: `10%/9.5%/9% => 7%/6.5%/6%`
+        * EMP shell ability:
+            * Research cost: `200CU 100RU => 300CU 100RU`
+            * Research time: `30s => 35s`
+            * Damage: `100 => 70`
+            * Range: `1350 => 1250`
+            * Stun duration: `2.5s => 2.2s`
+            * Area of effect: `150 => 135`
 
 ## 2020-02-27
 *Not yet reflected in the changelog*
