@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-02-29](#2020-02-29)
     - [2020-02-28](#2020-02-28)
     - [2020-02-27](#2020-02-27)
     - [2020-02-26](#2020-02-26)
@@ -371,6 +372,34 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-02-29
+*Not yet reflected in the changelog*
+
+---
+
+* AAV TTK vs AS:
+    * Armor 0: `6.38s => 6.07s`
+    * Armor 1: `6.96s => 6.58s`
+    * Armor 2: `8.48s => 7.93s`
+    * Armor 3: `11.23s => 10.37s`
+
+---
+
+* Coalition/Soban:
+    * Strike fighter:
+        * Damage: `100 => 110`
+        * Damage packets: `1 => 2`
+* Coalition:
+    * Baserunner turret:
+        * Area of effect: `70 => 80`
+        * Area of effect falloff type: `Linear => Quadratic`
+* Gaalsien/Khaaneph:
+    * Assault ship:
+        * Hitpoints: `930 => 960`
+        * Armor: `6 => 5`
+        * Range: `940 => 920`
+    * Interceptor damage packets: `1 => 2`
 
 ## 2020-02-28
 *Not yet reflected in the changelog*
