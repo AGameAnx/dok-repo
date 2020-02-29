@@ -392,7 +392,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Damage packets: `1 => 2`
 * Coalition:
     * Baserunner turret:
-        * Area of effect: `70 => 80`
+        * Damage: `65 => 60`
+        * Rate of fire: `3 => 4`
+        * Number of bursts: `12 => 14`
+        * Long range accuracy: `85% => 60%`
+        * Area of effect: `70 => 85`
         * Area of effect falloff type: `Linear => Quadratic`
 * Gaalsien/Khaaneph:
     * Assault ship:
