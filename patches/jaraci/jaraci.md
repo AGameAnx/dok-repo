@@ -399,6 +399,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Hitpoints: `930 => 960`
         * Armor: `6 => 5`
         * Range: `940 => 920`
+        * Movement speed: `75 => 72`
     * Interceptor damage packets: `1 => 2`
 
 ## 2020-02-28
