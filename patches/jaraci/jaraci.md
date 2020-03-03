@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-03-02](#2020-03-02)
     - [2020-02-29](#2020-02-29)
     - [2020-02-28](#2020-02-28)
     - [2020-02-27](#2020-02-27)
@@ -372,6 +373,24 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-03-02
+*Not yet reflected in the changelog*
+* Coalition/Soban:
+    * Gunship area of effect: `200 => 180`
+* Coalition:
+    * Turret:
+        * Damage: `60 => 55`
+        * Area of effect: `85 => 105`
+        * Number of bursts: `14 => 16`
+* Gaalsien/Khaaneph:
+    * Sandskimmer weapon (DPS: `38.2 => 38.8`):
+        * Damage: `13 => 11`
+        * Long range accuracy: `88.21% => 80%`
+        * Rate of fire: `5 => 6`
+        * Cooldown: `0.22s => 0.3s`
+        * Reload: `0.5s => 0.6s`
+        * Burst: `7.0-7.6s => 7.8-8.4s`
 
 ## 2020-02-29
 *Not yet reflected in the changelog*
