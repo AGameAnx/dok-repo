@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-03-06](#2020-03-06)
     - [2020-03-02](#2020-03-02)
     - [2020-02-29](#2020-02-29)
     - [2020-02-28](#2020-02-28)
@@ -373,6 +374,15 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-03-06
+*Not yet reflected in the changelog*
+* Coalition/Soban:
+    * AAV production time: `16s => 18s`
+* Gaalsien/Khaaneph:
+    * Assault railgun:
+        * Armor: `0 => 3`
+        * Sensors range: `1000 => 1150`
 
 ## 2020-03-02
 *Not yet reflected in the changelog*
