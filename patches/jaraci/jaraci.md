@@ -384,6 +384,15 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Hitpoints: `1150 => 850`
         * Production time: `18s => 17s`
         * Damage: `18 => 16`
+    * Railgun:
+        * Base damage: `120 => 155`
+        * Mag accelerator bonus: `25 => 35`
+* Soban:
+    * Carrier hitpoints: `9100 => 9300`
+* Gaalsien/Khaaneph:
+    * Heavy railgun damage: `155 => 190`
+* Gaalsien:
+    * Carrier hitpoints: `8800 => 9100`
 * Khaaneph:
     * Blast drone:
         * Production time: `45s => 50s`
