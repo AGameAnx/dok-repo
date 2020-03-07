@@ -380,6 +380,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 *Not yet reflected in the changelog*
 * Coalition/Soban:
     * AAV:
+        * Tech cost: `400CU 65RU => 450CU 75RU`
         * Cost: `260CU 25RU => 260CU 20RU`
         * Hitpoints: `1150 => 850`
         * Production time: `18s => 17s`
@@ -387,6 +388,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Railgun:
         * Base damage: `120 => 155`
         * Mag accelerator bonus: `25 => 35`
+    * Assault cruiser tech cost: `500CU 250RU => 400CU 250RU`
 * Coalition:
     * Carrier hitpoints: `12000 => 9800`
 * Soban:
