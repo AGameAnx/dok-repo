@@ -380,13 +380,15 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 *Not yet reflected in the changelog*
 * Coalition/Soban:
     * AAV:
-        * Cost: `260CU 25RU => 220CU 20RU`
+        * Cost: `260CU 25RU => 260CU 20RU`
         * Hitpoints: `1150 => 850`
         * Production time: `18s => 17s`
         * Damage: `18 => 16`
     * Railgun:
         * Base damage: `120 => 155`
         * Mag accelerator bonus: `25 => 35`
+* Coalition:
+    * Carrier hitpoints: `12000 => 9800`
 * Soban:
     * Carrier hitpoints: `9100 => 9300`
 * Gaalsien/Khaaneph:
