@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-03-07](#2020-03-07)
     - [2020-03-06](#2020-03-06)
     - [2020-03-02](#2020-03-02)
     - [2020-02-29](#2020-02-29)
@@ -374,6 +375,26 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-03-07
+*Not yet reflected in the changelog*
+* Coalition/Soban:
+    * AAV:
+        * Cost: `260CU 25RU => 220CU 20RU`
+        * Hitpoints: `1150 => 850`
+        * Production time: `18s => 17s`
+        * Damage: `18 => 16`
+* Khaaneph:
+    * Blast drone:
+        * Production time: `45s => 50s`
+        * Hitpoints: `400 => 450`
+        * Max speed: `180 => 220`
+        * Damage: `680 => 740`
+    * Siege cruiser:
+        * Armor: `13 => 12`
+        * Damage: `150 => 130`
+        * Area of effect: `210 => 240`
+        * Barrage damage: `280 => 260`
 
 ## 2020-03-06
 *Not yet reflected in the changelog*
