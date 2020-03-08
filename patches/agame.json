@@ -2325,7 +2325,7 @@
 				"MaxHealth": 700,
 				"Armour": 2,
 				"SensorRadius": 1000,
-				"PriorityAsTarget": 40,
+				"PriorityAsTarget": 20,
 				"WorldHeightOffset": 15
 			},
 			"WeaponAttributes": {
@@ -2409,7 +2409,7 @@
 			},
 			"WeaponAttributes": {
 				"K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 740,
+					"BaseDamagePerRound": 680,
 					"DamagePacketsPerShot": 15,
 					"AreaOfEffectRadius": 260,
 					"AreaOfEffectFalloffType": "Quadratic"
@@ -2426,7 +2426,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
-					"Resource1Cost": 150
+					"Resource1Cost": 100
 				}
 			},
 			"StorageAttributes": {
@@ -2448,7 +2448,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
-					"Resource1Cost": 150
+					"Resource1Cost": 100
 				}
 			},
 			"StorageAttributes": {
@@ -2470,7 +2470,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
-					"Resource1Cost": 150
+					"Resource1Cost": 100
 				}
 			},
 			"StorageAttributes": {
@@ -2487,7 +2487,8 @@
 		"N_DemoCharge_MP": {
 			"WeaponAttributes": {
 				"N_DemoCharge_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 275,
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 220,
 					"DamagePacketsPerShot": 2
 				}
 			}
@@ -3063,14 +3064,14 @@
 		
 		"C_Escort_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 570,
+				"MaxHealth": 500,
 				"Armour": 1,
 				"ProductionTime": 12,
-				"PriorityAsTarget": 20
+				"PriorityAsTarget": 10
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 11,
+					"BaseDamagePerRound": 12,
 					"RateOfFire": 6,
 					"CooldownTimeMS": 400,
 					"NumberOfBursts": 2,
@@ -3092,11 +3093,11 @@
 				"MaxHealth": 570,
 				"Armour": 1,
 				"ProductionTime": 12,
-				"PriorityAsTarget": 20
+				"PriorityAsTarget": 10
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 11,
+					"BaseDamagePerRound": 12,
 					"RateOfFire": 6,
 					"CooldownTimeMS": 400,
 					"NumberOfBursts": 2,
@@ -3128,10 +3129,10 @@
 		
 		"G_SandSkimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 630,
+				"MaxHealth": 540,
 				"SensorRadius": 1150,
 				"ProductionTime": 11,
-				"PriorityAsTarget": 20
+				"PriorityAsTarget": 10
 			},
 			"AbilityAttributes": {
 				"Ability_G_SandSkimmersRegen": {
@@ -3145,7 +3146,7 @@
 			},
 			"WeaponAttributes": {
 				"G_SandSkimmer_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 11,
+					"BaseDamagePerRound": 12,
 					"RateOfFire": 6,
 					"BurstPeriodMinTimeMS": 780,
 					"BurstPeriodMaxTimeMS": 840,
@@ -3159,10 +3160,10 @@
 		},
 		"K_Sandskimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 630,
+				"MaxHealth": 540,
 				"SensorRadius": 1150,
 				"ProductionTime": 11,
-				"PriorityAsTarget": 20
+				"PriorityAsTarget": 10
 			},
 			"AbilityAttributes": {
 				"Ability_G_SandSkimmersRegen": {
@@ -3176,7 +3177,7 @@
 			},
 			"WeaponAttributes": {
 				"G_SandSkimmer_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 11,
+					"BaseDamagePerRound": 12,
 					"RateOfFire": 6,
 					"BurstPeriodMinTimeMS": 780,
 					"BurstPeriodMaxTimeMS": 840,
@@ -3692,7 +3693,6 @@
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 55,
-					"DamagePacketsPerShot": 2,
 					"BurstPeriodMinTimeMS": 110,
 					"BurstPeriodMaxTimeMS": 110,
 					"NumberOfBursts": 4,
@@ -3725,7 +3725,6 @@
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 55,
-					"DamagePacketsPerShot": 2,
 					"BurstPeriodMinTimeMS": 110,
 					"BurstPeriodMaxTimeMS": 110,
 					"NumberOfBursts": 4,
@@ -4313,8 +4312,8 @@
 			"WeaponAttributes": {
 				"C_GunShip_Weapon_DefaultFire_MP": {
 					"DamagePacketsPerShot": 1,
-					"BaseDamagePerRound": 42,
-					"AreaOfEffectRadius": 180,
+					"BaseDamagePerRound": 40,
+					"AreaOfEffectRadius": 160,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
 						"Distance": 1050
@@ -4335,7 +4334,7 @@
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 50,
-					"AreaOfEffectRadius": 90,
+					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
 					"RateOfFire": 3,
@@ -4345,6 +4344,7 @@
 					"OutputDPS": true
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
+					"BaseDamagePerRound": 180,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 140,
 					"ExcludeFromHeightAdvantage": true,
@@ -4360,9 +4360,7 @@
 				}
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 65
-				}
+				"Dynamics": { "MaxSpeed": 65 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
@@ -4397,15 +4395,10 @@
 				"Armour": 12,
 				"PopCapCost": 5
 			},
-			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 65
-				}
-			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 50,
-					"AreaOfEffectRadius": 90,
+					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
 					"RateOfFire": 3,
@@ -4415,6 +4408,7 @@
 					"OutputDPS": true
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
+					"BaseDamagePerRound": 180,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 140,
 					"ExcludeFromHeightAdvantage": true,
@@ -4428,6 +4422,9 @@
 						}
 					}
 				}
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 65 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {

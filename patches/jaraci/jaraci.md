@@ -378,23 +378,36 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 ## 2020-03-07
 *Not yet reflected in the changelog*
+* General:
+    * Demo pack:
+        * Cost: `150CU => 100CU`
+        * Damage: `275 => 220`
+    * Heavy railgun range: `2000 => 2060`
 * Coalition/Soban:
+    * LAV:
+        * Tech research time: `30s => 35s`
+        * Hitpoints: `570 => 500`
+        * Damage: `11 => 12`
     * AAV:
-        * Tech cost: `400CU 65RU => 450CU 75RU`
         * Cost: `260CU 25RU => 260CU 20RU`
         * Hitpoints: `1150 => 850`
         * Production time: `18s => 17s`
         * Damage: `18 => 16`
-    * Railgun:
-        * Base damage: `120 => 155`
-        * Mag accelerator bonus: `25 => 35`
-    * Assault cruiser tech cost: `500CU 250RU => 400CU 250RU`
+    * Assault cruiser:
+        * Area of effect: `90 => 75`
+        * Missile barrage damage: `200 => 180`
+    * Gunship:
+        * Damage: `42 => 40`
+        * Area of effect: `180 => 160`
 * Coalition:
     * Carrier hitpoints: `12000 => 9800`
 * Soban:
     * Carrier hitpoints: `9100 => 9300`
 * Gaalsien/Khaaneph:
-    * Heavy railgun damage: `155 => 190`
+    * Sandskimmer:
+        * Hitpoints: `670 => 540`
+        * Damage: `11 => 12`
+    * Assault railgun damage packets: `2 => 1`
 * Gaalsien:
     * Carrier hitpoints: `8800 => 9100`
 * Khaaneph:
@@ -402,7 +415,6 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Production time: `45s => 50s`
         * Hitpoints: `400 => 450`
         * Max speed: `180 => 220`
-        * Damage: `680 => 740`
     * Siege cruiser:
         * Armor: `13 => 12`
         * Damage: `150 => 130`
