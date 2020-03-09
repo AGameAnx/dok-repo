@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-03-09](#2020-03-09)
     - [2020-03-07](#2020-03-07)
     - [2020-03-06](#2020-03-06)
     - [2020-03-02](#2020-03-02)
@@ -375,6 +376,47 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-03-09
+*Not yet reflected in the changelog*
+* General:
+    * Carrier power level upgrades hitpoints granted per upgrade: `0 => 300`
+* Coalition/Soban:
+    * AAV:
+        * Hitpoints: `850 => 890`
+        * Suppression slow effect: `42% => 35%`
+    * Support cruiser PD weapon:
+        * Damage: `17 => 15`
+        * Rate of fire: `12 => 10`
+* Coalition:
+    * Carrier hitpoints: `9800 => 9000`
+* Soban:
+    * Carrier hitpoints: `9300 => 8500`
+* Gaalsien:
+    * Carrier hitpoints: `8800 => 8000`
+* Khaaneph:
+    * Carrier hitpoints: `9500 => 8700`
+    * Blast drone:
+        * Hitpoints: `450 => 500`
+        * Max speed: `220 => 200`
+        * Population cost: `1 => 2`
+        * Damage: `680 => 620`
+        * Production time: `50s => 60s`
+    * Baserunner:
+        * Hitpoints: `2200 => 1700`
+        * Smoke wall ability cooldown: `70s => 55s`
+        * Passive regen ability:
+            * Enabled: `No => Yes`
+            * No-damage activation delay: `10s`
+            * Regeneration amount: `20`
+            * Time between regeneration ticks: `1s`
+    * Siege cruiser:
+        * Reload: `2.5s => 4.5s`
+        * Number of bursts: `2 => 3`
+        * Area of effect: `240 => 270`
+        * Barrage:
+            * Damage: `250 => 240`
+            * Cooldown: `100s => 140s`
 
 ## 2020-03-07
 *Not yet reflected in the changelog*
