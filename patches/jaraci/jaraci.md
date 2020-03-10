@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-03-10](#2020-03-10)
     - [2020-03-09](#2020-03-09)
     - [2020-03-07](#2020-03-07)
     - [2020-03-06](#2020-03-06)
@@ -376,6 +377,43 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-03-10
+*Not yet reflected in the changelog*
+* Coalition/Soban:
+    * Carrier movement attributes:
+        * Turn radius: `150 => 120`
+        * Acceleration time: `2s => 1.5s`
+        * Braking time: `2s => 1.5s`
+    * Railgun tech cost: `300CU 165RU => 300CU 125RU`
+    * Support cruiser cost: `500CU 50RU => 450CU 50RU`
+    * Probe:
+        * Sensors radius: `1200 => 1250`
+        * Cost: `150CU => 100CU`
+    * LAV (DPS: `38.6 => 41.2`):
+        * Max speed: `110 => 120`
+        * Speed boost ability:
+            * Speed bonus: `60% => 45%`
+            * Turn radius increase: `50% => 35%`
+        * Number of bursts: `2 => 3`
+        * Medium range accuracy: `85% => 82%`
+        * Long range accuracy: `62% => 59%`
+    * AAV cost: `260CU 20RU => 250CU 20RU`
+* Coalition:
+    * Baserunner turret cooldown: `60s => 75s`
+* Soban:
+    * ALM target prioritization distance weight: `-0.1 => 0.1`
+* Gaalsien/Khaaneph:
+    * Heavy railgun cost: `350CU 100RU => 350CU 110RU`
+    * Assault railgun:
+        * Armor: `3 => 5`
+        * Sensors radius: `1150 => 1250`
+        * Contact radius: `1250 => 1350`
+        * Range: `1150 => 1250`
+        * Accuracy: `16%/15%/14% => 26%/25%/23%`
+    * Production cruiser:
+        * Vision radius: `1200 => 1350`
+        * Contact radius: `1350 => 1450`
 
 ## 2020-03-09
 *Not yet reflected in the changelog*

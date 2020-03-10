@@ -397,7 +397,12 @@
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 50 }
+				"Dynamics": {
+					"MaxSpeed": 50,
+					"MaxSpeedTurnRadius": 120,
+					"BrakingTime": 1.5,
+					"AccelerationTime": 1.5
+				}
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -759,7 +764,12 @@
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 50 }
+				"Dynamics": {
+					"MaxSpeed": 50,
+					"MaxSpeedTurnRadius": 120,
+					"BrakingTime": 1.5,
+					"AccelerationTime": 1.5
+				}
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -2667,7 +2677,8 @@
 		
 		"C_Sob_PopcapScanner": {
 			"UnitAttributes": {
-				"WorldHeightOffset": 15
+				"WorldHeightOffset": 15,
+				"AggroRange": 900
 			},
 			"WeaponAttributes": {
 				"C_Sob_PopCapScanner_Weapon_G2G_MP": {
@@ -2676,7 +2687,7 @@
 					"AreaOfEffectRadius": 90,
 					"TargetPrioritizationAttributes": {
 						"AngleWeight": 10,
-						"DistanceWeight": -0.1
+						"DistanceWeight": 0.1
 					},
 					"RangeAttributesMedium": { "Accuracy": 100 },
 					"RangeAttributesLong": { "Accuracy": 100 }
@@ -2751,7 +2762,7 @@
 		"C_Probe_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 170,
-				"SensorRadius": 1200
+				"SensorRadius": 1250
 			}
 		},
 		"G_Scanner_MP": {
@@ -2919,8 +2930,14 @@
 				}
 			},
 			"AbilityAttributes": {
+				"Ability_C_DeployTurret_MP": {
+					"CooldownTimeSecs": 75
+				},
+				"Ability_C_DeployTurret_BeginCooldown_MP": {
+					"CooldownTimeSecs": 75
+				},
 				"Ability_C_LaunchProbe_MP": {
-					"Resource1Cost": 150
+					"Resource1Cost": 100
 				}
 			}
 		},
@@ -2941,7 +2958,7 @@
 					"Resource1Cost": 0
 				},
 				"Ability_C_LaunchProbe_MP": {
-					"Resource1Cost": 150
+					"Resource1Cost": 100
 				}
 			},
 			"WeaponAttributes": {
@@ -3178,7 +3195,7 @@
 		
 		"C_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 500,
+				"Resource1Cost": 450,
 				"Resource2Cost": 50,
 				"ProductionTime": 35,
 				"MaxHealth": 3200,
@@ -3248,7 +3265,7 @@
 		},
 		"C_Sob_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 500,
+				"Resource1Cost": 450,
 				"Resource2Cost": 50,
 				"ProductionTime": 35,
 				"MaxHealth": 3200,
@@ -3334,8 +3351,8 @@
 				"MaxHealth": 3900,
 				"Resource1Cost": 600,
 				"Resource2Cost": 60,
-				"SensorRadius": 1200,
-				"ContactRadius": 1350
+				"SensorRadius": 1350,
+				"ContactRadius": 1450
 			},
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
@@ -3365,8 +3382,8 @@
 				"MaxHealth": 3900,
 				"Resource1Cost": 600,
 				"Resource2Cost": 60,
-				"SensorRadius": 1200,
-				"ContactRadius": 1350
+				"SensorRadius": 1350,
+				"ContactRadius": 1450
 			},
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
@@ -3409,7 +3426,7 @@
 		
 		"C_HAC_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 260,
+				"Resource1Cost": 250,
 				"Resource2Cost": 20,
 				"MaxHealth": 890,
 				"SensorRadius": 1100,
@@ -3460,17 +3477,38 @@
 				"ProductionTime": 12,
 				"PriorityAsTarget": 10
 			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 120
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_Nitrous_MP": {
+					"ApplyStatusEffect": {
+						"Nitrous_StatusEffect": {
+							"BuffsToApplyToTarget": {
+								"0": {
+									"BuffSet": {
+										"0": { "Value": 45 },
+										"2": { "Value": 35 }
+									}
+								}
+							}
+						}
+					}
+				}
+			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 12,
 					"RateOfFire": 6,
 					"CooldownTimeMS": 400,
-					"NumberOfBursts": 2,
+					"NumberOfBursts": 3,
 					"BurstPeriodMinTimeMS": 950,
 					"BurstPeriodMaxTimeMS": 1050,
 					"RangeAttributesShort": { "Accuracy": 90 },
-					"RangeAttributesMedium": { "Accuracy": 85 },
-					"RangeAttributesLong": { "Accuracy": 62 },
+					"RangeAttributesMedium": { "Accuracy": 82 },
+					"RangeAttributesLong": { "Accuracy": 59 },
 					"Turret": { "RotationSpeed": 250 },
 					"Modifiers": {
 						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 }
@@ -3486,17 +3524,38 @@
 				"ProductionTime": 12,
 				"PriorityAsTarget": 10
 			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 120
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_S_Nitrous_MP": {
+					"ApplyStatusEffect": {
+						"Nitrous_StatusEffect": {
+							"BuffsToApplyToTarget": {
+								"0": {
+									"BuffSet": {
+										"0": { "Value": 45 },
+										"2": { "Value": 35 }
+									}
+								}
+							}
+						}
+					}
+				}
+			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 12,
 					"RateOfFire": 6,
 					"CooldownTimeMS": 400,
-					"NumberOfBursts": 2,
+					"NumberOfBursts": 3,
 					"BurstPeriodMinTimeMS": 950,
 					"BurstPeriodMaxTimeMS": 1050,
 					"RangeAttributesShort": { "Accuracy": 90 },
-					"RangeAttributesMedium": { "Accuracy": 85 },
-					"RangeAttributesLong": { "Accuracy": 62 },
+					"RangeAttributesMedium": { "Accuracy": 82 },
+					"RangeAttributesLong": { "Accuracy": 59 },
 					"Turret": { "RotationSpeed": 250 },
 					"Modifiers": {
 						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 }
@@ -3778,14 +3837,14 @@
 		"Tier_2_C_RailGun": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
-				"Resource2Cost": 165,
+				"Resource2Cost": 125,
 				"ResearchTime": 55
 			}
 		},
 		"Tier_2_S_RailGun": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
-				"Resource2Cost": 165,
+				"Resource2Cost": 125,
 				"ResearchTime": 55
 			}
 		},
@@ -3915,10 +3974,10 @@
 			"UnitAttributes": {
 				"MaxHealth": 750,
 				"Resource1Cost": 350,
-				"Resource2Cost": 100,
+				"Resource2Cost": 110,
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
-				"PriorityAsTarget": 30,
+				"PriorityAsTarget": 10,
 				"AggroRange": 2050
 			},
 			"UnitMovementAttributes": {
@@ -3969,10 +4028,10 @@
 			"UnitAttributes": {
 				"MaxHealth": 750,
 				"Resource1Cost": 350,
-				"Resource2Cost": 100,
+				"Resource2Cost": 110,
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
-				"PriorityAsTarget": 30,
+				"PriorityAsTarget": 10,
 				"AggroRange": 2050
 			},
 			"UnitMovementAttributes": {
@@ -4071,8 +4130,9 @@
 				"MaxHealth": 750,
 				"ExperienceValue": 350,
 				"ProductionTime": 16,
-				"SensorRadius": 1150,
-				"Armour": 3
+				"SensorRadius": 1250,
+				"ContactRadius": 1350,
+				"Armour": 5
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -4090,9 +4150,9 @@
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
 					"ReloadTimeMS": 2600,
-					"RangeAttributesShort":  { "Accuracy": 16 },
-					"RangeAttributesMedium": { "Accuracy": 15 },
-					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1150 }
+					"RangeAttributesShort":  { "Accuracy": 26 },
+					"RangeAttributesMedium": { "Accuracy": 25 },
+					"RangeAttributesLong":   { "Accuracy": 23, "Distance": 1250 }
 				}
 			}
 		},
@@ -4103,8 +4163,9 @@
 				"MaxHealth": 750,
 				"ExperienceValue": 350,
 				"ProductionTime": 16,
-				"SensorRadius": 1150,
-				"Armour": 3
+				"SensorRadius": 1250,
+				"ContactRadius": 1350,
+				"Armour": 5
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -4122,9 +4183,9 @@
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
 					"ReloadTimeMS": 2600,
-					"RangeAttributesShort":  { "Accuracy": 16 },
-					"RangeAttributesMedium": { "Accuracy": 15 },
-					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1150 }
+					"RangeAttributesShort":  { "Accuracy": 26 },
+					"RangeAttributesMedium": { "Accuracy": 25 },
+					"RangeAttributesLong":   { "Accuracy": 23, "Distance": 1250 }
 				}
 			}
 		},
