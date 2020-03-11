@@ -383,6 +383,9 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 *Not yet reflected in the changelog*
 * Gaalsien/Khaaneph:
     * Assault ship hitpoints: `960 => 860`
+    * Assault railgun:
+        * Hitpoints: `750 => 650`
+        * Armor: `5 => 7`
 
 ## 2020-03-10
 *Not yet reflected in the changelog*
