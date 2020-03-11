@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-03-11](#2020-03-11)
     - [2020-03-10](#2020-03-10)
     - [2020-03-09](#2020-03-09)
     - [2020-03-07](#2020-03-07)
@@ -377,6 +378,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-03-11
+*Not yet reflected in the changelog*
+* Gaalsien/Khaaneph:
+    * Assault ship hitpoints: `960 => 860`
 
 ## 2020-03-10
 *Not yet reflected in the changelog*
