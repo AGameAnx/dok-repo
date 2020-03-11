@@ -381,11 +381,14 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 ## 2020-03-11
 *Not yet reflected in the changelog*
+* Coalition/Soban:
+    * AAV cost: `250CU 20RU => 240CU 20RU`
 * Gaalsien/Khaaneph:
     * Assault ship hitpoints: `960 => 860`
     * Assault railgun:
+        * Damage: `55 => 50`
+        * Accuracy: `26%/25%/23% => 26%/20%/18%`
         * Hitpoints: `750 => 650`
-        * Armor: `5 => 7`
 
 ## 2020-03-10
 *Not yet reflected in the changelog*
