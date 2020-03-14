@@ -47,7 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
-    - [2020-03-13](#2020-03-13)
+    - [2020-03-14](#2020-03-14)
     - [2020-03-11](#2020-03-11)
     - [2020-03-10](#2020-03-10)
     - [2020-03-09](#2020-03-09)
@@ -380,15 +380,74 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
-## 2020-03-13
+## 2020-03-14
 *Not yet reflected in the changelog*
 * General:
     * Carrier power upgrades:
-        * Fixed an issue where lvl 2 and up upgrades weren't granting hitpoints
+        * Fixed an issue where level 2 and up upgrades weren't granting hitpoints
         * Hitpoints granted per power level: `300 => 200`
+    * Strike craft damage upgrades:
+        * Damage increase per upgrade `2 => 1`
+        * CU cost: `400 => 300`
+* Coalition/Soban:
+    * LAV (DPS: `41.2 => 38.6`):
+        * Number of bursts: `3 => 2`
+        * Medium range accuracy: `82% => 85%`
+    * AAV:
+        * Hitpoints: `890 => 940`
+        * Damage: `18 => 17`
+    * Heavy railgun wind-up: `2s => 1.6s`
+* Coalition:
+    * Carrier:
+        * Fixed PD rate of fire display not matching real value
+        * PD weapon damage: `18 => 20`
+        * Penetrating weapon damage: `45 => 50`
+        * Range systems power shunt:
+            * Fixed an issue where carrier missile systems had 350 more range than intended at power level 1 and up
+            * Level 0: `650 => 800`
+            * Level 1: `850 => 900`
+        * Weapon systems power shunt PD rate of fire bonus:
+            * Level 1: `25% => 20%`
+            * Level 2: `50% => 35%`
+            * Level 3: `75% => 55%`
+            * Level 4: `115% => 80%`
+    * Turret:
+        * Damage: `55 => 52`
+        * Cooldown: `75s => 80s`
+    * Heavy railgun reload: `1.4s => 1.6s`
+* Soban:
+    * Heavy railgun:
+        * Cooldown: `1.2s => 1.3s`
+        * Reload: `3.2s => 3.3s`
 * Gaalsien/Khaaneph:
     * Production cruiser AA weapon short range accuracy: `70% => 60%` 
     * Heavy railgun ranged calibration upgrade cost: `150CU 150RU => 200CU 200RU`
+* Gaalsien:
+    * Carrier:
+        * PD weapon damage: `18 => 20`
+        * Penetrating PD weapon damage: `45 => 50`
+        * Rate of fire: `9 => 10`
+        * Range systems power shunt:
+            * Fixed an issue where carrier missile systems had 350 more range than intended at power level 1 and up
+            * Level 0: `650 => 800`
+            * Level 1: `850 => 900`
+        * Weapon systems power shunt PD rate of fire bonus:
+            * Level 1: `25% => 20%`
+            * Level 2: `45% => 35%`
+            * Level 3: `65% => 50%`
+            * Level 4: `90% => 70%`
+    * Siege cruiser barrage damage: `170 => 150`
+* Khaaneph:
+    * Carrier:
+        * PD weapon damage: `18 => 20`
+        * Penetrating PD weapon damage: `45 => 50`
+        * Rate of fire: `8 => 10`
+        * Weapon systems power shunt PD rate of fire bonus:
+            * Level 1: `50% => 25%`
+            * Level 2: `100% => 40%`
+            * Level 3: `150% => 65%`
+            * Level 4: `200% => 100%`
+    * Baserunner smoke cooldown: `55s => 40s`
 
 ## 2020-03-11
 *Not yet reflected in the changelog*
