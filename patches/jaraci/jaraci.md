@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-03-13](#2020-03-13)
     - [2020-03-11](#2020-03-11)
     - [2020-03-10](#2020-03-10)
     - [2020-03-09](#2020-03-09)
@@ -378,6 +379,16 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-03-13
+*Not yet reflected in the changelog*
+* General:
+    * Carrier power upgrades:
+        * Fixed an issue where lvl 2 and up upgrades weren't granting hitpoints
+        * Hitpoints granted per power level: `300 => 200`
+* Gaalsien/Khaaneph:
+    * Production cruiser AA weapon short range accuracy: `70% => 60%` 
+    * Heavy railgun ranged calibration upgrade cost: `150CU 150RU => 200CU 200RU`
 
 ## 2020-03-11
 *Not yet reflected in the changelog*
