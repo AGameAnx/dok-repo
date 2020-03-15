@@ -385,7 +385,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 *Not yet reflected in the changelog*
 * Coalition/Soban:
     * LAV:
-        * Rate of fire: `6 => 5` (Pure DPS: `38.6 => 36`)
+        * Cooldown: `0.4s => 0.65s` (Pure DPS: `38.6 => 36`)
         * Long range accuracy: `59 => 61` (DPS: `22.32 => 21.96`)
     * AAV:
         * Range: `900 => 950`
