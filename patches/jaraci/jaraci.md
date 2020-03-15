@@ -47,6 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-03-15](#2020-03-15)
     - [2020-03-14](#2020-03-14)
     - [2020-03-11](#2020-03-11)
     - [2020-03-10](#2020-03-10)
@@ -379,6 +380,16 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-03-15
+*Not yet reflected in the changelog*
+* Coalition/Soban:
+    * LAV:
+        * Rate of fire: `6 => 5` (Pure DPS: `38.6 => 36`)
+        * Long range accuracy: `59 => 61` (DPS: `22.32 => 21.96`)
+    * AAV:
+        * Range: `900 => 950`
+        * Slow effect: `35% => 25%`
 
 ## 2020-03-14
 *Not yet reflected in the changelog*
