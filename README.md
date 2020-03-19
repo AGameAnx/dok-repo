@@ -64,7 +64,7 @@ All commands must not wrap onto the following line.
 | FFA - Torin Crater | [4,4] | FrostyTeeth | [4 player FFA](layouts/torin-crater-ffa4.png)| **/l torin-crater-ffa4** 
 | FFA - Canyon Outpost | [3,3] |  FrostyTeeth | [3 player FFA](layouts/canyon-ffa3.png)| **/l canyon-ffa3** 
 | FFA - Dune Sea | [6,6] |  FrostyTeeth | [3 player FFA](layouts/dune-sea-ffa3.png)| **/l dune-sea-ffa3** 
-| FFA - Khar-Toba | [5,5] | FrostyTeeth | [5 player FFA with free population<br/>at the start](layouts/khar-toba-ffa5.png)| **/l khar-toba-ffa5** 
+| FFA - Khar-Toba | [5,5] | FrostyTeeth | [5 player FFA radial](layouts/khar-toba-ffa5.png)| **/l khar-toba-ffa5** 
 | Prime Anomaly |    |      ||     
 
 
