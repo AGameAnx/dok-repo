@@ -76,5 +76,6 @@ All commands must not wrap onto the following line.
 | ------- | ------- | -----------
 | **/p agame** | AGameAnx | [Jaraci Balance Patch Development Version](https://docs.google.com/document/d/1WulBuxTnjEn3-r0P7UrTQSzijdb_9oGVMEy1BMBU2iQ)
 | **/p jaraci** | AGameAnx | [Jaraci Balance Patch Tournament Version](https://docs.google.com/document/d/1WulBuxTnjEn3-r0P7UrTQSzijdb_9oGVMEy1BMBU2iQ)
+| **/p br** | Bozocow | Baserunner nothing
 | **/p deserts** | pbobbert | [Khraak Deserts Balance Patch](https://cdn.discordapp.com/attachments/509996599955554305/541211898771931136/Balancing_a_Desert_TooTwo_version_18.pdf)
 | **/p who** | Who | Who's patch
