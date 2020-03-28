@@ -47,6 +47,8 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
+    - [2020-03-28](#2020-03-28)
+    - [2020-03-21](#2020-03-21)
     - [2020-03-15](#2020-03-15)
     - [2020-03-14](#2020-03-14)
     - [2020-03-11](#2020-03-11)
@@ -380,6 +382,25 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
+
+## 2020-03-28
+*Not yet reflected in the changelog*
+* Coalition/Soban:
+    * Turret
+        * Cost: `250CU => 300CU`
+        * Damage: `52 => 45`
+        * Number of bursts: `16 => 18`
+        * Range: `1400 => 1450`
+    * AAV:
+        * Range: `950 => 1000`
+        * Area of effect: `0 => 45` (Linear falloff)
+* Coalition:
+    * Battlecruiser range: `1400 => 1350`
+
+## 2020-03-21
+*Not yet reflected in the changelog*
+* Coalition/Soban:
+    * Support cruiser armor: `7 => 6`
 
 ## 2020-03-15
 *Not yet reflected in the changelog*
