@@ -984,7 +984,6 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Railgun fabrication tech cost: `450CU 200RU => 350CU 250RU`
 
 ## 2020-02-15
-*Not yet reflected in the changelog*
 * General:
     * Heavy railgun target prioritization:
         * Weapon effectiveness weight: `80 => 500`
@@ -1667,7 +1666,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 > *LAV have been revealed as a center point of effective coalition play. Oppressive early game strategies along with LAV providing a strong mid/late game defensive core for the coalition army is the main reasoning behind the reduction of overall LAV effectiveness. Due to the mod increasing the power of various strike craft counters, LAV have become extremely fragile in the lategame and their large discrepancy with sandskimmer hitpoints has been a big issue in balancing various area of effect units. New LAV hitpoints will make them sustain damage a bit better. Production time is increased substantially due to production upgrade being available earlier and it was needed to curb the power of LAV openers in general. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
 
 * Tech:
-    * Cost: `300CU => 400CU`
+    * Cost: `300CU => 350CU`
     * Research time: `35s => 30s`
 * Build time: `8s => 12s`
 * Hitpoints: `500 => 570`
@@ -1676,7 +1675,10 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Burst: `0.8-1.2s => 0.95-1.05s`
     * Burst count: `4 => 2`
     * Cooldown: `0.8s => 0.4s`
-    * Long range accuracy: `56% => 59%`
+    * Accuracy:
+        * Short: `94% => 96%`
+        * Medium: `82% => 85%`
+        * Long: `56% => 59%`
     * Turret rotation speed: `180 => 250`
     * Damage against probes: `100% => 50%`
 * Upgrade research time:
@@ -1689,12 +1691,12 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Survivability
 > *The hitpoints are reduced on AAV to make soft-countering them with units such as assault ships or interceptors more of an option than it previously was. Previously, AAV would drive past a lot of things to target the squishier targets such as enemy salvagers. This is still possible, but the enemy can react to it easier.*
 
-* Hitpoints: `1400 => 1250`
-* Armor : `8 => 6`
+* Hitpoints: `1400 => 1150`
 
 ### Pricing
 > *AAV timing on small maps is a bit too oppressive. Due to an increase of unit's lategame utility, the base cost is going up slightly. AAV are not very effective late game units and are cheap, their population cost doesn't reflect this.*
 
+* Tech cost: `350CU 85RU => 400CU 85RU`
 * Tech research time: `50s => 55s`
 * Cost: `180CU 30RU => 240CU 25RU`
 * Production time: `14s => 16s`
@@ -2103,7 +2105,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ### General stats
 > *Discrepancy between LAV and Skimmer hitpoints was very large and caused almost every area of effect weapon to be extremely difficult to balance. Skimmers also needed a slight decrease in power. Slightly increased sensors range should help skimmers avoid AAV and other early game threats easier.*
 
-* Tech research time: `35s => 25s`
+* Tech research time: `35s => 30s`
 * Hitpoints: `650 => 610`
 * Sensor radius: `1000 => 1100`
 * Self regen:
@@ -2222,16 +2224,18 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Cost: `200CU 35RU => 250CU 50RU`
 * Production time: `24s => 19s`
-* Hitpoints: `550 => 670`
+* Hitpoints: `550 => 750`
 * Armor: `6 => 3`
 * Experience value: `610 => 350`
 * Armor upgrade hitpoint bonus:
     * Level 2: `100 => 50`
     * Level 3: `200 => 100`
 * Movement dynamics characteristics:
+    * Max speed: `100 => 90`
     * Acceleration time: `0.85 => 0.93`
     * Breaking time: `0.85 => 0.93`
 * Damage: `50 => 60`
+* Damage packets: `1 => 2`
 * Burst duration: `0.1-0.1s => 0.11-0.11s`
 * Number of Bursts: `3 => 4`
 * Wind-up: `1s => 0.6s`
@@ -2249,6 +2253,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role. All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies. All railguns have seen a general accuracy increase to reduce RNG of missing in railgun fights.*
 
 * Cost: `280CU 90RU => 320CU 100RU`
+* Population cost: `3 => 4`
 * Damage: `225 => 190`
 * Hitpoints: `670 => 750`
 * Max speed: `62 => 65`
