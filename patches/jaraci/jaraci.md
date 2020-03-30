@@ -47,7 +47,7 @@ If above version is not up to date with the recent changes, its version will be 
 - [Table of contents](#table-of-contents)
 - [Summary](#summary)
 - [Recent changes](#recent-changes)
-    - [2020-03-28](#2020-03-28)
+    - [2020-03-28 (Tournament version)](#2020-03-28-tournament-version)
     - [2020-03-21](#2020-03-21)
     - [2020-03-15](#2020-03-15)
     - [2020-03-14](#2020-03-14)
@@ -66,7 +66,7 @@ If above version is not up to date with the recent changes, its version will be 
     - [2020-02-22](#2020-02-22)
     - [2020-02-18](#2020-02-18)
     - [2020-02-17](#2020-02-17)
-    - [2020-02-15](#2020-02-15)
+    - [2020-02-15 (Last reflected in the changelog)](#2020-02-15-last-reflected-in-the-changelog)
     - [2020-02-12](#2020-02-12)
     - [2020-02-11](#2020-02-11)
     - [2020-02-08](#2020-02-08)
@@ -76,7 +76,7 @@ If above version is not up to date with the recent changes, its version will be 
     - [2020-02-01](#2020-02-01)
     - [2020-01-31](#2020-01-31)
     - [2020-01-22](#2020-01-22)
-    - [2020-01-19 (Tournament version)](#2020-01-19-tournament-version)
+    - [2020-01-19 (Jaraci Cup #4)](#2020-01-19-jaraci-cup-4)
     - [2020-01-11](#2020-01-11)
 - [General changes](#general-changes)
     - [Carriers](#carriers)
@@ -383,7 +383,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 # Recent changes
 
-## 2020-03-28
+## 2020-03-28 (Tournament version)
 *Not yet reflected in the changelog*
 * Coalition/Soban:
     * Turret
@@ -983,7 +983,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Contact radius: `1200 => 1250`
     * Railgun fabrication tech cost: `450CU 200RU => 350CU 250RU`
 
-## 2020-02-15
+## 2020-02-15 (Last reflected in the changelog)
 * General:
     * Heavy railgun target prioritization:
         * Weapon effectiveness weight: `80 => 500`
@@ -1237,7 +1237,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Gaalsien:
     * Baserunner heal aura ability status effect heal per tick: `4 => 3` (Total healing: `1000 => 800`)
 
-## 2020-01-19 (Tournament version)
+## 2020-01-19 (Jaraci Cup #4)
 * Coalition/Soban:
     * Tactical bomber damage: `1850 => 1700`
 
