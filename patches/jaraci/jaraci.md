@@ -64,9 +64,9 @@ If above version is not up to date with the recent changes, its version will be 
     - [2020-02-25](#2020-02-25)
     - [2020-02-23](#2020-02-23)
     - [2020-02-22](#2020-02-22)
-    - [2020-02-18](#2020-02-18)
+    - [2020-02-18 (Last reflected in the changelog)](#2020-02-18-last-reflected-in-the-changelog)
     - [2020-02-17](#2020-02-17)
-    - [2020-02-15 (Last reflected in the changelog)](#2020-02-15-last-reflected-in-the-changelog)
+    - [2020-02-15](#2020-02-15)
     - [2020-02-12](#2020-02-12)
     - [2020-02-11](#2020-02-11)
     - [2020-02-08](#2020-02-08)
@@ -98,6 +98,7 @@ If above version is not up to date with the recent changes, its version will be 
         - [Small arms anti-air weapons](#small-arms-anti-air-weapons)
         - [Salvager](#salvager)
         - [Salvager RU hold size](#salvager-ru-hold-size)
+        - [Demo pack](#demo-pack)
         - [Baserunner](#baserunner)
         - [Baserunner anti-air](#baserunner-anti-air)
         - [Artillery barrages (except Khaaneph)](#artillery-barrages-except-khaaneph)
@@ -126,7 +127,6 @@ If above version is not up to date with the recent changes, its version will be 
         - [Gun turret](#gun-turret)
         - [Gun turret weapon](#gun-turret-weapon)
         - [Targeting jammer](#targeting-jammer)
-    - [Tank armor upgrades](#tank-armor-upgrades)
     - [LAV](#lav)
     - [AAV](#aav)
         - [Survivability](#survivability)
@@ -198,7 +198,7 @@ If above version is not up to date with the recent changes, its version will be 
         - [General stats](#general-stats-8)
         - [EMP](#emp)
         - [Ranged calibration](#ranged-calibration)
-    - [Railgun armor level 3 upgrade cost](#railgun-armor-level-3-upgrade-cost)
+    - [Railgun armor upgrades cost](#railgun-armor-upgrades-cost)
     - [Interceptor](#interceptor)
         - [General stats](#general-stats-9)
         - [Weapon](#weapon-2)
@@ -910,8 +910,8 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Gaalsien/Khaaneph:
     * Honourguard cruiser damage: `550 => 500`
 
-## 2020-02-18
-*Not yet reflected in the changelog*
+## 2020-02-18 (Last reflected in the changelog)
+
 * General:
     * Carrier PD weapons:
         * Accuracy against medium targets: `115% => 100%`
@@ -942,14 +942,13 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Carrier hitpoints: `10500 => 9500`
 
 ## 2020-02-17
-*Not yet reflected in the changelog*
 * General:
     * Demo pack:
         * Cost: `50CU => 150CU`
         * Damage: `175 => 350`
         * Packets: `1 => 2`
     * Baserunner:
-        * Cost: `220CU 60RU => 220CU 50RU`
+        * Cost: `250CU 60RU => 250CU 50RU`
         * Hitpoints: `2500 => 2200`
     * Priority as target:
         * Carrier: `increased`
@@ -983,7 +982,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Contact radius: `1200 => 1250`
     * Railgun fabrication tech cost: `450CU 200RU => 350CU 250RU`
 
-## 2020-02-15 (Last reflected in the changelog)
+## 2020-02-15
 * General:
     * Heavy railgun target prioritization:
         * Weapon effectiveness weight: `80 => 500`
@@ -1295,11 +1294,12 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Medium: `4.5% or 90% => 45%`
     * Long: `4% or 80% => 35%`
 * Weapon damage: `8 or 10 => 18`
+* Benefit from high ground: `Yes => No`
 * Penetrating weapon damage: `17 => 33`
 * Rate of fire: `See per-carrier changes below`
 * Normalized all modifiers against different target sizes:
     * Small: `5 or 8 => 1`
-    * Medium: `1, 15 or 18 => 1.15`
+    * Medium: `1, 15 or 18 => 1`
     * Large: `1 or 2000 => 1.3`
     * XLarge, Carrier: `1 or 25 => 1.3`
 * Improved visuals of PDs missing their target
@@ -1386,11 +1386,18 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 * RU hold size: `40 => 20`
 
+### Demo pack
+> *The goal of these changes is to slow down expansion slightly, to move away some of the cost of expansion from the associated units (PC and SC). The damage is changed to allow demo packs to remain a relevant ability defensively (even if weak).*
+
+* Cost: `50CU => 150CU`
+* Damage: `175 => 350`
+* Packets: `1 => 2`
+
 ### Baserunner
 > *Early artifact pressure has become very standard meta, even after initial cost nerfs baserunner play was standard and difficult to punish. Even adjusting artifact timings wouldn't solve some of the issues which are present on certain maps where fast investment into mid-game railgun army could completely lock down the game due to extraction corridor being close enough to artifact pick up locations and main base. Extracting artifacts with multiple baserunners at a time will now require a moderate investment, hopefully reducing the size of an aforementioned railgun army. Additionally, this allows baserunner abilities and baserunner AA weapon to be tuned stronger without the concern of making it a better air counter unit than actual AA tech.*
 
-* Cost: `250CU => 250CU 60RU`
-* Hitpoints: `3350 => 2500`
+* Cost: `250CU => 250CU 50RU`
+* Hitpoints: `3350 => 2200`
 * Max speed: `65 => 70`
 
 ### Baserunner anti-air
@@ -1425,14 +1432,14 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### General statistics
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however. Movement speed nerf is part of an effort to fix a particularly strong early game 1 base carrier timing push.*
 
-* Hitpoints: `15000 => 12000`
+* Hitpoints: `15000 => 11000`
 * Movement speed: `60 => 50`
 
 ### Cruise missile
 > *Coalition cruise missile's destructive potential is unmatched. A reduction of its effectiveness against smaller units should make it tougher to extract very high value from it on a consistent basis while keeping overall strategic value of an expensive nuke-class weapon appropriately high.*
 
 * Cooldown: `120s => 150s`
-* Damage: `5000 => 2500`
+* Damage: `5000 => 2400`
 * Damage against cruisers and carriers: `100% => 180%`
 
 ### Point defense weapons
@@ -1451,7 +1458,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### General statistics
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. The Soban carrier hitpoint nerf is larger than other carriers because it gets strong railgun weaponry from the beginning of the game and extra range for safer positioning. Movement speed and armor changes are part of an effort to fix a particularly strong early game 1 base carrier timing push*
 
-* Hitpoints: `15000 => 10000`
+* Hitpoints: `15000 => 9000`
 * Movement speed: `60 => 50`
 * Base armor: `25 => 15`
 
@@ -1589,8 +1596,11 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### General stats
 > *Aim of the cost change is to slow down tech progression when expanding. Currently, there's almost no downside and slow down when expanding from 2 to 3 base, this should make the tech progression just slightly slower which could prove meaningful vs aggressive enemy strategies. Added repair rate helps C/S sustain in lategame positional battles*
 
-* Cost: `600CU => 580CU 40RU`
-* Turn radius: `100 => 85`
+* Cost: `600CU => 500CU 50RU`
+* Production time: `45s => 35s`
+* Hitpoints: `4100 => 3200`
+* Armor: `3 => 7`
+* Turn radius: `100 => 75`
 * Population: `6 => 5`
 * Armor: `2 => 3`
 * Repair rate: `10 => 11`
@@ -1657,18 +1667,13 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Acceleration increase: `0 => 25%`
     * Added a unit behavior modifier which makes units try to keep a distance of 400 units away from their target while inside ECM field (this is to prevent AI from endlessly circling the ECM with strike craft)
 
-## Tank armor upgrades
-> *It was previously too much of an obvious choice to always upgrade level 3 on armored vehicles which massively increased their combat performance without much of an initial investment.*
-
-* Level 3 cost: `300CU 300RU => 300CU 400RU`
-
 ## LAV
 > *LAV have been revealed as a center point of effective coalition play. Oppressive early game strategies along with LAV providing a strong mid/late game defensive core for the coalition army is the main reasoning behind the reduction of overall LAV effectiveness. Due to the mod increasing the power of various strike craft counters, LAV have become extremely fragile in the lategame and their large discrepancy with sandskimmer hitpoints has been a big issue in balancing various area of effect units. New LAV hitpoints will make them sustain damage a bit better. Production time is increased substantially due to production upgrade being available earlier and it was needed to curb the power of LAV openers in general. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
 
 * Tech:
     * Cost: `300CU => 350CU`
     * Research time: `35s => 30s`
-* Build time: `8s => 12s`
+* Build time: `8s => 13s`
 * Hitpoints: `500 => 570`
 * Weapon:
     * Base damage: `15 => 12`
@@ -1692,13 +1697,14 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 > *The hitpoints are reduced on AAV to make soft-countering them with units such as assault ships or interceptors more of an option than it previously was. Previously, AAV would drive past a lot of things to target the squishier targets such as enemy salvagers. This is still possible, but the enemy can react to it easier.*
 
 * Hitpoints: `1400 => 1150`
+* Sensors: `1000 => 1100`
 
 ### Pricing
 > *AAV timing on small maps is a bit too oppressive. Due to an increase of unit's lategame utility, the base cost is going up slightly. AAV are not very effective late game units and are cheap, their population cost doesn't reflect this.*
 
-* Tech cost: `350CU 85RU => 400CU 85RU`
+* Tech cost: `350CU 85RU => 400CU 115RU`
 * Tech research time: `50s => 55s`
-* Cost: `180CU 30RU => 240CU 25RU`
+* Cost: `180CU 30RU => 260CU 25RU`
 * Production time: `14s => 16s`
 * Population: `3 => 2`
 
@@ -1708,13 +1714,15 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Damage: `11 => 17`
 * Rate of fire: `20 => 14`
 * Burst: `0.5-0.6s => 0.5-0.55s`
+* Range: `800 => 900`
+* Slow effect: `50% => 35%`
 
 ## Railgun
 
 ### Tech
 > *These changes are part of an effort to fix a particularly strong early game 1 base carrier timing push. Additionally, mag accelerator is overall too much of a no-brainer upgrade and a cost increase will make it slightly more difficult to acquire, making it more of a decision in midgame to get it quickly.*
 
-* Research cost: `450CU 135RU => 450CU 165RU`
+* Research cost: `450CU 135RU => 350CU 165RU`
 * Research time: `50s => 60s`
 * Build time: `14s => 16s`
 
@@ -1738,7 +1746,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Mag accelerator upgrade
 > *The upgrade was too impactful for early game performance. Railguns are still balanced around this upgrade being present, but the lack of this upgrade in the early game is now not as impactful as before.*
 
-* Damage bonus: `60 => 40`
+* Damage bonus: `60 => 25`
 
 ### Coalition railgun
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role.
@@ -1748,7 +1756,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Hitpoints: `670 => 750`
 * Armor: `3 => 0`
 * Experience value: `350 => 450`
-* Damage: `225 => 150`
+* Damage: `225 => 130`
 * Wind-up: `1.6s => 2s`
 * Reload: `3.5s => 1.5s`
 
@@ -1761,7 +1769,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Hitpoints: `680 => 750`
 * Armor: `4 => 0`
 * Experience value: `350 => 470`
-* Damage: `165 => 150`
+* Damage: `165 => 130`
 * Wind-up: `1.6s => 2s`
 * Cooldown: `2s => 1.2s`
 * Reload: `2.5s => 3.2s`
@@ -1943,7 +1951,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Population: `2 to 4`
 * Hitpoints: `1050 => 1500`
 * Armor: `15 => 12`
-* Damage: `2500 => 1700`
+* Damage: `2500 => 1500`
 * Damage against Small: `100% => 60%`
 * AOE: `180 => 220`
 * Wind-up: `50ms => 0ms`
@@ -1955,7 +1963,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ### General stats
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however.*
 
-* Hitpoints: `12500 => 10500`
+* Hitpoints: `12500 => 9200`
 * Armor: `40 => 30`
 
 ### Point defense weapons
@@ -2002,7 +2010,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ### General stats
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however. Khaaneph armor was abnormally low compared to other carrier which, combined with its slow speed, was a bit too punishable in some situations. The new mobility support makes this carrier considerably faster, adds sensors range and speed*
 
-* Hitpoints: `12500 => 10500`
+* Hitpoints: `12500 => 9500`
 * Armor: `20 => 25`
 * Sensor radius: `800 => 1000`
 * Max speed: `40 => 30`
@@ -2107,7 +2115,8 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Tech research time: `35s => 30s`
 * Hitpoints: `650 => 610`
-* Sensor radius: `1000 => 1100`
+* Production time: `11s => 12s`
+* Sensor radius: `1000 => 1150`
 * Self regen:
     * Activation time: `3.5s => 5.5s`
     * Amount healed per tick: `16 => 20`
@@ -2134,7 +2143,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 > *Strategies of quickly transitioning from heavy aggression to 3 base economy are extremely strong and need to be tuned down. This doesn't affect conventional fast expand strategies very much, early game units are getting tuned around this change. RU cost on production cruisers is there to slow down tech progression when expanding. Currently, there's almost no downside and slow down when expanding from 2 base to 3 base, this should make tech progression just slightly slower which could prove meaningful vs aggressive enemy strategies.*
 
 * Refinery tech cost: `700CU => 700CU 40RU`
-* Cost: `600CU => 640CU 60RU`
+* Cost: `600CU => 600CU 60RU`
 
 ### Sensors
 > *Production cruisers can be ambushed quite easily by enemy assault ships or AAV which can cause game ending damage because production cruisers don't have high enough movement speed to escape, and even if the PC itself doesn't die, the units coming out of them do. The extra vision range makes PCs able to preemptively move back. This also helps with vision for early game pushes.*
@@ -2155,19 +2164,21 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Damage against probes: `100% => 50%`
 
 ## Assault ship
-> *Slightly reducing tech cost to make this tech path more desirable in more situations. Range increase should help with unit usability issues as well as improve overall effectiveness, particularly against units it's intended to counter. The unit is extremely strong when it can get into position to fire, so, to reduce the impact of assault ship rushes and assault ship early game dominance, hitpoints of the assault ship are getting reduced. To mitigate midgame assault ship spam and all-in aggro strategies, their cost is getting increased. Additionally, now that assault ships have good range to do consistent damage to strike craft, their large area of effect is no longer required for them to be effective at countering them, therefore it is getting falloff.*
+> *Reducing tech cost to make this tech path more desirable in more situations. Range increase should help with unit usability issues as well as improve overall effectiveness, particularly against units it's intended to counter. The unit is extremely strong when it can get into position to fire, so, to reduce the impact of assault ship rushes and assault ship early game dominance, hitpoints of the assault ship are getting reduced. To mitigate midgame assault ship spam and all-in aggro strategies, their cost is getting increased. Additionally, now that assault ships have good range to do consistent damage to strike craft, their large area of effect is no longer required for them to be effective at countering them, therefore it is getting falloff.*
 
-* Tech cost: `600CU 100RU => 500CU 125RU`
+* Tech cost: `600CU 100RU => 450CU 135RU`
 * Tech research time: `60s => 65s`
 * Cost: `220CU 40RU => 280CU 30RU`
-* Hitpoints: `1400 => 1100`
+* Hitpoints: `1400 => 1050`
 * Armor: `6 => 5`
 * Max movement speed: `70 => 75`
+* Sensors: `1000 => 1100`
+* Contact radius: `1200 => 1250`
 * Damage: `24 => 38`
 * ROF: `5 => 4`
-* AOE: `80 => 110`
+* AOE: `80 => 120`
 * Falloff: `None => Linear`
-* Range: `700 => 750`
+* Range: `700 => 840`
 
 ## Missile ship
 
@@ -2217,6 +2228,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ## Railgun fabrication
 > *Having research take less time makes it easier to counter various rush strategies.*
 
+* Tech cost: `450CU 200RU => 350CU 250RU`
 * Tech research time: `50s => 45s`
 
 ## Assault railgun
@@ -2252,9 +2264,9 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ### General stats
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role. All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies. All railguns have seen a general accuracy increase to reduce RNG of missing in railgun fights.*
 
-* Cost: `280CU 90RU => 320CU 100RU`
+* Cost: `280CU 90RU => 350CU 100RU`
 * Population cost: `3 => 4`
-* Damage: `225 => 190`
+* Damage: `225 => 155`
 * Hitpoints: `670 => 750`
 * Max speed: `62 => 65`
 * Experience value: `450 => 550`
@@ -2285,10 +2297,11 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Max speed penalty: `66% => 50%`
 * Turn radius penalty: `66% => 50%`
 
-## Railgun armor level 3 upgrade cost
-> *It was previously too much of an obvious choice to always upgrade level 3 on railguns which massively increased their combat performance without much of an initial investment. It should be slightly less of an obvious choice and supporting railgun units with other units rather than just beefing up railguns themselves should be slightly more desirable.*
+## Railgun armor upgrades cost
+> *Slight cost tweaks to make railgun skimmer playstyles spend CU a bit faster.*
 
-* Cost : `200CU 300RU => 200CU 400RU`
+* Level 2 cost: `200CU 200RU => 250CU 200RU`
+* Level 3 cost: `200CU 300RU => 300CU 300RU`
 
 ## Interceptor
 
