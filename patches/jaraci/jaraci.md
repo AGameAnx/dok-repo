@@ -55,10 +55,10 @@ If above version is not up to date with the recent changes, its version will be 
     - [2020-03-10](#2020-03-10)
     - [2020-03-09](#2020-03-09)
     - [2020-03-07](#2020-03-07)
-    - [2020-03-06](#2020-03-06)
+    - [2020-03-06 (Last reflected in the changelog)](#2020-03-06-last-reflected-in-the-changelog)
     - [2020-03-02](#2020-03-02)
-    - [2020-02-29](#2020-02-29)
-    - [2020-02-28 (Last reflected in the changelog)](#2020-02-28-last-reflected-in-the-changelog)
+    - [## 2020-02-29](#h2-id%222020-02-29-49%222020-02-29h2)
+    - [2020-02-28](#2020-02-28)
     - [2020-02-27](#2020-02-27)
     - [2020-02-26](#2020-02-26)
     - [2020-02-25](#2020-02-25)
@@ -624,8 +624,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Area of effect: `210 => 240`
         * Barrage damage: `280 => 260`
 
-## 2020-03-06
-*Not yet reflected in the changelog*
+## 2020-03-06 (Last reflected in the changelog)
 * Coalition/Soban:
     * AAV production time: `16s => 18s`
 * Gaalsien/Khaaneph:
@@ -634,7 +633,6 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Sensors range: `1000 => 1150`
 
 ## 2020-03-02
-*Not yet reflected in the changelog*
 * Coalition/Soban:
     * Gunship area of effect: `200 => 180`
 * Coalition:
@@ -649,11 +647,9 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Rate of fire: `5 => 6`
         * Cooldown: `0.22s => 0.3s`
         * Reload: `0.5s => 0.6s`
-        * Burst: `7.0-7.6s => 7.8-8.4s`
+        * Burst: `0.7-0.76s => 0.78-0.84s`
 
 ## 2020-02-29
-*Not yet reflected in the changelog*
-
 ---
 
 * AAV TTK vs AS:
@@ -684,7 +680,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Movement speed: `75 => 72`
     * Interceptor damage packets: `1 => 2`
 
-## 2020-02-28 (Last reflected in the changelog)
+## 2020-02-28
 * General:
     * Salvager:
         * Hitpoints: `900 => 950`
@@ -1665,16 +1661,16 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Gun turret weapon
 > *The goal of this rework is to make baserunner turret slightly more effective against armored targets and to also fix some issues with its performance such as it firing behind dunes. This new iteration of the turret will allow for greater micro potential against it with strike craft and it'll be slightly better at countering highly upgraded tanks. With accuracy always being 100% the turret will always 1-shot skimmers which aren't upgraded with level 2 armor or aren't pulled away.*
 
-* Base damage: `30 => 65`
-* AOE: `0 => 70`
-* AOE falloff: `None => Linear`
+* Base damage: `30 => 55`
+* AOE: `0 => 105`
+* AOE falloff: `None => Quadratic`
 * Rate of fire: `14 => 4`
-* Number of bursts: `2 => 12`
+* Number of bursts: `2 => 16`
 * Cooldown: `0.1s => 0`
 * Burst: `0.8-1s => 0.334s`
 * Reload: `2s => 1.65s`
 * Range: `1200 => 1400`
-* Accuracy: `95%/85%/75% => 100%/95%/85%`
+* Accuracy: `95%/85%/75% => 100%/95%/60%`
 * Turret rotation speed: `180 => 150`
 * World height offset: `5 => 15`
 
@@ -1735,7 +1731,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 * Tech cost: `350CU 85RU => 400CU 115RU`
 * Tech research time: `50s => 55s`
 * Cost: `180CU 30RU => 260CU 25RU`
-* Production time: `14s => 16s`
+* Production time: `14s => 18s`
 * Population: `3 => 2`
 
 ### Weapon
@@ -1956,7 +1952,8 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Armor: `2 => 4`
 * Weapon:
     * Rocket count: `10 => 8`
-    * Damage: `120 => 100`
+    * Damage: `120 => 110`
+    * Damage packets: `1 => 2`
     * Rate of fire: `2 => 3`
     * Burst: `1000ms => 667ms`
     * Reload: `3000ms => 3332ms`
@@ -1974,7 +1971,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Armor: `10 => 9`
 * Damage: `60 => 42`
 * Damage packets: `4 => 1`
-* AOE: `150 => 200`
+* AOE: `150 => 180`
 * Falloff: `None => Quadratic`
 * Range: `700 => 1050`
 
@@ -2175,11 +2172,12 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ### Weapon
 > *It is generally easier to counter strike craft in the mod, the extra DPS was introduced in order to bring back the rock-paper-scissors mechanic, meaning strike craft will be capable of countering enemy railguns. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
 
-* Damage: `15 => 13`
-* ROF: `3 => 4`
-* Reload: `0.1s => 0.5s`
-* Cooldown: `0.398s => 0.22s`
-* Burst: `0.67-1s => 0.7-0.76s`
+* Damage: `15 => 11`
+* ROF: `3 => 6`
+* Reload: `0.1s => 0.6s`
+* Cooldown: `0.398s => 0.3s`
+* Burst: `0.67-1s => 0.78-0.84s`
+* Long range accuracy: `88.21% => 80%`
 
 ### Upgrades
 > *These changes are part of the effort of reducing supply blocking due to upgrades for gaalsien.*
@@ -2225,8 +2223,9 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Tech cost: `600CU 100RU => 450CU 80RU`
 * Tech research time: `60s => 65s`
 * Cost: `220CU 40RU => 280CU 30RU`
-* Hitpoints: `1400 => 930`
-* Max movement speed: `70 => 75`
+* Hitpoints: `1400 => 960`
+* Armor: `6 => 5`
+* Max movement speed: `70 => 72`
 * Sensors: `1000 => 1100`
 * Contact radius: `1200 => 1250`
 * Damage: `24 => 30`
@@ -2234,7 +2233,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Burst: `0.8-1s => 0.75s-0.85`
 * AOE: `80 => 140`
 * Falloff: `None => Linear`
-* Range: `700 => 940`
+* Range: `700 => 920`
 
 ## Missile ship
 
@@ -2293,7 +2292,8 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Cost: `200CU 35RU => 240CU 45RU`
 * Production time: `24s => 16s`
 * Hitpoints: `550 => 750`
-* Armor: `6 => 0`
+* Armor: `6 => 3`
+* Sensors range: `1000 => 1150`
 * Experience value: `610 => 350`
 * Armor upgrade hitpoint bonus:
     * Level 2: `100 => 50`
@@ -2380,6 +2380,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Reload: `2s => 4.5s`
 * Weapon base damage: `150 => 110`
+* Weapon damage packets: `1 => 2`
 * Weapon rate of fire: `3 => 4`
 * Area of effect: `60 => 70`
 * Damage against carriers: `100 => 60`
