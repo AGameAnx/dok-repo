@@ -54,8 +54,8 @@ If above version is not up to date with the recent changes, its version will be 
     - [2020-03-11](#2020-03-11)
     - [2020-03-10](#2020-03-10)
     - [2020-03-09](#2020-03-09)
-    - [2020-03-07](#2020-03-07)
-    - [2020-03-06 (Last reflected in the changelog)](#2020-03-06-last-reflected-in-the-changelog)
+    - [2020-03-07 (Last reflected in the changelog)](#2020-03-07-last-reflected-in-the-changelog)
+    - [2020-03-06](#2020-03-06)
     - [2020-03-02](#2020-03-02)
     - [2020-02-29](#2020-02-29)
     - [2020-02-28](#2020-02-28)
@@ -221,171 +221,6 @@ If above version is not up to date with the recent changes, its version will be 
         - [General stats](#general-stats-11)
         - [Weapon](#weapon-3)
         - [Anti-air](#anti-air-1)
-
-# Summary
-
-This is a shorter summary of all the changes in the mod. This should give a general idea of how various things got impacted in power compared to vanilla version of the game, omitting actual value changes.
-
-* Armor upgrades ![↓↓](nerf.png) (1 armor per upgrade in all cases)
-* Carriers:
-    * Movement speed ![↓↓](nerf.png)
-    * Power upgrade cost ![↓↓](nerf.png)
-    * PD effectiveness early ![↑↑](buff.png) late ![↓↓](nerf.png)
-    * PD/Missile system ranges ![↓↓](nerf.png) (except Khaaneph/Soban)
-    * Soban carrier: armor ![↓↓](nerf.png), DPS ![↑↑](buff.png)![↑↑](buff.png), Range ![↑↑](buff.png)
-    * Khaaneph PD and missile range ![↑↑](buff.png)
-* Nukes:
-    * Cooldowns ![↓↓](nerf.png)
-    * High ground damage ![↓↓](nerf.png) (removed)
-    * Range ![↓↓](nerf.png)![↓↓](nerf.png)
-    * Coalition cruise missile ![↓↓](nerf.png)
-    * Soban MWE: duration ![↑↑](buff.png), large target damage ![↑↑](buff.png), small target damage ![↓↓](nerf.png)
-    * Gaalsien missile barrage: AOE ![↑↑](buff.png), damage ![↓↓](nerf.png)
-    * Khaaneph: damage ![↑↑](buff.png), multiplier vs carriers ![↓↓](nerf.png) (removed), recharge ![↓↓](nerf.png)
-* Khaaneph mobility support:
-    * Bonus to carrier ![↑↑](buff.png) (double)
-    * Effect radius ![↓↓](nerf.png)
-    * Additional sensors range bonus ![↑↑](buff.png)![↑↑](buff.png) (added)
-* Salvager RU storage ![↓↓](nerf.png)
-* Coalition/Soban salvager armor ![↓↓](nerf.png)
-* Coalition/Soban production upgrades: requirements ![↑↑](buff.png) (not locked behind research), cost ![↓↓](nerf.png), research time ![↓↓](nerf.png)
-* Armed logistics module (ALM): reload ![↓↓](nerf.png)![↓↓](nerf.png), damage ![↑↑](buff.png), AOE ![↓↓](nerf.png), sensors ![↓↓](nerf.png), deploy range ![↓↓](nerf.png)
-* Support cruiser: cost ![~~](adjust.png) (RU cost added), repair rate ![↑↑](buff.png), AA ![↓↓](nerf.png), population cost ![↑↑](buff.png)
-* Production cruiser: cost ![↓↓](nerf.png) (RU cost added), refinery tech ![~~](adjust.png)
-* Strike craft:
-    * Armor upgrades ![↑↑](buff.png)
-    * Armor upgrade cost ![↓↓](nerf.png)
-    * Damage upgrade cost ![↑↑](buff.png)
-    * LAV: damage per shot ![↓↓](nerf.png)![↓↓](nerf.png), DPS ![↓↓](nerf.png), production time ![↓↓](nerf.png)![↓↓](nerf.png), hitpoints ![↑↑](buff.png)
-    * Sandskimmer: damage per shot ![↓↓](nerf.png), DPS ![↑↑](buff.png), hitpoints ![↓↓](nerf.png)
-* Baserunners: hitpoints ![↓↓](nerf.png)![↓↓](nerf.png) cost ![↓↓](nerf.png) (RU cost added), AA ![↑↑](buff.png)![↑↑](buff.png)
-* Gaalsien baserunner regeneration ability ![~~](adjust.png)
-* Gaalsien baserunner deploy sensor ability: range ![↑↑](buff.png), recharge ![↑↑](buff.png), hitpoints ![↓↓](nerf.png)
-* Soban baserunner jammer: Cost ![↑↑](buff.png)![↑↑](buff.png) (Free), slow effect ![↑↑](buff.png), vision radius ![↑↑](buff.png)
-* Coalition probe: cost ![↓↓](nerf.png), survivability ![~~](adjust.png), sensors ![↑↑](buff.png)
-* Coalition turret: sensors ![↓↓](nerf.png), weapon ![~~](adjust.png)
-* AAV:
-    * Tech research time ![↓↓](nerf.png)
-    * Cost ![↓↓](nerf.png)![~~](adjust.png)
-    * Production time ![↓↓](nerf.png)
-    * Hitpoints ![↓↓](nerf.png)
-    * Weapon ![↑↑](buff.png)
-* AS:
-    * Tech cost ![↑↑](buff.png)
-    * Tech research time ![↓↓](nerf.png)
-    * Cost ![↓↓](nerf.png)![~~](adjust.png)
-    * Production time ![↑↑](buff.png)
-    * Hitpoints ![↓↓](nerf.png)![↓↓](nerf.png)
-    * Range ![↑↑](buff.png)
-    * Damage ![↑↑](buff.png)
-    * AOE ![↑↑](buff.png)
-    * Falloff ![↓↓](nerf.png)
-    * Armor upgrade cost and research time ![↑↑](buff.png) 
-* Railguns:
-    * Cost ![↓↓](nerf.png)![↓↓](nerf.png)
-    * Damage per shot ![↓↓](nerf.png)
-    * Range ![↓↓](nerf.png)
-    * Hitpoints ![↑↑](buff.png)
-    * Armor ![↓↓](nerf.png)
-    * Target prioritization ![↑↑](buff.png)
-    * Reveal after firing ![↓↓](nerf.png)
-    * Gaalsien HR: range ![↓↓](nerf.png), movement speed ![↓↓](nerf.png)
-    * Gaalsien EMP ability: tech ![↑↑](buff.png), AOE ![↑↑](buff.png), wind-up ![↑↑](buff.png), duration ![↑↑](buff.png)
-    * Gaalsien ranged calibration ability: tech ![↑↑](buff.png) range bonus ![↑↑](buff.png)
-    * Coalition/Soban railgun accuracy ![↑↑](buff.png)
-    * Coalition/Soban railgun movement speed ![↑↑](buff.png)
-    * Soban railgun: DPS ![↓↓](nerf.png)
-* Assault railgun:
-    * Cost ![↓↓](nerf.png)
-    * Movement speed ![↓↓](nerf.png)
-    * Acceleration ![↓↓](nerf.png)
-    * Dart maneuver tech ![↑↑](buff.png)
-    * Hitpoints ![↑↑](buff.png)
-    * Armor upgrade hitpoints granted ![↓↓](nerf.png) (+50, +100)
-* Blast drone:
-    * Cost ![↑↑](buff.png)
-    * Hitpoints ![↓↓](nerf.png)
-    * Build time ![↓↓](nerf.png)![↓↓](nerf.png)
-    * Falloff ![↓↓](nerf.png)![↓↓](nerf.png)
-* Strike fighter:
-    * Tech cost ![~~](adjust.png)
-    * Cost ![~~](adjust.png)
-    * Production time ![↓↓](nerf.png)![↓↓](nerf.png)
-    * Hitpoints ![↓↓](nerf.png)
-    * Usability ![↑↑](buff.png)
-    * Missile payload ![↓↓](nerf.png)
-* Interceptor:
-    * Tech ![↓↓](nerf.png)
-    * Cost ![↑↑](buff.png)
-    * Production time ![↑↑](buff.png)
-    * Damage ![↓↓](nerf.png)
-    * ROF ![↑↑](buff.png)
-    * Afterburner ![↓↓](nerf.png)
-* Gunship:
-    * Cost ![↑↑](buff.png)![~~](adjust.png)
-    * Production time ![↑↑](buff.png)
-    * Damage ![↓↓](nerf.png)
-    * Damage packets ![↑↑](buff.png)![↑↑](buff.png)
-    * Range ![↑↑](buff.png)
-    * Hitpoints ![↑↑](buff.png)
-* Bombers:
-    * Tech ![↑↑](buff.png)
-    * Cost ![↑↑](buff.png)
-    * Damage ![↓↓](nerf.png)
-    * Coalition bomber hitpoints ![↑↑](buff.png)
-    * Gaalsien bomber maneuverability ![↓↓](nerf.png)
-    * AOE ![↑↑](buff.png)
-* Coalition artillery cruiser:
-    * Tech ![↑↑](buff.png)
-    * Hitpoints ![↓↓](nerf.png)
-    * Maneuverability ![↑↑](buff.png)
-    * Autofire ![↓↓](nerf.png)
-    * Barrages duration ![↑↑](buff.png), DPS ![↓↓](nerf.png)
-    * Precision barrage cost ![↑↑](buff.png)![↑↑](buff.png) (free)
-* Gaalsien siege cruiser:
-    * Tech ![↑↑](buff.png)![↑↑](buff.png)
-    * Cost ![↑↑](buff.png)![↑↑](buff.png)
-    * Hitpoints ![↓↓](nerf.png)![↓↓](nerf.png)
-    * Maneuverability ![↑↑](buff.png)![↑↑](buff.png)
-    * Autofire ![↓↓](nerf.png)
-    * Barrage: duration ![↑↑](buff.png), DPS ![↓↓](nerf.png)![↓↓](nerf.png), range ![↓↓](nerf.png)![↓↓](nerf.png)
-    * Range upgrade research time ![↑↑](buff.png)![↑↑](buff.png)
-    * EMP upgrade research time ![↑↑](buff.png)
-* Khaaneph siege cruiser:
-    * Main weapon: falloff ![↓↓](nerf.png)![↓↓](nerf.png), AOE ![↑↑](buff.png)
-    * Barrage: damage ![↑↑](buff.png), DPS ![↓↓](nerf.png), AOE ![~~](adjust.png)
-    * Hitpoint ![↓↓](nerf.png)
-    * Armor ![↓↓](nerf.png)
-* AA tanks:
-    * Cost ![~~](adjust.png)
-    * Reload ![↓↓](nerf.png)
-    * Mortar & barrage abilities: falloff ![↓↓](nerf.png)![↓↓](nerf.png), AOE ![↑↑](buff.png), damage ![↑↑](buff.png)
-    * Coalition missile battery speed ![↑↑](buff.png)
-* Assault cruiser:
-    * Tech ![↑↑](buff.png)
-    * Cost ![↑↑](buff.png)
-    * Population cost ![↑↑](buff.png)
-    * Production time ![↑↑](buff.png)
-    * Hitpoints ![↑↑](buff.png)
-    * Armor ![↓↓](nerf.png)
-    * Cooldowns ![↑↑](buff.png)
-    * Weapon: damage per shot ![↓↓](nerf.png), DPS ![↓↓](nerf.png), Wind-up ![↓↓](nerf.png)
-    * AA tech ![↑↑](buff.png)![↑↑](buff.png)
-    * Tactical missile barrage: cost ![↑↑](buff.png)![↑↑](buff.png) (free), falloff ![↓↓](nerf.png), range ![↓↓](nerf.png)
-* Battlecruisers:
-    * Tech ![↑↑](buff.png)
-    * Cost ![↑↑](buff.png)
-    * Hitpoints ![↓↓](nerf.png)![↓↓](nerf.png)
-    * Armor ![↓↓](nerf.png)
-    * Maneuverability ![↑↑](buff.png)
-    * Coalition battlecruiser: damage ![↓↓](nerf.png), ROF ![↑↑](buff.png), DPS ![↓↓](nerf.png), AOE ![↑↑](buff.png)
-* Honourguard cruiser:
-    * Tech research time ![↑↑](buff.png)
-    * Cost ![~~](adjust.png)
-    * Weapon: Falloff ![↓↓](nerf.png)![↓↓](nerf.png), AOE ![↑↑](buff.png), damage ![↑↑](buff.png), ROF ![↑↑](buff.png), wind-up ![↑↑](buff.png)
-    * Hitpoints ![↓↓](nerf.png)![↓↓](nerf.png)
-    * Movement speed ![↓↓](nerf.png)
-    * AA: tech ![↑↑](buff.png)![↑↑](buff.png), wind-up ![↑↑](buff.png)![↑↑](buff.png)
 
 # Recent changes
 
@@ -579,8 +414,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
             * Damage: `250 => 240`
             * Cooldown: `100s => 140s`
 
-## 2020-03-07
-*Not yet reflected in the changelog*
+## 2020-03-07 (Last reflected in the changelog)
 * General:
     * Demo pack:
         * Cost: `150CU => 100CU`
@@ -624,7 +458,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Area of effect: `210 => 240`
         * Barrage damage: `280 => 260`
 
-## 2020-03-06 (Last reflected in the changelog)
+## 2020-03-06
 * Coalition/Soban:
     * AAV production time: `16s => 18s`
 * Gaalsien/Khaaneph:
@@ -1384,8 +1218,8 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Demo pack
 > *The goal of these changes is to slow down expansion slightly, to move away some of the cost of expansion from the associated units (PC and SC). The damage is changed to allow demo packs to remain a relevant ability defensively (even if weak).*
 
-* Cost: `50CU => 150CU`
-* Damage: `175 => 275`
+* Cost: `50CU => 100CU`
+* Damage: `175 => 220`
 * Packets: `1 => 2`
 
 ### Baserunner
@@ -1430,7 +1264,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### General statistics
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however. Movement speed nerf is part of an effort to fix a particularly strong early game 1 base carrier timing push.*
 
-* Hitpoints: `15000 => 11000`
+* Hitpoints: `15000 => 9800`
 * Movement speed: `60 => 50`
 
 ### Cruise missile
@@ -1456,7 +1290,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### General statistics
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. The Soban carrier hitpoint nerf is larger than other carriers because it gets strong railgun weaponry from the beginning of the game and extra range for safer positioning. Movement speed and armor changes are part of an effort to fix a particularly strong early game 1 base carrier timing push*
 
-* Hitpoints: `15000 => 9000`
+* Hitpoints: `15000 => 9300`
 * Movement speed: `60 => 50`
 * Base armor: `25 => 15`
 
@@ -1690,16 +1524,15 @@ This is a shorter summary of all the changes in the mod. This should give a gene
     * Added a unit behavior modifier which makes units try to keep a distance of 400 units away from their target while inside ECM field (this is to prevent AI from endlessly circling the ECM with strike craft)
 
 ## LAV
-> *LAV have been revealed as a center point of effective coalition play. Oppressive early game strategies along with LAV providing a strong mid/late game defensive core for the coalition army is the main reasoning behind the reduction of overall LAV effectiveness. Due to the mod increasing the power of various strike craft counters, LAV have become extremely fragile in the lategame and their large discrepancy with sandskimmer hitpoints has been a big issue in balancing various area of effect units. New LAV hitpoints will make them sustain damage a bit better. Production time is increased substantially due to production upgrade being available earlier and it was needed to curb the power of LAV openers in general. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
+> *LAV have been revealed as a center point of effective coalition play. Oppressive early game strategies along with LAV providing a strong mid/late game defensive core for the coalition army is the main reasoning behind the reduction of overall LAV effectiveness. Production time is increased substantially due to production upgrade being available earlier and it was needed to curb the power of LAV openers in general. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
 
 * Tech:
     * Cost: `300CU => 350CU`
-    * Research time: `35s => 30s`
+    * Research time: `35s => 35s`
 * Build time: `8s => 12s`
-* Hitpoints: `500 => 570`
 * Armor: `0 => 1`
 * Weapon:
-    * Base damage: `15 => 11`
+    * Base damage: `15 => 12`
     * Burst: `0.8-1.2s => 0.95-1.05s`
     * Burst count: `4 => 2`
     * Rate of fire: `5 => 6`
@@ -1720,7 +1553,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Survivability
 > *The hitpoints are reduced on AAV to make soft-countering them with units such as assault ships or interceptors more of an option than it previously was. Previously, AAV would drive past a lot of things to target the squishier targets such as enemy salvagers. This is still possible, but the enemy can react to it easier.*
 
-* Hitpoints: `1400 => 1150`
+* Hitpoints: `1400 => 850`
 * Sensors: `1000 => 1100`
 
 ### Pricing
@@ -1728,14 +1561,14 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 
 * Tech cost: `350CU 85RU => 400CU 115RU`
 * Tech research time: `50s => 55s`
-* Cost: `180CU 30RU => 260CU 25RU`
-* Production time: `14s => 18s`
+* Cost: `180CU 30RU => 260CU 20RU`
+* Production time: `14s => 17s`
 * Population: `3 => 2`
 
 ### Weapon
 > *AAV weapon has notoriously one of the weakest late game weapons present in the game (for example, it dealt only 1 damage per shot to upgraded railguns). These changes will allow it to maintain some damage output against units with upgrades.*
 
-* Damage: `11 => 18`
+* Damage: `11 => 16`
 * Rate of fire: `20 => 12`
 * Burst: `0.5-0.6s => 0.5-0.55s`
 * Range: `800 => 900`
@@ -1765,7 +1598,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
 ### Range
 > *All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies.*
 
-* Range: `2100 => 2000`
+* Range: `2100 => 2060`
 
 ### Mag accelerator upgrade
 > *The upgrade was too impactful for early game performance. Railguns are still balanced around this upgrade being present, but the lack of this upgrade in the early game is now not as impactful as before.*
@@ -1837,6 +1670,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Overdrive armor bonus: `100% => 25%`
 * Tactical missile barrage reworked:
     * Cost: `250CU => Free`
+    * Damage: `200 => 180`
     * AOE: `120 => 140`
     * Falloff: `None => Quadratic`
     * Range: `1350 => 1000`
@@ -1846,7 +1680,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
     * Rate of fire: `2 => 3`
     * Number of bursts: `2 => 4`
     * Reload: `2s => 3.5s`
-    * AOE: `80 => 90`
+    * AOE: `80 => 75`
     * Wind-up: `50ms => 0.25s`
     * Burst: `1s => 0.7s`
 
@@ -1967,9 +1801,9 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Population: `2 => 3`
 * Hitpoints: `1050 to 1250`
 * Armor: `10 => 9`
-* Damage: `60 => 42`
+* Damage: `60 => 40`
 * Damage packets: `4 => 1`
-* AOE: `150 => 180`
+* AOE: `150 => 160`
 * Falloff: `None => Quadratic`
 * Range: `700 => 1050`
 
@@ -1998,7 +1832,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ### General stats
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however.*
 
-* Hitpoints: `12500 => 8800`
+* Hitpoints: `12500 => 9100`
 * Armor: `40 => 20`
 
 ### Point defense weapons
@@ -2145,14 +1979,14 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 > *A 1PC skimmer together with blast drones rush was nearly impossible to stop even with perfect response and good micro. Additionally, late game BD use was limited and expensive. The new BD iteration should hopefully provide extra motivation for getting them later in the game while fixing the issues with early game rushes.*
 
 * Cost: `150CU => 100CU`
-* Hitpoints: `500 => 400`
-* Construction time: `20s => 45s`
+* Hitpoints: `500 => 450`
+* Construction time: `20s => 50s`
 * Population: `0 => 1`
 * Falloff: `None => Quadratic`
 * AOE: `200 => 260`
 * Damage: `650 => 680`
 * Damage packets: `10 => 15`
-* Max speed: `160 => 180`
+* Max speed: `160 => 220`
 
 ## Sandskimmer
 
@@ -2160,7 +1994,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 > *Discrepancy between LAV and Skimmer hitpoints was very large and caused almost every area of effect weapon to be extremely difficult to balance. Skimmers also needed a slight decrease in power. Slightly increased sensors range should help skimmers avoid AAV and other early game threats easier.*
 
 * Tech research time: `35s => 30s`
-* Hitpoints: `650 => 630`
+* Hitpoints: `650 => 540`
 * Sensor radius: `1000 => 1150`
 * Self regen:
     * Activation time: `3.5s => 5.5s`
@@ -2170,7 +2004,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ### Weapon
 > *It is generally easier to counter strike craft in the mod, the extra DPS was introduced in order to bring back the rock-paper-scissors mechanic, meaning strike craft will be capable of countering enemy railguns. The base damage of the weapon is reduced to make armor more effective at protecting against it.*
 
-* Damage: `15 => 11`
+* Damage: `15 => 12`
 * ROF: `3 => 6`
 * Reload: `0.1s => 0.6s`
 * Cooldown: `0.398s => 0.3s`
@@ -2301,7 +2135,6 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
     * Acceleration time: `0.85 => 0.93`
     * Breaking time: `0.85 => 0.93`
 * Damage: `50 => 55`
-* Damage packets: `1 => 2`
 * Burst duration: `0.1-0.1s => 0.11-0.11s`
 * Number of Bursts: `3 => 4`
 * Wind-up: `1s => 0.6s`
@@ -2326,7 +2159,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Max speed: `62 => 65`
 * Turn radius: `150 => 50`
 * Experience value: `450 => 550`
-* Range: `2100 => 2000`
+* Range: `2100 => 2060`
 * Accuracy:
     * Short: `6% => 7%`
     * Medium: `5% => 6.5%`
@@ -2455,14 +2288,14 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Hitpoints: `3350 => 3050`
 * Population: `5 => 6`
-* Armor: `15 => 13`
+* Armor: `15 => 12`
 * Main weapon:
-    * Damage: `125 => 150`
-    * AOE: `150 => 210`
+    * Damage: `125 => 130`
+    * AOE: `150 => 240`
     * Number of bursts: `3 => 2`
     * Falloff: `Linear => Quadratic`
 * Barrage:
-    * Damage: `125 => 280`
+    * Damage: `125 => 260`
     * Damage packets: `1 => 2`
     * Falloff: `None => Quadratic`
     * AOE: `150 => 240`
