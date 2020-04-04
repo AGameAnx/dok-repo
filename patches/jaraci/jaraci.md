@@ -36,12 +36,17 @@ If above version is not up to date with the recent changes, its version will be 
 * Tournament: [jaraci.json](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci.json)
 * Development: [agame.json](https://github.com/S5SS/dok-repo/blob/master/patches/agame.json)
 
+## Recent changes
+
+Recent changes can be found in a sister document here: [RECENT CHANGES](jaraci_recent_changes.md)
+
 # Table of contents
 
 - [Introduction](#introduction)
     - [About](#about)
     - [How to play](#how-to-play)
     - [Mod releases](#mod-releases)
+    - [Recent changes](#recent-changes)
 - [Table of contents](#table-of-contents)
 - [General changes](#general-changes)
     - [Carriers](#carriers)
