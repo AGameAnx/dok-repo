@@ -650,6 +650,7 @@ This is a shorter summary of all the changes in the mod. This should give a gene
         * Burst: `0.7-0.76s => 0.78-0.84s`
 
 ## 2020-02-29
+
 ---
 
 * AAV TTK vs AS:
