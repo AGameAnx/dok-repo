@@ -57,7 +57,7 @@ If above version is not up to date with the recent changes, its version will be 
     - [2020-03-07](#2020-03-07)
     - [2020-03-06 (Last reflected in the changelog)](#2020-03-06-last-reflected-in-the-changelog)
     - [2020-03-02](#2020-03-02)
-    - [## 2020-02-29](#h2-id%222020-02-29-49%222020-02-29h2)
+    - [2020-02-29](#2020-02-29)
     - [2020-02-28](#2020-02-28)
     - [2020-02-27](#2020-02-27)
     - [2020-02-26](#2020-02-26)
