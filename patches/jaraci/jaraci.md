@@ -58,7 +58,8 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
     - [Unit upgrades](#unit-upgrades)
         - [Medium vehicle armor](#medium-vehicle-armor)
         - [Strike craft damage](#strike-craft-damage)
-        - [Strike craft armor](#strike-craft-armor)
+        - [Strike craft damage upgrades](#strike-craft-damage-upgrades)
+        - [Strike craft armor upgrades](#strike-craft-armor-upgrades)
     - [Quality of life](#quality-of-life)
         - [Fog of war reveal duration after firing](#fog-of-war-reveal-duration-after-firing)
         - [Railgun target prioritization](#railgun-target-prioritization)
@@ -132,8 +133,9 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 ## Carriers
 
 ### Power level upgrades
-> *Intention of this rebalance is to slightly shift away: `Strike-craft-centric playstyles when using the carrier as well as reduce the incentive to power up the carrier as early as possible (it should be risky doing this on low tech).*
+> *Intention of the cost rebalance is to slightly shift away: `Strike-craft-centric playstyles when using the carrier as well as reduce the incentive to power up the carrier as early as possible (it should be risky doing this on low tech). The extra hitpoints granted with carrier upgrades allows clever players to read which power upgrade the enemy is on and shifts carrier general strength away from early game and into lategame, allowing offensive capabilities to be transferred more easily into early game when needed for balance purposes, while reducing defensive ones.*
 
+* Hitpoints granted per upgrade: `0 => 200`
 * Cost:
     * Level 1: `140CU 80RU => 200CU 100RU`
     * Level 2: `280CU 160RU => 400CU 175RU`
@@ -147,7 +149,9 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 > *All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies. Carrier ranges are reduced slightly more than railgun ranges.*
 
 * Level 0:
-    * Turret max range: `500 => 650`
+    * Turret max range: `500 => 800`
+* Level 1:
+    * Turret max range: `500 => 900`
 * Level 2:
     * Turret max range: `1100 => 1050`
     * Missile max range bonus: `600 => 550`
@@ -171,9 +175,9 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
     * Short: `5% or 100% => 50%`
     * Medium: `4.5% or 90% => 45%`
     * Long: `4% or 80% => 35%`
-* Weapon damage: `8 or 10 => 18`
+* Weapon damage: `8 or 10 => 20`
 * Benefit from high ground: `Yes => No`
-* Penetrating weapon damage: `17 => 33`
+* Penetrating weapon damage: `17 => 50`
 * Rate of fire: `See per-carrier changes below`
 * Normalized all modifiers against different target sizes:
     * Small: `5 or 8 => 1`
@@ -205,7 +209,13 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 
 * CU Cost: `500 => 400`
 
-### Strike craft armor
+### Strike craft damage upgrades
+> *Due to reduced base damage and increased rate of fire these upgrades were too powerful when granting old bonuses.*
+
+* Damage increase per upgrade `2 => 1`
+* CU cost: `400 => 300`
+
+### Strike craft armor upgrades
 > *Main ways to counter strike craft always involve area of effect but that also means that getting strike craft armor upgrades wasn't very impactful at preventing strike craft: `getting quickly wiped by their area of effect counters.*
 
 * Added bonus: `30 extra hitpoints per upgrade`
@@ -268,7 +278,7 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 > *The goal of these changes is to slow down expansion slightly, to move away some of the cost of expansion from the associated units (PC and SC). The damage is changed to allow demo packs to remain a relevant ability defensively (even if weak).*
 
 * Cost: `50CU => 100CU`
-* Damage: `175 => 220`
+* Damage: `175 => 200`
 * Packets: `1 => 2`
 
 ### Baserunner
@@ -313,18 +323,21 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 **General statistics**
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however. Movement speed nerf is part of an effort to fix a particularly strong early game 1 base carrier timing push.*
 
-* Hitpoints: `15000 => 9800`
+* Hitpoints: `15000 => 9000`
 * Movement speed: `60 => 50`
+* Turn radius: `150 => 120`
+* Acceleration time: `2s => 1.5s`
+* Braking time: `2s => 1.5s`
 
 **Point defense weapons**
 > *Lower level PD performance increased (due to BD rush), but higher level rate of fire reduced (due to damage rework of carrier PD weapons)*
 
 * Rate of fire: `2 => 8`
 * Weapon Systems power shunt PD rate of fire bonuses:
-    * Level 1: `'set to 5' => 'increase by 25%'`
-    * Level 2: `'set to 10' => 'increase by 50%'`
-    * Level 3: `'set to 20' => 'increase by 75%'`
-    * Level 4: `'set to 40' => 'increase by 100%'`
+    * Level 1: `'set to 5' => 'increase by 20%'`
+    * Level 2: `'set to 10' => 'increase by 35%'`
+    * Level 3: `'set to 20' => 'increase by 55%'`
+    * Level 4: `'set to 40' => 'increase by 80%'`
     * Level 5: `'set to 40' => 'increase by 25%'`
 
 ### Cruise missile
@@ -339,8 +352,11 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 **General statistics**
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. The Soban carrier hitpoint nerf is larger than other carriers because it gets strong railgun weaponry from the beginning of the game and extra range for safer positioning. Movement speed and armor changes are part of an effort to fix a particularly strong early game 1 base carrier timing push*
 
-* Hitpoints: `15000 => 9300`
+* Hitpoints: `15000 => 8500`
 * Movement speed: `60 => 50`
+* Turn radius: `150 => 120`
+* Acceleration time: `2s => 1.5s`
+* Braking time: `2s => 1.5s`
 * Base armor: `25 => 15`
 
 **Armor system power shunt**
@@ -477,16 +493,17 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 **General stats**
 > *Aim of the cost change is to slow down tech progression when expanding. Currently, there's almost no downside and slow down when expanding from 2 to 3 base, this should make the tech progression just slightly slower which could prove meaningful vs aggressive enemy strategies. Added repair rate helps C/S sustain in lategame positional battles*
 
-* Cost: `600CU => 500CU 50RU`
+* Cost: `600CU => 450CU 50RU`
 * Production time: `45s => 35s`
 * Hitpoints: `4100 => 3200`
-* Armor: `3 => 7`
+* Armor: `3 => 6`
 * Turn radius: `100 => 75`
 * Population: `6 => 5`
 * Armor: `2 => 3`
-* Repair rate: `10 => 9`
+* Repair rate: `10 => 8`
 * G2G weapon (DPS: `4-2 => 37-29`):
-    * Damage: `3 => 17`
+    * Damage: `3 => 15`
+        * Rate of fire: `12 => 10`
     * Burst: `0.4-0.8s => 1.0-1.2s`
     * Cooldown: `2s => 0.5s`
     * Reload: `4s => 2s`
@@ -521,11 +538,10 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 * Hitpoints: `3350 => 2400`
 
 ### Probe
-> *Probe is slightly too fragile and it often feels random whether it dies or not when it flies into any kind of early game anti-air even if pulled back instantly. The probe is rebalanced along with production cruiser AA and baserunner AA to be more consistent in its interactions with them. Cost is changed due to probes being a bit too much of a no-brainer choice for covering flanks & scouting the enemy.*
+> *Probe is slightly too fragile and it often feels random whether it dies or not when it flies into any kind of early game anti-air even if pulled back instantly. The probe is rebalanced along with production cruiser AA and baserunner AA to be more consistent in its interactions with them.*
 
 * Hitpoints: `100 => 170`
-* Sensors radius: `1000 => 1200`
-* Cost: `100CU => 150CU`
+* Sensors radius: `1000 => 1250`
 
 ### AA turret
 > *Generally using this turret is quite undesirable and almost never worth the original cost investment.*
@@ -535,22 +551,25 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 ### Gun turret
 > *Turrets become slightly less self-sufficient. Hitpoints is a change to prevent blast drones from 1-shotting the turret.*
 
+* Cost: `250CU => 300CU`
+* Cooldown: `60s => 90s`
 * Vision range: `1200 => 1000`
-* Hitpoints: `600 => 700`
-* Armor: `5 => 2`
+* Hitpoints: `600 => 720`
+* Armor: `5 => 1`
 
 **Gun turret weapon**
 > *The goal of this rework is to make baserunner turret slightly more effective against armored targets and to also fix some issues with its performance such as it firing behind dunes. This new iteration of the turret will allow for greater micro potential against it with strike craft and it'll be slightly better at countering highly upgraded tanks. With accuracy always being 100% the turret will always 1-shot skimmers which aren't upgraded with level 2 armor or aren't pulled away.*
 
-* Base damage: `30 => 55`
-* AOE: `0 => 105`
+* Damage: `30 => 50`
+* Damage packets: `1 => 2`
+* AOE: `0 => 75`
 * AOE falloff: `None => Quadratic`
 * Rate of fire: `14 => 4`
-* Number of bursts: `2 => 16`
+* Number of bursts: `2 => 15`
 * Cooldown: `0.1s => 0`
 * Burst: `0.8-1s => 0.334s`
 * Reload: `2s => 1.65s`
-* Range: `1200 => 1400`
+* Range: `1200 => 1450`
 * Accuracy: `95%/85%/75% => 100%/95%/60%`
 * Turret rotation speed: `180 => 150`
 * World height offset: `5 => 15`
@@ -585,13 +604,17 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
     * Burst: `0.8-1.2s => 0.95-1.05s`
     * Burst count: `4 => 2`
     * Rate of fire: `5 => 6`
-    * Cooldown: `0.8s => 0.4s`
+    * Cooldown: `0.8s => 0.65s`
     * Accuracy:
         * Short: `94% => 90%`
         * Medium: `82% => 85%`
-        * Long: `56% => 62%`
+        * Long: `56% => 61%`
     * Turret rotation speed: `180 => 250`
     * Damage against probes: `100% => 50%`
+* Max speed: `110 => 120`
+* Speed boost ability:
+    * Speed bonus: `60% => 45%`
+    * Turn radius increase: `50% => 35%`
 * Upgrade research time:
     * Speed boost: `50s => 40s`
     * Damage level 1: `30s => 25s`
@@ -602,7 +625,7 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 **Survivability**
 > *The hitpoints are reduced on AAV to make soft-countering them with units such as assault ships or interceptors more of an option than it previously was. Previously, AAV would drive past a lot of things to target the squishier targets such as enemy salvagers. This is still possible, but the enemy can react to it easier.*
 
-* Hitpoints: `1400 => 850`
+* Hitpoints: `1400 => 940`
 * Sensors: `1000 => 1100`
 
 **Pricing**
@@ -610,25 +633,26 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 
 * Tech cost: `350CU 85RU => 400CU 115RU`
 * Tech research time: `50s => 55s`
-* Cost: `180CU 30RU => 260CU 20RU`
+* Cost: `180CU 30RU => 240CU 20RU`
 * Production time: `14s => 17s`
 * Population: `3 => 2`
 
 **Weapon**
 > *AAV weapon has notoriously one of the weakest late game weapons present in the game (for example, it dealt only 1 damage per shot to upgraded railguns). These changes will allow it to maintain some damage output against units with upgrades.*
 
-* Damage: `11 => 16`
+* Damage: `11 => 17`
 * Rate of fire: `20 => 12`
+* Area of effect: `0 => 45` (Linear falloff)
 * Burst: `0.5-0.6s => 0.5-0.55s`
-* Range: `800 => 900`
-* Slow effect: `50% => 42%`
+* Range: `800 => 1000`
+* Slow effect: `50% => 25%`
 
 ## Railgun
 
 **Tech**
 > *These changes are part of an effort to fix a particularly strong early game 1 base carrier timing push. Additionally, mag accelerator is overall too much of a no-brainer upgrade and a cost increase will make it slightly more difficult to acquire, making it more of a decision in midgame to get it quickly.*
 
-* Research cost: `450CU 135RU => 350CU 165RU`
+* Research cost: `450CU 135RU => 300CU 125RU`
 * Research time: `50s => 60s`
 * Build time: `14s => 16s`
 
@@ -664,8 +688,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Armor: `3 => 0`
 * Experience value: `350 => 450`
 * Damage: `225 => 130`
-* Wind-up: `1.6s => 2s`
-* Reload: `3.5s => 1.5s`
+* Reload: `3.5s => 1.6s`
 
 ### Soban railgun
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role.
@@ -677,9 +700,8 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Armor: `4 => 0`
 * Experience value: `350 => 470`
 * Damage: `165 => 130`
-* Wind-up: `1.6s => 2s`
-* Cooldown: `2s => 1.2s`
-* Reload: `2.5s => 3.2s`
+* Cooldown: `2s => 1.3s`
+* Reload: `2.5s => 3.3s`
 
 ## Missile battery
 
@@ -696,9 +718,9 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Benefits from high ground: `Yes => No`
 * Falloff: `None => Linear`
-* Damage packets: `20 to 35`
-* AOE: `180 to 220`
-* Damage: `450 to 660`
+* Damage packets: `20 => 30`
+* AOE: `180 => 220`
+* Damage: `450 => 660`
 
 ## Assault cruiser
 
@@ -753,11 +775,11 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Cost: `800CU 225RU => 550CU 250RU`
 * Hitpoints: `6500 => 3500`
 * Armor: `25 => 15`
-* Damage: `300 => 200`
+* Damage: `300 => 220`
 * Reload : `7s => 5s`
 * Falloff: `Linear => Quadratic`
 * AOE: `50 => 55`
-* Range: `1250 => 1400`
+* Range: `1250 => 1350`
 * Movement dynamics:
     * Max speed: `50 => 54`
     * Turn radius: `200 => 130`
@@ -881,18 +903,17 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 **General stats**
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however.*
 
-* Hitpoints: `12500 => 9100`
+* Hitpoints: `12500 => 8000`
 * Armor: `40 => 20`
 
 **Point defense weapons**
 > *Lower level PD performance increased, but higher level rate of fire reduced (due to damage rework of carrier PD weapons)*
 
-* Rate of fire: `10 => 9`
 * Weapon Systems power shunt PD rate of fire:
-    * Level 1: `'set to 17' => 'increase by 25%'`
-    * Level 2: `'set to 24' => 'increase by 45%'`
-    * Level 3: `'set to 31' => 'increase by 65%'`
-    * Level 4: `'set to 38' => 'increase by 90%'`
+    * Level 1: `'set to 17' => 'increase by 20%'`
+    * Level 2: `'set to 24' => 'increase by 35%'`
+    * Level 3: `'set to 31' => 'increase by 50%'`
+    * Level 4: `'set to 38' => 'increase by 70%'`
     * Level 5: `Bonus removed (30 => 10)`
 
 **Re-establish systems regeneration rate**
@@ -928,7 +949,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 **General stats**
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however. Khaaneph armor was abnormally low compared to other carrier which, combined with its slow speed, was a bit too punishable in some situations. The new mobility support makes this carrier considerably faster, adds sensors range and speed*
 
-* Hitpoints: `12500 => 9500`
+* Hitpoints: `12500 => 8700`
 * Armor: `20 => 25`
 * Sensor radius: `800 => 1000`
 * Max speed: `40 => 30`
@@ -954,14 +975,15 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 > *Khaaneph carrier does not have range systems on it, meaning the range of its basic weaponry can never be increased. This meant that weapons systems power shunt was mostly useless as it could never get range on the opponent. Increasing base range of carrier weapons can be dangerous for early game therefore Khaaneph carrier is receiving some nerfs to its basic weapons for low levels. High power level PDs receive the highest available rate of fire compared to other carriers, however, to make this system more desirable.*
 
 * PD ranges: `250/500/750 => 350/650/1100`
+* PD ROF: `8 => 10`
 * Missile systems range: `750 => 950`
 * Missile systems wind-up: `0.25s => 0.5s`
 * Power shunt now provides extra fire rate to missile systems
 * Rate of fire bonuses:
-    * Level 1: `'set to 17' => 'increase by 50%'`
-    * Level 2: `'set to 24' => 'increase by 100%'`
-    * Level 3: `'set to 31' => 'increase by 150%'`
-    * Level 4: `'set to 38' => 'increase by 200%'`
+    * Level 1: `'set to 17' => 'increase by 25%'`
+    * Level 2: `'set to 24' => 'increase by 40%'`
+    * Level 3: `'set to 31' => 'increase by 65%'`
+    * Level 4: `'set to 38' => 'increase by 100%'`
     * Level 5: `'set to 38' => 'increase by 50%'`
 * Fixed a bug where level 5 weapon system power shunt would decrease the range of one of the PD weapons
 
@@ -1011,7 +1033,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 ### Khaaneph baserunner
 
-* Hitpoints: `3350 => 2200`
+* Hitpoints: `3350 => 1700`
 
 **Speed**
 > *To improve early game scouting and improve baserunner interactions with early game units Khaaneph baserunner gets a slight speed advantage. This might also open up strong opportunities for artifact-based midgame strategies.*
@@ -1021,21 +1043,27 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 **Smoke ability**
 > *Baserunners could survive on their own a bit too much. On the other hand, the recharge of this ability was rather long and could be tuned down.*
 
-* Recharge: `180s => 70s`
+* Recharge: `180s => 40s`
 * Burst count: `4 => 3`
+
+**Passive regen ability**
+> *An unused ability in Khaaneph Baserunner has been repurposed to provide passive regeneration akin to other Gaalsien/Khaaneph units.*
+
+* No-damage activation delay: `10s`
+* Regeneration amount: `20`
+* Time between regeneration ticks: `1s`
 
 #### Blast drone
 > *A 1PC skimmer together with blast drones rush was nearly impossible to stop even with perfect response and good micro. Additionally, late game BD use was limited and expensive. The new BD iteration should hopefully provide extra motivation for getting them later in the game while fixing the issues with early game rushes.*
 
 * Cost: `150CU => 100CU`
-* Hitpoints: `500 => 450`
-* Construction time: `20s => 50s`
-* Population: `0 => 1`
+* Construction time: `20s => 60s`
+* Population: `0 => 2`
 * Falloff: `None => Quadratic`
 * AOE: `200 => 260`
-* Damage: `650 => 680`
+* Damage: `650 => 620`
 * Damage packets: `10 => 15`
-* Max speed: `160 => 220`
+* Max speed: `160 => 200`
 
 ## Sandskimmer
 
@@ -1083,8 +1111,8 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 **Sensors**
 > *Production cruisers can be ambushed quite easily by enemy assault ships or AAV which can cause game ending damage because production cruisers don't have high enough movement speed to escape, and even if the PC itself doesn't die, the units coming out of them do. The extra vision range makes PCs able to preemptively move back. This also helps with vision for early game pushes.*
 
-* Sensors radius: `1000 => 1200`
-* Contact radius: `1250 => 1350`
+* Sensors radius: `1000 => 1350`
+* Contact radius: `1250 => 1450`
 
 **AA weapon**
 > *DPS was rebalanced slightly to be lower on short and medium range but stronger on long range, an additional slight range increase is introduced in order to help mitigate early game air plays. This should ensure that air is a bit harder to control and will most likely be bleeding hitpoints when attempting to operate close to production cruisers.*
@@ -1092,7 +1120,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Rate of fire: `15 => 12`
 * Range: `1100 => 1250`
 * Accuracy:
-    * Short: `55% => 70%`
+    * Short: `55% => 60%`
     * Medium: `40% => 55%`
     * Long: `25% => 40%`
 * Hidden accuracy modifiers against probes removed
@@ -1104,7 +1132,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Tech cost: `600CU 100RU => 450CU 80RU`
 * Tech research time: `60s => 65s`
 * Cost: `220CU 40RU => 280CU 30RU`
-* Hitpoints: `1400 => 960`
+* Hitpoints: `1400 => 860`
 * Armor: `6 => 5`
 * Max movement speed: `70 => 72`
 * Sensors: `1000 => 1100`
@@ -1112,7 +1140,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Damage: `24 => 30`
 * ROF: `5 => 4`
 * Burst: `0.8-1s => 0.75s-0.85`
-* AOE: `80 => 140`
+* AOE: `80 => 120`
 * Falloff: `None => Linear`
 * Range: `700 => 920`
 
@@ -1148,8 +1176,8 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Weapon:
     * Recharge: `60s => 90s`
-    * Damage: `150 => 170`
-    * AOE: `80 => 160`
+    * Damage: `150 => 160`
+    * AOE: `80 => 150`
     * Falloff: `None => Linear`
     * Benefits from high ground: `Yes => No`
 * Recharge upgrade cost and research time: `300CU 85RU 30s => 220CU 60RU 15s`
@@ -1172,9 +1200,10 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Cost: `200CU 35RU => 240CU 45RU`
 * Production time: `24s => 16s`
-* Hitpoints: `550 => 750`
-* Armor: `6 => 3`
-* Sensors range: `1000 => 1150`
+* Hitpoints: `550 => 650`
+* Armor: `6 => 4`
+* Sensors range: `1000 => 1250`
+* Contact radius: `1250 => 1350`
 * Experience value: `610 => 350`
 * Armor upgrade hitpoint bonus:
     * Level 2: `100 => 50`
@@ -1183,14 +1212,14 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
     * Max speed: `100 => 90`
     * Acceleration time: `0.85 => 0.93`
     * Breaking time: `0.85 => 0.93`
-* Damage: `50 => 55`
+* Damage: `50 => 52`
 * Burst duration: `0.1-0.1s => 0.11-0.11s`
 * Number of Bursts: `3 => 4`
 * Wind-up: `1s => 0.6s`
 * Wind-down: `0.5s => 0.25s`
 * Reload: `0.6s => 2.6s`
-* Max range: `1000 => 1150`
-* Accuracy: `15%/13%/11% => 16%/15%/14%`
+* Max range: `1000 => 1200`
+* Accuracy: `15%/13%/11% => 26%/20%/18%`
 * Dart maneuver:
     * Tech time: `60s => 30s`
     * Tech cost: `100CU 100RU => 100CU 70RU`
@@ -1201,7 +1230,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 **General stats**
 > *Railguns have seen a large redesign in the mod, where their damage per shot has been reduced, cost increased, but hitpoints also increased. Railgun battles now resolve themselves slower, and high ground advantage plays a much larger role. All railgun and carrier ranges are reduced in the mod as part of the effort to reduce the prevalence of railgun-based strategies. All railguns have seen a general accuracy increase to reduce RNG of missing in railgun fights.*
 
-* Cost: `280CU 90RU => 350CU 100RU`
+* Cost: `280CU 90RU => 350CU 110RU`
 * Population cost: `3 => 4`
 * Damage: `225 => 155`
 * Hitpoints: `670 => 750`
@@ -1224,14 +1253,16 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Disables enemy weapons and abilities: `No => Yes`
 * Damage: `150 => 70`
 * Wind-up: `1s => 0.75s`
-* AOE: `100 => 135`
-* Range: `1200 => 1250`
-* Duration: `1.5s => 2.2s`
-
+* AOE: `100 => 145`
+* Range: `1200 => 1300`
+* Duration: `1.5s => 2.5s`
+        * Stun duration: `2.2s => 2.5s`
+        * Area of effect: `135 => 145`
+        * Range: `1250 => 1300`
 **Ranged calibration**
 > *This upgrade has seen very little use throughout the game's history. Effectiveness buffs to make it more desirable.*
 
-* Cost: `250CU 150RU => 150CU 150RU`
+* Cost: `250CU 150RU => 200CU 200RU`
 * Research time: `60s => 45s`
 * Range bonus: `300 => 370`
 * Max speed penalty: `66% => 50%`
@@ -1318,7 +1349,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Hitpoints: `2500 => 1600`
 * Barrage:
     * Recharge: `50s => 120s`
-    * Damage: `200 => 170`
+    * Damage: `200 => 150`
     * Rate of fire: `3 => 4`
     * Number of bursts: `6 => 3`
 * Movement attributes:
@@ -1337,14 +1368,16 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Hitpoints: `3350 => 3050`
 * Population: `5 => 6`
+* Production time: `60s => 55s`
 * Armor: `15 => 12`
 * Main weapon:
     * Damage: `125 => 130`
-    * AOE: `150 => 240`
-    * Number of bursts: `3 => 2`
+    * Reload: `2.5s => 4.5s`
+    * AOE: `150 => 270`
     * Falloff: `Linear => Quadratic`
 * Barrage:
-    * Damage: `125 => 260`
+    * Recharge: `50s => 140s`
+    * Damage: `125 => 240`
     * Damage packets: `1 => 2`
     * Falloff: `None => Quadratic`
     * AOE: `150 => 240`
@@ -1352,7 +1385,6 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
     * Damage against carriers: `100% => 80%`
     * Number of bursts: `3 => 4`
     * Cooldown: `0.8s => 2.5s`
-    * Recharge: `50s => 100s`
 
 ## Honourguard cruiser
 

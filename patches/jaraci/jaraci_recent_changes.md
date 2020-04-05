@@ -13,11 +13,11 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-03-28](#2020-03-28)
     - [2020-03-21](#2020-03-21)
     - [2020-03-15](#2020-03-15)
-    - [2020-03-14](#2020-03-14)
+    - [2020-03-14 (Last reflected in the changelog)](#2020-03-14-last-reflected-in-the-changelog)
     - [2020-03-11](#2020-03-11)
     - [2020-03-10](#2020-03-10)
     - [2020-03-09](#2020-03-09)
-    - [2020-03-07 (Last reflected in the changelog)](#2020-03-07-last-reflected-in-the-changelog)
+    - [2020-03-07](#2020-03-07)
     - [2020-03-06](#2020-03-06)
     - [2020-03-02](#2020-03-02)
     - [2020-02-29](#2020-02-29)
@@ -45,7 +45,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 # Changes
 
 ## 2020-04-05 (Tournament version)
-*Not yet reflected in the changelog*
 * General:
     * Demo pack damage: `220 => 200`
 * Coalition/Soban:
@@ -77,26 +76,23 @@ Full combined changelog can be found [HERE](jaraci.md)
     * Siege cruiser production time: `60s => 55s`
 
 ## 2020-03-28
-*Not yet reflected in the changelog*
 * Coalition/Soban:
+    * AAV:
+        * Range: `950 => 1000`
+        * Area of effect: `0 => 45` (Linear falloff)
+* Coalition:
     * Turret
         * Cost: `250CU => 300CU`
         * Damage: `52 => 45`
         * Number of bursts: `16 => 18`
         * Range: `1400 => 1450`
-    * AAV:
-        * Range: `950 => 1000`
-        * Area of effect: `0 => 45` (Linear falloff)
-* Coalition:
     * Battlecruiser range: `1400 => 1350`
 
 ## 2020-03-21
-*Not yet reflected in the changelog*
 * Coalition/Soban:
     * Support cruiser armor: `7 => 6`
 
 ## 2020-03-15
-*Not yet reflected in the changelog*
 * Coalition/Soban:
     * LAV:
         * Cooldown: `0.4s => 0.65s` (Pure DPS: `38.6 => 36`)
@@ -106,7 +102,6 @@ Full combined changelog can be found [HERE](jaraci.md)
         * Slow effect: `35% => 25%`
 
 ## 2020-03-14
-*Not yet reflected in the changelog*
 * General:
     * Carrier power upgrades:
         * Fixed an issue where level 2 and up upgrades weren't granting hitpoints
@@ -175,7 +170,6 @@ Full combined changelog can be found [HERE](jaraci.md)
     * Baserunner smoke cooldown: `55s => 40s`
 
 ## 2020-03-11
-*Not yet reflected in the changelog*
 * Coalition/Soban:
     * AAV:
         * Damage: `16 => 18`
@@ -189,7 +183,6 @@ Full combined changelog can be found [HERE](jaraci.md)
         * Hitpoints: `750 => 650`
 
 ## 2020-03-10
-*Not yet reflected in the changelog*
 * Coalition/Soban:
     * Carrier movement attributes:
         * Turn radius: `150 => 120`
@@ -226,7 +219,6 @@ Full combined changelog can be found [HERE](jaraci.md)
         * Contact radius: `1350 => 1450`
 
 ## 2020-03-09
-*Not yet reflected in the changelog*
 * General:
     * Carrier power level upgrades hitpoints granted per upgrade: `0 => 300`
 * Coalition/Soban:
@@ -266,7 +258,7 @@ Full combined changelog can be found [HERE](jaraci.md)
             * Damage: `250 => 240`
             * Cooldown: `100s => 140s`
 
-## 2020-03-07 (Last reflected in the changelog)
+## 2020-03-07
 * General:
     * Demo pack:
         * Cost: `150CU => 100CU`
