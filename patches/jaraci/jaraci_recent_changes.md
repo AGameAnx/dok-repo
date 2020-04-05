@@ -9,7 +9,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
-    - [2020-03-28 (Tournament version)](#2020-03-28-tournament-version)
+    - [2020-04-05 (Tournament version)](#2020-04-05-tournament-version)
+    - [2020-03-28](#2020-03-28)
     - [2020-03-21](#2020-03-21)
     - [2020-03-15](#2020-03-15)
     - [2020-03-14](#2020-03-14)
@@ -43,7 +44,39 @@ Full combined changelog can be found [HERE](jaraci.md)
 
 # Changes
 
-## 2020-03-28 (Tournament version)
+## 2020-04-05 (Tournament version)
+*Not yet reflected in the changelog*
+* General:
+    * Demo pack damage: `220 => 200`
+* Coalition/Soban:
+    * Turret:
+        * Recharge: `80s => 90s`
+        * Armor: `2 => 1`
+        * Hitpoints: `700 => 720`
+        * Damage: `45 => 50`
+        * Packets: `1 => 2`
+        * Number of bursts: `18 => 15`
+        * AOE: `105 => 75`
+    * Missile battery mortar damage packets: `35 => 30`
+    * Support cruiser repair rate: `9 => 8`
+* Coalition:
+    * Battlecruiser damage: `200 => 220`
+* Gaalsien/Khaaneph:
+    * Assault railgun:
+        * Armor: `5 => 4`
+        * Damage: `55 => 52`
+        * Range: `1250 => 1200`
+    * EMP shell:
+        * Stun duration: `2.2s => 2.5s`
+        * Area of effect: `135 => 145`
+        * Range: `1250 => 1300`
+    * Missile ship direct fire barrage:
+        * Damage: `170 => 160`
+        * Area of effect: `160 => 150`
+* Khaaneph:
+    * Siege cruiser production time: `60s => 55s`
+
+## 2020-03-28
 *Not yet reflected in the changelog*
 * Coalition/Soban:
     * Turret
