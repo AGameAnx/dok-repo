@@ -9,7 +9,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
-    - [2020-04-05 (Tournament version)](#2020-04-05-tournament-version)
+    - [2020-04-06 (Tournament version)](#2020-04-06-tournament-version)
+    - [2020-04-05](#2020-04-05)
     - [2020-03-28](#2020-03-28)
     - [2020-03-21](#2020-03-21)
     - [2020-03-15](#2020-03-15)
@@ -44,7 +45,67 @@ Full combined changelog can be found [HERE](jaraci.md)
 
 # Changes
 
-## 2020-04-05 (Tournament version)
+## 2020-04-06 (Tournament version)
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * Missile battery priority as target: `reduced`
+* Coalition:
+    * Battlecruiser:
+        * Cost: `550CU 250RU => 600CU 280RU`
+        * Production time: `55s => 50s`
+        * Hitpoints: `3500 => 3650`
+* Soban
+    * Battlecruiser:
+        * Cost: `520CU 280RU => 570CU 280RU`
+        * Production time: `60s => 50s`
+* Gaalsien/Khaaneph:
+    * Missile ship priority as target: `reduced`
+* Gaalsien:
+    * Carrier:
+        * Reestablish systems hitpoints per tick:
+            * Level 1: `45 => 35`
+            * Level 2: `60 => 50`
+            * Level 3: `75 => 65`
+            * Level 4: `90 => 80`
+* Khaaneph:
+    * Carrier:
+        * Hitpoints: `8700 => 9500`
+        * Armor: `25 => 15`
+        * Base speed: `30 => 45`
+        * Sensor radius: `1000 => 1200`
+        * Contact radius: `1000 => 1350`
+        * Cruise missile:
+            * Damage: `500 => 650`
+            * AOE: `150 => 120`
+            * Damage against carriers: `100% => 70%`
+            * Base missile warmup time: `6s => 10s`
+        * Mobility support:
+            * Speed bonuses:
+                * Level 1: `3 => 8%`
+                * Level 2: `6 => 11%`
+                * Level 3: `10 => 14%`
+                * Level 4: `15 => 17%`
+                * Level 5: `20 => 20%`
+            * Vision bonuses:
+                * Level 1: `70 => 100`
+                * Level 2: `110 => 150`
+                * Level 3: `150 => 200`
+                * Level 4: `200 => 250`
+                * Level 5: `250 => 300`
+        * Reestablish systems hitpoints per tick:
+            * Level 1: `45 => 35`
+            * Level 2: `60 => 50`
+            * Level 3: `75 => 65`
+            * Level 4: `90 => 80`
+    * Siege cruiser:
+        * Cost: `650CU 200RU => 620CU 250RU`
+        * Tech research time: `90s => 95s`
+        * Hitpoints: `3050 => 3200`
+        * Sensors radius: `1000 => 1150`
+        * Contact radius: `1250 => 1300`
+        * Production time: `55s => 45s`
+
+## 2020-04-05
 * General:
     * Demo pack damage: `220 => 200`
 * Coalition/Soban:

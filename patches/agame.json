@@ -1868,13 +1868,13 @@
 						"PowerLevels": {
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 45",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 35",
 								"StatusEffectsToApply": {
 									"Regen_2_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 45
+													"Amount": 35
 												}
 											}
 										}
@@ -1883,13 +1883,13 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 60",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 50",
 								"StatusEffectsToApply": {
 									"Regen_3_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 60
+													"Amount": 50
 												}
 											}
 										}
@@ -1898,13 +1898,13 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 75",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 65",
 								"StatusEffectsToApply": {
 									"Regen_4_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 75
+													"Amount": 65
 												}
 											}
 										}
@@ -1913,13 +1913,13 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 90",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 80",
 								"StatusEffectsToApply": {
 									"Regen_5_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 90
+													"Amount": 80
 												}
 											}
 										}
@@ -2071,13 +2071,14 @@
 		},
 		"K_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 8700,
-				"SensorRadius": 1000,
-				"Armour": 25,
+				"MaxHealth": 9500,
+				"SensorRadius": 1200,
+				"ContactRadius": 1350,
+				"Armour": 15,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 30 }
+				"Dynamics": { "MaxSpeed": 45 }
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -2098,6 +2099,9 @@
 				},
 				"Ability_Launch_K_Bomber": {
 					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_K_GrantShuntingBombToCarrier": {
+					"WarmupTimeSecs": 10
 				}
 			},
 			"WeaponAttributes": {
@@ -2177,10 +2181,13 @@
 					"RangeAttributesLong": { "Distance": 950 }
 				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
-					"BaseDamagePerRound": 500,
+					"BaseDamagePerRound": 650,
+					"AreaOfEffectRadius": 120,
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
-						"1": { "Remove": true }
+						"1": {
+							"Amount": 75
+						}
 					}
 				}
 			},
@@ -2194,7 +2201,7 @@
 						},*/
 						"PowerLevels": {
 							"1": {
-								"LocalizedShortDescriptionStringID": "Mobility: 600 radius, +3 speed. Sensors: +70",
+								"LocalizedShortDescriptionStringID": "Mobility: 600 radius, 8% speed. Sensors: +100",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_1_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2205,17 +2212,17 @@
 													"0": {
 														"Attribute": "Unit_SensorRadius",
 														"Mode": "Add",
-														"Value": 70
+														"Value": 100
 													},
 													"1": {
 														"Attribute": "Unit_ContactRadius",
 														"Mode": "Add",
-														"Value": 70
+														"Value": 100
 													},
 													"2": {
 														"Attribute": "UnitDynamics_MaxSpeed",
-														"Mode": "Add",
-														"Value": 3
+														"Mode": "AddPercent",
+														"Value": 8
 													}
 												}
 											}
@@ -2230,12 +2237,12 @@
 													"0": {
 														"Attribute": "Unit_SensorRadius",
 														"Mode": "Add",
-														"Value": 70
+														"Value": 100
 													},
 													"1": {
 														"Attribute": "Unit_ContactRadius",
 														"Mode": "Add",
-														"Value": 70
+														"Value": 100
 													}
 												}
 											}
@@ -2244,7 +2251,7 @@
 								}
 							},
 							"2": {
-								"LocalizedShortDescriptionStringID": "Mobility: 600 radius, +6 speed. Sensors: +110",
+								"LocalizedShortDescriptionStringID": "Mobility: 600 radius, 11% speed. Sensors: +150",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_2_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2255,17 +2262,17 @@
 													"0": {
 														"Attribute": "Unit_SensorRadius",
 														"Mode": "Add",
-														"Value": 110
+														"Value": 150
 													},
 													"1": {
 														"Attribute": "Unit_ContactRadius",
 														"Mode": "Add",
-														"Value": 110
+														"Value": 150
 													},
 													"2": {
 														"Attribute": "UnitDynamics_MaxSpeed",
-														"Mode": "Add",
-														"Value": 6
+														"Mode": "AddPercent",
+														"Value": 11
 													}
 												}
 											}
@@ -2280,12 +2287,12 @@
 													"0": {
 														"Attribute": "Unit_SensorRadius",
 														"Mode": "Add",
-														"Value": 110
+														"Value": 150
 													},
 													"1": {
 														"Attribute": "Unit_ContactRadius",
 														"Mode": "Add",
-														"Value": 110
+														"Value": 150
 													}
 												}
 											}
@@ -2294,7 +2301,7 @@
 								}
 							},
 							"3": {
-								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, +10 speed. Sensors: +150",
+								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, 14% speed. Sensors: +200",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_3_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2305,17 +2312,17 @@
 													"0": {
 														"Attribute": "Unit_SensorRadius",
 														"Mode": "Add",
-														"Value": 150
+														"Value": 200
 													},
 													"1": {
 														"Attribute": "Unit_ContactRadius",
 														"Mode": "Add",
-														"Value": 150
+														"Value": 200
 													},
 													"2": {
 														"Attribute": "UnitDynamics_MaxSpeed",
-														"Mode": "Add",
-														"Value": 10
+														"Mode": "AddPercent",
+														"Value": 14
 													}
 												}
 											}
@@ -2332,12 +2339,12 @@
 													"0": {
 														"Attribute": "Unit_SensorRadius",
 														"Mode": "Add",
-														"Value": 150
+														"Value": 200
 													},
 													"1": {
 														"Attribute": "Unit_ContactRadius",
 														"Mode": "Add",
-														"Value": 150
+														"Value": 200
 													}
 												}
 											}
@@ -2346,7 +2353,7 @@
 								}
 							},
 							"4": {
-								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, +15 speed. Sensors: +200",
+								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, 17% speed. Sensors: +250",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2357,17 +2364,17 @@
 													"0": {
 														"Attribute": "Unit_SensorRadius",
 														"Mode": "Add",
-														"Value": 200
+														"Value": 250
 													},
 													"1": {
 														"Attribute": "Unit_ContactRadius",
 														"Mode": "Add",
-														"Value": 200
+														"Value": 250
 													},
 													"2": {
 														"Attribute": "UnitDynamics_MaxSpeed",
-														"Mode": "Add",
-														"Value": 15
+														"Mode": "AddPercent",
+														"Value": 17
 													}
 												}
 											}
@@ -2384,12 +2391,12 @@
 													"0": {
 														"Attribute": "Unit_SensorRadius",
 														"Mode": "Add",
-														"Value": 200
+														"Value": 300
 													},
 													"1": {
 														"Attribute": "Unit_ContactRadius",
 														"Mode": "Add",
-														"Value": 200
+														"Value": 300
 													}
 												}
 											}
@@ -2398,7 +2405,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Mobility: 900 radius, +20 speed. Sensors: +250",
+								"LocalizedShortDescriptionStringID": "Mobility: 900 radius, 20% speed. Sensors: +300",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2409,16 +2416,16 @@
 													"0": {
 														"Attribute": "Unit_SensorRadius",
 														"Mode": "Add",
-														"Value": 250
+														"Value": 300
 													},
 													"1": {
 														"Attribute": "Unit_ContactRadius",
 														"Mode": "Add",
-														"Value": 250
+														"Value": 300
 													},
 													"2": {
 														"Attribute": "UnitDynamics_MaxSpeed",
-														"Mode": "Add",
+														"Mode": "AddPercent",
 														"Value": 20
 													}
 												}
@@ -2436,12 +2443,12 @@
 													"0": {
 														"Attribute": "Unit_SensorRadius",
 														"Mode": "Add",
-														"Value": 250
+														"Value": 300
 													},
 													"1": {
 														"Attribute": "Unit_ContactRadius",
 														"Mode": "Add",
-														"Value": 250
+														"Value": 300
 													}
 												}
 											}
@@ -2458,10 +2465,10 @@
 						},*/
 						"PowerLevels": {
 							"1": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 1 Reload: 6s Range: 2200"
+								"LocalizedShortDescriptionStringID": "Max Ammo: 1 Reload: 10s Range: 2200"
 							},
 							"2": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 2 Reload: 6s Range: 2300",
+								"LocalizedShortDescriptionStringID": "Max Ammo: 2 Reload: 10s Range: 2300",
 								"StatusEffectsToApply": {
 									"K_Missiles_2_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2478,7 +2485,7 @@
 								}
 							},
 							"3": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 3 Reload: 5s Range: 2400",
+								"LocalizedShortDescriptionStringID": "Max Ammo: 3 Reload: 9s Range: 2400",
 								"StatusEffectsToApply": {
 									"K_Missiles_3_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2496,7 +2503,7 @@
 								}
 							},
 							"4": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 4 Reload: 4s Range: 2550",
+								"LocalizedShortDescriptionStringID": "Max Ammo: 4 Reload: 8s Range: 2550",
 								"StatusEffectsToApply": {
 									"K_Missiles_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2514,7 +2521,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 5 Reload: 3s Range: 2700",
+								"LocalizedShortDescriptionStringID": "Max Ammo: 5 Reload: 7s Range: 2700",
 								"StatusEffectsToApply": {
 									"K_Missiles_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2536,13 +2543,13 @@
 						"PowerLevels": {
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 45",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 35",
 								"StatusEffectsToApply": {
 									"Regen_2_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 45
+													"Amount": 35
 												}
 											}
 										}
@@ -2551,13 +2558,13 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 60",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 50",
 								"StatusEffectsToApply": {
 									"Regen_3_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 60
+													"Amount": 50
 												}
 											}
 										}
@@ -2566,13 +2573,13 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 75",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 65",
 								"StatusEffectsToApply": {
 									"Regen_4_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 75
+													"Amount": 65
 												}
 											}
 										}
@@ -2581,13 +2588,13 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 90",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 80",
 								"StatusEffectsToApply": {
 									"Regen_5_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 90
+													"Amount": 80
 												}
 											}
 										}
@@ -2715,6 +2722,77 @@
 						}
 					}
 					
+				}
+			}
+		},
+		
+		"K_MovementBuff_StatusEffect_01": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 8
+							}
+						}
+					}
+				}
+			}
+		},
+		"K_MovementBuff_StatusEffect_02": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 11
+							}
+						}
+					}
+				}
+			}
+		},
+		"K_MovementBuff_StatusEffect_03": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 14
+							}
+						}
+					}
+				}
+			}
+		},
+		"K_MovementBuff_StatusEffect_04": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 17
+							}
+						}
+					}
+				}
+			}
+		},
+		"K_MovementBuff_StatusEffect_05": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 20
+							}
+						}
+					}
 				}
 			}
 		},
@@ -4549,7 +4627,8 @@
 			"UnitAttributes": {
 				"Resource1Cost": 300,
 				"Resource2Cost": 90,
-				"Armour": 3
+				"Armour": 3,
+				"PriorityAsTarget": -10
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -4575,7 +4654,8 @@
 				"Resource1Cost": 350,
 				"Resource2Cost": 90,
 				"ProductionTime": 24,
-				"Armour": 3
+				"Armour": 3,
+				"PriorityAsTarget": -10
 			},
 			"AbilityAttributes": {
 				"Ability_G_MissileCraft_CrowdControl_MP": {
@@ -4636,7 +4716,8 @@
 				"Resource1Cost": 350,
 				"Resource2Cost": 90,
 				"ProductionTime": 24,
-				"Armour": 3
+				"Armour": 3,
+				"PriorityAsTarget": -10
 			},
 			"AbilityAttributes": {
 				"Ability_G_MissileCraft_CrowdControl_MP": {
@@ -5208,11 +5289,11 @@
 		
 		"C_Battlecruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 550,
-				"Resource2Cost": 250,
-				"MaxHealth": 3500,
+				"Resource1Cost": 600,
+				"Resource2Cost": 280,
+				"MaxHealth": 3650,
 				"PopCapCost": 6,
-				"ProductionTime": 55,
+				"ProductionTime": 50,
 				"Armour": 15
 			},
 			"UnitMovementAttributes": {
@@ -5237,11 +5318,11 @@
 		},
 		"C_Sob_Battlecruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 520,
+				"Resource1Cost": 570,
 				"Resource2Cost": 280,
 				"MaxHealth": 2900,
 				"PopCapCost": 6,
-				"ProductionTime": 60,
+				"ProductionTime": 50,
 				"Armour": 13
 			},
 			"UnitMovementAttributes": {
@@ -5441,9 +5522,13 @@
 		},
 		"K_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 3050,
+				"Resource1Cost": 620,
+				"Resource2Cost": 250,
+				"MaxHealth": 3200,
 				"PopCapCost": 6,
-				"ProductionTime": 55,
+				"SensorRadius": 1150,
+				"ContactRadius": 1300,
+				"ProductionTime": 45,
 				"Armour": 12
 			},
 			"AbilityAttributes": {
@@ -5489,6 +5574,11 @@
 				"Resource1Cost": 450,
 				"Resource2Cost": 150,
 				"ResearchTime": 55
+			}
+		},
+		"Tier_3_K_ArtilleryCruiser": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 95
 			}
 		},
 		"Research_Buff_G_Artillery_Barrage": {
