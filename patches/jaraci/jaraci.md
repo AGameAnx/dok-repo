@@ -7,7 +7,9 @@
 
 **Jaraci balance mod** is a **Homeworld: Deserts of Kharak** modification created by AGameAnx with the help of some of the best competitive Deserts of Kharak players. The mod focuses on improving faction and unit interactions/balance throughout the game while retaining most of the intuitive Deserts of Kharak feel.
 
-Please join [Homeworld Universe discord](https://discord.gg/homeworld) for usage help, to discuss the mod, download replays and participate in mod tournaments!
+[**Please watch this quick changes summary video by Bozocow**](https://www.youtube.com/watch?v=frEmE-Iozyg)
+
+Join [Homeworld Universe discord](https://discord.gg/homeworld) for usage help, to discuss the mod, download replays and participate in mod tournaments!
 
 Casts of previous **Jaraci Cup** games can be found on [Bozocow's youtube channel](https://www.youtube.com/user/Bozothcow/videos).
 
@@ -250,6 +252,7 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 * Carrier: `increased (inconsistencies fixed)`
 * Gun turret: `decreased`
 * Missile turret: `decreased`
+* Missile ship/missile battery: `reduced`
 
 ### Air sorties
 > *The optimal way to use air is to always keep them in the air (as there is no fuel system in the game). The micro requirement for keeping air units in the air was to queue as many commands as possible to make the units fly back & forth and not return to carrier. This change should simply lessen the amount of tedious micromanagement required to use air optimally.*
@@ -325,9 +328,9 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 
 * Hitpoints: `15000 => 9000`
 * Movement speed: `60 => 50`
-* Turn radius: `150 => 120`
-* Acceleration time: `2s => 1.5s`
-* Braking time: `2s => 1.5s`
+* Turn radius: `150 => 65`
+* Acceleration time: `2s => 1.1s`
+* Braking time: `2s => 1.1s`
 
 **Point defense weapons**
 > *Lower level PD performance increased (due to BD rush), but higher level rate of fire reduced (due to damage rework of carrier PD weapons)*
@@ -354,9 +357,9 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 
 * Hitpoints: `15000 => 8500`
 * Movement speed: `60 => 50`
-* Turn radius: `150 => 120`
-* Acceleration time: `2s => 1.5s`
-* Braking time: `2s => 1.5s`
+* Turn radius: `150 => 65`
+* Acceleration time: `2s => 1.1s`
+* Braking time: `2s => 1.1s`
 * Base armor: `25 => 15`
 
 **Armor system power shunt**
@@ -378,7 +381,7 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 * Wind-up: `1.6s => 1s`
 * Range:
     * Medium: `600 => 550`
-    * Long: `900 => 850`
+    * Long: `900 => 1000`
 * Accuracy:
     * Medium: `5.3% => 5%`
     * Long: `5% => 4.5%`
@@ -412,11 +415,11 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 > *Soban carrier receives slightly more range than other carriers across all power levels*
 
 * Ranges:
-    * Level 1: `800/550/300 => 1100/750/450`
-    * Level 2: `1100/750/400 => 1350/1100/700`
-    * Level 3: `1400/950/500 => 1550/1300/900`
-    * Level 4: `1700/1150/600 => 1750/1400/1100`
-    * Level 5: `2000/1350/700 => 1950/1700/1300`
+    * Level 1: `800/550/300 => 1200/750/450`
+    * Level 2: `1100/750/400 => 1450/1100/700`
+    * Level 3: `1400/950/500 => 1650/1300/900`
+    * Level 4: `1700/1150/600 => 1900/1400/1100`
+    * Level 5: `2000/1350/700 => 2150/1700/1300`
 * Fixed an issue where front right turret range wasn't updated correctly at Level 4 power level
 
 ### ALM
@@ -772,8 +775,9 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ### Coalition
 > *Damage is reduced in favor of higher rate of fire. This helps the unit deal with medium vehicles easier while also curbing its insane damage potential against carriers*
 
-* Cost: `800CU 225RU => 550CU 250RU`
-* Hitpoints: `6500 => 3500`
+* Cost: `800CU 225RU => 600CU 280RU`
+* Production time: `60s => 50s`
+* Hitpoints: `6500 => 3650`
 * Armor: `25 => 15`
 * Damage: `300 => 220`
 * Reload : `7s => 5s`
@@ -790,7 +794,8 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 > *Long range high damage unit. Very dangerous to have such a unit be also extremely survivable. Improving close range accuracy, this unit had higher accuracy on Distant range than Short and Medium.*
 
 * Tech research time: `110s => 95s`
-* Cost: `780CU 220RU => 520CU 280RU`
+* Cost: `780CU 220RU => 570CU 280RU`
+* Production time: `60s => 50s`
 * Hitpoints: `6500 => 2900`
 * Armor `25 => 13`
 * Population: `5 => 6`
@@ -917,12 +922,12 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
     * Level 5: `Bonus removed (30 => 10)`
 
 **Re-establish systems regeneration rate**
-> *With railguns costing more and carrier hitpoints reduced, time to heal the carrier to full was too short*
+> *With railguns costing more and carrier hitpoints reduced, time to heal the carrier to full was too short.*
 
-* Level 2: `50 => 45`
-* Level 3: `70 => 60`
-* Level 4: `90 => 75`
-* Level 5: `110 => 90`
+* Level 2: `50 => 35`
+* Level 3: `70 => 50`
+* Level 4: `90 => 65`
+* Level 5: `110 => 80`
 
 **Speed**
 > *Slight reduction in power of this power system. Chasing down a lategame gaalsien carrier was previously extremely difficult.*
@@ -949,23 +954,26 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 **General stats**
 > *Carriers should become a bit trickier to use in combat and carrier aggression should become a bit more punishable. Worth noting that these changes coincide with railgun nerfs, however. Khaaneph armor was abnormally low compared to other carrier which, combined with its slow speed, was a bit too punishable in some situations. The new mobility support makes this carrier considerably faster, adds sensors range and speed*
 
-* Hitpoints: `12500 => 8700`
-* Armor: `20 => 25`
-* Sensor radius: `800 => 1000`
-* Max speed: `40 => 30`
+* Hitpoints: `12500 => 9500`
+* Armor: `20 => 15`
+* Sensor radius: `800 => 1200`
+* Contact radius: `1000 => 1350`
+* Max speed: `40 => 45`
 
 **Cruise missiles systems**
 > *Khaaneph cruise missiles have proven themselves to be extremely powerful overall and especially against enemy carriers.*
 
-* Damage: `400 => 500`
-* Damage against carriers: `150% => 100%`
+* Damage: `400 => 650`
+* AOE: `150 => 120`
+* Damage against carriers: `150% => 70%`
 * Affected by high ground: `Yes => No`
+* Base missile warmup time: `6s => 10s`
 * Range bonuses:
     * Level 2: `0 => 100`
     * Level 3: `0 => 200`
     * Level 4: `0 => 350`
     * Level 5: `36% => 500`
-* Reload bonuses:
+* Warmup time bonuses:
     * Level 2: `1 => 0`
     * Level 3: `2 => 1`
     * Level 4: `3 => 2`
@@ -990,9 +998,14 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 **Mobility support system**
 > *The diameter of level 5 speed boost was larger than the range of a railgun. In team games this would allow for somewhat oppressive speed boost blobbing strategies which should now be slightly more difficult to execute correctly. Despite this, this system was generally extremely underutilized and is therefore getting secondary functionality which makes this system desirable over other systems in both a lategame head to head carrier brawl and early game skirmishing.*
 
-* Renamed to: `Mobility and Sensors Support`
 * Now grants sensors range to all medium and large units (meaning entire fleet except strike craft and workers)
 * Now has double effectiveness for the carrier itself
+* Speed bonuses:
+    * Level 1: `3 => 8%`
+    * Level 2: `6 => 11%`
+    * Level 3: `10 => 14%`
+    * Level 4: `15 => 17%`
+    * Level 5: `20 => 20%`
 * AOE radius:
     * Level 1: `420 => 600`
     * Level 2: `420 => 600`
@@ -1000,11 +1013,19 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
     * Level 4: `800 => 750`
     * Level 5: `1200 => 1000`
 * Added sensors range bonus:
-    * Level 1: `+70 sensors range`
-    * Level 2: `+110 sensors range`
-    * Level 3: `+150 sensors range`
-    * Level 4: `+200 sensors range`
-    * Level 5: `+250 sensors range`
+    * Level 1: `+100 sensors range`
+    * Level 2: `+150 sensors range`
+    * Level 3: `+200 sensors range`
+    * Level 4: `+250 sensors range`
+    * Level 5: `+300 sensors range`
+
+**Re-establish systems regeneration rate**
+> *With railguns costing more and carrier hitpoints reduced, time to heal the carrier to full was too short.*
+
+* Level 2: `50 => 35`
+* Level 3: `70 => 50`
+* Level 4: `90 => 65`
+* Level 5: `110 => 80`
 
 ## Baserunner
 
@@ -1366,9 +1387,13 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 ### Khaaneph siege cruiser
 > *Khaaneph siege cruiser is very strong and becomes problematic when spammed in team games, besides being very strong on maps with certain topology which allows siege cruisers to constrict players completely in their base. These changes should increase the critical mass required for siege cruisers to be able to counter its counters such as railguns, and reduce the potential of providing free damage on the enemy while keeping the barrage feeling powerful. Getting hit by KSC main weapon should be slightly less punishing overall, and micro against it is easier. However, the damage is applied over a considerably larger area, making it more consistent for the situations where units are trying to dodge it. Additionally, this cruiser was impossible to weed out from behind dunes. Armor reduction means that this cruiser can get swarmed even by lower damage weapon using units.*
 
-* Hitpoints: `3350 => 3050`
+* Tech research time: `90s => 95s`
+* Cost: `650CU 200RU => 620CU 250RU`
+* Hitpoints: `3350 => 3200`
 * Population: `5 => 6`
-* Production time: `60s => 55s`
+* Production time: `60s => 45s`
+* Sensors radius: `1000 => 1150`
+* Contact radius: `1250 => 1300`
 * Armor: `15 => 12`
 * Main weapon:
     * Damage: `125 => 130`

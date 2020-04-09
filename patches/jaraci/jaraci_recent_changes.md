@@ -9,7 +9,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
-    - [2020-04-06 (Tournament version)](#2020-04-06-tournament-version)
+    - [2020-04-09 (Tournament version)](#2020-04-09-tournament-version)
+    - [2020-04-06](#2020-04-06)
     - [2020-04-05](#2020-04-05)
     - [2020-03-28](#2020-03-28)
     - [2020-03-21](#2020-03-21)
@@ -45,8 +46,26 @@ Full combined changelog can be found [HERE](jaraci.md)
 
 # Changes
 
-## 2020-04-06 (Tournament version)
-*Not yet reflected in the main changelog.*
+## 2020-04-09 (Tournament version)
+* Coalition:
+    * Carrier:
+        * Turn radius: `120 => 65`
+        * Acceleration time: `1.5s => 1.1s`
+        * Braking time: `1.5s => 1.1s`
+* Soban:
+    * Carrier:
+        * Turn radius: `120 => 65`
+        * Acceleration time: `1.5s => 1.1s`
+        * Braking time: `1.5s => 1.1s`
+        * Ranges:
+            * Level 0: `850 => 1000`
+            * Level 1: `1100 => 1250`
+            * Level 2: `1350 => 1450`
+            * Level 3: `1550 => 1650`
+            * Level 4: `1750 => 1900`
+            * Level 5: `1950 => 2150`
+
+## 2020-04-06
 * Coalition/Soban:
     * Missile battery priority as target: `reduced`
 * Coalition:
