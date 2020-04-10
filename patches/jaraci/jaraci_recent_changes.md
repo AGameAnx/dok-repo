@@ -9,7 +9,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
-    - [2020-04-09 (Tournament version)](#2020-04-09-tournament-version)
+    - [2020-04-10 (Tournament version)](#2020-04-10-tournament-version)
+    - [2020-04-09](#2020-04-09)
     - [2020-04-06](#2020-04-06)
     - [2020-04-05](#2020-04-05)
     - [2020-03-28](#2020-03-28)
@@ -46,7 +47,11 @@ Full combined changelog can be found [HERE](jaraci.md)
 
 # Changes
 
-## 2020-04-09 (Tournament version)
+## 2020-04-10 (Tournament version)
+* Coalition/Soban:
+    * Support cruiser weapon ROF: `10 => 8`
+
+## 2020-04-09
 * Coalition:
     * Carrier:
         * Turn radius: `120 => 65`

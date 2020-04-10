@@ -504,9 +504,9 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 * Population: `6 => 5`
 * Armor: `2 => 3`
 * Repair rate: `10 => 8`
-* G2G weapon (DPS: `4-2 => 37-29`):
+* G2G weapon:
     * Damage: `3 => 15`
-        * Rate of fire: `12 => 10`
+        * Rate of fire: `12 => 8`
     * Burst: `0.4-0.8s => 1.0-1.2s`
     * Cooldown: `2s => 0.5s`
     * Reload: `4s => 2s`
