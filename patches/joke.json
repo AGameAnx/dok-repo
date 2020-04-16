@@ -3243,12 +3243,27 @@
           "Turret": { "RotationSpeed": 150 },
           "OutputDPS": true
         }
+        //"Modifiers": { // FIXME: wtf whyyyy
+        //  "0": {
+        //    "Remove": true
+        //  }
+        //}
       }
     },
     "N_Missle_Turret_MP": {
       "UnitAttributes": {
         "Resource1Cost": 200,
         "PriorityAsTarget": -50
+      },
+      "WeaponAttributes": {
+        "N_Missle_Turret_Weapon_G2A_MP": {
+          "ExcludeFromHeightAdvantage": true,
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air"
+            }
+          }
+        }
       }
     },
     "N_ECMField_MP": {
@@ -3259,6 +3274,17 @@
         "MaxHealth": 1100,
         "ContactRadius": 400,
         "SensorRadius": 270
+      },
+      "UnitMovementAttributes": { // attempted to make ECM move, but it has no move attribute
+        "Dynamics": {
+          "PermanentlyImmobile": false,
+          "MaxSpeed": 40
+        }
+      },
+      "AbilityAttributes": { // and we can't add attributes so uhhh, rip
+        "Ability_Common_MoveAbility": {
+          "StartsRemovedInGameMode": 0
+        }
       }
     },
     "ECMField_StatusEffect": {
@@ -3285,8 +3311,13 @@
     },
     "C_Probe_MP": {
       "UnitAttributes": {
-        "MaxHealth": 170,
-        "SensorRadius": 1250
+        "MaxHealth": 50000,
+        "SensorRadius": 2500
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 20
+        }
       }
     },
     "G_Scanner_MP": {
@@ -3327,6 +3358,20 @@
           "Resource1Cost": 100
         }
       },
+      "WeaponAttributes": {
+        "C_Harvester_Weapon_DemoCharge_MP": {
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 500
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
+        }
+      },
       "StorageAttributes": {
         "C_Harvester_StorageAttributesAsset_MP": {
           "InventoryLoadout": {
@@ -3347,6 +3392,20 @@
       "AbilityAttributes": {
         "Ability_Common_DemoChargeLay_MP": {
           "Resource1Cost": 100
+        }
+      },
+      "WeaponAttributes": {
+        "C_Harvester_Weapon_DemoCharge_MP": {
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 500
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
         }
       },
       "StorageAttributes": {
@@ -3371,6 +3430,20 @@
           "Resource1Cost": 100
         }
       },
+      "WeaponAttributes": {
+        "C_Harvester_Weapon_DemoCharge_MP": {
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 500
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
+        }
+      },
       "StorageAttributes": {
         "G_Harvester_StorageAttributesAsset_MP": {
           "InventoryLoadout": {
@@ -3386,9 +3459,13 @@
       "WeaponAttributes": {
         "N_DemoCharge_Weapon_G2G_MP": {
           "ExcludeFromHeightAdvantage": true,
-          "BaseDamagePerRound": 200,
-          "DamagePacketsPerShot": 2
+          "AreaOfEffectFalloffType": "Quadratic",
+          "AreaOfEffectRadius": 750,
+          "BaseDamagePerRound": 1000
         }
+      },
+      "UnitAttributes": {
+        "Class": "Ground, Strikecraft, Small"
       }
     },
 
@@ -3466,7 +3543,8 @@
           "CooldownTimeSecs": 90
         },
         "Ability_C_LaunchProbe_MP": {
-          "Resource1Cost": 100
+          "Resource1Cost": 500,
+          "Resource2Cost": 500
         }
       }
     },
@@ -4007,12 +4085,25 @@
       },
       "WeaponAttributes": {
         "C_HAC_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 17,
+          "BaseDamagePerRound": 120,
           "BurstPeriodMaxTimeMS": 550,
           "RateOfFire": 13,
           "AreaOfEffectRadius": 45,
           "RangeAttributesLong": { "Distance": 1000 },
-          "OutputDPS": true
+          "OutputDPS": true,
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Ground",
+              "ClassOperator": "Or",
+              "Modifier": "DamagePercent",
+              "Amount": 5
+            }
+          }
+        },
+        "C_HAC_Weapon_Ballistic_Smoke_MP": {
+          "RangeAttributesLong": {
+            "Distance": 3000
+          }
         }
       }
     },
@@ -4020,9 +4111,13 @@
       "StatusEffectAttributes": {
         "BuffsToApplyToTarget": {
           "0": {
-            "BuffSet": {
-              "0": { "Value": -25 }
-            }
+            "ClassOperator": "Or",
+            "UnitClass": "Strikecraft, Small, Harvester, Medium, Large, Carrier, XLarge, Air, Ground"
+            //"BuffSet": { // I don't want to do this anymore but I'm preserving the syntax
+            //  "0": {
+            //    "Value": -50
+            //  }
+            //}
           }
         }
       }
@@ -4169,6 +4264,19 @@
         "PriorityAsTarget": 10,
         "AggroRange": 1050
       },
+      //"ExperienceAttributes": {
+      //  "Levels": {
+      //    "1": {
+      //      "BuffTooltipLocID": "omg look at me",
+      //      "RequiredExperience": 10,
+      //      "Buff": {
+      //        "0": {
+      //          "Value": 100000
+      //        }
+      //      }
+      //    }
+      //  }
+      //},
       "AbilityAttributes": {
         "Ability_G_SandSkimmersRegen": {
           "ApplyStatusEffect": {
@@ -4543,7 +4651,7 @@
           "ReloadTimeMS": 100,
           "CooldownTimeMS": 0,
           "AreaOfEffectFalloffType": "Quadratic",
-          "AreaOfEffectRadius": 250,
+          "AreaOfEffectRadius": 150,
           "RangeAttributesShort": {
             "Accuracy": 100,
             "Distance": 1200
@@ -4803,7 +4911,7 @@
           },
           "RangeAttributesLong": {
             "Accuracy": 6,
-            "Distance": 1000
+            "Distance": 1600
           },
           "TargetPrioritizationAttributes": {
             "WeaponEffectivenessWeight": 500,
@@ -4850,14 +4958,16 @@
         "G_StarHull_Weapon_G2G_MP": {
           "BaseDamagePerRound": 155,
           "RangeAttributesShort": {
-            "Accuracy": 7
+            "Accuracy": 7,
+            "Distance": 600
           },
           "RangeAttributesMedium": {
-            "Accuracy": 6.5
+            "Accuracy": 6.5,
+            "Distance": 750
           },
           "RangeAttributesLong": {
             "Accuracy": 6,
-            "Distance": 2060
+            "Distance": 1600
           },
           "TargetPrioritizationAttributes": {
             "WeaponEffectivenessWeight": 500,
@@ -4893,7 +5003,7 @@
       "StatusEffectAttributes": {
         "BuffsToApplyToTarget": {
           "0": {
-            "BuffSet": {
+            "BuffSet": { // This keeps me awake at night.  "6" and above don't exist but why don't these work???
               "0": { "Value": 5000 },
               "1": { "Value": 5000 },
               "2": { "Value": 5000 },
@@ -4942,23 +5052,23 @@
       },
       "WeaponAttributes": {
         "G_StarHull_Upgrade01_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 15,
+          "BaseDamagePerRound": 10,
           "BurstPeriodMinTimeMS": 110,
           "BurstPeriodMaxTimeMS": 110,
-          "NumberOfBursts": 50,
+          "NumberOfBursts": 25,
           "WindUpTimeMS": 200,
           "WindDownTimeMS": 50,
           "ReloadTimeMS": 1000,
           "RangeAttributesShort": {
-            "Accuracy": 60,
+            "Accuracy": 30,
             "Distance": 300
           },
           "RangeAttributesMedium": {
-            "Accuracy": 35,
+            "Accuracy": 15,
             "Distance": 1500
           },
           "RangeAttributesLong": {
-            "Accuracy": 10,
+            "Accuracy": 5,
             "Distance": 7500
           }
         }
@@ -4984,23 +5094,23 @@
       },
       "WeaponAttributes": {
         "G_StarHull_Upgrade01_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 15,
+          "BaseDamagePerRound": 10,
           "BurstPeriodMinTimeMS": 110,
           "BurstPeriodMaxTimeMS": 110,
-          "NumberOfBursts": 50,
+          "NumberOfBursts": 25,
           "WindUpTimeMS": 200,
           "WindDownTimeMS": 50,
           "ReloadTimeMS": 1000,
           "RangeAttributesShort": {
-            "Accuracy": 60,
+            "Accuracy": 30,
             "Distance": 300
           },
           "RangeAttributesMedium": {
-            "Accuracy": 35,
+            "Accuracy": 15,
             "Distance": 1500
           },
           "RangeAttributesLong": {
-            "Accuracy": 10,
+            "Accuracy": 5,
             "Distance": 7500
           }
         }
@@ -5103,7 +5213,7 @@
         "MaxHealth": 300
       },
       "UnitMovementAttributes": {
-        "Dynamics": { "MaxSpeed": 100 }
+        "Dynamics": { "MaxSpeed": 140 }
       },
       "WeaponAttributes": {
         "G_Catamaran_Weapon_G2G_MP": {
@@ -5113,7 +5223,7 @@
           "RateOfFire": 1,
           "ReloadTimeMS": 25,
           "CooldownTimeMS": 0,
-          "AreaOfEffectRadius": 10,
+          "AreaOfEffectRadius": 30,
           "AreaOfEffectFalloffType": "Quadratic",
           "RangeAttributesShort": {
             "Distance": 450
@@ -5135,10 +5245,10 @@
         "SensorRadius": 1100,
         "ContactRadius": 1250,
         "Armour": 5,
-        "MaxHealth": 860
+        "MaxHealth": 300
       },
       "UnitMovementAttributes": {
-        "Dynamics": { "MaxSpeed": 100 }
+        "Dynamics": { "MaxSpeed": 140 }
       },
       "WeaponAttributes": {
         "G_Catamaran_Weapon_G2G_MP": {
@@ -5148,7 +5258,7 @@
           "RateOfFire": 1,
           "ReloadTimeMS": 25,
           "CooldownTimeMS": 0,
-          "AreaOfEffectRadius": 10,
+          "AreaOfEffectRadius": 30,
           "AreaOfEffectFalloffType": "Quadratic",
           "RangeAttributesShort": { "Distance": 450 },
           "RangeAttributesMedium": { "Distance": 600 },
@@ -5200,8 +5310,7 @@
       "UnitAttributes": {
         "Resource1Cost": 300,
         "Resource2Cost": 90,
-        "Armour": 3,
-        "PriorityAsTarget": -10
+        "Armour": 3
       },
       "UnitMovementAttributes": {
         "Dynamics": {
@@ -5210,14 +5319,38 @@
       },
       "WeaponAttributes": {
         "C_HAC_Upgrade01_Weapon_G2A_MP": {
-          "ReloadTimeMS": 3000
+          "ReloadTimeMS": 3000,
+          "RangeAttributesShort": {
+            "Distance": 600
+          },
+          "RangeAttributesMedium": {
+            "Distance": 750
+          },
+          "RangeAttributesLong": {
+            "Distance": 1000
+          },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air"
+            }
+          }
         },
         "C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
           "BaseDamagePerRound": 660,
-          "AreaOfEffectRadius": 220,
-          "DamagePacketsPerShot": 30,
-          "AreaOfEffectFalloffType": "Linear",
-          "ExcludeFromHeightAdvantage": true
+          "AreaOfEffectRadius": 260,
+          "DamagePacketsPerShot": 50,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "ExcludeFromHeightAdvantage": true,
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 1500
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
         }
       }
     },
@@ -5278,9 +5411,18 @@
         },
         "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
           "ExcludeFromHeightAdvantage": true,
-          "BaseDamagePerRound": 160,
-          "AreaOfEffectRadius": 150,
-          "AreaOfEffectFalloffType": "Linear"
+          "BaseDamagePerRound": 2000,
+          "AreaOfEffectRadius": 1000,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "RangeAttributesShort": {
+            "Distance": 250
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
         }
       }
     },
@@ -5340,9 +5482,18 @@
         },
         "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
           "ExcludeFromHeightAdvantage": true,
-          "BaseDamagePerRound": 160,
-          "AreaOfEffectRadius": 150,
-          "AreaOfEffectFalloffType": "Linear"
+          "BaseDamagePerRound": 2000,
+          "AreaOfEffectRadius": 1000,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "RangeAttributesShort": {
+            "Distance": 250
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
         }
       }
     },
@@ -5876,6 +6027,63 @@
           "BrakingTime": 0.9
         }
       },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: Plus 10 Armor",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "0": {
+                "Value": 10
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: Plus 20 Armor",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Add",
+                "Value": 20
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: Plus 40 Armor",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Add",
+                "Value": 40
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: Plus 80 Armor",
+            "RequiredExperience": 8000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Add",
+                "Value": 80
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: Plus 160 Armor, self heal activated", // FIXME: no self heal currently
+            "RequiredExperience": 10000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Add",
+                "Value": 160
+              }
+            }
+          }
+        }
+      },
       "WeaponAttributes": {
         "C_Battlecruiser_Weapon_G2G_MP": {
           "BaseDamagePerRound": 1750,
@@ -5894,18 +6102,18 @@
         }
       }
     },
-    "C_Sob_Battlecruiser_MP": { // FIXME: not yet done
+    "C_Sob_Battlecruiser_MP": {
       "UnitAttributes": {
         "Resource1Cost": 570,
         "Resource2Cost": 280,
-        "MaxHealth": 2900,
-        "PopCapCost": 6,
+        "MaxHealth": 40000,
+        "PopCapCost": 10,
         "ProductionTime": 50,
-        "Armour": 13
+        "Armour": 15
       },
       "UnitMovementAttributes": {
         "Dynamics": {
-          "MaxSpeed": 62,
+          "MaxSpeed": 15,
           "MaxSpeedTurnRadius": 160,
           "AccelerationTime": 1.9,
           "BrakingTime": 1.2
@@ -5914,17 +6122,84 @@
       "DetectableAttributes": {
         "TimeVisibleAfterFiring": 4500
       },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: Plus 10 Armor",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "0": {
+                "Value": 10
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: Plus 20 Armor",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Add",
+                "Value": 20
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: Plus 40 Armor",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Add",
+                "Value": 40
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: Plus 80 Armor",
+            "RequiredExperience": 8000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Add",
+                "Value": 80
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: Plus 160 Armor, self heal activated", // FIXME: no self heal currently
+            "RequiredExperience": 10000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Add",
+                "Value": 160
+              }
+            }
+          }
+        }
+      },
       "WeaponAttributes": {
         "C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 70,
           "TargetPrioritizationAttributes": {
             "WeaponEffectivenessWeight": 500,
             "AutoTargetStickyBias": 50,
             "AngleWeight": 25,
             "DistanceWeight": 0.05
           },
-          "RangeAttributesShort": { "Accuracy": 7 },
-          "RangeAttributesMedium": { "Accuracy": 6 },
-          "RangeAttributesLong": { "Distance": 1900 },
+          "RangeAttributesShort": {
+            "Accuracy": 90,
+            "Distance": 1000
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 70,
+            "Distance": 2000
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 50,
+            "Distance": 3000
+          },
           "OutputDPS": true
         }
       }
