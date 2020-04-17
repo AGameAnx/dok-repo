@@ -9,7 +9,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
-    - [2020-04-10 (Tournament version)](#2020-04-10-tournament-version)
+    - [2020-04-17 (Tournament version)](#2020-04-17-tournament-version)
+    - [2020-04-10](#2020-04-10)
     - [2020-04-09](#2020-04-09)
     - [2020-04-06](#2020-04-06)
     - [2020-04-05](#2020-04-05)
@@ -47,7 +48,11 @@ Full combined changelog can be found [HERE](jaraci.md)
 
 # Changes
 
-## 2020-04-10 (Tournament version)
+## 2020-04-17 (Tournament version)
+* Soban:
+    * LAV boost ability - fixed an issue where the ability wasn't modified like the Coalition variant.
+
+## 2020-04-10
 * Coalition/Soban:
     * Support cruiser weapon ROF: `10 => 8`
 
