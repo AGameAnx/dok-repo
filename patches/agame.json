@@ -429,7 +429,7 @@
 		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 9000,
+				"MaxHealth": 8800,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
@@ -668,6 +668,56 @@
 											"0": {
 												"BuffSet": {
 													"0": { "Value": 150 }
+												}
+											}
+										}
+									}
+								}
+							}
+							
+						}
+					},
+					
+					"2": { // Reactive Armour
+						"PowerLevels": {
+							
+							"3": {
+								"LocalizedShortDescriptionStringID": "Armor: 65",
+								"StatusEffectsToApply": {
+									"Armour_4_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 40 }
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"4": {
+								"LocalizedShortDescriptionStringID": "Armor: 85",
+								"StatusEffectsToApply": {
+									"Armour_5_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 60 }
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"5": {
+								"StatusEffectsToApply": {
+									"Armour_6_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 60 }
 												}
 											}
 										}
@@ -2101,7 +2151,7 @@
 					"AirSortie": { "LoiterLength": 40 }
 				},
 				"Ability_K_GrantShuntingBombToCarrier": {
-					"WarmupTimeSecs": 10
+					"WarmupTimeSecs": 9
 				}
 			},
 			"WeaponAttributes": {
@@ -2182,6 +2232,7 @@
 				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
 					"BaseDamagePerRound": 650,
+					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 120,
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
@@ -2251,7 +2302,7 @@
 								}
 							},
 							"2": {
-								"LocalizedShortDescriptionStringID": "Mobility: 600 radius, 11% speed. Sensors: +150",
+								"LocalizedShortDescriptionStringID": "Mobility: 600 radius, 12% speed. Sensors: +150",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_2_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2272,7 +2323,7 @@
 													"2": {
 														"Attribute": "UnitDynamics_MaxSpeed",
 														"Mode": "AddPercent",
-														"Value": 11
+														"Value": 12
 													}
 												}
 											}
@@ -2301,7 +2352,7 @@
 								}
 							},
 							"3": {
-								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, 14% speed. Sensors: +200",
+								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, 16% speed. Sensors: +200",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_3_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2322,7 +2373,7 @@
 													"2": {
 														"Attribute": "UnitDynamics_MaxSpeed",
 														"Mode": "AddPercent",
-														"Value": 14
+														"Value": 16
 													}
 												}
 											}
@@ -2353,7 +2404,7 @@
 								}
 							},
 							"4": {
-								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, 17% speed. Sensors: +250",
+								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, 20% speed. Sensors: +250",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2374,7 +2425,7 @@
 													"2": {
 														"Attribute": "UnitDynamics_MaxSpeed",
 														"Mode": "AddPercent",
-														"Value": 17
+														"Value": 20
 													}
 												}
 											}
@@ -2405,7 +2456,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Mobility: 900 radius, 20% speed. Sensors: +300",
+								"LocalizedShortDescriptionStringID": "Mobility: 900 radius, 25% speed. Sensors: +300",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2426,7 +2477,7 @@
 													"2": {
 														"Attribute": "UnitDynamics_MaxSpeed",
 														"Mode": "AddPercent",
-														"Value": 20
+														"Value": 25
 													}
 												}
 											}
@@ -2465,10 +2516,10 @@
 						},*/
 						"PowerLevels": {
 							"1": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 1 Reload: 10s Range: 2200"
+								"LocalizedShortDescriptionStringID": "Max Ammo: 1 Reload: 9s Range: 2200"
 							},
 							"2": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 2 Reload: 10s Range: 2300",
+								"LocalizedShortDescriptionStringID": "Max Ammo: 2 Reload: 9s Range: 2300",
 								"StatusEffectsToApply": {
 									"K_Missiles_2_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2485,7 +2536,7 @@
 								}
 							},
 							"3": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 3 Reload: 9s Range: 2400",
+								"LocalizedShortDescriptionStringID": "Max Ammo: 3 Reload: 8s Range: 2400",
 								"StatusEffectsToApply": {
 									"K_Missiles_3_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2503,7 +2554,7 @@
 								}
 							},
 							"4": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 4 Reload: 8s Range: 2550",
+								"LocalizedShortDescriptionStringID": "Max Ammo: 4 Reload: 7s Range: 2550",
 								"StatusEffectsToApply": {
 									"K_Missiles_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2521,7 +2572,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 5 Reload: 7s Range: 2700",
+								"LocalizedShortDescriptionStringID": "Max Ammo: 5 Reload: 6s Range: 2700",
 								"StatusEffectsToApply": {
 									"K_Missiles_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2747,7 +2798,7 @@
 						"BuffSet": {
 							"0": {
 								"Mode": "AddPercent",
-								"Value": 11
+								"Value": 12
 							}
 						}
 					}
@@ -2761,7 +2812,7 @@
 						"BuffSet": {
 							"0": {
 								"Mode": "AddPercent",
-								"Value": 14
+								"Value": 16
 							}
 						}
 					}
@@ -2775,7 +2826,7 @@
 						"BuffSet": {
 							"0": {
 								"Mode": "AddPercent",
-								"Value": 17
+								"Value": 20
 							}
 						}
 					}
@@ -2789,7 +2840,7 @@
 						"BuffSet": {
 							"0": {
 								"Mode": "AddPercent",
-								"Value": 20
+								"Value": 25
 							}
 						}
 					}
@@ -2844,9 +2895,9 @@
 			},
 			"WeaponAttributes": {
 				"C_Sob_PopCapScanner_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 120,
+					"BaseDamagePerRound": 110,
 					"DamagePacketsPerShot": 2,
-					"AreaOfEffectRadius": 90,
+					"AreaOfEffectRadius": 80,
 					"TargetPrioritizationAttributes": {
 						"AngleWeight": 10,
 						"DistanceWeight": 0.1
@@ -2939,7 +2990,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 100,
 				"MaxHealth": 500,
-				"ProductionTime": 60,
+				"ProductionTime": 70,
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
@@ -3095,10 +3146,10 @@
 			},
 			"AbilityAttributes": {
 				"Ability_C_DeployTurret_MP": {
-					"CooldownTimeSecs": 90
+					"CooldownTimeSecs": 110
 				},
 				"Ability_C_DeployTurret_BeginCooldown_MP": {
-					"CooldownTimeSecs": 90
+					"CooldownTimeSecs": 110
 				},
 				"Ability_C_LaunchProbe_MP": {
 					"Resource1Cost": 100
@@ -3363,7 +3414,7 @@
 				"Resource2Cost": 50,
 				"ProductionTime": 35,
 				"MaxHealth": 3200,
-				"Armour": 6,
+				"Armour": 5,
 				"PopCapCost": 5
 			},
 			"UnitMovementAttributes": {
@@ -3374,13 +3425,17 @@
 					"RateOfFire": 8
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 175,
+					"BaseDamagePerRound": 50,
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"CooldownTimeMS": 0,
 					"WindUpTimeMS": 50,
 					"RateOfFire": 1,
-					"ReloadTimeMS": 3000,
-					"AreaOfEffectRadius": 80,
+					"ReloadTimeMS": 4000,
+					"AreaOfEffectRadius": 40,
 					"RangeAttributesLong": {
-						"Distance": 1350
+						"Distance": 1200
 					}
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
@@ -3388,8 +3443,8 @@
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 15,
 					"RateOfFire": 8,
-					"BurstPeriodMinTimeMS": 1000,
-					"BurstPeriodMaxTimeMS": 1200,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 900,
 					"CooldownTimeMS": 500,
 					"ReloadTimeMS": 2000,
 					"RangeAttributesShort": { "Distance": 400, "Accuracy": 45 },
@@ -3433,7 +3488,7 @@
 				"Resource2Cost": 50,
 				"ProductionTime": 35,
 				"MaxHealth": 3200,
-				"Armour": 6,
+				"Armour": 5,
 				"PopCapCost": 5
 			},
 			"UnitMovementAttributes": {
@@ -3444,13 +3499,17 @@
 					"RateOfFire": 8
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 175,
+					"BaseDamagePerRound": 50,
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"CooldownTimeMS": 0,
 					"WindUpTimeMS": 50,
 					"RateOfFire": 1,
-					"ReloadTimeMS": 3000,
-					"AreaOfEffectRadius": 80,
+					"ReloadTimeMS": 4000,
+					"AreaOfEffectRadius": 40,
 					"RangeAttributesLong": {
-						"Distance": 1350
+						"Distance": 1200
 					}
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
@@ -3458,8 +3517,8 @@
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 15,
 					"RateOfFire": 8,
-					"BurstPeriodMinTimeMS": 1000,
-					"BurstPeriodMaxTimeMS": 1200,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 900,
 					"CooldownTimeMS": 500,
 					"ReloadTimeMS": 2000,
 					"RangeAttributesShort": { "Distance": 400, "Accuracy": 45 },
@@ -3492,8 +3551,7 @@
 							"ClassOperator": "Or",
 							"Amount": 150
 						}
-					},
-					"OutputDPS": true
+					}
 				}
 			}
 		},
@@ -3623,22 +3681,146 @@
 		"Tier_2_C_ArmouredAssault": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 400,
-				"Resource2Cost": 65,
+				"Resource2Cost": 75,
 				"ResearchTime": 55
 			}
 		},
 		"Tier_2_S_ArmouredAssault": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 400,
-				"Resource2Cost": 65,
+				"Resource2Cost": 75,
 				"ResearchTime": 55
+			}
+		},
+		
+		"G_Catamaran_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 320,
+				"Resource2Cost": 35,
+				"ProductionTime": 17,
+				"SensorRadius": 1100,
+				"ContactRadius": 1250,
+				"Armour": 5,
+				"MaxHealth": 950
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 72 }
+			},
+			"AbilityAttributes": {
+				"Ability_G_AssaultShipRegen": {
+					"ApplyStatusEffect": {
+						"Regen_AssaultShip_StatusEffect": {
+							"Modifiers": {
+								"0": {
+									"HealthOverTimeAttributes": {
+										"Amount": 15
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 30,
+					"BurstPeriodMinTimeMS": 750,
+					"BurstPeriodMaxTimeMS": 850,
+					"RateOfFire": 4,
+					"AreaOfEffectRadius": 120,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesShort":  { "Distance": 450 },
+					"RangeAttributesMedium": { "Distance": 600 },
+					"RangeAttributesLong":   { "Distance": 920 }
+				}
+			}
+		},
+		"K_AssaultShip_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 320,
+				"Resource2Cost": 35,
+				"ProductionTime": 17,
+				"SensorRadius": 1100,
+				"ContactRadius": 1250,
+				"Armour": 5,
+				"MaxHealth": 950
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 72 }
+			},
+			"AbilityAttributes": {
+				"Ability_G_AssaultShipRegen": {
+					"ApplyStatusEffect": {
+						"Regen_AssaultShip_StatusEffect": {
+							"Modifiers": {
+								"0": {
+									"HealthOverTimeAttributes": {
+										"Amount": 15
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 30,
+					"BurstPeriodMinTimeMS": 750,
+					"BurstPeriodMaxTimeMS": 850,
+					"RateOfFire": 4,
+					"AreaOfEffectRadius": 120,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesShort":  { "Distance": 450 },
+					"RangeAttributesMedium": { "Distance": 600 },
+					"RangeAttributesLong":   { "Distance": 920 }
+				}
+			}
+		},
+		"Tier_1_G_Catamaran": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 450,
+				"Resource2Cost": 80,
+				"ResearchTime": 65
+			}
+		},
+		"Research_Buff_G_ShipUnits_Armor1": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 on Assault Ship and Missile Ship",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
+				}
+			}
+		},
+		"Research_Buff_G_ShipUnits_Armor2": {
+			"ResearchItemAttributes": {
+				"Resource2Cost": 150,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Ship and Missile Ship",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
+				}
+			}
+		},
+		"Research_Buff_G_ShipUnits_Armor3": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 250,
+				"Resource2Cost": 200,
+				"ResearchTime": 25,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 200 on Assault Ship and Missile Ship"
 			}
 		},
 		
 		"C_Escort_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 500,
-				"Armour": 1,
+				"MaxHealth": 450,
+				"Armour": 2,
 				"ProductionTime": 12,
 				"PriorityAsTarget": 10
 			},
@@ -3665,18 +3847,21 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 12,
-					"RateOfFire": 6,
+					"BaseDamagePerRound": 16,
+					"RateOfFire": 5,
 					"CooldownTimeMS": 650,
 					"NumberOfBursts": 2,
-					"BurstPeriodMinTimeMS": 950,
-					"BurstPeriodMaxTimeMS": 1050,
+					"BurstPeriodMinTimeMS": 900,
+					"BurstPeriodMaxTimeMS": 950,
 					"RangeAttributesShort": { "Accuracy": 90 },
 					"RangeAttributesMedium": { "Accuracy": 85 },
 					"RangeAttributesLong": { "Accuracy": 61 },
 					"Turret": { "RotationSpeed": 250 },
 					"Modifiers": {
-						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 }
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 70 },
+						"2": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 130 },
+						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 130 },
+						"4": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 }
 					},
 					"OutputDPS": true
 				}
@@ -3684,8 +3869,8 @@
 		},
 		"C_Sob_Escort_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 500,
-				"Armour": 1,
+				"MaxHealth": 450,
+				"Armour": 2,
 				"ProductionTime": 12,
 				"PriorityAsTarget": 10
 			},
@@ -3712,20 +3897,22 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 12,
-					"RateOfFire": 6,
+					"BaseDamagePerRound": 16,
+					"RateOfFire": 5,
 					"CooldownTimeMS": 650,
 					"NumberOfBursts": 2,
-					"BurstPeriodMinTimeMS": 950,
-					"BurstPeriodMaxTimeMS": 1050,
+					"BurstPeriodMinTimeMS": 900,
+					"BurstPeriodMaxTimeMS": 950,
 					"RangeAttributesShort": { "Accuracy": 90 },
 					"RangeAttributesMedium": { "Accuracy": 85 },
 					"RangeAttributesLong": { "Accuracy": 61 },
 					"Turret": { "RotationSpeed": 250 },
 					"Modifiers": {
-						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 }
-					},
-					"OutputDPS": true
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 70 },
+						"2": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 130 },
+						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 130 },
+						"4": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 }
+					}
 				}
 			}
 		},
@@ -4033,7 +4220,7 @@
 			},
 			"WeaponAttributes": {
 				"C_Railgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 120,
+					"BaseDamagePerRound": 130,
 					"ReloadTimeMS": 1600,
 					"RangeAttributesShort": {
 						"Accuracy": 7
@@ -4077,7 +4264,7 @@
 			},
 			"WeaponAttributes": {
 				"C_Sob_Railgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 120,
+					"BaseDamagePerRound": 130,
 					"CooldownTimeMS": 1300,
 					"ReloadTimeMS": 3300,
 					"RangeAttributesShort": {
@@ -4411,18 +4598,33 @@
 					"BrakingTime": 0.93
 				}
 			},
+			"AbilityAttributes": {
+				"Ability_G_AssaultRailgunRegen": {
+					"ApplyStatusEffect": {
+						"Regen_AssaultRailguns_StatusEffect": {
+							"Modifiers": {
+								"0": {
+									"HealthOverTimeAttributes": {
+										"Amount": 7
+									}
+								}
+							}
+						}
+					}
+				}
+			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 52,
+					"BaseDamagePerRound": 43,
 					"BurstPeriodMinTimeMS": 110,
 					"BurstPeriodMaxTimeMS": 110,
-					"NumberOfBursts": 4,
+					"NumberOfBursts": 5,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
 					"ReloadTimeMS": 2600,
 					"RangeAttributesShort":  { "Accuracy": 26 },
 					"RangeAttributesMedium": { "Accuracy": 20 },
-					"RangeAttributesLong":   { "Accuracy": 18, "Distance": 1200 }
+					"RangeAttributesLong":   { "Accuracy": 18, "Distance": 1130 }
 				}
 			}
 		},
@@ -4444,18 +4646,33 @@
 					"BrakingTime": 0.93
 				}
 			},
+			"AbilityAttributes": {
+				"Ability_G_AssaultRailgunRegen": {
+					"ApplyStatusEffect": {
+						"Regen_AssaultRailguns_StatusEffect": {
+							"Modifiers": {
+								"0": {
+									"HealthOverTimeAttributes": {
+										"Amount": 7
+									}
+								}
+							}
+						}
+					}
+				}
+			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 52,
+					"BaseDamagePerRound": 43,
 					"BurstPeriodMinTimeMS": 110,
 					"BurstPeriodMaxTimeMS": 110,
-					"NumberOfBursts": 4,
+					"NumberOfBursts": 5,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
 					"ReloadTimeMS": 2600,
 					"RangeAttributesShort":  { "Accuracy": 26 },
 					"RangeAttributesMedium": { "Accuracy": 20 },
-					"RangeAttributesLong":   { "Accuracy": 18, "Distance": 1200 }
+					"RangeAttributesLong":   { "Accuracy": 18, "Distance": 1130 }
 				}
 			}
 		},
@@ -4526,100 +4743,6 @@
 						"1": { "Value": 100 }
 					} }
 				}
-			}
-		},
-		
-		"G_Catamaran_MP": {
-			"UnitAttributes": {
-				"Resource1Cost": 280,
-				"Resource2Cost": 30,
-				"ProductionTime": 18,
-				"SensorRadius": 1100,
-				"ContactRadius": 1250,
-				"Armour": 5,
-				"MaxHealth": 860
-			},
-			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 72 }
-			},
-			"WeaponAttributes": {
-				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 30,
-					"BurstPeriodMinTimeMS": 750,
-					"BurstPeriodMaxTimeMS": 850,
-					"RateOfFire": 4,
-					"AreaOfEffectRadius": 120,
-					"AreaOfEffectFalloffType": "Linear",
-					"RangeAttributesShort":  { "Distance": 450 },
-					"RangeAttributesMedium": { "Distance": 600 },
-					"RangeAttributesLong":   { "Distance": 920 }
-				}
-			}
-		},
-		"K_AssaultShip_MP": {
-			"UnitAttributes": {
-				"Resource1Cost": 280,
-				"Resource2Cost": 30,
-				"ProductionTime": 18,
-				"SensorRadius": 1100,
-				"ContactRadius": 1250,
-				"Armour": 5,
-				"MaxHealth": 860
-			},
-			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 72 }
-			},
-			"WeaponAttributes": {
-				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 30,
-					"BurstPeriodMinTimeMS": 750,
-					"BurstPeriodMaxTimeMS": 850,
-					"RateOfFire": 4,
-					"AreaOfEffectRadius": 140,
-					"AreaOfEffectFalloffType": "Linear",
-					"RangeAttributesShort":  { "Distance": 450 },
-					"RangeAttributesMedium": { "Distance": 600 },
-					"RangeAttributesLong":   { "Distance": 920 }
-				}
-			}
-		},
-		"Tier_1_G_Catamaran": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 450,
-				"Resource2Cost": 80,
-				"ResearchTime": 65
-			}
-		},
-		"Research_Buff_G_ShipUnits_Armor1": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 150,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 on Assault Ship and Missile Ship",
-				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 1 } } },
-					"1": { "BuffSet": { "0": { "Value": 1 } } },
-					"2": { "BuffSet": { "0": { "Value": 1 } } },
-					"3": { "BuffSet": { "0": { "Value": 1 } } }
-				}
-			}
-		},
-		"Research_Buff_G_ShipUnits_Armor2": {
-			"ResearchItemAttributes": {
-				"Resource2Cost": 150,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Ship and Missile Ship",
-				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 1 } } },
-					"1": { "BuffSet": { "0": { "Value": 1 } } },
-					"2": { "BuffSet": { "0": { "Value": 1 } } },
-					"3": { "BuffSet": { "0": { "Value": 1 } } }
-				}
-			}
-		},
-		"Research_Buff_G_ShipUnits_Armor3": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 250,
-				"Resource2Cost": 200,
-				"ResearchTime": 25,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 200 on Assault Ship and Missile Ship"
 			}
 		},
 		
@@ -4811,7 +4934,6 @@
 			},
 			"WeaponAttributes": {
 				"C_Interceptor_Weapon_A2G_MP": {
-					"BaseDamagePerRound": 110,
 					"DamagePacketsPerShot": 2,
 					"BurstPeriodMinTimeMS": 667,
 					"BurstPeriodMaxTimeMS": 667,
@@ -5289,16 +5411,16 @@
 		
 		"C_Battlecruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 600,
+				"Resource1Cost": 650,
 				"Resource2Cost": 280,
-				"MaxHealth": 3650,
+				"MaxHealth": 3300,
 				"PopCapCost": 6,
-				"ProductionTime": 50,
-				"Armour": 15
+				"ProductionTime": 65,
+				"Armour": 25
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 54,
+					"MaxSpeed": 62,
 					"MaxSpeedTurnRadius": 130,
 					"AccelerationTime": 1.2,
 					"BrakingTime": 0.9
@@ -5306,23 +5428,29 @@
 			},
 			"WeaponAttributes": {
 				"C_Battlecruiser_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					},
 					"BaseDamagePerRound": 220,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 55,
-					"ReloadTimeMS": 5000,
+					"ReloadTimeMS": 4800,
 					"RangeAttributesLong": {
-						"Distance": 1350
+						"Distance": 1250
 					}
 				}
 			}
 		},
 		"C_Sob_Battlecruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 570,
+				"Resource1Cost": 650,
 				"Resource2Cost": 280,
-				"MaxHealth": 2900,
+				"MaxHealth": 2700,
 				"PopCapCost": 6,
-				"ProductionTime": 50,
+				"ProductionTime": 65,
 				"Armour": 13
 			},
 			"UnitMovementAttributes": {
@@ -5344,9 +5472,13 @@
 						"AngleWeight": 25,
 						"DistanceWeight": 0.05
 					},
+					"BaseDamagePerRound": 280,
+					"WindUpTimeMS": 2200,
+					"CooldownTimeMS": 1000,
+					"ReloadTimeMS": 8000,
 					"RangeAttributesShort":  { "Accuracy": 7 },
 					"RangeAttributesMedium": { "Accuracy": 6 },
-					"RangeAttributesLong": { "Distance": 1900 },
+					"RangeAttributesLong": { "Distance": 1650 },
 					"OutputDPS": true
 				}
 			}

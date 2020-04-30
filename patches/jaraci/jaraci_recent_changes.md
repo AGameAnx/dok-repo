@@ -9,7 +9,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
-    - [2020-04-17 (Tournament version)](#2020-04-17-tournament-version)
+    - [2020-04-30](#2020-04-30)
+    - [2020-04-17 (Jaraci Cup #5)](#2020-04-17-jaraci-cup-5)
     - [2020-04-10](#2020-04-10)
     - [2020-04-09](#2020-04-09)
     - [2020-04-06](#2020-04-06)
@@ -48,7 +49,88 @@ Full combined changelog can be found [HERE](jaraci.md)
 
 # Changes
 
-## 2020-04-17 (Tournament version)
+## 2020-04-30
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * Support cruiser:
+        * Armor: `6 => 5`
+        * G2All weapon burst: `1.0-1.2s => 0.8-0.9s` (DPS: `48.3 => 38.1`)
+        * G2A weapon (DPS: `43.2 => 38.1`):
+            * Damage: `175 => 50`
+            * Burst count: `1 => 4`
+            * Burst duration: `1s => 0.3s`
+            * Cooldown: `0.7s => 0s`
+            * Reload: `3s => 4s`
+            * Area of effect: `80 => 40`
+            * Range: `1350 => 1200`
+    * LAV (DPS: `36 => 36.1`, vs 9 armor: `9 => 15.8`):
+        * Hitpoints: `500 => 450`
+        * Armor: `1 => 2`
+        * Damage: `12 => 16`
+        * ROF: `6 => 5`
+        * Burst: `0.95-1.05s => 0.95-1s`
+        * Damage against air: `50% => 70%` 
+        * Accuracy against medium, large, xlarge: `100% => 130%`
+    * AAV tech cost: `400CU 65RU => 400CU 75RU`
+    * Railgun base damage: `120 => 130`
+    * Strike fighter damage: `110 => 120`
+    * Battlecruiser:
+        * Cost: `600/580CU 280RU => 650CU 280RU`
+        * Production time: `50s => 65s`
+* Coalition:
+    * Carrier:
+        * Hitpoints: `9000 => 8800`
+        * Reactive armor power shunt:
+            * Level 3 armor: `75 => 65`
+            * Level 4/5 armor: `100 => 85`
+    * Baserunner turret cooldown: `90s => 110s`
+    * Battlecruiser (DPS: `97.2 => 99.4`):
+        * Now uses same target prioritization as railguns.
+        * Hitpoints: `3650 => 3300`
+        * Armor: `15 => 25`
+        * Range: `1350 => 1250`
+        * Reload time: `5s => 4.8s`
+        * Max movement speed: `54 => 62`
+* Soban:
+    * ALM:
+        * Damage: `120 => 110`
+        * AOE: `90 => 80`
+    * Battlecruiser (DPS: `59.3 => 42.4`):
+        * Hitpoints: `2900 => 2700`
+        * Damage: `320 => 280`
+        * Wind-up: `0.6s => 2.2s`
+        * Cooldown: `3s => 1s`
+        * Reload: `5s => 8s`
+        * Range: `1900 => 1650`
+* Gaalsien/Khaaneph:
+    * Assault ship:
+        * Cost: `280CU 30RU => 320CU 35RU`
+        * Production time: `18s => 17s`
+        * Hitpoints: `860 => 950`
+        * Self regeneration per tick: `20 => 15`
+        * Area of effect falloff: `Linear => Quadratic`
+    * Assault railgun (DPS: `57.2 => 57.3`)
+        * Damage: `52 => 43`
+        * Number of burst: `4 => 5`
+        * Self regeneration per tick: `13 => 7`
+        * Range: `1200 => 1130`
+* Khaaneph:
+    * Carrier:
+        * Cruise missile:
+            * Packets: `1 => 2`
+            * Recharge:
+                * Level 1/2: `10s => 9s`
+                * Level 3: `9s => 8s`
+                * Level 4: `8s => 7s`
+                * Level 5: `7s => 6s`
+        * Speed bonus status effects:
+            * Level 2: `11% => 12%`
+            * Level 3: `14% => 16%`
+            * Level 4: `17% => 20%`
+            * Level 5: `20% => 25%`
+    * Blast drone production time: `60s => 70s`
+
+## 2020-04-17 (Jaraci Cup #5)
 * Soban:
     * LAV boost ability - fixed an issue where the ability wasn't modified like the Coalition variant.
 
