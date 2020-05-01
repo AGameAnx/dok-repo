@@ -9,6 +9,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
+    - [2020-05-01](#2020-05-01)
     - [2020-04-30](#2020-04-30)
     - [2020-04-17 (Jaraci Cup #5)](#2020-04-17-jaraci-cup-5)
     - [2020-04-10](#2020-04-10)
@@ -48,6 +49,15 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-01-11](#2020-01-11)
 
 # Changes
+
+## 2020-05-01
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * Support cruiser G2All weapon modifier vs air: `130% => 100%`
+* Soban:
+    * Battlecruiser:
+        * Cooldown: `1s => 1.2s`
+        * Reload: `8s => 8.5s`
 
 ## 2020-04-30
 *Not yet reflected in the main changelog.*
