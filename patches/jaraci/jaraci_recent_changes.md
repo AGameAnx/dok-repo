@@ -53,9 +53,16 @@ Full combined changelog can be found [HERE](jaraci.md)
 ## 2020-05-01
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
-    * Support cruiser G2All weapon modifier vs air: `130% => 100%`
+    * AAV (DPS: `91 => 91.2`, vs 9 armor: `43 => 39.9`):
+        * Damage: `17 => 16`
+        * ROF: `13 => 14`
+        * Burst: `0.5-0.55s => 0.48-0.53s`
+    * Support cruiser:
+        * Repair rate: `8 => 7`
+        * G2All weapon modifier vs air: `130% => 100%`
 * Soban:
     * Battlecruiser:
+        * Tech research time: `95s => 110s` (to match C)
         * Cooldown: `1s => 1.2s`
         * Reload: `8s => 8.5s`
 
