@@ -82,7 +82,6 @@ Full combined changelog can be found [HERE](jaraci.md)
     * Assault ship:
         * Cost: `320CU 35RU => 300CU 35RU`
         * Hitpoints: `950 => 1000`
-        * Armor: `5 => 6`
         * Damage: `30 => 32`
     * Assault railgun:
         * Production time: `16s => 17s`
