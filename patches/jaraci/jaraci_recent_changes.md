@@ -9,6 +9,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
+    - [2020-05-06](#2020-05-06)
     - [2020-05-01](#2020-05-01)
     - [2020-04-30](#2020-04-30)
     - [2020-04-17 (Jaraci Cup #5)](#2020-04-17-jaraci-cup-5)
@@ -49,6 +50,46 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-01-11](#2020-01-11)
 
 # Changes
+
+## 2020-05-06
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * LAV (DPS: `36.1 => 38.2`):
+        * Hitpoints: `450 => 420`
+        * Cooldown: `0.65s => 0.45s`
+    * AAV:
+        * Tech research time: `55s => 60s`
+        * Damage: `16 => 15`
+        * Burst: `0.48-0.53s => 0.5-0.55s`
+        * Area of effect: `45 => 0`
+    * Gunship damage: `40 => 36`
+    * Heavy railgun damage: `130 => 155`
+    * Bomber:
+        * Hitpoints: `1500 => 1350`
+        * Armor: `12 => 20`
+        * Max speed: `370 => 390`
+        * Turn radius: `350 => 310`
+* Coalition:
+    * Battlecruiser hitpoints: `3200 => 2700`
+    * Railgun reload: `1.6s => 2.0s` (DPS: `31 => 33.7`)
+* Soban:
+    * Railgun reload: `3.3s => 4.25s` (DPS: `31.7 => 33.9`)
+* Gaalsien/Khaaneph:
+    * Sandskimmer (DPS: `42.4 => 45`):
+        * Damage: `12 => 11`
+        * ROF: `6 => 7`
+        * Cooldown: `0.3s => 0.35s`
+    * Assault ship:
+        * Cost: `320CU 35RU => 300CU 35RU`
+        * Hitpoints: `950 => 1000`
+        * Armor: `5 => 6`
+        * Damage: `30 => 32`
+    * Assault railgun:
+        * Production time: `16s => 17s`
+        * Damage: `43 => 42`
+    * Heavy railgun (DPS: `59.6 => 64.2`):
+        * Damage: `155 => 180`
+        * Reload: `0s => 0.2s`
 
 ## 2020-05-01
 *Not yet reflected in the main changelog.*
