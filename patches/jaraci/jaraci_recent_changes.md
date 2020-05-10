@@ -9,6 +9,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
+    - [2020-05-10](#2020-05-10)
     - [2020-05-06](#2020-05-06)
     - [2020-05-01](#2020-05-01)
     - [2020-04-30](#2020-04-30)
@@ -50,6 +51,39 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-01-11](#2020-01-11)
 
 # Changes
+
+## 2020-05-10
+*Not yet reflected in the main changelog.*
+* General:
+    * Carrier hitpoints granted per power level: `200 => 150`
+    * Salvager target priority: `5 => 2`
+* Coalition/Soban:
+    * Support cruiser cost: `450CU 50RU => 500CU 50RU`
+    * Baserunner probe:
+        * Cost: `100CU => 150CU`
+        * Max movement speed: `250 => 200`
+    * LAV hitpoints: `420 => 450`
+* Coalition:
+    * Carrier:
+        * PD ROF: `8 => 6`
+        * Level 3 reactive armor shunt total armor: `65 => 60` (consistency fix)
+    * Baserunner turret damage: `50 => 54`
+    * Battlecruiser damage: `220 => 200`
+* Soban:
+    * Carrier hitpoints: `8500 => 8600`
+* Gaalsien/Khaaneph:
+    * Heavy railgun:
+        * Reload: `0.2s => 0s`
+        * EMP:
+            * Damage: `70 => 110`
+            * Cooldown: `100s => 90s`
+* Gaalsien:
+    * Carrier:
+        * Hitpoints: `8000 => 8100`
+        * PD ROF: `10 => 8`
+    * Scanner deployment range: `2500 => 2650`
+* Khaaneph:
+    * Carrier hitpoints: `9500 => 9600`
 
 ## 2020-05-06
 *Not yet reflected in the main changelog.*
