@@ -429,7 +429,7 @@
 		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 8800,
+				"MaxHealth": 9000,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
@@ -678,17 +678,32 @@
 						}
 					},
 					
-					"2": { // Reactive Armour
+					"2": { // Reactive Armor
 						"PowerLevels": {
 							
+							"2": {
+								"LocalizedShortDescriptionStringID": "Armor: 35",
+								"StatusEffectsToApply": {
+									"Armour_3_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 10 }
+												}
+											}
+										}
+									}
+								}
+							},
+							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Armor: 60",
+								"LocalizedShortDescriptionStringID": "Armor: 45",
 								"StatusEffectsToApply": {
 									"Armour_4_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 35 }
+													"0": { "Value": 20 }
 												}
 											}
 										}
@@ -697,13 +712,13 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Armor: 85",
+								"LocalizedShortDescriptionStringID": "Armor: 60",
 								"StatusEffectsToApply": {
 									"Armour_5_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 60 }
+													"0": { "Value": 35 }
 												}
 											}
 										}
@@ -717,7 +732,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 60 }
+													"0": { "Value": 35 }
 												}
 											}
 										}
@@ -869,7 +884,7 @@
 		},
 		"C_Sob_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 8600,
+				"MaxHealth": 8800,
 				"Armour": 15,
 				"PriorityAsTarget": -2
 			},
@@ -1282,9 +1297,24 @@
 							},
 							
 							"1": {
-								"LocalizedShortDescriptionStringID": "Armor: 25",
+								"LocalizedShortDescriptionStringID": "Armor: 20",
 								"StatusEffectsToApply": {
 									"Armour_2_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 5 }
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"2": {
+								"LocalizedShortDescriptionStringID": "Armor: 25",
+								"StatusEffectsToApply": {
+									"Armour_3_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
@@ -1296,10 +1326,10 @@
 								}
 							},
 							
-							"2": {
+							"3": {
 								"LocalizedShortDescriptionStringID": "Armor: 35",
 								"StatusEffectsToApply": {
-									"Armour_3_StatusEffect_MP": {
+									"Armour_4_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
@@ -1311,29 +1341,14 @@
 								}
 							},
 							
-							"3": {
-								"LocalizedShortDescriptionStringID": "Armor: 50",
-								"StatusEffectsToApply": {
-									"Armour_4_StatusEffect_MP": {
-										"BuffsToApplyToTarget": {
-											"0": {
-												"BuffSet": {
-													"0": { "Value": 35 }
-												}
-											}
-										}
-									}
-								}
-							},
-							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Armor: 70",
+								"LocalizedShortDescriptionStringID": "Armor: 50",
 								"StatusEffectsToApply": {
 									"Armour_5_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 55 }
+													"0": { "Value": 35 }
 												}
 											}
 										}
@@ -1347,7 +1362,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 55 }
+													"0": { "Value": 35 }
 												}
 											}
 										}
@@ -2231,9 +2246,9 @@
 					"RangeAttributesLong": { "Distance": 950 }
 				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
-					"BaseDamagePerRound": 650,
-					"DamagePacketsPerShot": 2,
-					"AreaOfEffectRadius": 120,
+					"BaseDamagePerRound": 670,
+					"DamagePacketsPerShot": 5,
+					"AreaOfEffectRadius": 140,
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
 						"1": {
@@ -4586,7 +4601,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 240,
 				"Resource2Cost": 45,
-				"MaxHealth": 650,
+				"MaxHealth": 600,
 				"ExperienceValue": 350,
 				"ProductionTime": 17,
 				"SensorRadius": 1250,
@@ -4595,9 +4610,9 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 90,
-					"AccelerationTime": 0.93,
-					"BrakingTime": 0.93
+					"MaxSpeed": 85,
+					"AccelerationTime": 1.5,
+					"BrakingTime": 1.2
 				}
 			},
 			"AbilityAttributes": {
@@ -4613,6 +4628,16 @@
 							}
 						}
 					}
+				},
+				"Ability_G_RailGun_Dash_Move_To_MP": {
+					"CooldownTimeSecs": 30
+				},
+				"Ability_G_RailGun_Dash_MP": {
+					"ApplyStatusEffect": {
+						"RailGun_Dash_StatusEffect": {
+							"Duration": 2
+						}
+					}
 				}
 			},
 			"WeaponAttributes": {
@@ -4624,9 +4649,9 @@
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
 					"ReloadTimeMS": 2600,
-					"RangeAttributesShort":  { "Accuracy": 26 },
-					"RangeAttributesMedium": { "Accuracy": 20 },
-					"RangeAttributesLong":   { "Accuracy": 18, "Distance": 1130 }
+					"RangeAttributesShort":  { "Accuracy": 20 },
+					"RangeAttributesMedium": { "Accuracy": 16 },
+					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
 				}
 			}
 		},
@@ -4634,7 +4659,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 240,
 				"Resource2Cost": 45,
-				"MaxHealth": 650,
+				"MaxHealth": 600,
 				"ExperienceValue": 350,
 				"ProductionTime": 17,
 				"SensorRadius": 1250,
@@ -4643,9 +4668,9 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 90,
-					"AccelerationTime": 0.93,
-					"BrakingTime": 0.93
+					"MaxSpeed": 85,
+					"AccelerationTime": 1.5,
+					"BrakingTime": 1.2
 				}
 			},
 			"AbilityAttributes": {
@@ -4661,6 +4686,16 @@
 							}
 						}
 					}
+				},
+				"Ability_G_RailGun_Dash_Move_To_MP": {
+					"CooldownTimeSecs": 30
+				},
+				"Ability_G_RailGun_Dash_MP": {
+					"ApplyStatusEffect": {
+						"RailGun_Dash_StatusEffect": {
+							"Duration": 2
+						}
+					}
 				}
 			},
 			"WeaponAttributes": {
@@ -4672,15 +4707,10 @@
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
 					"ReloadTimeMS": 2600,
-					"RangeAttributesShort":  { "Accuracy": 26 },
-					"RangeAttributesMedium": { "Accuracy": 20 },
-					"RangeAttributesLong":   { "Accuracy": 18, "Distance": 1130 }
+					"RangeAttributesShort":  { "Accuracy": 20 },
+					"RangeAttributesMedium": { "Accuracy": 16 },
+					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
 				}
-			}
-		},
-		"RailGun_Dash_StatusEffect": {
-			"StatusEffectAttributes": {
-				"Duration": 3
 			}
 		},
 		"Research_Buff_G_RailGun_Ability": {
@@ -4830,7 +4860,7 @@
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 160,
+					"BaseDamagePerRound": 140,
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
 				}
@@ -4892,7 +4922,7 @@
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 160,
+					"BaseDamagePerRound": 140,
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
 				}
@@ -5424,7 +5454,7 @@
 				"MaxHealth": 2700,
 				"PopCapCost": 6,
 				"ProductionTime": 65,
-				"Armour": 25
+				"Armour": 15
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {

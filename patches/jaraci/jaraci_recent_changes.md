@@ -9,6 +9,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
+    - [2020-05-11](#2020-05-11)
     - [2020-05-10](#2020-05-10)
     - [2020-05-06](#2020-05-06)
     - [2020-05-01](#2020-05-01)
@@ -51,6 +52,42 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-01-11](#2020-01-11)
 
 # Changes
+
+## 2020-05-11
+*Not yet reflected in the main changelog.*
+* Coalition:
+    * Carrier:
+        * Hitpoints: `8800 => 9000`
+        * Armor power shunt:
+            * Level 2: `40 => 35`
+            * Level 3: `60 => 45`
+            * Level 4/5: `85 => 60`
+    * Battlecruiser armor: `25 => 15`
+* Soban:
+    * Carrier:
+        * Hitpoints: `8600 => 8800`
+        * Armor power shunt:
+            * Level 1: `25 => 20`
+            * Level 2: `35 => 25`
+            * Level 3: `45 => 35`
+            * Level 4/5: `60 => 50`
+* Gaalsien/Khaaneph:
+    * Assault railgun:
+        * Hitpoints: `650 => 600`
+        * Range: `1130 => 1100`
+        * Accuracy: `26%/20%/18% => 20%/16%/14%`
+        * Max speed: `90 => 85`
+        * Acceleration time: `0.93s => 1.5s`
+        * Braking time: `0.93s => 1.2s`
+        * Dart maneuver:
+            * Fixed an issue where ability duration wasn't increased as intended (Duration: `2s => 3s`)
+            * Cooldown: `60s => 30s`
+    * Missile ship direct fire barrage damage: `160 => 140`
+* Khaaneph:
+    * Carrier cruise missile:
+        * Damage: `650 => 670`
+        * Packets: `2 => 5`
+        * Area of effect: `120 => 140`
 
 ## 2020-05-10
 *Not yet reflected in the main changelog.*
