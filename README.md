@@ -61,16 +61,16 @@
 | Dune Ocean            | HottestManEver              | **/l ocean**              |                                            | 1v1 2v2 3v3
 | Tombs of the Ancients | HottestManEver              | **/l tombs3v3**           | [preview](layouts/tombs3v3.jpg)            |
 | Prime Anomaly         | HottestManEver              | **/l anomaly3v3**         | [preview](layouts/anomaly3v3.jpg)          |
-| Prime Anomaly         | SSSS                        | **/l anomaly-claw**       | [preview](layouts/anomaly-claw.jpg         | The v1.0 default
+| Prime Anomaly         | SSSS                        | **/l anomaly-claw**       | [preview](layouts/anomaly-claw.jpg)        | The v1.0 default
 
 ## Special layouts
-| Map                   |Players| Authors                     | **Command**               | Preview                                    | Description |
-| :---                  | ---   | :---                        | ---                       | ---                                        | :---
-| Salvage Facility      | [2,2] | SSSS                        | **/l salvage-all-units**  | [preview](layouts/salvage-all-units.png)   | Spawn with 3 of all MP units to test
-| Kalash Teeth          | [2,6] | HottestManEver              | **/l rachels**            | [preview](layouts/rachels.jpg)             | Rachels duel
-| Firebase Kriil        | [5,5] | FrostyTeeth                 | **/l firebase-siege-3v2** | [preview]](layouts/firebase-siege-3v2.png) | 3v2 attack on fortified position. Team 2 has 2 players
-| Dune Ocean            | [6,6] | HottestManEver, FrostyTeeth | **/l ocean3v3**           |                                            | 3v3 layout for Dune Ocean. NO BLOCKERS!
-| Prime Anomaly         | [2,6] | HottestManEver              | **/l simple**             | [1v1 2v2 3v3 for newbies](layouts/simple.jpg)
+| Map                   |Players| Authors                     | **Command**               | Preview                                   | Description |
+| :---                  | ---   | :---                        | ---                       | ---                                       | :---
+| Salvage Facility      | [2,2] | SSSS                        | **/l salvage-all-units**  | [preview](layouts/salvage-all-units.png)  | Spawn with 3 of all MP units to test
+| Kalash Teeth          | [2,6] | HottestManEver              | **/l rachels**            | [preview](layouts/rachels.jpg)            | Rachels duel
+| Firebase Kriil        | [5,5] | FrostyTeeth                 | **/l firebase-siege-3v2** | [preview](layouts/firebase-siege-3v2.png) | 3v2 attack on fortified position. Team 2 has 2 players
+| Dune Ocean            | [6,6] | HottestManEver, FrostyTeeth | **/l ocean3v3**           |                                           | 3v3 layout for Dune Ocean. NO BLOCKERS!
+| Prime Anomaly         | [2,6] | HottestManEver              | **/l simple**             | [preview](layouts/simple.jpg)             | 1v1 2v2 3v3 for newbies
 
 ## Faction-specific layouts
 
