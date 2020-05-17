@@ -3274,18 +3274,18 @@
         "MaxHealth": 1100,
         "ContactRadius": 400,
         "SensorRadius": 270
-      },
-      "UnitMovementAttributes": { // attempted to make ECM move, but it has no move attribute
-        "Dynamics": {
-          "PermanentlyImmobile": false,
-          "MaxSpeed": 40
-        }
-      },
-      "AbilityAttributes": { // and we can't add attributes so uhhh, rip
-        "Ability_Common_MoveAbility": {
-          "StartsRemovedInGameMode": 0
-        }
       }
+      //"UnitMovementAttributes": { // attempted to make ECM move, but it has no move attribute
+      //  "Dynamics": {
+      //    "PermanentlyImmobile": false,
+      //    "MaxSpeed": 40
+      //  }
+      //},
+      //"AbilityAttributes": { // and we can't add attributes so uhhh, rip
+      //  "Ability_Common_MoveAbility": {
+      //    "StartsRemovedInGameMode": 0
+      //  }
+      //}
     },
     "ECMField_StatusEffect": {
       "StatusEffectAttributes": {
@@ -3312,11 +3312,12 @@
     "C_Probe_MP": {
       "UnitAttributes": {
         "MaxHealth": 50000,
-        "SensorRadius": 2500
+        "SensorRadius": 3300
       },
       "UnitMovementAttributes": {
         "Dynamics": {
-          "MaxSpeed": 20
+          "MaxSpeed": 20,
+          "MaxSpeedTurnRadius": 5
         }
       }
     },
@@ -3460,8 +3461,8 @@
         "N_DemoCharge_Weapon_G2G_MP": {
           "ExcludeFromHeightAdvantage": true,
           "AreaOfEffectFalloffType": "Quadratic",
-          "AreaOfEffectRadius": 750,
-          "BaseDamagePerRound": 1000
+          "AreaOfEffectRadius": 300,
+          "BaseDamagePerRound": 1200
         }
       },
       "UnitAttributes": {
@@ -3572,7 +3573,7 @@
         "C_Sob_Baserunner_Weapon_ECM": {
           "ProjectileEntityTypeToSpawn": "G_Scanner_ProjectileEntity_MP",
           "RangeAttributesShort": {
-            "Distance": 1250
+            "Distance": 5000
           }
         },
         "C_Sob_Baserunner_Weapon_G2G_MP": {
@@ -4085,18 +4086,27 @@
       },
       "WeaponAttributes": {
         "C_HAC_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 120,
+          "BaseDamagePerRound": 100,
           "BurstPeriodMaxTimeMS": 550,
           "RateOfFire": 13,
           "AreaOfEffectRadius": 45,
-          "RangeAttributesLong": { "Distance": 1000 },
+          "RangeAttributesShort": {
+            "Distance": 1000,
+            "Accuracy": 100
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          },
           "OutputDPS": true,
           "Modifiers": {
             "0": {
               "TargetClass": "Ground",
               "ClassOperator": "Or",
               "Modifier": "DamagePercent",
-              "Amount": 5
+              "Amount": 7
             }
           }
         },
@@ -4203,7 +4213,7 @@
         }
       },
       "AbilityAttributes": {
-        "Ability_C_Nitrous_MP": {
+        "Ability_S_Nitrous_MP": {
           "ApplyStatusEffect": {
             "Nitrous_StatusEffect": {
               "BuffsToApplyToTarget": {
@@ -5317,6 +5327,11 @@
           "MaxSpeed": 60
         }
       },
+      "AbilityAttributes": {
+        "Ability_C_Grenade_MP": {
+          "CooldownTimeSecs": 150
+        }
+      },
       "WeaponAttributes": {
         "C_HAC_Upgrade01_Weapon_G2A_MP": {
           "ReloadTimeMS": 3000,
@@ -5338,12 +5353,12 @@
         "C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
           "BaseDamagePerRound": 660,
           "AreaOfEffectRadius": 260,
-          "DamagePacketsPerShot": 50,
+          "DamagePacketsPerShot": 30,
           "AreaOfEffectFalloffType": "Quadratic",
           "ExcludeFromHeightAdvantage": true,
           "RangeAttributesShort": {
             "Accuracy": 100,
-            "Distance": 1500
+            "Distance": 2500
           },
           "RangeAttributesMedium": {
             "Remove": true
@@ -5521,22 +5536,30 @@
         "Resource2Cost": 90,
         "MaxHealth": 490,
         "Armour": 4,
-        "ProductionTime": 26
+        "ProductionTime": 26,
+        "SensorRadius": 2500,
+        "ContactRadius": 2700
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 600,
+          "MaxSpeedTurnRadius": 250
+        }
       },
       "StorageAttributes": {
         "C_Interceptor_StorageAttributesAsset_MP": {
           "InventoryLoadout": {
             "MISSILES": {
-              "Capacity": 8,
-              "StartingAmount": 8
+              "Capacity": 12,
+              "StartingAmount": 12
             }
           }
         }
       },
       "WeaponAttributes": {
         "C_Interceptor_Weapon_A2G_MP": {
-          "BaseDamagePerRound": 110,
-          "DamagePacketsPerShot": 2,
+          "BaseDamagePerRound": 70,
+          "DamagePacketsPerShot": 1,
           "BurstPeriodMinTimeMS": 667,
           "BurstPeriodMaxTimeMS": 667,
           "ReloadTimeMS": 3332,
@@ -5546,7 +5569,7 @@
             "FieldOfFire": 55
           },
           "RangeAttributesShort": {
-            "Distance": 1250
+            "Distance": 1500
           }
         }
       }
@@ -5558,18 +5581,24 @@
       }
     },
 
-    "G_Interceptor_MP": {
+    "G_Interceptor_MP": { // Note: still needs some work (missile capacity, fire only one missile at a time, etc.
       "UnitAttributes": {
         "Resource2Cost": 100,
         "Armour": 3,
         "ProductionTime": 12
       },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 100,
+          "MaxSpeedTurnRadius": 50
+        }
+      },
       "WeaponAttributes": {
         "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-          "BaseDamagePerRound": 110,
-          "DamagePacketsPerShot": 2,
-          "AreaOfEffectRadius": 70,
-          "RateOfFire": 4,
+          "BaseDamagePerRound": 600,
+          "DamagePacketsPerShot": 1,
+          "AreaOfEffectRadius": 120,
+          "RateOfFire": 1,
           "ReloadTimeMS": 4500,
           "Modifiers": {
             "13": {
@@ -5588,12 +5617,18 @@
         "Armour": 3,
         "ProductionTime": 12
       },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 100,
+          "MaxSpeedTurnRadius": 50
+        }
+      },
       "WeaponAttributes": {
         "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-          "BaseDamagePerRound": 110,
-          "DamagePacketsPerShot": 2,
-          "AreaOfEffectRadius": 70,
-          "RateOfFire": 4,
+          "BaseDamagePerRound": 600,
+          "DamagePacketsPerShot": 1,
+          "AreaOfEffectRadius": 120,
+          "RateOfFire": 1,
           "ReloadTimeMS": 4500,
           "Modifiers": {
             "13": {
@@ -5756,7 +5791,9 @@
         "MaxHealth": 1250,
         "Armour": 9,
         "PopCapCost": 3,
-        "ProductionTime": 48
+        "ProductionTime": 48,
+        "SensorRadius": 300,
+        "ContactRadius": 400
       },
       "WeaponAttributes": { // attempted to make gunships graphically fire like railguns but apparently it can't be done :(
         "C_GunShip_Weapon_DefaultFire_MP": { // still chunks though
@@ -5764,7 +5801,7 @@
           "TracerLength": 5.00,
           "TracerSpeed": 4500.00,
           "IsTracer": true,
-          "BaseDamagePerRound": 255,
+          "BaseDamagePerRound": 155,
           "TargetStyle": 0
         }
       }
