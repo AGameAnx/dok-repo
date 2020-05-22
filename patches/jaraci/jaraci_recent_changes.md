@@ -9,6 +9,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
+    - [2020-05-22 (Jaraci Cup #6)](#2020-05-22-jaraci-cup-6)
     - [2020-05-11](#2020-05-11)
     - [2020-05-10](#2020-05-10)
     - [2020-05-06](#2020-05-06)
@@ -52,6 +53,36 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-01-11](#2020-01-11)
 
 # Changes
+
+## 2020-05-22 (Jaraci Cup #6)
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * Level 2 production cost: `500CU 40RU => 600CU 80RU`
+    * Probe:
+        * Hitpoints: `170 => 120`
+        * Contact radius: `1100 => 1450`
+    * AAV:
+        * Cost: `240CU 20RU => 250CU 20RU`
+        * Suppression slow effect: `25% => 35%`
+    * Artillery cruiser precision barrage cooldown: `30s => 60s`
+* Coalition:
+    * Carrier cruise missile damage: `2400 => 2300`
+* Gaalsien/Khaaneph:
+    * Assault ship damage: `32 => 30`
+    * Production cruiser
+        * Hitpoints: `3900 => 3500`
+        * Armor: `5 => 6`
+        * Sensors radius: `1350 => 1450`
+        * Contact radius: `1450 => 1600`
+* Gaalsien:
+    * Carrier super-sonic missile damage: `250 => 240`
+    * Scanner deployment range: `2650 => 2550`
+    * Siege cruiser barrage cooldown: `120s => 105s`
+* Khaaneph:
+    * Blast drone:
+        * Cost: `100CU => 150CU`
+        * Hitpoints: `500 => 540`
+        * Braking time: `0.75s => 0.1s`
 
 ## 2020-05-11
 *Not yet reflected in the main changelog.*

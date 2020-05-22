@@ -550,7 +550,7 @@
 					"ExcludeFromHeightAdvantage": true
 				},
 				"C_Carrier_Weapon_CruiseMissile_MP": {
-					"BaseDamagePerRound": 2400,
+					"BaseDamagePerRound": 2300,
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
 						"1": {
@@ -1719,7 +1719,7 @@
 				},
 				"G_Carrier_Weapon_BarrageMissile_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 250,
+					"BaseDamagePerRound": 240,
 					"AreaOfEffectRadius": 230,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"NumberOfBursts": 8,
@@ -2991,8 +2991,9 @@
 		},
 		"C_Probe_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 170,
-				"SensorRadius": 1250
+				"MaxHealth": 120,
+				"SensorRadius": 1250,
+				"ContactRadius": 1450
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3008,13 +3009,15 @@
 		},
 		"K_ExplodingSkimmer_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 100,
-				"MaxHealth": 500,
+				"MaxHealth": 540,
 				"ProductionTime": 70,
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 200 }
+				"Dynamics": {
+					"MaxSpeed": 200,
+					"BrakingTime": 0.1
+				}
 			},
 			"WeaponAttributes": {
 				"K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
@@ -3317,7 +3320,7 @@
 				},
 				"G_Baserunner_Weapon_PopCapAbility_MP": {
 					"RangeAttributesShort": {
-						"Distance": 2650
+						"Distance": 2550
 					}
 				}
 			}
@@ -3407,7 +3410,8 @@
 		},
 		"Research_Buff_Support_T2_ProductionBoost": {
 			"ResearchItemAttributes": {
-				"Resource2Cost": 40,
+				"Resource1Cost": 600,
+				"Resource2Cost": 80,
 				"ResearchTime": 50,
 				"Dependencies": ["Research_Buff_Support_T1_ProductionBoost"]
 			}
@@ -3422,7 +3426,8 @@
 		},
 		"Research_Buff_S_Support_T2_ProductionBoost": {
 			"ResearchItemAttributes": {
-				"Resource2Cost": 40,
+				"Resource1Cost": 600,
+				"Resource2Cost": 80,
 				"ResearchTime": 50,
 				"Dependencies": ["Research_Buff_S_Support_T1_ProductionBoost"]
 			}
@@ -3588,11 +3593,12 @@
 		
 		"G_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 3900,
+				"MaxHealth": 3500,
+				"Armor": 6,
 				"Resource1Cost": 600,
 				"Resource2Cost": 60,
-				"SensorRadius": 1350,
-				"ContactRadius": 1450
+				"SensorRadius": 1450,
+				"ContactRadius": 1600
 			},
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
@@ -3619,11 +3625,12 @@
 		},
 		"K_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 3900,
+				"MaxHealth": 3500,
+				"Armor": 6,
 				"Resource1Cost": 600,
 				"Resource2Cost": 60,
-				"SensorRadius": 1350,
-				"ContactRadius": 1450
+				"SensorRadius": 1450,
+				"ContactRadius": 1600
 			},
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
@@ -3666,7 +3673,7 @@
 		
 		"C_HAC_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 240,
+				"Resource1Cost": 250,
 				"Resource2Cost": 20,
 				"MaxHealth": 930,
 				"SensorRadius": 1100,
@@ -3690,7 +3697,7 @@
 				"BuffsToApplyToTarget": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": -25 }
+							"0": { "Value": -35 }
 						}
 					}
 				}
@@ -3741,7 +3748,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 32,
+					"BaseDamagePerRound": 30,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
@@ -3783,7 +3790,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 32,
+					"BaseDamagePerRound": 30,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
@@ -5550,7 +5557,8 @@
 					"CooldownTimeSecs": 100
 				},
 				"Ability_C_ArtilleryBarrage_Precise": {
-					"Resource1Cost": 0
+					"Resource1Cost": 0,
+					"CooldownTimeSecs": 60
 				}
 			},
 			"UnitMovementAttributes": {
@@ -5637,7 +5645,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_ArtilleryBarrage_01_MP": {
-					"CooldownTimeSecs": 120
+					"CooldownTimeSecs": 105
 				}
 			},
 			"UnitMovementAttributes": {
