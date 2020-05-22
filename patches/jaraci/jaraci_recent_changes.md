@@ -77,7 +77,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Gaalsien:
     * Carrier super-sonic missile damage: `250 => 240`
     * Scanner deployment range: `2650 => 2550`
-    * Siege cruiser barrage cooldown: `120s => 105s`
+    * Siege cruiser barrage cooldown: `120s => 100s`
 * Khaaneph:
     * Blast drone:
         * Cost: `100CU => 150CU`
