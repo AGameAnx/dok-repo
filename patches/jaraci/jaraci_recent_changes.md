@@ -9,7 +9,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
-    - [2020-05-22 (Jaraci Cup #6)](#2020-05-22-jaraci-cup-6)
+    - [2020-05-23 (Jaraci Cup #6)](#2020-05-23-jaraci-cup-6)
+    - [2020-05-22](#2020-05-22)
     - [2020-05-11](#2020-05-11)
     - [2020-05-10](#2020-05-10)
     - [2020-05-06](#2020-05-06)
@@ -54,7 +55,20 @@ Full combined changelog can be found [HERE](jaraci.md)
 
 # Changes
 
-## 2020-05-22 (Jaraci Cup #6)
+## 2020-05-23 (Jaraci Cup #6)
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * Artillery cruiser autofire:
+        * Packets: `2 => 1`
+        * Modifiers:
+            * vs carrier: `100% => 60%`
+            * vs small: `100% => 50%`
+* Gaalsien:
+    * Siege cruiser autofire:
+        * Damage: `80 => 120`
+        * Packets: `2 => 1`
+
+## 2020-05-22
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
     * Level 2 production cost: `500CU 40RU => 600CU 80RU`

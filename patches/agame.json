@@ -5615,7 +5615,22 @@
 					}
 				},
 				"C_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 100
+					"BaseDamagePerRound": 100,
+					"DamagePacketsPerShot": 1,
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
 				}
 			}
 		},
@@ -5679,7 +5694,8 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 80,
+					"BaseDamagePerRound": 120,
+					"DamagePacketsPerShot": 1,
 					"ReloadTimeMS": 10000,
 					"Modifiers": {
 						"1": {
@@ -5693,6 +5709,9 @@
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
 							"Amount": 60
+						},
+						"3": {
+							"Remove": true
 						}
 					}
 				}
