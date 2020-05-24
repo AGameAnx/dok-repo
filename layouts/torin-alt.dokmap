@@ -1,75 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dokmap version="1.1">
 	<!-- More Maps by SSSS -->
-	<meta name="torin-alt" authors="AGameAnx, FrostyTeeth" description="torin-alt"/>
+	<meta name="torin-alt" authors="AGameAnx" description="torin-alt"/>
 	
 	<layout map="MP_01-Crater" mode="Team" players="2,3,4,5,6">
 		<spawns>
 			<!-- team 1 -->
-			<spawn team="0" index="0" x="8000" y="8000" angle="45"/>
-			<spawn team="0" index="1" x="8000" y="8000" angle="0" fleet="false"/>
-			<spawn team="0" index="2" x="8000" y="8000" angle="0" fleet="false"/>
+			<spawn team="0" index="0" x="7120" y="8120" angle="315" camera="225"/>
+			<spawn team="0" index="1" x="8999" y="8999" angle="315" camera="225" fleet="false"/>
+			<spawn team="0" index="2" x="8999" y="8999" angle="315" camera="225" fleet="false"/>
 			<!-- team 2 -->
-			<spawn team="1" index="0" x="1000" y="1000" angle="225"/>
-			<spawn team="1" index="1" x="1000" y="1000" angle="0" fleet="false"/>
-			<spawn team="1" index="2" x="1000" y="1000" angle="0" fleet="false"/>
+			<spawn team="1" index="0" x="1500" y="1400" angle="135" camera="45"/>
+			<spawn team="1" index="1" x="1" y="1" angle="135" camera="45" fleet="false"/>
+			<spawn team="1" index="2" x="1" y="1" angle="135" camera="45" fleet="false"/>
 		</spawns>
 		<units>
-			<!-- spectator units -->
-			<!-- team 1 -->
-			<unit team="0" index="1" type="N_DemoCharge" x="0" y="0" angle="0"/>
-			<unit team="0" index="2" type="N_DemoCharge" x="0" y="0" angle="0"/>
-			<!-- team 2 -->
-			<unit team="1" index="1" type="N_DemoCharge" x="8999" y="8999" angle="0"/>
-			<unit team="1" index="2" type="N_DemoCharge" x="8999" y="8999" angle="0"/>
+			<!-- team 1 spectator units -->
+			<unit team="0" index="1" type="N_DemoCharge" x="1" y="1" angle="0"/>
+			<unit team="0" index="2" type="N_DemoCharge" x="1" y="1" angle="0"/>
+			<!-- team 2 spectator units -->
+			<unit team="1" index="1" type="N_DemoCharge" x="8999" y="8999" angle="180"/>
+			<unit team="1" index="2" type="N_DemoCharge" x="8999" y="8999" angle="180"/>
 		</units>
 		<resources>
 			<!-- team 1 -->
-			<resource x="8340" y="8460" type="cu" amount="7500" collectors="2"/>
-			<resource x="8400" y="8400" type="ru" amount="3000" collectors="2"/>
-			<resource x="8460" y="8340" type="cu" amount="7500" collectors="2"/>
-
+			<resource x="7210" y="8430" type="cu" amount="7500" collectors="2"/>
+			<resource x="7320" y="8320" type="ru" amount="3000" collectors="2"/>
+			<resource x="7430" y="8210" type="cu" amount="7500" collectors="2"/>
 			<!-- team 2 -->
-			<resource x="660" y="540" type="cu" amount="7500" collectors="2"/>
-			<resource x="600" y="600" type="ru" amount="3000" collectors="2"/>
-			<resource x="540" y="660" type="cu" amount="7500" collectors="2"/>
-
-			<!--
-			<resource x="7500" y="1760" type="cu" amount="10500" collectors="2"/>
-			<resource x="7480" y="1730" type="ru" amount="3000" collectors="2"/>
-			
-			<resource x="1200" y="7780" type="ru" amount="10500" collectors="2"/>
-			<resource x="1250" y="7750" type="cu" amount="3000" collectors="2"/>
-			-->
+			<resource x="1340" y="1020" type="cu" amount="7500" collectors="2"/>
+			<resource x="1230" y="1130" type="ru" amount="3000" collectors="2"/>
+			<resource x="1120" y="1240" type="cu" amount="7500" collectors="2"/>
 		</resources>
 		<wrecks>
 			<!-- team 1 -->
-			<wreck x="6450" y="8840" angle="315">
-				<resource x="6450" y="8840" type="cu" amount="10500" collectors="2"/>
-				<resource x="6400" y="8840" type="ru" amount="4000" collectors="2"/>
+			<wreck x="4700" y="8500" angle="315">
+				<resource x="4850" y="8560" type="cu" amount="10500" collectors="2"/>
+				<resource x="4850" y="8440" type="ru" amount="4000" collectors="2"/>
 			</wreck>
-			<wreck x="8840" y="6450" angle="315">
-				<resource x="8840" y="6450" type="cu" amount="10500" collectors="2"/>
-				<resource x="8840" y="6400" type="ru" amount="4000" collectors="2"/>
+			<wreck x="8350" y="6200" angle="225">
+				<resource x="8290" y="6350" type="cu" amount="10500" collectors="2"/>
+				<resource x="8410" y="6350" type="ru" amount="4000" collectors="2"/>
 			</wreck>
 			<!-- team 2 -->
-			<wreck x="2550" y="60" angle="315">
-				<resource x="2550" y="60" type="cu" amount="10500" collectors="2"/>
-				<resource x="2600" y="60" type="ru" amount="4000" collectors="2"/>
+			<wreck x="3780" y="570" angle="135">
+				<resource x="3630" y="510" type="cu" amount="10500" collectors="2"/>
+				<resource x="3630" y="630" type="ru" amount="4000" collectors="2"/>
 			</wreck>
-			<wreck x="60" y="2550" angle="315">
-				<resource x="60" y="2550" type="cu" amount="10500" collectors="2"/>
-				<resource x="60" y="2600" type="ru" amount="4000" collectors="2"/>
+			<wreck x="850" y="3550" angle="135">
+				<resource x="790" y="3400" type="cu" amount="10500" collectors="2"/>
+				<resource x="910" y="3400" type="ru" amount="4000" collectors="2"/>
 			</wreck>
 		</wrecks>
 		<artifacts>
-			<artifact x="4700" y="6450"/>
-			<artifact x="4650" y="2850"/>
-			<artifact x="4600" y="2550"/>
+			<artifact x="4500" y="7030"/>
+			<artifact x="4350" y="4750"/>
+			<artifact x="4280" y="2420"/>
 		</artifacts>
 		<ezs>
-			<ez team="0" x="7500" y="1760" radius="500"/>
-			<ez team="1" x="1200" y="7750" radius="500"/>
+			<ez team="0" x="7450" y="1700" radius="500"/>
+			<ez team="1" x="1230" y="7750" radius="500"/>
 		</ezs>
 	</layout>
 </dokmap>

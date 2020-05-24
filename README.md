@@ -22,6 +22,7 @@
 | Gaalsien Territories | [2,2] | SSSS     | **/l gt-alt**     | [preview](layouts/gt-alt.png)      | Alternative layout for Gaalsien Territories
 | Canyon Outpost       | [2,2] | AGameAnx | **/l canyon-alt** | [preview](layouts/canyon-alt.png)  | 2v2 canyon outpost converted into a 1v1 layout
 | Khar-Toba            | [2,2] | AGameAnx | **/l kt-alt**     | [preview](layouts/kt-alt.png)      | 3v3 Khar-Toba converted into a 1v1 layout
+| Torin Crater         | [2,2] | AGameAnx | **/l torin-alt**  | [preview](layouts/torin-alt.png)   | Adjusted vanilla Torin Crater to make spawning location more difficult to attack
 
 ## Community layouts
 
