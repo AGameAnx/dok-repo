@@ -3726,7 +3726,7 @@
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
 				"Armour": 5,
-				"MaxHealth": 1000
+				"MaxHealth": 960
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 72 }
@@ -3768,7 +3768,7 @@
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
 				"Armour": 5,
-				"MaxHealth": 1000
+				"MaxHealth": 960
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 72 }
@@ -5256,13 +5256,13 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
-					"CooldownTimeSecs": 50,
+					"CooldownTimeSecs": 40,
 					"ApplyStatusEffect": {
 						"ArmorBonus_StatusEffect": {
 							"BuffsToApplyToTarget": {
 								"0": {
 									"BuffSet": {
-										"0": { "Value": 25 } // % Armor bonus
+										"0": { "Value": 50 } // % Armor bonus
 									}
 								}
 							}
@@ -5271,10 +5271,10 @@
 				},
 				"Ability_G_BattleCruiser_Missile_MP": {
 					"Resource1Cost": 0,
-					"CooldownTimeSecs": 50
+					"CooldownTimeSecs": 40
 				},
 				"Ability_G_BattleCruiserActiveRegen": {
-					"CooldownTimeSecs": 50
+					"CooldownTimeSecs": 40
 				}
 			}
 		},
@@ -5320,13 +5320,13 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
-					"CooldownTimeSecs": 50,
+					"CooldownTimeSecs": 40,
 					"ApplyStatusEffect": {
 						"ArmorBonus_StatusEffect": {
 							"BuffsToApplyToTarget": {
 								"0": {
 									"BuffSet": {
-										"0": { "Value": 25 } // % Armor bonus
+										"0": { "Value": 50 } // % Armor bonus
 									}
 								}
 							}
@@ -5335,10 +5335,10 @@
 				},
 				"Ability_G_BattleCruiser_Missile_MP": {
 					"Resource1Cost": 0,
-					"CooldownTimeSecs": 50
+					"CooldownTimeSecs": 40
 				},
 				"Ability_G_BattleCruiserActiveRegen": {
-					"CooldownTimeSecs": 50
+					"CooldownTimeSecs": 40
 				}
 			}
 		},
@@ -5652,32 +5652,33 @@
 		"G_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 300,
-				"Resource2Cost": 120,
-				"MaxHealth": 1600,
+				"Resource2Cost": 150,
+				"MaxHealth": 1400,
 				"Armour": 3,
 				"ProductionTime": 30,
 				"PopCapCost": 5
 			},
 			"AbilityAttributes": {
 				"Ability_G_ArtilleryBarrage_01_MP": {
-					"CooldownTimeSecs": 100
+					"CooldownTimeSecs": 90
 				}
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 65,
+					"MaxSpeed": 60,
 					"AccelerationTime": 1.25,
 					"BrakingTime": 1.25
 				}
 			},
 			"WeaponAttributes": {
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"BaseDamagePerRound": 150,
-					"NumberOfBursts": 3,
-					"RateOfFire": 4,
-					"CooldownTimeMS": 1600,
-					"BurstPeriodMinTimeMS": 1700,
-					"BurstPeriodMaxTimeMS": 1700,
+					"BaseDamagePerRound": 120,
+					"DamagePacketsPerShot": 1,
+					"NumberOfBursts": 2,
+					"RateOfFire": 5,
+					"CooldownTimeMS": 1400,
+					"BurstPeriodMinTimeMS": 1800,
+					"BurstPeriodMaxTimeMS": 1800,
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
@@ -5768,7 +5769,7 @@
 		},
 		"Tier_3_G_Artillery_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 450,
+				"Resource1Cost": 250,
 				"Resource2Cost": 150,
 				"ResearchTime": 55
 			}

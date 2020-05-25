@@ -9,7 +9,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 - [About](#about)
 - [Table of contents](#table-of-contents)
 - [Changes](#changes)
-    - [2020-05-23 (Jaraci Cup #6)](#2020-05-23-jaraci-cup-6)
+    - [2020-05-25 (Jaraci Cup #6)](#2020-05-25-jaraci-cup-6)
+    - [2020-05-23](#2020-05-23)
     - [2020-05-22](#2020-05-22)
     - [2020-05-11](#2020-05-11)
     - [2020-05-10](#2020-05-10)
@@ -55,7 +56,30 @@ Full combined changelog can be found [HERE](jaraci.md)
 
 # Changes
 
-## 2020-05-23 (Jaraci Cup #6)
+## 2020-05-25 (Jaraci Cup #6)
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * Assault cruiser:
+        * Ability cooldowns: `50s => 40s`
+        * Overdrive armor bonus: `25% => 50%` (`15 => 18`)
+* Gaalsien/Khaaneph:
+    * Assault ship hitpoints: `1000 => 960`
+* Gaalsien:
+    * Siege cruiser:
+        * Tech cost: `450CU 150RU => 250CU 150RU`
+        * Cost: `300CU 120RU => 300CU 150RU`
+        * Hitpoints: `1600 => 1400`
+        * Movement speed: `65 => 60`
+        * Barrage (damage: `2700 => 2160`):
+            * Ability cooldown: `100s => 90s`
+            * Damage: `150 => 120`
+            * Packets: `2 => 1`
+            * Rate of fire: `4 => 5`
+            * Number of bursts: `3 => 2`
+            * Burst duration: `1.7s => 1.8s`
+            * Cooldown: `1.6s => 1.4s`
+
+## 2020-05-23
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
     * Artillery cruiser autofire:
