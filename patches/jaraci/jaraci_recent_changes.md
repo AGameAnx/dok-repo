@@ -53,6 +53,7 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-05-22](#2020-05-22)
     - [2020-05-23](#2020-05-23)
     - [2020-05-25 (Jaraci Cup #6)](#2020-05-25-jaraci-cup-6)
+    - [2020-07-08](#2020-07-08)
 
 # Changes
 
@@ -1279,3 +1280,85 @@ Full combined changelog can be found [HERE](jaraci.md)
             * Number of bursts: `3 => 2`
             * Burst duration: `1.7s => 1.8s`
             * Cooldown: `1.6s => 1.4s`
+
+## 2020-07-08
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * Gun turret target priority: `reduced`
+    * AA turret cost: `200CU => 250CU`
+    * AAV armor: `9 => 8`
+    * Missile battery reload time: `3s => 2.5s`
+    * Support cruiser missile AA damage: `50 => 55`
+    * Gunship damage: `36 => 37`
+    * Tactical bomber:
+        * Damage: `1500 => 1600`
+        * AOE: `220 => 200`
+* Coalition:
+    * Battlecruiser:
+        * Hitpoints: `2700 => 3000`
+        * Range: `1250 => 1200`
+* Soban:
+    * Battlecruiser hitpoints: `2700 => 2900`
+* Gaalsien/Khaaneph:
+    * Assault ship: 
+        * AOE falloff: `Quadratic => Linear`
+        * Armor upgrade cost:
+            * Level 2: `200CU 150RU => 200CU 200RU`
+            * Level 3: `250CU 200RU => 250CU 250RU`
+    * Heavy railgun:
+        * Hitpoints: `750 => 850`
+        * Armor: `3 => 0`
+        * Reload: `0 => 0.4s` (total firing sequence time: `2.6s => 3.0s`)
+        * EMP round ability range: `1300 => 1350`
+    * Interceptor:
+        * Armor: `3 => 2`
+        * Damage: `110 => 100`
+        * AOE: `70 => 62`
+    * Honourguard cruiser cost: `550CU 270RU => 550CU 250RU`
+* Gaalsien:
+    * Siege cruiser:
+        * Tech research cost: `250CU 150RU => 500CU 200RU`
+        * Cost: `300CU 150RU => 450CU 270RU`
+        * Production time: `30s => 50s`
+        * Population cost: `5 => 6`
+        * Hitpoints: `1400 => 2000`
+        * Sensors range: `1000 => 1400`
+        * Contact range: `1250 => 1550`
+        * Movement speed: `60 => 52`
+        * Barrage:
+            * Recharge: `90s => 110s`
+            * Base range: `2000 => 2350`
+            * Damage: `120 => 220`
+            * Damage packets: `1 => 2`
+            * AOE: `100 => 200`
+            * Rate of fire: `5 => 1`
+            * Burst: `1.8s => 2.05s`
+            * Number of bursts: `2 => 4`
+            * Cooldown: `1.4 => 3.25s`
+            * Damage against small: `50% => 25%`
+            * Damage against carrier: `60% => 50%`
+        * Autofire weapon:
+            * Damage: `120 => 200`
+            * Damage packets: `1 => 2`
+        * PD weapon damage: `3 => 14` (DPS: `6.7 => 31.5`)
+        * EMP weapon:
+            * Damage: `300 => 450`
+            * Affected by high ground: `Yes => No`
+* Khaaneph:
+    * Carrier PD:
+        * Range: `1050 => 950`
+        * Rate of fire: `8 => 7`
+        * Fixed incorrect rate of fire tooltip.
+    * Siege Cruiser:
+        * Hitpoints: `3200 => 2800`
+        * Sensors radius: `1150 => 1100`
+        * Contact radius: `1300 => 1200`
+        * Barrage weapon:
+            * AOE Falloff: `Quadratic => Linear`
+            * Recharge time: `140s => 100s`
+            * Range: `2250 => 2000`
+        * Direct fire weapon:
+            * Damage: `130 => 120`
+            * AOE: `280 => 250` (Quadratic falloff)
+            * Range: `1000 => 1150`
+        * EMP weapon affected by high ground: `Yes => No`
