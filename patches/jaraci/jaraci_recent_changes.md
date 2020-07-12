@@ -54,6 +54,7 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-05-23](#2020-05-23)
     - [2020-05-25 (Jaraci Cup #6)](#2020-05-25-jaraci-cup-6)
     - [2020-07-08](#2020-07-08)
+    - [2020-07-12](#2020-07-12)
 
 # Changes
 
@@ -1362,3 +1363,25 @@ Full combined changelog can be found [HERE](jaraci.md)
             * AOE: `280 => 250` (Quadratic falloff)
             * Range: `1000 => 1150`
         * EMP weapon affected by high ground: `Yes => No`
+
+## 2020-07-12
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * Missile battery mortar packets: `30 => 35`
+    * Artillery cruiser:
+        * Cost: `450CU 200RU => 500CU 200RU`
+        * Armor: `6 => 2`
+        * Population cost: `4 => 5`
+* Soban:
+    * Targeting jammer population cost: `1 => 0`
+* Gaalsien/Khaaneph:
+    * Sandskimmer hitpoints: `540 => 550`
+    * Assault railgun:
+        * Reload time: `2.6s => 2s`
+        * Dart maneuver:
+            * Duration: `2s => 2.5s`
+            * Recharge time: `30s => 25s`
+* Gaalsien:
+    * Siege cruiser
+        * Cost: `450CU 270RU => 400CU 230RU`
+        * Production time: `50s => 55s`

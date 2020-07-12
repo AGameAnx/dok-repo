@@ -2958,13 +2958,14 @@
 			}
 		},
 		"N_ECMField_MP": {
-			"DetectableAttributes": {
-				"MinimumStateAfterDetection": "Hidden"
-			},
 			"UnitAttributes": {
 				"MaxHealth": 1100,
+				"PopCapCost": 0,
 				"ContactRadius": 400,
 				"SensorRadius": 270
+			},
+			"DetectableAttributes": {
+				"MinimumStateAfterDetection": "Hidden"
 			}
 		},
 		"ECMField_StatusEffect": {
@@ -3955,10 +3956,10 @@
 		
 		"G_SandSkimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 540,
+				"MaxHealth": 550,
 				"SensorRadius": 1150,
 				"ProductionTime": 11,
-				"PriorityAsTarget": 10
+				"PriorityAsTarget": 5
 			},
 			"AbilityAttributes": {
 				"Ability_G_SandSkimmersRegen": {
@@ -3986,10 +3987,10 @@
 		},
 		"K_Sandskimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 540,
+				"MaxHealth": 550,
 				"SensorRadius": 1150,
 				"ProductionTime": 11,
-				"PriorityAsTarget": 10
+				"PriorityAsTarget": 5
 			},
 			"AbilityAttributes": {
 				"Ability_G_SandSkimmersRegen": {
@@ -4640,12 +4641,12 @@
 					}
 				},
 				"Ability_G_RailGun_Dash_Move_To_MP": {
-					"CooldownTimeSecs": 30
+					"CooldownTimeSecs": 25
 				},
 				"Ability_G_RailGun_Dash_MP": {
 					"ApplyStatusEffect": {
 						"RailGun_Dash_StatusEffect": {
-							"Duration": 2
+							"Duration": 2.5
 						}
 					}
 				}
@@ -4658,7 +4659,7 @@
 					"NumberOfBursts": 5,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 2600,
+					"ReloadTimeMS": 2000,
 					"RangeAttributesShort":  { "Accuracy": 20 },
 					"RangeAttributesMedium": { "Accuracy": 16 },
 					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
@@ -4698,12 +4699,12 @@
 					}
 				},
 				"Ability_G_RailGun_Dash_Move_To_MP": {
-					"CooldownTimeSecs": 30
+					"CooldownTimeSecs": 25
 				},
 				"Ability_G_RailGun_Dash_MP": {
 					"ApplyStatusEffect": {
 						"RailGun_Dash_StatusEffect": {
-							"Duration": 2
+							"Duration": 2.5
 						}
 					}
 				}
@@ -4716,7 +4717,7 @@
 					"NumberOfBursts": 5,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 2600,
+					"ReloadTimeMS": 2000,
 					"RangeAttributesShort":  { "Accuracy": 20 },
 					"RangeAttributesMedium": { "Accuracy": 16 },
 					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
@@ -4807,7 +4808,7 @@
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
 					"BaseDamagePerRound": 660,
 					"AreaOfEffectRadius": 220,
-					"DamagePacketsPerShot": 30,
+					"DamagePacketsPerShot": 35,
 					"AreaOfEffectFalloffType": "Linear",
 					"ExcludeFromHeightAdvantage": true
 				}
@@ -5548,12 +5549,12 @@
 		
 		"C_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 450,
+				"Resource1Cost": 500,
 				"Resource2Cost": 200,
-				"MaxHealth": 2100,
-				"Armour": 6,
+				"MaxHealth": 1900,
+				"Armour": 2,
 				"ProductionTime": 60,
-				"PopCapCost": 4
+				"PopCapCost": 5
 			},
 			"AbilityAttributes": {
 				"Ability_C_ArtilleryBarrage": {
@@ -5654,8 +5655,8 @@
 		
 		"G_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 450,
-				"Resource2Cost": 270,
+				"Resource1Cost": 400,
+				"Resource2Cost": 230,
 				"MaxHealth": 2000,
 				"Armour": 3,
 				"ProductionTime": 50,
