@@ -55,6 +55,7 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-05-25 (Jaraci Cup #6)](#2020-05-25-jaraci-cup-6)
     - [2020-07-08](#2020-07-08)
     - [2020-07-12](#2020-07-12)
+    - [2020-07-18](#2020-07-18)
 
 # Changes
 
@@ -1385,3 +1386,14 @@ Full combined changelog can be found [HERE](jaraci.md)
     * Siege cruiser
         * Cost: `450CU 270RU => 400CU 230RU`
         * Production time: `50s => 55s`
+
+## 2020-07-18
+*Not yet reflected in the main changelog.*
+* Gaalsien:
+    * Carrier Speed power shunt:
+        * Level 0: `15 => 35`
+        * Level 1: `35 => 50`
+        * Level 2: `55 => 65`
+        * Level 3: `70 => 80`
+        * Level 4: `85 => 95`
+        * Level 5: `105 => 110`
