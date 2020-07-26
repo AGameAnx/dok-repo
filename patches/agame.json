@@ -2935,12 +2935,12 @@
 			},
 			"WeaponAttributes": {
 				"N_Gun_Turret_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 54,
+					"BaseDamagePerRound": 52,
 					"DamagePacketsPerShot": 2,
 					"NumberOfBursts": 15,
 					"CooldownTimeMS": 0,
-					"BurstPeriodMinTimeMS": 334,
-					"BurstPeriodMaxTimeMS": 334,
+					"BurstPeriodMinTimeMS": 280,
+					"BurstPeriodMaxTimeMS": 280,
 					"RateOfFire": 4,
 					"ReloadTimeMS": 1650,
 					"AreaOfEffectRadius": 75,
@@ -3678,10 +3678,10 @@
 			"UnitAttributes": {
 				"Resource1Cost": 250,
 				"Resource2Cost": 20,
-				"MaxHealth": 930,
+				"MaxHealth": 980,
 				"SensorRadius": 1100,
 				"ProductionTime": 17,
-				"Armour": 8,
+				"Armour": 6,
 				"PopCapCost": 2
 			},
 			"WeaponAttributes": {
@@ -3874,15 +3874,15 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 16,
+					"BaseDamagePerRound": 14,
 					"RateOfFire": 5,
-					"CooldownTimeMS": 450,
+					"CooldownTimeMS": 300,
 					"NumberOfBursts": 2,
-					"BurstPeriodMinTimeMS": 900,
-					"BurstPeriodMaxTimeMS": 950,
+					"BurstPeriodMinTimeMS": 950,
+					"BurstPeriodMaxTimeMS": 1150,
 					"RangeAttributesShort": { "Accuracy": 90 },
 					"RangeAttributesMedium": { "Accuracy": 85 },
-					"RangeAttributesLong": { "Accuracy": 61 },
+					"RangeAttributesLong": { "Accuracy": 65 },
 					"Turret": { "RotationSpeed": 250 },
 					"Modifiers": {
 						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 70 },
@@ -3924,15 +3924,15 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 16,
+					"BaseDamagePerRound": 14,
 					"RateOfFire": 5,
-					"CooldownTimeMS": 450,
+					"CooldownTimeMS": 300,
 					"NumberOfBursts": 2,
-					"BurstPeriodMinTimeMS": 900,
-					"BurstPeriodMaxTimeMS": 950,
+					"BurstPeriodMinTimeMS": 950,
+					"BurstPeriodMaxTimeMS": 1150,
 					"RangeAttributesShort": { "Accuracy": 90 },
 					"RangeAttributesMedium": { "Accuracy": 85 },
-					"RangeAttributesLong": { "Accuracy": 61 },
+					"RangeAttributesLong": { "Accuracy": 65 },
 					"Turret": { "RotationSpeed": 250 },
 					"Modifiers": {
 						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 70 },
@@ -3962,6 +3962,9 @@
 				"SensorRadius": 1150,
 				"ProductionTime": 11,
 				"PriorityAsTarget": 5
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 140 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_SandSkimmersRegen": {
@@ -3993,6 +3996,9 @@
 				"SensorRadius": 1150,
 				"ProductionTime": 11,
 				"PriorityAsTarget": 5
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 140 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_SandSkimmersRegen": {
@@ -4794,7 +4800,7 @@
 		"C_HAC_Upgrade01_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 300,
-				"Resource2Cost": 90,
+				"Resource2Cost": 85,
 				"Armour": 3,
 				"PriorityAsTarget": -10
 			},
@@ -5134,7 +5140,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Bomber_Weapon_A2G_MP": {
-					"BaseDamagePerRound": 800,
+					"BaseDamagePerRound": 900,
 					"ReloadTimeMS": 3500,
 					"AreaOfEffectRadius": 140,
 					"AreaOfEffectFalloffType": "Quadratic",
@@ -5164,7 +5170,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Bomber_Weapon_A2G_MP": {
-					"BaseDamagePerRound": 800,
+					"BaseDamagePerRound": 900,
 					"ReloadTimeMS": 3500,
 					"AreaOfEffectRadius": 140,
 					"AreaOfEffectFalloffType": "Quadratic",
@@ -5194,7 +5200,30 @@
 		},
 		"Research_Buff_G_Bomber_Hold": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 400
+				"Resource1Cost": 400,
+				"Resource2Cost": 150,
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Value": 3
+							},
+							"1": {
+								"Value": 3
+							}
+						}
+					},
+					"1": {
+						"BuffSet": {
+							"0": {
+								"Value": 3
+							},
+							"1": {
+								"Value": 3
+							}
+						}
+					}
+				}
 			}
 		},
 		

@@ -56,6 +56,7 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-07-08](#2020-07-08)
     - [2020-07-12](#2020-07-12)
     - [2020-07-18](#2020-07-18)
+    - [2020-07-26](#2020-07-26)
 
 # Changes
 
@@ -1397,3 +1398,27 @@ Full combined changelog can be found [HERE](jaraci.md)
         * Level 3: `70 => 80`
         * Level 4: `85 => 95`
         * Level 5: `105 => 110`
+
+## 2020-07-26
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * LAV (DPS: `38.2 => 38.6`, Long range DPS: `23.3 => 25`):
+        * Damage: `16 => 14`
+        * Cooldown: `0.45s => 0.3s`
+        * Burst: `0.9-0.95s => 0.95-1.15s`
+        * Accuracy distant: `61% => 65%`
+    * AAV:
+        * Hitpoints: `930 => 980`
+        * Armor: `8 => 6`
+    * Missile battery cost: `300CU 90RU => 300CU 85RU`
+* Coalition:
+    * Gun turret (DPS: `117.2 => 127.9`):
+        * Damage: `54 => 52`
+        * Burst duration: `0.334s => 0.28s` (This is a buff)
+* Gaalsien/Khaaneph:
+    * Sandskimmer max speed: `130 => 140` (Raiding: `150 => 160`)
+    * Bomber (total damage per sortie `3200 => 2700`):
+        * Damage: `800 => 900`
+        * Hold upgrade:
+            * Cost: `400CU 200RU => 400CU 150RU`
+            * Inventory size: `4 => 3`
