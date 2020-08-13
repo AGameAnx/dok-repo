@@ -1,5 +1,22 @@
 # Homeworld: Deserts of Kharak - More Maps Repository
 
+## Installation Instructions
+
+Installing this mod will grant you access to all of the most widely used patches through the in-game chat commands. For more information reffer to the Discord pinned posts in `#mod-releases` channel
+
+Look to the right of these instructions you will see a heading that reads **Releases** 
+
+### Windows Instalation
+
+- Click the link to the latest release version
+- Download the zip file as of this writing it is named `more-maps-v1.1.zip`
+- Before continuing make note of where DoK is installed on your machine
+  - The easiest way to do this is to go to Steam
+  - Right click DoK in your games library, go to `Manage > Browse local files`
+  - This is the path you want to give the installer
+- Unzip the folder and run `install.exe`
+- If you run into issues please reffer to the troubleshooting section or ask the Discord
+
 [Mac install](info/install.md)
 
 ***Copy and paste the command line into the multiplayer chat window.***
