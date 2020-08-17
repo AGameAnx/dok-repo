@@ -1303,7 +1303,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Soban:
     * Battlecruiser hitpoints: `2700 => 2900`
 * Gaalsien/Khaaneph:
-    * Assault ship: 
+    * Assault ship:
         * AOE falloff: `Quadratic => Linear`
         * Armor upgrade cost:
             * Level 2: `200CU 150RU => 200CU 200RU`
