@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<!-- More Maps by SSSS -->
+	<meta name="shallows-alt" authors="Bozocow" description="shallows-alt"/>
+ 
+	<layout map="MP_17_1v1_2" mode="Team" players="2,3,4,5,6">
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="-650" y="3440" angle="60" camera="150"/>
+			<spawn team="0" index="1" x="8999" y="8999" angle="315" camera="225" fleet="false"/>
+			<spawn team="0" index="2" x="8999" y="8999" angle="315" camera="225" fleet="false"/>
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="1609" y="-3359" angle="225" camera="330"/>
+			<spawn team="1" index="1" x="1" y="1" angle="135" camera="45" fleet="false"/>
+			<spawn team="1" index="2" x="1" y="1" angle="135" camera="45" fleet="false"/>
+		</spawns>
+		<units>
+			<!-- team 1 spectator units -->
+			<unit team="0" index="1" type="N_DemoCharge" x="1" y="1" angle="0"/>
+			<unit team="0" index="2" type="N_DemoCharge" x="1" y="1" angle="0"/>
+			<!-- team 2 spectator units -->
+			<unit team="1" index="1" type="N_DemoCharge" x="8999" y="8999" angle="180"/>
+			<unit team="1" index="2" type="N_DemoCharge" x="8999" y="8999" angle="180"/>
+		</units>
+		<resources>
+			<!-- team 1 -->
+			<resource x="-973" y="3600" type="cu" amount="7500" collectors="2"/>
+			<resource x="-800" y="3700" type="ru" amount="3000" collectors="2"/>
+			<resource x="-627" y="3800" type="cu" amount="7500" collectors="2"/>
+			<!-- team 2 -->
+			<resource x="1609" y="-3641" type="cu" amount="7500" collectors="2"/>
+			<resource x="1750" y="-3500" type="ru" amount="3000" collectors="2"/>
+			<resource x="1891" y="-3359" type="cu" amount="7500" collectors="2"/>
+		</resources>
+		<wrecks>
+			<!-- team 1 -->
+			<wreck x="-884" y="1846" angle="90">
+				<resource x="-1084" y="1946" type="cu" amount="10500" collectors="2"/>
+				<resource x="-1084" y="1746" type="ru" amount="4000" collectors="2"/>
+			</wreck>
+			<wreck x="-1942" y="788" angle="225">
+				<resource x="-1742" y="888" type="cu" amount="10500" collectors="2"/>
+				<resource x="-1742" y="688" type="ru" amount="4000" collectors="2"/>
+			</wreck>
+			<!-- team 2 -->
+			<wreck x="974" y="-1506" angle="225">
+				<resource x="1174" y="-1606" type="cu" amount="10500" collectors="2"/>
+				<resource x="1174" y="-1406" type="ru" amount="4000" collectors="2"/>
+			</wreck>
+			<wreck x="1881" y="-451" angle="135">
+				<resource x="1681" y="-551" type="cu" amount="10500" collectors="2"/>
+				<resource x="1681" y="-351" type="ru" amount="4000" collectors="2"/>
+			</wreck>
+		</wrecks>
+		<artifacts>
+			<artifact x="881" y="664"/>
+			<artifact x="-5" y="-15"/>
+			<artifact x="-876" y="-754"/>
+		</artifacts>
+		<ezs>
+			<ez team="0" x="3300" y="3300" radius="600"/>
+			<ez team="1" x="-3300" y="-3300" radius="600"/>
+		</ezs>
+	</layout>
+</dokmap>
