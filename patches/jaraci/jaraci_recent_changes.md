@@ -56,6 +56,7 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-07-08](#2020-07-08)
     - [2020-07-12](#2020-07-12)
     - [2020-07-18](#2020-07-18)
+    - [2020-07-26 (Jaraci Cup #7)](#2020-07-26-jaraci-cup-7)
     - [2020-07-26](#2020-07-26)
 
 # Changes
@@ -1399,7 +1400,7 @@ Full combined changelog can be found [HERE](jaraci.md)
         * Level 4: `85 => 95`
         * Level 5: `105 => 110`
 
-## 2020-07-26
+## 2020-07-26 (Jaraci Cup #7)
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
     * LAV (DPS: `38.2 => 38.6`, Long range DPS: `23.3 => 25`):
@@ -1422,3 +1423,84 @@ Full combined changelog can be found [HERE](jaraci.md)
         * Hold upgrade:
             * Cost: `400CU 200RU => 400CU 150RU`
             * Inventory size: `4 => 3`
+
+## 2020-07-26
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * Probe contact radius: `1450 => 1550`
+    * LAV weapon cooldown: `0.3s => 0.4s` (DPS: `38.6 => 37.5`)
+    * AAV:
+        * Cost: `250CU 20RU => 260CU 20RU`
+        * AOE radius: `0 => 30`
+        * AOE falloff type: `None => Linear`
+        * Suppression:
+            * Slow effect: `35% => 42%`
+            * Duration: `2s => 2.65s`
+    * Assault cruiser ability cooldown: `40s => 30s`
+    * Support cruiser AA:
+        * Damage: `55 => 70`
+        * AOE: `40 => 60`
+        * Reload: `4s => 5s`
+* Soban:
+    * ALM:
+        * Damage: `110 => 150`
+        * Packets: `2 => 2.65s`
+        * AOE: `80 => 86`
+    * Battlecruiser:
+        * Research cost: `550CU 300RU => 450CU 200RU`
+        * Damage: `280 => 300`
+* Gaalsien/Khaaneph:
+    * Production cruiser:
+        * Refinery mode cost: `600CU 80RU => 550CU 80RU`
+        * Cost: `600CU 60RU => 650CU 60RU`
+        * Ranges: `650/950/1250 => 900/1200/1380`
+        * Accuracies: `60/55/40 => 55/45/25`
+    * Sandskimmer:
+        * Tech cost: `300CU => 350CU`
+        * Research time: `30s => 35s`
+        * Production time: `11s => 10s`
+        * Regeneration activation delay: `5.5s => 10s`
+    * Assault railgun (DPS: `69.6 => 66.7`):
+        * Damage: `42 => 48`
+        * Burst duration: `0.11s => 0.09s`
+        * Number of bursts: `5 => 6`
+        * Reload: `2s => 3s`
+        * Dart maneuver:
+            * Cost: `100CU 70RU => 150CU 30RU`
+            * Duration: `2.5s => 3s`
+    * Heavy railgun reload: `0.4s => 0.6s`
+    * Assault ship:
+        * Damage: `30 => 28`
+        * AOE falloff type: `Linear => Quadratic`
+    * Interceptor AOE: `62 => 67`
+    * Honourguard cruiser:
+        * Tech cost: `500CU 350RU => 500CU 280RU`
+        * Damage: `500 => 450`
+        * AOE: `220 => 250`
+    * Siege cruiser range upgrade research time: `50s => 70s`
+* Gaalsien:
+    * Baserunner heal ability cooldown: `80s => 75s`
+    * Siege cruiser:
+        * Research cost: `500CU 200RU => 400CU 150RU`
+        * Production time: `50s => 45s`
+        * Cost: `400CU 230RU => 400CU 180RU`
+        * Armor: `3 => 9`
+        * Speed: `52 => 66`
+        * Acceleration time: `1.25s => 3s`
+        * Barrage:
+            * Ability cooldown: `110s => 45s`
+            * Ranges: `1000/1500/2350 => 800/1200/1550`
+            * Min range: `900 => 450`
+            * Damage: `220 => 140`
+            * Rate of fire: `1 => 3`
+            * AOE: `200 => 120`
+            * Burst duration: `2.05s => 1.75s`
+            * Number of bursts: `4 => 2`
+            * Cooldown between bursts: `3.25s => 2.5s`
+            * Range upgrade ranges: `900/1850/2500 => 800/1300/1800`
+        * Autofire:
+            * Reload: `10s => 9s`
+            * Damage: `200 => 140`
+            * Number of bursts: `1 => 2`
+* Khaaneph:
+    * Siege cruiser tech research time: `95s => 90s`
