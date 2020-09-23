@@ -1444,7 +1444,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Soban:
     * ALM:
         * Damage: `110 => 150`
-        * Packets: `2 => 2.65s`
+        * Packets: `2 => 3`
         * AOE: `80 => 86`
     * Battlecruiser:
         * Research cost: `550CU 300RU => 450CU 200RU`
