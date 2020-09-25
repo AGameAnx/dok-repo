@@ -1516,8 +1516,9 @@ Full combined changelog can be found [HERE](jaraci.md)
     * Siege cruiser:
         * Autofire damage: `140 => 160`
         * Barrage:
-            * Damage: `140 => 160`
+            * Damage: `140 => 180`
             * ROF: `3 => 5`
             * Burst duration: `1.75s => 1.35s`
+            * AOE: `120 => 95`
             * Max range: `1550 => 1650`
             * Range upgrade max range: `1800 => 1900`
