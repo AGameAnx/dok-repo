@@ -58,6 +58,7 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-07-18](#2020-07-18)
     - [2020-07-26 (Jaraci Cup #7)](#2020-07-26-jaraci-cup-7)
     - [2020-07-26](#2020-07-26)
+    - [2020-07-26](#2020-07-26-1)
 
 # Changes
 
@@ -1504,3 +1505,19 @@ Full combined changelog can be found [HERE](jaraci.md)
             * Number of bursts: `1 => 2`
 * Khaaneph:
     * Siege cruiser tech research time: `95s => 90s`
+
+## 2020-07-26
+*Not yet reflected in the main changelog.*
+* Coalition:
+    * Turret:
+        * Damage: `52 => 55`
+        * AOE: `75 => 80`
+* Gaalsien:
+    * Siege cruiser:
+        * Autofire damage: `140 => 160`
+        * Barrage:
+            * Damage: `140 => 160`
+            * ROF: `3 => 5`
+            * Burst duration: `1.75s => 1.35s`
+            * Max range: `1550 => 1650`
+            * Range upgrade max range: `1800 => 1900`
