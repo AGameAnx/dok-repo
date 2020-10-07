@@ -57,8 +57,9 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-07-12](#2020-07-12)
     - [2020-07-18](#2020-07-18)
     - [2020-07-26 (Jaraci Cup #7)](#2020-07-26-jaraci-cup-7)
-    - [2020-07-26](#2020-07-26)
-    - [2020-07-26](#2020-07-26-1)
+    - [2020-09-23](#2020-09-23)
+    - [2020-09-25](#2020-09-25)
+    - [2020-10-07](#2020-10-07)
 
 # Changes
 
@@ -1287,7 +1288,6 @@ Full combined changelog can be found [HERE](jaraci.md)
             * Cooldown: `1.6s => 1.4s`
 
 ## 2020-07-08
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
     * Gun turret target priority: `reduced`
     * AA turret cost: `200CU => 250CU`
@@ -1425,7 +1425,7 @@ Full combined changelog can be found [HERE](jaraci.md)
             * Cost: `400CU 200RU => 400CU 150RU`
             * Inventory size: `4 => 3`
 
-## 2020-07-26
+## 2020-09-23
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
     * Probe contact radius: `1450 => 1550`
@@ -1506,7 +1506,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Khaaneph:
     * Siege cruiser tech research time: `95s => 90s`
 
-## 2020-07-26
+## 2020-09-25
 *Not yet reflected in the main changelog.*
 * Coalition:
     * Turret:
@@ -1522,3 +1522,23 @@ Full combined changelog can be found [HERE](jaraci.md)
             * AOE: `120 => 95`
             * Max range: `1550 => 1650`
             * Range upgrade max range: `1800 => 1900`
+
+## 2020-10-07
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+    * LAV armor upgrade CU cost: `300 => 350`
+    * Tactical bomber turn radius: `310 => 250`
+* Soban:
+    * Battlecruiser damage: `300 => 340`
+* Gaalsien/Khaaneph:
+    * Missile ship direct missile barrage cooldown: `90s => 80s`
+    * Heavy Railgun:
+        * Hitpoints: `850 => 820`
+        * Ranged calibration research cost: `200CU 200RU => 200CU 230RU`
+* Gaalsien:
+    * Siege cruiser barrage:
+        * Cooldown time: `45s => 40s`
+        * Range: `1650 => 1750`
+        * Range upgrade range: `1900 => 2000`
+* Khaaneph:
+    * Siege cruiser barrage falloff: `Linear => Quadratic`
