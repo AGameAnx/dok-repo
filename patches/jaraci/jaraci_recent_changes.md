@@ -1423,7 +1423,6 @@ Full combined changelog can be found [HERE](jaraci.md)
             * Inventory size: `4 => 3`
 
 ## 2020-09-23
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
     * Probe contact radius: `1450 => 1550`
     * LAV weapon cooldown: `0.3s => 0.4s` (DPS: `38.6 => 37.5`)
@@ -1504,7 +1503,6 @@ Full combined changelog can be found [HERE](jaraci.md)
     * Siege cruiser tech research time: `95s => 90s`
 
 ## 2020-09-25
-*Not yet reflected in the main changelog.*
 * Coalition:
     * Turret:
         * Damage: `52 => 55`
@@ -1521,7 +1519,6 @@ Full combined changelog can be found [HERE](jaraci.md)
             * Range upgrade max range: `1800 => 1900`
 
 ## 2020-10-07
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
     * LAV armor upgrade CU cost: `300 => 350`
     * Tactical bomber turn radius: `310 => 250`
