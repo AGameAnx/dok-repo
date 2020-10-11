@@ -1369,7 +1369,6 @@ Full combined changelog can be found [HERE](jaraci.md)
         * EMP weapon affected by high ground: `Yes => No`
 
 ## 2020-07-12
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
     * Missile battery mortar packets: `30 => 35`
     * Artillery cruiser:
@@ -1386,12 +1385,11 @@ Full combined changelog can be found [HERE](jaraci.md)
             * Duration: `2s => 2.5s`
             * Recharge time: `30s => 25s`
 * Gaalsien:
-    * Siege cruiser
+    * Siege cruiser:
         * Cost: `450CU 270RU => 400CU 230RU`
         * Production time: `50s => 55s`
 
 ## 2020-07-18
-*Not yet reflected in the main changelog.*
 * Gaalsien:
     * Carrier Speed power shunt:
         * Level 0: `15 => 35`
@@ -1402,7 +1400,6 @@ Full combined changelog can be found [HERE](jaraci.md)
         * Level 5: `105 => 110`
 
 ## 2020-07-26 (Jaraci Cup #7)
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
     * LAV (DPS: `38.2 => 38.6`, Long range DPS: `23.3 => 25`):
         * Damage: `16 => 14`

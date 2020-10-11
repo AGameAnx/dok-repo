@@ -572,14 +572,14 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 **Gun turret weapon**
 > *The goal of this rework is to make baserunner turret slightly more effective against armored targets and to also fix some issues with its performance such as it firing behind dunes. This new iteration of the turret will allow for greater micro potential against it with strike craft and it'll be slightly better at countering highly upgraded tanks. With accuracy always being 100% the turret will always 1-shot skimmers which aren't upgraded with level 2 armor or aren't pulled away.*
 
-* Damage: `30 => 54`
+* Damage: `30 => 52`
 * Damage packets: `1 => 2`
 * AOE: `0 => 75`
 * AOE falloff: `None => Quadratic`
 * Rate of fire: `14 => 4`
 * Number of bursts: `2 => 15`
 * Cooldown: `0.1s => 0`
-* Burst: `0.8-1s => 0.334s`
+* Burst: `0.8-1s => 0.28s`
 * Reload: `2s => 1.65s`
 * Range: `1200 => 1450`
 * Accuracy: `95%/85%/75% => 100%/95%/60%`
@@ -595,6 +595,7 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 * Sensors radius: `0 => 270`
 * Contact radius: `0 => 400`
 * Cooldown: `60s => 80s`
+* Population cost: `1 => 0`
 * Projectile: `Mine => Scanner` (increased travel speed)
 * Fixed an issue of this unit always being "contacted"
 * Status effect:
@@ -613,14 +614,14 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 * Hitpoints: `500 => 450`
 * Armor: `0 => 2`
 * Weapon:
-    * Base damage: `15 => 16`
-    * Burst: `0.8-1.2s => 0.95-1s`
+    * Base damage: `15 => 14`
+    * Burst: `0.8-1.2s => 0.95-1.15s`
     * Burst count: `4 => 2`
-    * Cooldown: `0.8s => 0.45s`
+    * Cooldown: `0.8s => 0.3s`
     * Accuracy:
         * Short: `94% => 90%`
         * Medium: `82% => 85%`
-        * Long: `56% => 61%`
+        * Long: `56% => 65%`
     * Turret rotation speed: `180 => 250`
     * Damage against air: `50% => 70%`
     * Damage against probes: `100% => 50%`
@@ -639,8 +640,9 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 **Survivability**
 > *The hitpoints are reduced on AAV to make soft-countering them with units such as assault ships or interceptors more of an option than it previously was. Previously, AAV would drive past a lot of things to target the squishier targets such as enemy salvagers. This is still possible, but the enemy can react to it easier.*
 
-* Hitpoints: `1400 => 940`
+* Hitpoints: `1400 => 980`
 * Sensors: `1000 => 1100`
+* Armor: `9 => 6`
 
 **Pricing**
 > *AAV timing on small maps is a bit too oppressive. Due to an increase of unit's lategame utility, the base cost is going up slightly. AAV are not very effective late game units and are cheap, their population cost doesn't reflect this.*
@@ -650,7 +652,6 @@ Recent changes can be found in a [sister document HERE](jaraci_recent_changes.md
 * Cost: `180CU 30RU => 250CU 20RU`
 * Production time: `14s => 17s`
 * Population: `3 => 2`
-* Armor: `9 => 8`
 
 **Weapon**
 > *AAV weapon has notoriously one of the weakest late game weapons present in the game (for example, it dealt only 1 damage per shot to upgraded railguns). These changes will allow it to maintain some damage output against units with upgrades.*
@@ -722,7 +723,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 **General stats**
 > *The largest factor of AA doing its work vs normal air strategies is the first shot. Increased reload duration means AA will have a much harder time quickly killing off large numbers of air and heavy air and both of those strategies are underused, however it won't affect the early game air rush situations very much. Additionally rebalancing cost, lowering armor to make out of position batteries more punishable and increasing speed to ease the use of this unit*
 
-* Cost: `350CU 80RU => 300CU 90RU`
+* Cost: `350CU 80RU => 300CU 85RU`
 * Speed: `50 => 60`
 * Armor: `5 => 3`
 * Reload: `2s => 2.5s`
@@ -732,7 +733,7 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Benefits from high ground: `Yes => No`
 * Falloff: `None => Linear`
-* Damage packets: `20 => 30`
+* Damage packets: `20 => 35`
 * AOE: `180 => 220`
 * Damage: `450 => 660`
 
@@ -831,11 +832,11 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Tech research cost: `500CU 350RU => 500CU 250RU`
 * Research time: `100s => 55s`
-* Cost: `450CU 250RU => 450CU 200RU`
-* Population: `6 to 4
+* Cost: `450CU 250RU => 500CU 200RU`
+* Population: `6 => 5`
 * Construction time: `70s => 60s`
 * Hitpoints: `2500 => 2100`
-* Armor: `5 => 6`
+* Armor: `5 => 2`
 * Movement dynamics characteristics:
     * Max speed: `50 => 56`
     * Acceleration time: `1.5s => 1.2s`
@@ -951,11 +952,12 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 **Speed**
 > *Slight reduction in power of this power system. Chasing down a lategame gaalsien carrier was previously extremely difficult.*
 
-* Base: `10 => 15`
+* Base: `10 => 35`
 * Speed systems power shunt:
-    * Level 3: `75 => 70`
-    * Level 4: `95 => 85`
-    * Level 5: `120 => 105`
+    * Level 1: `35 => 50`
+    * Level 2: `55 => 65`
+    * Level 3: `75 => 80`
+    * Level 5: `120 => 110`
 
 ### Hyper-sonic missile barrage
 > *Nuke-style abilities have the potential to wipe big parts of enemy army without much chance for retaliation, only preemptive preparation is effective. A bigger window is required after their use so that players can have an engagement which will not involve another one. Hyper-sonic missile barrage is also one of the most inconsistent abilities, while also being extremely damaging when hitting larger targets. Damage reduced and increased area of effect should make the ability feel more consistent.*
@@ -1113,8 +1115,10 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 > *Discrepancy between LAV and Skimmer hitpoints was very large and caused almost every area of effect weapon to be extremely difficult to balance. Skimmers also needed a slight decrease in power. Slightly increased sensors range should help skimmers avoid AAV and other early game threats easier.*
 
 * Tech research time: `35s => 30s`
-* Hitpoints: `650 => 540`
+* Hitpoints: `650 => 550`
 * Sensor radius: `1000 => 1150`
+* Base speed: `130 => 140`
+* Raiding max speed: `150 => 160`
 * Self regen:
     * Activation time: `3.5s => 5.5s`
     * Amount healed per tick: `16 => 20`
@@ -1263,13 +1267,13 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Number of Bursts: `3 => 5`
 * Wind-up: `1s => 0.6s`
 * Wind-down: `0.5s => 0.25s`
-* Reload: `0.6s => 2.6s`
+* Reload: `0.6s => 2.0s`
 * Max range: `1000 => 1100`
 * Accuracy: `15%/13%/11% => 20%/16%/14%`
 * Dart maneuver:
     * Tech time: `60s => 30s`
     * Tech cost: `100CU 100RU => 100CU 70RU`
-    * Cooldown: `60s => 30s`
+    * Cooldown: `60s => 25s`
     * Duration: `2s => 3s`
 
 ### Heavy railgun
@@ -1367,11 +1371,14 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 * Hitpoints: `1250 => 1050`
 * Max speed: `550 => 450`
 * Turn radius: `225 => 300`
-* Damage: `1000 to 800`
+* Damage: `1000 => 900`
 * Reload: `1.5s => 3.5s`
 * Damage against small targets: `100% => 60%`
 * AOE: `60 => 140`
 * Falloff: `None => Quadratic`
+* Hold upgrade:
+    * Cost: `400CU 200RU => 400CU 150RU`
+    * Inventory size: `4 => 3`
 
 **Upgrades**
 > *Extremely expensive to fully upgrade gaalsien bombers, making these upgrades very undesirable unless all-inning. Bomber usability falls off as counters get added to the battlefield, investing into both bomber count and their upgrades normally is a very bad idea, these changes along with other air and anti-air rebalances should help with these upgrades become more desirable.*
@@ -1393,8 +1400,8 @@ Coalition railguns have also seen some reload time buffs to go alongside target 
 
 * Tech research cost: `600CU 450RU => 500CU 200RU`
 * Tech research time: `90s => 55s`
-* Cost: `600CU 200RU => 450CU 270RU`
-* Production time: `60s => 50s`
+* Cost: `600CU 200RU => 400CU 230RU`
+* Production time: `60s => 55s`
 * Hitpoints: `2500 => 2000`
 * Sensors range: `1000 => 1400`
 * Contact range: `1250 => 1550`
