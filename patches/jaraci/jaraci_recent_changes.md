@@ -59,7 +59,8 @@ Full combined changelog can be found [HERE](jaraci.md)
     - [2020-07-26 (Jaraci Cup #7)](#2020-07-26-jaraci-cup-7)
     - [2020-09-23](#2020-09-23)
     - [2020-09-25](#2020-09-25)
-    - [2020-10-07](#2020-10-07)
+    - [2020-10-07 (Jaraci Cup #8)](#2020-10-07-jaraci-cup-8)
+    - [2020-10-18](#2020-10-18)
 
 # Changes
 
@@ -1518,7 +1519,7 @@ Full combined changelog can be found [HERE](jaraci.md)
             * Max range: `1550 => 1650`
             * Range upgrade max range: `1800 => 1900`
 
-## 2020-10-07
+## 2020-10-07 (Jaraci Cup #8)
 * Coalition/Soban:
     * LAV armor upgrade CU cost: `300 => 350`
     * Tactical bomber turn radius: `310 => 250`
@@ -1536,3 +1537,12 @@ Full combined changelog can be found [HERE](jaraci.md)
         * Range upgrade range: `1900 => 2000`
 * Khaaneph:
     * Siege cruiser barrage falloff: `Linear => Quadratic`
+
+## 2020-10-18
+*Not yet reflected in the main changelog.*
+* General:
+    * Baserunner priority as target: `reduced`
+* Coalition/Soban:
+    * AA turret:
+        * Cost: `250CU => 300CU`
+        * Hitpoints: `1100 => 900`
