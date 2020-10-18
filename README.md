@@ -8,9 +8,10 @@
 
 | Name                             | **Command**    | Authors  | Description |
 | ---                              | ---            | ---      | ---
+| 1113 Patch                       | **/p 1113**    | S'Aarum  |
+| Baserunner Nothing               | **/p br**      | Bozocow  | Use only carrier, salvagers with strong det packs and baserunners to win
 | Jaraci balance mod (tournament)  | **/p jaraci**  | AGameAnx | [Changelog and description](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci/jaraci.md)
 | Jaraci balance mod (development) | **/p agame**   | AGameAnx | [Changelog and description](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci/jaraci.md)
-| Baserunner Nothing               | **/p br**      | Bozocow  | Use only carrier, salvagers with strong det packs and baserunners to win
 | Joke patch                       | **/p joke**    | Bozocow  | Units can have all sorts of crazy new roles, balance and capabilities
 | Khraak Deserts balance patch     | **/p deserts** | pbobbert | [Changelog and description](https://cdn.discordapp.com/attachments/509996599955554305/541211898771931136/Balancing_a_Desert_TooTwo_version_18.pdf)
 | Who's patch                      | **/p who**     | Who      |
