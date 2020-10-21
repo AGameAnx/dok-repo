@@ -14,6 +14,7 @@
 | Jaraci balance mod (development) | **/p agame**   | AGameAnx | [Changelog and description](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci/jaraci.md)
 | Joke patch                       | **/p joke**    | Bozocow  | Units can have all sorts of crazy new roles, balance and capabilities
 | Khraak Deserts balance patch     | **/p deserts** | pbobbert | [Changelog and description](https://cdn.discordapp.com/attachments/509996599955554305/541211898771931136/Balancing_a_Desert_TooTwo_version_18.pdf)
+| Shitskimmer                      | **/p skimmer** | SickIGN  |
 | Who's patch                      | **/p who**     | Who      |
 
 ## Tournament layouts
