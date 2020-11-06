@@ -18,7 +18,7 @@
                 "MaxHealth": 12500
             },
             "UnitMovementAttributes": {
-                "Dynamics": { "MaxSpeed": 25 }
+                "Dynamics": { "MaxSpeed": 20 }
             },
             "UnitHangarAttributes": {
                 "HangarBays": {
@@ -102,7 +102,6 @@
 						"TakeNoDamageForMS": 5500
 					}
 				}
-			}
 		},
 		"G_Catamaran_MP": {
 			"UnitAttributes": {
@@ -131,9 +130,36 @@
 						}
 					}
 				}
-			}
 		},
 		"G_Catamaran": {
+			"UnitAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 35,
+				"ProductionTime": 17,
+				"SensorRadius": 1100,
+				"ContactRadius": 1250,
+				"Armour": 8,
+				"MaxHealth": 1300
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 100 }
+			
+				},
+				"WeaponAttributes": {
+				"G_Catamaran_Weapon_G2G": {
+					"BaseDamagePerRound": 20,
+					"BurstPeriodMinTimeMS": 450,
+					"BurstPeriodMaxTimeMS": 650,
+					"RateOfFire": 6,
+					"AreaOfEffectRadius": 80,
+					"AreaOfEffectFalloffType": "Linear",
+					"RangeAttributesShort":  { "Distance": 450 },
+					"RangeAttributesMedium": { "Distance": 600 },
+					"RangeAttributesLong":   { "Distance": 920 }
+				}
+			}
+		},
+		"K_AssaultShip_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 300,
 				"Resource2Cost": 35,
@@ -144,7 +170,7 @@
 				"MaxHealth": 960
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 100 }
+				"Dynamics": { "MaxSpeed": 75 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_AssaultShipRegen": {
@@ -159,6 +185,19 @@
 							}
 						}
 					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 40,
+					"BurstPeriodMinTimeMS": 650,
+					"BurstPeriodMaxTimeMS": 750,
+					"RateOfFire": 3,
+					"AreaOfEffectRadius": 135,
+					"AreaOfEffectFalloffType": "Linear",
+					"RangeAttributesShort":  { "Distance": 450 },
+					"RangeAttributesMedium": { "Distance": 600 },
+					"RangeAttributesLong":   { "Distance": 920 }
 				}
 			}
 		},
@@ -190,7 +229,7 @@
 			},
 			"WeaponAttributes": {
 				"C_ArtilleryCruiser_Weapon_Barrage_MP": {
-					"NumberOfBursts": 6,
+					"NumberOfBursts": 8,
 					"RateOfFire": 3,
 					"CooldownTimeMS": 900,
 					"BurstPeriodMinTimeMS": 1700,
@@ -234,7 +273,7 @@
 					}
 				},
 				"C_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 100,
+					"BaseDamagePerRound": 220,
 					"DamagePacketsPerShot": 1,
 					"Modifiers": {
 						"1": {
@@ -292,14 +331,14 @@
 			},
 			"WeaponAttributes": {
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"BaseDamagePerRound": 220,
+					"BaseDamagePerRound": 80,
 					"DamagePacketsPerShot": 2,
-					"AreaOfEffectRadius": 200,
-					"NumberOfBursts": 4,
-					"RateOfFire": 1,
-					"CooldownTimeMS": 3250,
-					"BurstPeriodMinTimeMS": 2050,
-					"BurstPeriodMaxTimeMS": 2050,
+					"AreaOfEffectRadius": 180,
+					"NumberOfBursts": 8,
+					"RateOfFire": 4,
+					"CooldownTimeMS": 3150,
+					"BurstPeriodMinTimeMS": 950,
+					"BurstPeriodMaxTimeMS": 950,
 					"RangeAttributesLong": {
 						"Distance": 2350
 					},
@@ -319,9 +358,9 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 200,
+					"BaseDamagePerRound": 80,
 					"DamagePacketsPerShot": 2,
-					"ReloadTimeMS": 10000,
+					"ReloadTimeMS": 7000,
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
@@ -345,7 +384,7 @@
 					"ExcludeFromHeightAdvantage": true
 				},
 				"G_ArtilleryCruiser_Weapon_PD_MP": {
-					"BaseDamagePerRound": 14
+					"BaseDamagePerRound": 18
 				}
 			}
 		},
@@ -368,12 +407,12 @@
 			"WeaponAttributes": {
 				"K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
 					"AreaOfEffectRadius": 250,
-					"BaseDamagePerRound": 120,
+					"BaseDamagePerRound": 140,
 					"ReloadTimeMS": 4500,
 					"NumberOfBursts": 3,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
-						"Distance": 1150
+						"Distance": 1050
 					}
 				},
 				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
@@ -442,6 +481,63 @@
 				"Resource2Cost": 100,
 				"ResearchTime": 35
 			}
-		}
+		},
+	    "Research_Buff_G_ProductionCruiserResourcer": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 80
+				"ResearchTime": 50
+			}
+		},
+		"Research_Buff_K_ProductionCruiserResourcer": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 80
+				"ResearchTime": 50
+	        }
+		},
+		"K_Baserunner_MP": {
+			"UnitAttributes": {
+				"Resource2Cost": 50,
+				"MaxHealth": 1700,
+				"PriorityAsTarget": -220
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 75
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_K_BaseRunnerSmoke": {
+					"CooldownTimeSecs": 40
+				},
+				"Ability_G_BaseRunnerPassiveRegen": {
+					"CooldownTimeSecs": 0,
+					"TargetAlignment": "Self",
+					"TargetingType": "Self, Passive",
+					"AbilityMapTargetLayers": "Ground",
+					"ApplyStatusEffect": {
+						"Regen_BaseRunnerPassive_StatusEffect": {
+							"Lifetime": "Indefinite",
+							"Duration": 0,
+							"Modifiers": { "0": { "ModifierType": "HealthOverTime", "HealthOverTimeAttributes": {
+								"MSTickDuration": 1000,
+								"Amount": 20,
+								"DamageType": "Heal"
+							} } }
+						}
+					},
+					"ActivationDependencies": {
+						"TakeNoDamageForMS": 10000
+					},
+					"AutoToggleOffConditions": {
+						"TakeDamage": true
+					},
+					"ChainCasting": {
+						"QueuedAbility": ""
+					}
+				}
+		    }
+		}		
 	}
 }
