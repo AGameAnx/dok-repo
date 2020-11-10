@@ -86,21 +86,29 @@
 				}
 			}
 		},
+		"G_Baserunner_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 1700,
+				"Armour": 2
+			}
+		},	
 		"K_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource2Cost": 50,
-				"MaxHealth": 1700,
+			    "Resource1Cost": 240,
+				"Resource2Cost": 10,
+				"MaxHealth": 1250,
 				"Armour": 2,
-				"PriorityAsTarget": -220
+				"SensorRadius": 1800,
+				"PriorityAsTarget": -10
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 75
+					"MaxSpeed": 85
 				}
 			},
 			"AbilityAttributes": {
 				"Ability_K_BaseRunnerSmoke": {
-					"CooldownTimeSecs": 50
+					"CooldownTimeSecs": 35
 				},
 				"Ability_G_BaseRunnerPassiveRegen": {
 					"CooldownTimeSecs": 0,
@@ -248,6 +256,11 @@
 				}
 			}
 		},
+		"G_Catamaran": {
+			"UnitAttributes": {
+				"Armour": 10
+			}
+		},	
 		"C_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 500,
@@ -364,16 +377,16 @@
 			},
 			"WeaponAttributes": {
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"BaseDamagePerRound": 180,
+					"BaseDamagePerRound": 130,
 					"DamagePacketsPerShot": 2,
-					"AreaOfEffectRadius": 180,
-					"NumberOfBursts": 8,
+					"AreaOfEffectRadius": 130,
+					"NumberOfBursts": 6,
 					"RateOfFire": 4,
 					"CooldownTimeMS": 550,
 					"BurstPeriodMinTimeMS": 850,
 					"BurstPeriodMaxTimeMS": 950,
 					"RangeAttributesLong": {
-						"Distance": 2350
+						"Distance": 2450
 					},
 					"Modifiers": {
 						"1": {
@@ -391,7 +404,7 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 180,
+					"BaseDamagePerRound": 130,
 					"DamagePacketsPerShot": 2,
 					"ReloadTimeMS": 7000,
 					"Modifiers": {
