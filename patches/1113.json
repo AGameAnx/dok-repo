@@ -3,7 +3,7 @@
 		"C_Carrier_MP": {
 			"UnitAttributes": {
 				"Class": "Ground, Carrier",
-				"MaxHealth": 15000
+				"MaxHealth": 18000
 			},
 			"UnitHangarAttributes": {
 				"HangarBays": {
@@ -17,11 +17,42 @@
 						"MaxCount": 2
 					}
 				}
-			}
+			},
+			"WeaponAttributes" : {
+				"C_Carrier_Weapon_CruiseMissile_MP": {
+					"BaseDamagePerRound": 2800,
+					"ExcludeFromHeightAdvantage": true,
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Carrier, Large, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 140
+						}
+					},
+					"RangeAttributesLong": {
+						"Distance": 4500
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_CruiseMissile_MP": {
+					"CooldownTimeSecs": 280
+				},
+				"Ability_C_LaunchInterceptor_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchGunShip_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			}		
 		},
 		"G_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 11000
+				"MaxHealth": 14000
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -37,14 +68,45 @@
 						"MaxCount": 3
 					}
 				}
-			}
+			},
+			"AbilityAttributes": {
+				"Ability_G_MissileBarrage": {
+					"CooldownTimeSecs": 280
+				},
+				"Ability_G_LaunchInterceptor_Upgraded_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_G_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_G_Carrier_EMP": {
+					"CooldownTimeSecs": 280
+				}
+			},
+			"WeaponAttributes": {
+			    "G_Carrier_Weapon_BarrageMissile_MP": {
+				    "ExcludeFromHeightAdvantage": true,
+				    "BaseDamagePerRound": 240,
+				    "AreaOfEffectRadius": 230,
+				    "AreaOfEffectFalloffType": "Quadratic",
+				    "NumberOfBursts": 8,
+				    "Modifiers": {
+					    "1": {
+						    "Remove": true
+					    }
+				    },
+				    "RangeAttributesLong": {
+					    "Distance": 4500
+				    }
+				}
+			}	
 		},
 		"K_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 9800,
+				"MaxHealth": 12500,
 				"SensorRadius": 1200,
 				"ContactRadius": 1350,
-				"Armour": 15
+				"Armour": 20
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -60,11 +122,25 @@
 						"MaxCount": 9
 					}
 				}
+			},
+			"AbilityAttributes": {
+				"Ability_Launch_K_Interceptor": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_Launch_K_Interceptor_Upgraded": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_Launch_K_Bomber": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_K_GrantShuntingBombToCarrier": {
+					"WarmupTimeSecs": 9
+				}
 			}
 		},
 		"C_Sob_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 12500,
+				"MaxHealth": 15500,
 				"Armour": 25
 			},
 			"UnitMovementAttributes": {
@@ -83,6 +159,710 @@
 					"Interceptor": {
 						"MaxCount": 12
 					}
+				}
+			},
+			"WeaponAttributes": {
+				"C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
+					"BaseDamagePerRound": 195,
+					"ExcludeFromHeightAdvantage": true
+				},
+				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 195,
+					"ExcludeFromHeightAdvantage": true,
+					"BurstPeriodMaxTimeMS": 250,
+					"BurstPeriodMinTimeMS": 250,
+					"NumberOfBursts": 2,
+					"WindUpTimeMS": 1000,
+					"WindDownTimeMS": 500,
+					
+					"ReloadTimeMS": 15000,
+					"CooldownTimeMS": 10000,
+					
+					"RangeAttributesShort": {
+						"Distance": 300,
+						"Accuracy": 5.6
+					},
+					"RangeAttributesMedium": {
+						"Distance": 550,
+						"Accuracy": 5.0
+					},
+					"RangeAttributesLong": {
+						"Distance": 1000,
+						"Accuracy": 4.5
+					},
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				},
+				"C_Sob_Carrier_Weapon_Nuke_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesLong": {
+						"Distance": 4500
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_Sob_SobanNuke_MP": {
+					"CooldownTimeSecs": 280,
+					"Resource1Cost": 400
+				},
+				"Ability_C_LaunchInterceptor_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchGunShip_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"PowerShuntAttributes": {
+				"PowerSystems": {
+					
+					"0": { // Defensive Logistics
+						"PowerLevels": {
+							"1": {
+								"StatusEffectsToApply": {
+									"ScannerShunt_1_StatusEffect": {
+										"UnitTypeBuffsToApply": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1000 }, // Sensor Radius
+													"1": { "Value": 1300 }, // Contact Radius
+													"5": { "Value": 6500 } // Reload time
+												}
+											}
+										}
+									}
+								}
+							},
+							"2": {
+								"StatusEffectsToApply": {
+									"ScannerShunt_2_StatusEffect": {
+										"UnitTypeBuffsToApply": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1100 },
+													"1": { "Value": 1400 },
+													"5": { "Value": 5500 }
+												}
+											},
+											"1": {
+												"BuffSet": { "0": { "Value": 800 } } // Deployment range
+											}
+										}
+									}
+								}
+							},
+							"3": {
+								"StatusEffectsToApply": {
+									"ScannerShunt_3_StatusEffect": {
+										"UnitTypeBuffsToApply": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1200 },
+													"1": { "Value": 1500 },
+													"5": { "Value": 4500 }
+												}
+											},
+											"1": {
+												"BuffSet": { "0": { "Value": 1000 } }
+											}
+										}
+									}
+								}
+							},
+							"4": {
+								"StatusEffectsToApply": {
+									"ScannerShunt_4_StatusEffect": {
+										"UnitTypeBuffsToApply": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1300 },
+													"1": { "Value": 1700 },
+													"5": { "Value": 3500 },
+													"6": { "Value": 30 } // Damage bonus
+												}
+											},
+											"1": {
+												"BuffSet": { "0": { "Value": 1200 } }
+											}
+										}
+									}
+								}
+							},
+							"5": {
+								"StatusEffectsToApply": {
+									"ScannerShunt_5_StatusEffect": {
+										"UnitTypeBuffsToApply": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1500 },
+													"1": { "Value": 1900 },
+													"5": { "Value": 2500 },
+													"6": { "Value": 50 }
+												}
+											},
+											"1": {
+												"BuffSet": { "0": { "Value": 1500 } }
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					
+					"1": { // Turret Network
+						"PowerLevels": {
+							
+							"0": {
+								"LocalizedShortDescriptionStringID": "Missiles Disabled. 15s Reload, 10s Cooldown"
+							},
+							
+							"1": {
+								"LocalizedShortDescriptionStringID": "Missiles Enabled. 35% Reload and Cooldown Reduction, 15% Accuracy Bonus",
+								"StatusEffectsToApply": {
+									"C_Sob_Weapons_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // Sets damage on the dummy weapon
+													"2": { "Remove": true }, // Sets damage on TURRET_BR weapon
+													
+													// TURRET_BR
+													"3": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
+													"4": { "Mode": "AddPercent", "Value": -35 }, // Reload
+													"5": { "Value": 15 }, // Accuracy Short
+													"6": { "Value": 15 }, // Accuracy Medium
+													"7": { "Value": 15 }, // Accuracy Long
+													
+													// TURRET_BL
+													"8": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
+													"9": { "Mode": "AddPercent", "Value": -35, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"10": { "Value": 15 }, // Accuracy Short
+													"11": { "Value": 15 }, // Accuracy Medium
+													"12": { "Value": 15 }, // Accuracy Long
+													
+													// TURRET_FL
+													"13": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
+													"14": { "Mode": "AddPercent", "Value": -35, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"15": { "Value": 15 }, // Accuracy Short
+													"16": { "Value": 15 }, // Accuracy Medium
+													"17": { "Value": 15 }, // Accuracy Long
+													
+													// TURRET_FR
+													"18": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
+													"19": { "Mode": "AddPercent", "Value": -35 }, // Reload
+													"20": { "Value": 15 }, // Accuracy Short
+													"21": { "Value": 15 }, // Accuracy Medium
+													"22": { "Value": 15 } // Accuracy Long
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"2": {
+								"LocalizedShortDescriptionStringID": "55% Reload and Cooldown Reduction, 25% Accuracy Bonus",
+								"StatusEffectsToApply": {
+									"C_Sob_Weapons_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // Sets damage on the dummy weapon
+													
+													// TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -55 }, // Reload
+													"4": { "Value": 25 }, // Accuracy Short
+													"5": { "Value": 25 }, // Accuracy Medium
+													"6": { "Value": 25 }, // Accuracy Long
+													
+													// TURRET_BL
+													"7": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -55 }, // Reload
+													"9": { "Value": 25 }, // Accuracy Short
+													"10": { "Value": 25 }, // Accuracy Medium
+													"11": { "Value": 25 }, // Accuracy Long
+													
+													// TURRET_FL
+													"12": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -55 }, // Reload
+													"14": { "Value": 25 }, // Accuracy Short
+													"15": { "Value": 25 }, // Accuracy Medium
+													"16": { "Value": 25 }, // Accuracy Long
+													
+													// TURRET_FR
+													"17": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -55, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"19": { "Value": 25 }, // Accuracy Short
+													"20": { "Value": 25 }, // Accuracy Medium
+													"21": { "Value": 25 } // Accuracy Long
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"3": {
+								"LocalizedShortDescriptionStringID": "70% Reload and Cooldown Reduction, 35% Accuracy Bonus",
+								"StatusEffectsToApply": {
+									"C_Sob_Weapons_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // Sets damage on the dummy weapon
+													"2": { "Remove": true }, // Duplicate cooldown buff for TURRET_BR weapon
+													
+													// TURRET_BR
+													"3": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
+													"4": { "Mode": "AddPercent", "Value": -70 }, // Reload
+													"5": { "Value": 35 }, // Accuracy Short
+													"6": { "Value": 35 }, // Accuracy Medium
+													"7": { "Value": 35 }, // Accuracy Long
+													
+													// TURRET_BL
+													"8": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
+													"9": { "Mode": "AddPercent", "Value": -70 }, // Reload
+													"10": { "Value": 35 }, // Accuracy Short
+													"11": { "Value": 35 }, // Accuracy Medium
+													"12": { "Value": 35 }, // Accuracy Long
+													
+													// TURRET_FL
+													"13": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
+													"14": { "Mode": "AddPercent", "Value": -70 }, // Reload
+													"15": { "Value": 35 }, // Accuracy Short
+													"16": { "Value": 35 }, // Accuracy Medium
+													"17": { "Value": 35 }, // Accuracy Long
+													
+													// TURRET_FR
+													"18": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
+													"19": { "Mode": "AddPercent", "Value": -70 }, // Reload
+													"20": { "Value": 35 }, // Accuracy Short
+													"21": { "Value": 35 }, // Accuracy Medium
+													"22": { "Value": 35 } // Accuracy Long
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"4": {
+								"LocalizedShortDescriptionStringID": "85% Reload and Cooldown Reduction, 45% Accuracy Bonus",
+								"StatusEffectsToApply": {
+									"C_Sob_Weapons_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // Sets damage on the dummy weapon
+													
+													// TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"4": { "Value": 45 }, // Accuracy Short
+													"5": { "Value": 45 }, // Accuracy Medium
+													"6": { "Value": 45 }, // Accuracy Long
+													
+													// TURRET_BL
+													"7": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"9": { "Value": 45 }, // Accuracy Short
+													"10": { "Value": 45 }, // Accuracy Medium
+													"11": { "Value": 45 }, // Accuracy Long
+													
+													// TURRET_FL
+													"12": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"14": { "Value": 45 }, // Accuracy Short
+													"15": { "Value": 45 }, // Accuracy Medium
+													"16": { "Value": 45 }, // Accuracy Long
+													
+													// TURRET_FR
+													"17": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"19": { "Value": 45 }, // Accuracy Short
+													"20": { "Value": 45 }, // Accuracy Medium
+													"21": { "Value": 45 } // Accuracy Long
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"5": {
+								"LocalizedShortDescriptionStringID": "95% Reload and Cooldown Reduction, 55% Accuracy Bonus",
+								"StatusEffectsToApply": {
+									"C_Sob_Weapons_5_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // Sets damage on the dummy weapon
+													
+													// TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -95 }, // Reload
+													"4": { "Value": 55 }, // Accuracy Short
+													"5": { "Value": 55 }, // Accuracy Medium
+													"6": { "Value": 55 }, // Accuracy Long
+													
+													// TURRET_BL
+													"7": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -95 }, // Reload
+													"9": { "Value": 55 }, // Accuracy Short
+													"10": { "Value": 55 }, // Accuracy Medium
+													"11": { "Value": 55 }, // Accuracy Long
+													
+													// TURRET_FL
+													"12": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -95 }, // Reload
+													"14": { "Value": 55 }, // Accuracy Short
+													"15": { "Value": 55 }, // Accuracy Medium
+													"16": { "Value": 55 }, // Accuracy Long
+													
+													// TURRET_FR
+													"17": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -95 }, // Reload
+													"19": { "Value": 55 }, // Accuracy Short
+													"20": { "Value": 55 }, // Accuracy Medium
+													"21": { "Value": 55 } // Accuracy Long
+												}
+											}
+										}
+									}
+								}
+							}
+							
+						}
+					},
+					
+					"2": { // Reactive Armour
+						"PowerLevels": {
+							
+							"0": {
+								"LocalizedShortDescriptionStringID": "Armor: 15"
+							},
+							
+							"1": {
+								"LocalizedShortDescriptionStringID": "Armor: 20",
+								"StatusEffectsToApply": {
+									"Armour_2_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 5 }
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"2": {
+								"LocalizedShortDescriptionStringID": "Armor: 25",
+								"StatusEffectsToApply": {
+									"Armour_3_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 10 }
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"3": {
+								"LocalizedShortDescriptionStringID": "Armor: 35",
+								"StatusEffectsToApply": {
+									"Armour_4_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 20 }
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"4": {
+								"LocalizedShortDescriptionStringID": "Armor: 50",
+								"StatusEffectsToApply": {
+									"Armour_5_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 35 }
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"5": {
+								"StatusEffectsToApply": {
+									"Armour_6_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 35 }
+												}
+											}
+										}
+									}
+								}
+							}
+							
+						}
+					},
+					
+					"3": { // Range Systems
+						"PowerLevels": {
+							
+							"0": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1000m"
+							},
+							
+							"1": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1250m",
+								"StatusEffectsToApply": {
+									"Range_1_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_FL
+													"0": { "Value": 1250 }, // long range
+													"1": { "Value": 1250 }, // APBULLETS long range
+													"2": { "Value": 750 }, // medium range
+													"3": { "Value": 750 }, // APBULLETS medium range
+													"4": { "Value": 450 }, // short range
+													"5": { "Value": 450 }, // APBULLETS short range
+													
+													// TURRET_FR
+													"6": { "Value": 1250 }, // long range
+													"7": { "Value": 1250 }, // APBULLETS long range
+													"8": { "Value": 750 }, // medium range
+													"9": { "Value": 750 }, // APBULLETS medium range
+													"10": { "Value": 450 }, // short range
+													"11": { "Value": 450 }, // APBULLETS short range
+													
+													// TURRET_BR
+													"12": { "Value": 1250 }, // long range
+													"13": { "Value": 1250 }, // APBULLETS long range
+													"14": { "Value": 750 }, // medium range
+													"15": { "Value": 750 }, // APBULLETS medium range
+													"16": { "Value": 450 }, // short range
+													"17": { "Value": 450 }, // APBULLETS short range
+													
+													// TURRET_BL
+													"18": { "Value": 1250 }, // long range
+													"19": { "Value": 1250 }, // APBULLETS long range
+													"20": { "Value": 750 }, // medium range
+													"21": { "Value": 750 }, // APBULLETS medium range
+													"22": { "Value": 450 }, // short range
+													"23": { "Value": 450 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"2": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1450m",
+								"StatusEffectsToApply": {
+									"Range_2_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_BL
+													"0": { "Value": 1450 }, // long range
+													"1": { "Value": 1450 }, // APBULLETS long range
+													"2": { "Value": 1100 }, // medium range
+													"3": { "Value": 1100 }, // APBULLETS medium range
+													"4": { "Value": 700 }, // short range
+													"5": { "Value": 700 }, // APBULLETS short range
+													
+													// TURRET_BR
+													"6": { "Value": 1450 }, // long range
+													"7": { "Value": 1450 }, // APBULLETS long range
+													"8": { "Value": 1100 }, // medium range
+													"9": { "Value": 1100 }, // APBULLETS medium range
+													"10": { "Value": 700 }, // short range
+													"11": { "Value": 700 }, // APBULLETS short range
+													
+													// TURRET_FL
+													"12": { "Value": 1450 }, // long range
+													"13": { "Value": 1450 }, // APBULLETS long range
+													"14": { "Value": 1100 }, // medium range
+													"15": { "Value": 1100 }, // APBULLETS medium range
+													"16": { "Value": 700 }, // short range
+													"17": { "Value": 700 }, // APBULLETS short range
+													
+													// TURRET_FR
+													"18": { "Value": 1450 }, // long range
+													"19": { "Value": 1450 }, // APBULLETS long range
+													"20": { "Value": 1100 }, // medium range
+													"21": { "Value": 1100 }, // APBULLETS medium range
+													"22": { "Value": 700 }, // short range
+													"23": { "Value": 700 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"3": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1650m",
+								"StatusEffectsToApply": {
+									"Range_3_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_BR
+													"0": { "Value": 1650 }, // long range
+													"1": { "Value": 1650 }, // APBULLETS long range
+													"2": { "Value": 1300 }, // medium range
+													"3": { "Value": 1300 }, // APBULLETS medium range
+													"4": { "Value": 900 }, // short range
+													"5": { "Value": 900 }, // APBULLETS short range
+													
+													// TURRET_BR
+													"6": { "Value": 1650 }, // long range
+													"7": { "Value": 1650 }, // APBULLETS long range
+													"8": { "Value": 1300 }, // medium range
+													"9": { "Value": 1300 }, // APBULLETS medium range
+													"10": { "Value": 900 }, // short range
+													"11": { "Value": 900 }, // APBULLETS short range
+													
+													// TURRET_FL
+													"12": { "Value": 1650 }, // long range
+													"13": { "Value": 1650 }, // APBULLETS long range
+													"14": { "Value": 1300 }, // medium range
+													"15": { "Value": 1300 }, // APBULLETS medium range
+													"16": { "Value": 900 }, // short range
+													"17": { "Value": 900 }, // APBULLETS short range
+													
+													// TURRET_FR
+													"18": { "Value": 1650 }, // long range
+													"19": { "Value": 1650 }, // APBULLETS long range
+													"20": { "Value": 1300 }, // medium range
+													"21": { "Value": 1300 }, // APBULLETS medium range
+													"22": { "Value": 900 }, // short range
+													"23": { "Value": 900 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"4": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1900m",
+								"StatusEffectsToApply": {
+									"Range_4_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_BL
+													"0": { "Value": 1900 }, // long range
+													"1": { "Value": 1900 }, // APBULLETS long range
+													"2": { "Value": 1400 }, // medium range
+													"3": { "Value": 1400 }, // APBULLETS medium range
+													"4": { "Value": 1100 }, // short range
+													"5": { "Value": 1100 }, // APBULLETS short range
+													
+													// TURRET_FL
+													"6": { "Value": 1900 }, // long range
+													"7": { "Value": 1900 }, // APBULLETS long range
+													"8": { "Value": 1400 }, // medium range
+													"9": { "Value": 1400 }, // APBULLETS medium range
+													"10": { "Value": 1100 }, // short range
+													"11": { "Value": 1100 }, // APBULLETS short range
+													
+													// TURRET_FR
+													"12": { "Value": 1900 }, // long range
+													"13": { "Value": 1900 }, // APBULLETS long range
+													"14": { "Value": 1400 }, // medium range
+													"15": { "Value": 1400, "Name": "TURRET_FR_APBULLETS" }, // APBULLETS medium range, had wrong weapon id
+													"16": { "Value": 1100, "Name": "TURRET_FR" }, // short range, had wrong weapon id
+													"17": { "Value": 1100 }, // APBULLETS short range
+													
+													// TURRET_BR
+													"18": { "Value": 1900 }, // long range
+													"19": { "Value": 1900 }, // APBULLETS long range
+													"20": { "Value": 1400 }, // medium range
+													"21": { "Value": 1400 }, // APBULLETS medium range
+													"22": { "Value": 1100 }, // short range
+													"23": { "Value": 1100 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"5": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 2150m",
+								"StatusEffectsToApply": {
+									"Range_5_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_FL
+													"0": { "Value": 2150 }, // long range
+													"1": { "Value": 2150 }, // APBULLETS long range
+													"2": { "Value": 1700 }, // medium range
+													"3": { "Value": 1700 }, // APBULLETS medium range
+													"4": { "Value": 1300 }, // short range
+													"5": { "Value": 1300 }, // APBULLETS short range
+													
+													// TURRET_FR
+													"6": { "Value": 2150 }, // long range
+													"7": { "Value": 2150 }, // APBULLETS long range
+													"8": { "Value": 1700 }, // medium range
+													"9": { "Value": 1700 }, // APBULLETS medium range
+													"10": { "Value": 1300 }, // short range
+													"11": { "Value": 1300 }, // APBULLETS short range
+													
+													// TURRET_BL
+													"12": { "Value": 2150 }, // long range
+													"13": { "Value": 2150 }, // APBULLETS long range
+													"14": { "Value": 1700 }, // medium range
+													"15": { "Value": 1700 }, // APBULLETS medium range
+													"16": { "Value": 1300 }, // short range
+													"17": { "Value": 1300 }, // APBULLETS short range
+													
+													// TURRET_BR
+													"18": { "Value": 2150 }, // long range
+													"19": { "Value": 2150 }, // APBULLETS long range
+													"20": { "Value": 1700 }, // medium range
+													"21": { "Value": 1700 }, // APBULLETS medium range
+													"22": { "Value": 1300 }, // short range
+													"23": { "Value": 1300 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							}
+							
+						}
+					}
+					
 				}
 			}
 		},
@@ -453,7 +1233,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 500,
 				"Resource2Cost": 200,
-				"MaxHealth": 1900,
+				"MaxHealth": 2200,
 				"Armour": 2,
 				"ProductionTime": 60,
 				"PopCapCost": 5
@@ -513,7 +1293,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 400,
 				"Resource2Cost": 230,
-				"MaxHealth": 2200,
+				"MaxHealth": 2350,
 				"Armour": 3,
 				"ProductionTime": 50,
 				"PopCapCost": 6,
@@ -623,7 +1403,7 @@
 				"SensorRadius": 1100,
 				"ContactRadius": 1200,
 				"ProductionTime": 45,
-				"Armour": 12
+				"Armour": 20
 			},
 			"AbilityAttributes": {
 				"Ability_K_ArtilleryBarrage_01_MP": {
@@ -633,9 +1413,9 @@
 			"WeaponAttributes": {
 				"K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
 					"AreaOfEffectRadius": 250,
-					"BaseDamagePerRound": 120,
-					"ReloadTimeMS": 4500,
-					"NumberOfBursts": 3,
+					"BaseDamagePerRound": 140,
+					"ReloadTimeMS": 4000,
+					"NumberOfBursts": 4,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
 						"Distance": 1050
@@ -647,10 +1427,12 @@
 					"CooldownTimeMS": 800,
 					"BaseDamagePerRound": 240,
 					"DamagePacketsPerShot": 1,
+					"BurstPeriodMinTimeMS": 1050,
+					"BurstPeriodMaxTimeMS": 1250,
 					"AreaOfEffectRadius": 240,
 					"AreaOfEffectFalloffType": "Linear",
 					"RangeAttributesLong": {
-						"Distance": 2000
+						"Distance": 2300
 					},
 					"Modifiers": {
 						"1": {
@@ -870,7 +1652,77 @@
 				}
 			}
 		},
+		"C_Sob_BattleCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 220,
+				"MaxHealth": 2900,
+				"ProductionTime": 60,
+				"Armour": 12,
+				"PopCapCost": 5
+			},
+			"WeaponAttributes": {
+				"G_Battlecruiser_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 50,
+					"AreaOfEffectRadius": 75,
+					"BurstPeriodMinTimeMS": 700,
+					"BurstPeriodMaxTimeMS": 700,
+					"RateOfFire": 3,
+					"NumberOfBursts": 4,
+					"WindUpTimeMS": 250,
+					"ReloadTimeMS": 3500,
+					"OutputDPS": true
+				},
+				"G_BattleCruiser_Weapon_Missile_MP": {
+					"BaseDamagePerRound": 180,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"AreaOfEffectRadius": 140,
+					"ExcludeFromHeightAdvantage": true,
+					"RangeAttributesLong": { "Distance": 1000 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				}
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 65 }
+			},
+			"AbilityAttributes": {
+				"Ability_G_BattleCruiser_ArmorBonus_MP": {
+					"CooldownTimeSecs": 40,
+					"ApplyStatusEffect": {
+						"ArmorBonus_StatusEffect": {
+							"BuffsToApplyToTarget": {
+								"0": {
+									"BuffSet": {
+										"0": { "Value": 50 } // % Armor bonus
+									}
+								}
+							}
+						}
+					}
+				},
+				"Ability_G_BattleCruiser_Missile_MP": {
+					"Resource1Cost": 0,
+					"CooldownTimeSecs": 40
+				},
+				"Ability_G_BattleCruiserActiveRegen": {
+					"CooldownTimeSecs": 40
+				}
+			}
+		},
 	    "G_SupportCruiser_MP" : {
+		    "UnitAttributes": {
+				"MaxHealth": 3100,
+				"ProductionTime": 60,
+				"Armour": 2,
+				"PopCapCost": 5
+			},
 		    "WeaponAttributes": {
 		        "G_SupportCruiser_Weapon_G2G_MP": {
 				    "BaseDamagePerRound": 12,
@@ -897,6 +1749,12 @@
 			}
 		},
 		"C_SupportCruiser_MP" : {
+            "UnitAttributes": {
+				"MaxHealth": 2500,
+				"ProductionTime": 60,
+				"Armour": 2,
+				"PopCapCost": 5
+			},	
 		    "WeaponAttributes": {
 		        "C_SupportCruiser_Weapon_G2A_MP": {
 					"BaseDamagePerRound": 55,
@@ -955,6 +1813,12 @@
 			}
 		},
 		"K_SupportCruiser_MP" : {
+            "UnitAttributes": {
+				"MaxHealth": 3100,
+				"ProductionTime": 60,
+				"Armour": 2,
+				"PopCapCost": 5
+			},		
 		    "WeaponAttributes": {
 		        "G_SupportCruiser_Weapon_G2G_MP": {
 				    "BaseDamagePerRound": 12,
@@ -981,7 +1845,13 @@
 			}
 		},
 		"C_Sob_SupportCruiser_MP" : {
-		     "WeaponAttributes": {
+		    "UnitAttributes": {
+				"MaxHealth": 2500,
+				"ProductionTime": 60,
+				"Armour": 2,
+				"PopCapCost": 5
+			}, 
+		    "WeaponAttributes": {
 		        "C_SupportCruiser_Weapon_G2A_MP": {
 					"BaseDamagePerRound": 55,
 					"NumberOfBursts": 4,
@@ -1248,6 +2118,31 @@
 					}
 				}
 			}
-		}
+		},
+		"Research_Buff_G_ProductionCruiserResourcer": {
+		    "ResearchItemAttributes": {
+				"ResearchTime": 30
+		    }	
+		},
+		"Research_Buff_K_ProductionCruiserResourcer": {
+		    "ResearchItemAttributes": {
+				"ResearchTime": 30
+		    }	
+		},
+	    "Tier_1_S_Escorts": {
+		    "ResearchItemAttributes": {
+				"ResearchTime": 15
+		    }	
+		},
+	    "Tier_1_G_Sandskimmers": {
+		    "ResearchItemAttributes": {
+				"ResearchTime": 15
+		    }
+		},
+	    "Tier_1_C_Escorts": {
+		    "ResearchItemAttributes": {
+				"ResearchTime": 15
+			}
+        }	
 	}
 }
