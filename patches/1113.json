@@ -1675,19 +1675,49 @@
 			}
 		},
 		"G_HonorGuard_MP": {
-			"WeaponAttributes": {
-				"G_HonorGuard_Weapon_G2G_CAT": {
-					"ExcludeFromHeightAdvantage": true,
+			"WeaponAttributes":{
+				"G_HonorGuard_Weapon_Blank": {
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 12,
 					"DamagePacketsPerShot": 2,
-					"NumberOfBursts": 5,
+					"NumberOfBursts": 6,
 					"BurstPeriodMinTimeMS": 600,
 					"BurstPeriodMaxTimeMS": 1100,
-					"ReloadTimeMS": 2000,
+					"ReloadTimeMS": 2500,
+				    "ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 15,
 					"RangeAttributesShort": {
-						"Accuracy": 80,
+						"Accuracy": 90,
+						"Distance": 300
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 65,
+						"Distance": 500
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 40,
+						"Distance": 800
+					},
+					"Modifiers": {
+					    "0": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
+						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
+					        }
+						},
+				"G_HonorGuard_Weapon_G2G_CAT": {
+					"LineOfSightRequired": true,
+					"BaseDamagePerRound": 12,
+					"DamagePacketsPerShot": 2,
+					"NumberOfBursts": 6,
+					"BurstPeriodMinTimeMS": 600,
+					"BurstPeriodMaxTimeMS": 1100,
+					"ReloadTimeMS": 2500,
+				    "ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 15,
+					"RangeAttributesShort": {
+						"Accuracy": 90,
 						"Distance": 300
 					},
 					"RangeAttributesMedium": {
@@ -2378,6 +2408,36 @@
 		},
 		"G_HonorGuard": {
 			"WeaponAttributes":{
+				"G_HonorGuard_Weapon_Blank": {
+					"LineOfSightRequired": true,
+					"BaseDamagePerRound": 12,
+					"DamagePacketsPerShot": 2,
+					"NumberOfBursts": 6,
+					"BurstPeriodMinTimeMS": 600,
+					"BurstPeriodMaxTimeMS": 1100,
+					"ReloadTimeMS": 2500,
+				    "ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 15,
+					"RangeAttributesShort": {
+						"Accuracy": 90,
+						"Distance": 300
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 65,
+						"Distance": 500
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 40,
+						"Distance": 800
+					},
+					"Modifiers": {
+					    "0": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
+						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
+					        }
+						},
 				"G_HonorGuard_Weapon_G2G_CAT": {
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 12,
@@ -2438,13 +2498,13 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G": {
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 60,
 					"BurstPeriodMinTimeMS": 100,
 					"BurstPeriodMaxTimeMS": 100,
 					"NumberOfBursts": 3,
-					"WindUpTimeMS": 800,
+					"WindUpTimeMS": 850,
 					"WindDownTimeMS": 500,
-					"ReloadTimeMS": 2000,
+					"ReloadTimeMS": 3000,
 					"RangeAttributesShort":  { "Accuracy": 24 },
 					"RangeAttributesMedium": { "Accuracy": 18 },
 					"RangeAttributesLong":   { "Accuracy": 12, "Distance": 1100 }
@@ -2477,6 +2537,6 @@
 		    }
 	    }
 	}
-}		
+}			
 	
 
