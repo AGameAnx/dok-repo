@@ -4,7 +4,7 @@
 			"UnitAttributes": {
 				"Class": "Ground, Carrier",
 				"MaxHealth": 15000,
-                                "Armour": 20
+				"Armour": 20
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -938,7 +938,7 @@
 			},
 		    "AbilityAttributes": {
 			    "Ability_G_BaseRunnerPassiveRegen": {
-				"CooldownTimeSecs": 30,
+				"CooldownTimeSecs": 0,
 				"TargetAlignment": "Self",
 				"TargetingType": "Self, Passive",
 				"AbilityMapTargetLayers": "Ground",
@@ -2375,6 +2375,40 @@
 					"CooldownTimeSecs": 45
 				}
 			}
+		},
+		"G_HonorGuard": {
+			"WeaponAttributes":{
+				"G_HonorGuard_Weapon_G2G_CAT": {
+					"LineOfSightRequired": true,
+					"BaseDamagePerRound": 12,
+					"DamagePacketsPerShot": 2,
+					"NumberOfBursts": 6,
+					"BurstPeriodMinTimeMS": 600,
+					"BurstPeriodMaxTimeMS": 1100,
+					"ReloadTimeMS": 2500,
+				    "ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 15,
+					"RangeAttributesShort": {
+						"Accuracy": 90,
+						"Distance": 300
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 65,
+						"Distance": 500
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 40,
+						"Distance": 800
+					},
+					"Modifiers": {
+					    "0": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
+						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
+					}
+				}
+			}
 		},		
 		"G_StarHull_Upgrade01": {
 			"UnitAttributes": {
@@ -2396,7 +2430,7 @@
 					"CooldownTimeSecs": 45
 				},
 				"Ability_G_RailGun_Dash": {
-					"ApplyStatusEffect": { "RailGun_Dash_StatusEffect": { "Duration": 4.5 } }
+					"ApplyStatusEffect": { "RailGun_Dash_StatusEffect": { "Duration": 12 } }
 				},
 				"Ability_G_ExplosiveShot" : {
 					"CooldownTimeSecs": 45
@@ -2412,8 +2446,8 @@
 					"WindDownTimeMS": 500,
 					"ReloadTimeMS": 3000,
 					"RangeAttributesShort":  { "Accuracy": 24 },
-					"RangeAttributesMedium": { "Accuracy": 20 },
-					"RangeAttributesLong":   { "Accuracy": 18, "Distance": 1100 }
+					"RangeAttributesMedium": { "Accuracy": 18 },
+					"RangeAttributesLong":   { "Accuracy": 12, "Distance": 1100 }
 				}
 			}
 		},
