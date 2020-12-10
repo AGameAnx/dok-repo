@@ -4,11 +4,11 @@
 			"UnitAttributes": {
 				"Class": "Ground, Carrier",
 				"MaxHealth": 15000,
-				"Armour": 20
+				"Armour": 25
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 55,
+					"MaxSpeed": 60,
 					"MaxSpeedTurnRadius": 160,
 					"BrakingTime": 2,
 					"AccelerationTime": 3
@@ -938,25 +938,25 @@
 			},
 		    "AbilityAttributes": {
 			    "Ability_G_BaseRunnerPassiveRegen": {
-				"CooldownTimeSecs": 0,
-				"TargetAlignment": "Self",
-				"TargetingType": "Self, Passive",
-				"AbilityMapTargetLayers": "Ground",
-				"ApplyStatusEffect": {
-					"Regen_BaseRunnerPassive_StatusEffect": {
-						"Lifetime": "Indefinite",
-						"Duration": 45,
-						"Modifiers": {
-							"0": {
-								"ModifierType": "HealthOverTime",
-								"HealthOverTimeAttributes": {
-									"MSTickDuration": 1000,
-									"Amount": 20,
-									"DamageType": "Heal"
+					"CooldownTimeSecs": 75,
+					"ApplyStatusEffect": {
+						"0": {
+							"Lifetime": "Finite",
+							"Duration": 10.005,
+							"MaxStacks": 1,
+							"StackingBehaviour": "Replace",
+							"Modifiers": {
+								"0": {
+									"ModifierType": "HealthOverTime",
+									"HealthOverTimeAttributes": {
+										"ID": "G_BaseRunner_HealAura_HealOT_StatusEffect_MP",
+										"Amount": 3,
+										"MSTickDuration": 50,
+										"DamageType": "Heal"
+									}
 								}
 							}
 						}
-					}
 				},
 				"ActivationDependencies": {
 					"TakeNoDamageForMS": 10000
@@ -1462,7 +1462,7 @@
 							"TargetClass": "Carrier, Large",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 100
+							"Amount": 80
 						}
 					},
 					"RangeAttributesMedium": { "Distance": 1225,"Accuracy": 10 },
@@ -2537,6 +2537,7 @@
 		    }
 	    }
 	}
-}			
+}		
+			
 	
 
