@@ -1,0 +1,4496 @@
+C_Carrier_MP:
+  readableName: C Carrier
+  cu: 20000
+  ru: 5000
+  time: 0
+  pop: 0
+  hp: 9000
+  armor: 25
+  sensor: 800
+  contact: 1250
+  xp: 2000
+C_Sob_Carrier_MP:
+  readableName: S Carrier
+  cu: 20000
+  ru: 5000
+  time: 0
+  pop: 0
+  hp: 8800
+  armor: 15
+  sensor: 800
+  contact: 1250
+  xp: 2000
+G_Carrier_MP:
+  readableName: G Carrier
+  cu: 20000
+  ru: 5000
+  time: 0
+  pop: 0
+  hp: 8100
+  armor: 20
+  sensor: 800
+  contact: 1000
+  xp: 2000
+K_Carrier_MP:
+  readableName: K Carrier
+  cu: 20000
+  ru: 5000
+  time: 0
+  pop: 0
+  hp: 9600
+  armor: 15
+  sensor: 1200
+  contact: 1350
+  xp: 2000
+C_Sob_NukeEmitter_MP:
+  readableName: Microwave Emitter
+  cu: 0
+  ru: 0
+  time: 0
+  pop: 1
+  hp: 1500
+  armor: 0
+  sensor: 1000
+  contact: 1000
+  xp: 0
+C_Sob_PopcapScanner:
+  readableName: ALM
+  cu: 150
+  ru: 0
+  time: 0
+  pop: 0
+  hp: 1100
+  armor: 5
+  sensor: 900
+  contact: 1225
+  xp: 0
+N_Gun_Turret_MP:
+  readableName: Baserunner Turret
+  cu: 300
+  ru: 0
+  time: 0
+  pop: 0
+  hp: 720
+  armor: 1
+  sensor: 1000
+  contact: 1250
+  xp: 0
+N_Missle_Turret_MP:
+  readableName: Baserunner AA Turret
+  cu: 300
+  ru: 0
+  time: 0
+  pop: 0
+  hp: 900
+  armor: 5
+  sensor: 500
+  contact: 500
+  xp: 0
+N_ECMField_MP:
+  readableName: Baserunner Targeting Jammer
+  cu: 0
+  ru: 0
+  time: 0
+  pop: 0
+  hp: 1100
+  armor: 0
+  sensor: 270
+  contact: 400
+  xp: 0
+C_Probe_MP:
+  readableName: Baserunner Probe
+  cu: 0
+  ru: 0
+  time: 0.100000001490116
+  pop: 0
+  hp: 120
+  armor: 0
+  sensor: 1250
+  contact: 1550
+  xp: 0
+G_Scanner_MP:
+  readableName: Baserunner Scanner
+  cu: 0
+  ru: 0
+  time: 0
+  pop: 0
+  hp: 250
+  armor: 0
+  sensor: 1300
+  contact: 1500
+  xp: 0
+K_ExplodingSkimmer_MP:
+  readableName: Blast Drone
+  cu: 150
+  ru: 0
+  time: 70
+  pop: 2
+  hp: 540
+  armor: 0
+  sensor: 650
+  contact: 900
+  xp: 100
+C_Harvester_MP:
+  readableName: C/S Salvager
+  cu: 150
+  ru: 0
+  time: 12
+  pop: 1
+  hp: 950
+  armor: 0
+  sensor: 1000
+  contact: 1250
+  xp: 250
+G_Harvester_MP:
+  readableName: G Salvager
+  cu: 150
+  ru: 0
+  time: 20
+  pop: 1
+  hp: 950
+  armor: 3
+  sensor: 1000
+  contact: 250
+  xp: 200
+K_Harvester_MP:
+  readableName: K Salvager
+  cu: 150
+  ru: 0
+  time: 20
+  pop: 1
+  hp: 950
+  armor: 3
+  sensor: 1000
+  contact: 250
+  xp: 200
+C_Baserunner_MP:
+  readableName: C Baserunner
+  cu: 250
+  ru: 50
+  time: 16
+  pop: 2
+  hp: 2400
+  armor: 2
+  sensor: 1000
+  contact: 1250
+  xp: 150
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 150
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: 
+          mode: AddPercent
+          value: 10
+    2:
+      requiredxp: 285
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    3:
+      requiredxp: 542
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+    4:
+      requiredxp: 1029
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 1
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    5:
+      requiredxp: 1955
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 200
+C_Sob_Baserunner_MP:
+  readableName: S Baserunner
+  cu: 250
+  ru: 50
+  time: 16
+  pop: 2
+  hp: 2400
+  armor: 2
+  sensor: 1000
+  contact: 1250
+  xp: 150
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 150
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: 
+          mode: AddPercent
+          value: 10
+    2:
+      requiredxp: 285
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    3:
+      requiredxp: 542
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+    4:
+      requiredxp: 1029
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 1
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    5:
+      requiredxp: 1955
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 200
+G_Baserunner_MP:
+  readableName: G Baserunner
+  cu: 250
+  ru: 50
+  time: 16
+  pop: 2
+  hp: 2000
+  armor: 2
+  sensor: 1000
+  contact: 1250
+  xp: 150
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 150
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+    2:
+      requiredxp: 285
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: DEFAULT
+          mode: Add
+          value: 10
+    3:
+      requiredxp: 542
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 25
+    4:
+      requiredxp: 1029
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 2
+          mode: Add
+          value: 200
+    5:
+      requiredxp: 1955
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 2
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+K_Baserunner_MP:
+  readableName: K Baserunner
+  cu: 250
+  ru: 50
+  time: 16
+  pop: 2
+  hp: 1700
+  armor: 2
+  sensor: 1000
+  contact: 1250
+  xp: 150
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 150
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+    2:
+      requiredxp: 285
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: DEFAULT
+          mode: Add
+          value: 10
+    3:
+      requiredxp: 542
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 25
+    4:
+      requiredxp: 1029
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 2
+          mode: Add
+          value: 200
+    5:
+      requiredxp: 1955
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 2
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+C_SupportCruiser_MP:
+  readableName: C Support Cruiser
+  cu: 450
+  ru: 50
+  time: 35
+  pop: 5
+  hp: 3200
+  armor: 5
+  sensor: 1000
+  contact: 1250
+  xp: 300
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 300
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_FL
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_BL
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_BR
+          mode: AddPercent
+          value: 10
+    2:
+      requiredxp: 570
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 1083
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_FL
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_BL
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_BR
+          mode: AddPercent
+          value: 10
+    4:
+      requiredxp: 2058
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    5:
+      requiredxp: 3910
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 2
+C_Sob_SupportCruiser_MP:
+  readableName: S Support Cruiser
+  cu: 450
+  ru: 50
+  time: 35
+  pop: 5
+  hp: 3200
+  armor: 5
+  sensor: 1000
+  contact: 1250
+  xp: 300
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 300
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_FL
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_BL
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_BR
+          mode: AddPercent
+          value: 10
+    2:
+      requiredxp: 570
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 1083
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_FL
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_BL
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: REPAIR_BR
+          mode: AddPercent
+          value: 10
+    4:
+      requiredxp: 2058
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    5:
+      requiredxp: 3910
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 2
+G_SupportCruiser_MP:
+  readableName: G Production Cruiser
+  cu: 650
+  ru: 60
+  time: 60
+  pop: 4
+  hp: 3500
+  armor: 6
+  sensor: 1450
+  contact: 1600
+  xp: 300
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 300
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    2:
+      requiredxp: 570
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 3
+    3:
+      requiredxp: 1083
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AA_LEFT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AA_RIGHT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MisslePods_Front
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BACK
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MisslePods_Back
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+    4:
+      requiredxp: 2058
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: AA_LEFT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_CooldownTime
+          attributeID: 6
+          category: UnitWeapon
+          name: AA_RIGHT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_CooldownTime
+          attributeID: 6
+          category: UnitWeapon
+          name: MisslePods_Front
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_CooldownTime
+          attributeID: 6
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BACK
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_Back
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -15
+    5:
+      requiredxp: 3910
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 500
+K_SupportCruiser_MP:
+  readableName: K Production Cruiser
+  cu: 650
+  ru: 60
+  time: 60
+  pop: 4
+  hp: 3500
+  armor: 6
+  sensor: 1450
+  contact: 1600
+  xp: 300
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 300
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    2:
+      requiredxp: 570
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 3
+    3:
+      requiredxp: 1083
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AA_LEFT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AA_RIGHT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MisslePods_Front
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BACK
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MisslePods_Back
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+    4:
+      requiredxp: 2058
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: AA_LEFT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_CooldownTime
+          attributeID: 6
+          category: UnitWeapon
+          name: AA_RIGHT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_CooldownTime
+          attributeID: 6
+          category: UnitWeapon
+          name: MisslePods_Front
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_CooldownTime
+          attributeID: 6
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BACK
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_Back
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -15
+    5:
+      requiredxp: 3910
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 500
+C_HAC_MP:
+  readableName: AAV
+  cu: 260
+  ru: 20
+  time: 17
+  pop: 2
+  hp: 980
+  armor: 6
+  sensor: 1100
+  contact: 1250
+  xp: 230
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 230
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: ANTI-AIR
+          mode: AddPercent
+          value: 10
+    2:
+      requiredxp: 437
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ANTI-AIR
+          mode: Add
+          value: -15
+    3:
+      requiredxp: 830
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    4:
+      requiredxp: 1578
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    5:
+      requiredxp: 2997
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 2
+C_Escort_MP:
+  readableName: C LAV
+  cu: 100
+  ru: 0
+  time: 12
+  pop: 2
+  hp: 450
+  armor: 1
+  sensor: 1350
+  contact: 1550
+  xp: 100
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 200
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 400
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+    3:
+      requiredxp: 750
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 1
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+    4:
+      requiredxp: 1400
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    5:
+      requiredxp: 1900
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+C_Sob_Escort_MP:
+  readableName: S LAV
+  cu: 100
+  ru: 0
+  time: 12
+  pop: 2
+  hp: 450
+  armor: 1
+  sensor: 1350
+  contact: 1550
+  xp: 100
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 200
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 400
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+    3:
+      requiredxp: 750
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 1
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+    4:
+      requiredxp: 1400
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    5:
+      requiredxp: 1900
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+G_SandSkimmer_MP:
+  readableName: G Sandskimmer
+  cu: 100
+  ru: 0
+  time: 10
+  pop: 2
+  hp: 490
+  armor: 0
+  sensor: 1150
+  contact: 1250
+  xp: 100
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 200
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 400
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 750
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+    4:
+      requiredxp: 1400
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 1
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+    5:
+      requiredxp: 1900
+      buffSet:
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: 
+          mode: Add
+          value: 200
+K_Sandskimmer_MP:
+  readableName: K Sandskimmer
+  cu: 100
+  ru: 0
+  time: 10
+  pop: 2
+  hp: 490
+  armor: 0
+  sensor: 1150
+  contact: 1250
+  xp: 100
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 200
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 400
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 750
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+    4:
+      requiredxp: 1400
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 1
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: DEFAULT
+          mode: Add
+          value: 1
+    5:
+      requiredxp: 1900
+      buffSet:
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: 
+          mode: Add
+          value: 200
+C_Railgun_MP:
+  readableName: C Railgun
+  cu: 240
+  ru: 80
+  time: 16
+  pop: 3
+  hp: 750
+  armor: 0
+  sensor: 1200
+  contact: 1250
+  xp: 450
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 350
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    2:
+      requiredxp: 665
+      buffSet:
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+    3:
+      requiredxp: 1264
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+    4:
+      requiredxp: 2401
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 150
+    5:
+      requiredxp: 4561
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -20
+C_Sob_Railgun_MP:
+  readableName: S Railgun
+  cu: 240
+  ru: 80
+  time: 16
+  pop: 3
+  hp: 750
+  armor: 0
+  sensor: 1200
+  contact: 1250
+  xp: 470
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 350
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    2:
+      requiredxp: 665
+      buffSet:
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+    3:
+      requiredxp: 1264
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+    4:
+      requiredxp: 2401
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 150
+    5:
+      requiredxp: 4561
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -20
+G_StarHullTank_MP:
+  readableName: G Heavy Railgun
+  cu: 350
+  ru: 110
+  time: 18
+  pop: 4
+  hp: 820
+  armor: 0
+  sensor: 1000
+  contact: 1250
+  xp: 550
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 450
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: EXPLOSIVE_SHOT
+          mode: AddPercent
+          value: 10
+    2:
+      requiredxp: 855
+      buffSet:
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: EXPLOSIVE_SHOT
+          mode: AddPercent
+          value: 15
+    3:
+      requiredxp: 1625
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: EXPLOSIVE_SHOT
+          mode: Add
+          value: 100
+    4:
+      requiredxp: 3087
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: EXPLOSIVE_SHOT
+          mode: Add
+          value: 2
+    5:
+      requiredxp: 5864
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 150
+K_HeavyRailgun_MP:
+  readableName: K Heavy Railgun
+  cu: 350
+  ru: 110
+  time: 18
+  pop: 4
+  hp: 820
+  armor: 0
+  sensor: 1000
+  contact: 1250
+  xp: 550
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 450
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: EXPLOSIVE_SHOT
+          mode: AddPercent
+          value: 10
+    2:
+      requiredxp: 855
+      buffSet:
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: EXPLOSIVE_SHOT
+          mode: AddPercent
+          value: 15
+    3:
+      requiredxp: 1625
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: EXPLOSIVE_SHOT
+          mode: Add
+          value: 100
+    4:
+      requiredxp: 3087
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: EXPLOSIVE_SHOT
+          mode: Add
+          value: 2
+    5:
+      requiredxp: 5864
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 150
+G_Catamaran_MP:
+  readableName: G Assault Ship
+  cu: 300
+  ru: 35
+  time: 17
+  pop: 3
+  hp: 960
+  armor: 5
+  sensor: 1100
+  contact: 1250
+  xp: 260
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 350
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    2:
+      requiredxp: 625
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    3:
+      requiredxp: 950
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    4:
+      requiredxp: 1800
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 1
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: ANTI-AIR
+          mode: Add
+          value: 1
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: GLOBALAA
+          mode: Add
+          value: 1
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    5:
+      requiredxp: 3400
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+K_AssaultShip_MP:
+  readableName: K Assault Ship
+  cu: 300
+  ru: 35
+  time: 17
+  pop: 3
+  hp: 960
+  armor: 5
+  sensor: 1100
+  contact: 1250
+  xp: 260
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 350
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    2:
+      requiredxp: 625
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    3:
+      requiredxp: 950
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    4:
+      requiredxp: 1800
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 1
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: ANTI-AIR
+          mode: Add
+          value: 1
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: GLOBALAA
+          mode: Add
+          value: 1
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    5:
+      requiredxp: 3400
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+C_HAC_Upgrade01_MP:
+  readableName: Missile Battery
+  cu: 300
+  ru: 85
+  time: 21
+  pop: 3
+  hp: 1800
+  armor: 3
+  sensor: 1400
+  contact: 1600
+  xp: 740
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 740
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: ANTI-AIR
+          mode: AddPercent
+          value: 10
+    2:
+      requiredxp: 1406
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ANTI-AIR
+          mode: Add
+          value: -15
+    3:
+      requiredxp: 2671
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+    4:
+      requiredxp: 5076
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    5:
+      requiredxp: 9644
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 2
+G_Catamaran_Upgrade01_MP:
+  readableName: G Missile Ship
+  cu: 350
+  ru: 90
+  time: 24
+  pop: 3
+  hp: 1800
+  armor: 3
+  sensor: 1400
+  contact: 1600
+  xp: 760
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 760
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    2:
+      requiredxp: 1444
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    3:
+      requiredxp: 2744
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    4:
+      requiredxp: 5213
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: G_Catamaran_Upgrade01_Weapon_G2A_MP
+          mode: Add
+          value: -1000
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP
+          mode: Add
+          value: -1000
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: GLOBALAA
+          mode: Add
+          value: 1
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    5:
+      requiredxp: 9904
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+K_MissileShip_MP:
+  readableName: K Missile Ship
+  cu: 350
+  ru: 90
+  time: 24
+  pop: 3
+  hp: 1800
+  armor: 3
+  sensor: 1400
+  contact: 1600
+  xp: 760
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 760
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    2:
+      requiredxp: 1444
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    3:
+      requiredxp: 2744
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    4:
+      requiredxp: 5213
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: G_Catamaran_Upgrade01_Weapon_G2A_MP
+          mode: Add
+          value: -1000
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP
+          mode: Add
+          value: -1000
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: GLOBALAA
+          mode: Add
+          value: 1
+        -
+          attribute: Unit_FireRateDisplay
+          attributeID: 12
+          category: Unit
+          name: 
+          mode: Add
+          value: 1
+    5:
+      requiredxp: 9904
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 100
+G_StarHull_Upgrade01_MP:
+  readableName: G Assault Railgun
+  cu: 240
+  ru: 45
+  time: 17
+  pop: 2
+  hp: 600
+  armor: 4
+  sensor: 1250
+  contact: 1350
+  xp: 350
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 610
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: EXPLOSIVE_SHOT
+          mode: AddPercent
+          value: 10
+    2:
+      requiredxp: 1159
+      buffSet:
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: EXPLOSIVE_SHOT
+          mode: AddPercent
+          value: 15
+    3:
+      requiredxp: 2202
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: EXPLOSIVE_SHOT
+          mode: Add
+          value: 100
+    4:
+      requiredxp: 4184
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: EXPLOSIVE_SHOT
+          mode: Add
+          value: 2
+    5:
+      requiredxp: 7950
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 150
+K_AssaultRailgun_MP:
+  readableName: K Assault Railgun
+  cu: 240
+  ru: 45
+  time: 17
+  pop: 2
+  hp: 600
+  armor: 4
+  sensor: 1250
+  contact: 1350
+  xp: 350
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 610
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: EXPLOSIVE_SHOT
+          mode: AddPercent
+          value: 10
+    2:
+      requiredxp: 1159
+      buffSet:
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+        -
+          attribute: WeaponRange_AccuracyLong
+          attributeID: 5
+          category: WeaponRange
+          name: EXPLOSIVE_SHOT
+          mode: AddPercent
+          value: 15
+    3:
+      requiredxp: 2202
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: EXPLOSIVE_SHOT
+          mode: Add
+          value: 100
+    4:
+      requiredxp: 4184
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: EXPLOSIVE_SHOT
+          mode: Add
+          value: 2
+    5:
+      requiredxp: 7950
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 150
+C_Interceptor_MP:
+  readableName: Strike Fighter
+  cu: 200
+  ru: 90
+  time: 26
+  pop: 2
+  hp: 490
+  armor: 4
+  sensor: 2000
+  contact: 2100
+  xp: 370
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 370
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 703
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-GROUND
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-AIR
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 1336
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitDynamics_MaxSpeedTurnRadius
+          attributeID: 3
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: -10
+    4:
+      requiredxp: 2538
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-AIR
+          mode: Add
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-GROUND
+          mode: Add
+          value: 10
+    5:
+      requiredxp: 4822
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+G_Interceptor_MP:
+  readableName: G Interceptor
+  cu: 250
+  ru: 100
+  time: 12
+  pop: 2
+  hp: 475
+  armor: 2
+  sensor: 2000
+  contact: 2500
+  xp: 370
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 370
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 703
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-GROUND
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-AIR
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 1336
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitDynamics_MaxSpeedTurnRadius
+          attributeID: 3
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: -10
+    4:
+      requiredxp: 2538
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-GROUND
+          mode: AddPercent
+          value: 15
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-AIR
+          mode: AddPercent
+          value: 15
+    5:
+      requiredxp: 4822
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+K_Interceptor_MP:
+  readableName: K Interceptor
+  cu: 250
+  ru: 100
+  time: 12
+  pop: 2
+  hp: 475
+  armor: 2
+  sensor: 2000
+  contact: 2500
+  xp: 370
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 370
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 703
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-GROUND
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-AIR
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 1336
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitDynamics_MaxSpeedTurnRadius
+          attributeID: 3
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: -10
+    4:
+      requiredxp: 2538
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-GROUND
+          mode: AddPercent
+          value: 15
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-AIR
+          mode: AddPercent
+          value: 15
+    5:
+      requiredxp: 4822
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+C_Bomber_MP:
+  readableName: Tactical Bomber
+  cu: 350
+  ru: 160
+  time: 26
+  pop: 4
+  hp: 1350
+  armor: 20
+  sensor: 2000
+  contact: 2000
+  xp: 1560
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 1560
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 2964
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-GROUND
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-AIR
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 5632
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitDynamics_MaxSpeedTurnRadius
+          attributeID: 3
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: -10
+    4:
+      requiredxp: 10700
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-AIR
+          mode: Add
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-GROUND
+          mode: Add
+          value: 10
+    5:
+      requiredxp: 20330
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+G_Bomber_MP:
+  readableName: G Precision Bomber
+  cu: 300
+  ru: 140
+  time: 22
+  pop: 3
+  hp: 1050
+  armor: 15
+  sensor: 1500
+  contact: 2000
+  xp: 1560
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 940
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 1786
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-GROUND
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-AIR
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 3393
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitDynamics_MaxSpeedTurnRadius
+          attributeID: 3
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: -10
+    4:
+      requiredxp: 6447
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-GROUND
+          mode: AddPercent
+          value: 15
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-AIR
+          mode: AddPercent
+          value: 15
+    5:
+      requiredxp: 12250
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+K_Bomber_MP:
+  readableName: K Precision Bomber
+  cu: 300
+  ru: 140
+  time: 22
+  pop: 3
+  hp: 1050
+  armor: 15
+  sensor: 1500
+  contact: 2000
+  xp: 1560
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 940
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 1786
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-GROUND
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-AIR
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 3393
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitDynamics_MaxSpeedTurnRadius
+          attributeID: 3
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: -10
+    4:
+      requiredxp: 6447
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 15
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-GROUND
+          mode: AddPercent
+          value: 15
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-AIR
+          mode: AddPercent
+          value: 15
+    5:
+      requiredxp: 12250
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+C_GunShip_MP:
+  readableName: Gunship
+  cu: 500
+  ru: 100
+  time: 48
+  pop: 3
+  hp: 1250
+  armor: 9
+  sensor: 1600
+  contact: 1800
+  xp: 1560
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 1300
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    2:
+      requiredxp: 2470
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-GROUND
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AIR-TO-AIR
+          mode: Add
+          value: 100
+    3:
+      requiredxp: 4693
+      buffSet:
+        -
+          attribute: UnitDynamics_MaxSpeed
+          attributeID: 0
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitDynamics_MaxSpeedTurnRadius
+          attributeID: 3
+          category: UnitDynamics
+          name: DEFAULT
+          mode: AddPercent
+          value: -10
+    4:
+      requiredxp: 8917
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-AIR
+          mode: Add
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: AIR-TO-GROUND
+          mode: Add
+          value: 10
+    5:
+      requiredxp: 16942
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+G_Battlecruiser_MP:
+  readableName: C Assault Cruiser
+  cu: 550
+  ru: 220
+  time: 60
+  pop: 5
+  hp: 2900
+  armor: 12
+  sensor: 1000
+  contact: 1150
+  xp: 2100
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 2100
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 3
+    2:
+      requiredxp: 3990
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    3:
+      requiredxp: 7581
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: BACK
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: FRONT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MISSILE_BACK
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MISSILE_FRONT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+    4:
+      requiredxp: 14404
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: BACK
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MISSILE_BACK
+          mode: Add
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MISSILE_FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -15
+    5:
+      requiredxp: 27367
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 300
+C_Sob_AssaultCruiser_MP:
+  readableName: S Assault Cruiser
+  cu: 550
+  ru: 220
+  time: 60
+  pop: 5
+  hp: 2900
+  armor: 12
+  sensor: 1000
+  contact: 1150
+  xp: 2100
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 2100
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 3
+    2:
+      requiredxp: 3990
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    3:
+      requiredxp: 7581
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: BACK
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: FRONT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MISSILE_BACK
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MISSILE_FRONT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+    4:
+      requiredxp: 14404
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: BACK
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MISSILE_BACK
+          mode: Add
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MISSILE_FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -15
+    5:
+      requiredxp: 27367
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 300
+G_HonorGuard_MP:
+  readableName: G Honourguard Cruiser
+  cu: 550
+  ru: 250
+  time: 55
+  pop: 7
+  hp: 2700
+  armor: 6
+  sensor: 1000
+  contact: 1250
+  xp: 2100
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 1120
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_LEFT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_RIGHT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Front
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_BACK
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Back
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+    2:
+      requiredxp: 2128
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: AA_LEFT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: AA_RIGHT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_Front
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BACK
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_Back
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: Ability_CooldownTimeSecs
+          attributeID: 0
+          category: Ability
+          name: Ability_G_Artillery_EMP_MP
+          mode: AddPercent
+          value: -15
+        -
+          attribute: Ability_CooldownTimeSecs
+          attributeID: 0
+          category: Ability
+          name: Ability_G_ArtilleryBarrage_01_MP
+          mode: AddPercent
+          value: -15
+    3:
+      requiredxp: 4043
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    4:
+      requiredxp: 7682
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_LEFT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_RIGHT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Front
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_BACK
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Back
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+    5:
+      requiredxp: 14596
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 300
+K_HonorGuard_MP:
+  readableName: K Honourguard Cruiser
+  cu: 550
+  ru: 250
+  time: 55
+  pop: 7
+  hp: 2700
+  armor: 6
+  sensor: 1000
+  contact: 1250
+  xp: 2100
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 1120
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_LEFT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_RIGHT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Front
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_BACK
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Back
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+    2:
+      requiredxp: 2128
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: AA_LEFT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: AA_RIGHT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_Front
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BACK
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_Back
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: Ability_CooldownTimeSecs
+          attributeID: 0
+          category: Ability
+          name: Ability_G_Artillery_EMP_MP
+          mode: AddPercent
+          value: -15
+        -
+          attribute: Ability_CooldownTimeSecs
+          attributeID: 0
+          category: Ability
+          name: Ability_G_ArtilleryBarrage_01_MP
+          mode: AddPercent
+          value: -15
+    3:
+      requiredxp: 4043
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    4:
+      requiredxp: 7682
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_LEFT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_RIGHT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Front
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_BACK
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Back
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+    5:
+      requiredxp: 14596
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 300
+C_Battlecruiser_MP:
+  readableName: C Battlecruiser
+  cu: 650
+  ru: 280
+  time: 65
+  pop: 6
+  hp: 3000
+  armor: 15
+  sensor: 1000
+  contact: 1250
+  xp: 3200
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 3200
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 3
+    2:
+      requiredxp: 6080
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    3:
+      requiredxp: 11552
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: BACK
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: FRONT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MISSILE_BACK
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MISSILE_FRONT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+    4:
+      requiredxp: 21949
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: BACK
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MISSILE_BACK
+          mode: Add
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MISSILE_FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -15
+    5:
+      requiredxp: 41703
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 300
+C_Sob_Battlecruiser_MP:
+  readableName: S Battlecruiser
+  cu: 650
+  ru: 280
+  time: 65
+  pop: 6
+  hp: 2900
+  armor: 13
+  sensor: 1000
+  contact: 1250
+  xp: 3200
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 3200
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 3
+    2:
+      requiredxp: 6080
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    3:
+      requiredxp: 11552
+      buffSet:
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: BACK
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: FRONT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MISSILE_BACK
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: MISSILE_FRONT
+          mode: AddPercent
+          value: 10
+        -
+          attribute: UnitWeapon_BaseDamagePerRound
+          attributeID: 4
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: 10
+    4:
+      requiredxp: 21949
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: BACK
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MISSILE_BACK
+          mode: Add
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MISSILE_FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -15
+    5:
+      requiredxp: 41703
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 300
+C_ArtilleryCruiser_MP:
+  readableName: Artillery Cruiser
+  cu: 500
+  ru: 200
+  time: 60
+  pop: 5
+  hp: 1900
+  armor: 2
+  sensor: 1000
+  contact: 1250
+  xp: 1120
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 1120
+      buffSet:
+        -
+          attribute: Unit_Armour
+          attributeID: 4
+          category: Unit
+          name: 
+          mode: Add
+          value: 2
+    2:
+      requiredxp: 2128
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 200
+    3:
+      requiredxp: 4043
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: BACK
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: FRONT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MISSILE_BACK
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MISSILE_FRONT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_FL
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_BR
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_BR_PRECISE
+          mode: Add
+          value: 100
+    4:
+      requiredxp: 7682
+      buffSet:
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: BACK
+          mode: Add
+          value: 2
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: FRONT
+          mode: Add
+          value: 2
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: MISSILE_BACK
+          mode: Add
+          value: 2
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: MISSILE_FRONT
+          mode: Add
+          value: 2
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: DEFAULT
+          mode: Add
+          value: 2
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: MisslePods_FL
+          mode: Add
+          value: 2
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BR
+          mode: Add
+          value: 2
+        -
+          attribute: UnitWeapon_RateOfFire
+          attributeID: 5
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BR_PRECISE
+          mode: Add
+          value: 2
+    5:
+      requiredxp: 14596
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: BACK
+          mode: AddPercent
+          value: -20
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: FRONT
+          mode: AddPercent
+          value: -20
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MISSILE_BACK
+          mode: AddPercent
+          value: -20
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MISSILE_FRONT
+          mode: AddPercent
+          value: -20
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -20
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BR
+          mode: AddPercent
+          value: -20
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BR_PRECISE
+          mode: AddPercent
+          value: -20
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_FL
+          mode: AddPercent
+          value: -20
+G_ArtilleryCruiser_MP:
+  readableName: G Siege Cruiser
+  cu: 400
+  ru: 180
+  time: 45
+  pop: 6
+  hp: 2000
+  armor: 9
+  sensor: 1400
+  contact: 1550
+  xp: 1120
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 1120
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_LEFT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_RIGHT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Front
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_BACK
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Back
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+    2:
+      requiredxp: 2128
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: AA_LEFT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: AA_RIGHT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_Front
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BACK
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_Back
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: Ability_CooldownTimeSecs
+          attributeID: 0
+          category: Ability
+          name: Ability_G_Artillery_EMP_MP
+          mode: AddPercent
+          value: -15
+        -
+          attribute: Ability_CooldownTimeSecs
+          attributeID: 0
+          category: Ability
+          name: Ability_G_ArtilleryBarrage_01_MP
+          mode: AddPercent
+          value: -15
+    3:
+      requiredxp: 4043
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    4:
+      requiredxp: 7682
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_LEFT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_RIGHT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Front
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_BACK
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Back
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+    5:
+      requiredxp: 14596
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 300
+K_ArtilleryCruiser_MP:
+  readableName: K Siege Cruiser
+  cu: 620
+  ru: 250
+  time: 45
+  pop: 6
+  hp: 2800
+  armor: 12
+  sensor: 1100
+  contact: 1200
+  xp: 1120
+  experience:
+    0:
+      requiredxp: 0
+    1:
+      requiredxp: 1120
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_LEFT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_RIGHT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Front
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_BACK
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Back
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+    2:
+      requiredxp: 2128
+      buffSet:
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: AA_LEFT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: AA_RIGHT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_Front
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: ARTILLERY_BARRAGE_BACK
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: MisslePods_Back
+          mode: AddPercent
+          value: -15
+        -
+          attribute: UnitWeapon_ReloadTime
+          attributeID: 7
+          category: UnitWeapon
+          name: DEFAULT
+          mode: AddPercent
+          value: -15
+        -
+          attribute: Ability_CooldownTimeSecs
+          attributeID: 0
+          category: Ability
+          name: Ability_G_Artillery_EMP_MP
+          mode: AddPercent
+          value: -15
+        -
+          attribute: Ability_CooldownTimeSecs
+          attributeID: 0
+          category: Ability
+          name: Ability_G_ArtilleryBarrage_01_MP
+          mode: AddPercent
+          value: -15
+    3:
+      requiredxp: 4043
+      buffSet:
+        -
+          attribute: Unit_SensorRadius
+          attributeID: 6
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+        -
+          attribute: Unit_ContactRadius
+          attributeID: 7
+          category: Unit
+          name: 
+          mode: AddPercent
+          value: 20
+    4:
+      requiredxp: 7682
+      buffSet:
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_LEFT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: AA_RIGHT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Front
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_FRONT
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: ARTILLERY_BARRAGE_BACK
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: MisslePods_Back
+          mode: Add
+          value: 100
+        -
+          attribute: WeaponRange_DistanceLong
+          attributeID: 2
+          category: WeaponRange
+          name: DEFAULT
+          mode: Add
+          value: 100
+    5:
+      requiredxp: 14596
+      buffSet:
+        -
+          attribute: Unit_MaxHealth
+          attributeID: 0
+          category: Unit
+          name: 
+          mode: Add
+          value: 300
