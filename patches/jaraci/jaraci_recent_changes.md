@@ -62,6 +62,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2020-10-07 (Jaraci Cup #8)](#2020-10-07-jaraci-cup-8)
 	- [2020-10-18](#2020-10-18)
 	- [2020-11-21](#2020-11-21)
+	- [2020-12-18](#2020-12-18)
 	- [2020-12-19](#2020-12-19)
 
 # Changes
@@ -1558,7 +1559,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Sandskimmer hitpoints: `550 => 490`
 	* Production cruiser ROF: `12 => 11`
 
-## 2020-12-19
+## 2020-12-18
 *Not yet reflected in the main changelog.*
 * General:
 	* Carrier PDs:
@@ -1634,3 +1635,23 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Tech cost: `500CU 250RU => 600CU 250RU`
 		* Cost: `620CU 250RU => 700CU 250RU`
 		* Main weapon AOE: `250 => 230`
+
+## 2020-12-19
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Carrier movement dynamics:
+		* Length: `550 => 450`
+		* Width: `250 => 200`
+		* Turn radius: `65 => 130`
+		* Max ease into turn time: `5s => 1s`
+	* Support cruiser movement dynamics max ease into turn time: `3s => 0.8s` 
+	* LAV accuracy: `90%/85%/63% => 92%/88%/65%`
+	* Level 2 production upgrade cost: `400CU 40RU => 300CU 40RU`
+* Gaalsien/Khaaneph:
+	* Production cruiser:
+		* Cost: `650CU 60RU => 700CU 100RU`
+		* Production time: `60s => 50s`
+	* Heavy railgun:
+		* Cost: `350CU 105RU => 350CU 110RU`
+		* Ranged calibration upgrade cost: `200CU 230RU => 200CU 300RU`
+		* EMP round upgrade cost: `300CU 100RU => 400CU 100RU`
