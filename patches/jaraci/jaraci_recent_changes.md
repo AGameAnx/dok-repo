@@ -62,6 +62,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2020-10-07 (Jaraci Cup #8)](#2020-10-07-jaraci-cup-8)
 	- [2020-10-18](#2020-10-18)
 	- [2020-11-21](#2020-11-21)
+	- [2020-12-19](#2020-12-19)
 
 # Changes
 
@@ -1556,3 +1557,80 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Gaalsien/Khaaneph:
 	* Sandskimmer hitpoints: `550 => 490`
 	* Production cruiser ROF: `12 => 11`
+
+## 2020-12-19
+*Not yet reflected in the main changelog.*
+* General:
+	* Carrier PDs:
+		* Damage: `20 => 30`
+		* Penetrating rounds damage: `50 => 75`
+		* Fixed broken ROF descriptions
+* Coalition/Soban:
+	* LAV distant range accuracy: `65% => 63%`
+	* AA turret affected by high ground: `Yes => No`
+	* AAV:
+		* Tech cost: `400CU 75RU => 350CU 75RU`
+		* AOE: `15 => 0`
+		* Hitpoints: `980 => 920`
+		* Suppression slow effect: `42% => 55%`
+	* Railgun:
+		* RU cost: `80 => 85`
+		* Max movement speed: `70 => 73` 
+		* Accuracy: `7%/6.5%/6% => 40%/100%/65%`
+		* Damage vs small: `100% => 60%`
+	* Fighter and gunship:
+		* Tech cost: `450CU 200RU => 400CU 200RU`
+		* Strike fighter:
+			* Range: `1250 => 1200` (vanilla value)
+			* Production time: `26s => 27s`
+	* Support cruiser PD weapon:
+		* Damage: `15 => 16`
+		* ROF: `8 => 6`
+		* Tracer speed: `1000 => 1300` (visuals)
+* Coalition:
+	* Carrier:
+		* Hitpoints: `9000 => 9200`
+		* PD base ROF: `6 => 2`
+		* Cruise missile damage against large targets: `170% => 160%`
+	* Railgun:
+		* Reload: `2s => 1.8s`
+		* Accuracy vs small: `200% => 100%`
+		* Accuracy vs ground small support: `200% => 100%`
+* Soban:
+	* Railgun:
+		* Cooldown: `1.3s => 1.25s`
+		* Reload: `4.25s => 4.0s`
+		* Accuracy vs small: `500% => 100%`
+* Gaalsien/Khaaneph:
+	* Salvager armor: `3 => 5`
+	* Assault ship:
+		* Damage: `28 => 29`
+		* AOE: `120 => 130`
+	* Heavy railgun:
+		* Cost: `350CU 110RU => 350CU 105RU`
+		* Production time: `18s => 24s`
+		* Max movement speed: `57 => 61`
+		* Accuracy: `7%/6.5%/6% => 40%/100%/65%`
+		* Damage vs small: `100% => 60%`
+		* Accuracy vs small: `200% => 100%`
+		* Accuracy vs ground small support: `200% => 100%`
+	* Assault railgun:
+		* Max speed: `85 => 89`
+		* Armor: `4 => 5`
+	* Interceptor weapon leads target: `No => Yes`
+	* Honourguard cruiser AA upgrade cost: `300CU 200RU => 300CU 300RU`
+* Gaalsien:
+	* Carrier PD base ROF: `8 => 3`
+* Khaaneph:
+	* Carrier:
+		* PD base ROF: `7 => 3`
+		* Cruise Missile systems power shunt missile reload time:
+			* Level 2: `9s => 8s`
+			* Level 3: `8s => 7s`
+			* Level 4: `7s => 6s`
+			* Level 5: `6s => 5s` 
+	* Blast Drone armor: `0 => 1`
+	* Siege cruiser:
+		* Tech cost: `500CU 250RU => 600CU 250RU`
+		* Cost: `620CU 250RU => 700CU 250RU`
+		* Main weapon AOE: `250 => 230`
