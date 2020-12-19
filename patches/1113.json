@@ -60,7 +60,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_C_CruiseMissile_MP": {
-					"CooldownTimeSecs": 120
+					"CooldownTimeSecs": 320
 				},
 				"Ability_C_LaunchInterceptor_MP": {
 					"AirSortie": { "LoiterLength": 40 }
@@ -95,7 +95,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_MissileBarrage": {
-					"CooldownTimeSecs": 120
+					"CooldownTimeSecs": 60
 				},
 				"Ability_G_LaunchInterceptor_Upgraded_MP": {
 					"AirSortie": { "LoiterLength": 40 }
@@ -110,8 +110,8 @@
 			"WeaponAttributes": {
 			    "G_Carrier_Weapon_BarrageMissile_MP": {
 				    "ExcludeFromHeightAdvantage": true,
-				    "BaseDamagePerRound": 535,
-				    "AreaOfEffectRadius": 250,
+				    "BaseDamagePerRound": 635,
+				    "AreaOfEffectRadius": 280,
 				    "AreaOfEffectFalloffType": "Quadratic",
 				    "NumberOfBursts": 3,
 				    "Modifiers": {
@@ -122,12 +122,12 @@
 							"TargetClass": "Carrier, Large, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 120
+							"Amount": 160
 						}
 					},
-					"RangeAttributesShort": { "Distance": 2500, "Accuracy" : 10, "MinDistance": 1200 },
-					"RangeAttributesMedium": { "Distance": 5000, "Accuracy" : 5, "MinDistance": 1200 },
-				        "RangeAttributesLong": { "Distance": 10000, "Accuracy" : 5, "MinDistance": 1200 }
+					"RangeAttributesShort": { "Distance": 2500, "Accuracy" : 10, "MinDistance": 2000 },
+					"RangeAttributesMedium": { "Distance": 5000, "Accuracy" : 5, "MinDistance": 2000 },
+				    "RangeAttributesLong": { "Distance": 10000, "Accuracy" : 5, "MinDistance": 2000 }
 				}
 			}
 		},
@@ -937,37 +937,9 @@
 				}
 			},
 		    "AbilityAttributes": {
-			    "Ability_G_BaseRunnerPassiveRegen": {
-					"CooldownTimeSecs": 75,
-					"ApplyStatusEffect": {
-						"0": {
-							"Lifetime": "Finite",
-							"Duration": 10.005,
-							"MaxStacks": 1,
-							"StackingBehaviour": "Replace",
-							"Modifiers": {
-								"0": {
-									"ModifierType": "HealthOverTime",
-									"HealthOverTimeAttributes": {
-										"ID": "G_BaseRunner_HealAura_HealOT_StatusEffect_MP",
-										"Amount": 3,
-										"MSTickDuration": 50,
-										"DamageType": "Heal"
-									}
-								}
-							}
-						}
-				},
-				"ActivationDependencies": {
-					"TakeNoDamageForMS": 10000
-				},
-				"AutoToggleOffConditions": {
-					"TakeDamage": true
-				},
-				"ChainCasting": { "QueuedAbility": "" }
-			    }
+				"Ability_G_BaseRunnerActiveRegen": { "CooldownTimeSecs": 60 }
 			}	
-		},	
+		},		
 		"K_Baserunner_MP": {
 			"UnitAttributes": {
 			    "Resource1Cost": 240,
@@ -987,7 +959,6 @@
 					"CooldownTimeSecs": 35
 				},
 				"Ability_G_BaseRunnerPassiveRegen": {
-					"CooldownTimeSecs": 45,
 					"TargetAlignment": "Self",
 					"TargetingType": "Self, Passive",
 					"AbilityMapTargetLayers": "Ground",
@@ -1833,7 +1804,6 @@
 		"G_Bomber_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 1250,
-				"Resource2Cost": 140,
 				"Armour": 8,
 				"PopCapCost": 3,
 				"ProductionTime": 22
@@ -1897,7 +1867,6 @@
 		},
 		"G_Interceptor_MP": {
 			"UnitAttributes": {
-				"Resource2Cost": 250,
 				"Armour": 1,
 				"ProductionTime": 15
 			},
@@ -1921,7 +1890,6 @@
 		},
 		"K_Interceptor_MP": {
 			"UnitAttributes": {
-				"Resource2Cost": 250,
 				"Armour": 1,
 				"ProductionTime": 15
 			},
@@ -2537,7 +2505,7 @@
 		    }
 	    }
 	}
-}			
+}				
 			
 	
 
