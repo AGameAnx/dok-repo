@@ -1640,8 +1640,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Carrier movement dynamics:
-		* Length: `550 => 450`
-		* Width: `250 => 200`
 		* Turn radius: `65 => 130`
 		* Max ease into turn time: `5s => 1s`
 	* Support cruiser movement dynamics max ease into turn time: `3s => 0.8s` 
