@@ -64,6 +64,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2020-11-21](#2020-11-21)
 	- [2020-12-18](#2020-12-18)
 	- [2020-12-19](#2020-12-19)
+	- [2020-12-21](#2020-12-21)
 
 # Changes
 
@@ -1653,3 +1654,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Cost: `350CU 105RU => 350CU 110RU`
 		* Ranged calibration upgrade cost: `200CU 230RU => 200CU 300RU`
 		* EMP round upgrade cost: `300CU 100RU => 400CU 100RU`
+
+## 2020-12-21
+*Not yet reflected in the main changelog.*
+* General:
+	* Strike craft armor upgrades hitpoints granted per upgrade: `30 => 20`
