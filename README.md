@@ -34,6 +34,7 @@ Look to the right of these instructions you will see a heading that reads **Rele
 | Khraak Deserts balance patch     | **/p deserts**     | pbobbert | [Changelog and description](https://cdn.discordapp.com/attachments/509996599955554305/541211898771931136/Balancing_a_Desert_TooTwo_version_18.pdf)
 | Shitskimmer                      | **/p shitskimmer** | SickIGN  |
 | Who's patch                      | **/p who**         | Who      |
+| Spam Patch                       | **/p spam**        | SickIGN  | gamer.mp4 also did i do this right
 
 ## Tournament layouts
 
