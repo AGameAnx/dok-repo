@@ -1,0 +1,634 @@
+{
+	"Entities": {
+		"C_Carrier_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -2
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeedTurnRadius": 130,
+					"BrakingTime": 1.1,
+					"AccelerationTime": 1.1,
+					"MaxEaseIntoTurnTime": 1
+				}
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_LaunchInterceptor_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchGunShip_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"C_Carrier_Weapon_G2All_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak",
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyShortPercent",
+							"Amount": 130
+						},
+						"2": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyMediumPercent",
+							"Amount": 130
+						},
+						"3": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyLongPercent",
+							"Amount": 130
+						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
+						"7": { "Remove": true },
+						"8": { "Remove": true },
+						"9": { "Remove": true },
+						"10": { "Remove": true },
+						"11": { "Remove": true },
+						"12": { "Remove": true }
+					}
+				},
+				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak"
+				},
+				"C_CarrierMissiles_Weapon_A2G_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
+				"C_Carrier_Weapon_CruiseMissile_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		"C_Sob_Carrier_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -2
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeedTurnRadius": 130,
+					"BrakingTime": 1.1,
+					"AccelerationTime": 1.1,
+					"MaxEaseIntoTurnTime": 1
+				}
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_LaunchInterceptor_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchGunShip_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
+				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				},
+				"C_Sob_Carrier_Weapon_Nuke_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"RangeAttributesLong": {
+						"Distance": 4500
+					}
+				}
+			},
+			"PowerShuntAttributes": {
+				"PowerSystems": {
+					
+					"3": { // Range Systems
+						"PowerLevels": {
+							
+							"0": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 900m"
+							},
+							
+							"1": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1100m",
+								"StatusEffectsToApply": {
+									"Range_1_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_FL
+													"0": { "Value": 1100 }, // long range
+													"1": { "Value": 1100 }, // APBULLETS long range
+													"2": { "Value": 750 }, // medium range
+													"3": { "Value": 750 }, // APBULLETS medium range
+													"4": { "Value": 450 }, // short range
+													"5": { "Value": 450 }, // APBULLETS short range
+													
+													// TURRET_FR
+													"6": { "Value": 1100 }, // long range
+													"7": { "Value": 1100 }, // APBULLETS long range
+													"8": { "Value": 750 }, // medium range
+													"9": { "Value": 750 }, // APBULLETS medium range
+													"10": { "Value": 450 }, // short range
+													"11": { "Value": 450 }, // APBULLETS short range
+													
+													// TURRET_BR
+													"12": { "Value": 1100 }, // long range
+													"13": { "Value": 1100 }, // APBULLETS long range
+													"14": { "Value": 750 }, // medium range
+													"15": { "Value": 750 }, // APBULLETS medium range
+													"16": { "Value": 450 }, // short range
+													"17": { "Value": 450 }, // APBULLETS short range
+													
+													// TURRET_BL
+													"18": { "Value": 1100 }, // long range
+													"19": { "Value": 1100 }, // APBULLETS long range
+													"20": { "Value": 750 }, // medium range
+													"21": { "Value": 750 }, // APBULLETS medium range
+													"22": { "Value": 450 }, // short range
+													"23": { "Value": 450 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"2": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1300m",
+								"StatusEffectsToApply": {
+									"Range_2_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_BL
+													"0": { "Value": 1300 }, // long range
+													"1": { "Value": 1300 }, // APBULLETS long range
+													"2": { "Value": 1100 }, // medium range
+													"3": { "Value": 1100 }, // APBULLETS medium range
+													"4": { "Value": 700 }, // short range
+													"5": { "Value": 700 }, // APBULLETS short range
+													
+													// TURRET_BR
+													"6": { "Value": 1300 }, // long range
+													"7": { "Value": 1300 }, // APBULLETS long range
+													"8": { "Value": 1100 }, // medium range
+													"9": { "Value": 1100 }, // APBULLETS medium range
+													"10": { "Value": 700 }, // short range
+													"11": { "Value": 700 }, // APBULLETS short range
+													
+													// TURRET_FL
+													"12": { "Value": 1300 }, // long range
+													"13": { "Value": 1300 }, // APBULLETS long range
+													"14": { "Value": 1100 }, // medium range
+													"15": { "Value": 1100 }, // APBULLETS medium range
+													"16": { "Value": 700 }, // short range
+													"17": { "Value": 700 }, // APBULLETS short range
+													
+													// TURRET_FR
+													"18": { "Value": 1300 }, // long range
+													"19": { "Value": 1300 }, // APBULLETS long range
+													"20": { "Value": 1100 }, // medium range
+													"21": { "Value": 1100 }, // APBULLETS medium range
+													"22": { "Value": 700 }, // short range
+													"23": { "Value": 700 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"3": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1500m",
+								"StatusEffectsToApply": {
+									"Range_3_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_BR
+													"0": { "Value": 1500 }, // long range
+													"1": { "Value": 1500 }, // APBULLETS long range
+													"2": { "Value": 1300 }, // medium range
+													"3": { "Value": 1300 }, // APBULLETS medium range
+													"4": { "Value": 900 }, // short range
+													"5": { "Value": 900 }, // APBULLETS short range
+													
+													// TURRET_BR
+													"6": { "Value": 1500 }, // long range
+													"7": { "Value": 1500 }, // APBULLETS long range
+													"8": { "Value": 1300 }, // medium range
+													"9": { "Value": 1300 }, // APBULLETS medium range
+													"10": { "Value": 900 }, // short range
+													"11": { "Value": 900 }, // APBULLETS short range
+													
+													// TURRET_FL
+													"12": { "Value": 1500 }, // long range
+													"13": { "Value": 1500 }, // APBULLETS long range
+													"14": { "Value": 1300 }, // medium range
+													"15": { "Value": 1300 }, // APBULLETS medium range
+													"16": { "Value": 900 }, // short range
+													"17": { "Value": 900 }, // APBULLETS short range
+													
+													// TURRET_FR
+													"18": { "Value": 1500 }, // long range
+													"19": { "Value": 1500 }, // APBULLETS long range
+													"20": { "Value": 1300 }, // medium range
+													"21": { "Value": 1300 }, // APBULLETS medium range
+													"22": { "Value": 900 }, // short range
+													"23": { "Value": 900 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"4": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1700m"
+							},
+							
+							"5": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 2000m"
+							}
+							
+						}
+					}
+					
+				}
+			}
+		},
+		"G_Carrier_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -2
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_G_LaunchInterceptor_Upgraded_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_G_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"G_Carrier_Weapon_G2All_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
+				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
+				"G_Carrier_Weapon_DefaultMissile_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
+				"G_Carrier_Weapon_BarrageMissile_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		"K_Carrier_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -2
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_Launch_K_Interceptor": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_Launch_K_Interceptor_Upgraded": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_Launch_K_Bomber": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"K_Carrier_Weapon_G2All_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak"
+				},
+				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak"
+				},
+				"K_Carrier_Weapon_DefaultMissile_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		
+		"N_MissileBarrage_Sight": {
+			"UnitAttributes": {
+				"PopCapCost": 0
+			}
+		},
+		
+		"C_Sob_PopcapScanner": {
+			"UnitAttributes": {
+				"WorldHeightOffset": 15,
+				"AggroRange": 900
+			}
+		},
+		"N_Gun_Turret_MP": {
+			"UnitAttributes": {
+				"WorldHeightOffset": 15
+			}
+		},
+		"N_Missle_Turret_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -50
+			},
+			"WeaponAttributes": {
+				"N_Missle_Turret_Weapon_G2A_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		"N_ECMField_MP": {
+			"DetectableAttributes": {
+				"MinimumStateAfterDetection": "Hidden"
+			}
+		},
+		
+		"C_Harvester_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 1
+			}
+		},
+		"G_Harvester_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 1
+			}
+		},
+		"K_Harvester_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 2
+			}
+		},
+		
+		"C_Baserunner_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -250
+			}
+		},
+		"C_Sob_Baserunner_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -250
+			}
+		},
+		"G_Baserunner_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -250
+			}
+		},
+		"K_Baserunner_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -220
+			}
+		},
+		
+		"C_SupportCruiser_MP": {
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxEaseIntoTurnTime": 0.8
+				}
+			}
+		},
+		"C_Sob_SupportCruiser_MP": {
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxEaseIntoTurnTime": 0.8
+				}
+			}
+		},
+		
+		"C_Escort_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 10
+			}
+		},
+		"C_Sob_Escort_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 10
+			}
+		},
+		
+		"G_SandSkimmer_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 5
+			}
+		},
+		"K_Sandskimmer_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 5
+			}
+		},
+		
+		"C_Railgun_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 25
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"C_Railgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"C_Sob_Railgun_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 25
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"C_Sob_Railgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		
+		"G_StarHullTank_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 10
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"K_HeavyRailgun_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 10
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		
+		"G_StarHull_Upgrade01_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 10
+			}
+		},
+		"K_AssaultRailgun_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": 10
+			}
+		},
+		
+		"C_HAC_Upgrade01_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -10
+			}
+		},
+		
+		"C_GunShip_MP": {
+			"WeaponAttributes": {
+				"C_GunShip_Weapon_DefaultFire_MP": {
+					"RangeAttributesLong": {
+						"Distance": 1050
+					}
+				}
+			}
+		},
+		
+		"G_HonorGuard_MP": {
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"G_HonorGuardRailgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 30,
+						"AngleWeight": 20,
+						"AutoTargetStickyBias": 200,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"K_HonorGuard_MP": {
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"G_HonorGuardRailgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 30,
+						"AngleWeight": 20,
+						"AutoTargetStickyBias": 200,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		
+		"C_Sob_Battlecruiser_MP": {
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		
+		"K_ArtilleryCruiser_MP": {
+			"WeaponAttributes": {
+				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		}
+	}
+}
