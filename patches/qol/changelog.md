@@ -111,7 +111,7 @@ Type `/p qol` in a multiplayer lobby to apply the patch!
 * MWE range: `35000 => 4500`
 
 ### PD railgun ranges
-> *Level 0 range is 900, meaning this power level was reducing carrier range in vanilla.*
+> *Level 0 range is 900, meaning power level 1 was reducing carrier range in vanilla.*
 
 * Level 1: `800 => 1100`
 * Level 2: `1100 => 1300`
