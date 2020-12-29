@@ -96,17 +96,17 @@ Type `/p qol` in a multiplayer lobby to apply the patch!
 > *Gun turret will be capable of shooting slightly over hills, making their placement easier.*
 
 * AA turret - no longer affected by high ground
-* Adjusted turret - adjusted world height offset.
+* Adjusted gun turret world height offset
 
 ## Gunship range
-> *This fixes issues with it targeting what it's firing, without constant human micro the gunship will still float around the target when attacking at the same distance as before.*
+> *This fixes issues with it targeting what it's firing at properly. Without constant human micro, the gunship will still float around the target when attacking at the same distance as before.*
 
 * Gunship weapon range: `700 => 1050`
 
 ## Soban Carrier
 
 ### Microwave emitter range
-> *Prevents base denial cheese*
+> *Prevents base denial cheese. The range is still rather substantial, but now it should usually require the carrier to move out to be able to target enemy bases and in some cases the carrier will be zoned away from bases entirely.*
 
 * MWE range: `35000 => 4500`
 
