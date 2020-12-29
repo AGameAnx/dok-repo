@@ -61,7 +61,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2020-09-25](#2020-09-25)
 	- [2020-10-07 (Jaraci Cup #8)](#2020-10-07-jaraci-cup-8)
 	- [2020-10-18](#2020-10-18)
-	- [2020-11-21](#2020-11-21)
+	- [2020-11-21 (Jaraci Cup #9)](#2020-11-21-jaraci-cup-9)
 	- [2020-12-18](#2020-12-18)
 	- [2020-12-19](#2020-12-19)
 	- [2020-12-21](#2020-12-21)
@@ -1551,7 +1551,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Cost: `250CU => 300CU`
 		* Hitpoints: `1100 => 900`
 
-## 2020-11-21
+## 2020-11-21 (Jaraci Cup #9)
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* LAV armor: `2 => 1`
