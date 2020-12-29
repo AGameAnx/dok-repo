@@ -23,18 +23,20 @@ Look to the right of these instructions you will see a heading that reads **Rele
 
 ## Patches
 
-| Name                             | **Command**        | Authors  | Description |
-| ---                              | ---                | ---      | ---
-| 1113 Patch                       | **/p 1113**        | S'Aarum  | Patch made for the 1113KDS Multiplayer Campaign
-| Baserunner Nothing               | **/p br**          | Bozocow  | Use only carrier, salvagers with strong det packs and baserunners to win
-| Jaraci balance mod (tournament)  | **/p jaraci**      | AGameAnx | [Changelog and description](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci/jaraci.md)
-| Jaraci balance mod (development) | **/p agame**       | AGameAnx | [Changelog and description](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci/jaraci.md)
-| Joke patch                       | **/p joke**        | Bozocow  | Units can have all sorts of crazy new roles, balance and capabilities
-| Joke patch V2                    | **/p jokev2**      | SickIGN  | Pretty much the same as Bozo's Joke patch but better in every way
-| Khraak Deserts balance patch     | **/p deserts**     | pbobbert | [Changelog and description](https://cdn.discordapp.com/attachments/509996599955554305/541211898771931136/Balancing_a_Desert_TooTwo_version_18.pdf)
-| Shitskimmer                      | **/p shitskimmer** | SickIGN  |
-| Who's patch                      | **/p who**         | Who      |
-| Spam Patch                       | **/p spam**        | SickIGN  | gamer.mp4 also did i do this right
+| Name                             | **Command**          | Authors  | Description |
+| ---                              | ---                  | ---      | ---
+| 1113 Patch                       | **/p 1113**          | S'Aarum  | Patch made for the 1113KDS Multiplayer Campaign
+| Baserunner Nothing               | **/p br**            | Bozocow  | Use only carrier, salvagers with strong det packs and baserunners to win
+| Jaraci balance mod (tournament)  | **/p jaraci**        | AGameAnx | [Changelog and description](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci/jaraci.md)
+| Jaraci balance mod (old versions)| **/p jaraci(number)**| AGameAnx | Older versions of jaraci balance mod (numbers relate to jaraci cup tournaments, /p jaraci1, /p jaraci2 etc)
+| Jaraci balance mod (development) | **/p agame**         | AGameAnx | Development versions of jaraci balance mod
+| Joke patch                       | **/p joke**          | Bozocow  | Units can have all sorts of crazy new roles, balance and capabilities
+| Joke patch V2                    | **/p jokev2**        | SickIGN  | Pretty much the same as Bozo's Joke patch but better in every way
+| Khraak Deserts balance patch     | **/p deserts**       | pbobbert | [Changelog and description](https://cdn.discordapp.com/attachments/509996599955554305/541211898771931136/Balancing_a_Desert_TooTwo_version_18.pdf)
+| Shitskimmer                      | **/p shitskimmer**   | SickIGN  |
+| Spam Patch                       | **/p spam**          | SickIGN  | Units no longer have cost, population cost, production time
+| Quality of Life patch            | **/p qol**           | AGameAnx | Vanilla quality of life improvements and bug fixes
+| Who's patch                      | **/p who**           | Who      |
 
 ## Tournament layouts
 
