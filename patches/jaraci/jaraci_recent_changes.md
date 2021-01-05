@@ -1665,3 +1665,4 @@ Full combined changelog can be found [HERE](jaraci.md)
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Baserunner max ease into turn time: `1s => 0.6s`
+	* LAV accuracy: `92%/88%/65% => 90%/85%/63%`
