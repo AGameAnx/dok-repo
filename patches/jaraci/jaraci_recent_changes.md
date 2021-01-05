@@ -65,6 +65,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2020-12-18](#2020-12-18)
 	- [2020-12-19](#2020-12-19)
 	- [2020-12-21](#2020-12-21)
+	- [2021-01-05](#2021-01-05)
 
 # Changes
 
@@ -1659,3 +1660,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 *Not yet reflected in the main changelog.*
 * General:
 	* Strike craft armor upgrades hitpoints granted per upgrade: `30 => 20`
+
+## 2021-01-05
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Baserunner max ease into turn time: `1s => 0.6s`
