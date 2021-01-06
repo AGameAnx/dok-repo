@@ -67,6 +67,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2020-12-21](#2020-12-21)
 	- [2021-01-05](#2021-01-05)
 	- [2021-01-06](#2021-01-06)
+	- [2021-01-06 (2)](#2021-01-06-2)
 
 # Changes
 
@@ -1715,3 +1716,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Research time: `45s => 55s`
 		* Movement speed penalty: `50% => 65%`
 		* Range bonus: `370 => 330`
+
+## 2021-01-06 (2)
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Level 1 production upgrade cost: `300CU 40RU => 350CU 40RU`
