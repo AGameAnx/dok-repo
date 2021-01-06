@@ -429,12 +429,12 @@
 		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 9200,
+				"MaxHealth": 9000,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 50,
+					"MaxSpeed": 45,
 					"MaxSpeedTurnRadius": 130,
 					"BrakingTime": 1.1,
 					"AccelerationTime": 1.1,
@@ -891,7 +891,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 50,
+					"MaxSpeed": 45,
 					"MaxSpeedTurnRadius": 130,
 					"BrakingTime": 1.1,
 					"AccelerationTime": 1.1,
@@ -1647,7 +1647,7 @@
 				"G_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 30,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 3,
+					"RateOfFire": 4,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -1679,7 +1679,7 @@
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
 					"BaseDamagePerRound": 75,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 3,
+					"RateOfFire": 4,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -2180,7 +2180,7 @@
 				"K_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 30,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 3,
+					"RateOfFire": 4,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
 					"RangeAttributesMedium": { "Accuracy": 45, "Distance": 650 },
@@ -2209,7 +2209,7 @@
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
 					"BaseDamagePerRound": 75,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 3,
+					"RateOfFire": 4,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
 					"RangeAttributesMedium": { "Accuracy": 45, "Distance": 650 },
@@ -2904,8 +2904,17 @@
 			}
 		},
 		
+		"C_PopcapScanner": {
+			"UnitAttributes": {
+				"MaxHealth": 1100,
+				"Armour": 3,
+				"SensorRadius": 1400,
+				"ContactRadius": 1550
+			}
+		},
 		"C_Sob_PopcapScanner": {
 			"UnitAttributes": {
+				"Armour": 3,
 				"WorldHeightOffset": 15,
 				"AggroRange": 900
 			},
@@ -3706,18 +3715,21 @@
 				"Armour": 6,
 				"PopCapCost": 2
 			},
+			"AbilityAttributes": {
+				"Ability_C_SmokeGrenade_MP": {
+					"CooldownTimeSecs": 80
+				}
+			},
 			"WeaponAttributes": {
 				"C_HAC_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 15,
+					"BaseDamagePerRound": 16,
 					"BurstPeriodMinTimeMS": 500,
 					"BurstPeriodMaxTimeMS": 550,
 					"RateOfFire": 14,
-					"Turret": {
-						"RotationSpeed": 190
-					},
-					"AreaOfEffectRadius": 0,
-					"RangeAttributesLong": { "Distance": 1000 },
-					"OutputDPS": true
+					"RangeAttributesShort": { "Accuracy": 80 },
+					"RangeAttributesMedium": { "Accuracy": 70 },
+					"RangeAttributesLong": { "Accuracy": 61, "Distance": 1000 },
+					"Turret": { "RotationSpeed": 190 }
 				}
 			}
 		},
@@ -3755,7 +3767,7 @@
 				"ProductionTime": 17,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
-				"Armour": 5,
+				"Armour": 6,
 				"MaxHealth": 960
 			},
 			"UnitMovementAttributes": {
@@ -3764,15 +3776,10 @@
 			"AbilityAttributes": {
 				"Ability_G_AssaultShipRegen": {
 					"ApplyStatusEffect": {
-						"Regen_AssaultShip_StatusEffect": {
-							"Modifiers": {
-								"0": {
-									"HealthOverTimeAttributes": {
-										"Amount": 15
-									}
-								}
-							}
-						}
+						"Regen_AssaultShip_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 12 } } } }
+					},
+					"ActivationDependencies": {
+						"TakeNoDamageForMS": 15000
 					}
 				}
 			},
@@ -3797,7 +3804,7 @@
 				"ProductionTime": 17,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
-				"Armour": 5,
+				"Armour": 6,
 				"MaxHealth": 960
 			},
 			"UnitMovementAttributes": {
@@ -3806,15 +3813,10 @@
 			"AbilityAttributes": {
 				"Ability_G_AssaultShipRegen": {
 					"ApplyStatusEffect": {
-						"Regen_AssaultShip_StatusEffect": {
-							"Modifiers": {
-								"0": {
-									"HealthOverTimeAttributes": {
-										"Amount": 15
-									}
-								}
-							}
-						}
+						"Regen_AssaultShip_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 12 } } } }
+					},
+					"ActivationDependencies": {
+						"TakeNoDamageForMS": 15000
 					}
 				}
 			},
@@ -3885,6 +3887,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_C_Nitrous_MP": {
+					"CooldownTimeSecs": 40,
 					"ApplyStatusEffect": {
 						"Nitrous_StatusEffect": {
 							"BuffsToApplyToTarget": {
@@ -3913,9 +3916,12 @@
 					"Turret": { "RotationSpeed": 250 },
 					"Modifiers": {
 						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 70 },
-						"2": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 130 },
-						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 130 },
-						"4": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 }
+						"2": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 115 },
+						"3": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 115 },
+						"4": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 115 },
+						"5": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 130 },
+						"6": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 130 },
+						"7": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 }
 					},
 					"OutputDPS": true
 				}
@@ -3935,6 +3941,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_S_Nitrous_MP": {
+					"CooldownTimeSecs": 40,
 					"ApplyStatusEffect": {
 						"Nitrous_StatusEffect": {
 							"BuffsToApplyToTarget": {
@@ -3963,9 +3970,12 @@
 					"Turret": { "RotationSpeed": 250 },
 					"Modifiers": {
 						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 70 },
-						"2": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 130 },
-						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 130 },
-						"4": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 }
+						"2": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 115 },
+						"3": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 115 },
+						"4": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 115 },
+						"5": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 130 },
+						"6": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 130 },
+						"7": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 }
 					}
 				}
 			}
@@ -3985,8 +3995,9 @@
 		
 		"G_SandSkimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 490,
-				"SensorRadius": 1150,
+				"MaxHealth": 510,
+				"SensorRadius": 1200,
+				"ContactRadius": 1300,
 				"ProductionTime": 10,
 				"PriorityAsTarget": 5
 			},
@@ -3996,10 +4007,10 @@
 			"AbilityAttributes": {
 				"Ability_G_SandSkimmersRegen": {
 					"ApplyStatusEffect": {
-						"Regen_Sand_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 20 } } } }
+						"Regen_Sand_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 12 } } } }
 					},
 					"ActivationDependencies": {
-						"TakeNoDamageForMS": 10000
+						"TakeNoDamageForMS": 15000
 					}
 				}
 			},
@@ -4019,8 +4030,9 @@
 		},
 		"K_Sandskimmer_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 490,
-				"SensorRadius": 1150,
+				"MaxHealth": 510,
+				"SensorRadius": 1200,
+				"ContactRadius": 1300,
 				"ProductionTime": 10,
 				"PriorityAsTarget": 5
 			},
@@ -4030,10 +4042,10 @@
 			"AbilityAttributes": {
 				"Ability_G_SandSkimmersRegen": {
 					"ApplyStatusEffect": {
-						"Regen_Sand_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 20 } } } }
+						"Regen_Sand_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 12 } } } }
 					},
 					"ActivationDependencies": {
-						"TakeNoDamageForMS": 10000
+						"TakeNoDamageForMS": 15000
 					}
 				}
 			},
@@ -4264,13 +4276,13 @@
 		
 		"C_Railgun_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 240,
+				"Resource1Cost": 250,
 				"Resource2Cost": 85,
 				"MaxHealth": 750,
 				"Armour": 0,
 				"ExperienceValue": 450,
 				"ProductionTime": 16,
-				"PriorityAsTarget": 25,
+				"PriorityAsTarget": 75,
 				"AggroRange": 2050
 			},
 			"DetectableAttributes": {
@@ -4329,13 +4341,13 @@
 		},
 		"C_Sob_Railgun_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 240,
+				"Resource1Cost": 250,
 				"Resource2Cost": 85,
 				"MaxHealth": 750,
 				"Armour": 0,
 				"ExperienceValue": 470,
 				"ProductionTime": 16,
-				"PriorityAsTarget": 25,
+				"PriorityAsTarget": 75,
 				"AggroRange": 2050
 			},
 			"DetectableAttributes": {
@@ -4387,15 +4399,15 @@
 		},
 		"Tier_2_C_RailGun": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 350,
-				"Resource2Cost": 125,
+				"Resource1Cost": 300,
+				"Resource2Cost": 100,
 				"ResearchTime": 55
 			}
 		},
 		"Tier_2_S_RailGun": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 350,
-				"Resource2Cost": 125,
+				"Resource1Cost": 300,
+				"Resource2Cost": 100,
 				"ResearchTime": 55
 			}
 		},
@@ -4522,7 +4534,7 @@
 				"Resource2Cost": 110,
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
-				"PriorityAsTarget": 10,
+				"PriorityAsTarget": 60,
 				"AggroRange": 2050
 			},
 			"UnitMovementAttributes": {
@@ -4600,7 +4612,7 @@
 				"Resource2Cost": 110,
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
-				"PriorityAsTarget": 10,
+				"PriorityAsTarget": 60,
 				"AggroRange": 2050
 			},
 			"UnitMovementAttributes": {
@@ -4694,12 +4706,12 @@
 				"BuffsToApplyToTarget": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": 370 },
-							"1": { "Value": 370 },
-							"2": { "Value": 370 },
-							"3": { "Value": 370 },
-							"4": { "Value": -50 }, // Max speed
-							"5": { "Value": -50 } // Turn radius
+							"0": { "Value": 330 },
+							"1": { "Value": 330 },
+							"2": { "Value": 330 },
+							"3": { "Value": 330 },
+							"4": { "Value": -65 }, // Max speed
+							"5": { "Value": -65 } // Turn radius
 						}
 					}
 				}
@@ -4710,7 +4722,7 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 200,
 				"Resource2Cost": 300,
-				"ResearchTime": 45,
+				"ResearchTime": 55,
 				"LocalizedLongDescriptionStringID": "Heavy Railguns gain the RANGED CALIBRATION ability - Increasing range at the cost of mobility.\n\n[84a1e8]Weapon and sight range increased by 370.\nMovement speed reduced by 50%."
 			}
 		},
@@ -4844,7 +4856,7 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 150,
 				"Resource2Cost": 30,
-				"ResearchTime": 30
+				"ResearchTime": 20
 			}
 		},
 		
@@ -5347,7 +5359,7 @@
 			"WeaponAttributes": {
 				"C_GunShip_Weapon_DefaultFire_MP": {
 					"DamagePacketsPerShot": 1,
-					"BaseDamagePerRound": 37,
+					"BaseDamagePerRound": 39,
 					"AreaOfEffectRadius": 160,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {

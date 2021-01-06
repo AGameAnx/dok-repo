@@ -66,6 +66,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2020-12-19](#2020-12-19)
 	- [2020-12-21](#2020-12-21)
 	- [2021-01-05](#2021-01-05)
+	- [2021-01-06](#2021-01-06)
 
 # Changes
 
@@ -1644,7 +1645,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Carrier movement dynamics:
 		* Turn radius: `65 => 130`
 		* Max ease into turn time: `5s => 1s`
-	* Support cruiser movement dynamics max ease into turn time: `3s => 0.8s` 
+	* Support cruiser movement dynamics max ease into turn time: `3s => 0.8s`
 	* LAV accuracy: `90%/85%/63% => 92%/88%/65%`
 	* Level 2 production upgrade cost: `400CU 40RU => 300CU 40RU`
 * Gaalsien/Khaaneph:
@@ -1666,3 +1667,51 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Coalition/Soban:
 	* Baserunner max ease into turn time: `1s => 0.6s`
 	* LAV accuracy: `92%/88%/65% => 90%/85%/63%`
+
+## 2021-01-06
+*Not yet reflected in the main changelog.*
+* General:
+	* Increased all railgun priority as target
+* Coalition/Soban:
+	* Carrier speed: `50 => 45`
+	* Logistics module:
+		* Armor: `5 => 3`
+		* Cost: `250CU => 270CU`
+	* LAV:
+		* Boost cooldown: `30s => 40s`
+		* Accuracy modifier against Medium: `130% => 115%`
+	* AAV (DPS: `74.9/66.1/57.3 => 75.2/65.8/57.3`):
+		* Damage: `15 => 16`
+		* Weapon accuracy: `85%/75%/65% => 80%/70%/61%`
+		* Smoke cooldown: `90s => 80s`
+	* Railgun:
+		* Tech cost: `350CU 125RU => 300CU 100RU`
+		* CU cost: `240 => 250`
+	* Missile battery mortar packets: `35 => 30`
+	* Gunship damage: `37 => 39`
+* Coalition:
+	* Logistics module:
+		* Hitpoints: `900 => 1100` (matches Soban ALM)
+		* Sensors radius: `1200 => 1400`
+		* Contact radius: `1225 => 1550`
+	* Carrier hitpoints: `9200 => 9000`
+* Gaalsien/Khaaneph:
+	* Carrier PD rate of fire: `3 => 4`
+	* Production cruiser cost: `700CU 100RU => 650CU 60RU`
+	* Sandskimmer:
+		* Hitpoints: `490 => 510`
+		* Sensors radius: `1150 => 1200`
+		* Contact radius: `1250 => 1300`
+		* Regeneration:
+			* Start time threshold: `10s => 15s`
+			* Health recovered per tick: `20 => 12`
+	* Assault ship:
+		* Armor: `5 => 6`
+		* Regeneration:
+			* Start time threshold: `10s => 15s`
+			* Health recovered per tick: `15 => 12`
+	* Dart maneuver research time: `30s => 20s`
+	* Heavy railgun ranged calibration:
+		* Research time: `45s => 55s`
+		* Movement speed penalty: `50% => 65%`
+		* Range bonus: `370 => 330`
