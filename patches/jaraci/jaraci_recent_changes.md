@@ -68,6 +68,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-01-05](#2021-01-05)
 	- [2021-01-06](#2021-01-06)
 	- [2021-01-06 (2)](#2021-01-06-2)
+	- [2021-01-09](#2021-01-09)
 
 # Changes
 
@@ -1721,3 +1722,14 @@ Full combined changelog can be found [HERE](jaraci.md)
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Level 1 production upgrade cost: `300CU 40RU => 350CU 40RU`
+
+## 2021-01-09
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* AAV armor: `6 => 7`
+* Gaalsien/Khaaneph:
+	* Assault railgun:
+		* Hitpoints: `600 => 650`
+		* Armor: `5 => 6`
+		* Reload: `3s => 4s`
+	* Honourguard cruiser reload: `4.5s => 5s`
