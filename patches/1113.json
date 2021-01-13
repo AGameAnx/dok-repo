@@ -3,7 +3,7 @@
 		"C_Carrier_MP": {
 			"UnitAttributes": {
 				"Class": "Ground, Carrier",
-				"MaxHealth": 15000,
+				"MaxHealth": 18000,
 				"Armour": 25
 			},
 			"UnitMovementAttributes": {
@@ -27,7 +27,47 @@
 					}
 				}
 			},
-			"WeaponAttributes" : {
+			"WeaponAttributes": {
+				"C_Carrier_Weapon_G2All_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak",
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyShortPercent",
+							"Amount": 130
+						},
+						"2": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyMediumPercent",
+							"Amount": 130
+						},
+						"3": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyLongPercent",
+							"Amount": 130
+						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
+						"7": { "Remove": true },
+						"8": { "Remove": true },
+						"9": { "Remove": true },
+						"10": { "Remove": true },
+						"11": { "Remove": true },
+						"12": { "Remove": true }
+					}
+				},
+				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak"
+				},
+				"C_CarrierMissiles_Weapon_A2G_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
 				"C_Carrier_Weapon_CruiseMissile_MP": {
 					"BaseDamagePerRound": 2800,
 				    "AreaOfEffectRadius": 800,
@@ -75,7 +115,7 @@
 		},
 		"G_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 13500,
+				"MaxHealth": 15500,
 				"Armour" : 40
 			},
 			"UnitMovementAttributes": {
@@ -170,7 +210,7 @@
 		},
 		"C_Sob_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 13500,
+				"MaxHealth": 15500,
 				"Armour": 25
 			},
 			"UnitMovementAttributes": {
@@ -210,7 +250,6 @@
 					"NumberOfBursts": 2,
 					"WindUpTimeMS": 1000,
 					"WindDownTimeMS": 500,
-					
 					"ReloadTimeMS": 15000,
 					"CooldownTimeMS": 10000,
 					
@@ -904,6 +943,7 @@
 				"G_Baserunner_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 10,
 					"BurstPeriodMinTimeMS": 550,
 					"BurstPeriodMaxTimeMS": 1000,
@@ -993,6 +1033,7 @@
 				"G_Baserunner_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 10,
 					"BurstPeriodMinTimeMS": 550,
 					"BurstPeriodMaxTimeMS": 1000,
@@ -1039,6 +1080,7 @@
 				"C_Baserunner_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 10,
 					"NumberOfBursts" : 6,
 					"RateOfFire": 10,
@@ -1360,6 +1402,7 @@
 				"C_ArtilleryCruiser_Weapon_PointDefense_MP": {
 					"LineOfSightRequired": true,
 					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 12,
 					"DamagePacketsPerShot": 2,
 					"NumberOfBursts": 10,
@@ -1467,6 +1510,7 @@
 				},
 				"G_ArtilleryCruiser_Weapon_PD_MP": {
 					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 12,
 					"DamagePacketsPerShot": 2,
 					"NumberOfBursts": 5,
@@ -1680,6 +1724,7 @@
 				"G_HonorGuard_Weapon_G2G_CAT": {
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 12,
+					"TargetStyle": "Flak",
 					"DamagePacketsPerShot": 2,
 					"NumberOfBursts": 6,
 					"BurstPeriodMinTimeMS": 600,
@@ -1771,6 +1816,7 @@
 				},
 				"G_ArtilleryCruiser_Weapon_PD_MP": {
 					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 12,
 					"DamagePacketsPerShot": 2,
 					"NumberOfBursts": 5,
@@ -1888,6 +1934,86 @@
 				}
 			}
 		},
+		"G_Interceptor": {
+			"UnitAttributes": {
+				"Armour": 2
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 670,
+					"MaxSpeedTurnRadius": 470
+				}
+			},
+			"WeaponAttributes": {
+				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
+					"BaseDamagePerRound": 245,
+					"DamagePacketsPerShot": 1,
+					"AreaOfEffectRadius": 25,
+					"RateOfFire": 4,
+					"ReloadTimeMS": 3000,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"Modifiers": {
+						"13": {
+							"TargetClass": "Carrier, Small, Medium, Large, Support",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 35
+						}
+					}
+				}
+			},
+			"StorageAttributes": {
+				"G_Interceptor_StorageAttributesAsset": {
+					"InventoryLoadout": {
+						"MISSILES": {
+							"Capacity": 3,
+							"StartingAmount": 3
+						}
+					}
+				}
+			}
+		},
+		"C_Interceptor": {
+			"UnitAttributes": {
+				"Armour": 4
+			},
+			"WeaponAttributes": {
+				"C_Interceptor_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 300,
+					"DamagePacketsPerShot": 1,
+					"AreaOfEffectRadius": 80,
+					"RateOfFire": 4,
+					"ReloadTimeMS": 3000,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"Modifiers": {
+						"2":{
+							"TargetClass": "Air",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 35
+						},
+						"13": {
+							"TargetClass": "Carrier, Small, Medium, Large, Support",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 100
+						}
+					}
+				}
+			},
+			"StorageAttributes": {
+				"G_Interceptor_StorageAttributesAsset": {
+					"InventoryLoadout": {
+						"MISSILES": {
+							"Capacity": 6,
+							"StartingAmount": 6
+						}
+					}
+				}
+			}
+		},	
 		"K_Interceptor_MP": {
 			"UnitAttributes": {
 				"Armour": 1,
@@ -2148,6 +2274,7 @@
 		    "WeaponAttributes": {
 		        "G_SupportCruiser_Weapon_G2G_MP": {
 					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 12,
 					"DamagePacketsPerShot": 2,
 					"NumberOfBursts": 6,
@@ -2253,6 +2380,7 @@
 		    "WeaponAttributes": {
 		        "G_SupportCruiser_Weapon_G2G_MP": {
 					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 12,
 					"DamagePacketsPerShot": 2,
 					"NumberOfBursts": 6,
@@ -2360,7 +2488,7 @@
 					"CooldownTimeSecs": 45
 				}
 			},
-			"WeaponAttributesData": {
+			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G": {
 					"BaseDamagePerRound": 50,
 					"BurstPeriodMinTimeMS": 100,
@@ -2422,6 +2550,7 @@
 						},
 				"G_HonorGuard_Weapon_G2G_CAT": {
 					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 12,
 					"DamagePacketsPerShot": 2,
 					"NumberOfBursts": 6,
@@ -2493,6 +2622,147 @@
 				}
 			}
 		},
+		"G_Catamaran_Upgrade01_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 350,
+				"Resource2Cost": 90,
+				"ProductionTime": 24,
+				"Armour": 3,
+				"PriorityAsTarget": -10
+			},
+			"AbilityAttributes": {
+				"Ability_G_MissileCraft_CrowdControl_MP": {
+					"CooldownTimeSecs": 80
+				}
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							},
+							"1": {
+								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
+					"ReloadTimeMS": 2500,
+					"Turret": {
+						"RotationSpeed": 160,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1330
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
+					"ReloadTimeMS": 2500,
+					"Turret": {
+						"RotationSpeed": 240,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1500
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 140,
+					"AreaOfEffectRadius": 150,
+					"AreaOfEffectFalloffType": "Linear"
+				}
+			}
+		},
+		"K_MissileShip_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 350,
+				"Resource2Cost": 90,
+				"ProductionTime": 24,
+				"Armour": 3,
+				"PriorityAsTarget": -10
+			},
+			"AbilityAttributes": {
+				"Ability_G_MissileCraft_CrowdControl_MP": {
+					"CooldownTimeSecs": 80
+				}
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							},
+							"1": {
+								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
+					"ReloadTimeMS": 2500,
+					"Turret": {
+						"RotationSpeed": 160,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1330
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
+					"ReloadTimeMS": 2500,
+					"Turret": {
+						"RotationSpeed": 240,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1500
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 140,
+					"AreaOfEffectRadius": 150,
+					"AreaOfEffectFalloffType": "Linear"
+				}
+			}
+		},
+		"Tier_2_G_Catamaran_AA": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 45
+			}
+		},
+		"Research_Buff_G_CatamaranAA_GlobalMissiles": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 220,
+				"Resource2Cost": 60,
+				"ResearchTime": 15
+			}
+		},
+		"Research_Buff_G_CatamaranAA_AOE": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 20
+			}
+		},
 		"Research_Buff_G_ProductionCruiserResourcer": {
 		    "ResearchItemAttributes": {
 				"ResearchTime": 30
@@ -2517,9 +2787,73 @@
 		    "ResearchItemAttributes": {
 				"ResearchTime": 15
 		    }
-	    }
-	}
-}				
+		},
+		"Tier_3_C_BattleCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 350,
+				"Resource2Cost": 40,
+				"ResearchTime": 30,
+				"Dependencies": ["Tier_2_C_ArmouredAssault"]
+			}
+		},
+		"Tier_3_C_GunShip_Bomber": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 150,
+				"ResearchTime": 30,
+				"Dependencies": ["Tier_3_C_Interceptor_Bomber"]
+			}
+		},
+		"Tier_3_C_Artillery": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"ResearchTime": 30,
+				"Dependencies": ["Tier_2_C_ArmouredAssault"]
+			}
+		},
+		"Tier_2_G_Interceptor": {
+				"ResearchItemAttributes": {
+					"Resource1Cost": 400,
+					"Resource2Cost": 250,
+					"ResearchTime": 30,
+					"Dependencies": ["Tier_1_G_Sandskimmers"]
+			}		
+		},
+		"Tier_2_C_Interceptor_Bomber": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 450,
+				"Resource2Cost": 200,
+				"ResearchTime": 30,
+				"Dependencies": ["Tier_1_C_Escorts"]
+			}	
+		},
+		"Tier_3_G_Artillery_BattleCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"ResearchTime": 30,
+				"Dependencies": ["Tier_1_G_Catamaran"]
+			}
+		},
+		"Tier_2_S_Interceptor_Bomber": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 450,
+				"Resource2Cost": 200,
+				"ResearchTime": 30,
+				"Dependencies": ["Tier_1_S_Escorts"]
+			}	
+		},
+		"Tier_3_S_Artillery": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"ResearchTime": 30,
+				"Dependencies": ["Tier_2_S_ArmouredAssault"]
+			}
+		}			
+	}	
+}					
 			
 	
 
