@@ -69,6 +69,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-01-06](#2021-01-06)
 	- [2021-01-06 (2)](#2021-01-06-2)
 	- [2021-01-09](#2021-01-09)
+	- [2021-01-30](#2021-01-30)
 
 # Changes
 
@@ -1733,3 +1734,71 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Armor: `5 => 6`
 		* Reload: `3s => 4s`
 	* Honourguard cruiser reload: `4.5s => 5s`
+
+## 2021-01-30
+*Not yet reflected in the main changelog.*
+* General:
+	* Added updated carrier power shunt descriptions (was commented out due to a bug in Subsystem that recently got fixed)
+	* Carrier weapon systems missile damage: `200 => 175`
+	* Strike craft armor upgrade RU cost:
+		* Level 1: `75RU => 100RU`
+		* Level 2: `150RU => 175RU`
+* Coalition/Soban:
+	* Carrier speed: `45 => 47`
+	* Railgun hitpoints: `750 => 820`
+	* Artillery cruiser standard barrage:
+		* Damage: `200 => 240`
+		* AOE: `100 => 92`
+* Coalition:
+	* Carrier
+		* Hitpoints: `9000 => 8700`
+		* PD ROF: `2 => 3`
+		* Armor power shunt:
+			* Level 0: `25 => 15`
+			* Level 1: `30 => 20`
+			* Level 2: `35 => 25`
+			* Level 3: `45 => 35`
+			* Level 4: `60 => 50`
+	* Turret hitpoints: `720 => 850`
+	* Battlecruiser damage: `180 => 210`
+* Soban:
+	* Carrier:
+		* Hitpoints: `8800 => 8500`
+		* Weapon systems missiles: (Consistency with other carriers fixes)
+			* Damage: `128 => 175`
+			* Wind-up: `0 => 0.5s`
+			* Range: `500 => 700`
+		* PD:
+			* Reload: `15s => 13s`
+			* Cooldown: `10s => 9s`
+			* Accuracy & Modifiers: Fixed to match soban railguns.
+		* Armor power shunt:
+			* Level 0: `15 => 10`
+			* Level 1: `20 => 15`
+			* Level 2: `25 => 20`
+			* Level 3: `35 => 30`
+			* Level 4: `50 => 45`
+	* Battlecruiser:
+		* Hitpoints: `2900 => 2800`
+		* Armor: `13 => 14`
+		* Damage: `340 => 360`
+* Gaalsien/Khaaneph:
+	* Carrier PD ROF: `4 => 5`
+	* Heavy railgun speed: `61 => 58`
+	* Dart maneuver:
+		* Tech cost: `150CU 30RU => 50CU 80RU`
+		* Cooldown: `25s => 35s`
+	* Honourguard cruiser:
+		* Production time: `55s => 50s`
+		* Damage: `450 => 420`
+		* Speed: `55 => 52`
+		* Range: `2100 => 1950`
+		* Wind-up: `2.5s => 2.2s`
+		* Reload: `5s => 5.3s`
+* Gaalsien:
+	* Siege cruiser:
+		* Armor: `9 => 7`
+		* Barrage damage: `180 => 210`
+		* AOE: `95 => 90`
+* Khaaneph:
+	* Siege cruiser area of effect: `240 => 230`
