@@ -131,7 +131,7 @@
 		"Research_Buff_Power_3": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 250,
-				"Resource2Cost": 100,
+				"Resource2Cost": 150,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -151,7 +151,7 @@
 		"Research_Buff_G_Power_3": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 250,
-				"Resource2Cost": 100,
+				"Resource2Cost": 150,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -171,7 +171,7 @@
 		"Research_S_Buff_Power_3": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 250,
-				"Resource2Cost": 100,
+				"Resource2Cost": 150,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -192,7 +192,7 @@
 		"Research_Buff_Power_4":   {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
-				"Resource2Cost": 150,
+				"Resource2Cost": 250,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -212,7 +212,7 @@
 		"Research_Buff_G_Power_4": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
-				"Resource2Cost": 150,
+				"Resource2Cost": 250,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -232,7 +232,7 @@
 		"Research_S_Buff_Power_4": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
-				"Resource2Cost": 150,
+				"Resource2Cost": 250,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -253,7 +253,7 @@
 		"Research_Buff_Power_5": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 500,
-				"Resource2Cost": 200,
+				"Resource2Cost": 300,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -273,7 +273,7 @@
 		"Research_Buff_G_Power_5": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 500,
-				"Resource2Cost": 200,
+				"Resource2Cost": 300,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -293,7 +293,7 @@
 		"Research_S_Buff_Power_5": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 500,
-				"Resource2Cost": 200,
+				"Resource2Cost": 300,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -314,7 +314,7 @@
 		"Research_Buff_Power_6": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 600,
-				"Resource2Cost": 250,
+				"Resource2Cost": 400,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -334,7 +334,7 @@
 		"Research_Buff_G_Power_6": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 600,
-				"Resource2Cost": 250,
+				"Resource2Cost": 400,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -354,7 +354,7 @@
 		"Research_S_Buff_Power_6": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 600,
-				"Resource2Cost": 250,
+				"Resource2Cost": 400,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -375,7 +375,7 @@
 		"Research_Buff_Power_7": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 700,
-				"Resource2Cost": 350,
+				"Resource2Cost": 500,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -395,7 +395,7 @@
 		"Research_Buff_G_Power_7": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 700,
-				"Resource2Cost": 350,
+				"Resource2Cost": 500,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -415,7 +415,7 @@
 		"Research_S_Buff_Power_7": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 700,
-				"Resource2Cost": 350,
+				"Resource2Cost": 500,
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -531,6 +531,9 @@
 				}
 			},
 			"AbilityAttributes": {
+				"Ability_C_DeployPopCapCarrier_MP": {
+					"Resource1Cost": 50
+				},	
 				"Ability_C_CruiseMissile_MP": {
 					"CooldownTimeSecs": 320
 				},
@@ -713,6 +716,9 @@
 				}
 			},
 			"AbilityAttributes": {
+				"Ability_C_Sob_DeployPopCapCarrier_MP": {
+					"Resource1Cost": 50
+				},	
 				"Ability_C_Sob_SobanNuke_MP": {
 					"CooldownTimeSecs": 280,
 					"Resource1Cost": 400
@@ -2880,7 +2886,11 @@
 				}
 			}
 		},
+		"G_StarHull_MP": {
+			"UnitAttributes": { "PopCapCost": 2}
+		},
 		"G_StarHull_Upgrade01_MP": {
+			"UnitAttributes": { "PopCapCost": 2 },
 			"AbilityAttributes": {
 				"Ability_G_RailGun_Dash_Move_To": {
 					"CooldownTimeSecs": 25
@@ -2987,6 +2997,7 @@
 		},		
 		"G_StarHull_Upgrade01": {
 			"UnitAttributes": {
+				"PopCapCost": 2,
 				"MaxHealth": 750,
 				"ExperienceValue": 10,
 				"SensorRadius": 1200,
@@ -3187,35 +3198,148 @@
 				"ResearchTime": 30
 		    }	
 		},
+		"C_PopcapScanner": {
+			"UnitAttributes": {
+				"UnitTypeBuffs": {
+					"0": {
+						"ClassOperator": "And",
+						"UseAsPrefix": true,
+						"UnitType": "C_Carrier_MP", 
+						"BuffSet": {
+							"0": {
+								"Attribute": "Commander_PopulationCap",
+								"Category": "Commander",
+								"Mode": "Add",
+								"Value": 153
+							}
+						}
+					}
+				}
+			}
+		},
+		"C_Sob_PopcapScanner": {
+			"UnitAttributes": {
+				"UnitTypeBuffs": {
+					"0": {
+						"ClassOperator": "And",
+						"UseAsPrefix": true,
+						"UnitType": "G_Sob_Carrier_MP", 
+						"BuffSet": {
+							"0": {
+								"Attribute": "Commander_PopulationCap",
+								"Category": "Commander",
+								"Mode": "Add",
+								"Value": 154
+							}
+						}
+					}
+				}
+			}
+		},
 		"Research_Buff_Fleet_Popcap_1": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 50,
-				"ResearchTime": 10
-		    }	
+				"ResearchTime": 10,
+				"UnitTypeBuffs": {
+					"0": {
+						"ClassOperator": "And",
+						"UseAsPrefix": true,
+						"UnitType": "G_Carrier_MP, K_Carrier_MP", 
+						"BuffSet": {
+							"0": {
+								"Attribute": "Commander_PopulationCap",
+								"Category": "Commander",
+								"Mode": "Add",
+								"Value": 77
+							}
+						}
+					}
+				}
+			}
 		},
 		"Research_Buff_Fleet_Popcap_2": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 50,
-				"ResearchTime": 10
-		    }	
+				"ResearchTime": 10,
+				"UnitTypeBuffs": {
+					"0": {
+						"ClassOperator": "And",
+						"UseAsPrefix": true,
+						"UnitType": "G_Carrier_MP, K_Carrier_MP", 
+						"BuffSet": {
+							"0": {
+								"Attribute": "Commander_PopulationCap",
+								"Category": "Commander",
+								"Mode": "Add",
+								"Value": 77
+							}
+						}
+					}
+				}
+			}
 		},
 		"Research_Buff_Fleet_Popcap_3": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 50,
-				"ResearchTime": 10
-		    }	
+				"ResearchTime": 10,
+				"UnitTypeBuffs": {
+					"0": {
+						"ClassOperator": "And",
+						"UseAsPrefix": true,
+						"UnitType": "G_Carrier_MP, K_Carrier_MP", 
+						"BuffSet": {
+							"0": {
+								"Attribute": "Commander_PopulationCap",
+								"Category": "Commander",
+								"Mode": "Add",
+								"Value": 77
+							}
+						}
+					}
+				}
+			}
 		},
 		"Research_Buff_Fleet_Popcap_4": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 50,
-				"ResearchTime": 10
-		    }	
+				"ResearchTime": 10,
+				"UnitTypeBuffs": {
+					"0": {
+						"ClassOperator": "And",
+						"UseAsPrefix": true,
+						"UnitType": "G_Carrier_MP, K_Carrier_MP", 
+						"BuffSet": {
+							"0": {
+								"Attribute": "Commander_PopulationCap",
+								"Category": "Commander",
+								"Mode": "Add",
+								"Value": 77
+							}
+						}
+					}
+				}
+			}
 		},
 		"Research_Buff_Fleet_Popcap_5": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 50,
-				"ResearchTime": 10
-		    }	
+				"ResearchTime": 10,
+				"UnitTypeBuffs": {
+					"0": {
+						"ClassOperator": "And",
+						"UseAsPrefix": true,
+						"UnitType": "G_Carrier_MP, K_Carrier_MP", 
+						"BuffSet": {
+							"0": {
+								"Attribute": "Commander_PopulationCap",
+								"Category": "Commander",
+								"Mode": "Add",
+								"Value": 77
+							}
+						}
+					}
+				}
+			}
 		},
 		"Tier_1_C_Escorts": {
 		    "ResearchItemAttributes": {
@@ -3394,7 +3518,7 @@
 		    }
 		}					
 	}	
-}					
+}						
 			
 	
 
