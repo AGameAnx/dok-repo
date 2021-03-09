@@ -70,7 +70,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-01-06 (2)](#2021-01-06-2)
 	- [2021-01-09](#2021-01-09)
 	- [2021-01-30](#2021-01-30)
-	- [2021-01-09](#2021-01-09-1)
+	- [2021-01-31](#2021-01-31)
+	- [2021-03-09](#2021-03-09)
 
 # Changes
 
@@ -1804,7 +1805,98 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Khaaneph:
 	* Siege cruiser area of effect: `240 => 230`
 
-## 2021-01-09
+## 2021-01-31
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* AAV hitpoints: `920 => 970`
+
+## 2021-03-09
+*Not yet reflected in the main changelog.*
+* General:
+	* Carrier power upgrades:
+		* Renamed from 'POWER RESERVE #' to 'CARRIER SYSTEMS #'
+		* Now grant 1 extra speed for every upgrade to the carrier (in addition to 150hp and power bonus).
+		* Updated descriptions to better indicate what the upgrades do, added indication on which upgrade unlocks the nuke.
+	* Increased base target weight target priority for most high damage weapons
+	* Sunder:
+		* Duration: `10s => 20s`
+		* Armor reduction: `4 => 5`
+* Coalition/Soban:
+	* Improved production upgrade research time: `50s => 60s`
+	* Carrier:
+		* Max speed: `47 => 45`
+		* Turn radius: `130 => 90`
+		* Acceleration time: `1.1s => 0.9s`
+		* Braking time: `1.1s => 0.9s`
+		* Max ease into turn time: `1s => 0.5s`
+	* LAV:
+		* Slightly reduced priority as target
+		* Hitpoints: `450 => 420`
+		* Armor: `1 => 2`
+		* Long range accuracy: `63% => 60%`
+		* Hitpoints granted per armor upgrade: `20 => 30`
+	* AAV:
+		* Armor: `7 => 8`
+		* Max speed: `80 => 82`
+	* Railgun max speed: `73 => 75`
+	* Strike fighter production time: `27s => 28s`
+	* Assault cruiser missile barrage:
+		* Damage: `180 => 160`
+		* Area of effect: `140 => 160`
+	* Support cruiser anti-ground weapon burst: `0.8-0.9s => 0.8-0.83s`
+* Coalition:
+	* Battlecruiser:
+		* Hitpoints: `3000 => 3200`
+		* Max speed: `62 => 59`
+		* Turn radius: `130 => 100`
+		* Max range: `1200 => 1150`
+		* Acceleration time: `1.2s => 0.9s`
+* Soban:
+	* Battlecruiser:
+		* Hitpoints: `2900 => 3100`
+		* Max speed: `62 => 59`
+		* Turn radius: `160 => 100`
+		* Acceleration time: `1.9 => 0.9`
+		* Braking time: `1.2 => 0.9` (matches Coalition)
+* Gaalsien/Khaaneph:
+	* Sandskimmer:
+		* Hitpoints: `510 => 500`
+		* Slightly reduced priority as target
+	* Railgun tech:
+		* Cost: `350CU 250RU => 350CU 230RU`
+		* Research time: `45s => 35s`
+	* Heavy Railgun cost: `350CU 110RU => 350CU 115RU`
+	* Interceptor area of effect: `67 => 69`
+	* Bomber tech:
+		* Cost: `300CU 175RU => 250CU 100RU`
+		* Research time: `45s => 40s`
+	* Production Cruiser AA weapon accuracy: `55/45/25 => 50/40/25`
+* Gaalsien:
+	* Carrier:
+		* Speed power shunt (km/h):
+			* Level 1: `+15 => +10`
+			* Level 2: `+30 => +25`
+			* Level 3: `+45 => +40`
+			* Level 4: `+60 => +55`
+			* Level 4: `+75 => +70`
+	* Baserunner:
+		* Base speed: `70 => 80` (matches Khaaneph)
+		* Repair ability:
+			* Negative effects duration now matches repair aura active duration
+			* Cooldown: `75s => 50s`
+			* Area of effect: `400 => 500`
+			* No longer immobilizes the unit
+			* Movement speed modifier: `-20%`
+			* Turn radius modifier: `+20%`
+			* Acceleration time: `+20%`
+			* Status effect heal per tick: `3 => 2` (total healing reduction: 25%)
+	* Siege cruiser:
+		* Pop cost: `6 => 5`
+		* Armor: `7 => 6`
+* Khaaneph:
+	* Carrier:
+		* Hitpoints: `9600 => 9100`
+		* Armor: `15 => 18`
+		* Base speed: `45 => 38`
+		* Base cruise missile warmup time: `9s => 8s`
+	* Blast Drone cost: `150CU => 120CU`
