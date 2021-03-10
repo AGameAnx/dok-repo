@@ -1825,7 +1825,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Improved production upgrade research time: `50s => 60s`
 	* Carrier:
 		* Max speed: `47 => 45`
-		* Turn radius: `130 => 90`
+		* Turn radius: `130 => 105`
 		* Acceleration time: `1.1s => 0.9s`
 		* Braking time: `1.1s => 0.9s`
 		* Max ease into turn time: `1s => 0.5s`
