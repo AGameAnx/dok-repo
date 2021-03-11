@@ -429,7 +429,7 @@
 		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 60000,
+				"MaxHealth": 30000,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
@@ -892,7 +892,7 @@
 		},
 		"C_Sob_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 60000,
+				"MaxHealth": 30000,
 				"Armour": 15,
 				"PriorityAsTarget": -2
 			},
@@ -1627,7 +1627,7 @@
 		},
 		"G_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 55000,
+				"MaxHealth": 25000,
 				"Armour": 20,
 				"PriorityAsTarget": -2
 			},
@@ -2156,7 +2156,7 @@
 		},
 		"K_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 55000,
+				"MaxHealth": 25000,
 				"SensorRadius": 1200,
 				"ContactRadius": 1350,
 				"Armour": 15,
@@ -2199,7 +2199,7 @@
 				"K_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 40,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 5,
+					"RateOfFire": 25,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
 					"RangeAttributesMedium": { "Accuracy": 45, "Distance": 650 },
@@ -2622,7 +2622,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Max Ammo: 15 Reload: 7s Range: 6000",
+								"LocalizedShortDescriptionStringID": "Max Ammo: 15 Reload: 7s Range: 12000",
 								"StatusEffectsToApply": {
 									"K_Missiles_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -2633,7 +2633,7 @@
 												"1": { "Value": -4 },
 												"2": {
 													"Mode": "Add",
-													"Value": 3800
+													"Value": 30000
 												}
 											} }
 										}
@@ -3019,8 +3019,8 @@
 				"BuffsToApplyToTarget": {
 					"0": {
 						"BuffSet": {
-							"4": { "Value": -45 }, // MaxSpeed
-							"5": { "Value": -45 }, // MaxSpeedTurnRadius
+							"4": { "Value": -85 }, // MaxSpeed
+							"5": { "Value": -85 }, // MaxSpeedTurnRadius
 							"6": {
 								"Attribute": "UnitDynamics_AccelerationTime",
 								"Mode": "AddPercent",
@@ -3263,7 +3263,7 @@
 				"C_Sob_Baserunner_Weapon_ECM": {
 					"ProjectileEntityTypeToSpawn": "G_Scanner_ProjectileEntity_MP",
 					"RangeAttributesShort": {
-						"Distance": 1100
+						"Distance": 1000
 					}
 				},
 				"C_Sob_Baserunner_Weapon_G2G_MP": {
@@ -3385,7 +3385,7 @@
 				},
 				"G_Baserunner_Weapon_PopCapAbility_MP": {
 					"RangeAttributesShort": {
-						"Distance": 1200
+						"Distance": 1700
 					}
 				}
 			}
@@ -3519,11 +3519,11 @@
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
 					"RateOfFire": 50,
 					"RangeAttributesLong": {
-						"Distance": 1100
+						"Distance": 5100
 					}
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 65,
+					"BaseDamagePerRound": 105,
 					"NumberOfBursts": 6,
 					"BurstPeriodMinTimeMS": 300,
 					"BurstPeriodMaxTimeMS": 300,
@@ -3533,13 +3533,13 @@
 					"ReloadTimeMS": 5000,
 					"AreaOfEffectRadius": 60,
 					"RangeAttributesLong": {
-						"Distance": 1100
+						"Distance": 3100
 					}
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
 					"TargetStyle": "Flak",
-					"BaseDamagePerRound": 65,
+					"BaseDamagePerRound": 105,
 					"RateOfFire": 15,
 					"BurstPeriodMinTimeMS": 800,
 					"BurstPeriodMaxTimeMS": 900,
@@ -3597,11 +3597,11 @@
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
 					"RateOfFire": 50,
 				"RangeAttributesLong": {
-						"Distance": 1100
+						"Distance": 3100
 					}
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 65,
+					"BaseDamagePerRound": 105,
 					"NumberOfBursts": 4,
 					"BurstPeriodMinTimeMS": 300,
 					"BurstPeriodMaxTimeMS": 300,
@@ -3611,13 +3611,13 @@
 					"ReloadTimeMS": 5000,
 					"AreaOfEffectRadius": 60,
 					"RangeAttributesLong": {
-						"Distance": 1100
+						"Distance": 3100
 					}
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
 					"TargetStyle": "Flak",
-					"BaseDamagePerRound": 65,
+					"BaseDamagePerRound": 105,
 					"RateOfFire": 15,
 					"BurstPeriodMinTimeMS": 800,
 					"BurstPeriodMaxTimeMS": 900,
@@ -3684,7 +3684,7 @@
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 11,
+					"RateOfFire": 31,
 					"RangeAttributesShort": {
 						"Accuracy": 55,
 						"Distance": 900
@@ -3721,7 +3721,7 @@
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 11,
+					"RateOfFire": 31,
 					"RangeAttributesShort": {
 						"Accuracy": 55,
 						"Distance": 900
@@ -3759,6 +3759,7 @@
 				"Resource2Cost": 0
 			}
 		},
+		
 		"C_HAC_MP": {
 			"UnitAttributes": {
 				"Resource1Cost":90,
@@ -3787,7 +3788,7 @@
 					"OutputDPS": true
 				}
 			}
-		}"Suppress_StatusEffect": {
+		},"Suppress_StatusEffect": {
 			"StatusEffectAttributes": {
 				"Duration": 2.65,
 				"BuffsToApplyToTarget": {
@@ -5450,7 +5451,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 550,
+					"BaseDamagePerRound": 650,
 					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
@@ -5461,7 +5462,7 @@
 					"OutputDPS": true
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
-					"BaseDamagePerRound": 780,
+					"BaseDamagePerRound": 1180,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 140,
 					"ExcludeFromHeightAdvantage": true,
@@ -5548,7 +5549,7 @@
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 1550,
+					"BaseDamagePerRound": 1150,
 					"ReloadTimeMS": 4500,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 250,
@@ -5584,7 +5585,7 @@
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 1550,
+					"BaseDamagePerRound": 1150,
 					"ReloadTimeMS": 4500,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 250,
@@ -5928,7 +5929,7 @@
 			"WeaponAttributes": {
 				"K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
 					"AreaOfEffectRadius": 250,
-					"BaseDamagePerRound": 280,
+					"BaseDamagePerRound": 20,
 					"ReloadTimeMS": 4500,
 					"NumberOfBursts": 3,
 					"AreaOfEffectFalloffType": "Quadratic",
