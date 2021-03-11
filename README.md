@@ -45,6 +45,7 @@ Look to the right of these instructions you will see a heading that reads **Rele
 | Gaalsien Territories | [2,2] | SSSS     | **/l gt-alt**       | [preview](layouts/gt-alt.png)       | Alternative layout for Gaalsien Territories
 | Canyon Outpost       | [2,2] | AGameAnx | **/l canyon-alt**   | [preview](layouts/canyon-alt.png)   | 2v2 canyon outpost converted into a 1v1 layout
 | Khar-Toba            | [2,2] | AGameAnx | **/l kt-alt**       | [preview](layouts/kt-alt.png)       | 3v3 Khar-Toba converted into a 1v1 layout
+| Taiidan Passage      | [2,2] | AGameAnx | **/l taiidan-alt**  | [preview](layouts/taiidan-alt.png)  | Adjusted vanilla Taiidan Passage adjusting high ground advantages across the map
 | Torin Crater         | [2,2] | AGameAnx | **/l torin-alt**    | [preview](layouts/torin-alt.png)    | Adjusted vanilla Torin Crater to make spawning location more difficult to attack
 | Shallows             | [2,2] | Bozocow  | **/l shallows-alt** | [preview](layouts/shallows-alt.png) | New layout for the shallows
 
