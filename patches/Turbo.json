@@ -939,11 +939,11 @@
 			},
 			"WeaponAttributes": {
 				"C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
-					"BaseDamagePerRound": 2095,
+					"BaseDamagePerRound": 1095,
 					"ExcludeFromHeightAdvantage": true
 				},
 				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 2495,
+					"BaseDamagePerRound": 1495,
 					"ExcludeFromHeightAdvantage": true,
 					"BurstPeriodMaxTimeMS": 250,
 					"BurstPeriodMinTimeMS": 250,
@@ -963,7 +963,7 @@
 						"Accuracy": 5.0
 					},
 					"RangeAttributesLong": {
-						"Distance": 22000,
+						"Distance": 4000,
 						"Accuracy": 8.5
 					},"Modifiers": {	
 						"0": { "TargetClass": "Air", "Modifier": "CanTarget"}
@@ -3201,6 +3201,7 @@
 			"WeaponAttributes": {
 				"C_Baserunner_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 187,
 					"RateOfFire": 2,
 					"DamagePacketsPerShot": 3,
@@ -3271,6 +3272,7 @@
 				},
 				"C_Sob_Baserunner_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 187,
 					"RateOfFire": 2,
 					"DamagePacketsPerShot": 3,
@@ -3342,6 +3344,7 @@
 			"WeaponAttributes": {
 				"G_Baserunner_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 157,
 					"RateOfFire": 2,
 					"DamagePacketsPerShot": 3,
@@ -3441,6 +3444,7 @@
 			"WeaponAttributes": {
 				"G_Baserunner_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 87,
 					"RateOfFire": 2,
 					"DamagePacketsPerShot": 3,
@@ -3526,7 +3530,8 @@
 					}
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 105,
+				  "LineOfSightRequired": true,
+					"BaseDamagePerRound": 65,
 					"NumberOfBursts": 6,
 					"BurstPeriodMinTimeMS": 300,
 					"BurstPeriodMaxTimeMS": 300,
@@ -3541,8 +3546,9 @@
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
-					"BaseDamagePerRound": 105,
+					"BaseDamagePerRound": 65,
 					"RateOfFire": 15,
 					"BurstPeriodMinTimeMS": 800,
 					"BurstPeriodMaxTimeMS": 900,
@@ -3604,7 +3610,7 @@
 					}
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 105,
+					"BaseDamagePerRound": 65,
 					"NumberOfBursts": 4,
 					"BurstPeriodMinTimeMS": 300,
 					"BurstPeriodMaxTimeMS": 300,
@@ -3619,8 +3625,9 @@
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
-					"BaseDamagePerRound": 105,
+					"BaseDamagePerRound": 65,
 					"RateOfFire": 15,
 					"BurstPeriodMinTimeMS": 800,
 					"BurstPeriodMaxTimeMS": 900,
@@ -3687,6 +3694,7 @@
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": true,
 					"RateOfFire": 31,
 					"RangeAttributesShort": {
 						"Accuracy": 55,
@@ -3724,6 +3732,7 @@
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": true,
 					"RateOfFire": 31,
 					"RangeAttributesShort": {
 						"Accuracy": 55,
@@ -4376,6 +4385,24 @@
 					},
 					"Turret": {
 						"RotationSpeed": 250
+					},"Modifiers": {	
+						"0": { "TargetClass": "Air", "Modifier": "CanTarget"},
+						"1": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyShortValue",
+							"Amount": -8
+						},"2": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyMediumValue",
+							"Amount": -7
+						},"3": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyLongValue",
+							"Amount": -2
+						}
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 500,
@@ -4422,6 +4449,24 @@
 					},
 					"Turret": {
 						"RotationSpeed": 250
+					},"Modifiers": {	
+						"0": { "TargetClass": "Air", "Modifier": "CanTarget"},
+						"1": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyShortValue",
+							"Amount": -8
+						},"2": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyMediumValue",
+							"Amount": -7
+						},"3": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyLongValue",
+							"Amount": -2
+						}
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 500,
@@ -4600,6 +4645,24 @@
 					"RangeAttributesLong": {
 						"Accuracy": 6,
 						"Distance": 2000
+					},"Modifiers": {	
+						"0": { "TargetClass": "Air", "Modifier": "CanTarget"},
+						"1": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyShortValue",
+							"Amount": -8
+						},"2": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyMediumValue",
+							"Amount": -7
+						},"3": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyLongValue",
+							"Amount": -2
+						}
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 500,
@@ -4657,6 +4720,24 @@
 					"RangeAttributesLong": {
 						"Accuracy": 6,
 						"Distance": 2060
+					},"Modifiers": {	
+						"0": { "TargetClass": "Air", "Modifier": "CanTarget"},
+						"1": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyShortValue",
+							"Amount": -8
+						},"2": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyMediumValue",
+							"Amount": -7
+						},"3": {
+							"TargetClass": "Air",
+							"ClassOperator": "And",
+							"Modifier": "AccuracyLongValue",
+							"Amount": -2
+						}
 					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 500,
