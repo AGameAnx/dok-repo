@@ -72,6 +72,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-01-30](#2021-01-30)
 	- [2021-01-31](#2021-01-31)
 	- [2021-03-09](#2021-03-09)
+	- [2021-03-12](#2021-03-12)
 
 # Changes
 
@@ -1900,3 +1901,50 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Base speed: `45 => 38`
 		* Base cruise missile warmup time: `9s => 8s`
 	* Blast Drone cost: `150CU => 120CU`
+
+## 2021-03-12
+*Not yet reflected in the main changelog.*
+* General:
+	* Baserunner cost: `250CU 50RU => 250CU 40RU`
+* Coalition/Soban:
+	* Railgun:
+		* Cost: `250CU 85RU => 250CU 80RU`
+		* Armor: `0 => 2`
+	* Gunship area of effect: `160 => 148`
+	* Assault cruiser reload time: `3.5s => 3.8s`
+	* Support cruiser armor: `5 => 4`
+* Coalition:
+	* Battlecruiser:
+		* Hitpoints: `3200 => 3400`
+		* Armor: `15 => 17`
+		* Damage: `210 => 160`
+		* Area of effect: `55 => 60`
+		* Reload: `4.8s => 3.2s`
+* Soban:
+	* Battlecruiser:
+		* Hitpoints: `3000 => 3200`
+		* Armor: `13 => 16`
+* Gaalsien/Khaaneph:
+	* Sandskimmer:
+		* Hitpoints: `500 => 480`
+		* Range: `600 => 640`
+	* Assault ship:
+		* Damage: `29 => 27`
+		* Area of effect: `130 => 140`
+	* Assault railgun:
+		* Armor: `6 => 4`
+		* Reload time: `4s => 4.2s`
+	* Heavy railgun:
+		* Cost: `350CU 115RU => 350CU 110RU`
+		* Movement speed: `58 => 52`
+		* Armor: `0 => 2`
+	* Honourguard cruiser:
+		* Max speed: `52 => 50`
+		* Turn radius: `120 => 90`
+		* Damage: `420 => 550`
+		* Packets: `1 => 4`
+		* Area of effect: `250 => 210`
+		* Falloff: `Linear => Quadratic`
+		* Reload time: `5.3s => 5.5s`
+* Gaalsien:
+	* Baserunner heal aura ability cooldown: `50s => 65s`
