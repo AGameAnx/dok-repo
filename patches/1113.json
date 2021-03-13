@@ -118,7 +118,7 @@
 							"0": {
 								"Attribute": "UnitDynamics_MaxSpeed",
 								"Mode": "Add",
-								"Value": 1
+								"Value": 5
 							}
 						}
 					}
@@ -458,7 +458,7 @@
 		"G_Carrier_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 15500,
-				"Armour" : 40
+				"Armour" : 30
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -477,7 +477,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_MissileBarrage": {
-					"CooldownTimeSecs": 90
+					"CooldownTimeSecs": 260
 				},
 				"Ability_G_LaunchInterceptor_Upgraded_MP": {
 					"AirSortie": { "LoiterLength": 40 }
@@ -518,11 +518,11 @@
 					"PowerLevels": {
 						
 						"0": {
-							"LocalizedShortDescriptionStringID": "Movement: 20 km/h"
+							"LocalizedShortDescriptionStringID": "Movement : 20 km/h"
 						},
 						
 						"1": {
-							"LocalizedShortDescriptionStringID": "Movement: 40 km/h",
+							"LocalizedShortDescriptionStringID": "Movement : 40 km/h",
 							"StatusEffectsToApply": {
 								"Movement_1_StatusEffect": {
 									"BuffsToApplyToTarget": {
@@ -537,7 +537,7 @@
 						},
 						
 						"2": {
-							"LocalizedShortDescriptionStringID": "Movement: 60 km/h",
+							"LocalizedShortDescriptionStringID": "Movement : 60 km/h",
 							"StatusEffectsToApply": {
 								"Movement_2_StatusEffect": {
 									"BuffsToApplyToTarget": {
@@ -552,7 +552,7 @@
 						},
 						
 						"3": {
-							"LocalizedShortDescriptionStringID": "Movement: 80 km/h",
+							"LocalizedShortDescriptionStringID": "Movement : 85 km/h",
 							"StatusEffectsToApply": {
 								"Movement_3_StatusEffect": {
 									"BuffsToApplyToTarget": {
@@ -567,7 +567,7 @@
 						},
 						
 						"4": {
-							"LocalizedShortDescriptionStringID": "Movement: 100 km/h",
+							"LocalizedShortDescriptionStringID": "Movement : 105 km/h",
 							"StatusEffectsToApply": {
 								"Movement_4_StatusEffect": {
 									"BuffsToApplyToTarget": {
@@ -582,13 +582,13 @@
 						},
 						
 						"5": {
-							"LocalizedShortDescriptionStringID": "Movement: 125 km/h",
+							"LocalizedShortDescriptionStringID": "Movement : 125 km/h",
 							"StatusEffectsToApply": {
 								"Movement_5_StatusEffect": {
 									"BuffsToApplyToTarget": {
 										"0": {
 											"BuffSet": {
-												"0": { "Value": 105 }
+												"0": { "Value": 100 }
 											    }
 											}	
 										}
@@ -642,11 +642,11 @@
 					"0": { // Speed Boost. Changed buffs affect radius
 						"View": {
 							"LocalizedTitleStringID": "MOBILITY AND SENSORS SUPPORT",
-							"LocalizedLongDescriptionStringID": "Boost sensors capability of medium and Capital Ships. Allocate speed bonus to all unitsin the vicinity of the Carrier and Production Cruisers. Effect is doubled for the carrier. Shunting power increases additional sensors range, speed bonus and speed bonus area of effect."
+							"LocalizedLongDescriptionStringID": "Boost sensors capability of medium and Capital Ships. Allocate speed bonus to all units in the vicinity of the Carrier and Production Cruisers. Effect is doubled for the carrier. Shunting power increases additional sensors range, speed bonus and speed bonus area of effect."
 						},
 						"PowerLevels": {
 							"1": {
-								"LocalizedShortDescriptionStringID": "Mobility: 600 radius, +5 speed. Sensors: +100",
+								"LocalizedShortDescriptionStringID": "Mobility : 600 radius, +5 speed. Sensors : +100",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_1_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -696,7 +696,7 @@
 								}
 							},
 							"2": {
-								"LocalizedShortDescriptionStringID": "Mobility: 600 radius, 10 speed. Sensors: +150",
+								"LocalizedShortDescriptionStringID": "Mobility : 600 radius, 10 speed. Sensors : +150",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_2_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -746,7 +746,7 @@
 								}
 							},
 							"3": {
-								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, +15 speed. Sensors: +200",
+								"LocalizedShortDescriptionStringID": "Mobility : 750 radius, +15 speed. Sensors : +200",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_3_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -798,7 +798,7 @@
 								}
 							},
 							"4": {
-								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, +20 speed. Sensors: +250",
+								"LocalizedShortDescriptionStringID": "Mobility : 750 radius, +20 speed. Sensors : +250",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -850,7 +850,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Mobility: 900 radius, +25 speed. Sensors: +300",
+								"LocalizedShortDescriptionStringID": "Mobility : 900 radius, +25 speed. Sensors : +300",
 								"StatusEffectsToApply": {
 									"K_MovementShuntCarrier_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -981,8 +981,11 @@
 			"AbilityAttributes": {
 				"Ability_C_Sob_SobanNuke_MP": {
 					"CooldownTimeSecs": 280,
-					"Resource1Cost": 400
+					"Resource1Cost": 300
 				},
+				"Ability_C_Sob_DeployPopCapCarrier_MP": {
+					"Resource1Cost": 50
+				},	
 				"Ability_C_LaunchInterceptor_MP": {
 					"AirSortie": { "LoiterLength": 40 }
 				},
@@ -3800,7 +3803,7 @@
 	        }
 	    }	
     }
-}								
+}									
 			
 	
 
