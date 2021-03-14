@@ -475,7 +475,7 @@
 			"WeaponAttributes": {
 				"C_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 200,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage":false,
 					"RateOfFire": 10,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
@@ -517,7 +517,7 @@
 				},
 				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
 					"BaseDamagePerRound": 200,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RateOfFire": 10,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
@@ -557,11 +557,11 @@
 				"C_CarrierMissiles_Weapon_A2G_MP": {
 					"WindUpTimeMS": 100,
 					"RangeAttributesLong": { "Distance": 1400 },
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				},
 				"C_Carrier_Weapon_CruiseMissile_MP": {
 					"BaseDamagePerRound": 10000,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Carrier, Large, XLarge",
@@ -941,12 +941,12 @@
 				"C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
 					"BaseDamagePerRound": 1095,
 					"RateOfFire": 10,
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				},
 				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 1495,
 					"RateOfFire": 3,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BurstPeriodMaxTimeMS": 250,
 					"BurstPeriodMinTimeMS": 250,
 					"NumberOfBursts": 18,
@@ -978,7 +978,7 @@
 					}
 				},
 				"C_Sob_Carrier_Weapon_Nuke_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
 						"Distance": 15000
@@ -1668,7 +1668,7 @@
 			"WeaponAttributes": {
 				"G_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 400,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RateOfFire": 10,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
@@ -1701,7 +1701,7 @@
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
 					"BaseDamagePerRound": 400,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RateOfFire": 10,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
@@ -1741,10 +1741,10 @@
 				"G_Carrier_Weapon_DefaultMissile_MP": {
 					"WindUpTimeMS": 500,
 					"RangeAttributesLong": { "Distance": 800 },
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				},
 				"G_Carrier_Weapon_BarrageMissile_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 800,
 					"AreaOfEffectRadius": 270,
 					"AreaOfEffectFalloffType": "Quadratic",
@@ -2206,7 +2206,7 @@
 				},
 				"K_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 400,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RateOfFire": 22,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
@@ -2236,7 +2236,7 @@
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
 					"BaseDamagePerRound": 500,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RateOfFire": 12,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
@@ -2275,14 +2275,14 @@
 				},
 				"K_Carrier_Weapon_DefaultMissile_MP": {
 					"WindUpTimeMS": 500,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RangeAttributesLong": { "Distance": 950 }
 				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
 					"BaseDamagePerRound": 3100,
 					"DamagePacketsPerShot": 5,
 					"AreaOfEffectRadius": 180,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"Modifiers": {
 						"1": {
 							"Amount": 75
@@ -3004,7 +3004,7 @@
 		"N_ECMField_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 500,
-				"PopCapCost": 3,
+				"PopCapCost": 5,
 				"ContactRadius": 75,
 				"SensorRadius": 270,
 				"Resource1Cost": 100
@@ -3157,7 +3157,7 @@
 		"N_DemoCharge_MP": {
 			"WeaponAttributes": {
 				"N_DemoCharge_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 750,
 					"DamagePacketsPerShot": 3
 				}
@@ -3188,8 +3188,8 @@
 		
 		"C_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 225,
-				"Resource2Cost": 0,
+				"Resource1Cost": 325,
+				"Resource2Cost": 20,
 				"MaxHealth": 6700,
 				"PopCapCost": 4,
 				"PriorityAsTarget": -250,
@@ -3202,9 +3202,9 @@
 			},
 			"WeaponAttributes": {
 				"C_Baserunner_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
-					"BaseDamagePerRound": 187,
+					"BaseDamagePerRound": 287,
 					"RateOfFire": 2,
 					"DamagePacketsPerShot": 3,
 					"RangeAttributesShort": {
@@ -3244,8 +3244,8 @@
 		},
 		"C_Sob_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 225,
-				"Resource2Cost": 0,
+				"Resource1Cost": 325,
+				"Resource2Cost": 20,
 				"MaxHealth": 6700,
 				"PopCapCost": 4,
 				"PriorityAsTarget": -250,
@@ -3258,8 +3258,8 @@
 			},
 			"AbilityAttributes": {
 				"Ability_C_Baserunner_ECMField": {
-					"CooldownTimeSecs": 70,
-					"Resource1Cost": 70
+					"CooldownTimeSecs": 120,
+					"Resource1Cost": 120
 				},
 				"Ability_C_LaunchProbe_MP": {
 					"Resource1Cost": 50
@@ -3269,11 +3269,11 @@
 				"C_Sob_Baserunner_Weapon_ECM": {
 					"ProjectileEntityTypeToSpawn": "G_Scanner_ProjectileEntity_MP",
 					"RangeAttributesShort": {
-						"Distance": 1400
+						"Distance": 1100
 					}
 				},
 				"C_Sob_Baserunner_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 187,
 					"RateOfFire": 2,
@@ -3304,8 +3304,8 @@
 		},
 		"G_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 225,
-				"Resource2Cost": 0,
+				"Resource1Cost": 325,
+				"Resource2Cost": 20,
 				"MaxHealth": 6700,
 				"PopCapCost": 4,
 				"PriorityAsTarget": -250,
@@ -3345,7 +3345,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Baserunner_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 157,
 					"RateOfFire": 2,
@@ -3445,7 +3445,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Baserunner_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 87,
 					"RateOfFire": 2,
@@ -3547,7 +3547,7 @@
 					}
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 30,
@@ -3627,7 +3627,7 @@
 					}
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 30,
@@ -3696,7 +3696,7 @@
 			},
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"RateOfFire": 31,
 					"RangeAttributesShort": {
@@ -3734,7 +3734,7 @@
 			},
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"RateOfFire": 31,
 					"RangeAttributesShort": {
@@ -4676,7 +4676,7 @@
 					"OutputDPS": true
 				},
 				"G_StarHull_Weapon_G2GEMP_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 110,
 					"AreaOfEffectRadius": 135,
 					"WindUpTimeMS": 750,
@@ -4751,7 +4751,7 @@
 					"OutputDPS": true
 				},
 				"G_StarHull_Weapon_G2GEMP_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 110,
 					"AreaOfEffectRadius": 145,
 					"WindUpTimeMS": 750,
@@ -5020,7 +5020,7 @@
 					"AreaOfEffectRadius": 220,
 					"DamagePacketsPerShot": 35,
 					"AreaOfEffectFalloffType": "Linear",
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				}
 			}
 		},
@@ -5082,7 +5082,7 @@
 					}
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 1140,
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
@@ -5146,7 +5146,7 @@
 					}
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 1140,
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
@@ -5491,7 +5491,7 @@
 					"BaseDamagePerRound": 280,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 140,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RangeAttributesLong": { "Distance": 1000 },
 					"Modifiers": {
 						"1": {
@@ -5555,7 +5555,7 @@
 					"BaseDamagePerRound": 1180,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 140,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RangeAttributesLong": { "Distance": 1000 },
 					"Modifiers": {
 						"1": {
@@ -5854,7 +5854,7 @@
 					}
 				},
 				"C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RangeAttributesLong": {
 						"Distance": 4650
 					},
@@ -5993,7 +5993,7 @@
 				},
 				"G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
 					"BaseDamagePerRound": 450,
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				},
 				"G_ArtilleryCruiser_Weapon_PD_MP": {
 					"BaseDamagePerRound": 14
@@ -6028,7 +6028,7 @@
 					}
 				},
 				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"NumberOfBursts": 4,
 					"CooldownTimeMS": 2500,
 					"BaseDamagePerRound": 240,
@@ -6054,7 +6054,7 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				}
 			}
 		},
