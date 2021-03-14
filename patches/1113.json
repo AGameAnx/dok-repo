@@ -409,14 +409,14 @@
 				"C_Carrier_Weapon_CruiseMissile_MP": {
 					"BaseDamagePerRound": 2800,
 				    "AreaOfEffectRadius": 800,
-				    "AreaOfEffectFalloffType": "Quadratic",
+				    "AreaOfEffectFalloffType": "Linear",
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 120
+							"Amount": 220
 						},
 						"2": {
 							"TargetClass": "Small, Medium",
@@ -428,7 +428,7 @@
 							"TargetClass": "Large",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 100
+							"Amount": 220
 						}	
 					},
 					"RangeAttributesLong": {
@@ -509,7 +509,7 @@
 					},
 					"RangeAttributesShort": { "Distance": 2500, "Accuracy" : 10, "MinDistance": 2000 },
 					"RangeAttributesMedium": { "Distance": 5000, "Accuracy" : 5, "MinDistance": 2000 },
-				    "RangeAttributesLong": { "Distance": 10000, "Accuracy" : 5, "MinDistance": 2000 }
+				    "RangeAttributesLong": { "Distance": 10000, "Accuracy" : 1, "MinDistance": 2000 }
 			    }
 		    },
 		    "PowerShuntAttributes": {
