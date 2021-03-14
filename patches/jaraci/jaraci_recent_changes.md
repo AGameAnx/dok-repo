@@ -70,7 +70,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-01-06 (2)](#2021-01-06-2)
 	- [2021-01-09](#2021-01-09)
 	- [2021-01-30](#2021-01-30)
-	- [2021-01-31](#2021-01-31)
+	- [2021-01-31 (Jaraci Cup #10)](#2021-01-31-jaraci-cup-10)
 	- [2021-03-09](#2021-03-09)
 	- [2021-03-12](#2021-03-12)
 
@@ -1806,7 +1806,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Khaaneph:
 	* Siege cruiser area of effect: `240 => 230`
 
-## 2021-01-31
+## 2021-01-31 (Jaraci Cup #10)
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* AAV hitpoints: `920 => 970`
