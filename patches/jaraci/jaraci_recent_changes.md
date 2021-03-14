@@ -73,6 +73,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-01-31 (Jaraci Cup #10)](#2021-01-31-jaraci-cup-10)
 	- [2021-03-09](#2021-03-09)
 	- [2021-03-12](#2021-03-12)
+	- [2021-03-14](#2021-03-14)
 
 # Changes
 
@@ -1948,3 +1949,23 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Reload time: `5.3s => 5.5s`
 * Gaalsien:
 	* Baserunner heal aura ability cooldown: `50s => 65s`
+
+## 2021-03-14
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Railgun cost: `250CU 80RU => 280CU 70RU`
+	* Artillery cruiser:
+		* Cost: `500CU 200RU => 550CU 160RU`
+		* Barrage cooldown: `100s => 90s`
+	* Mag accelerator upgrade cost: `100CU 250RU => 150CU 220RU`
+	* Battlecruiser cost: `650CU 280RU => 650CU 250RU`
+* Gaalsien/Khaaneph:
+	* Honourguard cruiser cost: `550CU 250RU => 550CU 220RU`
+* Gaalsien:
+	* Siege cruiser:
+		* Cost: `400CU 180RU => 450CU 180RU`
+		* Armor: `6 => 3`
+		* Barrage cooldown: `40s => 45s`
+		* Barrage damage: `210 => 195`
+		* Autofire damage: `180 => 170`
+		* EMP damage: `450 => 400`
