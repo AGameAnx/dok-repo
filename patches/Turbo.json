@@ -429,12 +429,12 @@
 		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 30000,
+				"MaxHealth": 60000,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 90,
+					"MaxSpeed": 70,
 					"MaxSpeedTurnRadius": 65,
 					"BrakingTime": 1.1,
 					"AccelerationTime": 1.1
@@ -474,9 +474,9 @@
 			},
 			"WeaponAttributes": {
 				"C_Carrier_Weapon_G2All_MP": {
-					"BaseDamagePerRound": 20,
-					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 6,
+					"BaseDamagePerRound": 200,
+					"ExcludeFromHeightAdvantage":false,
+					"RateOfFire": 10,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -513,12 +513,12 @@
 					}
 				},
 				"C_Carrier_Weapon_G2All_Dummy_MP": {
-					"BaseDamagePerRound": 40
+					"BaseDamagePerRound": 200
 				},
 				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
-					"BaseDamagePerRound": 50,
-					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 6,
+					"BaseDamagePerRound": 200,
+					"ExcludeFromHeightAdvantage": false,
+					"RateOfFire": 10,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -555,13 +555,13 @@
 					}
 				},
 				"C_CarrierMissiles_Weapon_A2G_MP": {
-					"WindUpTimeMS": 500,
+					"WindUpTimeMS": 100,
 					"RangeAttributesLong": { "Distance": 1400 },
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				},
 				"C_Carrier_Weapon_CruiseMissile_MP": {
 					"BaseDamagePerRound": 10000,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Carrier, Large, XLarge",
@@ -586,16 +586,16 @@
 							},
 							
 							"1": {
-								"LocalizedShortDescriptionStringID": "Missiles Enabled. 40% PD ROF Bonus",
+								"LocalizedShortDescriptionStringID": "Missiles Enabled. 50% PD ROF Bonus",
 								"StatusEffectsToApply": {
 									"C_Weapons_1_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Mode": "AddPercent", "Value": 40 }, 
-													"2": { "Mode": "AddPercent", "Value": 40 }, 
-													"3": { "Mode": "AddPercent", "Value": 40 }, 
-													"4": { "Mode": "AddPercent", "Value": 40 }  
+													"1": { "Mode": "AddPercent", "Value": 50 }, 
+													"2": { "Mode": "AddPercent", "Value": 50 }, 
+													"3": { "Mode": "AddPercent", "Value": 50 }, 
+													"4": { "Mode": "AddPercent", "Value": 50 }  
 												}
 											}
 										}
@@ -604,16 +604,16 @@
 							},
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "55% PD ROF Bonus, 2 Missiles",
+								"LocalizedShortDescriptionStringID": "65% PD ROF Bonus, 2 Missiles",
 								"StatusEffectsToApply": {
 									"C_Weapons_2_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Mode": "AddPercent", "Value": 55 }, 
-													"2": { "Mode": "AddPercent", "Value": 55 }, 
-													"3": { "Mode": "AddPercent", "Value": 55 }, 
-													"4": { "Mode": "AddPercent", "Value": 55 }  
+													"1": { "Mode": "AddPercent", "Value": 65 }, 
+													"2": { "Mode": "AddPercent", "Value": 65 }, 
+													"3": { "Mode": "AddPercent", "Value": 65 }, 
+													"4": { "Mode": "AddPercent", "Value": 65 }  
 												}
 											}
 										}
@@ -622,16 +622,16 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "75% PD ROF Bonus, 3 Missiles",
+								"LocalizedShortDescriptionStringID": "85% PD ROF Bonus, 3 Missiles",
 								"StatusEffectsToApply": {
 									"C_Weapons_3_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Mode": "AddPercent", "Value": 75 }, 
-													"2": { "Mode": "AddPercent", "Value": 75 }, 
-													"3": { "Mode": "AddPercent", "Value": 75 }, 
-													"4": { "Mode": "AddPercent", "Value": 75 }  
+													"1": { "Mode": "AddPercent", "Value": 85 }, 
+													"2": { "Mode": "AddPercent", "Value": 85 }, 
+													"3": { "Mode": "AddPercent", "Value": 85 }, 
+													"4": { "Mode": "AddPercent", "Value": 85 }  
 												}
 											}
 										}
@@ -640,16 +640,16 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "80% PD ROF Bonus, 4 Missiles",
+								"LocalizedShortDescriptionStringID": "90% PD ROF Bonus, 4 Missiles",
 								"StatusEffectsToApply": {
 									"C_Weapons_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Mode": "AddPercent", "Value": 80 }, 
-													"2": { "Mode": "AddPercent", "Value": 80 }, 
-													"3": { "Mode": "AddPercent", "Value": 80 }, 
-													"4": { "Mode": "AddPercent", "Value": 80 }  
+													"1": { "Mode": "AddPercent", "Value": 90 }, 
+													"2": { "Mode": "AddPercent", "Value": 90 }, 
+													"3": { "Mode": "AddPercent", "Value": 90 }, 
+													"4": { "Mode": "AddPercent", "Value": 90 }  
 												}
 											}
 										}
@@ -658,16 +658,16 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Armor Piercing Rounds: 450% Damage, 25% PD ROF Bonus, 4 Missiles",
+								"LocalizedShortDescriptionStringID": "Armor Piercing Rounds: 450% Damage, 155% PD ROF Bonus, 4 Missiles",
 								"StatusEffectsToApply": {
 									"C_Weapons_5_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Mode": "AddPercent", "Value": 25 }, 
-													"2": { "Mode": "AddPercent", "Value": 25 }, 
-													"3": { "Mode": "AddPercent", "Value": 25 }, 
-													"4": { "Mode": "AddPercent", "Value": 25 }, 
+													"1": { "Mode": "AddPercent", "Value": 155 }, 
+													"2": { "Mode": "AddPercent", "Value": 155 }, 
+													"3": { "Mode": "AddPercent", "Value": 155 }, 
+													"4": { "Mode": "AddPercent", "Value": 155 }, 
 													"5": { "Value": 2 } 
 												}
 											}
@@ -692,13 +692,13 @@
 						"PowerLevels": {
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Armor: 35",
+								"LocalizedShortDescriptionStringID": "Armor: 55",
 								"StatusEffectsToApply": {
 									"Armour_3_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 10 }
+													"0": { "Value": 30 }
 												}
 											}
 										}
@@ -707,13 +707,13 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Armor: 45",
+								"LocalizedShortDescriptionStringID": "Armor: 90",
 								"StatusEffectsToApply": {
 									"Armour_4_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 20 }
+													"0": { "Value": 65 }
 												}
 											}
 										}
@@ -722,13 +722,13 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Armor: 60",
+								"LocalizedShortDescriptionStringID": "Armor: 110",
 								"StatusEffectsToApply": {
 									"Armour_5_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 35 }
+													"0": { "Value": 85 }
 												}
 											}
 										}
@@ -742,7 +742,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 70 }
+													"0": { "Value": 95 }
 												}
 											}
 										}
@@ -809,35 +809,9 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1250m",
-								"StatusEffectsToApply": {
-									"Range_3_StatusEffect_Gaalsi_MP": {
-										"BuffsToApplyToTarget": {
-											"0": {
-												"BuffSet": {
-													"0": { "Value": 1250 }, 
-													"1": { "Value": 1250 }, 
-													"6": { "Value": 1250 }, 
-													"7": { "Value": 1250 }, 
-													"12": { "Value": 1250 }, 
-													"13": { "Value": 1250 }, 
-													"18": { "Value": 1250 }, 
-													"19": { "Value": 1250 }, 
-													"24": { "Value": 450 }, 
-													"25": { "Value": 450 }, 
-													"26": { "Value": 550 }, 
-													"27": { "Value": 550 } 
-												}
-											}
-										}
-									}
-								}
-							},
-							
-							"4": {
 								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1550m",
 								"StatusEffectsToApply": {
-									"Range_4_StatusEffect_Gaalsi_MP": {
+									"Range_3_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
@@ -849,10 +823,36 @@
 													"13": { "Value": 1550 }, 
 													"18": { "Value": 1550 }, 
 													"19": { "Value": 1550 }, 
-													"24": { "Value": 650 }, 
-													"25": { "Value": 650 }, 
-													"26": { "Value": 800 }, 
-													"27": { "Value": 800 } 
+													"24": { "Value": 550 }, 
+													"25": { "Value": 550 }, 
+													"26": { "Value": 550 }, 
+													"27": { "Value": 550 } 
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"4": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1750m",
+								"StatusEffectsToApply": {
+									"Range_4_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1750 }, 
+													"1": { "Value": 1750 }, 
+													"6": { "Value": 1750 }, 
+													"7": { "Value": 1750 }, 
+													"12": { "Value": 1750 }, 
+													"13": { "Value": 1750 }, 
+													"18": { "Value": 1750 }, 
+													"19": { "Value": 1750 }, 
+													"24": { "Value": 850 }, 
+													"25": { "Value": 850 }, 
+													"26": { "Value": 1000 }, 
+													"27": { "Value": 1000 } 
 												}
 											}
 										}
@@ -861,22 +861,22 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1850m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 2000m",
 								"StatusEffectsToApply": {
 									"Range_5_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 1850 }, 
-													"1": { "Value": 1850 }, 
-													"6": { "Value": 1850 }, 
-													"7": { "Value": 1850 }, 
-													"12": { "Value": 1850 }, 
-													"13": { "Value": 1850 }, 
-													"18": { "Value": 1850 }, 
-													"19": { "Value": 1850 }, 
-													"24": { "Value": 850 }, 
-													"25": { "Value": 850 }, 
+													"0": { "Value": 2000 }, 
+													"1": { "Value": 2000 }, 
+													"6": { "Value": 2000 }, 
+													"7": { "Value": 2000 }, 
+													"12": { "Value": 2000 }, 
+													"13": { "Value": 2000 }, 
+													"18": { "Value": 2000 }, 
+													"19": { "Value": 2000 }, 
+													"24": { "Value": 1050 }, 
+													"25": { "Value": 1050 }, 
 													"26": { "Value": 1050 }, 
 													"27": { "Value": 1050 } 
 												}
@@ -900,7 +900,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 90,
+					"MaxSpeed": 70,
 					"MaxSpeedTurnRadius": 65,
 					"BrakingTime": 1.1,
 					"AccelerationTime": 1.1
@@ -940,11 +940,13 @@
 			"WeaponAttributes": {
 				"C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
 					"BaseDamagePerRound": 1095,
-					"ExcludeFromHeightAdvantage": true
+					"RateOfFire": 10,
+					"ExcludeFromHeightAdvantage": false
 				},
 				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 1495,
-					"ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 3,
+					"ExcludeFromHeightAdvantage": false,
 					"BurstPeriodMaxTimeMS": 250,
 					"BurstPeriodMinTimeMS": 250,
 					"NumberOfBursts": 18,
@@ -976,7 +978,7 @@
 					}
 				},
 				"C_Sob_Carrier_Weapon_Nuke_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
 						"Distance": 15000
@@ -1330,13 +1332,13 @@
 							},
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Armor: 25",
+								"LocalizedShortDescriptionStringID": "Armor: 55",
 								"StatusEffectsToApply": {
 									"Armour_3_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 10 }
+													"0": { "Value": 30 }
 												}
 											}
 										}
@@ -1345,13 +1347,13 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Armor: 50",
+								"LocalizedShortDescriptionStringID": "Armor: 90",
 								"StatusEffectsToApply": {
 									"Armour_4_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 35 }
+													"0": { "Value": 65 }
 												}
 											}
 										}
@@ -1360,13 +1362,13 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Armor: 70",
+								"LocalizedShortDescriptionStringID": "Armor: 110",
 								"StatusEffectsToApply": {
 									"Armour_5_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 55 }
+													"0": { "Value": 85 }
 												}
 											}
 										}
@@ -1380,7 +1382,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 75 }
+													"0": { "Value": 95 }
 												}
 											}
 										}
@@ -1395,47 +1397,47 @@
 						"PowerLevels": {
 							
 							"0": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1000m"
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 4000m"
 							},
 							
 							"1": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1250m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 4250m",
 								"StatusEffectsToApply": {
 									"Range_1_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
 													
-													"0": { "Value": 1250 }, 
+													"0": { "Value": 4250 }, 
 													"1": { "Value": 1250 }, 
-													"2": { "Value": 750 }, 
-													"3": { "Value": 750 }, 
-													"4": { "Value": 450 }, 
-													"5": { "Value": 450 }, 
+													"2": { "Value": 950 }, 
+													"3": { "Value": 950 }, 
+													"4": { "Value": 850 }, 
+													"5": { "Value": 850 }, 
+													
+												
+													"6": { "Value": 4250 }, 
+													"7": { "Value": 4250 }, 
+													"8": { "Value": 950 }, 
+													"9": { "Value": 950 }, 
+													"10": { "Value": 850 }, 
+													"11": { "Value": 850 }, 
 													
 													
-													"6": { "Value": 1250 }, 
-													"7": { "Value": 1250 }, 
-													"8": { "Value": 750 }, 
-													"9": { "Value": 750 }, 
-													"10": { "Value": 450 }, 
-													"11": { "Value": 450 }, 
+													"12": { "Value": 4250 }, 
+													"13": { "Value": 4250 }, 
+													"14": { "Value": 950 }, 
+													"15": { "Value": 950 }, 
+													"16": { "Value": 950 }, 
+													"17": { "Value": 950 }, 
 													
 													
-													"12": { "Value": 1250 }, 
-													"13": { "Value": 1250 }, 
-													"14": { "Value": 750 }, 
-													"15": { "Value": 750 }, 
-													"16": { "Value": 450 }, 
-													"17": { "Value": 450 }, 
-													
-													
-													"18": { "Value": 1250 }, 
-													"19": { "Value": 1250 }, 
-													"20": { "Value": 750 }, 
-													"21": { "Value": 750 }, 
-													"22": { "Value": 450 }, 
-													"23": { "Value": 450 } 
+													"18": { "Value": 4250 }, 
+													"19": { "Value": 4250 }, 
+													"20": { "Value": 950 }, 
+													"21": { "Value": 950 }, 
+													"22": { "Value": 950 }, 
+													"23": { "Value": 950 } 
 												}
 											}
 										}
@@ -1444,86 +1446,41 @@
 							},
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1450m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 4500m",
 								"StatusEffectsToApply": {
 									"Range_2_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
 													
-													"0": { "Value": 1450 }, 
-													"1": { "Value": 1450 }, 
-													"2": { "Value": 1100 }, 
-													"3": { "Value": 1100 }, 
-													"4": { "Value": 700 }, 
-													"5": { "Value": 700 }, 
+													"0": { "Value": 4500 }, 
+													"1": { "Value": 4500 }, 
+													"2": { "Value": 4500 }, 
+													"3": { "Value": 1200 }, 
+													"4": { "Value": 1000 }, 
+													"5": { "Value": 1000 }, 
 													
 													
-													"6": { "Value": 1450 }, 
-													"7": { "Value": 1450 }, 
-													"8": { "Value": 1100 }, 
-													"9": { "Value": 1100 }, 
-													"10": { "Value": 700 }, 
-													"11": { "Value": 700 }, 
+													"6": { "Value": 4500 }, 
+													"7": { "Value": 4500 }, 
+													"8": { "Value": 4500 }, 
+													"9": { "Value": 1200 }, 
+													"10": { "Value": 1000 }, 
+													"11": { "Value": 1000 }, 
 													
 													
-													"12": { "Value": 1450 }, 
-													"13": { "Value": 1450 }, 
-													"14": { "Value": 1100 }, 
+													"12": { "Value": 4500 }, 
+													"13": { "Value": 4500 }, 
+													"14": { "Value": 4500 }, 
 													"15": { "Value": 1100 }, 
-													"16": { "Value": 700 }, 
-													"17": { "Value": 700 }, 
-													
-													
-													"18": { "Value": 1450 }, 
-													"19": { "Value": 1450 }, 
-													"20": { "Value": 1100 }, 
-													"21": { "Value": 1100 }, 
-													"22": { "Value": 700 }, 
-													"23": { "Value": 700 } 
-												}
-											}
-										}
-									}
-								}
-							},
-							
-							"3": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1650m",
-								"StatusEffectsToApply": {
-									"Range_3_StatusEffect_Gaalsi_MP": {
-										"BuffsToApplyToTarget": {
-											"0": {
-												"BuffSet": {
-													
-													"0": { "Value": 1650 }, 
-													"1": { "Value": 1650 }, 
-													"2": { "Value": 1300 }, 
-													"3": { "Value": 1300 }, 
-													"4": { "Value": 900 }, 
-													"5": { "Value": 900 }, 
-													
-													
-													"6": { "Value": 1650 }, 
-													"7": { "Value": 1650 }, 
-													"8": { "Value": 1300 }, 
-													"9": { "Value": 1300 }, 
-													"10": { "Value": 900 }, 
-													"11": { "Value": 900 }, 
-													
-													
-													"12": { "Value": 1650 }, 
-													"13": { "Value": 1650 }, 
-													"14": { "Value": 1300 }, 
-													"15": { "Value": 1300 }, 
 													"16": { "Value": 900 }, 
 													"17": { "Value": 900 }, 
 													
 													
-													"18": { "Value": 1650 }, 
-													"19": { "Value": 1650 }, 
-													"20": { "Value": 1300 }, 
-													"21": { "Value": 1300 }, 
+													"18": { "Value": 4500 }, 
+													"19": { "Value": 4500 }, 
+													"20": { "Value": 1400 }, 
+													"21": { "Value": 1400 }, 
 													"22": { "Value": 900 }, 
 													"23": { "Value": 900 } 
 												}
@@ -1533,44 +1490,89 @@
 								}
 							},
 							
+							"3": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 4650m",
+								"StatusEffectsToApply": {
+									"Range_3_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													
+													"0": { "Value": 4650 }, 
+													"1": { "Value": 4650 }, 
+													"2": { "Value": 1600 }, 
+													"3": { "Value": 1600 }, 
+													"4": { "Value": 400 }, 
+													"5": { "Value": 400 }, 
+													
+													
+													"6": { "Value": 4650 }, 
+													"7": { "Value": 4650 }, 
+													"8": { "Value": 4300 }, 
+													"9": { "Value": 1600 }, 
+													"10": { "Value": 1000 }, 
+													"11": { "Value": 1000 }, 
+													
+													
+													"12": { "Value": 4650 }, 
+													"13": { "Value": 4650 }, 
+													"14": { "Value": 1600 }, 
+													"15": { "Value": 1600 }, 
+													"16": { "Value": 1000 }, 
+													"17": { "Value": 1000 }, 
+													
+													
+													"18": { "Value": 4650 }, 
+													"19": { "Value": 4650 }, 
+													"20": { "Value": 1600 }, 
+													"21": { "Value": 1600 }, 
+													"22": { "Value": 1000 }, 
+													"23": { "Value": 1000 } 
+												}
+											}
+										}
+									}
+								}
+							},
+							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1900m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 4900m",
 								"StatusEffectsToApply": {
 									"Range_4_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
 													
-													"0": { "Value": 1900 }, 
-													"1": { "Value": 1900 }, 
-													"2": { "Value": 1400 }, 
-													"3": { "Value": 1400 }, 
-													"4": { "Value": 1100 }, 
-													"5": { "Value": 1100 }, 
+													"0": { "Value": 4900 }, 
+													"1": { "Value": 4900 }, 
+													"2": { "Value": 4900 }, 
+													"3": { "Value": 1700 }, 
+													"4": { "Value": 1700 }, 
+													"5": { "Value": 1700 }, 
 													
 													
-													"6": { "Value": 1900 }, 
-													"7": { "Value": 1900 }, 
-													"8": { "Value": 1400 }, 
-													"9": { "Value": 1400 }, 
-													"10": { "Value": 1100 }, 
-													"11": { "Value": 1100 }, 
+													"6": { "Value": 4900 }, 
+													"7": { "Value": 4900 }, 
+													"8": { "Value": 1700 }, 
+													"9": { "Value": 1700 }, 
+													"10": { "Value": 1200 }, 
+													"11": { "Value": 1200 }, 
 													
 													
-													"12": { "Value": 1900 }, 
-													"13": { "Value": 1900 }, 
-													"14": { "Value": 1400 }, 
-													"15": { "Value": 1400, "Name": "TURRET_FR_APBULLETS" }, 
-													"16": { "Value": 1100, "Name": "TURRET_FR" }, 
-													"17": { "Value": 1100 }, 
+													"12": { "Value": 4900 }, 
+													"13": { "Value": 4900 }, 
+													"14": { "Value": 1700 }, 
+													"15": { "Value": 1700, "Name": "TURRET_FR_APBULLETS" }, 
+													"16": { "Value": 1200, "Name": "TURRET_FR" }, 
+													"17": { "Value": 1200 }, 
 													
 													
-													"18": { "Value": 1900 }, 
-													"19": { "Value": 1900 }, 
-													"20": { "Value": 1400 }, 
-													"21": { "Value": 1400 }, 
-													"22": { "Value": 1100 }, 
-													"23": { "Value": 1100 } 
+													"18": { "Value": 4900 }, 
+													"19": { "Value": 4900 }, 
+													"20": { "Value": 1700 }, 
+													"21": { "Value": 1700 }, 
+													"22": { "Value": 1200 }, 
+													"23": { "Value": 1200 } 
 												}
 											}
 										}
@@ -1579,43 +1581,43 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 2150m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 6150m",
 								"StatusEffectsToApply": {
 									"Range_5_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
 													
-													"0": { "Value": 2150 }, 
-													"1": { "Value": 2150 }, 
-													"2": { "Value": 1700 }, 
-													"3": { "Value": 1700 }, 
-													"4": { "Value": 1300 }, 
-													"5": { "Value": 1300 }, 
+													"0": { "Value": 6150 }, 
+													"1": { "Value": 6150 }, 
+													"2": { "Value": 3700 }, 
+													"3": { "Value": 3700 }, 
+													"4": { "Value": 2300 }, 
+													"5": { "Value": 2300 }, 
 													
 													
-													"6": { "Value": 2150 }, 
-													"7": { "Value": 2150 }, 
-													"8": { "Value": 1700 }, 
-													"9": { "Value": 1700 }, 
-													"10": { "Value": 1300 }, 
-													"11": { "Value": 1300 }, 
+													"6": { "Value": 6150 }, 
+													"7": { "Value": 6150 }, 
+													"8": { "Value": 3700 }, 
+													"9": { "Value": 3700 }, 
+													"10": { "Value": 2300 }, 
+													"11": { "Value": 2300 }, 
 													
 													
-													"12": { "Value": 2150 }, 
-													"13": { "Value": 2150 }, 
-													"14": { "Value": 1700 }, 
-													"15": { "Value": 1700 }, 
-													"16": { "Value": 1300 }, 
-													"17": { "Value": 1300 }, 
+													"12": { "Value": 6150 }, 
+													"13": { "Value": 6150 }, 
+													"14": { "Value": 3700 }, 
+													"15": { "Value": 3700 }, 
+													"16": { "Value": 2300 }, 
+													"17": { "Value": 2300 }, 
 													
 													
-													"18": { "Value": 2150 }, 
-													"19": { "Value": 2150 }, 
-													"20": { "Value": 1700 }, 
-													"21": { "Value": 1700 }, 
-													"22": { "Value": 1300 }, 
-													"23": { "Value": 1300 } 
+													"18": { "Value": 6150 }, 
+													"19": { "Value": 6150 }, 
+													"20": { "Value": 3700 }, 
+													"21": { "Value": 3700 }, 
+													"22": { "Value": 2300 }, 
+													"23": { "Value": 2300 } 
 												}
 											}
 										}
@@ -1632,11 +1634,11 @@
 		"G_Carrier_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 55000,
-				"Armour": 20,
+				"Armour": 90,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 35 }
+				"Dynamics": { "MaxSpeed": 45 }
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 5000
@@ -1665,13 +1667,13 @@
 			},
 			"WeaponAttributes": {
 				"G_Carrier_Weapon_G2All_MP": {
-					"BaseDamagePerRound": 40,
-					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 8,
+					"BaseDamagePerRound": 400,
+					"ExcludeFromHeightAdvantage": false,
+					"RateOfFire": 10,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
-					"RangeAttributesLong": { "Accuracy": 35, "Distance": 3500 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 1500 },
 					"Modifiers": {
 					  "0": { "TargetClass": "Air", "Modifier": "CanTarget"},
 						"1": {
@@ -1695,16 +1697,16 @@
 					}
 				},
 				"G_Carrier_Weapon_G2All_Dummy_MP": {
-					"BaseDamagePerRound": 40
+					"BaseDamagePerRound": 400
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
-					"BaseDamagePerRound": 50,
-					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 400,
+					"ExcludeFromHeightAdvantage": false,
 					"RateOfFire": 10,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
-					"RangeAttributesLong": { "Accuracy": 35, "Distance": 3900 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 1500 },
 					"Modifiers": {
 					  "0": { "TargetClass": "Air", "Modifier": "CanTarget"},
 						"1": {
@@ -1739,10 +1741,10 @@
 				"G_Carrier_Weapon_DefaultMissile_MP": {
 					"WindUpTimeMS": 500,
 					"RangeAttributesLong": { "Distance": 800 },
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				},
 				"G_Carrier_Weapon_BarrageMissile_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 800,
 					"AreaOfEffectRadius": 270,
 					"AreaOfEffectFalloffType": "Quadratic",
@@ -1764,17 +1766,17 @@
 						"PowerLevels": {
 							
 							"0": {
-								"LocalizedShortDescriptionStringID": "Movement: 35 km/h"
+								"LocalizedShortDescriptionStringID": "Movement: 45 km/h"
 							},
 							
 							"1": {
-								"LocalizedShortDescriptionStringID": "Movement: 60 km/h",
+								"LocalizedShortDescriptionStringID": "Movement: 70 km/h",
 								"StatusEffectsToApply": {
 									"Movement_1_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 25 }
+													"0": { "Value": 35 }
 												}
 											}
 										}
@@ -1828,13 +1830,13 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Movement: 130 km/h",
+								"LocalizedShortDescriptionStringID": "Movement: 190 km/h",
 								"StatusEffectsToApply": {
 									"Movement_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value":100 }
+													"0": { "Value":160 }
 												}
 											}
 										}
@@ -1853,16 +1855,16 @@
 							},
 							
 							"1": {
-								"LocalizedShortDescriptionStringID": "Missiles Enabled. 20% PD ROF Bonus",
+								"LocalizedShortDescriptionStringID": "Missiles Enabled. 40% PD ROF Bonus",
 								"StatusEffectsToApply": {
 									"G_Weapons_1_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Mode": "AddPercent", "Value": 20 }, 
-													"1": { "Mode": "AddPercent", "Value": 20 }, 
-													"2": { "Mode": "AddPercent", "Value": 20 }, 
-													"3": { "Mode": "AddPercent", "Value": 20 }  
+													"0": { "Mode": "AddPercent", "Value": 40 }, 
+													"1": { "Mode": "AddPercent", "Value": 40 }, 
+													"2": { "Mode": "AddPercent", "Value": 40 }, 
+													"3": { "Mode": "AddPercent", "Value": 40 }  
 												}
 											}
 										}
@@ -1871,16 +1873,16 @@
 							},
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "45% PD ROF Bonus, 2 Missiles",
+								"LocalizedShortDescriptionStringID": "55% PD ROF Bonus, 2 Missiles",
 								"StatusEffectsToApply": {
 									"G_Weapons_2_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Mode": "AddPercent", "Value": 45 }, 
-													"2": { "Mode": "AddPercent", "Value": 45 }, 
-													"3": { "Mode": "AddPercent", "Value": 45 }, 
-													"4": { "Mode": "AddPercent", "Value": 45 }  
+													"1": { "Mode": "AddPercent", "Value": 55 }, 
+													"2": { "Mode": "AddPercent", "Value": 55 }, 
+													"3": { "Mode": "AddPercent", "Value": 55 }, 
+													"4": { "Mode": "AddPercent", "Value": 55 }  
 												}
 											}
 										}
@@ -1889,16 +1891,16 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "60% PD ROF Bonus, 3 Missiles",
+								"LocalizedShortDescriptionStringID": "70% PD ROF Bonus, 3 Missiles",
 								"StatusEffectsToApply": {
 									"G_Weapons_3_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Mode": "AddPercent", "Value": 60 }, 
-													"2": { "Mode": "AddPercent", "Value": 60 }, 
-													"3": { "Mode": "AddPercent", "Value": 60 }, 
-													"4": { "Mode": "AddPercent", "Value": 60 }  
+													"1": { "Mode": "AddPercent", "Value": 70 }, 
+													"2": { "Mode": "AddPercent", "Value": 70 }, 
+													"3": { "Mode": "AddPercent", "Value": 70 }, 
+													"4": { "Mode": "AddPercent", "Value": 70 }  
 												}
 											}
 										}
@@ -1907,7 +1909,7 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "70% PD ROF Bonus, 4 Missiles",
+								"LocalizedShortDescriptionStringID": "90% PD ROF Bonus, 4 Missiles",
 								"StatusEffectsToApply": {
 									"G_Weapons_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -1959,13 +1961,13 @@
 						"PowerLevels": {
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 65",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 155",
 								"StatusEffectsToApply": {
 									"Regen_2_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 65
+													"Amount": 155
 												}
 											}
 										}
@@ -1974,13 +1976,13 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 95",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 315",
 								"StatusEffectsToApply": {
 									"Regen_3_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 95
+													"Amount": 315
 												}
 											}
 										}
@@ -1989,13 +1991,13 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 135",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 755",
 								"StatusEffectsToApply": {
 									"Regen_4_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 135
+													"Amount": 755
 												}
 											}
 										}
@@ -2004,13 +2006,13 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 250",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 1500",
 								"StatusEffectsToApply": {
 									"Regen_5_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 250
+													"Amount": 1500
 												}
 											}
 										}
@@ -2025,24 +2027,24 @@
 						"PowerLevels": {
 							
 							"0": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 800m"
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1500m"
 							},
 							
 							"1": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1000m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1700m",
 								"StatusEffectsToApply": {
 									"Range_1_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 1000 }, 
-													"1": { "Value": 1000 }, 
-													"6": { "Value": 1000 }, 
-													"7": { "Value": 1000 }, 
-													"12": { "Value": 1000 }, 
-													"13": { "Value": 1000 }, 
-													"18": { "Value": 1000 }, 
-													"19": { "Value": 1000 }, 
+													"0": { "Value": 1700 }, 
+													"1": { "Value": 1700 }, 
+													"6": { "Value": 1700 }, 
+													"7": { "Value": 1700 }, 
+													"12": { "Value": 1700 }, 
+													"13": { "Value": 1700 }, 
+													"18": { "Value": 1700 }, 
+													"19": { "Value": 1700 }, 
 													"24": { "Value": 100 }, 
 													"25": { "Value": 100 } 
 												}
@@ -2053,20 +2055,20 @@
 							},
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1250m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 2250m",
 								"StatusEffectsToApply": {
 									"Range_2_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 1250 }, 
-													"1": { "Value": 1250 }, 
-													"6": { "Value": 1250 }, 
-													"7": { "Value": 1250 }, 
-													"12": { "Value": 1250 }, 
-													"13": { "Value": 1250 }, 
-													"18": { "Value": 1250 }, 
-													"19": { "Value": 1250 }, 
+													"0": { "Value": 2250 }, 
+													"1": { "Value": 2250 }, 
+													"6": { "Value": 2250 }, 
+													"7": { "Value": 2250 }, 
+													"12": { "Value": 2250 }, 
+													"13": { "Value": 2250 }, 
+													"18": { "Value": 2250 }, 
+													"19": { "Value": 2250 }, 
 													"24": { "Value": 350 }, 
 													"25": { "Value": 350 } 
 												}
@@ -2077,20 +2079,20 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1550m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 3550m",
 								"StatusEffectsToApply": {
 									"Range_3_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 1550 }, 
-													"1": { "Value": 1550 }, 
-													"6": { "Value": 1550 }, 
-													"7": { "Value": 1550 }, 
-													"12": { "Value": 1550 }, 
-													"13": { "Value": 1550 }, 
-													"18": { "Value": 1550 }, 
-													"19": { "Value": 1550 }, 
+													"0": { "Value": 3550 }, 
+													"1": { "Value": 3550 }, 
+													"6": { "Value": 3550 }, 
+													"7": { "Value": 3550 }, 
+													"12": { "Value": 3550 }, 
+													"13": { "Value": 3550 }, 
+													"18": { "Value": 3550 }, 
+													"19": { "Value": 3550 }, 
 													"24": { "Value": 500 }, 
 													"25": { "Value": 500 }, 
 													"26": { "Value": 550 }, 
@@ -2103,20 +2105,20 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1850m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 4850m",
 								"StatusEffectsToApply": {
 									"Range_4_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 1850 }, 
-													"1": { "Value": 1850 }, 
-													"6": { "Value": 1850 }, 
-													"7": { "Value": 1850 }, 
-													"12": { "Value": 1850 }, 
-													"13": { "Value": 1850 }, 
-													"18": { "Value": 1850 }, 
-													"19": { "Value": 1850 }, 
+													"0": { "Value": 4850 }, 
+													"1": { "Value": 4850 }, 
+													"6": { "Value": 4850 }, 
+													"7": { "Value": 4850 }, 
+													"12": { "Value": 4850 }, 
+													"13": { "Value": 4850 }, 
+													"18": { "Value": 4850 }, 
+													"19": { "Value": 4850 }, 
 													"24": { "Value": 850 }, 
 													"25": { "Value": 850 }, 
 													"26": { "Value": 800 }, 
@@ -2129,24 +2131,24 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 2450m",
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 5450m",
 								"StatusEffectsToApply": {
 									"Range_5_StatusEffect_Gaalsi_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 2450 }, 
-													"1": { "Value": 2450 }, 
-													"6": { "Value": 2450 }, 
-													"7": { "Value": 2450 }, 
-													"12": { "Value": 2450 }, 
-													"13": { "Value": 2450 }, 
-													"18": { "Value": 2450 }, 
-													"19": { "Value": 2450 }, 
-													"24": { "Value": 2450 }, 
-													"25": { "Value": 2450 }, 
-													"26": { "Value": 1050 }, 
-													"27": { "Value": 1050 } 
+													"0": { "Value": 5450 }, 
+													"1": { "Value": 5450 }, 
+													"6": { "Value": 5450 }, 
+													"7": { "Value": 5450 }, 
+													"12": { "Value": 5450 }, 
+													"13": { "Value": 5450 }, 
+													"18": { "Value": 5450 }, 
+													"19": { "Value": 5450 }, 
+													"24": { "Value": 5450 }, 
+													"25": { "Value": 5450 }, 
+													"26": { "Value": 4050 }, 
+													"27": { "Value": 4050 } 
 												}
 											}
 										}
@@ -2165,7 +2167,7 @@
 				"MaxHealth": 55000,
 				"SensorRadius": 1200,
 				"ContactRadius": 1350,
-				"Armour": 15,
+				"Armour": 90,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
@@ -2200,16 +2202,16 @@
 			},
 			"WeaponAttributes": {
 				"G_Carrier_Weapon_G2All_Dummy_MP": {
-					"BaseDamagePerRound": 40
+					"BaseDamagePerRound": 400
 				},
 				"K_Carrier_Weapon_G2All_MP": {
-					"BaseDamagePerRound": 40,
-					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 25,
+					"BaseDamagePerRound": 400,
+					"ExcludeFromHeightAdvantage": false,
+					"RateOfFire": 22,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
 					"RangeAttributesMedium": { "Accuracy": 45, "Distance": 650 },
-					"RangeAttributesLong": { "Accuracy": 35, "Distance": 1800 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 1950 },
 					"Modifiers": {
 					  "0": { "TargetClass": "Air", "Modifier": "CanTarget"},
 						"1": {
@@ -2233,9 +2235,9 @@
 					}
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
-					"BaseDamagePerRound": 50,
-					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 15,
+					"BaseDamagePerRound": 500,
+					"ExcludeFromHeightAdvantage": false,
+					"RateOfFire": 12,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
 					"RangeAttributesMedium": { "Accuracy": 45, "Distance": 650 },
@@ -2273,14 +2275,14 @@
 				},
 				"K_Carrier_Weapon_DefaultMissile_MP": {
 					"WindUpTimeMS": 500,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RangeAttributesLong": { "Distance": 950 }
 				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
-					"BaseDamagePerRound": 1100,
+					"BaseDamagePerRound": 3100,
 					"DamagePacketsPerShot": 5,
-					"AreaOfEffectRadius": 140,
-					"ExcludeFromHeightAdvantage": true,
+					"AreaOfEffectRadius": 180,
+					"ExcludeFromHeightAdvantage": false,
 					"Modifiers": {
 						"1": {
 							"Amount": 75
@@ -2649,13 +2651,13 @@
 						"PowerLevels": {
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 65",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 155",
 								"StatusEffectsToApply": {
 									"Regen_2_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 65
+													"Amount": 155
 												}
 											}
 										}
@@ -2664,13 +2666,13 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 95",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 315",
 								"StatusEffectsToApply": {
 									"Regen_3_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 95
+													"Amount": 315
 												}
 											}
 										}
@@ -2679,13 +2681,13 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 135",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 735",
 								"StatusEffectsToApply": {
 									"Regen_4_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 135
+													"Amount": 735
 												}
 											}
 										}
@@ -2694,13 +2696,13 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Carrier regeneration: 250",
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 1200",
 								"StatusEffectsToApply": {
 									"Regen_5_StatusEffect_MP": {
 										"Modifiers": {
 											"0": {
 												"HealthOverTimeAttributes": {
-													"Amount": 250
+													"Amount": 1200
 												}
 											}
 										}
@@ -2725,10 +2727,10 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Mode": "AddPercent", "Value": 25 }, 
-													"1": { "Mode": "AddPercent", "Value": 25 }, 
-													"2": { "Mode": "AddPercent", "Value": 25 }, 
-													"3": { "Mode": "AddPercent", "Value": 25 }  
+													"0": { "Mode": "AddPercent", "Value": 45 }, 
+													"1": { "Mode": "AddPercent", "Value": 45 }, 
+													"2": { "Mode": "AddPercent", "Value": 45 }, 
+													"3": { "Mode": "AddPercent", "Value": 45 }  
 												}
 											}
 										}
@@ -2743,11 +2745,11 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Mode": "AddPercent", "Value": 40 }, 
-													"1": { "Mode": "AddPercent", "Value": 40 }, 
-													"2": { "Mode": "AddPercent", "Value": 40 }, 
-													"3": { "Mode": "AddPercent", "Value": 40 },  
-													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 2 } 
+													"0": { "Mode": "AddPercent", "Value": 50 }, 
+													"1": { "Mode": "AddPercent", "Value": 50 }, 
+													"2": { "Mode": "AddPercent", "Value": 50 }, 
+													"3": { "Mode": "AddPercent", "Value": 50 },  
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 4 } 
 												}
 											}
 										}
@@ -2766,7 +2768,7 @@
 													"1": { "Mode": "AddPercent", "Value": 65 }, 
 													"2": { "Mode": "AddPercent", "Value": 65 }, 
 													"3": { "Mode": "AddPercent", "Value": 65 }, 
-													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 3 } 
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 6 } 
 												}
 											}
 										}
@@ -2775,18 +2777,18 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "100% PD ROF Bonus, 4 Missiles",
+								"LocalizedShortDescriptionStringID": "110% PD ROF Bonus, 4 Missiles",
 								"StatusEffectsToApply": {
 									"K_Weapons_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Mode": "AddPercent", "Value": 100 }, 
-													"1": { "Mode": "AddPercent", "Value": 100 }, 
-													"2": { "Mode": "AddPercent", "Value": 100 }, 
-													"3": { "Mode": "AddPercent", "Value": 100 }, 
-													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 4 } 
-												}
+													"0": { "Mode": "AddPercent", "Value": 110 }, 
+													"1": { "Mode": "AddPercent", "Value": 110 }, 
+													"2": { "Mode": "AddPercent", "Value": 110 }, 
+													"3": { "Mode": "AddPercent", "Value": 110 }, 
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 8 } 
+												 }
 											}
 										}
 									}
@@ -2794,18 +2796,18 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "Armor Piercing Rounds: 250% Damage, 50% PD ROF Bonus, 4 Missiles",
+								"LocalizedShortDescriptionStringID": "Armor Piercing Rounds: 250% Damage, 200% PD ROF Bonus, 4 Missiles",
 								"StatusEffectsToApply": {
 									"K_Weapons_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Mode": "AddPercent", "Value": 50 }, 
-													"1": { "Mode": "AddPercent", "Value": 50 }, 
-													"2": { "Mode": "AddPercent", "Value": 50 }, 
-													"3": { "Mode": "AddPercent", "Value": 50 }, 
+													"0": { "Mode": "AddPercent", "Value": 200 }, 
+													"1": { "Mode": "AddPercent", "Value": 200 }, 
+													"2": { "Mode": "AddPercent", "Value": 200 }, 
+													"3": { "Mode": "AddPercent", "Value": 200 }, 
 													"4": { "Value": 2 }, 
-													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 4 }, 
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 10 }, 
 													"6": { "Remove": true },
 													"7": { "Remove": true },
 													"8": { "Remove": true }
@@ -3001,11 +3003,11 @@
 		},
 		"N_ECMField_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 1200,
-				"PopCapCost": 0,
+				"MaxHealth": 500,
+				"PopCapCost": 5,
 				"ContactRadius": 75,
 				"SensorRadius": 270,
-				"Resource1Cost": 50
+				"Resource1Cost": 100
 			},
 			"WeaponAttributes": {
         "N_ECMField_Weapon_G2G": {
@@ -3155,7 +3157,7 @@
 		"N_DemoCharge_MP": {
 			"WeaponAttributes": {
 				"N_DemoCharge_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 750,
 					"DamagePacketsPerShot": 3
 				}
@@ -3186,8 +3188,8 @@
 		
 		"C_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 225,
-				"Resource2Cost": 0,
+				"Resource1Cost": 325,
+				"Resource2Cost": 20,
 				"MaxHealth": 6700,
 				"PopCapCost": 4,
 				"PriorityAsTarget": -250,
@@ -3200,9 +3202,9 @@
 			},
 			"WeaponAttributes": {
 				"C_Baserunner_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
-					"BaseDamagePerRound": 187,
+					"BaseDamagePerRound": 287,
 					"RateOfFire": 2,
 					"DamagePacketsPerShot": 3,
 					"RangeAttributesShort": {
@@ -3242,8 +3244,8 @@
 		},
 		"C_Sob_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 225,
-				"Resource2Cost": 0,
+				"Resource1Cost": 325,
+				"Resource2Cost": 20,
 				"MaxHealth": 6700,
 				"PopCapCost": 4,
 				"PriorityAsTarget": -250,
@@ -3256,8 +3258,8 @@
 			},
 			"AbilityAttributes": {
 				"Ability_C_Baserunner_ECMField": {
-					"CooldownTimeSecs": 28,
-					"Resource1Cost": 70
+					"CooldownTimeSecs": 120,
+					"Resource1Cost": 120
 				},
 				"Ability_C_LaunchProbe_MP": {
 					"Resource1Cost": 50
@@ -3267,11 +3269,11 @@
 				"C_Sob_Baserunner_Weapon_ECM": {
 					"ProjectileEntityTypeToSpawn": "G_Scanner_ProjectileEntity_MP",
 					"RangeAttributesShort": {
-						"Distance": 1400
+						"Distance": 1100
 					}
 				},
 				"C_Sob_Baserunner_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 187,
 					"RateOfFire": 2,
@@ -3302,8 +3304,8 @@
 		},
 		"G_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 225,
-				"Resource2Cost": 0,
+				"Resource1Cost": 325,
+				"Resource2Cost": 20,
 				"MaxHealth": 6700,
 				"PopCapCost": 4,
 				"PriorityAsTarget": -250,
@@ -3343,7 +3345,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Baserunner_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 157,
 					"RateOfFire": 2,
@@ -3443,7 +3445,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Baserunner_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 87,
 					"RateOfFire": 2,
@@ -3545,7 +3547,7 @@
 					}
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 30,
@@ -3625,7 +3627,7 @@
 					}
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 30,
@@ -3694,7 +3696,7 @@
 			},
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"RateOfFire": 31,
 					"RangeAttributesShort": {
@@ -3732,7 +3734,7 @@
 			},
 			"WeaponAttributes": {
 				"G_SupportCruiser_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"RateOfFire": 31,
 					"RangeAttributesShort": {
@@ -3777,15 +3779,15 @@
 			"UnitAttributes": {
 				"Resource1Cost":120,
 				"Resource2Cost": 15,
-				"MaxHealth": 1800,
+				"MaxHealth": 2800,
 				"SensorRadius": 1100,
 				"ProductionTime": 7,
-				"Armour": 10,
+				"Armour": 20,
 				"PopCapCost": 2
 			},
 			"WeaponAttributes": {
 				"C_HAC_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 38,
+					"BaseDamagePerRound": 98,
 					"BurstPeriodMinTimeMS": 500,
 					"BurstPeriodMaxTimeMS": 550,
 					"RateOfFire": 10,
@@ -3835,8 +3837,8 @@
 				"ProductionTime":14,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
-				"Armour": 8,
-				"MaxHealth": 1800,
+				"Armour": 18,
+				"MaxHealth": 2800,
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
@@ -3859,7 +3861,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 38,
+					"BaseDamagePerRound": 98,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 8,
@@ -3878,8 +3880,8 @@
 				"ProductionTime": 14,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
-				"Armour": 8,
-				"MaxHealth": 1800,
+				"Armour": 18,
+				"MaxHealth": 2800,
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
@@ -3902,7 +3904,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 38,
+					"BaseDamagePerRound": 98,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 8,
@@ -4674,7 +4676,7 @@
 					"OutputDPS": true
 				},
 				"G_StarHull_Weapon_G2GEMP_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 110,
 					"AreaOfEffectRadius": 135,
 					"WindUpTimeMS": 750,
@@ -4749,7 +4751,7 @@
 					"OutputDPS": true
 				},
 				"G_StarHull_Weapon_G2GEMP_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 110,
 					"AreaOfEffectRadius": 145,
 					"WindUpTimeMS": 750,
@@ -5018,7 +5020,7 @@
 					"AreaOfEffectRadius": 220,
 					"DamagePacketsPerShot": 35,
 					"AreaOfEffectFalloffType": "Linear",
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				}
 			}
 		},
@@ -5080,7 +5082,7 @@
 					}
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 1140,
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
@@ -5144,7 +5146,7 @@
 					}
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 1140,
 					"AreaOfEffectRadius": 150,
 					"AreaOfEffectFalloffType": "Linear"
@@ -5489,7 +5491,7 @@
 					"BaseDamagePerRound": 280,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 140,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RangeAttributesLong": { "Distance": 1000 },
 					"Modifiers": {
 						"1": {
@@ -5553,7 +5555,7 @@
 					"BaseDamagePerRound": 1180,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 140,
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RangeAttributesLong": { "Distance": 1000 },
 					"Modifiers": {
 						"1": {
@@ -5852,7 +5854,7 @@
 					}
 				},
 				"C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"RangeAttributesLong": {
 						"Distance": 4650
 					},
@@ -5991,7 +5993,7 @@
 				},
 				"G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
 					"BaseDamagePerRound": 450,
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				},
 				"G_ArtilleryCruiser_Weapon_PD_MP": {
 					"BaseDamagePerRound": 14
@@ -6026,7 +6028,7 @@
 					}
 				},
 				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
-					"ExcludeFromHeightAdvantage": true,
+					"ExcludeFromHeightAdvantage": false,
 					"NumberOfBursts": 4,
 					"CooldownTimeMS": 2500,
 					"BaseDamagePerRound": 240,
@@ -6052,7 +6054,7 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
-					"ExcludeFromHeightAdvantage": true
+					"ExcludeFromHeightAdvantage": false
 				}
 			}
 		},
