@@ -74,6 +74,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-09](#2021-03-09)
 	- [2021-03-12](#2021-03-12)
 	- [2021-03-14](#2021-03-14)
+	- [2021-03-15](#2021-03-15)
 
 # Changes
 
@@ -1969,3 +1970,41 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Barrage damage: `210 => 195`
 		* Autofire damage: `180 => 170`
 		* EMP damage: `450 => 400`
+
+## 2021-03-15
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Logistics module: Deployment ability cost now matches unit cost (for units lost statistics)
+	* LAV boost cooldown: `40s => 45s`
+	* AAV:
+		* Hitpoints: `970 => 940`
+		* ROF: `14 => 15`
+	* Railgun armor: `2 => 4`
+	* Missile battery reload: `2.5s => 2.3s`
+	* Strike fighter armor: `4 => 0`
+	* Artillery cruiser:
+		* Tech no longer requires assault cruiser research
+		* Tech research time: `55s => 65s`
+		* Barrage:
+			* Recharge: `90s => 80s`
+			* AOE: `92 => 98`
+		* Autofire damage: `100 => 140`
+* Coalition:
+	* Carrier repair beam range: `600 => 800`
+* Gaalsien/Khaaneph:
+	* Assault ship:
+		* Hitpoints: `960 => 900`
+		* Armor: `6 => 7`
+		* Max speed: `72 => 73`
+	* Assault railgun armor: `4 => 6`
+	* Heavy railgun:
+		* Cost: `350CU 110RU => 380CU 110RU`
+		* Turn radius: `50 => 170`
+	* Missile ship reload: `2.5s => 2.3s`
+	* Production cruiser AA ROF: `11 => 10`
+* Gaalsien:
+	* Siege cruiser self regen:
+		* Amount: `31 => 20`
+		* Delay: `10s => 15s`
+* Khaaneph:
+	* Heavy railgun EMP AOE: `145 => 135` (Fixed inconsistency)
