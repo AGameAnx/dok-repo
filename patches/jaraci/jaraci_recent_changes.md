@@ -75,6 +75,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-12](#2021-03-12)
 	- [2021-03-14](#2021-03-14)
 	- [2021-03-15](#2021-03-15)
+	- [2021-03-16](#2021-03-16)
 
 # Changes
 
@@ -2008,3 +2009,22 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Delay: `10s => 15s`
 * Khaaneph:
 	* Heavy railgun EMP AOE: `145 => 135` (Fixed inconsistency)
+
+## 2021-03-16
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Railgun armor: `4 => 2`
+	* Gunship:
+		* Damage: `39 => 42`
+		* AOE: `148 => 144`
+* Gaalsien/Khaaneph:
+	* Railgun tech cost: `350CU 230RU => 350CU 200RU`
+	* Heavy railgun:
+		* Rotation radius: `170 => 40`
+		* EMP:
+			* Stun duration: `2.5s => 2.8s`
+			* Max range: `1350 => 1420`
+	* Missile ship direct fire barrage upgrade cost: `180CU 85RU => 50CU 50RU`
+	* Honourguard cruiser:
+		* Max range: `1950 => 2100`
+		* AOE: `210 => 195`

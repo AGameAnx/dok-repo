@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "11.3",
-		"LastUpdate": "2021-03-15"
+		"Version": "11.4",
+		"LastUpdate": "2021-03-16"
 		//"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	"Entities": {
@@ -4548,7 +4548,7 @@
 				"Resource1Cost": 280,
 				"Resource2Cost": 70,
 				"MaxHealth": 820,
-				"Armour": 4,
+				"Armour": 2,
 				"ExperienceValue": 450,
 				"ProductionTime": 16,
 				"PriorityAsTarget": 10,
@@ -4614,7 +4614,7 @@
 				"Resource1Cost": 280,
 				"Resource2Cost": 70,
 				"MaxHealth": 820,
-				"Armour": 4,
+				"Armour": 2,
 				"ExperienceValue": 470,
 				"ProductionTime": 16,
 				"PriorityAsTarget": 10,
@@ -4811,7 +4811,7 @@
 			"UnitMovementAttributes": {
 				"Dynamics": {
 					"MaxSpeed": 52,
-					"MaxSpeedTurnRadius": 170
+					"MaxSpeedTurnRadius": 40
 				}
 			},
 			"DetectableAttributes": {
@@ -4871,7 +4871,7 @@
 					"BaseDamagePerRound": 110,
 					"AreaOfEffectRadius": 135,
 					"WindUpTimeMS": 750,
-					"RangeAttributesLong": { "Distance": 1350 }
+					"RangeAttributesLong": { "Distance": 1420 }
 				}
 			}
 		},
@@ -4890,7 +4890,7 @@
 			"UnitMovementAttributes": {
 				"Dynamics": {
 					"MaxSpeed": 52,
-					"MaxSpeedTurnRadius": 170
+					"MaxSpeedTurnRadius": 40
 				}
 			},
 			"DetectableAttributes": {
@@ -4950,20 +4950,20 @@
 					"BaseDamagePerRound": 110,
 					"AreaOfEffectRadius": 135,
 					"WindUpTimeMS": 750,
-					"RangeAttributesLong": { "Distance": 1350 }
+					"RangeAttributesLong": { "Distance": 1420 }
 				}
 			}
 		},
 		"Tier_2_G_Railgun_U1": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
-				"Resource2Cost": 230,
+				"Resource2Cost": 200,
 				"ResearchTime": 35
 			}
 		},
 		"MiniStun_StatusEffect": {
 			"StatusEffectAttributes": {
-				"Duration": 2.5,
+				"Duration": 2.8,
 				"Modifiers": {
 					"1": {
 						"ModifierType": "DisableAbilities"
@@ -5370,6 +5370,8 @@
 		},
 		"Research_Buff_G_CatamaranAA_AOE": {
 			"ResearchItemAttributes": {
+				"Resource1Cost": 50,
+				"Resource2Cost": 50,
 				"ResearchTime": 20
 			}
 		},
@@ -5647,8 +5649,8 @@
 			"WeaponAttributes": {
 				"C_GunShip_Weapon_DefaultFire_MP": {
 					"DamagePacketsPerShot": 1,
-					"BaseDamagePerRound": 39,
-					"AreaOfEffectRadius": 148,
+					"BaseDamagePerRound": 42,
+					"AreaOfEffectRadius": 144,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
 						"Distance": 1050
@@ -5838,9 +5840,6 @@
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 210,
 					"WindDownTimeMS": 250,
-					"RangeAttributesLong": {
-						"Distance": 1950
-					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 30,
 						"TargetPriorityWeight": 150,
@@ -5879,11 +5878,8 @@
 					"ReloadTimeMS": 5500,
 					"WindUpTimeMS": 2200,
 					"AreaOfEffectFalloffType": "Quadratic",
-					"AreaOfEffectRadius": 210,
+					"AreaOfEffectRadius": 195,
 					"WindDownTimeMS": 250,
-					"RangeAttributesLong": {
-						"Distance": 1950
-					},
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 30,
 						"TargetPriorityWeight": 150,
