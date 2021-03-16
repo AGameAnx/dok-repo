@@ -71,11 +71,12 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-01-09](#2021-01-09)
 	- [2021-01-30](#2021-01-30)
 	- [2021-01-31 (Jaraci Cup #10)](#2021-01-31-jaraci-cup-10)
-	- [2021-03-09](#2021-03-09)
-	- [2021-03-12](#2021-03-12)
-	- [2021-03-14](#2021-03-14)
-	- [2021-03-15](#2021-03-15)
-	- [2021-03-16](#2021-03-16)
+	- [2021-03-09 11.0](#2021-03-09-110)
+	- [2021-03-12 11.1](#2021-03-12-111)
+	- [2021-03-14 11.2](#2021-03-14-112)
+	- [2021-03-15 11.3](#2021-03-15-113)
+	- [2021-03-16 11.4](#2021-03-16-114)
+	- [2021-03-16 11.5](#2021-03-16-115)
 
 # Changes
 
@@ -1814,7 +1815,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Coalition/Soban:
 	* AAV hitpoints: `920 => 970`
 
-## 2021-03-09
+## 2021-03-09 11.0
 *Not yet reflected in the main changelog.*
 * General:
 	* Carrier power upgrades:
@@ -1905,7 +1906,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Base cruise missile warmup time: `9s => 8s`
 	* Blast Drone cost: `150CU => 120CU`
 
-## 2021-03-12
+## 2021-03-12 11.1
 *Not yet reflected in the main changelog.*
 * General:
 	* Baserunner cost: `250CU 50RU => 250CU 40RU`
@@ -1952,7 +1953,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Gaalsien:
 	* Baserunner heal aura ability cooldown: `50s => 65s`
 
-## 2021-03-14
+## 2021-03-14 11.2
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Railgun cost: `250CU 80RU => 280CU 70RU`
@@ -1972,7 +1973,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Autofire damage: `180 => 170`
 		* EMP damage: `450 => 400`
 
-## 2021-03-15
+## 2021-03-15 11.3
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Logistics module: Deployment ability cost now matches unit cost (for units lost statistics)
@@ -2010,7 +2011,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Khaaneph:
 	* Heavy railgun EMP AOE: `145 => 135` (Fixed inconsistency)
 
-## 2021-03-16
+## 2021-03-16 11.4
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Railgun armor: `4 => 2`
@@ -2028,3 +2029,15 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Honourguard cruiser:
 		* Max range: `1950 => 2100`
 		* AOE: `210 => 195`
+
+## 2021-03-16 11.5
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* LAV long range accuracy: `60% => 56%`
+	* Artillery cruiser barrage & precision barrage max range: `2650 => 2750`
+* Gaalsien/Khaaneph:
+	* Assault railgun:
+		* Cost: `240CU 45RU => 200CU 60RU`
+		* Armor: `6 => 5`
+		* Reload: `4.2s => 3.6s`
+	* Heavy railgun EMP recharge time: `90s => 75s`
