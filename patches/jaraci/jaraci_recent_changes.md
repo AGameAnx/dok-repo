@@ -77,6 +77,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-15 11.3](#2021-03-15-113)
 	- [2021-03-16 11.4](#2021-03-16-114)
 	- [2021-03-16 11.5](#2021-03-16-115)
+	- [2021-03-17 11.6](#2021-03-17-116)
 
 # Changes
 
@@ -2041,3 +2042,10 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Armor: `6 => 5`
 		* Reload: `4.2s => 3.6s`
 	* Heavy railgun EMP recharge time: `90s => 75s`
+
+## 2021-03-17 11.6
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Bomber armor: `20 => 15`
+* Soban:
+	* Fixed an issue where artillery cruiser tech was inaccessible
