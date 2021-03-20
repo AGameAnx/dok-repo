@@ -78,6 +78,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-16 11.4](#2021-03-16-114)
 	- [2021-03-16 11.5](#2021-03-16-115)
 	- [2021-03-17 11.6](#2021-03-17-116)
+	- [2021-03-20 11.7 (Jaraci Cup #11)](#2021-03-20-117-jaraci-cup-11)
 
 # Changes
 
@@ -2026,7 +2027,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* EMP:
 			* Stun duration: `2.5s => 2.8s`
 			* Max range: `1350 => 1420`
-	* Missile ship direct fire barrage upgrade cost: `180CU 85RU => 50CU 50RU`
+	* Missile ship direct fire barrage upgrade cost: `220CU 60RU => 50CU 50RU`
 	* Honourguard cruiser:
 		* Max range: `1950 => 2100`
 		* AOE: `210 => 195`
@@ -2049,3 +2050,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Bomber armor: `20 => 15`
 * Soban:
 	* Fixed an issue where artillery cruiser tech was inaccessible
+
+## 2021-03-20 11.7 (Jaraci Cup #11)
+*Not yet reflected in the main changelog.*
+* Gaalsien/Khaaneph:
+	* Fixed wrong missile ship tech cost modified (radar missiles instead of direct barrage)
