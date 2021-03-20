@@ -2054,4 +2054,4 @@ Full combined changelog can be found [HERE](jaraci.md)
 ## 2021-03-20 11.7 (Jaraci Cup #11)
 *Not yet reflected in the main changelog.*
 * Gaalsien/Khaaneph:
-	* Fixed wrong missile ship tech cost modified (radar missiles instead of direct barrage)
+	* Fixed missile ship radar missiles tech cost modified to 50CU 50RU instead of direct barrage
