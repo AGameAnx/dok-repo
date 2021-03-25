@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "1113 KDS Realism Mod",
 		"Author": "S'Aarum",
-		"Version": "1.5.3",
-		"LastUpdate": "13-03-2021"
+		"Version": "1.5.4",
+		"LastUpdate": "25-03-2021"
 	},	
 	"Entities": {
 		"Research_Buff_Power_1": {
@@ -58,7 +58,21 @@
 				"Resource2Cost": 0,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 1",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
-				"LocalizedLongDescriptionStringID": "Adds 1 extra power to the carrier reserves."
+				"LocalizedLongDescriptionStringID": "Adds 1 maximum speed and 1 extra power to the carrier reserves.",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
 			}
 		},
 		"Research_Buff_Power_2": {
@@ -99,9 +113,23 @@
 				"Resource2Cost": 50,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 2",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
-				"LocalizedLongDescriptionStringID": "Adds 2 extra power to the carrier reserves."
+				"LocalizedLongDescriptionStringID": "Adds 1 maximum speed and 2 extra power to the carrier reserves.",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
 			}
-		},		
+		},	
 		"Research_Buff_Power_3": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 250,
@@ -118,7 +146,7 @@
 							"0": {
 								"Attribute": "UnitDynamics_MaxSpeed",
 								"Mode": "Add",
-								"Value": 5
+								"Value": 1
 							}
 						}
 					}
@@ -131,7 +159,21 @@
 				"Resource2Cost": 100,
 				"LocalizedResearchTitleStringID": "CARRIER POWER ALLOCATION SYSTEM 3",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
-				"LocalizedLongDescriptionStringID": "Adds 3 extra power to the carrier reserves."
+				"LocalizedLongDescriptionStringID": "Adds 5 maximum speed and 3 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 5
+							}
+						}
+					}
+				}
 			}
 		},
 		"Research_S_Buff_Power_3": {
@@ -140,13 +182,28 @@
 				"Resource2Cost": 100,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 3",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
-				"LocalizedLongDescriptionStringID": "Adds 3 extra power to the carrier reserves."
+				"LocalizedLongDescriptionStringID": "Adds 1 maximum speed and 3 extra power to the carrier reserves.",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
 			}
 		},		
 		"Research_Buff_Power_4":   {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
 				"Resource2Cost": 150,
+				"ResearchTime": 120,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 4",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
 				"LocalizedLongDescriptionStringID": "Adds 1 maximum speed and 4 extra power to the carrier reserves.",
@@ -170,9 +227,10 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
 				"Resource2Cost": 150,
+				"ResearchTime": 120,
 				"LocalizedResearchTitleStringID": "CARRIER POWER ALLOCATION SYSTEM 4",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
-				"LocalizedLongDescriptionStringID": "Adds 10 amour and 4 extra power to the carrier reserves.",
+				"LocalizedLongDescriptionStringID": "Adds 10 armour and 4 extra power to the carrier reserves.",
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -193,16 +251,31 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
 				"Resource2Cost": 150,
+				"ResearchTime": 120,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 4",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
-				"LocalizedLongDescriptionStringID": "Unlock 4 extra power to the carrier reserves."
+				"LocalizedLongDescriptionStringID": "Adds 1 maximum speed and 4 extra power to the carrier reserves.",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
 			}
 		},
-		
 		"Research_Buff_Power_5": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 500,
 				"Resource2Cost": 200,
+				"ResearchTime": 180,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 5",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
 				"LocalizedLongDescriptionStringID": "Adds 1 maximum speed and 5 extra power to the carrier reserves.",
@@ -226,9 +299,10 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 500,
 				"Resource2Cost": 200,
+				"ResearchTime": 180,
 				"LocalizedResearchTitleStringID": "CARRIER POWER ALLOCATION SYSTEM 5",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
-				"LocalizedLongDescriptionStringID": "Adds 5 amour and 5 extra power to the carrier reserves.",
+				"LocalizedLongDescriptionStringID": "Adds 5 armour and 5 extra power to the carrier reserves.",
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -249,16 +323,31 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 500,
 				"Resource2Cost": 200,
+				"ResearchTime": 180,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 5",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
-				"LocalizedLongDescriptionStringID": "Adds 5 extra power to the carrier reserves."
+				"LocalizedLongDescriptionStringID": "Adds 1 maximum speed and 5 extra power to the carrier reserves.",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
 			}
 		},
-		
 		"Research_Buff_Power_6": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 600,
 				"Resource2Cost": 250,
+				"ResearchTime": 280,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 6",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
 				"LocalizedLongDescriptionStringID": "Adds 5 extra power to the carrier reserves."
@@ -268,9 +357,10 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 600,
 				"Resource2Cost": 250,
+				"ResearchTime": 280,
 				"LocalizedResearchTitleStringID": "CARRIER POWER ALLOCATION SYSTEM 6",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
-				"LocalizedLongDescriptionStringID": "Adds 5 amour and 5 extra power to the carrier reserves.",
+				"LocalizedLongDescriptionStringID": "Adds 5 armour and 5 extra power to the carrier reserves.",
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -291,6 +381,7 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 600,
 				"Resource2Cost": 250,
+				"ResearchTime": 280,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 6",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
 				"LocalizedLongDescriptionStringID": "Adds 5 extra power to the carrier reserves."
@@ -301,6 +392,7 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 700,
 				"Resource2Cost": 350,
+				"ResearchTime": 300,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 7",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
 				"LocalizedLongDescriptionStringID": "Adds 5 extra power to the carrier reserves."
@@ -310,9 +402,10 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 700,
 				"Resource2Cost": 350,
+				"ResearchTime": 300,
 				"LocalizedResearchTitleStringID": "CARRIER POWER ALLOCATION SYSTEM 7",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
-				"LocalizedLongDescriptionStringID": "Adds 5 amour and 5 extra power to the carrier reserves.",
+				"LocalizedLongDescriptionStringID": "Adds 5 armour and 5 extra power to the carrier reserves.",
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -333,6 +426,7 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 700,
 				"Resource2Cost": 350,
+				"ResearchTime": 300,
 				"LocalizedResearchTitleStringID": "CARRIER SHUNTING SYSTEM 7",
 				"LocalizedShortDescriptionStringID": "Allow the shunting of additional power cells to relevant sub-systems.",
 				"LocalizedLongDescriptionStringID": "Adds 5 extra power to the carrier reserves."
@@ -416,7 +510,7 @@
 							"TargetClass": "Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 180
+							"Amount": 220
 						},
 						"2": {
 							"TargetClass": "Small, Medium",
@@ -428,7 +522,7 @@
 							"TargetClass": "Large",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 180
+							"Amount": 220
 						}	
 					},
 					"RangeAttributesLong": {
@@ -972,9 +1066,21 @@
 				},
 				"C_Sob_Carrier_Weapon_Nuke_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"AreaOfEffectFalloffType": "Quadratic",
+					"AreaOfEffectFalloffType": "Linear",
 					"RangeAttributesLong": {
 						"Distance": 10000
+					},
+				    "AreaOfEffectRadius": 1500,
+				    "Modifiers": {
+					    "1": {
+						    "Remove": true
+						},
+						"2": {
+							"TargetClass": "Carrier, Large, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 160
+						}
 					}
 				}
 			},
@@ -1638,7 +1744,8 @@
 		"G_Baserunner_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 2000,
-				"Armour": 2
+				"Armour": 2,
+				"PopCapCost": 3
 			},
 			"WeaponAttributes": {
 				"G_Baserunner_Weapon_G2G_MP": {
@@ -1688,7 +1795,8 @@
 				"MaxHealth": 1800,
 				"Armour": 6,
 				"SensorRadius": 1800,
-				"PriorityAsTarget": -10
+				"PriorityAsTarget": -10,
+				"PopCapCost": 3
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -1770,7 +1878,8 @@
 		},
 		"C_Baserunner_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 2200
+				"MaxHealth": 2200,
+				"PopCapCost": 3
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -1832,7 +1941,8 @@
 				"Resource2Cost": 10,
 				"MaxHealth": 2100,
 				"Armour": 6,
-				"PriorityAsTarget": -15
+				"PriorityAsTarget": -15,
+				"PopCapCost": 3
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -1891,6 +2001,39 @@
 				}	
 			}
 		},
+		"C_RailGun_MP": {
+			"UnitAttributes":{
+				"PopCapCost": 2
+			}
+		},
+		"C_Sob_RailGun_MP": {
+			"UnitAttributes":{
+				"PopCapCost": 2
+			}
+		},
+		"K_Harvester_MP": {
+			"UnitAttributes": { "PopCapCost": 1 }
+		},
+		"K_Sandskimmer_MP": {
+			"UnitAttributes": { "PopCapCost": 1 }
+		},
+		"K_HonorGuard_MP": {
+			"UnitAttributes": { "PopCapCost": 5 }
+		},
+		"K_HeavyRailgun_MP": {
+			"UnitAttributes": { "PopCapCost": 2 }
+		},
+		"K_AssaultRailgun_MP": {
+			"UnitAttributes": { "PopCapCost": 1 },
+			"AbilityAttributes": {
+				"Ability_G_RailGun_Dash_Move_To_MP": {
+					"CooldownTimeSecs": 25
+				},
+				"Ability_G_RailGun_Dash_MP": {
+					"ApplyStatusEffect": { "RailGun_Dash_StatusEffect": { "Duration": 2.5 } }
+				}
+			}
+		},
 		"K_AssaultShip_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 240,
@@ -1899,7 +2042,8 @@
 				"SensorRadius": 1000,
 				"ContactRadius": 1250,
 				"Armour": 5,
-				"MaxHealth": 850
+				"MaxHealth": 850,
+				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -1948,6 +2092,15 @@
 				}
 			}
 		},
+		"G_Harvester_MP": {
+			"UnitAttributes": { "PopCapCost": 1 }
+		},
+		"G_SandSkimmer_MP": {
+			"UnitAttributes": { "PopCapCost": 1 }
+		},
+		"G_StarHullTank_MP": {
+			"UnitAttributes": { "PopCapCost": 2 }
+		},
 		"G_Catamaran_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 240,
@@ -1956,7 +2109,8 @@
 				"SensorRadius": 1000,
 				"ContactRadius": 1050,
 				"Armour": 5,
-				"MaxHealth": 900
+				"MaxHealth": 900,
+				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -1996,14 +2150,15 @@
 		"G_Catamaran": {
 			"UnitAttributes": {
 				"Armour": 10,
-				"ExperienceValue": 10
+				"ExperienceValue": 10,
+				"PopCapCost": 2
 			}
 		},
 		"K_ExplodingSkimmer_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 500,
 				"ProductionTime": 40,
-				"PopCapCost": 1
+				"PopCapCost": 0
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -2027,7 +2182,7 @@
 				"MaxHealth": 2500,
 				"Armour": 5,
 				"ProductionTime": 60,
-				"PopCapCost": 6
+				"PopCapCost": 5
 			},
 		    "AbilityAttributes": {
 			    "Ability_C_ArtilleryBarrage_Precise": {
@@ -2140,7 +2295,7 @@
 				"MaxHealth": 3000,
 				"Armour": 5,
 				"ProductionTime": 60,
-				"PopCapCost": 6
+				"PopCapCost": 5
 			},
 		    "AbilityAttributes": {
 			    "Ability_C_ArtilleryBarrage_Precise": {
@@ -2253,7 +2408,7 @@
 				"MaxHealth": 2500,
 				"Armour": 3,
 				"ProductionTime": 60,
-				"PopCapCost": 6,
+				"PopCapCost": 5,
 				"SensorRadius": 1000,
 				"ContactRadius": 1250
 			},
@@ -2363,7 +2518,7 @@
 				"MaxHealth": 2500,
 				"Armour": 3,
 				"ProductionTime": 60,
-				"PopCapCost": 6,
+				"PopCapCost": 10,
 				"SensorRadius": 1000,
 				"ContactRadius": 1250
 			},
@@ -2464,10 +2619,25 @@
 				}
 			}
 		},
+		"C_Escort_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 500,
+				"Armour": 2,
+				"PopCapCost": 1
+			}
+		},
+		"C_Sob_Escort_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 500,
+				"Armour": 2,
+				"PopCapCost": 1
+			}
+		},		
 		"C_Escort": {
 			"UnitAttributes": {
 				"MaxHealth": 500,
-				"Armour": 2
+				"Armour": 2,
+				"PopCapCost": 1
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
@@ -2487,7 +2657,8 @@
 		},
 		"C_HAC": {
 			"UnitAttributes": {
-				"ExperienceValue": 10
+				"ExperienceValue": 10,
+				"PopCapCost": 2
 			}
 		},
 		"C_HAC_MP": {
@@ -2498,7 +2669,7 @@
 				"SensorRadius": 1100,
 				"ProductionTime": 14,
 				"Armour": 5,
-				"PopCapCost": 3
+				"PopCapCost": 2
 			},
 			"WeaponAttributes": {
 				"C_HAC_Weapon_G2G_MP": {
@@ -2525,7 +2696,14 @@
 				}
 			}
 		},
+		"C_HAC_Upgrade01_MP" :{
+		"UnitAttributes": {
+			"PopCapCost": 2
+		    }
+	    },
 		"G_HonorGuard_MP": {
+			"UnitAttributes": { 				
+				"PopCapCost": 10 },
 			"WeaponAttributes":{
 				"G_HonorGuard_Weapon_Blank": {
 					"LineOfSightRequired": true,
@@ -2547,7 +2725,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 40,
-						"Distance": 800
+						"Distance": 1200
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
@@ -2578,7 +2756,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 40,
-						"Distance": 800
+						"Distance": 1200
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
@@ -2595,7 +2773,7 @@
 				"Resource1Cost": 620,
 				"Resource2Cost": 250,
 				"MaxHealth": 3000,
-				"PopCapCost": 6,
+				"PopCapCost": 10,
 				"SensorRadius": 1100,
 				"ContactRadius": 1200,
 				"ProductionTime": 60,
@@ -2687,7 +2865,37 @@
 			"UnitAttributes": {
 				"MaxHealth": 1250,
 				"Armour": 8,
-				"PopCapCost": 3,
+				"PopCapCost": 2,
+				"ProductionTime": 22
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 420,
+					"MaxSpeedTurnRadius": 300
+				}
+			},
+			"WeaponAttributes": {
+				"G_Bomber_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 880,
+					"ReloadTimeMS": 3500,
+					"AreaOfEffectRadius": 200,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"Modifiers": {
+						"2": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 70
+						}
+					}
+				}
+			}
+		},
+		"K_Bomber_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 1250,
+				"Armour": 8,
+				"PopCapCost": 2,
 				"ProductionTime": 22
 			},
 			"UnitMovementAttributes": {
@@ -2719,7 +2927,7 @@
 				"Resource2Cost": 250,
 				"MaxHealth": 950,
 				"Armour": 15,
-				"PopCapCost": 4
+				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -2749,24 +2957,58 @@
 				}
 			}
 		},
+		"C_GunShip_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 100,
+				"MaxHealth": 1250,
+				"Armour": 9,
+				"PopCapCost": 2,
+				"ProductionTime": 48
+			},
+			"WeaponAttributes": {
+				"C_GunShip_Weapon_DefaultFire_MP": {
+					"DamagePacketsPerShot": 1,
+					"BaseDamagePerRound": 37,
+					"AreaOfEffectRadius": 200,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesLong": {
+						"Distance": 1050
+					}
+				}
+			}
+		},
 		"G_Interceptor_MP": {
 			"UnitAttributes": {
 				"Armour": 1,
-				"ProductionTime": 15
+				"ProductionTime": 15,
+				"PopCapCost": 1
 			},
 			"WeaponAttributes": {
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-					"BaseDamagePerRound": 100,
+					"BaseDamagePerRound": 245,
 					"DamagePacketsPerShot": 1,
-					"AreaOfEffectRadius": 60,
+					"AreaOfEffectRadius": 25,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 4000,
+					"ReloadTimeMS": 3000,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
 					"Modifiers": {
 						"13": {
-							"TargetClass": "Carrier",
+							"TargetClass": "Carrier, Small, Medium, Large, Support",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 70
+							"Amount": 20
+						}
+					}
+				}
+			},
+			"StorageAttributes": {
+				"G_Interceptor_StorageAttributesAsset": {
+					"InventoryLoadout": {
+						"MISSILES": {
+							"Capacity": 6,
+							"StartingAmount": 6
 						}
 					}
 				}
@@ -2775,7 +3017,8 @@
 		"G_Interceptor": {
 			"UnitAttributes": {
 				"Armour": 2,
-				"ExperienceValue": 10
+				"ExperienceValue": 10,
+				"PopCapCost": 1
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -2784,7 +3027,7 @@
 				}
 			},
 			"WeaponAttributes": {
-				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
+				"G_Interceptor_Weapon_A2GA_Upgraded": {
 					"BaseDamagePerRound": 245,
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 25,
@@ -2813,9 +3056,10 @@
 				}
 			}
 		},
-		"C_Interceptor": {
+		"C_Interceptor_MP": {
 			"UnitAttributes": {
-				"Armour": 4
+				"Armour": 4,
+				"PopCapCost": 1
 			},
 			"WeaponAttributes": {
 				"C_Interceptor_Weapon_A2G_MP": {
@@ -2831,7 +3075,7 @@
 							"TargetClass": "Air",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 35
+							"Amount": 45
 						},
 						"13": {
 							"TargetClass": "Carrier, Small, Medium, Large, Support",
@@ -2843,7 +3087,7 @@
 				}
 			},
 			"StorageAttributes": {
-				"C_Interceptor_StorageAttributesAsset": {
+				"C_Interceptor_StorageAttributesAsset_MP": {
 					"InventoryLoadout": {
 						"MISSILES": {
 							"Capacity": 3,
@@ -2856,43 +3100,35 @@
 		"K_Interceptor_MP": {
 			"UnitAttributes": {
 				"Armour": 1,
-				"ProductionTime": 15
+				"ProductionTime": 15,
+				"PopCapCost": 1
 			},
 			"WeaponAttributes": {
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-					"BaseDamagePerRound": 100,
+					"BaseDamagePerRound": 245,
 					"DamagePacketsPerShot": 1,
-					"AreaOfEffectRadius": 60,
+					"AreaOfEffectRadius": 25,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 4000,
+					"ReloadTimeMS": 3000,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
 					"Modifiers": {
 						"13": {
-							"TargetClass": "Carrier",
+							"TargetClass": "Carrier, Small, Medium, Large, Support",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 60
+							"Amount": 15
 						}
 					}
 				}
-			}
-		},
-		"C_GunShip_MP": {
-			"UnitAttributes": {
-				"Resource1Cost": 500,
-				"Resource2Cost": 100,
-				"MaxHealth": 1250,
-				"Armour": 9,
-				"PopCapCost": 3,
-				"ProductionTime": 48
 			},
-			"WeaponAttributes": {
-				"C_GunShip_Weapon_DefaultFire_MP": {
-					"DamagePacketsPerShot": 1,
-					"BaseDamagePerRound": 37,
-					"AreaOfEffectRadius": 200,
-					"AreaOfEffectFalloffType": "Quadratic",
-					"RangeAttributesLong": {
-						"Distance": 1050
+			"StorageAttributes": {
+				"G_Interceptor_StorageAttributesAsset": {
+					"InventoryLoadout": {
+						"MISSILES": {
+							"Capacity": 6,
+							"StartingAmount": 6
+						}
 					}
 				}
 			}
@@ -2904,7 +3140,7 @@
 				"MaxHealth": 2800,
 				"ProductionTime": 60,
 				"Armour": 12,
-				"PopCapCost": 6
+				"PopCapCost": 5
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
@@ -2963,6 +3199,11 @@
 				}
 			}
 		},
+		"C_Sob_ArtilleryCruiser_MP": {
+			"UnitAttributes": {
+				"PopCapCost": 5
+			}
+		},	
 		"C_Sob_AssaultCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 550,
@@ -3032,7 +3273,7 @@
 				"Resource1Cost": 650,
 				"Resource2Cost": 280,
 				"MaxHealth": 5500,
-				"PopCapCost": 6,
+				"PopCapCost": 5,
 				"ProductionTime": 65,
 				"Armour": 25
 			},
@@ -3071,7 +3312,7 @@
 				"Resource1Cost": 650,
 				"Resource2Cost": 280,
 				"MaxHealth": 5500,
-				"PopCapCost": 6,
+				"PopCapCost": 5,
 				"ProductionTime": 65,
 				"Armour": 20
 			},
@@ -3108,7 +3349,7 @@
 				"MaxHealth": 3100,
 				"ProductionTime": 60,
 				"Armour": 2,
-				"PopCapCost": 5
+				"PopCapCost": 10
 			},
 		    "WeaponAttributes": {
 		        "G_SupportCruiser_Weapon_G2G_MP": {
@@ -3149,7 +3390,7 @@
 				"MaxHealth": 3000,
 				"ProductionTime": 60,
 				"Armour": 2,
-				"PopCapCost": 5
+				"PopCapCost": 10
 			},	
 		    "WeaponAttributes": {
 		        "C_SupportCruiser_Weapon_G2A_MP": {
@@ -3198,7 +3439,7 @@
 				"MaxHealth": 3100,
 				"ProductionTime": 60,
 				"Armour": 2,
-				"PopCapCost": 5
+				"PopCapCost": 10
 			},		
 		    "WeaponAttributes": {
 		        "G_SupportCruiser_Weapon_G2G_MP": {
@@ -3239,7 +3480,7 @@
 				"MaxHealth": 2500,
 				"ProductionTime": 60,
 				"Armour": 2,
-				"PopCapCost": 5
+				"PopCapCost": 10
 			}, 
 		    "WeaponAttributes": {
 		        "C_SupportCruiser_Weapon_G2A_MP": {
@@ -3284,6 +3525,7 @@
 			}
 		},
 		"G_StarHull_Upgrade01_MP": {
+			"UnitAttributes": { "PopCapCost": 2 },
 			"AbilityAttributes": {
 				"Ability_G_RailGun_Dash_Move_To": {
 					"CooldownTimeSecs": 25
@@ -3310,31 +3552,19 @@
 				}
 			}
 		},
-		"K_StarHull_Upgrade01_MP": {
-			"AbilityAttributes": {
-				"Ability_G_RailGun_Dash_Move_To": {
-					"CooldownTimeSecs": 25
-				},
-				"Ability_G_RailGun_Dash": {
-					"ApplyStatusEffect": { "RailGun_Dash_StatusEffect": { "Duration": 2.5 } }
-				},
-				"Ability_G_ExplosiveShot_MP" : {
-					"CooldownTimeSecs": 45
-				}
-			}
-		},
 		"G_HonorGuard": {
+			"UnitAttributes": { "PopCapCost": 5 },
 			"WeaponAttributes":{
 				"G_HonorGuard_Weapon_Blank": {
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 12,
 					"DamagePacketsPerShot": 2,
-					"NumberOfBursts": 6,
+					"NumberOfBursts": 12,
 					"BurstPeriodMinTimeMS": 600,
-					"BurstPeriodMaxTimeMS": 1100,
+					"BurstPeriodMaxTimeMS": 800,
 					"ReloadTimeMS": 2500,
 				    "ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 15,
+					"RateOfFire": 30,
 					"RangeAttributesShort": {
 						"Accuracy": 90,
 						"Distance": 300
@@ -3345,7 +3575,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 40,
-						"Distance": 800
+						"Distance": 1200
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
@@ -3360,12 +3590,12 @@
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 12,
 					"DamagePacketsPerShot": 2,
-					"NumberOfBursts": 6,
+					"NumberOfBursts": 12,
 					"BurstPeriodMinTimeMS": 600,
-					"BurstPeriodMaxTimeMS": 1100,
+					"BurstPeriodMaxTimeMS": 800,
 					"ReloadTimeMS": 2500,
 				    "ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 15,
+					"RateOfFire": 30,
 					"RangeAttributesShort": {
 						"Accuracy": 90,
 						"Distance": 300
@@ -3376,7 +3606,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 40,
-						"Distance": 800
+						"Distance": 1200
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
@@ -3394,7 +3624,8 @@
 				"ExperienceValue": 10,
 				"SensorRadius": 1200,
 				"ContactRadius": 1850,
-				"Armour": 8
+				"Armour": 8,
+				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3435,7 +3666,8 @@
 				"Resource2Cost": 90,
 				"ProductionTime": 24,
 				"Armour": 3,
-				"PriorityAsTarget": -10
+				"PriorityAsTarget": -10,
+				"PopCapCost": 2
 			},
 			"AbilityAttributes": {
 				"Ability_G_MissileCraft_CrowdControl_MP": {
@@ -3497,7 +3729,8 @@
 				"Resource2Cost": 90,
 				"ProductionTime": 24,
 				"Armour": 3,
-				"PriorityAsTarget": -10
+				"PriorityAsTarget": -10,
+				"PopCapCost": 2
 			},
 			"AbilityAttributes": {
 				"Ability_G_MissileCraft_CrowdControl_MP": {
@@ -3567,144 +3800,150 @@
 		},
 		"Research_Buff_G_ProductionCruiserResourcer": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 50,
+				"Resource1Cost": 0,
 				"ResearchTime": 30
 		    }	
 		},
 		"Research_Buff_Support_T1_ProductionBoost": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 50,
+				"Resource1Cost": 0,
 				"ResearchTime": 30
 		    }	
 		},
 		"Research_Buff_Support_T2_ProductionBoost": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"ResearchTime": 30
 		    }	
 		},
 		"Research_Buff_K_ProductionCruiserResourcer": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 50,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"ResearchTime": 30
 		    }	
 		},
 		"Research_Buff_Fleet_Popcap_1": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 50,
+				"Resource2Cost": 0,
 				"ResearchTime": 10
 		    }	
 		},
 		"Research_Buff_Fleet_Popcap_2": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 50,
+				"Resource2Cost": 0,
 				"ResearchTime": 10
 		    }	
 		},
 		"Research_Buff_Fleet_Popcap_3": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 50,
+				"Resource2Cost": 0,
 				"ResearchTime": 10
 		    }	
 		},
 		"Research_Buff_Fleet_Popcap_4": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 50,
+				"Resource2Cost": 0,
 				"ResearchTime": 10
 		    }	
 		},
 		"Research_Buff_Fleet_Popcap_5": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 50,
+				"Resource2Cost": 0,
 				"ResearchTime": 10
 		    }	
 		},
 		"Tier_1_C_Escorts": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 	    "Tier_1_S_Escorts": {
 		    "ResearchItemAttributes": {
 				"ResearchTime": 15,
-				"Resource1Cost": 50,
+				"Resource1Cost": 0,
 				"Resource2Cost": 0
 		    }	
 		},
 	    "Tier_1_G_Sandskimmers": {
 		    "ResearchItemAttributes": {
 				"ResearchTime": 15,
-				"Resource1Cost": 50,
+				"Resource1Cost": 0,
 				"Resource2Cost": 0
 		    }
 		},
 		"Tier_1_G_Catamaran": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 50,
+				"Resource1Cost": 0,
 				"Resource2Cost": 0
 		    }
 		},
 		"Tier_2_C_ArmouredAssault": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 		"Tier_2_C_HAC_AA": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 		"Tier_2_C_RailGun": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 	    "Tier_2_G_Catamaran_AA": {
 		    "ResearchItemAttributes": {
-			    "Resource1Cost": 100,
-			    "Resource2Cost": 50,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 			    "ResearchTime": 45
 		    }
 	    },
 	    "Tier_2_G_Railgun_U1": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 		"Tier_2_G_Interceptor": {
 				"ResearchItemAttributes": {
-					"Resource1Cost": 100,
-					"Resource2Cost": 50,
+					"Resource1Cost": 0,
+					"Resource2Cost": 0,
 					"ResearchTime": 30,
 					"Dependencies": ["Tier_1_G_Sandskimmers"]
 			}		
 		},
 		"Tier_2_C_Interceptor_Bomber": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"ResearchTime": 30,
 				"Dependencies": ["Tier_1_C_Escorts"]
 			}	
 		},
 		"Tier_2_S_Interceptor_Bomber": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"ResearchTime": 30,
 				"Dependencies": ["Tier_1_S_Escorts"]
 			}	
 		},
 		"Tier_3_G_Artillery_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"ResearchTime": 30,
 				"Dependencies": ["Tier_1_G_Catamaran"],
 				"LocalizedShortDescriptionStringID": "Unlock the production of the -Tyrant- Siege Capital Ship",
@@ -3713,36 +3952,36 @@
 		},
 		"Tier_3_G_HonorCruiser": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 		"Tier_3_K_ArtilleryCruiser": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 		"Tier_3_C_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"ResearchTime": 30,
 				"Dependencies": ["Tier_2_C_ArmouredAssault"]
 			}
 		},
 		"Tier_3_C_GunShip_Bomber": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"ResearchTime": 30,
 				"Dependencies": ["Tier_3_C_Interceptor_Bomber"]
 			}
 		},
 		"Tier_3_C_Artillery": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"ResearchTime": 30,
 				"Dependencies": ["Tier_2_C_ArmouredAssault"],
 				"LocalizedShortDescriptionStringID": "Unlock the production of the Naabal designed -Eclipse- Long-Ranged Capital Ship",
@@ -3751,8 +3990,8 @@
 		},
 		"Tier_3_S_Artillery": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"ResearchTime": 30,
 				"Dependencies": ["Tier_2_S_ArmouredAssault"],
 				"LocalizedShortDescriptionStringID": "Unlock the production of the Naabal designed -Eclipse- Long-Ranged Capital Ship",
@@ -3761,45 +4000,45 @@
 		},
 		"Tier_3_S_Interceptor_Bomber": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"ResearchTime": 30
 			}
 		},
 		"Tier_3_S_GunShip_Bomber": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 		"Tier_2_S_RailGun": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 		"Tier_2_S_ArmouredAssault": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 		"Tier_2_S_HAC_AA": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 50
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 		"Tier_3_S_BattleCruiser": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80
+				"Resource1Cost": 0,
+				"Resource2Cost": 0
 		    }
 		},
 		"Tier_3_S_AssaultCruiser": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 200,
-				"Resource2Cost": 80				
+				"Resource1Cost": 0,
+				"Resource2Cost": 0			
 	        }
 	    }	
     }
