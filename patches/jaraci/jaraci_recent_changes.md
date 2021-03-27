@@ -79,6 +79,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-16 11.5](#2021-03-16-115)
 	- [2021-03-17 11.6](#2021-03-17-116)
 	- [2021-03-20 11.7 (Jaraci Cup #11)](#2021-03-20-117-jaraci-cup-11)
+	- [2021-03-27 12.1](#2021-03-27-121)
 
 # Changes
 
@@ -2055,3 +2056,84 @@ Full combined changelog can be found [HERE](jaraci.md)
 *Not yet reflected in the main changelog.*
 * Gaalsien/Khaaneph:
 	* Fixed missile ship radar missiles tech cost modified to 50CU 50RU instead of direct barrage
+
+## 2021-03-27 12.1
+*Not yet reflected in the main changelog.*
+* General:
+	* Railgun damage: `155/180 => 210`:
+		* Breakpoints vs HR: `6/6/7 => 4/5/5`
+		* Breakpoints Mag Accel vs HR: `5/6/6 => 4/4/4`
+		* Breakpoints vs AR: `5/5/6 => 4/4/4`
+		* Breakpoints Mag Accel vs AR: `4/4/5 => 3/3/4`
+		* Breakpoints vs AS: `6/7/8 => 5/5/6`
+		* Breakpoints Mag Accel vs AS: `6/6/7 => 4/4/5`
+	* Baserunner AA range: `1100 => 1250`
+* Coalition/Soban:
+	* Production Upgrade Level 1 cost: `350CU 40RU => 500CU 50RU`
+	* Baserunner:
+		* Initial ability cooldown: `110s => 50s`
+		* Probe:
+			* Now has initial cooldown
+			* Cost: `100CU => 120CU`
+	* LAV:
+		* Tech research time: `35s => 30s`
+		* Production time: `12s => 13s`
+	* AAV:
+		* Tech cost: `400CU 75RU => 350CU 75RU`
+		* Range: `1000 => 950`
+	* Railgun (DPS C/S: `35.2/34.8 => 41.2/38.2`, sequence duration C/S: `4.4s/8.9s => 5.1s/11s`):
+		* Tech cost: `300CU 100RU => 200CU 100RU`
+		* Research time: `55s => 45s`
+		* Cost: `280CU 70RU => 300CU 80RU`
+		* Mag accelerator damage bonus: `25 => 50`
+		* Wind-up: `1.6s => 1.2s`
+		* Reload C/S: `1.8s/4.2s => 3.1s/6.5s`
+		* Max desired combat range: `2050 => 1780`
+		* Aggro range: `2050 => 1850`
+	* Vehicle armor upgrades cost:
+		* Level 1: `250CU 100RU => 200CU 100RU`
+		* Level 2: `250CU 200RU => 250CU 175RU`
+		* Level 3: `300CU 300RU => 300CU 250RU`
+	* Support cruiser:
+		* Cost: `450CU 50RU => 400CU 50RU`
+		* Heal rate: `7 => 6`
+	* Assault cruiser hitpoints: `2900 => 2800`
+	* Artillery cruiser:
+		* Hitpoints: `1900 => 1700`
+		* Precision barrage cooldown: `60s => 80s` (matches normal barrage)
+	* Bomber AOE: `200 => 190`
+* Coalition:
+	* Carrier hitpoints: `8700 => 8900`
+	* Battlecruiser hitpoints: `3400 => 3600`
+* Soban:
+	* Carrier PD reload: `13s => 15s`
+	* Targeting jammer now has initial cooldown.
+	* Battlecruiser:
+		* Hitpoints: `3200 => 3500`
+		* Reload: `8.5s => 7.25s`
+* Gaalsien/Khaaneph:
+	* Assault ship damage: `27 => 26`
+	* Assault railgun aggro range: `1650 => 1100` (matches max range, trying to fix red line indicator issues)
+	* Heavy railgun (DPS: `56.25 => 61.8`, sequence duration: `3.2s => 3.4s`):
+		* Range: `2100 => 1850`
+		* Wind-up: `1.6s => 1.2s`
+		* Reload: `0.6s => 1.2s`
+		* Max desired combat range: `2050 => 1780`
+		* Aggro range: `2050 => 1850`
+	* Precision bomber:
+		* Damage: `900 => 800`
+		* Armor: `15 => 12`
+	* Honourguard cruiser:
+		* Range: `2100 => 1850`
+		* Max desired combat range: `2050 => 1780`
+* Gaalsien:
+	* Carrier hitpoints: `8100 => 8300`
+	* Baserunner:
+		* Hitpoints: `2000 => 1900`
+		* Speed: `80 => 75`
+* Khaaneph:
+	* Carrier cruise missiles:
+		* Base recharge time: `8s => 9s`
+		* Damage: `670 => 700`
+		* AOE: `140 => 150`
+	* Blast drone hitpoints: `540 => 600`
