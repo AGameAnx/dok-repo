@@ -2070,11 +2070,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Baserunner AA range: `1100 => 1250`
 * Coalition/Soban:
 	* Production Upgrade Level 1 cost: `350CU 40RU => 500CU 50RU`
-	* Baserunner:
-		* Initial ability cooldown: `110s => 50s`
-		* Probe:
-			* Now has initial cooldown
-			* Cost: `100CU => 120CU`
+	* Baserunner probe cost: `100CU => 150CU`
 	* LAV:
 		* Tech research time: `35s => 30s`
 		* Production time: `12s => 13s`
@@ -2107,7 +2103,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Battlecruiser hitpoints: `3400 => 3600`
 * Soban:
 	* Carrier PD reload: `13s => 15s`
-	* Targeting jammer now has initial cooldown.
 	* Battlecruiser:
 		* Hitpoints: `3200 => 3500`
 		* Reload: `8.5s => 7.25s`

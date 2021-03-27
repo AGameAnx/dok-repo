@@ -2,7 +2,7 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "12.1.1",
+		"Version": "12.1.2",
 		"LastUpdate": "2021-03-27"
 		//"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
@@ -3421,11 +3421,10 @@
 					"CooldownTimeSecs": 110
 				},
 				"Ability_C_DeployTurret_BeginCooldown_MP": {
-					"CooldownTimeSecs": 50
+					"CooldownTimeSecs": 110
 				},
 				"Ability_C_LaunchProbe_MP": {
-					"Resource1Cost": 120,
-					"SharedCooldownChannel": 1
+					"Resource1Cost": 150
 				}
 			}
 		},
@@ -3444,15 +3443,13 @@
 			"AbilityAttributes": {
 				"Ability_C_Baserunner_ECMField": {
 					"CooldownTimeSecs": 80,
-					"Resource1Cost": 0,
-					"SharedCooldownChannel": 1
+					"Resource1Cost": 0
 				},
 				"Ability_C_DeployTurret_BeginCooldown_MP": {
-					"CooldownTimeSecs": 50
+					"CooldownTimeSecs": 110
 				},
 				"Ability_C_LaunchProbe_MP": {
-					"Resource1Cost": 120,
-					"SharedCooldownChannel": 1
+					"Resource1Cost": 150
 				}
 			},
 			"WeaponAttributes": {
@@ -4767,6 +4764,7 @@
 		"Research_Buff_S_TrackedUnits_Armor01": {
 			"ResearchItemAttributes": {
 				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 on Armored Assault, Railgun and Missile Battery",
+				"Resource1Cost": 200,
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { "0": { "Value": 1 } } },
 					"1": { "BuffSet": { "0": { "Value": 1 } } },
@@ -4778,6 +4776,8 @@
 		"Research_Buff_S_TrackedUnits_Armor02": {
 			"ResearchItemAttributes": {
 				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"Resource1Cost": 250,
+				"Resource2Cost": 175,
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { "0": { "Value": 1 } } },
 					"1": { "BuffSet": { "0": { "Value": 1 } } },
@@ -4789,6 +4789,8 @@
 		"Research_Buff_S_TrackedUnits_Armor03": {
 			"ResearchItemAttributes": {
 				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"Resource1Cost": 300,
+				"Resource2Cost": 250,
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
 						"0": { "Value": 1 },
