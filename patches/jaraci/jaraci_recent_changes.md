@@ -80,6 +80,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-17 11.6](#2021-03-17-116)
 	- [2021-03-20 11.7 (Jaraci Cup #11)](#2021-03-20-117-jaraci-cup-11)
 	- [2021-03-27 12.1](#2021-03-27-121)
+	- [2021-03-28 12.2](#2021-03-28-122)
 
 # Changes
 
@@ -2060,7 +2061,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 ## 2021-03-27 12.1
 *Not yet reflected in the main changelog.*
 * General:
-	* Railgun damage: `155/180 => 210`:
+	* Railgun damage: `155/180 => 210/260`:
 		* Breakpoints vs HR: `6/6/7 => 4/5/5`
 		* Breakpoints Mag Accel vs HR: `5/6/6 => 4/4/4`
 		* Breakpoints vs AR: `5/5/6 => 4/4/4`
@@ -2083,7 +2084,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Cost: `280CU 70RU => 300CU 80RU`
 		* Mag accelerator damage bonus: `25 => 50`
 		* Wind-up: `1.6s => 1.2s`
-		* Reload C/S: `1.8s/4.2s => 3.1s/6.5s`
+		* Reload C/S: `1.8s/4.2s => 2.9s/6.5s`
 		* Max desired combat range: `2050 => 1780`
 		* Aggro range: `2050 => 1850`
 	* Vehicle armor upgrades cost:
@@ -2132,3 +2133,54 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Damage: `670 => 700`
 		* AOE: `140 => 150`
 	* Blast drone hitpoints: `540 => 600`
+
+## 2021-03-28 12.2
+*Not yet reflected in the main changelog.*
+* General:
+	* Railgun:
+		* Damage: `210/260 => 155/180` (reverted)
+		* Range: `1850 => 1750`
+		* MaxDesiredCombatRange: `1780 => 1680`
+		* Aggro range: `1850 => 1750`
+* Coalition/Soban:
+	* Carrier max ease into turn time: `0.5s => 0.25s`
+	* LAV: (reverted)
+		* Tech research time: `30s => 35s`
+		* Construction time: `13s => 12s`
+	* Railgun:
+		* Fixed tech research time not modified last update: `55s => 45s`
+		* Mag accelerator:
+			* Cost: `150CU 220RU => 150CU 300RU`
+			* Damage bonus: `50 => 25` (reverted)
+		* Production time: `16s => 22s`
+		* Armor: `2 => 1`
+		* Reload C/S: `2.9s/6.5s => 1.8s/4.7s`
+	* Strike fighter and gunship fabrication tech cost: `400CU 200RU => 500CU 200RU`
+	* Gunship population cost: `3 => 4`
+	* Support cruiser:
+		* Hitpoints: `3200 => 2700`
+		* Armor: `4 => 5`
+		* Heal rate: `6 => 7` (reverted)
+		* Acceleration time: `1.5s => 0.9s`
+		* Max ease into turn time: `0.8s => 0.25s`
+	* Artillery cruiser:
+		* Autofire:
+			* Damage: `140 => 110`
+			* Reload: `6.5s => 7.5s`
+		* Barrage cooldown: `80s => 70s`
+		* Precision barrage cooldown: `80s => 70s`
+* Soban:
+	* Battlecruiser:
+		* Damage: `340 => 300`
+		* Wind-up: `2.2s => 1.6s`
+		* Reload: `7.25s => 6.5s`
+* Gaalsien/Khaaneph:
+	* Assault railgun damage: `48 => 45`
+	* Heavy railgun:
+		* Production time: `24s => 20s`
+		* Reload: `1.2s => 0.8s`
+		* Ranged calibration speed modifier: `-65% => -40%`
+	* Sandskimmer armor upgrade hitpoints granted per upgrade: `20 => 30`
+	* Honourguard cruiser:
+		* Wind-up: `2.2s => 1.6s`
+		* Reload: `5.5s => 6s`
