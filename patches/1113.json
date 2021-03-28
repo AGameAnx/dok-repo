@@ -3035,6 +3035,23 @@
 							"Amount": 20
 						}
 					}
+				},
+				"G_Interceptor_Weapon_A2G_Primary_MP": {
+					"BaseDamagePerRound": 245,
+					"DamagePacketsPerShot": 1,
+					"AreaOfEffectRadius": 25,
+					"RateOfFire": 4,
+					"ReloadTimeMS": 3000,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"Modifiers": {
+						"13": {
+							"TargetClass": "Carrier, Small, Medium, Large, Support",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 20
+						}
+					}
 				}
 			},
 			"StorageAttributes": {
@@ -3062,7 +3079,24 @@
 				}
 			},
 			"WeaponAttributes": {
-				"G_Interceptor_Weapon_A2GA_Upgraded": {
+				"G_Interceptor_Weapon_A2GA_Upgraded_Campaign": {
+					"BaseDamagePerRound": 270,
+					"DamagePacketsPerShot": 1,
+					"AreaOfEffectRadius": 5,
+					"RateOfFire": 4,
+					"ReloadTimeMS": 8000,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"Modifiers": {
+						"13": {
+							"TargetClass": "Carrier, Small, Medium, Large, Support",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 40
+						}
+					}
+				},
+				"G_Interceptor_Weapon_A2G_Primary_Campaign": {
 					"BaseDamagePerRound": 270,
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 5,
@@ -3119,6 +3153,29 @@
 							"Amount": 100
 						}
 					}
+				},
+				"C_Interceptor_Weapon_A2A_MP": {
+					"BaseDamagePerRound": 270,
+					"DamagePacketsPerShot": 1,
+					"AreaOfEffectRadius": 80,
+					"RateOfFire": 4,
+					"ReloadTimeMS": 3000,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"Modifiers": {
+						"2":{
+							"TargetClass": "Air",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 40
+						},
+						"13": {
+							"TargetClass": "Carrier, Small, Medium, Large, Support",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 100
+						}
+					}
 				}
 			},
 			"StorageAttributes": {
@@ -3136,7 +3193,8 @@
 			"UnitAttributes": {
 				"MaxHealth": 750,
 				"Armour": 4,
-				"PopCapCost": 0
+				"PopCapCost": 0,
+				"SensorRadius": 2350
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3145,12 +3203,35 @@
 				}
 			},
 			"WeaponAttributes": {
-				"C_Interceptor_Weapon_A2G": {
+				"C_Interceptor_Weapon_A2A": {
 					"BaseDamagePerRound": 300,
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 80,
 					"RateOfFire": 4,
 					"ReloadTimeMS": 4000,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"Modifiers": {
+						"2":{
+							"TargetClass": "Air",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 40
+						},
+						"13": {
+							"TargetClass": "Carrier, Small, Medium, Large, Support",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 100
+						}
+					}
+				},
+				"C_Interceptor_Weapon_A2G_Campaign": {
+					"BaseDamagePerRound": 300,
+					"DamagePacketsPerShot": 1,
+					"AreaOfEffectRadius": 80,
+					"RateOfFire": 4,
+					"ReloadTimeMS": 6000,
 					"BurstPeriodMinTimeMS": 300,
 					"BurstPeriodMaxTimeMS": 300,
 					"Modifiers": {
@@ -3173,8 +3254,8 @@
 				"C_Interceptor_StorageAttributesAsset": {
 					"InventoryLoadout": {
 						"MISSILES": {
-							"Capacity": 9,
-							"StartingAmount": 9
+							"Capacity": 10,
+							"StartingAmount": 10
 						}
 					}
 				}
@@ -3182,25 +3263,42 @@
 		},		
 		"K_Interceptor_MP": {
 			"UnitAttributes": {
-				"Armour": 1,
+				"Armour": 3,
 				"ProductionTime": 15,
 				"PopCapCost": 1
 			},
 			"WeaponAttributes": {
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-					"BaseDamagePerRound": 245,
+					"BaseDamagePerRound": 115,
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 25,
-					"RateOfFire": 4,
+					"RateOfFire": 8,
 					"ReloadTimeMS": 3000,
-					"BurstPeriodMinTimeMS": 200,
-					"BurstPeriodMaxTimeMS": 200,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
 					"Modifiers": {
 						"13": {
 							"TargetClass": "Carrier, Small, Medium, Large, Support",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 15
+							"Amount": 20
+						}
+					}
+				},
+				"G_Interceptor_Weapon_A2G_Primary_MP": {
+					"BaseDamagePerRound": 115,
+					"DamagePacketsPerShot": 1,
+					"AreaOfEffectRadius": 25,
+					"RateOfFire": 8,
+					"ReloadTimeMS": 3000,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"Modifiers": {
+						"13": {
+							"TargetClass": "Carrier, Small, Medium, Large, Support",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 20
 						}
 					}
 				}
@@ -3209,8 +3307,8 @@
 				"G_Interceptor_StorageAttributesAsset": {
 					"InventoryLoadout": {
 						"MISSILES": {
-							"Capacity": 4,
-							"StartingAmount": 4
+							"Capacity": 6,
+							"StartingAmount": 6
 						}
 					}
 				}
