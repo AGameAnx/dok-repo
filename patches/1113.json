@@ -2,7 +2,7 @@
 	"Meta": {
 		"Name": "1113 KDS Realism Mod",
 		"Author": "S'Aarum",
-		"Version": "1.5.4.3",
+		"Version": "1.5.4.5",
 		"LastUpdate": "28-03-2021"
 	},	
 	"Entities": {
@@ -2703,7 +2703,7 @@
 	    },
 		"G_HonorGuard_MP": {
 			"UnitAttributes": { 				
-				"PopCapCost": 10 },
+				"PopCapCost": 5 },
 			"WeaponAttributes":{
 				"G_HonorGuard_Weapon_Blank": {
 					"LineOfSightRequired": true,
@@ -2804,7 +2804,7 @@
 					"BaseDamagePerRound": 240,
 					"AreaOfEffectRadius": 100,
 					"DamagePacketsPerShot": 1,
-					"NumberOfBursts": 4,
+					"NumberOfBursts": 6,
 					"RateOfFire": 2,
 					"CooldownTimeMS": 1000,
 					"BurstPeriodMinTimeMS": 1000,
@@ -2821,7 +2821,7 @@
 							"Amount": 65
 						},
 						"2": {
-							"TargetClass": "Carrier",
+							"TargetClass": "Carrier, Large",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
 							"Amount": 160
@@ -2849,7 +2849,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 40,
-						"Distance": 1000
+						"Distance": 1200
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
@@ -2882,10 +2882,10 @@
 					"AreaOfEffectFalloffType": "Quadratic",
 					"Modifiers": {
 						"2": {
-							"TargetClass": "Small",
+							"TargetClass": "Carrier, Large",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 70
+							"Amount": 150
 						}
 					}
 				}
@@ -2912,10 +2912,10 @@
 					"AreaOfEffectFalloffType": "Quadratic",
 					"Modifiers": {
 						"2": {
-							"TargetClass": "Small",
+							"TargetClass": "Carrier, Large",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 70
+							"Amount": 150
 						}
 					}
 				}
@@ -3137,8 +3137,8 @@
 					"AreaOfEffectRadius": 80,
 					"RateOfFire": 4,
 					"ReloadTimeMS": 3000,
-					"BurstPeriodMinTimeMS": 300,
-					"BurstPeriodMaxTimeMS": 300,
+					"BurstPeriodMinTimeMS": 500,
+					"BurstPeriodMaxTimeMS": 500,
 					"Modifiers": {
 						"2":{
 							"TargetClass": "Air",
@@ -3232,8 +3232,8 @@
 					"AreaOfEffectRadius": 80,
 					"RateOfFire": 5,
 					"ReloadTimeMS": 6000,
-					"BurstPeriodMinTimeMS": 400,
-					"BurstPeriodMaxTimeMS": 400,
+					"BurstPeriodMinTimeMS": 500,
+					"BurstPeriodMaxTimeMS": 500,
 					"Modifiers": {
 						"2":{
 							"TargetClass": "Air",
@@ -3530,7 +3530,7 @@
 				"MaxHealth": 3100,
 				"ProductionTime": 60,
 				"Armour": 2,
-				"PopCapCost": 10
+				"PopCapCost": 5
 			},
 		    "WeaponAttributes": {
 		        "G_SupportCruiser_Weapon_G2G_MP": {
@@ -3571,7 +3571,7 @@
 				"MaxHealth": 3000,
 				"ProductionTime": 60,
 				"Armour": 2,
-				"PopCapCost": 10
+				"PopCapCost": 5
 			},	
 		    "WeaponAttributes": {
 		        "C_SupportCruiser_Weapon_G2A_MP": {
@@ -3607,7 +3607,7 @@
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
-						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
 						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 200 },
 						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
 						"4": { "Remove": true }
@@ -3620,7 +3620,7 @@
 				"MaxHealth": 3100,
 				"ProductionTime": 60,
 				"Armour": 2,
-				"PopCapCost": 10
+				"PopCapCost": 5
 			},		
 		    "WeaponAttributes": {
 		        "G_SupportCruiser_Weapon_G2G_MP": {
@@ -3661,7 +3661,7 @@
 				"MaxHealth": 2500,
 				"ProductionTime": 60,
 				"Armour": 2,
-				"PopCapCost": 10
+				"PopCapCost": 5
 			}, 
 		    "WeaponAttributes": {
 		        "C_SupportCruiser_Weapon_G2A_MP": {
