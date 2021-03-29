@@ -2196,6 +2196,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Mag accelerator damage increase: `25 => 20`
 	* Artillery cruiser hitpoints: `1900 => 1750`
 * Gaalsien/Khaaneph:
+	* Sandskimmer turn acceleration: `75 => 130`
 	* Assault railgun:
 		* Cost: `200CU 60RU => 220CU 55RU`
 		* Reload: `3.6s => 3.8s`
