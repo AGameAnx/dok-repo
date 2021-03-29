@@ -2189,9 +2189,9 @@ Full combined changelog can be found [HERE](jaraci.md)
 ## 2021-03-29 12.3
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
-	* LAV accuracy:
+	* LAV:
 		* Turret rotation: `250 => 320`
-		* Short range: `90% => 88%`
+		* Short range accuracy: `90% => 88%`
 	* Railgun damage: `155 => 180`
 	* Mag accelerator damage increase: `25 => 20`
 	* Artillery cruiser hitpoints: `1900 => 1750`
