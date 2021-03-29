@@ -81,6 +81,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-20 11.7 (Jaraci Cup #11)](#2021-03-20-117-jaraci-cup-11)
 	- [2021-03-27 12.1](#2021-03-27-121)
 	- [2021-03-28 12.2](#2021-03-28-122)
+	- [2021-03-29 12.3](#2021-03-29-123)
 
 # Changes
 
@@ -2184,3 +2185,23 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Honourguard cruiser:
 		* Wind-up: `2.2s => 1.6s`
 		* Reload: `5.5s => 6s`
+
+## 2021-03-29 12.3
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* LAV accuracy:
+		* Short range: `90% => 93%`
+		* Medium range: `85% => 86%`
+	* Railgun damage: `155 => 180`
+	* Mag accelerator damage increase: `25 => 20`
+	* Artillery cruiser hitpoints: `1900 => 1750`
+* Gaalsien/Khaaneph:
+	* Assault railgun:
+		* Cost: `200CU 60RU => 220CU 55RU`
+		* Reload: `3.6s => 3.8s`
+	* Honourguard falloff: `Quadratic => Linear`
+	* Siege cruiser EMP upgrade cost: `250CU 100RU => 300CU 100RU`
+* Gaalsien:
+	* Siege cruiser:
+		* Cost: `450CU 180RU => 500CU 160RU`
+		* Hitpoints: `2000 => 1850`
