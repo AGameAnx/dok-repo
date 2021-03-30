@@ -2,12 +2,24 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "12.3.3",
-		"LastUpdate": "2021-03-29",
+		"Version": "12.4",
+		"LastUpdate": "2021-03-30",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
+	/*"Global": {
+		"UnitAttributes": {
+			"Resource1Cost": 0,
+			"Resource2Cost": 0,
+			"ProductionTime": 1
+		},
+		"ResearchItemAttributes": {
+			"Resource1Cost": 0,
+			"Resource2Cost": 0,
+			"ResearchTime": 1
+		}
+	},*/
 	"Entities": {
-		"Research_Buff_Power_1": {
+		"Research_Buff_G_Power_1": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 200,
 				"Resource2Cost": 100,
@@ -35,7 +47,8 @@
 				}
 			}
 		},
-		"Research_Buff_G_Power_1": {
+		
+		"Research_Buff_Power_1": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 200,
 				"Resource2Cost": 100,
@@ -92,34 +105,6 @@
 			}
 		},
 		
-		"Research_Buff_Power_2": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 400,
-				"Resource2Cost": 175,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
-				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 2 extra power to the carrier reserves",
-				"UnitTypeBuffs": {
-					"0": {
-						"UnitClass": "Carrier",
-						"UseAsPrefix": true,
-						"UnitType": "",
-						"BuffSet": {
-							"0": {
-								"Attribute": "Unit_MaxHealth",
-								"Mode": "Add",
-								"Value": 150
-							},
-							"1": {
-								"Attribute": "UnitDynamics_MaxSpeed",
-								"Mode": "Add",
-								"Value": 1
-							}
-						}
-					}
-				}
-			}
-		},
 		"Research_Buff_G_Power_2": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 400,
@@ -148,63 +133,7 @@
 				}
 			}
 		},
-		"Research_S_Buff_Power_2": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 400,
-				"Resource2Cost": 175,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
-				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 2 extra power to the carrier reserves",
-				"UnitTypeBuffs": {
-					"0": {
-						"UnitClass": "Carrier",
-						"UseAsPrefix": true,
-						"UnitType": "",
-						"BuffSet": {
-							"0": {
-								"Attribute": "Unit_MaxHealth",
-								"Mode": "Add",
-								"Value": 150
-							},
-							"1": {
-								"Attribute": "UnitDynamics_MaxSpeed",
-								"Mode": "Add",
-								"Value": 1
-							}
-						}
-					}
-				}
-			}
-		},
 		
-		"Research_Buff_Power_3": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 650,
-				"Resource2Cost": 250,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 3",
-				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 3 extra power to the carrier reserves",
-				"UnitTypeBuffs": {
-					"0": {
-						"UnitClass": "Carrier",
-						"UseAsPrefix": true,
-						"UnitType": "",
-						"BuffSet": {
-							"0": {
-								"Attribute": "Unit_MaxHealth",
-								"Mode": "Add",
-								"Value": 150
-							},
-							"1": {
-								"Attribute": "UnitDynamics_MaxSpeed",
-								"Mode": "Add",
-								"Value": 1
-							}
-						}
-					}
-				}
-			}
-		},
 		"Research_Buff_G_Power_3": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 650,
@@ -233,13 +162,43 @@
 				}
 			}
 		},
-		"Research_S_Buff_Power_3": {
+		"Research_Buff_Power_3": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 650,
-				"Resource2Cost": 250,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 3",
+				"Resource1Cost": 600,
+				"Resource2Cost": 200,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
 				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 3 extra power to the carrier reserves",
+				"Dependencies": ["Research_Buff_Power_1"],
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_S_Buff_Power_3": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 200,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 3 extra power to the carrier reserves",
+				"Dependencies": ["Research_S_Buff_Power_1"],
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -262,34 +221,6 @@
 			}
 		},
 		
-		"Research_Buff_Power_4":   {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 900,
-				"Resource2Cost": 400,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
-				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 4 extra power to the carrier reserves",
-				"UnitTypeBuffs": {
-					"0": {
-						"UnitClass": "Carrier",
-						"UseAsPrefix": true,
-						"UnitType": "",
-						"BuffSet": {
-							"0": {
-								"Attribute": "Unit_MaxHealth",
-								"Mode": "Add",
-								"Value": 150
-							},
-							"1": {
-								"Attribute": "UnitDynamics_MaxSpeed",
-								"Mode": "Add",
-								"Value": 1
-							}
-						}
-					}
-				}
-			}
-		},
 		"Research_Buff_G_Power_4": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 900,
@@ -318,11 +249,39 @@
 				}
 			}
 		},
+		"Research_Buff_Power_4": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 900,
+				"Resource2Cost": 400,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 3",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 4 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
 		"Research_S_Buff_Power_4": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 900,
 				"Resource2Cost": 400,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 3",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
 				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 4 extra power to the carrier reserves",
 				"UnitTypeBuffs": {
@@ -347,34 +306,6 @@
 			}
 		},
 		
-		"Research_Buff_Power_5": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 1200,
-				"Resource2Cost": 550,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
-				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves, unlock the Cruise Missile",
-				"UnitTypeBuffs": {
-					"0": {
-						"UnitClass": "Carrier",
-						"UseAsPrefix": true,
-						"UnitType": "",
-						"BuffSet": {
-							"0": {
-								"Attribute": "Unit_MaxHealth",
-								"Mode": "Add",
-								"Value": 150
-							},
-							"1": {
-								"Attribute": "UnitDynamics_MaxSpeed",
-								"Mode": "Add",
-								"Value": 1
-							}
-						}
-					}
-				}
-			}
-		},
 		"Research_Buff_G_Power_5": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 1200,
@@ -403,11 +334,39 @@
 				}
 			}
 		},
+		"Research_Buff_Power_5": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1200,
+				"Resource2Cost": 550,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves, unlock the Cruise Missile",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
 		"Research_S_Buff_Power_5": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 1200,
 				"Resource2Cost": 550,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
 				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
 				"UnitTypeBuffs": {
@@ -432,34 +391,6 @@
 			}
 		},
 		
-		"Research_Buff_Power_6": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 1300,
-				"Resource2Cost": 700,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
-				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
-				"UnitTypeBuffs": {
-					"0": {
-						"UnitClass": "Carrier",
-						"UseAsPrefix": true,
-						"UnitType": "",
-						"BuffSet": {
-							"0": {
-								"Attribute": "Unit_MaxHealth",
-								"Mode": "Add",
-								"Value": 150
-							},
-							"1": {
-								"Attribute": "UnitDynamics_MaxSpeed",
-								"Mode": "Add",
-								"Value": 1
-							}
-						}
-					}
-				}
-			}
-		},
 		"Research_Buff_G_Power_6": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 1300,
@@ -488,11 +419,39 @@
 				}
 			}
 		},
+		"Research_Buff_Power_6": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1300,
+				"Resource2Cost": 700,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
 		"Research_S_Buff_Power_6": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 1300,
 				"Resource2Cost": 700,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
 				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
 				"UnitTypeBuffs": {
@@ -517,34 +476,6 @@
 			}
 		},
 		
-		"Research_Buff_Power_7": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 1400,
-				"Resource2Cost": 850,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 7",
-				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
-				"UnitTypeBuffs": {
-					"0": {
-						"UnitClass": "Carrier",
-						"UseAsPrefix": true,
-						"UnitType": "",
-						"BuffSet": {
-							"0": {
-								"Attribute": "Unit_MaxHealth",
-								"Mode": "Add",
-								"Value": 150
-							},
-							"1": {
-								"Attribute": "UnitDynamics_MaxSpeed",
-								"Mode": "Add",
-								"Value": 1
-							}
-						}
-					}
-				}
-			}
-		},
 		"Research_Buff_G_Power_7": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 1400,
@@ -573,11 +504,39 @@
 				}
 			}
 		},
+		"Research_Buff_Power_7": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1400,
+				"Resource2Cost": 850,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
 		"Research_S_Buff_Power_7": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 1400,
 				"Resource2Cost": 850,
-				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 7",
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
 				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
 				"UnitTypeBuffs": {
@@ -602,6 +561,55 @@
 			}
 		},
 		
+		// Carrier mobility
+		"Research_Buff_Power_2": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 300,
+				"LocalizedResearchTitleStringID": "CARRIER MOBILITY",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier mobility",
+				"LocalizedLongDescriptionStringID": "Adds 13 extra max speed and 2 extra power to the carrier reserves",
+				"Dependencies": [],
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 13
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_S_Buff_Power_2": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 300,
+				"LocalizedResearchTitleStringID": "CARRIER MOBILITY",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier mobility",
+				"LocalizedLongDescriptionStringID": "Adds 13 extra max speed and 2 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 13
+							}
+						}
+					}
+				}
+			}
+		},
+		
 		"C_Carrier_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 8900,
@@ -610,7 +618,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 45,
+					"MaxSpeed": 37,
 					"MaxSpeedTurnRadius": 105,
 					"BrakingTime": 0.9,
 					"AccelerationTime": 0.9,
@@ -648,7 +656,7 @@
 				"C_Carrier_Weapon_G2All_MP": {
 					"BaseDamagePerRound": 30,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 3,
+					"RateOfFire": 4,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -689,7 +697,7 @@
 				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
 					"BaseDamagePerRound": 70,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 3,
+					"RateOfFire": 4,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -1095,7 +1103,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 45,
+					"MaxSpeed": 37,
 					"MaxSpeedTurnRadius": 105,
 					"BrakingTime": 0.9,
 					"AccelerationTime": 0.9,
@@ -1144,7 +1152,7 @@
 					"WindUpTimeMS": 1000,
 					"WindDownTimeMS": 500,
 					
-					"ReloadTimeMS": 15000,
+					"ReloadTimeMS": 13000,
 					"CooldownTimeMS": 9000,
 					
 					"RangeAttributesShort": {
@@ -1293,11 +1301,11 @@
 						"PowerLevels": {
 							
 							"0": {
-								"LocalizedShortDescriptionStringID": "Missiles Disabled. 15s Reload, 10s Cooldown"
+								"LocalizedShortDescriptionStringID": "Missiles Disabled. 13s Reload, 9s Cooldown"
 							},
 							
 							"1": {
-								"LocalizedShortDescriptionStringID": "Missiles Enabled. 35% Reload and Cooldown Reduction, 15% Accuracy Bonus",
+								"LocalizedShortDescriptionStringID": "Missiles Enabled. 25% Reload and Cooldown Reduction, 15% Accuracy Bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_1_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -1307,29 +1315,29 @@
 													"2": { "Remove": true }, // Sets damage on TURRET_BR weapon
 													
 													// TURRET_BR
-													"3": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
-													"4": { "Mode": "AddPercent", "Value": -35 }, // Reload
+													"3": { "Mode": "AddPercent", "Value": -25 }, // Cooldown
+													"4": { "Mode": "AddPercent", "Value": -25 }, // Reload
 													"5": { "Value": 15 }, // Accuracy Short
 													"6": { "Value": 15 }, // Accuracy Medium
 													"7": { "Value": 15 }, // Accuracy Long
 													
 													// TURRET_BL
-													"8": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
-													"9": { "Mode": "AddPercent", "Value": -35, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"8": { "Mode": "AddPercent", "Value": -25 }, // Cooldown
+													"9": { "Mode": "AddPercent", "Value": -25, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
 													"10": { "Value": 15 }, // Accuracy Short
 													"11": { "Value": 15 }, // Accuracy Medium
 													"12": { "Value": 15 }, // Accuracy Long
 													
 													// TURRET_FL
-													"13": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
-													"14": { "Mode": "AddPercent", "Value": -35, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"13": { "Mode": "AddPercent", "Value": -25 }, // Cooldown
+													"14": { "Mode": "AddPercent", "Value": -25, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
 													"15": { "Value": 15 }, // Accuracy Short
 													"16": { "Value": 15 }, // Accuracy Medium
 													"17": { "Value": 15 }, // Accuracy Long
 													
 													// TURRET_FR
-													"18": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
-													"19": { "Mode": "AddPercent", "Value": -35 }, // Reload
+													"18": { "Mode": "AddPercent", "Value": -25 }, // Cooldown
+													"19": { "Mode": "AddPercent", "Value": -25 }, // Reload
 													"20": { "Value": 15 }, // Accuracy Short
 													"21": { "Value": 15 }, // Accuracy Medium
 													"22": { "Value": 15 } // Accuracy Long
@@ -1341,7 +1349,7 @@
 							},
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "55% Reload and Cooldown Reduction, 25% Accuracy Bonus",
+								"LocalizedShortDescriptionStringID": "40% Reload and Cooldown Reduction, 25% Accuracy Bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_2_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -1350,29 +1358,29 @@
 													"1": { "Remove": true }, // Sets damage on the dummy weapon
 													
 													// TURRET_BR
-													"2": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
-													"3": { "Mode": "AddPercent", "Value": -55 }, // Reload
+													"2": { "Mode": "AddPercent", "Value": -40 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -40 }, // Reload
 													"4": { "Value": 25 }, // Accuracy Short
 													"5": { "Value": 25 }, // Accuracy Medium
 													"6": { "Value": 25 }, // Accuracy Long
 													
 													// TURRET_BL
-													"7": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
-													"8": { "Mode": "AddPercent", "Value": -55 }, // Reload
+													"7": { "Mode": "AddPercent", "Value": -40 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -40 }, // Reload
 													"9": { "Value": 25 }, // Accuracy Short
 													"10": { "Value": 25 }, // Accuracy Medium
 													"11": { "Value": 25 }, // Accuracy Long
 													
 													// TURRET_FL
-													"12": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
-													"13": { "Mode": "AddPercent", "Value": -55 }, // Reload
+													"12": { "Mode": "AddPercent", "Value": -40 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -40 }, // Reload
 													"14": { "Value": 25 }, // Accuracy Short
 													"15": { "Value": 25 }, // Accuracy Medium
 													"16": { "Value": 25 }, // Accuracy Long
 													
 													// TURRET_FR
-													"17": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
-													"18": { "Mode": "AddPercent", "Value": -55, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"17": { "Mode": "AddPercent", "Value": -40 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -40, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
 													"19": { "Value": 25 }, // Accuracy Short
 													"20": { "Value": 25 }, // Accuracy Medium
 													"21": { "Value": 25 } // Accuracy Long
@@ -1384,7 +1392,7 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "70% Reload and Cooldown Reduction, 35% Accuracy Bonus",
+								"LocalizedShortDescriptionStringID": "55% Reload and Cooldown Reduction, 35% Accuracy Bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_3_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -1394,29 +1402,29 @@
 													"2": { "Remove": true }, // Duplicate cooldown buff for TURRET_BR weapon
 													
 													// TURRET_BR
-													"3": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
-													"4": { "Mode": "AddPercent", "Value": -70 }, // Reload
+													"3": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
+													"4": { "Mode": "AddPercent", "Value": -55 }, // Reload
 													"5": { "Value": 35 }, // Accuracy Short
 													"6": { "Value": 35 }, // Accuracy Medium
 													"7": { "Value": 35 }, // Accuracy Long
 													
 													// TURRET_BL
-													"8": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
-													"9": { "Mode": "AddPercent", "Value": -70 }, // Reload
+													"8": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
+													"9": { "Mode": "AddPercent", "Value": -55 }, // Reload
 													"10": { "Value": 35 }, // Accuracy Short
 													"11": { "Value": 35 }, // Accuracy Medium
 													"12": { "Value": 35 }, // Accuracy Long
 													
 													// TURRET_FL
-													"13": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
-													"14": { "Mode": "AddPercent", "Value": -70 }, // Reload
+													"13": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
+													"14": { "Mode": "AddPercent", "Value": -55 }, // Reload
 													"15": { "Value": 35 }, // Accuracy Short
 													"16": { "Value": 35 }, // Accuracy Medium
 													"17": { "Value": 35 }, // Accuracy Long
 													
 													// TURRET_FR
-													"18": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
-													"19": { "Mode": "AddPercent", "Value": -70 }, // Reload
+													"18": { "Mode": "AddPercent", "Value": -55 }, // Cooldown
+													"19": { "Mode": "AddPercent", "Value": -55 }, // Reload
 													"20": { "Value": 35 }, // Accuracy Short
 													"21": { "Value": 35 }, // Accuracy Medium
 													"22": { "Value": 35 } // Accuracy Long
@@ -1428,7 +1436,7 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "85% Reload and Cooldown Reduction, 45% Accuracy Bonus",
+								"LocalizedShortDescriptionStringID": "70% Reload and Cooldown Reduction, 45% Accuracy Bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -1437,29 +1445,29 @@
 													"1": { "Remove": true }, // Sets damage on the dummy weapon
 													
 													// TURRET_BR
-													"2": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
-													"3": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"2": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -70 }, // Reload
 													"4": { "Value": 45 }, // Accuracy Short
 													"5": { "Value": 45 }, // Accuracy Medium
 													"6": { "Value": 45 }, // Accuracy Long
 													
 													// TURRET_BL
-													"7": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
-													"8": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"7": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -70 }, // Reload
 													"9": { "Value": 45 }, // Accuracy Short
 													"10": { "Value": 45 }, // Accuracy Medium
 													"11": { "Value": 45 }, // Accuracy Long
 													
 													// TURRET_FL
-													"12": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
-													"13": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"12": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -70 }, // Reload
 													"14": { "Value": 45 }, // Accuracy Short
 													"15": { "Value": 45 }, // Accuracy Medium
 													"16": { "Value": 45 }, // Accuracy Long
 													
 													// TURRET_FR
-													"17": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
-													"18": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"17": { "Mode": "AddPercent", "Value": -70 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -70 }, // Reload
 													"19": { "Value": 45 }, // Accuracy Short
 													"20": { "Value": 45 }, // Accuracy Medium
 													"21": { "Value": 45 } // Accuracy Long
@@ -1471,7 +1479,7 @@
 							},
 							
 							"5": {
-								"LocalizedShortDescriptionStringID": "95% Reload and Cooldown Reduction, 55% Accuracy Bonus",
+								"LocalizedShortDescriptionStringID": "85% Reload and Cooldown Reduction, 55% Accuracy Bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -1480,29 +1488,29 @@
 													"1": { "Remove": true }, // Sets damage on the dummy weapon
 													
 													// TURRET_BR
-													"2": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
-													"3": { "Mode": "AddPercent", "Value": -95 }, // Reload
+													"2": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -85 }, // Reload
 													"4": { "Value": 55 }, // Accuracy Short
 													"5": { "Value": 55 }, // Accuracy Medium
 													"6": { "Value": 55 }, // Accuracy Long
 													
 													// TURRET_BL
-													"7": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
-													"8": { "Mode": "AddPercent", "Value": -95 }, // Reload
+													"7": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -85 }, // Reload
 													"9": { "Value": 55 }, // Accuracy Short
 													"10": { "Value": 55 }, // Accuracy Medium
 													"11": { "Value": 55 }, // Accuracy Long
 													
 													// TURRET_FL
-													"12": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
-													"13": { "Mode": "AddPercent", "Value": -95 }, // Reload
+													"12": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -85 }, // Reload
 													"14": { "Value": 55 }, // Accuracy Short
 													"15": { "Value": 55 }, // Accuracy Medium
 													"16": { "Value": 55 }, // Accuracy Long
 													
 													// TURRET_FR
-													"17": { "Mode": "AddPercent", "Value": -95 }, // Cooldown
-													"18": { "Mode": "AddPercent", "Value": -95 }, // Reload
+													"17": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -85 }, // Reload
 													"19": { "Value": 55 }, // Accuracy Short
 													"20": { "Value": 55 }, // Accuracy Medium
 													"21": { "Value": 55 } // Accuracy Long
@@ -4282,7 +4290,7 @@
 					"RangeAttributesLong": { "Accuracy": 56 },
 					"Turret": { "RotationSpeed": 390 },
 					"Modifiers": {
-						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 70 },
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
 						"2": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 115 },
 						"3": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 115 },
 						"4": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 115 },
@@ -4335,7 +4343,7 @@
 					"RangeAttributesLong": { "Accuracy": 56 },
 					"Turret": { "RotationSpeed": 390 },
 					"Modifiers": {
-						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 70 },
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
 						"2": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 115 },
 						"3": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 115 },
 						"4": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 115 },
@@ -4825,10 +4833,11 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 52,
+					"MaxSpeed": 58,
 					"MaxSpeedTurnRadius": 40
 				},
-				"Combat": { "MaxDesiredCombatRange": 1680 }
+				"Combat": { "MaxDesiredCombatRange": 1680 },
+				"Hover": { "TurnAcceleration": 70 }
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -4905,10 +4914,11 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 52,
+					"MaxSpeed": 58,
 					"MaxSpeedTurnRadius": 40
 				},
-				"Combat": { "MaxDesiredCombatRange": 1680 }
+				"Combat": { "MaxDesiredCombatRange": 1680 },
+				"Hover": { "TurnAcceleration": 70 }
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -5015,7 +5025,7 @@
 					"0": {
 						"BuffSet": {
 							"0": {
-								"Value": -5
+								"Value": -7
 							}
 						}
 					}
@@ -5668,7 +5678,7 @@
 			"WeaponAttributes": {
 				"C_GunShip_Weapon_DefaultFire_MP": {
 					"DamagePacketsPerShot": 1,
-					"BaseDamagePerRound": 42,
+					"BaseDamagePerRound": 38,
 					"AreaOfEffectRadius": 144,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
@@ -5689,12 +5699,12 @@
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 54,
 					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
 					"RateOfFire": 3,
-					"NumberOfBursts": 4,
+					"NumberOfBursts": 3,
 					"WindUpTimeMS": 250,
 					"ReloadTimeMS": 3800
 				},
@@ -5752,12 +5762,12 @@
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 54,
 					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
 					"RateOfFire": 3,
-					"NumberOfBursts": 4,
+					"NumberOfBursts": 3,
 					"WindUpTimeMS": 250,
 					"ReloadTimeMS": 3800
 				},
@@ -5936,11 +5946,17 @@
 		"C_Battlecruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 650,
-				"Resource2Cost": 250,
-				"MaxHealth": 3600,
-				"PopCapCost": 6,
+				"Resource2Cost": 300,
+				"MaxHealth": 3200,
+				"PopCapCost": 7,
 				"ProductionTime": 65,
 				"Armour": 17
+			},
+			"AbilityViewAttributes": {
+				"Ability_C_SmokeGrenade_BattleCruiser": {
+					"LocalizedTitleStringID": "Field repairs",
+					"LocalizedLongDescriptionStringID": "Use defensive smoke and perform field repairs on the battlecruiser"
+				}
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -5962,21 +5978,35 @@
 					"BaseDamagePerRound": 160,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 60,
-					"ReloadTimeMS": 3200,
+					"ReloadTimeMS": 4500,
 					"RangeAttributesLong": {
 						"Distance": 1150
 					}
+				},
+				"C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+					"StatusEffectsTargetAlignment": "Friend",
+					"AreaOfEffectRadius": 1,
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": ["Regen_BattleCruiser_StatusEffect"] }
+					},
+					"StatusEffectsExcludeTargetType": "Air"
 				}
 			}
 		},
 		"C_Sob_Battlecruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 650,
-				"Resource2Cost": 250,
-				"MaxHealth": 3500,
-				"PopCapCost": 6,
+				"Resource2Cost": 300,
+				"MaxHealth": 3100,
+				"PopCapCost": 7,
 				"ProductionTime": 65,
 				"Armour": 16
+			},
+			"AbilityViewAttributes": {
+				"Ability_C_SmokeGrenade_BattleCruiser": {
+					"LocalizedTitleStringID": "Field repairs",
+					"LocalizedLongDescriptionStringID": "Use defensive smoke and perform field repairs on the battlecruiser"
+				}
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -6001,10 +6031,18 @@
 					"BaseDamagePerRound": 300,
 					"WindUpTimeMS": 1600,
 					"CooldownTimeMS": 1200,
-					"ReloadTimeMS": 6500,
+					"ReloadTimeMS": 8000,
 					"RangeAttributesShort":  { "Accuracy": 7 },
 					"RangeAttributesMedium": { "Accuracy": 6 },
 					"RangeAttributesLong": { "Distance": 1650 }
+				},
+				"C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+					"StatusEffectsTargetAlignment": "Friend",
+					"AreaOfEffectRadius": 1,
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": ["Regen_BattleCruiser_StatusEffect"] }
+					},
+					"StatusEffectsExcludeTargetType": "Air"
 				}
 			}
 		},
@@ -6020,6 +6058,29 @@
 				"Resource1Cost": 450,
 				"Resource2Cost": 200,
 				"ResearchTime": 110
+			}
+		},
+		
+		"Regen_BattleCruiser_StatusEffect": {
+			"StatusEffectAttributes": {
+				"Lifetime": "Finite",
+				"Duration": 9.95,
+				"MaxStacks": 1,
+				"StackingBehaviour": "Replace",
+				"Modifiers": {
+					"0": {
+						"ModifierType": "Immobilize"
+					},
+					"1": {
+						"ModifierType": "HealthOverTime",
+						"HealthOverTimeAttributes": {
+							"ID": "SmokeGrenade_BattleCruiser",
+							"Amount": 15,
+							"MSTickDuration": 200,
+							"DamageType": "Heal"
+						}
+					}
+				}
 			}
 		},
 		

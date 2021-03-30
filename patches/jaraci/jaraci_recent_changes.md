@@ -82,6 +82,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-27 12.1](#2021-03-27-121)
 	- [2021-03-28 12.2](#2021-03-28-122)
 	- [2021-03-29 12.3](#2021-03-29-123)
+	- [2021-03-30 12.4](#2021-03-30-124)
 
 # Changes
 
@@ -2206,3 +2207,65 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Siege cruiser:
 		* Cost: `450CU 180RU => 500CU 160RU`
 		* Hitpoints: `2000 => 1850`
+
+## 2021-03-30 12.4
+*Not yet reflected in the main changelog.*
+* General:
+	* Sunder armor reduction: `5 => 7`
+* Coalition/Soban:
+	* Carrier base speed: `45 => 37`
+	* Carrier systems upgrades:
+		* Renamed to exclude carrier systems 2
+		* Level 2 upgrade repurposed:
+			* Renamed: `Carrier Mobility`
+			* No longer requires power lever 1 to be purchasable
+			* Cost: `400CU 175RU => 600CU 300RU`
+			* Hitpoints granted: `150 => 0`
+			* Extra speed granted: `1 => 13`
+			* Grants 2 power as before (can't modify)
+		* Level 3 (shows up as level 2):
+			* Dependency: `Carrier systems 2 => Carrier systems 1`
+			* Cost: `650CU 250RU => 600CU 200RU`
+		* NOTE: Cruise missile now available at power level 4 and microwave emitter upgrade at power level 3
+	* LAV damage against air: `70% => 50%`
+	* Gunship damage: `42 => 38`
+	* Assault cruiser: (DPS: `47.9 => 45.3`)
+		* Number of bursts: `4 => 3`
+		* Damage: `50 => 54`
+	* Battlecruiser:
+		* Cost: `650CU 250RU => 650CU 300RU`
+		* Population cost: `6 => 7`
+		* Self-Smoke ability:
+			* Renamed to: `Field Repairs`
+			* Now immobilizes the unit while active
+			* Now heals the unit while active:
+				* Tick period: `0.2s`
+				* Heal amount per tick: `15`
+				* Duration: `10s`
+				* Total heal amount: `750`
+* Coalition:
+	* Carrier:
+		* Hitpoints: `8900 => 9000`
+		* PD rate of fire: `3 => 4`
+		* Fixed PD rate of fire tooltip on the weapons system power shunt
+	* Battlecruiser:
+		* Hitpoints: `3600 => 3200`
+		* Reload: `3.2s => 4.5s`
+* Soban:
+	* Carrier:
+		* Hitpoints: `8500 => 8600`
+		* PD reload: `15s => 13s`
+		* Fixed PD reload and cooldown tooltips on the weapons system power shunt
+		* Weapons power shunt reload and cooldown bonuses:
+			* Level 1: `35% => 25%`
+			* Level 2: `55% => 40%`
+			* Level 3: `70% => 55%`
+			* Level 4: `85% => 70%`
+			* Level 5: `95% => 85%`
+	* Battlecruiser:
+		* Hitpoints: `3500 => 3100`
+		* Reload: `6.5s => 8s`
+* Gaalsien/Khaaneph:
+	* Heavy railgun:
+		* Max speed: `52 => 58`
+		* Hover turn acceleration: `10 => 70`
