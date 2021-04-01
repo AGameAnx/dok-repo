@@ -83,6 +83,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-28 12.2](#2021-03-28-122)
 	- [2021-03-29 12.3](#2021-03-29-123)
 	- [2021-03-30 12.4](#2021-03-30-124)
+	- [2021-04-01 12.5](#2021-04-01-125)
 
 # Changes
 
@@ -2269,3 +2270,43 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Heavy railgun:
 		* Max speed: `52 => 58`
 		* Hover turn acceleration: `10 => 70`
+
+## 2021-04-01 12.5
+*Not yet reflected in the main changelog.*
+* General:
+	* Salvager target priority: `reduced`
+	* Target prioritization adjustments for low damage units (AAV, AS, Sandskimmer, LAV)
+* Coalition/Soban:
+	* Support cruiser cost: `400CU 50RU => 450CU 50RU`
+	* AAV hitpoints: `970 => 940`
+* Coalition:
+	* Carrier:
+		* Hitpoints: `8900 => 8650`
+		* Reactive armor power systems armor:
+			* Level 0: `15 => 20`
+			* Level 1: `20 => 25`
+			* Level 2: `25 => 30`
+* Soban:
+	* Carrier:
+		* Hitpoints: `8500 => 8400`
+		* Range systems range max range:
+			* Level 1: `1250 => 1200`
+			* Level 2: `1450 => 1350`
+			* Level 3: `1650 => 1500`
+			* Level 4: `1900 => 1650`
+			* Level 5: `2150 => 1850`
+		* Reactive armor power systems armor:
+			* Level 0: `10 => 15`
+			* Level 1: `15 => 20`
+			* Level 2: `20 => 25`
+	* Fixed an issue where carrier mobility required carrier systems 1
+* Gaalsien/Khaaneph:
+	* Carrier super-sonic missile barrage damage: `240 => 260`
+	* Sandskimmer hitpoints: `480 => 500`
+	* Dart maneuver cost: `50CU 80RU => 150CU 80RU`
+	* Heavy railgun:
+		* Hover turn acceleration: `70 => 120`
+		* Reload: `0.7s => 0.5s`
+	* Honourguard cruiser:
+		* Damage: `550 => 570`
+		* AOE: `210 => 200` (Fixed inconsistency for K variant)
