@@ -85,6 +85,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-30 12.4](#2021-03-30-124)
 	- [2021-04-01 12.5](#2021-04-01-125)
 	- [2021-04-01 12.6](#2021-04-01-126)
+	- [2021-04-01 12.7](#2021-04-01-127)
 
 # Changes
 
@@ -2318,3 +2319,10 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* LAV burst duration: `0.95-0.115s => 0.95-0.105s`
 * Gaalsien/Khaaneph:
 	* Assault ship damage: `26 => 27`
+
+## 2021-04-01 12.7
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* LAV accuracy: `88%/85%/56% => 85%/82%/55%`
+* Gaalsien/Khaaneph:
+	* Assault ship tech research time: `65s => 60s`
