@@ -84,6 +84,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-03-29 12.3](#2021-03-29-123)
 	- [2021-03-30 12.4](#2021-03-30-124)
 	- [2021-04-01 12.5](#2021-04-01-125)
+	- [2021-04-01 12.6](#2021-04-01-126)
 
 # Changes
 
@@ -2310,3 +2311,10 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Honourguard cruiser:
 		* Damage: `550 => 570`
 		* AOE: `210 => 200` (Fixed inconsistency for K variant)
+
+## 2021-04-01 12.6
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* LAV burst duration: `0.95-0.115s => 0.95-0.105s`
+* Gaalsien/Khaaneph:
+	* Assault ship damage: `26 => 27`
