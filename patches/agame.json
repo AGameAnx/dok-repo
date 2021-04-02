@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "12.7",
-		"LastUpdate": "2021-04-01",
+		"Version": "12.8",
+		"LastUpdate": "2021-04-02",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	/*"Global": {
@@ -3977,9 +3977,9 @@
 		
 		"C_HAC_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 260,
+				"Resource1Cost": 270,
 				"Resource2Cost": 20,
-				"MaxHealth": 940,
+				"MaxHealth": 970,
 				"SensorRadius": 1100,
 				"ProductionTime": 17,
 				"Armour": 8,
@@ -4000,7 +4000,7 @@
 					"BaseDamagePerRound": 16,
 					"BurstPeriodMinTimeMS": 500,
 					"BurstPeriodMaxTimeMS": 550,
-					"RateOfFire": 15,
+					"RateOfFire": 14,
 					"RangeAttributesShort": { "Accuracy": 80 },
 					"RangeAttributesMedium": { "Accuracy": 70 },
 					"RangeAttributesLong": { "Accuracy": 61, "Distance": 950 },
@@ -4164,7 +4164,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 27,
+					"BaseDamagePerRound": 26,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
@@ -4204,7 +4204,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 27,
+					"BaseDamagePerRound": 26,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
@@ -4466,8 +4466,18 @@
 			}
 		},
 		
-		"Research_Buff_C_Escort_ROF01": { "ResearchItemAttributes": { "ResearchTime": 40 } },
-		"Research_Buff_S_Escort_ROF01": { "ResearchItemAttributes": { "ResearchTime": 40 } },
+		"Research_Buff_C_Escort": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 200
+			}
+		},
+		"Research_Buff_S_Escort": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 200
+			}
+		},
 		"Research_Buff_C_Escort_Damage01": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
@@ -4686,14 +4696,14 @@
 				"ExperienceValue": 450,
 				"ProductionTime": 22,
 				"PriorityAsTarget": 12,
-				"AggroRange": 1750
+				"AggroRange": 1850
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 75 },
-				"Combat": { "MaxDesiredCombatRange": 1680 }
+				"Combat": { "MaxDesiredCombatRange": 1780 }
 			},
 			"WeaponAttributes": {
 				"C_Railgun_Weapon_G2G_MP": {
@@ -4708,7 +4718,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 65,
-						"Distance": 1750
+						"Distance": 1850
 					},
 					"Turret": {
 						"RotationSpeed": 250
@@ -4753,14 +4763,14 @@
 				"ExperienceValue": 470,
 				"ProductionTime": 22,
 				"PriorityAsTarget": 12,
-				"AggroRange": 1750
+				"AggroRange": 1850
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 75 },
-				"Combat": { "MaxDesiredCombatRange": 1680 }
+				"Combat": { "MaxDesiredCombatRange": 1780 }
 			},
 			"WeaponAttributes": {
 				"C_Sob_Railgun_Weapon_G2G_MP": {
@@ -4776,7 +4786,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 65,
-						"Distance": 1750
+						"Distance": 1850
 					},
 					"Modifiers": {
 						"1": {
@@ -4821,7 +4831,7 @@
 		"Research_Buff_C_Railgun": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 150,
-				"Resource2Cost": 300,
+				"Resource2Cost": 250,
 				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 20.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { "0": { "Value": 20 } } },
@@ -4832,7 +4842,7 @@
 		"Research_Buff_S_Railgun": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 150,
-				"Resource2Cost": 300,
+				"Resource2Cost": 250,
 				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 20.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { "0": { "Value": 20 } } },
@@ -4851,14 +4861,14 @@
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
 				"PriorityAsTarget": 15,
-				"AggroRange": 1750
+				"AggroRange": 1850
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
 					"MaxSpeed": 58,
 					"MaxSpeedTurnRadius": 40
 				},
-				"Combat": { "MaxDesiredCombatRange": 1680 },
+				"Combat": { "MaxDesiredCombatRange": 1780 },
 				"Hover": { "TurnAcceleration": 120 }
 			},
 			"DetectableAttributes": {
@@ -4882,7 +4892,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 65,
-						"Distance": 1750
+						"Distance": 1850
 					},
 					"Modifiers": {
 						"1": {
@@ -4932,14 +4942,14 @@
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
 				"PriorityAsTarget": 15,
-				"AggroRange": 1750
+				"AggroRange": 1850
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
 					"MaxSpeed": 58,
 					"MaxSpeedTurnRadius": 40
 				},
-				"Combat": { "MaxDesiredCombatRange": 1680 },
+				"Combat": { "MaxDesiredCombatRange": 1780 },
 				"Hover": { "TurnAcceleration": 120 }
 			},
 			"DetectableAttributes": {
@@ -4963,7 +4973,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 65,
-						"Distance": 1750
+						"Distance": 1850
 					},
 					"Modifiers": {
 						"1": {
@@ -5058,7 +5068,7 @@
 		"Research_Buff_G_RailGunScope": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 200,
-				"Resource2Cost": 300,
+				"Resource2Cost": 250,
 				"ResearchTime": 55,
 				"LocalizedLongDescriptionStringID": "Heavy Railguns gain the RANGED CALIBRATION ability - Increasing range at the cost of mobility.\n\n[84a1e8]Weapon and sight range increased by 330.\nMovement speed reduced by 40%."
 			}
@@ -5728,7 +5738,10 @@
 					"RateOfFire": 3,
 					"NumberOfBursts": 3,
 					"WindUpTimeMS": 250,
-					"ReloadTimeMS": 3800
+					"ReloadTimeMS": 3800,
+					"TargetPrioritizationAttributes": {
+						"TargetPriorityWeight": 50
+					}
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
 					"BaseDamagePerRound": 160,
@@ -5791,7 +5804,9 @@
 					"RateOfFire": 3,
 					"NumberOfBursts": 3,
 					"WindUpTimeMS": 250,
-					"ReloadTimeMS": 3800
+					"ReloadTimeMS": 3800{
+						"TargetPriorityWeight": 50
+					}
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
 					"BaseDamagePerRound": 180,
@@ -5960,7 +5975,7 @@
 		"Research_Buff_G_HonorCruiser_Defenses": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"Resource2Cost": 300,
+				"Resource2Cost": 200,
 				"ResearchTime": 45
 			}
 		},

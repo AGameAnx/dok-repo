@@ -86,6 +86,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-01 12.5](#2021-04-01-125)
 	- [2021-04-01 12.6](#2021-04-01-126)
 	- [2021-04-01 12.7](#2021-04-01-127)
+	- [2021-04-02 12.8](#2021-04-02-128)
 
 # Changes
 
@@ -2326,3 +2327,26 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* LAV accuracy: `88%/85%/56% => 85%/82%/55%`
 * Gaalsien/Khaaneph:
 	* Assault ship tech research time: `65s => 60s`
+
+## 2021-04-02 12.8
+*Not yet reflected in the main changelog.*
+* General:
+	* Railgun:
+		* Max range: `1750 => 1850`
+		* Aggro range: `1750 => 1850`
+		* Max desired combat range: `1680 => 1780`
+* Coalition/Soban:
+	* LAV boost ability:
+		* Research cost: `200CU 125RU => 150CU 200RU`
+		* Fixed an issue where research time wasn't modified as intended
+		* Research time is no longer modified (it was marked as reduced from 50s to 40s)
+	* AAV:
+		* Cost: `260CU 20RU => 270CU 20RU`
+		* Hitpoints: `940 => 970`
+		* ROF: `15 => 14`
+	* Mag accelerator research cost: `150CU 300RU => 150CU 250RU`
+	* Adjusted assault cruiser target prioritization
+* Gaalsien/Khaaneph:
+	* Assault ship damage: `27 => 26`
+	* Ranged calibration research cost: `200CU 300RU => 200CU 250RU`
+	* Honourguard cruiser anti-air research cost: `300CU 300RU => 300CU 200RU`
