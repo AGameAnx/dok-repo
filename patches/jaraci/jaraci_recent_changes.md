@@ -87,6 +87,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-01 12.6](#2021-04-01-126)
 	- [2021-04-01 12.7](#2021-04-01-127)
 	- [2021-04-02 12.8](#2021-04-02-128)
+	- [2021-04-03 12.9](#2021-04-03-129)
 
 # Changes
 
@@ -2350,3 +2351,9 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Assault ship damage: `27 => 26`
 	* Ranged calibration research cost: `200CU 300RU => 200CU 250RU`
 	* Honourguard cruiser anti-air research cost: `300CU 300RU => 300CU 200RU`
+
+## 2021-04-03 12.9
+*Not yet reflected in the main changelog.*
+* Gaalsien/Khaaneph:
+	* Assault ship damage: `26 => 27`
+	* Assault railgun cost: `220CU 55RU => 250CU 55RU`
