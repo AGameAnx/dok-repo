@@ -2,20 +2,20 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "12.9",
-		"LastUpdate": "2021-04-03",
+		"Version": "12.10",
+		"LastUpdate": "2021-04-04",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	/*"Global": {
 		"UnitAttributes": {
 			"Resource1Cost": 0,
 			"Resource2Cost": 0,
-			"ProductionTime": 1
+			"ProductionTime": 1,
 		},
 		"ResearchItemAttributes": {
 			"Resource1Cost": 0,
 			"Resource2Cost": 0,
-			"ResearchTime": 1
+			"ResearchTime": 1,
 		}
 	},*/
 	"Entities": {
@@ -741,6 +741,7 @@
 				},
 				"C_Carrier_Weapon_CruiseMissile_MP": {
 					"BaseDamagePerRound": 2300,
+					"AreaOfEffectRadius": 550,
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
 						"1": {
@@ -3289,6 +3290,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 150,
 				"MaxHealth": 950,
+				"PopCapCost": 2,
 				"Armour": 0,
 				"PriorityAsTarget": -2
 			},
@@ -3300,17 +3302,16 @@
 			"StorageAttributes": {
 				"C_Harvester_StorageAttributesAsset_MP": {
 					"InventoryLoadout": {
-						"Resource2": {
-							"Capacity": 20
-						}
+						"Resource2": { "Capacity": 20 }
 					}
 				}
 			}
 		},
 		"G_Harvester_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 150,
+				"Resource1Cost": 180,
 				"MaxHealth": 950,
+				"PopCapCost": 2,
 				"Armour": 5,
 				"PriorityAsTarget": -2
 			},
@@ -3320,19 +3321,18 @@
 				}
 			},
 			"StorageAttributes": {
-				"G_Harvester_StorageAttributesAsset_MP": {
+				"C_Harvester_StorageAttributesAsset_MP": {
 					"InventoryLoadout": {
-						"Resource2": {
-							"Capacity": 20
-						}
+						"Resource2": { "Capacity": 20 }
 					}
 				}
 			}
 		},
 		"K_Harvester_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 150,
+				"Resource1Cost": 180,
 				"MaxHealth": 950,
+				"PopCapCost": 2,
 				"Armour": 5,
 				"PriorityAsTarget": -2
 			},
@@ -3342,11 +3342,9 @@
 				}
 			},
 			"StorageAttributes": {
-				"G_Harvester_StorageAttributesAsset_MP": {
+				"C_Harvester_StorageAttributesAsset_MP": {
 					"InventoryLoadout": {
-						"Resource2": {
-							"Capacity": 20
-						}
+						"Resource2": { "Capacity": 20 }
 					}
 				}
 			}
@@ -3359,6 +3357,32 @@
 					"BaseDamagePerRound": 200,
 					"DamagePacketsPerShot": 2
 				}
+			}
+		},
+		
+		"Research_Buff_Fleet_Popcap_1": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200
+			}
+		},
+		"Research_Buff_Fleet_Popcap_2": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 250
+			}
+		},
+		"Research_Buff_Fleet_Popcap_3": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 350
+			}
+		},
+		"Research_Buff_Fleet_Popcap_4": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500
+			}
+		},
+		"Research_Buff_Fleet_Popcap_5": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 750
 			}
 		},
 		
@@ -3892,11 +3916,11 @@
 		
 		"G_SupportCruiser_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 50,
 				"MaxHealth": 3500,
 				"Armour": 6,
 				"ProductionTime": 50,
-				"Resource1Cost": 650,
-				"Resource2Cost": 60,
 				"SensorRadius": 1450,
 				"ContactRadius": 1600
 			},
@@ -3927,10 +3951,10 @@
 		},
 		"K_SupportCruiser_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 50,
 				"MaxHealth": 3500,
 				"Armour": 6,
-				"Resource1Cost": 650,
-				"Resource2Cost": 60,
 				"SensorRadius": 1450,
 				"ContactRadius": 1600
 			},
@@ -3987,7 +4011,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 82
+					"MaxSpeed": 83
 				}
 			},
 			"AbilityAttributes": {
@@ -4003,7 +4027,7 @@
 					"RateOfFire": 14,
 					"RangeAttributesShort": { "Accuracy": 80 },
 					"RangeAttributesMedium": { "Accuracy": 70 },
-					"RangeAttributesLong": { "Accuracy": 61, "Distance": 950 },
+					"RangeAttributesLong": { "Accuracy": 61, "Distance": 975 },
 					"Turret": { "RotationSpeed": 190 },
 					"TargetPrioritizationAttributes": {
 						"TargetPriorityWeight": 50
@@ -4141,16 +4165,16 @@
 		
 		"G_Catamaran_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 300,
+				"Resource1Cost": 320,
 				"Resource2Cost": 35,
-				"ProductionTime": 17,
+				"ProductionTime": 19,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
 				"Armour": 7,
-				"MaxHealth": 900
+				"MaxHealth": 850
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 72 }
+				"Dynamics": { "MaxSpeed": 76 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_AssaultShipRegen": {
@@ -4164,11 +4188,11 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 27,
+					"BaseDamagePerRound": 28,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
-					"AreaOfEffectRadius": 140,
+					"AreaOfEffectRadius": 125,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesShort":  { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
@@ -4181,16 +4205,16 @@
 		},
 		"K_AssaultShip_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 300,
+				"Resource1Cost": 320,
 				"Resource2Cost": 35,
-				"ProductionTime": 17,
+				"ProductionTime": 19,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
 				"Armour": 7,
-				"MaxHealth": 900
+				"MaxHealth": 850
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 72 }
+				"Dynamics": { "MaxSpeed": 76 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_AssaultShipRegen": {
@@ -4204,11 +4228,11 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 27,
+					"BaseDamagePerRound": 28,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
-					"AreaOfEffectRadius": 140,
+					"AreaOfEffectRadius": 125,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesShort":  { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
@@ -4260,7 +4284,7 @@
 		
 		"C_Escort_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 420,
+				"MaxHealth": 440,
 				"Armour": 2,
 				"ProductionTime": 12,
 				"PriorityAsTarget": 3
@@ -4316,7 +4340,7 @@
 		},
 		"C_Sob_Escort_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 420,
+				"MaxHealth": 440,
 				"Armour": 2,
 				"ProductionTime": 12,
 				"PriorityAsTarget": 3
@@ -4725,8 +4749,9 @@
 					},
 					"Modifiers": {
 						"1": {
+							//"TargetClass": "Small",
 							"Modifier": "DamagePercent",
-							"Amount": 60
+							"Amount": 50
 						},
 						"2": {
 							"Remove": true
@@ -4792,7 +4817,7 @@
 						"1": {
 							//"TargetClass": "Small",
 							"Modifier": "DamagePercent",
-							"Amount": 60
+							"Amount": 50
 						},
 						"6": {
 							"Remove": true
@@ -4853,11 +4878,11 @@
 		
 		"G_StarHullTank_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 380,
+				"Resource2Cost": 110,
 				"MaxHealth": 820,
 				"Armour": 2,
 				"ProductionTime": 20,
-				"Resource1Cost": 380,
-				"Resource2Cost": 110,
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
 				"PriorityAsTarget": 15,
@@ -4897,7 +4922,7 @@
 					"Modifiers": {
 						"1": {
 							"Modifier": "DamagePercent",
-							"Amount": 60
+							"Amount": 50
 						},
 						"2": {
 							"Remove": true
@@ -4934,11 +4959,11 @@
 		},
 		"K_HeavyRailgun_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 380,
+				"Resource2Cost": 110,
 				"MaxHealth": 820,
 				"Armour": 2,
 				"ProductionTime": 20,
-				"Resource1Cost": 380,
-				"Resource2Cost": 110,
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
 				"PriorityAsTarget": 15,
@@ -4978,7 +5003,7 @@
 					"Modifiers": {
 						"1": {
 							"Modifier": "DamagePercent",
-							"Amount": 60
+							"Amount": 50
 						},
 						"2": {
 							"Remove": true
@@ -5038,10 +5063,10 @@
 				"BuffsToApplyToTarget": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": 330 },
-							"1": { "Value": 330 },
-							"2": { "Value": 330 },
-							"3": { "Value": 330 },
+							"0": { "Value": 400 },
+							"1": { "Value": 400 },
+							"2": { "Value": 400 },
+							"3": { "Value": 400 },
 							"4": { "Value": -40 }, // Max speed
 							"5": { "Value": -40 } // Turn radius
 						}
@@ -5085,7 +5110,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 250,
 				"Resource2Cost": 55,
-				"MaxHealth": 650,
+				"MaxHealth": 620,
 				"ExperienceValue": 350,
 				"ProductionTime": 17,
 				"SensorRadius": 1250,
@@ -5116,12 +5141,12 @@
 					}
 				},
 				"Ability_G_RailGun_Dash_Move_To_MP": {
-					"CooldownTimeSecs": 35
+					"CooldownTimeSecs": 50
 				},
 				"Ability_G_RailGun_Dash_MP": {
 					"ApplyStatusEffect": {
 						"RailGun_Dash_StatusEffect": {
-							"Duration": 3
+							"Duration": 2.7
 						}
 					}
 				}
@@ -5134,7 +5159,7 @@
 					"NumberOfBursts": 6,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 3800,
+					"ReloadTimeMS": 4000,
 					"RangeAttributesShort":  { "Accuracy": 20 },
 					"RangeAttributesMedium": { "Accuracy": 16 },
 					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
@@ -5145,7 +5170,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 250,
 				"Resource2Cost": 55,
-				"MaxHealth": 650,
+				"MaxHealth": 620,
 				"ExperienceValue": 350,
 				"ProductionTime": 17,
 				"SensorRadius": 1250,
@@ -5176,12 +5201,12 @@
 					}
 				},
 				"Ability_G_RailGun_Dash_Move_To_MP": {
-					"CooldownTimeSecs": 35
+					"CooldownTimeSecs": 50
 				},
 				"Ability_G_RailGun_Dash_MP": {
 					"ApplyStatusEffect": {
 						"RailGun_Dash_StatusEffect": {
-							"Duration": 3
+							"Duration": 2.7
 						}
 					}
 				}
@@ -5194,7 +5219,7 @@
 					"NumberOfBursts": 6,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 3800,
+					"ReloadTimeMS": 4000,
 					"RangeAttributesShort":  { "Accuracy": 20 },
 					"RangeAttributesMedium": { "Accuracy": 16 },
 					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
@@ -5224,6 +5249,7 @@
 			"ResearchItemAttributes": {
 				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun, armor by 1 and hull integrity by 50 on Assault Railgun.",
 				"Resource1Cost": 250,
+				"Resource2Cost": 175,
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { // G_StarHull_Upgrade01_MP
 						"0": { "Value": 1 },
@@ -5245,6 +5271,7 @@
 		"Research_Buff_G_RailGunUnits_Armor3": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
+				"Resource2Cost": 250,
 				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { // G_StarHull_Upgrade01_MP
@@ -5437,7 +5464,7 @@
 		
 		"C_Interceptor_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 200,
+				"Resource1Cost": 240,
 				"Resource2Cost": 90,
 				"MaxHealth": 490,
 				"Armour": 0,
@@ -5476,6 +5503,7 @@
 		
 		"G_Interceptor_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 250,
 				"Resource2Cost": 100,
 				"Armour": 2,
 				"ProductionTime": 12
@@ -5483,7 +5511,7 @@
 			"WeaponAttributes": {
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
 					"BaseDamagePerRound": 100,
-					"DamagePacketsPerShot": 2,
+					"DamagePacketsPerShot": 3,
 					"AreaOfEffectRadius": 69,
 					"RateOfFire": 4,
 					"ReloadTimeMS": 4500,
@@ -5501,6 +5529,7 @@
 		},
 		"K_Interceptor_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 300,
 				"Resource2Cost": 100,
 				"Armour": 2,
 				"ProductionTime": 12
@@ -5508,7 +5537,7 @@
 			"WeaponAttributes": {
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
 					"BaseDamagePerRound": 100,
-					"DamagePacketsPerShot": 2,
+					"DamagePacketsPerShot": 3,
 					"AreaOfEffectRadius": 69,
 					"RateOfFire": 4,
 					"ReloadTimeMS": 4500,
@@ -5557,8 +5586,8 @@
 			"UnitAttributes": {
 				"Resource1Cost": 350,
 				"Resource2Cost": 160,
-				"MaxHealth": 1350,
-				"Armour": 15,
+				"MaxHealth": 1300,
+				"Armour": 10,
 				"PopCapCost": 4
 			},
 			"UnitMovementAttributes": {
@@ -5723,11 +5752,11 @@
 		"G_BattleCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 220,
+				"Resource2Cost": 260,
 				"MaxHealth": 2800,
 				"ProductionTime": 60,
 				"Armour": 12,
-				"PopCapCost": 5
+				"PopCapCost": 6
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
@@ -5789,11 +5818,11 @@
 		"C_Sob_AssaultCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 220,
+				"Resource2Cost": 260,
 				"MaxHealth": 2800,
 				"ProductionTime": 60,
 				"Armour": 12,
-				"PopCapCost": 5
+				"PopCapCost": 6
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
@@ -5854,14 +5883,14 @@
 		},
 		"Tier_3_C_AssaultCruiser": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 500,
-				"Resource2Cost": 250
+				"Resource1Cost": 450,
+				"Resource2Cost": 200
 			}
 		},
 		"Tier_3_S_AssaultCruiser": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 500,
-				"Resource2Cost": 250
+				"Resource1Cost": 450,
+				"Resource2Cost": 200
 			}
 		},
 		"Research_Buff_G_BattleCruiser_AntiAir": {
@@ -5882,9 +5911,9 @@
 		"G_HonorGuard_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 250,
+				"Resource2Cost": 300,
 				"MaxHealth": 2700,
-				"PopCapCost": 7,
+				"PopCapCost": 8,
 				"ProductionTime": 50
 			},
 			"DetectableAttributes": {
@@ -5901,7 +5930,7 @@
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 570,
 					"DamagePacketsPerShot": 4,
-					"ReloadTimeMS": 6000,
+					"ReloadTimeMS": 5000,
 					"WindUpTimeMS": 1600,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 200,
@@ -5919,16 +5948,16 @@
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
 					"WindUpTimeMS": 1500,
-					"ReloadTimeMS": 3000
+					"ReloadTimeMS": 2700
 				}
 			}
 		},
 		"K_HonorGuard_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 250,
+				"Resource2Cost": 300,
 				"MaxHealth": 2700,
-				"PopCapCost": 7,
+				"PopCapCost": 8,
 				"ProductionTime": 50
 			},
 			"DetectableAttributes": {
@@ -5945,7 +5974,7 @@
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 570,
 					"DamagePacketsPerShot": 4,
-					"ReloadTimeMS": 6000,
+					"ReloadTimeMS": 5000,
 					"WindUpTimeMS": 1600,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 200,
@@ -5963,14 +5992,15 @@
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
 					"WindUpTimeMS": 1500,
-					"ReloadTimeMS": 3000
+					"ReloadTimeMS": 2700
 				}
 			}
 		},
 		"Tier_3_G_HonorCruiser": {
 			"ResearchItemAttributes": {
-				"Resource2Cost": 280,
-				"ResearchTime": 65
+				"Resource1Cost": 550,
+				"Resource2Cost": 200,
+				"ResearchTime": 60
 			}
 		},
 		"Research_Buff_G_HonorCruiser_Defenses": {
@@ -5983,12 +6013,12 @@
 		
 		"C_Battlecruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 650,
-				"Resource2Cost": 300,
-				"MaxHealth": 3200,
-				"PopCapCost": 7,
+				"Resource1Cost": 700,
+				"Resource2Cost": 400,
+				"MaxHealth": 4000,
+				"PopCapCost": 8,
 				"ProductionTime": 65,
-				"Armour": 17
+				"Armour": 20
 			},
 			"AbilityViewAttributes": {
 				"Ability_C_SmokeGrenade_BattleCruiser": {
@@ -6016,7 +6046,7 @@
 					"BaseDamagePerRound": 160,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 60,
-					"ReloadTimeMS": 4500,
+					"ReloadTimeMS": 3800,
 					"RangeAttributesLong": {
 						"Distance": 1150
 					}
@@ -6033,12 +6063,12 @@
 		},
 		"C_Sob_Battlecruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 650,
-				"Resource2Cost": 300,
-				"MaxHealth": 3100,
-				"PopCapCost": 7,
+				"Resource1Cost": 700,
+				"Resource2Cost": 400,
+				"MaxHealth": 4000,
+				"PopCapCost": 8,
 				"ProductionTime": 65,
-				"Armour": 16
+				"Armour": 19
 			},
 			"AbilityViewAttributes": {
 				"Ability_C_SmokeGrenade_BattleCruiser": {
@@ -6069,7 +6099,7 @@
 					"BaseDamagePerRound": 300,
 					"WindUpTimeMS": 1600,
 					"CooldownTimeMS": 1200,
-					"ReloadTimeMS": 8000,
+					"ReloadTimeMS": 6800,
 					"RangeAttributesShort":  { "Accuracy": 7 },
 					"RangeAttributesMedium": { "Accuracy": 6 },
 					"RangeAttributesLong": { "Distance": 1650 }
@@ -6086,16 +6116,16 @@
 		},
 		"Tier_3_C_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 550,
-				"Resource2Cost": 300,
-				"ResearchTime": 110
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"ResearchTime": 100
 			}
 		},
 		"Tier_3_S_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 450,
-				"Resource2Cost": 200,
-				"ResearchTime": 110
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"ResearchTime": 100
 			}
 		},
 		
@@ -6113,7 +6143,7 @@
 						"ModifierType": "HealthOverTime",
 						"HealthOverTimeAttributes": {
 							"ID": "SmokeGrenade_BattleCruiser",
-							"Amount": 15,
+							"Amount": 30,
 							"MSTickDuration": 200,
 							"DamageType": "Heal"
 						}
@@ -6126,7 +6156,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 550,
 				"Resource2Cost": 160,
-				"MaxHealth": 1750,
+				"MaxHealth": 1600,
 				"Armour": 2,
 				"ProductionTime": 60,
 				"PopCapCost": 5
@@ -6235,9 +6265,9 @@
 		
 		"G_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 500,
-				"Resource2Cost": 160,
-				"MaxHealth": 1850,
+				"Resource1Cost": 550,
+				"Resource2Cost": 180,
+				"MaxHealth": 1700,
 				"Armour": 3,
 				"ProductionTime": 45,
 				"PopCapCost": 5,
@@ -6247,6 +6277,9 @@
 			"AbilityAttributes": {
 				"Ability_G_ArtilleryBarrage_01_MP": {
 					"CooldownTimeSecs": 45
+				},
+				"Ability_G_Artillery_EMP_MP": {
+					"CooldownTimeSecs": 75
 				},
 				"Ability_G_ArtilleryCruiserRegen": {
 					"ApplyStatusEffect": {
@@ -6266,8 +6299,8 @@
 			},
 			"WeaponAttributes": {
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"BaseDamagePerRound": 195,
-					"DamagePacketsPerShot": 2,
+					"BaseDamagePerRound": 210,
+					"DamagePacketsPerShot": 3,
 					"AreaOfEffectRadius": 90,
 					"NumberOfBursts": 2,
 					"RateOfFire": 5,
@@ -6336,7 +6369,7 @@
 		"K_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 700,
-				"Resource2Cost": 250,
+				"Resource2Cost": 280,
 				"MaxHealth": 2800,
 				"PopCapCost": 6,
 				"SensorRadius": 1100,

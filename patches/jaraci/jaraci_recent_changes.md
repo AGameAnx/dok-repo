@@ -88,6 +88,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-01 12.7](#2021-04-01-127)
 	- [2021-04-02 12.8](#2021-04-02-128)
 	- [2021-04-03 12.9](#2021-04-03-129)
+	- [2021-04-04 12.10](#2021-04-04-1210)
 
 # Changes
 
@@ -2357,3 +2358,78 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Gaalsien/Khaaneph:
 	* Assault ship damage: `26 => 27`
 	* Assault railgun cost: `220CU 55RU => 250CU 55RU`
+
+## 2021-04-04 12.10
+*Not yet reflected in the main changelog.*
+* General:
+	* Salvager population cost: `1 => 2`
+	* Railgun damage modifier against strike craft: `60% => 50%`
+* Coalition/Soban:
+	* LAV hitpoints: `420 => 440`
+	* AAV:
+		* Range: `950 => 975`
+		* Movement speed: `82 => 83`
+	* Strike fighter cost: `200CU 90RU => 220CU 90RU`
+	* Bomber:
+		* Hitpoints: `1350 => 1300`
+		* Armor: `15 => 10`
+	* Support cruiser: cost: `450CU 50RU => 500CU 50RU`
+	* Assault cruiser:
+		* Research cost: `500CU 250RU => 450CU 200RU`
+		* Cost: `550CU 220RU => 550CU 260RU`
+		* Population cost: `5 => 6`
+	* Battlecruiser:
+		* Research cost: `550CU 300RU => 500CU 250RU`
+		* Research time: `110s => 100s`
+		* Cost: `650CU 300RU => 700CU 400RU`
+		* Population cost: `7 => 9`
+		* Hitpoints C/S: `3200/3100 => 4000`
+		* Armor C/S: `17/16 => 20/19`
+		* Reload: `4.5s/8s => 3.8s/6.3s`
+		* Field repairs hitpoints per tick: `15 => 30` (Total regen: `750 => 1500`)
+	* Artillery cruiser hitpoints: `1750 => 1600`
+* Coalition:
+	* Cruise missile area of effect: `500 => 550`
+* Gaalsien/Khaaneph:
+	* Salvager cost: `150CU => 180CU`
+	* Population capacity upgrade CU cost:
+		* Level 1: `250 => 200`
+		* Level 2: `310 => 250`
+		* Level 3: `390 => 350`
+		* Level 4: `490 => 500`
+		* Level 5: `610 => 750`
+	* Production cruiser cost: `650CU 60RU => 550CU 50RU`
+	* Assault ship:
+		* Cost: `300CU 35RU => 320CU 35RU`
+		* Damage: `27 => 28`
+		* AOE: `140 => 125`
+		* Production time: `17s => 19s`
+		* Hitpoints: `900 => 850`
+		* Movement speed: `72 => 76`
+	* Assault railgun:
+		* Hitpoints: `650 => 620`
+		* Reload: `3.8s => 4s`
+		* Dart maneuver:
+			* Cooldown: `35s => 50s`
+			* Duration: `3s => 2.7s`
+	* Heavy railgun ranged calibration upgrade range bonus: `330 => 400`
+	* Railgun armor upgrade RU cost:
+		* Level 2: `200 => 175`
+		* Level 3: `300 => 250`
+	* Interceptor damage packets: `2 => 3`
+	* Honourguard cruiser:
+		* Research cost: `500CU 280RU => 550CU 200RU`
+		* Research time: `65s => 60s`
+		* Cost: `550CU 250RU => 600CU 300RU`
+		* Population cost: `7 => 8`
+		* Reload: `6s => 5s`
+		* AA weapon reload: `3s => 2.7s`
+* Gaalsien:
+	* Siege cruiser:
+		* Cost: `500CU 160RU => 550CU 180RU`
+		* Hitpoints: `1850 => 1700`
+		* Barrage damage: `195 => 210`
+		* Packets: `2 => 3`
+		* EMP cooldown: `45s => 75s`
+* Khaaneph:
+	* Siege cruiser cost: `700CU 250RU => 700CU 280RU`
