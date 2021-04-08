@@ -89,6 +89,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-02 12.8](#2021-04-02-128)
 	- [2021-04-03 12.9](#2021-04-03-129)
 	- [2021-04-04 12.10](#2021-04-04-1210)
+	- [2021-04-08 12.11](#2021-04-08-1211)
 
 # Changes
 
@@ -2433,3 +2434,32 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* EMP cooldown: `45s => 75s`
 * Khaaneph:
 	* Siege cruiser cost: `700CU 250RU => 700CU 280RU`
+
+## 2021-04-08 12.11
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Support cruiser build time: `35s => 40s`
+	* AAV:
+		* Armor: `8 => 7`
+		* AOE: `0 => 40` (Linear falloff)
+		* ROF: `14 => 13`
+		* Suppression slow effect: `55% => 40%`
+	* Railgun:
+		* Reload: `0.5s => 0s`
+		* Range: `1850 => 1900`
+		* Aggro range: `1850 => 1900`
+		* Max desired combat range: `1780 => 1830`
+	* Battlecruiser hitpoints: `4000 => 3800`
+* Gaalsien/Khaaneph:
+	* Refinery mode tech cost: `550CU 80RU => 550CU 60RU`
+	* Assault railgun (DPS: `52.3 => 55.2`):
+		* Damage: `45 => 48`
+		* Number of bursts: `6 => 5`
+		* Reload: `4s => 3.3s`
+		* Range: `1100 => 1050`
+		* Aggro range: `1100 => 1050`
+	* Heavy railgun:
+		* Reload: `0.5s => 0s`
+		* Range: `1850 => 1700`
+		* Movement speed: `58 => 61`
+	* Honourguard cruiser hover turn acceleration: `1.5 => 50`

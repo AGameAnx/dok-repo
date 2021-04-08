@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "12.10",
-		"LastUpdate": "2021-04-04",
+		"Version": "12.11",
+		"LastUpdate": "2021-04-08",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	/*"Global": {
@@ -3745,7 +3745,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 50,
-				"ProductionTime": 35,
+				"ProductionTime": 40,
 				"MaxHealth": 2700,
 				"Armour": 5,
 				"PopCapCost": 5
@@ -3825,7 +3825,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 50,
-				"ProductionTime": 35,
+				"ProductionTime": 40,
 				"MaxHealth": 2700,
 				"Armour": 5,
 				"PopCapCost": 5
@@ -3989,13 +3989,13 @@
 		"Research_Buff_G_ProductionCruiserResourcer": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 80
+				"Resource2Cost": 60
 			}
 		},
 		"Research_Buff_K_ProductionCruiserResourcer": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 80
+				"Resource2Cost": 60
 			}
 		},
 		
@@ -4006,7 +4006,7 @@
 				"MaxHealth": 970,
 				"SensorRadius": 1100,
 				"ProductionTime": 17,
-				"Armour": 8,
+				"Armour": 7,
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
@@ -4024,7 +4024,9 @@
 					"BaseDamagePerRound": 16,
 					"BurstPeriodMinTimeMS": 500,
 					"BurstPeriodMaxTimeMS": 550,
-					"RateOfFire": 14,
+					"RateOfFire": 13,
+					"AreaOfEffectRadius": 50,
+					"AreaOfEffectFalloffType": "Linear",
 					"RangeAttributesShort": { "Accuracy": 80 },
 					"RangeAttributesMedium": { "Accuracy": 70 },
 					"RangeAttributesLong": { "Accuracy": 61, "Distance": 975 },
@@ -4041,7 +4043,7 @@
 				"BuffsToApplyToTarget": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": -55 }
+							"0": { "Value": -40 }
 						}
 					}
 				}
@@ -4720,14 +4722,14 @@
 				"ExperienceValue": 450,
 				"ProductionTime": 22,
 				"PriorityAsTarget": 12,
-				"AggroRange": 1850
+				"AggroRange": 1900
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 75 },
-				"Combat": { "MaxDesiredCombatRange": 1780 }
+				"Combat": { "MaxDesiredCombatRange": 1830 }
 			},
 			"WeaponAttributes": {
 				"C_Railgun_Weapon_G2G_MP": {
@@ -4742,7 +4744,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 65,
-						"Distance": 1850
+						"Distance": 1900
 					},
 					"Turret": {
 						"RotationSpeed": 250
@@ -4788,14 +4790,14 @@
 				"ExperienceValue": 470,
 				"ProductionTime": 22,
 				"PriorityAsTarget": 12,
-				"AggroRange": 1850
+				"AggroRange": 1900
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 75 },
-				"Combat": { "MaxDesiredCombatRange": 1780 }
+				"Combat": { "MaxDesiredCombatRange": 1830 }
 			},
 			"WeaponAttributes": {
 				"C_Sob_Railgun_Weapon_G2G_MP": {
@@ -4811,7 +4813,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 65,
-						"Distance": 1850
+						"Distance": 1900
 					},
 					"Modifiers": {
 						"1": {
@@ -4886,14 +4888,14 @@
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
 				"PriorityAsTarget": 15,
-				"AggroRange": 1850
+				"AggroRange": 1700
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 58,
+					"MaxSpeed": 61,
 					"MaxSpeedTurnRadius": 40
 				},
-				"Combat": { "MaxDesiredCombatRange": 1780 },
+				"Combat": { "MaxDesiredCombatRange": 1620 },
 				"Hover": { "TurnAcceleration": 120 }
 			},
 			"DetectableAttributes": {
@@ -4917,7 +4919,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 65,
-						"Distance": 1850
+						"Distance": 1700
 					},
 					"Modifiers": {
 						"1": {
@@ -4967,14 +4969,14 @@
 				"PopCapCost": 4,
 				"ExperienceValue": 550,
 				"PriorityAsTarget": 15,
-				"AggroRange": 1850
+				"AggroRange": 1700
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 58,
+					"MaxSpeed": 61,
 					"MaxSpeedTurnRadius": 40
 				},
-				"Combat": { "MaxDesiredCombatRange": 1780 },
+				"Combat": { "MaxDesiredCombatRange": 1620 },
 				"Hover": { "TurnAcceleration": 120 }
 			},
 			"DetectableAttributes": {
@@ -4989,7 +4991,6 @@
 				"G_StarHull_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 180,
 					"WindUpTimeMS": 1200,
-					"ReloadTimeMS": 500,
 					"RangeAttributesShort": {
 						"Accuracy": 40
 					},
@@ -4998,7 +4999,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 65,
-						"Distance": 1850
+						"Distance": 1700
 					},
 					"Modifiers": {
 						"1": {
@@ -5110,14 +5111,14 @@
 			"UnitAttributes": {
 				"Resource1Cost": 250,
 				"Resource2Cost": 55,
-				"MaxHealth": 620,
+				"MaxHealth": 650,
 				"ExperienceValue": 350,
 				"ProductionTime": 17,
 				"SensorRadius": 1250,
 				"ContactRadius": 1350,
 				"Armour": 5,
 				"PriorityAsTarget": 10,
-				"AggroRange": 1100
+				"AggroRange": 1050
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -5153,16 +5154,16 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 45,
+					"BaseDamagePerRound": 48,
 					"BurstPeriodMinTimeMS": 90,
 					"BurstPeriodMaxTimeMS": 90,
-					"NumberOfBursts": 6,
+					"NumberOfBursts": 5,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 4000,
+					"ReloadTimeMS": 3300,
 					"RangeAttributesShort":  { "Accuracy": 20 },
 					"RangeAttributesMedium": { "Accuracy": 16 },
-					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
+					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1050 }
 				}
 			}
 		},
@@ -5170,14 +5171,14 @@
 			"UnitAttributes": {
 				"Resource1Cost": 250,
 				"Resource2Cost": 55,
-				"MaxHealth": 620,
+				"MaxHealth": 650,
 				"ExperienceValue": 350,
 				"ProductionTime": 17,
 				"SensorRadius": 1250,
 				"ContactRadius": 1350,
 				"Armour": 5,
 				"PriorityAsTarget": 10,
-				"AggroRange": 1100
+				"AggroRange": 1050
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -5213,16 +5214,16 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 45,
+					"BaseDamagePerRound": 48,
 					"BurstPeriodMinTimeMS": 90,
 					"BurstPeriodMaxTimeMS": 90,
-					"NumberOfBursts": 6,
+					"NumberOfBursts": 5,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 4000,
+					"ReloadTimeMS": 3300,
 					"RangeAttributesShort":  { "Accuracy": 20 },
 					"RangeAttributesMedium": { "Accuracy": 16 },
-					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
+					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1050 }
 				}
 			}
 		},
@@ -5924,7 +5925,8 @@
 					"MaxSpeed": 50,
 					"MaxSpeedTurnRadius": 90
 				},
-				"Combat": { "MaxDesiredCombatRange": 1780 }
+				"Combat": { "MaxDesiredCombatRange": 1780 },
+				"Hover": { "TurnAcceleration": 50 }
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
@@ -5968,7 +5970,8 @@
 					"MaxSpeed": 50,
 					"MaxSpeedTurnRadius": 90
 				},
-				"Combat": { "MaxDesiredCombatRange": 1780 }
+				"Combat": { "MaxDesiredCombatRange": 1780 },
+				"Hover": { "TurnAcceleration": 50 }
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
@@ -6015,7 +6018,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 700,
 				"Resource2Cost": 400,
-				"MaxHealth": 4000,
+				"MaxHealth": 3800,
 				"PopCapCost": 8,
 				"ProductionTime": 65,
 				"Armour": 20
@@ -6065,7 +6068,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 700,
 				"Resource2Cost": 400,
-				"MaxHealth": 4000,
+				"MaxHealth": 3800,
 				"PopCapCost": 8,
 				"ProductionTime": 65,
 				"Armour": 19
