@@ -2469,9 +2469,9 @@ Full combined changelog can be found [HERE](jaraci.md)
 *Not yet reflected in the main changelog.*
 * General:
 	* Global CU cost multiplier: `1 => 0.5`
-	* Salvager CU mining:
-		* Collected per cycle: `2 => 1`
-		* Storage: `50 => 25`
+	* Salvager CU mining (Extends CU patch duration):
+		* Collected from patch per cycle: `2 => 1`
+		* Each collected CU resource now worth 2 when dropping off
 	* Fixed an issue where G/K RU storage wasn't modified (`40 => 20`)
 * Gaalsien/Khaaneph:
 	* Population capacity upgrades:
