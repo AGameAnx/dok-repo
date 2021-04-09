@@ -90,6 +90,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-03 12.9](#2021-04-03-129)
 	- [2021-04-04 12.10](#2021-04-04-1210)
 	- [2021-04-08 12.11](#2021-04-08-1211)
+	- [2021-04-09 12.12](#2021-04-09-1212)
 
 # Changes
 
@@ -2463,3 +2464,39 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Range: `1850 => 1700`
 		* Movement speed: `58 => 61`
 	* Honourguard cruiser hover turn acceleration: `1.5 => 50`
+
+## 2021-04-09 12.12
+*Not yet reflected in the main changelog.*
+* General:
+	* Global CU cost multiplier: `1 => 0.5`
+	* Salvager CU mining:
+		* Collected per cycle: `2 => 1`
+		* Storage: `50 => 25`
+	* Fixed an issue where G/K RU storage wasn't modified (`40 => 20`)
+* Gaalsien/Khaaneph:
+	* Population capacity upgrades:
+		* Level 1:
+			* Cost: `200CU => 150CU`
+			* Research time: `10s => 5s`
+		* Level 2 research time: `10s => 7s`
+		* Level 5 cost: `750CU => 700CU`
+	* Assault ship:
+		* Cost: `320CU 35RU => 300CU 35RU`
+		* Build time: `19s => 18s`
+	* Assault railgun reload: `3.3s => 3s`
+	* Honourguard cruiser:
+		* Cost: `550CU 300RU => 500CU 250RU`
+		* Population cost: `8 => 7`
+		* Hitpoints: `2700 => 2400`
+		* Speed: `50 => 55`
+		* Hover turn acceleration: `50 => 10` (looked bad visually)
+		* AOE: `200 => 170`
+* Gaalsien:
+	* Siege cruiser:
+		* Speed: `66 => 64`
+		* Autofire damage: `170 => 150`
+* Coalition/Soban:
+	* Artillery cruiser:
+		* Autofire damage: `110 => 80`
+		* Barrage damage: `240 => 220`
+		* Precision barrage damage: `200 => 180`

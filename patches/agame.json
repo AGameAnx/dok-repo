@@ -2,22 +2,29 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "12.11",
-		"LastUpdate": "2021-04-08",
+		"Version": "12.12",
+		"LastUpdate": "2021-04-09",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
-	/*"Global": {
+	"Global": {
 		"UnitAttributes": {
-			"Resource1Cost": 0,
+			"Resource1CostMult": 0.5
+			/*"Resource1Cost": 0,
 			"Resource2Cost": 0,
-			"ProductionTime": 1,
+			"ProductionTime": 1,*/
 		},
 		"ResearchItemAttributes": {
-			"Resource1Cost": 0,
+			"Resource1CostMult": 0.5
+			/*"Resource1Cost": 0,
 			"Resource2Cost": 0,
-			"ResearchTime": 1,
+			"ResearchTime": 1,*/
+		},
+		"AbilityAttributes": {
+			"Any": {
+				"Resource1CostMult": 0.5
+			}
 		}
-	},*/
+	},
 	"Entities": {
 		"Research_Buff_G_Power_1": {
 			"ResearchItemAttributes": {
@@ -3299,9 +3306,17 @@
 					"Resource1Cost": 100
 				}
 			},
+			"HarvesterAttributes": {
+				"SalvageCycles": {
+					"0": {
+						"ResourcesLoadedPerCycle": 1
+					}
+				}
+			},
 			"StorageAttributes": {
 				"C_Harvester_StorageAttributesAsset_MP": {
 					"InventoryLoadout": {
+						"Resource1": { "Capacity": 25 },
 						"Resource2": { "Capacity": 20 }
 					}
 				}
@@ -3320,9 +3335,17 @@
 					"Resource1Cost": 100
 				}
 			},
+			"HarvesterAttributes": {
+				"SalvageCycles": {
+					"0": {
+						"ResourcesLoadedPerCycle": 1
+					}
+				}
+			},
 			"StorageAttributes": {
-				"C_Harvester_StorageAttributesAsset_MP": {
+				"G_Harvester_StorageAttributesAsset_MP": {
 					"InventoryLoadout": {
+						"Resource1": { "Capacity": 25 },
 						"Resource2": { "Capacity": 20 }
 					}
 				}
@@ -3341,9 +3364,17 @@
 					"Resource1Cost": 100
 				}
 			},
+			"HarvesterAttributes": {
+				"SalvageCycles": {
+					"0": {
+						"ResourcesLoadedPerCycle": 1
+					}
+				}
+			},
 			"StorageAttributes": {
-				"C_Harvester_StorageAttributesAsset_MP": {
+				"G_Harvester_StorageAttributesAsset_MP": {
 					"InventoryLoadout": {
+						"Resource1": { "Capacity": 25 },
 						"Resource2": { "Capacity": 20 }
 					}
 				}
@@ -3362,12 +3393,14 @@
 		
 		"Research_Buff_Fleet_Popcap_1": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 200
+				"Resource1Cost": 150,
+				"ResearchTime": 5
 			}
 		},
 		"Research_Buff_Fleet_Popcap_2": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 250
+				"Resource1Cost": 250,
+				"ResearchTime": 7
 			}
 		},
 		"Research_Buff_Fleet_Popcap_3": {
@@ -3382,7 +3415,7 @@
 		},
 		"Research_Buff_Fleet_Popcap_5": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 750
+				"Resource1Cost": 700
 			}
 		},
 		
@@ -4167,9 +4200,9 @@
 		
 		"G_Catamaran_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 320,
+				"Resource1Cost": 300,
 				"Resource2Cost": 35,
-				"ProductionTime": 19,
+				"ProductionTime": 18,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
 				"Armour": 7,
@@ -4207,9 +4240,9 @@
 		},
 		"K_AssaultShip_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 320,
+				"Resource1Cost": 300,
 				"Resource2Cost": 35,
-				"ProductionTime": 19,
+				"ProductionTime": 18,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
 				"Armour": 7,
@@ -5160,7 +5193,7 @@
 					"NumberOfBursts": 5,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 3300,
+					"ReloadTimeMS": 3000,
 					"RangeAttributesShort":  { "Accuracy": 20 },
 					"RangeAttributesMedium": { "Accuracy": 16 },
 					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1050 }
@@ -5220,7 +5253,7 @@
 					"NumberOfBursts": 5,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 3300,
+					"ReloadTimeMS": 3000,
 					"RangeAttributesShort":  { "Accuracy": 20 },
 					"RangeAttributesMedium": { "Accuracy": 16 },
 					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1050 }
@@ -5912,9 +5945,9 @@
 		"G_HonorGuard_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 550,
-				"Resource2Cost": 300,
-				"MaxHealth": 2700,
-				"PopCapCost": 8,
+				"Resource2Cost": 250,
+				"MaxHealth": 2400,
+				"PopCapCost": 7,
 				"ProductionTime": 50
 			},
 			"DetectableAttributes": {
@@ -5922,11 +5955,11 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 50,
+					"MaxSpeed": 55,
 					"MaxSpeedTurnRadius": 90
 				},
 				"Combat": { "MaxDesiredCombatRange": 1780 },
-				"Hover": { "TurnAcceleration": 50 }
+				"Hover": { "TurnAcceleration": 10 }
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
@@ -5935,7 +5968,7 @@
 					"ReloadTimeMS": 5000,
 					"WindUpTimeMS": 1600,
 					"AreaOfEffectFalloffType": "Linear",
-					"AreaOfEffectRadius": 200,
+					"AreaOfEffectRadius": 170,
 					"WindDownTimeMS": 250,
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 30,
@@ -5956,10 +5989,10 @@
 		},
 		"K_HonorGuard_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 550,
-				"Resource2Cost": 300,
-				"MaxHealth": 2700,
-				"PopCapCost": 8,
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"MaxHealth": 2400,
+				"PopCapCost": 7,
 				"ProductionTime": 50
 			},
 			"DetectableAttributes": {
@@ -5967,11 +6000,11 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 50,
+					"MaxSpeed": 55,
 					"MaxSpeedTurnRadius": 90
 				},
 				"Combat": { "MaxDesiredCombatRange": 1780 },
-				"Hover": { "TurnAcceleration": 50 }
+				"Hover": { "TurnAcceleration": 10 }
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
@@ -5980,7 +6013,7 @@
 					"ReloadTimeMS": 5000,
 					"WindUpTimeMS": 1600,
 					"AreaOfEffectFalloffType": "Linear",
-					"AreaOfEffectRadius": 200,
+					"AreaOfEffectRadius": 170,
 					"WindDownTimeMS": 250,
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 30,
@@ -6183,7 +6216,7 @@
 			},
 			"WeaponAttributes": {
 				"C_ArtilleryCruiser_Weapon_Barrage_MP": {
-					"BaseDamagePerRound": 240,
+					"BaseDamagePerRound": 220,
 					"AreaOfEffectRadius": 98,
 					"NumberOfBursts": 6,
 					"RateOfFire": 3,
@@ -6209,6 +6242,7 @@
 					}
 				},
 				"C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
+					"BaseDamagePerRound": 180,
 					"ExcludeFromHeightAdvantage": true,
 					"RangeAttributesLong": {
 						"Distance": 2750
@@ -6229,7 +6263,7 @@
 					}
 				},
 				"C_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 110,
+					"BaseDamagePerRound": 80,
 					"ReloadTimeMS": 7500,
 					"DamagePacketsPerShot": 1,
 					"Modifiers": {
@@ -6295,7 +6329,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 66,
+					"MaxSpeed": 64,
 					"AccelerationTime": 3,
 					"BrakingTime": 1.25
 				}
@@ -6338,7 +6372,7 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 170,
+					"BaseDamagePerRound": 150,
 					"DamagePacketsPerShot": 2,
 					"ReloadTimeMS": 9000,
 					"NumberOfBursts": 2,
