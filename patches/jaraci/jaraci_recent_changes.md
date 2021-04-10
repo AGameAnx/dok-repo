@@ -91,6 +91,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-04 12.10](#2021-04-04-1210)
 	- [2021-04-08 12.11](#2021-04-08-1211)
 	- [2021-04-09 12.12](#2021-04-09-1212)
+	- [2021-04-10 12.13](#2021-04-10-1213)
 
 # Changes
 
@@ -2468,7 +2469,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 ## 2021-04-09 12.12
 *Not yet reflected in the main changelog.*
 * General:
-	* Global CU cost multiplier: `1 => 0.5`
 	* Salvager CU mining (Extends CU patch duration):
 		* Collected from patch per cycle: `2 => 1`
 		* Each collected CU resource now worth 2 when dropping off
@@ -2500,3 +2500,12 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Autofire damage: `110 => 80`
 		* Barrage damage: `240 => 220`
 		* Precision barrage damage: `200 => 180`
+
+## 2021-04-10 12.13
+*Not yet reflected in the main changelog.*
+* General:
+	* Salvager RU mining (Extends RU patch duration):
+		* Cycle duration multiplier: `1 => 2`
+		* Each collected RU resource now worth 2 when dropping off
+* Coalition/Soban:
+	* Assault cruiser ability cooldown: `30s => 40s`
