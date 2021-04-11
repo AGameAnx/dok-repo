@@ -2514,8 +2514,19 @@ Full combined changelog can be found [HERE](jaraci.md)
 ## 2021-04-11 12.14
 *Not yet reflected in the main changelog.*
 * General:
+	* "Incoming missile" (nuke) indicators:
+		* No longer provide sight in the targeted area
+		* Fixed an issue where these indicators could get destroyed by area of effect damage
+		* Fixed additional issues where these indicators cost population
 	* Fixed sunder descriptions
+* Gaalsien:
+	* Super-sonic missile barrage AOE: `230 => 245`
+* Coalition:
+	* Cruise missile "Incoming missile" indicator delay: `2.75s => 1.5s`
 * Soban:
+	* Microwave emitter:
+		* Target icon display duration: `20s => 39s`
+		* "Incoming missile" indicator delay: `0.1s => 1.5s`
 	* Battlecruiser:
 		* Accuracy: `7%/6%/5% => 40%/100%/65%`
 		* Accuracy modifier against strike craft: `500% => 100%`
