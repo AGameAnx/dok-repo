@@ -386,7 +386,8 @@
 	* Interceptor damage packets: `2 => 3`
 		> Interceptors were proving too good at sniping cruisers/armored targets
 	* Precision bomber:
-		> Damage output adjustments, increases hits to kill a production cruiser which is very important for the mirror matchup
+		> Damage output adjustments, increases hits to kill a production cruiser which is very important for the
+		> mirror matchup
 		* Damage: `900 => 800`
 		* Armor: `15 => 12`
 	* Siege cruiser EMP:
