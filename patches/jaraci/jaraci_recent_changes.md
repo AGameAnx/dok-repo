@@ -2519,8 +2519,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Fixed an issue where these indicators could get destroyed by area of effect damage
 		* Fixed additional issues where these indicators cost population
 	* Fixed sunder descriptions
-* Gaalsien:
-	* Super-sonic missile barrage AOE: `230 => 245`
 * Coalition:
 	* Cruise missile "Incoming missile" indicator delay: `2.75s => 1.5s`
 * Soban:
@@ -2531,3 +2529,5 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Accuracy: `7%/6%/5% => 40%/100%/65%`
 		* Accuracy modifier against strike craft: `500% => 100%`
 		* Damage modifier against strike craft: `100% => 50%`
+* Gaalsien:
+	* Super-sonic missile barrage AOE: `230 => 245`
