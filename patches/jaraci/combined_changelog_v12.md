@@ -2,7 +2,6 @@
 
 **Focus behind patch**:
 - Fix the situation of 3 base greed being too easy and stable to execute.
-- Make railgun midgame plays more viable, fix C/S railgun balance in general.
 - Provide a more permanent solution to C/S carrier move outs being the center point of their metagame.
 - Improve G/K midgame variety - allow aggressive options which require two production slots without buffing
     faction greed.
@@ -12,12 +11,12 @@
     to make army trading mistakes increase overall trading in lategame through population limit and resource
     income changes.
 - Reduce the strength of mid-lategame strike craft counters while keeping strike craft balanced for early game.
-- Increase synergies between midgame units and railguns.
+- Tighten up interactions of all midgame units.
+- Make railgun midgame plays more viable, fix C/S railgun balance in general.
 - Increase power level of individual battlecruiser units, make them more capable of operating outside the main
     blob.
-- Tighten up interactions of all midgame units.
 - Reduce coin-flippy nature of certain early game build orders.
-- Improve the feeling of C/S cruisers feeling too squishy in the early game.
+- Improve the feeling of C/S carriers feeling too squishy in the early game.
 - Improve UX consistency and bug situation.
 
 ## Changes:
@@ -203,7 +202,7 @@
 		* Reload: `3.2s/8.5s => 3.8s/6.3s`
 		* Self-Smoke ability:
 			* Renamed to: `Field Repairs`
-			* Now immobilizes the unit while active
+			* Now immobilizes the unit for the duration of being covered by smoke
 			* Now heals the unit while active:
 				* Tick period: `0.2s`
 				* Heal amount per tick: `30`
@@ -224,7 +223,7 @@
 	* Artillery cruiser:
 		> This unit is performing very well as an option against slow moving enemy units (railguns, HGC) but its
 		> power level was overall too high. Making it easier to snipe and making autofire not nearly as insane
-		> as it used to be (having a few artillery cruisers would hard counter G?K HRs even without barrages
+		> as it used to be (having a few artillery cruisers would hard counter G/K HRs even without barrages
 		> previously)
 		* Hitpoints: `1900 => 1600`
 		* Autofire:
@@ -398,8 +397,8 @@
 		> After the initial reduction to polarizing effect this unit had on strike craft battle, this unit was
 		> deemed underpowered. Various statistical buffs to the unit, but it is also now more squishy, resembling
 		> a railgun more as well as making it more susceptible to consolidated attacks. Hover turn acceleration
-		> increase does help this unit keep its target better and turn when it's being outflanked, however, but
-		> should mostly only help with usability. Outflanking this unit should remain rewarding
+		> increase does help this unit keep its target better and turn when it's being outflanked, but should
+		> mostly only help with usability. Outflanking this unit should remain rewarding
 		* Research cost: `500CU 280RU => 550CU 200RU`
 		* Research time: `65s => 60s`
 		* Cost: `550CU 250RU => 500CU 250RU`
