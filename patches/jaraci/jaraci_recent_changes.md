@@ -2377,7 +2377,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Bomber:
 		* Hitpoints: `1350 => 1300`
 		* Armor: `15 => 10`
-	* Support cruiser: cost: `450CU 50RU => 500CU 50RU`
 	* Assault cruiser:
 		* Research cost: `500CU 250RU => 450CU 200RU`
 		* Cost: `550CU 220RU => 550CU 260RU`
@@ -2411,7 +2410,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Hitpoints: `900 => 850`
 		* Movement speed: `72 => 76`
 	* Assault railgun:
-		* Hitpoints: `650 => 620`
 		* Reload: `3.8s => 4s`
 		* Dart maneuver:
 			* Cooldown: `35s => 50s`
@@ -2529,5 +2527,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Accuracy: `7%/6%/5% => 40%/100%/65%`
 		* Accuracy modifier against strike craft: `500% => 100%`
 		* Damage modifier against strike craft: `100% => 50%`
+* Gaalsien/Khaaneph:
+	* Honourguard cruiser hover turn acceleration: `10 => 5`
 * Gaalsien:
 	* Super-sonic missile barrage AOE: `230 => 245`
