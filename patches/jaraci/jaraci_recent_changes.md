@@ -92,6 +92,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-08 12.11](#2021-04-08-1211)
 	- [2021-04-09 12.12](#2021-04-09-1212)
 	- [2021-04-10 12.13](#2021-04-10-1213)
+	- [2021-04-11 12.14](#2021-04-11-1214)
 
 # Changes
 
@@ -2509,3 +2510,13 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Each collected RU resource now worth 2 when dropping off
 * Coalition/Soban:
 	* Assault cruiser ability cooldown: `30s => 40s`
+
+## 2021-04-11 12.14
+*Not yet reflected in the main changelog.*
+* General:
+	* Fixed sunder descriptions
+* Soban:
+	* Battlecruiser:
+		* Accuracy: `7%/6%/5% => 40%/100%/65%`
+		* Accuracy modifier against strike craft: `500% => 100%`
+		* Damage modifier against strike craft: `100% => 50%`
