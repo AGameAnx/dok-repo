@@ -2290,7 +2290,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* AAV hitpoints: `970 => 940`
 * Coalition:
 	* Carrier:
-		* Hitpoints: `8900 => 8650`
+		* Hitpoints: `8900 => 8700`
 		* Reactive armor power systems armor:
 			* Level 0: `15 => 20`
 			* Level 1: `20 => 25`
@@ -2531,3 +2531,5 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Honourguard cruiser hover turn acceleration: `10 => 5`
 * Gaalsien:
 	* Super-sonic missile barrage AOE: `230 => 245`
+* Khaaneph:
+	* Siege cruiser EMP cooldown: `45s => 75s` (To match G)
