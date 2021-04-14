@@ -26,6 +26,14 @@
 		}
 	},*/
 	"Entities": {
+		"Artifact": {
+			"RelicAttributes": {
+				"BuffsWhileHolding": {
+					"0": { "Value": -65 }
+				}
+			}
+		},
+		
 		"Research_Buff_G_Power_1": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 200,
@@ -3351,11 +3359,9 @@
 			"HarvesterAttributes": {
 				"SalvageCycles": {
 					"0": {
-						"ResourcesExtractedPerCycle": 1
-					},
-					"1": {
-						"CycleDurationMult": 2,
-						"ResourcesLoadedPerCycle": 2
+						"ResourcesLoadedPerCycle": 5,
+						"ResourcesExtractedPerCycle": 4,
+						"CycleDuration": 1.25
 					}
 				}
 			},
@@ -3383,11 +3389,9 @@
 			"HarvesterAttributes": {
 				"SalvageCycles": {
 					"0": {
-						"ResourcesExtractedPerCycle": 1
-					},
-					"1": {
-						"CycleDurationMult": 2,
-						"ResourcesLoadedPerCycle": 2
+						"ResourcesLoadedPerCycle": 5,
+						"ResourcesExtractedPerCycle": 4,
+						"CycleDuration": 1.25
 					}
 				}
 			},
@@ -3415,11 +3419,9 @@
 			"HarvesterAttributes": {
 				"SalvageCycles": {
 					"0": {
-						"ResourcesExtractedPerCycle": 1
-					},
-					"1": {
-						"CycleDurationMult": 2,
-						"ResourcesLoadedPerCycle": 2
+						"ResourcesLoadedPerCycle": 5,
+						"ResourcesExtractedPerCycle": 4,
+						"CycleDuration": 1.25
 					}
 				}
 			},
@@ -3494,8 +3496,9 @@
 		
 		"C_Baserunner_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 160,
 				"Resource2Cost": 40,
-				"MaxHealth": 2400,
+				"MaxHealth": 1700,
 				"PriorityAsTarget": -250
 			},
 			"UnitMovementAttributes": {
@@ -3546,8 +3549,9 @@
 		},
 		"C_Sob_Baserunner_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 160,
 				"Resource2Cost": 40,
-				"MaxHealth": 2400,
+				"MaxHealth": 1700,
 				"PriorityAsTarget": -250
 			},
 			"UnitMovementAttributes": {
@@ -3605,8 +3609,9 @@
 		},
 		"G_Baserunner_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 160,
 				"Resource2Cost": 40,
-				"MaxHealth": 1900,
+				"MaxHealth": 1600,
 				"PriorityAsTarget": -250
 			},
 			"UnitMovementAttributes": {
@@ -3719,13 +3724,14 @@
 		},
 		"K_Baserunner_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 160,
 				"Resource2Cost": 40,
-				"MaxHealth": 1700,
+				"MaxHealth": 1500,
 				"PriorityAsTarget": -220
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 80
+					"MaxSpeed": 84
 				}
 			},
 			"AbilityAttributes": {

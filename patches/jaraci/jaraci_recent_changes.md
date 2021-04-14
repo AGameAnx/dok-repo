@@ -93,6 +93,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-09 12.12](#2021-04-09-1212)
 	- [2021-04-10 12.13](#2021-04-10-1213)
 	- [2021-04-11 12.14](#2021-04-11-1214)
+	- [2021-04-14 12.15](#2021-04-14-1215)
 
 # Changes
 
@@ -2533,3 +2534,28 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Super-sonic missile barrage AOE: `230 => 245`
 * Khaaneph:
 	* Siege cruiser EMP cooldown: `45s => 75s` (To match G)
+
+## 2021-04-14 12.15
+*Not yet reflected in the main changelog.*
+* General:
+	* Salvager mining:
+		* CU:
+			* Resources collected from patch per cycle: `1 => 4`
+			* Cycle duration: `0.5s => 1.25s`
+			* Resource dropped off to collected ratio: `2 => 1.25`
+			* Total resource patch duration extension from vanilla: `100% => 25%`
+		* RU (reverted to vanilla):
+			* Cycle duration multiplier: `2 => 1`
+			* Resource collected to dropped off ratio: `0.5 => 1`
+			* Total resource patch duration extension from vanilla: `100% => 0%`
+	* Baserunner:
+		* Cost: `250CU 40RU => 160CU 40RU` (retire returns: `187CU 30RU => 120CU 30RU`)
+		* Speed penalty while holding an artifact: `33% => 65%`
+* Coalition/Soban:
+	* Baserunner hitpoints: `2400 => 1700`
+* Gaalsien:
+	* Baserunner hitpoints: `1900 => 1600`
+* Khaaneph:
+	* Baserunner:
+		* Hitpoints: `1700 => 1500`
+		* Movement speed: `80 => 84`
