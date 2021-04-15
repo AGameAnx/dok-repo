@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "12.15",
-		"LastUpdate": "2021-04-14",
+		"Version": "12.16",
+		"LastUpdate": "2021-04-15",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	/*"Global": {
@@ -29,7 +29,7 @@
 		"Artifact": {
 			"RelicAttributes": {
 				"BuffsWhileHolding": {
-					"0": { "Value": -65 }
+					"0": { "Value": -25 }
 				}
 			}
 		},
@@ -630,7 +630,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 8700,
 				"Armour": 20,
-				"PriorityAsTarget": -2
+				"PriorityAsTarget": -15
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -1119,7 +1119,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 8400,
 				"Armour": 15,
-				"PriorityAsTarget": -2
+				"PriorityAsTarget": -15
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -1873,7 +1873,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 8300,
 				"Armour": 20,
-				"PriorityAsTarget": -2
+				"PriorityAsTarget": -15
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 35 }
@@ -2401,7 +2401,7 @@
 				"SensorRadius": 1200,
 				"ContactRadius": 1350,
 				"Armour": 18,
-				"PriorityAsTarget": -2
+				"PriorityAsTarget": -15
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": { "MaxSpeed": 38 }
@@ -3349,7 +3349,7 @@
 				"MaxHealth": 950,
 				"PopCapCost": 2,
 				"Armour": 0,
-				"PriorityAsTarget": -2
+				"PriorityAsTarget": -4
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
@@ -3375,11 +3375,11 @@
 		},
 		"G_Harvester_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 180,
+				"Resource1Cost": 170,
 				"MaxHealth": 950,
 				"PopCapCost": 2,
 				"Armour": 5,
-				"PriorityAsTarget": -2
+				"PriorityAsTarget": -4
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
@@ -3405,11 +3405,11 @@
 		},
 		"K_Harvester_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 180,
+				"Resource1Cost": 170,
 				"MaxHealth": 950,
 				"PopCapCost": 2,
 				"Armour": 5,
-				"PriorityAsTarget": -2
+				"PriorityAsTarget": -4
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
@@ -3496,7 +3496,7 @@
 		
 		"C_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 160,
+				"Resource1Cost": 220,
 				"Resource2Cost": 40,
 				"MaxHealth": 1700,
 				"PriorityAsTarget": -250
@@ -3549,7 +3549,7 @@
 		},
 		"C_Sob_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 160,
+				"Resource1Cost": 220,
 				"Resource2Cost": 40,
 				"MaxHealth": 1700,
 				"PriorityAsTarget": -250
@@ -3609,7 +3609,7 @@
 		},
 		"G_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 160,
+				"Resource1Cost": 220,
 				"Resource2Cost": 40,
 				"MaxHealth": 1600,
 				"PriorityAsTarget": -250
@@ -3724,7 +3724,7 @@
 		},
 		"K_Baserunner_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 160,
+				"Resource1Cost": 220,
 				"Resource2Cost": 40,
 				"MaxHealth": 1500,
 				"PriorityAsTarget": -220
@@ -3838,7 +3838,8 @@
 				"ProductionTime": 40,
 				"MaxHealth": 2700,
 				"Armour": 5,
-				"PopCapCost": 5
+				"PopCapCost": 5,
+				"PriorityAsTarget": -10
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -3918,7 +3919,8 @@
 				"ProductionTime": 40,
 				"MaxHealth": 2700,
 				"Armour": 5,
-				"PopCapCost": 5
+				"PopCapCost": 5,
+				"PriorityAsTarget": -10
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -4258,7 +4260,7 @@
 		"G_Catamaran_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 300,
-				"Resource2Cost": 35,
+				"Resource2Cost": 30,
 				"ProductionTime": 18,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
@@ -4298,7 +4300,7 @@
 		"K_AssaultShip_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 300,
-				"Resource2Cost": 35,
+				"Resource2Cost": 30,
 				"ProductionTime": 18,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
@@ -5580,6 +5582,7 @@
 			},
 			"WeaponAttributes": {
 				"C_Interceptor_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 110,
 					"DamagePacketsPerShot": 2,
 					"BurstPeriodMinTimeMS": 667,
 					"BurstPeriodMaxTimeMS": 667,
@@ -5858,7 +5861,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 54,
+					"BaseDamagePerRound": 52,
 					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
@@ -5924,7 +5927,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 54,
+					"BaseDamagePerRound": 52,
 					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
@@ -5937,9 +5940,9 @@
 					}
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
-					"BaseDamagePerRound": 180,
+					"BaseDamagePerRound": 160,
 					"AreaOfEffectFalloffType": "Quadratic",
-					"AreaOfEffectRadius": 140,
+					"AreaOfEffectRadius": 160,
 					"ExcludeFromHeightAdvantage": true,
 					"RangeAttributesLong": { "Distance": 1000 },
 					"Modifiers": {
@@ -6120,8 +6123,8 @@
 		
 		"C_Battlecruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 700,
-				"Resource2Cost": 400,
+				"Resource1Cost": 850,
+				"Resource2Cost": 350,
 				"MaxHealth": 3800,
 				"PopCapCost": 8,
 				"ProductionTime": 65,
@@ -6164,8 +6167,8 @@
 		},
 		"C_Sob_Battlecruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 700,
-				"Resource2Cost": 400,
+				"Resource1Cost": 850,
+				"Resource2Cost": 350,
 				"MaxHealth": 3800,
 				"PopCapCost": 8,
 				"ProductionTime": 65,
@@ -6185,8 +6188,8 @@
 			"WeaponAttributes": {
 				"C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
 					"TargetPrioritizationAttributes": {
-						"WeaponEffectivenessWeight": 500,
-						"TargetPriorityWeight": 50,
+						"WeaponEffectivenessWeight": 800,
+						"TargetPriorityWeight": 250,
 						"AutoTargetStickyBias": 50,
 						"AngleWeight": 25,
 						"DistanceWeight": 0.05

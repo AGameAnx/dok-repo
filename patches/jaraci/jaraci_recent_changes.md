@@ -94,6 +94,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-10 12.13](#2021-04-10-1213)
 	- [2021-04-11 12.14](#2021-04-11-1214)
 	- [2021-04-14 12.15](#2021-04-14-1215)
+	- [2021-04-15 12.16](#2021-04-15-1216)
 
 # Changes
 
@@ -2559,3 +2560,25 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Baserunner:
 		* Hitpoints: `1700 => 1500`
 		* Movement speed: `80 => 84`
+
+## 2021-04-15 12.16
+*Not yet reflected in the main changelog.*
+* General:
+	* Baserunner:
+		* Cost: `160CU 40RU => 220CCU 40RU`
+		* Speed penalty while holding an artifact: `65% => 25%`
+	* Reduced carrier priority as target
+	* Reduced salvager priority as target
+* Coalition/Soban:
+	* Strike fighter damage per rocket: `120 => 110`
+	* Reduced support cruiser priority as target
+	* Assault cruiser
+		* Cost: `550CU 260RU => 600CU 250RU`
+		* Damage: `54 => 52`
+	* Battlecruiser cost: `700CU 400RU => 850CU 350RU`
+* Soban:
+	* Fixed an issue where assault cruiser tac missile barrage damage and AOE weren't updated with newest values
+	* Adjusted Battlecruiser target prioritization
+* Gaalsien/Khaaneph:
+	* Salvager cost: `180CU => 170CU`
+	* Assault ship cost: `300CU 35RU => 300CU 30RU`
