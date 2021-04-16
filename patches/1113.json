@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "1113 KDS Realism Mod",
 		"Author": "S'Aarum",
-		"Version": "1.5.4.6",
-		"LastUpdate": "31-03-2021"
+		"Version": "1.5.4.7",
+		"LastUpdate": "16-04-2021"
 	},	
 	"Entities": {
 		"Research_Buff_Power_1": {
@@ -2092,6 +2092,9 @@
 				}
 			}
 		},
+		"C_Harvester_MP": {
+			"UnitAttributes": { "PopCapCost": 0 }
+		},
 		"G_Harvester_MP": {
 			"UnitAttributes": { "PopCapCost": 0 }
 		},
@@ -2199,11 +2202,11 @@
 					"BaseDamagePerRound": 100,
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 150,
-					"NumberOfBursts": 8,
+					"NumberOfBursts": 16,
 					"RateOfFire": 4,
-					"CooldownTimeMS": 900,
-					"BurstPeriodMinTimeMS": 1500,
-					"BurstPeriodMaxTimeMS": 2000,
+					"CooldownTimeMS": 500,
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1000,
 					"RangeAttributesLong": { "Distance": 2850 },
 					"Modifiers": {
 						"1": {
@@ -2294,7 +2297,6 @@
 				"Resource2Cost": 250,
 				"MaxHealth": 3000,
 				"Armour": 5,
-				"ProductionTime": 60,
 				"PopCapCost": 0
 			},
 		    "AbilityAttributes": {
@@ -2312,11 +2314,11 @@
 					"BaseDamagePerRound": 150,
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 180,
-					"NumberOfBursts": 8,
+					"NumberOfBursts": 16,
 					"RateOfFire": 4,
-					"CooldownTimeMS": 500,
-					"BurstPeriodMinTimeMS": 1500,
-					"BurstPeriodMaxTimeMS": 2000,
+					"CooldownTimeMS": 800,
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1000,
 					"RangeAttributesLong": { "Distance": 3200 },
 					"Modifiers": {
 						"1": {
@@ -2430,10 +2432,10 @@
 					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 100,
 					"NumberOfBursts": 4,
-					"RateOfFire": 4,
-					"CooldownTimeMS": 1500,
-					"BurstPeriodMinTimeMS": 550,
-					"BurstPeriodMaxTimeMS": 650,
+					"RateOfFire": 6,
+					"CooldownTimeMS": 2000,
+					"BurstPeriodMinTimeMS": 500,
+					"BurstPeriodMaxTimeMS": 500,
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
@@ -2539,11 +2541,11 @@
 					"BaseDamagePerRound": 200,
 					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 100,
-					"NumberOfBursts": 4,
-					"RateOfFire": 4,
-					"CooldownTimeMS": 500,
-					"BurstPeriodMinTimeMS": 1050,
-					"BurstPeriodMaxTimeMS": 1050,
+					"NumberOfBursts": 8,
+					"RateOfFire": 6,
+					"CooldownTimeMS": 2000,
+					"BurstPeriodMinTimeMS": 500,
+					"BurstPeriodMaxTimeMS": 500,
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
@@ -3156,7 +3158,7 @@
 					}
 				},
 				"C_Interceptor_Weapon_A2A_MP": {
-					"BaseDamagePerRound": 270,
+					"BaseDamagePerRound": 120,
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 80,
 					"RateOfFire": 5,
@@ -3168,7 +3170,7 @@
 							"TargetClass": "Air",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 40
+							"Amount": 100
 						},
 						"13": {
 							"TargetClass": "Carrier, Small, Medium, Large, Support",
@@ -3205,7 +3207,7 @@
 			},
 			"WeaponAttributes": {
 				"C_Interceptor_Weapon_A2A": {
-					"BaseDamagePerRound": 300,
+					"BaseDamagePerRound": 150,
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 80,
 					"RateOfFire": 4,
@@ -3217,7 +3219,7 @@
 							"TargetClass": "Air",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 40
+							"Amount": 100
 						},
 						"13": {
 							"TargetClass": "Carrier, Small, Medium, Large, Support",
@@ -3383,9 +3385,117 @@
 		},
 		"C_Sob_ArtilleryCruiser_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"MaxHealth": 2500,
+				"Armour": 5,
+				"ProductionTime": 60,
 				"PopCapCost": 0
+			},
+		    "AbilityAttributes": {
+			    "Ability_C_ArtilleryBarrage_Precise": {
+				"Resource1Cost": 0,
+				"CooldownTimeSecs": 40
+				},
+				"Ability_C_ArtilleryBarrage": {
+					"Resource1Cost": 0,
+					"CooldownTimeSecs": 60
+					}
+		    },
+			"WeaponAttributes": {
+				"C_ArtilleryCruiser_Weapon_Barrage_MP": {
+					"BaseDamagePerRound": 100,
+					"DamagePacketsPerShot": 1,
+					"AreaOfEffectRadius": 150,
+					"NumberOfBursts": 16,
+					"RateOfFire": 4,
+					"CooldownTimeMS": 500,
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1000,
+					"RangeAttributesLong": { "Distance": 2850 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Carrier, Large",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 150
+						}
+					}
+				},
+				"C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
+					"BaseDamagePerRound": 100,
+					"DamagePacketsPerShot": 1,
+					"AreaOfEffectRadius": 180,
+					"ExcludeFromHeightAdvantage": true,
+					"RangeAttributesLong": {
+						"Distance": 2200
+					},
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 100
+						}
+					}
+				},
+				"C_ArtilleryCruiser_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 100,
+					"DamagePacketsPerShot": 1,
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 70
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						}
+					}
+				},
+				"C_ArtilleryCruiser_Weapon_PointDefense_MP": {
+					"LineOfSightRequired": true,
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak",
+					"BaseDamagePerRound": 12,
+					"DamagePacketsPerShot": 2,
+					"NumberOfBursts": 10,
+					"BurstPeriodMinTimeMS": 600,
+					"BurstPeriodMaxTimeMS": 1100,
+					"ReloadTimeMS": 2500,
+					"RateOfFire": 15,
+					"RangeAttributesShort": {
+						"Accuracy": 80,
+						"Distance": 300
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 65,
+						"Distance": 700
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 40,
+						"Distance": 1000
+					},
+					"Modifiers": {
+					    "0": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
+						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
+					}
+				}
 			}
-		},	
+		},
 		"C_Sob_AssaultCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 550,
@@ -4019,35 +4129,35 @@
 		},
 		"Research_Buff_Fleet_Popcap_1": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 5,
+				"Resource1Cost": 0,
 				"Resource2Cost": 0,
 				"ResearchTime": 10
 		    }	
 		},
 		"Research_Buff_Fleet_Popcap_2": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 5,
+				"Resource1Cost": 0,
 				"Resource2Cost": 0,
 				"ResearchTime": 10
 		    }	
 		},
 		"Research_Buff_Fleet_Popcap_3": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 5,
+				"Resource1Cost": 0,
 				"Resource2Cost": 0,
 				"ResearchTime": 10
 		    }	
 		},
 		"Research_Buff_Fleet_Popcap_4": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 5,
+				"Resource1Cost": 0,
 				"Resource2Cost": 0,
 				"ResearchTime": 10
 		    }	
 		},
 		"Research_Buff_Fleet_Popcap_5": {
 		    "ResearchItemAttributes": {
-				"Resource1Cost": 5,
+				"Resource1Cost": 0,
 				"Resource2Cost": 0,
 				"ResearchTime": 10
 		    }	
@@ -4074,6 +4184,7 @@
 		},
 		"Tier_1_G_Catamaran": {
 		    "ResearchItemAttributes": {
+				"ResearchTime": 50,
 				"Resource1Cost": 0,
 				"Resource2Cost": 0
 		    }
