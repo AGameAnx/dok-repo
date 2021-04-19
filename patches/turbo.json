@@ -430,6 +430,7 @@
 		"C_Carrier_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 60000,
+				"Armour": 50,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
@@ -690,15 +691,33 @@
 					
 					"2": { 
 						"PowerLevels": {
+							"0": {
+								"LocalizedShortDescriptionStringID": "Armor: 50"
+							},
+							
+							"1": {
+								"LocalizedShortDescriptionStringID": "Armor: 60",
+								"StatusEffectsToApply": {
+									"Armour_2_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 10 }
+												}
+											}
+										}
+									}
+								}
+							},
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Armor: 55",
+								"LocalizedShortDescriptionStringID": "Armor: 65",
 								"StatusEffectsToApply": {
 									"Armour_3_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 30 }
+													"0": { "Value": 15 }
 												}
 											}
 										}
@@ -707,13 +726,13 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Armor: 90",
+								"LocalizedShortDescriptionStringID": "Armor: 70",
 								"StatusEffectsToApply": {
 									"Armour_4_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 65 }
+													"0": { "Value": 20 }
 												}
 											}
 										}
@@ -722,13 +741,13 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Armor: 95",
+								"LocalizedShortDescriptionStringID": "Armor: 85",
 								"StatusEffectsToApply": {
 									"Armour_5_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 70 }
+													"0": { "Value": 35 }
 												}
 											}
 										}
@@ -742,7 +761,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 80 }
+													"0": { "Value": 55 }
 												}
 											}
 										}
@@ -895,7 +914,7 @@
 		"C_Sob_Carrier_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 60000,
-				"Armour": 15,
+				"Armour": 50,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
@@ -944,7 +963,7 @@
 					"ExcludeFromHeightAdvantage": false
 				},
 				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 400,
+					"BaseDamagePerRound": 1100,
 					"RateOfFire": 6,
 					"ExcludeFromHeightAdvantage": false,
 					"BurstPeriodMaxTimeMS": 250,
@@ -1313,17 +1332,17 @@
 						"PowerLevels": {
 							
 							"0": {
-								"LocalizedShortDescriptionStringID": "Armor: 15"
+								"LocalizedShortDescriptionStringID": "Armor: 50"
 							},
 							
 							"1": {
-								"LocalizedShortDescriptionStringID": "Armor: 20",
+								"LocalizedShortDescriptionStringID": "Armor: 60",
 								"StatusEffectsToApply": {
 									"Armour_2_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 5 }
+													"0": { "Value": 10 }
 												}
 											}
 										}
@@ -1332,13 +1351,13 @@
 							},
 							
 							"2": {
-								"LocalizedShortDescriptionStringID": "Armor: 55",
+								"LocalizedShortDescriptionStringID": "Armor: 65",
 								"StatusEffectsToApply": {
 									"Armour_3_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 30 }
+													"0": { "Value": 15 }
 												}
 											}
 										}
@@ -1347,13 +1366,13 @@
 							},
 							
 							"3": {
-								"LocalizedShortDescriptionStringID": "Armor: 90",
+								"LocalizedShortDescriptionStringID": "Armor: 70",
 								"StatusEffectsToApply": {
 									"Armour_4_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 65 }
+													"0": { "Value": 20 }
 												}
 											}
 										}
@@ -1362,13 +1381,13 @@
 							},
 							
 							"4": {
-								"LocalizedShortDescriptionStringID": "Armor: 100",
+								"LocalizedShortDescriptionStringID": "Armor: 85",
 								"StatusEffectsToApply": {
 									"Armour_5_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 75 }
+													"0": { "Value": 35 }
 												}
 											}
 										}
@@ -1382,7 +1401,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 80 }
+													"0": { "Value": 55 }
 												}
 											}
 										}
@@ -1634,7 +1653,7 @@
 		"G_Carrier_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 55000,
-				"Armour": 90,
+				"Armour": 70,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
@@ -2167,7 +2186,7 @@
 				"MaxHealth": 55000,
 				"SensorRadius": 1200,
 				"ContactRadius": 1350,
-				"Armour": 90,
+				"Armour": 70,
 				"PriorityAsTarget": -2
 			},
 			"UnitMovementAttributes": {
@@ -3088,7 +3107,7 @@
 				"Resource1Cost": 50,
 				"PopCapCost": 1,
 				"MaxHealth": 7800,
-				"Armour": 15,
+				"Armour": 10,
 				"PriorityAsTarget": 2
 			},"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
@@ -3110,7 +3129,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 50,
 				"MaxHealth": 7800,
-				"Armour": 15,
+				"Armour": 10,
 				"PopCapCost": 1,
 				"PriorityAsTarget": 2,
 				"ProductionTime": 10
@@ -3135,7 +3154,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 50,
 				"MaxHealth": 7800,
-				"Armour": 15,
+				"Armour": 10,
 				"PopCapCost": 1,
 				"PriorityAsTarget": 2,
 				"ProductionTime": 10
@@ -3195,6 +3214,7 @@
 				"Resource2Cost": 20,
 				"MaxHealth": 6700,
 				"PopCapCost": 5,
+				"Armour": 15,
 				"PriorityAsTarget": -250,
 				"ProductionTime": 12
 			},
@@ -3250,6 +3270,7 @@
 				"Resource1Cost": 425,
 				"Resource2Cost": 20,
 				"MaxHealth": 6700,
+				"Armour": 15,
 				"PopCapCost": 5,
 				"PriorityAsTarget": -250,
 				"ProductionTime": 12
@@ -3311,6 +3332,7 @@
 				"Resource2Cost": 20,
 				"MaxHealth": 6700,
 				"PopCapCost": 5,
+				"Armour": 15,
 				"PriorityAsTarget": -250,
 				"ProductionTime": 12
 			},
@@ -3408,6 +3430,7 @@
 				"Resource1Cost": 425,
 				"Resource2Cost": 0,
 				"MaxHealth": 6700,
+				"Armour": 15,
 				"PriorityAsTarget": -220,
 				"ProductionTime": 12
 			},
@@ -3521,7 +3544,7 @@
 				"Resource2Cost": 0,
 				"ProductionTime": 23,
 				"MaxHealth": 8200,
-				"Armour": 25,
+				"Armour": 30,
 				"PopCapCost": 4
 				
 			},
@@ -3602,7 +3625,7 @@
 				"Resource2Cost": 0,
 				"ProductionTime": 23,
 				"MaxHealth": 8200,
-				"Armour": 25,
+				"Armour": 30,
 				"PopCapCost": 4
 			},
 			"UnitMovementAttributes": {
@@ -3690,7 +3713,7 @@
 		"G_SupportCruiser_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 8100,
-				"Armour": 25,
+				"Armour": 30,
 				"Resource1Cost": 300,
 				"Resource2Cost": 0,
 				"SensorRadius": 1450,
@@ -3704,7 +3727,7 @@
 					"ProjectileEntityTypeToSpawn": "G_Artillery_Default_ProjectileAssetContainer_MP",
 					"LineOfSightRequired": true,
 					"RateOfFire": 15,
-					"BaseDamagePerRound": 250,
+					"BaseDamagePerRound": 150,
 					"RangeAttributesShort": {
 						"Accuracy": 55,
 						"Distance": 800
@@ -3730,7 +3753,7 @@
 		"K_SupportCruiser_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 8100,
-				"Armour": 25,
+				"Armour": 30,
 				"Resource1Cost": 300,
 				"Resource2Cost": 0,
 				"SensorRadius": 1450,
@@ -3744,7 +3767,7 @@
 					"ProjectileEntityTypeToSpawn": "G_Artillery_Default_ProjectileAssetContainer_MP",
 					"LineOfSightRequired": true,
 					"RateOfFire": 15,
-					"BaseDamagePerRound": 250,
+					"BaseDamagePerRound": 150,
 					"RangeAttributesShort": {
 						"Accuracy": 55,
 						"Distance": 800
@@ -3850,7 +3873,7 @@
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 62 }
+				"Dynamics": { "MaxSpeed": 82 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_AssaultShipRegen": {
@@ -3893,7 +3916,7 @@
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 62 }
+				"Dynamics": { "MaxSpeed": 82 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_AssaultShipRegen": {
@@ -4889,7 +4912,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 82,
+					"MaxSpeed": 90,
 					"AccelerationTime": 1.5,
 					"BrakingTime": 1.2
 				}
@@ -4921,7 +4944,7 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 520,
+					"BaseDamagePerRound": 320,
 					"BurstPeriodMinTimeMS": 90,
 					"BurstPeriodMaxTimeMS": 90,
 					"NumberOfBursts": 6,
@@ -4948,7 +4971,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 82,
+					"MaxSpeed": 90,
 					"AccelerationTime": 1.5,
 					"BrakingTime": 1.2
 				}
@@ -4980,7 +5003,7 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 520,
+					"BaseDamagePerRound": 320,
 					"BurstPeriodMinTimeMS": 90,
 					"BurstPeriodMaxTimeMS": 90,
 					"NumberOfBursts": 6,
@@ -5075,7 +5098,7 @@
 			},
 			"WeaponAttributes": {
 				"C_HAC_Upgrade01_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 760,
+					"BaseDamagePerRound": 660,
 					"ReloadTimeMS": 2500
 				},
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
@@ -5124,7 +5147,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 760,
+					"BaseDamagePerRound": 660,
 					"ReloadTimeMS": 2500,
 					"Turret": {
 						"RotationSpeed": 160,
@@ -5188,7 +5211,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 760,
+					"BaseDamagePerRound": 660,
 					"ReloadTimeMS": 2500,
 					"Turret": {
 						"RotationSpeed": 160,
@@ -5239,7 +5262,7 @@
 				"Resource1Cost": 175,
 				"Resource2Cost": 10,
 				"MaxHealth": 3780,
-				"Armour": 4,
+				"Armour": 17,
 				"ProductionTime": 12,
 				"PopCapCost": 2
 			},
@@ -5284,7 +5307,7 @@
 				"MaxHealth": 3780,
 				"Resource1Cost": 175,
 				"Resource2Cost": 10,
-				"Armour": 2,
+				"Armour": 18,
 				"ProductionTime": 12,
 				"PopCapCost": 2
 			},
@@ -5311,7 +5334,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 3780,
 				"Resource2Cost": 10,
-				"Armour": 2,
+				"Armour": 18,
 				"ProductionTime": 7,
 				"PopCapCost": 2,
 				"Resource1Cost": 125
@@ -5369,7 +5392,7 @@
 				"Resource1Cost": 225,
 				"Resource2Cost": 25,
 				"MaxHealth": 4100,
-				"Armour": 20,
+				"Armour": 22,
 				"PopCapCost": 2,
 				"ProductionTime": 14
 			},
@@ -5412,6 +5435,7 @@
 				"Resource2Cost": 25,
 				"PopCapCost": 2,
 				"ProductionTime": 14,
+				"Armour": 18,
 				"Resource1Cost": 225
 			},
 			"UnitMovementAttributes": {
@@ -5443,6 +5467,7 @@
 				"Resource2Cost": 225,
 				"PopCapCost": 2,
 				"ProductionTime": 14,
+				"Armour": 18,
 				"Resource1Cost": 25
 			},
 			"UnitMovementAttributes": {
@@ -5514,19 +5539,19 @@
 			"UnitAttributes": {
 				"Resource1Cost": 170,
 				"Resource2Cost": 20,
-				"MaxHealth": 2800,
-				"Armour": 9,
+				"MaxHealth": 4800,
+				"Armour": 20,
 				"PopCapCost": 1,
 				"ProductionTime": 27
 			},
 			"WeaponAttributes": {
 				"C_GunShip_Weapon_DefaultFire_MP": {
 					"DamagePacketsPerShot": 4,
-					"BaseDamagePerRound": 675,
+					"BaseDamagePerRound": 1075,
 					"AreaOfEffectRadius": 160,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
-						"Distance": 1250
+						"Distance": 1350
 					}
 				}
 			}
@@ -5538,12 +5563,12 @@
 				"Resource2Cost": 125,
 				"MaxHealth": 8400,
 				"ProductionTime": 44,
-				"Armour": 22,
+				"Armour": 55,
 				"PopCapCost": 6
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 550,
+					"BaseDamagePerRound": 800,
 					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
@@ -5554,7 +5579,7 @@
 					"OutputDPS": true
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
-					"BaseDamagePerRound": 280,
+					"BaseDamagePerRound": 580,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 140,
 					"ExcludeFromHeightAdvantage": false,
@@ -5570,7 +5595,7 @@
 				}
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 77}
+				"Dynamics": { "MaxSpeed": 75}
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
@@ -5602,12 +5627,12 @@
 				"Resource2Cost": 125,
 				"MaxHealth": 8400,
 				"ProductionTime": 42,
-				"Armour": 22,
+				"Armour": 55,
 				"PopCapCost": 6 
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 550,
+					"BaseDamagePerRound": 800,
 					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
@@ -5634,7 +5659,7 @@
 				}
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 65 }
+				"Dynamics": { "MaxSpeed": 75 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
@@ -5691,8 +5716,9 @@
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 120,
-				"MaxHealth": 10500,
+				"MaxHealth": 15200,
 				"PopCapCost": 6,
+				"Armour": 65,
 				"ProductionTime": 45
 			},
 			"DetectableAttributes": {
@@ -5705,7 +5731,7 @@
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 2150,
+					"BaseDamagePerRound": 2550,
 					"ReloadTimeMS": 4500,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 250,
@@ -5728,8 +5754,9 @@
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 120,
-				"MaxHealth": 8200,
+				"MaxHealth": 15200,
 				"PopCapCost": 6,
+				"Armour": 65,
 				"ProductionTime": 45
 			},
 			"DetectableAttributes": {
@@ -5742,7 +5769,7 @@
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 2150,
+					"BaseDamagePerRound": 2550,
 					"ReloadTimeMS": 4500,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 250,
@@ -5779,10 +5806,10 @@
 			"UnitAttributes": {
 				"Resource1Cost": 580,
 				"Resource2Cost": 112,
-				"MaxHealth": 13000,
+				"MaxHealth": 20000,
 				"PopCapCost": 6,
 				"ProductionTime": 37,
-				"Armour": 30
+				"Armour": 80
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -5803,12 +5830,12 @@
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 15,
 					"WindUpTimeMS": 1200,	
-					"BaseDamagePerRound": 880,
+					"BaseDamagePerRound": 1180,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 75,
 					"ReloadTimeMS": 4800,
 					"RangeAttributesLong": {
-						"Distance": 1200
+						"Distance": 1400
 					}
 				}
 			}
@@ -5817,10 +5844,10 @@
 			"UnitAttributes": {
 				"Resource1Cost": 570,
 				"Resource2Cost": 110,
-				"MaxHealth": 13000,
+				"MaxHealth": 20000,
 				"PopCapCost": 6,
 				"ProductionTime": 42,
-				"Armour": 30
+				"Armour": 80
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -5843,7 +5870,7 @@
 					},
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 75,
-					"BaseDamagePerRound": 840,
+					"BaseDamagePerRound": 1240,
 					"WindUpTimeMS": 1200,
 					"CooldownTimeMS": 2200,
 					"ReloadTimeMS": 8500,
@@ -5873,8 +5900,8 @@
 			"UnitAttributes": {
 				"Resource1Cost": 425,
 				"Resource2Cost": 125,
-				"MaxHealth": 8000,
-				"Armour": 25,
+				"MaxHealth": 14000,
+				"Armour": 65,
 				"ProductionTime": 45,
 				"PopCapCost": 7
 			},
@@ -5897,7 +5924,7 @@
 			},
 			"WeaponAttributes": {
 				"C_ArtilleryCruiser_Weapon_Barrage_MP": {
-					"BaseDamagePerRound": 500,
+					"BaseDamagePerRound": 750,
 					"NumberOfBursts": 9,
 					"RateOfFire": 8,
 					"CooldownTimeMS": 900,
@@ -5980,8 +6007,8 @@
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 100,
-				"MaxHealth": 7800,
-				"Armour": 20,
+				"MaxHealth": 12000,
+				"Armour": 45,
 				"ProductionTime": 40,
 				"PopCapCost": 7,
 				"SensorRadius": 1400,
@@ -6001,7 +6028,7 @@
 			},
 			"WeaponAttributes": {
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"BaseDamagePerRound": 480,
+					"BaseDamagePerRound": 880,
 					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 95,
 					"NumberOfBursts": 2,
@@ -6037,7 +6064,7 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 480,
+					"BaseDamagePerRound": 280,
 					"DamagePacketsPerShot": 2,
 					"ReloadTimeMS": 9000,
 					"NumberOfBursts": 2,
@@ -6072,12 +6099,12 @@
 			"UnitAttributes": {
 				"Resource1Cost": 425,
 				"Resource2Cost": 100,
-				"MaxHealth": 8200,
+				"MaxHealth": 12000,
 				"PopCapCost": 7,
 				"SensorRadius": 1100,
 				"ContactRadius": 1200,
 				"ProductionTime": 40,
-				"Armour": 20
+				"Armour": 45
 			},
 			"AbilityAttributes": {
 				"Ability_K_ArtilleryBarrage_01_MP": {
@@ -6087,7 +6114,7 @@
 			"WeaponAttributes": {
 				"K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
 					"AreaOfEffectRadius": 500,
-					"BaseDamagePerRound": 20,
+					"BaseDamagePerRound": 970,
 					"ReloadTimeMS": 4500,
 					"NumberOfBursts": 3,
 					"AreaOfEffectFalloffType": "Quadratic",
