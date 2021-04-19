@@ -2976,7 +2976,7 @@
 			},
 			"WeaponAttributes": {
 				"N_Gun_Turret_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 85,
+					"BaseDamagePerRound": 205,
 					"DamagePacketsPerShot": 2,
 					"NumberOfBursts": 15,
 					"CooldownTimeMS": 0,
@@ -3003,7 +3003,7 @@
 		},
 		"N_ECMField_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 500,
+				"MaxHealth": 2200,
 				"PopCapCost": 5,
 				"ContactRadius": 75,
 				"SensorRadius": 270,
@@ -3011,7 +3011,7 @@
 			},
 			"WeaponAttributes": {
         "N_ECMField_Weapon_G2G": {
-					"BaseDamagePerRound": 380,
+					"BaseDamagePerRound": 580,
 					"RateOfFire": 2
         }
       },
@@ -3064,6 +3064,7 @@
 				"Resource1Cost": 75,
 				"MaxHealth": 2200,
 				"ProductionTime": 12,
+				"Armour": 8,
 				"PopCapCost": 0
 			},
 			"UnitMovementAttributes": {
@@ -3074,7 +3075,7 @@
 			},
 			"WeaponAttributes": {
 				"K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 2050,
+					"BaseDamagePerRound": 2550,
 					"DamagePacketsPerShot": 20,
 					"AreaOfEffectRadius": 600,
 					"AreaOfEffectFalloffType": "Quadratic"
@@ -3086,9 +3087,14 @@
 			"UnitAttributes": {
 				"Resource1Cost": 50,
 				"PopCapCost": 1,
-				"MaxHealth": 1800,
-				"Armour": 10,
+				"MaxHealth": 7800,
+				"Armour": 15,
 				"PriorityAsTarget": 2
+			},"AbilityAttributes": {
+				"Ability_Common_DemoChargeLay_MP": {
+					"Resource1Cost": 25,
+					"CooldownTimeSecs": 5
+				}
 			},
 			"StorageAttributes": {
 				"C_Harvester_StorageAttributesAsset_MP": {
@@ -3103,15 +3109,16 @@
 		"G_Harvester_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 50,
-				"MaxHealth": 1800,
-				"Armour": 7,
+				"MaxHealth": 7800,
+				"Armour": 15,
 				"PopCapCost": 1,
 				"PriorityAsTarget": 2,
 				"ProductionTime": 10
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
-					"Resource1Cost": 25
+					"Resource1Cost": 25,
+					"CooldownTimeSecs": 5
 				}
 			},
 			"StorageAttributes": {
@@ -3127,15 +3134,16 @@
 		"K_Harvester_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 50,
-				"MaxHealth": 1800,
-				"Armour": 7,
+				"MaxHealth": 7800,
+				"Armour": 15,
 				"PopCapCost": 1,
 				"PriorityAsTarget": 2,
 				"ProductionTime": 10
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
-					"Resource1Cost": 25
+					"Resource1Cost": 25,
+					"CooldownTimeSecs": 5
 				}
 			},
 			"StorageAttributes": {
@@ -3313,7 +3321,8 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_DeployScanner_MP": {
-					"CooldownTimeSecs": 97
+					"CooldownTimeSecs": 67,
+					"Resource1Cost": 100
 				},
 				"Ability_G_BaseRunnerPassiveRegen": {
 					"CooldownTimeSecs": 25,
@@ -3512,7 +3521,7 @@
 				"Resource2Cost": 0,
 				"ProductionTime": 23,
 				"MaxHealth": 8200,
-				"Armour": 10,
+				"Armour": 25,
 				"PopCapCost": 4
 				
 			},
@@ -3521,14 +3530,14 @@
 			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
-					"RateOfFire": 35,
+					"RateOfFire": 75,
 					"RangeAttributesLong": {
-						"Distance": 1100
+						"Distance": 2100
 					}
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
 				  "LineOfSightRequired": true,
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 150,
 					"NumberOfBursts": 6,
 					"BurstPeriodMinTimeMS": 300,
 					"BurstPeriodMaxTimeMS": 300,
@@ -3545,7 +3554,7 @@
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 150,
 					"RateOfFire": 15,
 					"BurstPeriodMinTimeMS": 800,
 					"BurstPeriodMaxTimeMS": 900,
@@ -3593,7 +3602,7 @@
 				"Resource2Cost": 0,
 				"ProductionTime": 23,
 				"MaxHealth": 8200,
-				"Armour": 10,
+				"Armour": 25,
 				"PopCapCost": 4
 			},
 			"UnitMovementAttributes": {
@@ -3601,14 +3610,14 @@
 			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
-					"RateOfFire": 35,
+					"RateOfFire": 75,
 				"RangeAttributesLong": {
-						"Distance": 1100
+						"Distance": 2100
 					}
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"LineOfSightRequired": true,
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 150,
 					"NumberOfBursts": 4,
 					"BurstPeriodMinTimeMS": 300,
 					"BurstPeriodMaxTimeMS": 300,
@@ -3625,7 +3634,7 @@
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 150,
 					"RateOfFire": 15,
 					"BurstPeriodMinTimeMS": 800,
 					"BurstPeriodMaxTimeMS": 900,
@@ -3681,11 +3690,11 @@
 		"G_SupportCruiser_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 8100,
-				"Armour": 10,
+				"Armour": 25,
 				"Resource1Cost": 300,
 				"Resource2Cost": 0,
 				"SensorRadius": 1450,
-				"ContactRadius": 1600,
+				"ContactRadius": 1400,
 				"PopCapCost": 4,
 				"ProductionTime": 30
 			},
@@ -3694,7 +3703,8 @@
 					"ExcludeFromHeightAdvantage": false,
 					"ProjectileEntityTypeToSpawn": "G_Artillery_Default_ProjectileAssetContainer_MP",
 					"LineOfSightRequired": true,
-					"RateOfFire": 35,
+					"RateOfFire": 15,
+					"BaseDamagePerRound": 250,
 					"RangeAttributesShort": {
 						"Accuracy": 55,
 						"Distance": 800
@@ -3720,11 +3730,11 @@
 		"K_SupportCruiser_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 8100,
-				"Armour": 10,
+				"Armour": 25,
 				"Resource1Cost": 300,
 				"Resource2Cost": 0,
 				"SensorRadius": 1450,
-				"ContactRadius": 1600,
+				"ContactRadius": 1400,
 				"PopCapCost": 4,
 				"ProductionTime": 30
 			},
@@ -3733,7 +3743,8 @@
 					"ExcludeFromHeightAdvantage": false,
 					"ProjectileEntityTypeToSpawn": "G_Artillery_Default_ProjectileAssetContainer_MP",
 					"LineOfSightRequired": true,
-					"RateOfFire": 35,
+					"RateOfFire": 15,
+					"BaseDamagePerRound": 250,
 					"RangeAttributesShort": {
 						"Accuracy": 55,
 						"Distance": 800
@@ -3779,7 +3790,7 @@
 				"MaxHealth": 3800,
 				"SensorRadius": 1100,
 				"ProductionTime": 7,
-				"Armour": 20,
+				"Armour": 5,
 				"PopCapCost": 2
 			},
 			"WeaponAttributes": {
@@ -3834,12 +3845,12 @@
 				"ProductionTime":14,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
-				"Armour": 18,
+				"Armour": 5,
 				"MaxHealth": 3800,
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 92 }
+				"Dynamics": { "MaxSpeed": 62 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_AssaultShipRegen": {
@@ -3877,12 +3888,12 @@
 				"ProductionTime": 14,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
-				"Armour": 18,
+				"Armour": 5,
 				"MaxHealth": 3800,
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 92 }
+				"Dynamics": { "MaxSpeed": 62 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_AssaultShipRegen": {
@@ -3923,23 +3934,35 @@
 		"Research_Buff_G_ShipUnits_Armor1": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 150,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 on Assault Ship and Missile Ship",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 5 on Assault Ship and Missile Ship",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 1 } } },
-					"1": { "BuffSet": { "0": { "Value": 1 } } },
-					"2": { "BuffSet": { "0": { "Value": 1 } } },
-					"3": { "BuffSet": { "0": { "Value": 1 } } }
+					"0": { "BuffSet": { "0": { "Value": 5 } } },
+					"1": { "BuffSet": { "0": { "Value": 5 } } },
+					"2": { "BuffSet": { "0": { "Value": 5 } } },
+					"3": { "BuffSet": { "0": { "Value": 5 } } }
 				}
 			}
 		},
 		"Research_Buff_G_ShipUnits_Armor2": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Ship and Missile Ship",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 5 and hull integrity by 2000 on Assault Ship and Missile Ship",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 1 } } },
-					"1": { "BuffSet": { "0": { "Value": 1 } } },
-					"2": { "BuffSet": { "0": { "Value": 1 } } },
-					"3": { "BuffSet": { "0": { "Value": 1 } } }
+					"0": { "BuffSet": {
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} },
+					"2": { "BuffSet": {
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} },
+					"3": { "BuffSet": {
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} }
 				}
 			}
 		},
@@ -3948,14 +3971,31 @@
 				"Resource1Cost": 250,
 				"Resource2Cost": 250,
 				"ResearchTime": 25,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 200 on Assault Ship and Missile Ship"
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 10 and hull integrity by 4000 on Assault Ship and Missile Ship",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
+					} },
+					"2": { "BuffSet": {
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
+					} },
+					"3": { "BuffSet": {
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
+					} }
+				}
 			}
 		},
-		
 		"C_Escort_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 2200,
-				"Armour": 1,
+				"Armour": 10,
 				"ProductionTime": 10,
 				"PriorityAsTarget": 10,
 				"PopCapCost": 2,
@@ -4007,7 +4047,7 @@
 		"C_Sob_Escort_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 2200,
-				"Armour": 1,
+				"Armour": 10,
 				"ProductionTime": 10,
 				"PriorityAsTarget": 10,
 				"Resource1Cost": 50,
@@ -4074,7 +4114,8 @@
 				"SensorRadius": 1150,
 				"ProductionTime": 10,
 				"PriorityAsTarget": 5,
-				"Resource1Cost": 50, 
+				"Resource1Cost": 50,
+				"Armour": 10,
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
@@ -4111,6 +4152,7 @@
 				"ProductionTime": 10,
 				"PriorityAsTarget": 5,
 				"Resource1Cost": 50,
+				"Armour": 10,
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
@@ -4152,12 +4194,12 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
 				"ResearchTime": 25,
-				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 5.",
 				"UnitTypeBuffs": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": 1 },
-							"1": { "Value": 1 }
+							"0": { "Value": 5 },
+							"1": { "Value": 5 }
 						}
 					}
 				}
@@ -4167,12 +4209,12 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
 				"ResearchTime": 45,
-				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 10.",
 				"UnitTypeBuffs": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": 1 },
-							"1": { "Value": 1 }
+							"0": { "Value": 10 },
+							"1": { "Value": 10 }
 						}
 					}
 				}
@@ -4182,18 +4224,18 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
 				"ResearchTime": 25,
-				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 5.",
 				"UnitTypeBuffs": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": 1 },
-							"1": { "Value": 1 }
+							"0": { "Value": 5},
+							"1": { "Value": 5 }
 						}
 					},
 					"1": {
 						"BuffSet": {
-							"0": { "Value": 1 },
-							"1": { "Value": 1 }
+							"0": { "Value": 5 },
+							"1": { "Value": 5 }
 						}
 					}
 				}
@@ -4202,19 +4244,19 @@
 		"Research_Buff_S_Escort_Damage02": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 10.",
 				"ResearchTime": 45,
 				"UnitTypeBuffs": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": 1 },
-							"1": { "Value": 1 }
+							"0": { "Value": 10 },
+							"1": { "Value": 10 }
 						}
 					},
 					"1": {
 						"BuffSet": {
-							"0": { "Value": 1 },
-							"1": { "Value": 1 }
+							"0": { "Value": 10 },
+							"1": { "Value": 10 }
 						}
 					}
 				}
@@ -4228,14 +4270,14 @@
 				"UnitTypeBuffs": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": 1 },
-							"1": { "Value": 1 }
+							"0": { "Value": 5 },
+							"1": { "Value": 5 }
 						}
 					},
 					"1": {
 						"BuffSet": {
-							"0": { "Value": 1 },
-							"1": { "Value": 1 }
+							"0": { "Value": 5 },
+							"1": { "Value": 5 }
 						}
 					}
 				}
@@ -4248,14 +4290,14 @@
 				"UnitTypeBuffs": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": 1 },
-							"1": { "Value": 1 }
+							"0": { "Value": 10 },
+							"1": { "Value": 10 }
 						}
 					},
 					"1": {
 						"BuffSet": {
-							"0": { "Value": 1 },
-							"1": { "Value": 1 }
+							"0": { "Value": 10 },
+							"1": { "Value": 10 }
 						}
 					}
 				}
@@ -4265,11 +4307,11 @@
 		"Research_Buff_C_Escort_VehicleArmor01": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
-				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 10 and hull integrity by 2000.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+						"0": { "Value": 10 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 2000 }
 					} }
 				}
 			}
@@ -4277,11 +4319,11 @@
 		"Research_Buff_C_Escort_VehicleArmor02": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
-				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 10 and hull integrity by 3000.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+						"0": { "Value": 10 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 3000 }
 					} }
 				}
 			}
@@ -4289,15 +4331,15 @@
 		"Research_Buff_S_Escort_VehicleArmor01": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
-				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 10 and hull integrity by 2000.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+						"0": { "Value": 10 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 2000 }
 					} },
 					"1": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+						"0": { "Value": 10 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 2000 }
 					} }
 				}
 			}
@@ -4305,15 +4347,15 @@
 		"Research_Buff_S_Escort_VehicleArmor02": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 350,
-				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 10 and hull integrity by 3000.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+						"0": { "Value": 10 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 3000 }
 					} },
 					"1": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+						"0": { "Value": 10 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 3000 }
 					} }
 				}
 			}
@@ -4321,15 +4363,15 @@
 		"Research_Buff_G_SandSkimmer_VehicleArmor01": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 2000.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+						"0": { "Value": 10 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 2000 }
 					} },
 					"1": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+						"0": { "Value": 10 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 2000 }
 					} }
 				}
 			}
@@ -4337,15 +4379,15 @@
 		"Research_Buff_G_SandSkimmer_VehicleArmor02": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 10 and hull integrity by 3000.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+						"0": { "Value": 10 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 3000 }
 					} },
 					"1": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+						"0": { "Value": 10 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 3000 }
 					} }
 				}
 			}
@@ -4356,7 +4398,7 @@
 				"Resource1Cost": 220,
 				"Resource2Cost": 30,
 				"MaxHealth": 1340,
-				"Armour": 0,
+				"Armour": 10,
 				"ExperienceValue": 450,
 				"ProductionTime": 14,
 				"PriorityAsTarget": 25,
@@ -4371,7 +4413,7 @@
 			},
 			"WeaponAttributes": {
 				"C_Railgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 525,
+					"BaseDamagePerRound": 725,
 					"ReloadTimeMS": 2000,
 					"RangeAttributesShort": {
 						"Accuracy": 7
@@ -4419,7 +4461,7 @@
 				"Resource1Cost": 220,
 				"Resource2Cost": 30,
 				"MaxHealth": 1360,
-				"Armour": 0,
+				"Armour": 10,
 				"ExperienceValue": 470,
 				"ProductionTime": 14,
 				"PriorityAsTarget": 25,
@@ -4434,7 +4476,7 @@
 			},
 			"WeaponAttributes": {
 				"C_Sob_Railgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 545,
+					"BaseDamagePerRound": 745,
 					"CooldownTimeMS": 1300,
 					"ReloadTimeMS": 4250,
 					"RangeAttributesShort": {
@@ -4496,10 +4538,10 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 100,
 				"Resource2Cost": 250,
-				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 25.",
+				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 250.",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 25 } } },
-					"1": { "BuffSet": { "0": { "Value": 25 } } }
+					"0": { "BuffSet": { "0": { "Value": 250 } } },
+					"1": { "BuffSet": { "0": { "Value": 250 } } }
 				}
 			}
 		},
@@ -4507,100 +4549,124 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 100,
 				"Resource2Cost": 250,
-				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 25.",
+				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 250.",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 25 } } },
-					"1": { "BuffSet": { "0": { "Value": 25 } } }
+					"0": { "BuffSet": { "0": { "Value": 250 } } },
+					"1": { "BuffSet": { "0": { "Value": 250 } } }
 				}
 			}
 		},
 		
 		"Research_Buff_C_TrackedUnits_Armor01": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 on Armored Assault, Railgun and Missile Battery",
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 5 on Armored Assault, Railgun and Missile Battery",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 1 } } },
-					"1": { "BuffSet": { "0": { "Value": 1 } } },
-					"2": { "BuffSet": { "0": { "Value": 1 } } },
-					"3": { "BuffSet": { "0": { "Value": 1 } } }
+					"0": { "BuffSet": { "0": { "Value": 5 } } },
+					"1": { "BuffSet": { "0": { "Value": 5 } } },
+					"2": { "BuffSet": { "0": { "Value": 5 } } },
+					"3": { "BuffSet": { "0": { "Value": 5 } } }
 				}
 			}
 		},
 		"Research_Buff_C_TrackedUnits_Armor02": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 5 and hull integrity by 2000 on Armored Assault, Railgun and Missile Battery",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 1 } } },
-					"1": { "BuffSet": { "0": { "Value": 1 } } },
-					"2": { "BuffSet": { "0": { "Value": 1 } } },
-					"3": { "BuffSet": { "0": { "Value": 1 } } }
+					"0": { "BuffSet": {
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} },
+					"2": { "BuffSet": {
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} },
+					"3": { "BuffSet": { 
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} }
 				}
 			}
 		},
 		"Research_Buff_C_TrackedUnits_Armor03": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 10 and hull integrity by 4000 on Armored Assault, Railgun and Missile Battery",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} },
 					"1": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} },
 					"2": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} },
 					"3": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} }
 				}
 			}
 		},
 		"Research_Buff_S_TrackedUnits_Armor01": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 on Armored Assault, Railgun and Missile Battery",
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 5 on Armored Assault, Railgun and Missile Battery",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 1 } } },
-					"1": { "BuffSet": { "0": { "Value": 1 } } },
-					"2": { "BuffSet": { "0": { "Value": 1 } } },
-					"3": { "BuffSet": { "0": { "Value": 1 } } }
+					"0": { "BuffSet": { "0": { "Value": 5 } } },
+					"1": { "BuffSet": { "0": { "Value": 5 } } },
+					"2": { "BuffSet": { "0": { "Value": 5 } } },
+					"3": { "BuffSet": { "0": { "Value": 5 } } }
 				}
 			}
 		},
 		"Research_Buff_S_TrackedUnits_Armor02": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 5 and hull integrity by 2000 on Armored Assault, Railgun and Missile Battery",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 1 } } },
-					"1": { "BuffSet": { "0": { "Value": 1 } } },
-					"2": { "BuffSet": { "0": { "Value": 1 } } },
-					"3": { "BuffSet": { "0": { "Value": 1 } } }
+					"0": { "BuffSet": {
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} },
+					"1": { "BuffSet": { 
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} },
+					"2": { "BuffSet": { 
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} },
+					"3": { "BuffSet": {
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
+					} }
 				}
 			}
 		},
 		"Research_Buff_S_TrackedUnits_Armor03": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 10 and hull integrity by 4000 on Armored Assault, Railgun and Missile Battery",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} },
 					"1": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} },
 					"2": { "BuffSet": {
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} },
 					"3": { "BuffSet": {
 						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"1": { "Value": 4000 }
 					} }
 				}
 			}
@@ -4609,7 +4675,7 @@
 		"G_StarHullTank_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 1240,
-				"Armour": 0,
+				"Armour": 10,
 				"Resource1Cost": 220,
 				"Resource2Cost": 30,
 				"PopCapCost": 3,
@@ -4634,7 +4700,7 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 520,
+					"BaseDamagePerRound": 720,
 					"ReloadTimeMS": 600,
 					"RangeAttributesShort": {
 						"Accuracy": 7
@@ -4684,7 +4750,7 @@
 		"K_HeavyRailgun_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 1240,
-				"Armour": 0,
+				"Armour": 10,
 				"Resource1Cost": 220,
 				"Resource2Cost": 30,
 				"PopCapCost": 3,
@@ -4709,7 +4775,7 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 520,
+					"BaseDamagePerRound": 720,
 					"ReloadTimeMS": 600,
 					"RangeAttributesShort": {
 						"Accuracy": 7
@@ -4818,66 +4884,7 @@
 				"ProductionTime": 12,
 				"SensorRadius": 1250,
 				"ContactRadius": 1350,
-				"Armour": 4,
-				"PopCapCost": 3
-			},
-			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 102,
-					"AccelerationTime": 1.5,
-					"BrakingTime": 1.2
-				}
-			},
-			"AbilityAttributes": {
-				"Ability_G_AssaultRailgunRegen": {
-					"ApplyStatusEffect": {
-						"Regen_AssaultRailguns_StatusEffect": {
-							"Modifiers": {
-								"0": {
-									"HealthOverTimeAttributes": {
-										"Amount": 7
-									}
-								}
-							}
-						}
-					}
-				},
-				"Ability_G_RailGun_Dash_Move_To_MP": {
-					"CooldownTimeSecs": 25
-				},
-				"Ability_G_RailGun_Dash_MP": {
-					"ApplyStatusEffect": {
-						"RailGun_Dash_StatusEffect": {
-							"Duration": 3
-						}
-					}
-				}
-			},
-			"WeaponAttributes": {
-				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 220,
-					"BurstPeriodMinTimeMS": 90,
-					"BurstPeriodMaxTimeMS": 90,
-					"NumberOfBursts": 6,
-					"WindUpTimeMS": 600,
-					"WindDownTimeMS": 250,
-					"ReloadTimeMS": 3000,
-					"RangeAttributesShort":  { "Accuracy": 20 },
-					"RangeAttributesMedium": { "Accuracy": 16 },
-					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
-				}
-			}
-		},
-		"K_AssaultRailgun_MP": {
-			"UnitAttributes": {
-				"Resource1Cost": 170,
-				"Resource2Cost": 17,
-				"MaxHealth": 1100,
-				"ExperienceValue": 350,
-				"ProductionTime": 12,
-				"SensorRadius": 1250,
-				"ContactRadius": 1350,
-				"Armour": 4,
+				"Armour": 10,
 				"PopCapCost": 3
 			},
 			"UnitMovementAttributes": {
@@ -4902,7 +4909,7 @@
 					}
 				},
 				"Ability_G_RailGun_Dash_Move_To_MP": {
-					"CooldownTimeSecs": 25
+					"CooldownTimeSecs": 10
 				},
 				"Ability_G_RailGun_Dash_MP": {
 					"ApplyStatusEffect": {
@@ -4914,7 +4921,66 @@
 			},
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 220,
+					"BaseDamagePerRound": 520,
+					"BurstPeriodMinTimeMS": 90,
+					"BurstPeriodMaxTimeMS": 90,
+					"NumberOfBursts": 6,
+					"WindUpTimeMS": 600,
+					"WindDownTimeMS": 250,
+					"ReloadTimeMS": 3000,
+					"RangeAttributesShort":  { "Accuracy": 20 },
+					"RangeAttributesMedium": { "Accuracy": 16 },
+					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1100 }
+				}
+			}
+		},
+		"K_AssaultRailgun_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 170,
+				"Resource2Cost": 17,
+				"MaxHealth": 1100,
+				"ExperienceValue": 350,
+				"ProductionTime": 12,
+				"SensorRadius": 1250,
+				"ContactRadius": 1350,
+				"Armour": 10,
+				"PopCapCost": 3
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 82,
+					"AccelerationTime": 1.5,
+					"BrakingTime": 1.2
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_G_AssaultRailgunRegen": {
+					"ApplyStatusEffect": {
+						"Regen_AssaultRailguns_StatusEffect": {
+							"Modifiers": {
+								"0": {
+									"HealthOverTimeAttributes": {
+										"Amount": 7
+									}
+								}
+							}
+						}
+					}
+				},
+				"Ability_G_RailGun_Dash_Move_To_MP": {
+					"CooldownTimeSecs": 10
+				},
+				"Ability_G_RailGun_Dash_MP": {
+					"ApplyStatusEffect": {
+						"RailGun_Dash_StatusEffect": {
+							"Duration": 3
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 520,
 					"BurstPeriodMinTimeMS": 90,
 					"BurstPeriodMaxTimeMS": 90,
 					"NumberOfBursts": 6,
@@ -4937,33 +5003,33 @@
 		
 		"Research_Buff_G_RailGunUnits_Armor1": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 on Assault Railgun and Heavy Railgun.",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 5 on Assault Railgun and Heavy Railgun.",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 1 } } }, 
-					"1": { "BuffSet": { "0": { "Value": 1 } } }, 
-					"2": { "BuffSet": { "0": { "Value": 1 } } }, 
-					"3": { "BuffSet": { "0": { "Value": 1 } } } 
+					"0": { "BuffSet": { "0": { "Value": 5 } } }, 
+					"1": { "BuffSet": { "0": { "Value": 5 } } }, 
+					"2": { "BuffSet": { "0": { "Value": 5 } } }, 
+					"3": { "BuffSet": { "0": { "Value": 5 } } } 
 				}
 			}
 		},
 		"Research_Buff_G_RailGunUnits_Armor2": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun, armor by 1 and hull integrity by 50 on Assault Railgun.",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 5 and hull integrity by 2000 on Heavy Railgun, armor by 5 and hull integrity by 2000 on Assault Railgun.",
 				"Resource1Cost": 250,
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { 
-						"0": { "Value": 1 },
-						"1": { "Value": 50 }
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
 					} },
 					"1": { "BuffSet": { 
-						"0": { "Value": 1 }
+						"0": { "Value": 5 }
 					} },
 					"2": { "BuffSet": { 
-						"0": { "Value": 1 },
-						"1": { "Value": 50 }
+						"0": { "Value": 5 },
+						"1": { "Value": 2000 }
 					} },
 					"3": { "BuffSet": { 
-						"0": { "Value": 1 }
+						"0": { "Value": 5 }
 					} }
 				}
 			}
@@ -4971,23 +5037,23 @@
 		"Research_Buff_G_RailGunUnits_Armor3": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
-				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 10 and hull integrity by 4000 on Assault Railgun and Heavy Railgun.",
 				"UnitTypeBuffs": {
 					"0": { "BuffSet": { 
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} },
 					"1": { "BuffSet": { 
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} },
 					"2": { "BuffSet": { 
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} },
 					"3": { "BuffSet": { 
-						"0": { "Value": 1 },
-						"1": { "Value": 100 }
+						"0": { "Value": 10 },
+						"1": { "Value": 4000 }
 					} }
 				}
 			}
@@ -5009,7 +5075,7 @@
 			},
 			"WeaponAttributes": {
 				"C_HAC_Upgrade01_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 560,
+					"BaseDamagePerRound": 760,
 					"ReloadTimeMS": 2500
 				},
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
@@ -5058,7 +5124,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 560,
+					"BaseDamagePerRound": 760,
 					"ReloadTimeMS": 2500,
 					"Turret": {
 						"RotationSpeed": 160,
@@ -5122,7 +5188,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 560,
+					"BaseDamagePerRound": 760,
 					"ReloadTimeMS": 2500,
 					"Turret": {
 						"RotationSpeed": 160,
@@ -5194,7 +5260,7 @@
 					"DamagePacketsPerShot": 2,
 					"BurstPeriodMinTimeMS": 667,
 					"BurstPeriodMaxTimeMS": 667,
-					"ReloadTimeMS": 3332,
+					"ReloadTimeMS": 2332,
 					"RateOfFire": 3,
 					"Turret": {
 						"FieldOfView": 55,
@@ -5229,7 +5295,7 @@
 					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 67,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 4500,
+					"ReloadTimeMS": 2500,
 					"Modifiers": {
 						"13": {
 							"TargetClass": "Carrier",
@@ -5257,7 +5323,7 @@
 					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 67,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 4500,
+					"ReloadTimeMS": 2500,
 					"Modifiers": {
 						"13": {
 							"TargetClass": "Carrier",
@@ -5356,7 +5422,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Bomber_Weapon_A2G_MP": {
-					"BaseDamagePerRound": 1800,
+					"BaseDamagePerRound": 5000,
 					"ReloadTimeMS": 3500,
 					"AreaOfEffectRadius": 340,
 					"AreaOfEffectFalloffType": "Quadratic",
@@ -5387,7 +5453,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Bomber_Weapon_A2G_MP": {
-					"BaseDamagePerRound": 1800,
+					"BaseDamagePerRound": 5000,
 					"ReloadTimeMS": 3500,
 					"AreaOfEffectRadius": 340,
 					"AreaOfEffectFalloffType": "Quadratic",
@@ -5456,7 +5522,7 @@
 			"WeaponAttributes": {
 				"C_GunShip_Weapon_DefaultFire_MP": {
 					"DamagePacketsPerShot": 4,
-					"BaseDamagePerRound": 137,
+					"BaseDamagePerRound": 675,
 					"AreaOfEffectRadius": 160,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
@@ -5541,7 +5607,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 250,
+					"BaseDamagePerRound": 550,
 					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
@@ -5639,7 +5705,7 @@
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 1150,
+					"BaseDamagePerRound": 2150,
 					"ReloadTimeMS": 4500,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 250,
@@ -5653,6 +5719,7 @@
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
 					"WindUpTimeMS": 500,
+					"BaseDamagePerRound": 250,
 					"ReloadTimeMS": 3000
 				}
 			}
@@ -5675,7 +5742,7 @@
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 1150,
+					"BaseDamagePerRound": 2150,
 					"ReloadTimeMS": 4500,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 250,
@@ -5689,6 +5756,7 @@
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
 					"WindUpTimeMS": 500,
+					"BaseDamagePerRound": 250,
 					"ReloadTimeMS": 3000
 				}
 			}
@@ -5805,7 +5873,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 425,
 				"Resource2Cost": 125,
-				"MaxHealth": 5000,
+				"MaxHealth": 8000,
 				"Armour": 25,
 				"ProductionTime": 45,
 				"PopCapCost": 7
@@ -5829,7 +5897,7 @@
 			},
 			"WeaponAttributes": {
 				"C_ArtilleryCruiser_Weapon_Barrage_MP": {
-					"BaseDamagePerRound": 280,
+					"BaseDamagePerRound": 500,
 					"NumberOfBursts": 9,
 					"RateOfFire": 8,
 					"CooldownTimeMS": 900,
@@ -5874,7 +5942,7 @@
 					}
 				},
 				"C_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 280,
+					"BaseDamagePerRound": 500,
 					"DamagePacketsPerShot": 1,
 					"Modifiers": {
 						"1": {
@@ -5933,7 +6001,7 @@
 			},
 			"WeaponAttributes": {
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"BaseDamagePerRound": 280,
+					"BaseDamagePerRound": 480,
 					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 95,
 					"NumberOfBursts": 2,
@@ -5969,7 +6037,7 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 280,
+					"BaseDamagePerRound": 480,
 					"DamagePacketsPerShot": 2,
 					"ReloadTimeMS": 9000,
 					"NumberOfBursts": 2,
@@ -6018,7 +6086,7 @@
 			},
 			"WeaponAttributes": {
 				"K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"AreaOfEffectRadius": 250,
+					"AreaOfEffectRadius": 500,
 					"BaseDamagePerRound": 20,
 					"ReloadTimeMS": 4500,
 					"NumberOfBursts": 3,
@@ -6031,7 +6099,7 @@
 					"ExcludeFromHeightAdvantage": false,
 					"NumberOfBursts": 4,
 					"CooldownTimeMS": 2500,
-					"BaseDamagePerRound": 240,
+					"BaseDamagePerRound": 500,
 					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 240,
 					"AreaOfEffectFalloffType": "Quadratic",
