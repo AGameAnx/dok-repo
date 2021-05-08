@@ -3204,7 +3204,8 @@
 				"MaxHealth": 1100,
 				"Armour": 3,
 				"SensorRadius": 1400,
-				"ContactRadius": 1550
+				"ContactRadius": 1550,
+				"PriorityAsTarget": -15
 			}
 		},
 		"C_Sob_PopcapScanner": {
@@ -3212,7 +3213,8 @@
 				"Resource1Cost": 270,
 				"Armour": 3,
 				"WorldHeightOffset": 15,
-				"AggroRange": 900
+				"AggroRange": 900,
+				"PriorityAsTarget": -12
 			},
 			"WeaponAttributes": {
 				"C_Sob_PopCapScanner_Weapon_G2G_MP": {
@@ -3273,7 +3275,8 @@
 				"MaxHealth": 1100,
 				"PopCapCost": 0,
 				"ContactRadius": 400,
-				"SensorRadius": 270
+				"SensorRadius": 270,
+				"PriorityAsTarget": -500
 			},
 			"DetectableAttributes": {
 				"MinimumStateAfterDetection": "Hidden"
@@ -3324,7 +3327,7 @@
 				"Resource1Cost": 120,
 				"MaxHealth": 600,
 				"Armour": 1,
-				"ProductionTime": 70,
+				"ProductionTime": 1,
 				"PopCapCost": 2
 			},
 			"UnitMovementAttributes": {
@@ -3339,6 +3342,10 @@
 					"DamagePacketsPerShot": 15,
 					"AreaOfEffectRadius": 260,
 					"AreaOfEffectFalloffType": "Quadratic"
+				},
+				"K_ExplodingSkimmer_Weapon_G2G_MP": { // Fixes display issues
+					"BaseDamagePerRound": 620,
+					"DamagePacketsPerShot": 15
 				}
 			}
 		},
@@ -3349,7 +3356,7 @@
 				"MaxHealth": 950,
 				"PopCapCost": 2,
 				"Armour": 0,
-				"PriorityAsTarget": -4
+				"PriorityAsTarget": -25
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
@@ -3379,7 +3386,7 @@
 				"MaxHealth": 950,
 				"PopCapCost": 2,
 				"Armour": 5,
-				"PriorityAsTarget": -4
+				"PriorityAsTarget": -25
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
@@ -3409,7 +3416,7 @@
 				"MaxHealth": 950,
 				"PopCapCost": 2,
 				"Armour": 5,
-				"PriorityAsTarget": -4
+				"PriorityAsTarget": -25
 			},
 			"AbilityAttributes": {
 				"Ability_Common_DemoChargeLay_MP": {
@@ -4381,7 +4388,7 @@
 				"MaxHealth": 440,
 				"Armour": 2,
 				"ProductionTime": 12,
-				"PriorityAsTarget": 3
+				"PriorityAsTarget": 2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -4437,7 +4444,7 @@
 				"MaxHealth": 440,
 				"Armour": 2,
 				"ProductionTime": 12,
-				"PriorityAsTarget": 3
+				"PriorityAsTarget": 2
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -4995,7 +5002,7 @@
 					"MaxSpeedTurnRadius": 40
 				},
 				"Combat": { "MaxDesiredCombatRange": 1620 },
-				"Hover": { "TurnAcceleration": 120 }
+				"Hover": { "TurnAcceleration": 90 }
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500
@@ -5076,7 +5083,7 @@
 					"MaxSpeedTurnRadius": 40
 				},
 				"Combat": { "MaxDesiredCombatRange": 1620 },
-				"Hover": { "TurnAcceleration": 120 }
+				"Hover": { "TurnAcceleration": 90 }
 			},
 			"DetectableAttributes": {
 				"TimeVisibleAfterFiring": 4500

@@ -95,6 +95,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-11 12.14](#2021-04-11-1214)
 	- [2021-04-14 12.15](#2021-04-14-1215)
 	- [2021-04-15 12.16](#2021-04-15-1216)
+	- [2021-04-24 12.17](#2021-04-24-1217)
 
 # Changes
 
@@ -2582,3 +2583,18 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Gaalsien/Khaaneph:
 	* Salvager cost: `180CU => 170CU`
 	* Assault ship cost: `300CU 35RU => 300CU 30RU`
+
+## 2021-04-24 12.17
+*Not yet reflected in the main changelog.*
+* General:
+	* Reduced salvager priority as target
+	* Reduced strike craft priority as target
+* Coalition/Soban:
+	* Reduced logistics module priority as target
+* Soban:
+	* Reduced targeting jammer priority as target
+* Gaalsien/Khaaneph:
+	* Heavy railgun hover turn acceleration: `120 => 90`
+	* Honourguard cruiser hover turn acceleration: `5 => 2`
+* Khaaneph:
+	* Fixed an issue where blast drone displayed damage & packets incorrectly
