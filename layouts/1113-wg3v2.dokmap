@@ -8,33 +8,49 @@
 	<layout map="M09" mode="Team" players="2,3,4,5,6">
 
 		<spawns>
-			<!-- team 1 east -->
+			<!-- team 1 g -->
 			<spawn team="0" index="0" x="7000" y="-5000" angle="280" camera="280"/>
 			<spawn team="0" index="1" x="8000" y="-7000" angle="275" camera="275" />
       			<spawn team="0" index="2" x="9000" y="-6000" angle="270" camera="270"/>
-			<!-- team 2 west -->
+			<!-- team 2 c -->
 			<spawn team="1" index="0" x="-8300" y="800" angle="105" camera="105"/>
         		<spawn team="1" index="1" x="-8900" y="4800" angle="90" camera="90"/>
                         <spawn team="1" index="2" x="-5300" y="3800" angle="0" camera="105" fleet="false"/>
 		</spawns>
 
 		<resources>
-			<!-- team 0 index 0 -->
-			<resource x="8200" y="1900" type="cu" amount="7500"/>
-			<resource x="8200" y="2000" type="ru" amount="3000"/>
-			<resource x="8200" y="2100" type="cu" amount="7500"/>
 
-			<!-- team 1 index 0 -->
-			<resource x="-5500" y="3700" type="cu" amount="7500"/>
-			<resource x="-5500" y="3800" type="ru" amount="3000"/>
-			<resource x="-5500" y="3900" type="cu" amount="7500"/>
+			<!-- team 1 g -->
+			<resource x="8200" y="1900" type="cu" amount="1460"/>
+			<resource x="8200" y="2000" type="ru" amount="6270"/>
+			<resource x="8200" y="2100" type="cu" amount="1460"/>
+
+			<!-- team 2 c -->
+			<resource x="-8300" y="800" type="cu" amount="1460"/>
+			<resource x="-5500" y="3800" type="ru" amount="6270"/>
+			<resource x="-5500" y="3900" type="cu" amount="1460"/>
+
+			<resource x="-8900" y="5800" type="cu" amount="6945"/>
+			<resource x="-8800" y="5800 type="ru" amount="7330"/>
+			<resource x="-8700" y="5800 type="cu" amount="6945"/>
+
 		</resources>
 
     <units>
+     <!-- Gaalsien -->
+       <!-- Chiisur -->
+       <!-- Yldau -->
+       <!-- Wesiia -->
      <!-- Coalition -->
-     <!-- Paktu -->
+       <!-- S'Jet -->
          <!-- Support Unit / +1 SBR -->
-         <!-- Light Units  / +9 LAV -->
+	 <unit team="1" index="0" x="-9300" y="800" angle="105" type="C_Baserunner_MP"/>
+         <!-- Light Units  / +18 LAV -->
+	 <unit team="1" index="0" x="-6300" y="750" angle="105" type="C_Escort_MP"/>
+         <!-- +2 E-LAV -->
+	 <unit team="1" index="0" x="-6900" y="750" angle="105" type="C_Escort"/>
+	 <unit team="1" index="0" x="-6900" y="850" angle="105" type="C_Escort"/>
+       <!-- Soban -->
 
     </units>
 </layout>
