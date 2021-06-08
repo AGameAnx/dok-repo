@@ -11,28 +11,60 @@
  
     <spawns>
 
-        <!-- Gaalsien / Bottom team -->
-        <spawn team="0" index="0" x="-4550" y="-8850" angle="300" camera="300"/>
-        <spawn team="0" index="1" x="-250" y="-9000" angle="40" camera="40"/>
-        <spawn team="0" index="2" x="-6350" y="2900" angle="270" camera="0"/>
+		<!-- team 1 -->
+		<spawn team="0" index="0" x="-700" y="-1100" angle="90"/>
+		<spawn team="0" index="1" x="-2000" y="-5450" angle="0"/>
+			<spawn team="0" index="2" x="-700" y="-1100" angle="90" fleet="false"/>
+		<!-- team 2 -->
+		<spawn team="1" index="0"  x="-5600" y="3600" angle="130"/>
+		<spawn team="1" index="1" x="-3200" y="8050" angle="0"/>
+			<spawn team="1" index="2"  x="-5600" y="3600" angle="130" fleet="false"/>
+	</spawns>
+	
+	<resources>
+		<!-- team 1 -->
+		<resource x="-780" y="-1300" type="cu" amount="7500" collectors="2"/>
+		<resource x="-730" y="-1300" type="ru" amount="3000" collectors="2"/>
+		<resource x="-680" y="-1300" type="cu" amount="7500" collectors="2"/>
 
-        <!-- Coalition / Top team -->
-        <spawn team="1" index="0" x="4000" y="9050" angle="175" camera="175"/>
-        <spawn team="1" index="1" x="20" y="2450" angle="42" camera="42"/>
-        <spawn team="1" index="2" x="500" y="1100" angle="305" camera="305" fleet="false"/>
- 
-    </spawns>
+		<resource x="4250" y="-5000" type="cu" amount="10500" collectors="2"/>
+		<resource x="4250" y="-5050" type="ru" amount="4000" collectors="2"/>
 
-<resources>
- 
-            <!-- G -->
-            <resource x="-4050" y="-9550" type="ru" amount="2090" collectors="4"/>
-            
-            <!-- C -->
-            <resource x="4500" y="9050" type="ru" amount="1480" collectors="2"/>
+		<resource x="4500" y="-1800" type="cu" amount="10500" collectors="2"/>
+		<resource x="4550" y="-1800" type="ru" amount="4000" collectors="2"/>
 
+		<resource x="-2200" y="-5500" type="cu" amount="7500" collectors="2"/>
+		<resource x="-2200" y="-5450" type="ru" amount="3000" collectors="2"/>
+		<resource x="-2200" y="-5400" type="cu" amount="7500" collectors="2"/>
 
-</resources>
+		<resource x="-7000" y="-1350" type="cu" amount="10500" collectors="2"/>
+		<resource x="-7050" y="-1350" type="ru" amount="4000" collectors="2"/>
+
+		<resource x="-8500" y="500" type="cu" amount="10500" collectors="2"/>
+		<resource x="-8560" y="540" type="ru" amount="4000" collectors="2"/>
+
+		<!-- team 2 -->
+		<resource x="-5500" y="3900" type="cu" amount="7500" collectors="2"/>
+		<resource x="-5540" y="3914" type="ru" amount="3000" collectors="2"/>
+		<resource x="-5580" y="3928" type="cu" amount="7500" collectors="2"/>
+
+		<resource x="500" y="800" type="cu" amount="10500" collectors="2"/>
+		<resource x="500" y="850" type="ru" amount="4000" collectors="2"/>
+
+		<resource x="10" y="6600" type="cu" amount="10500" collectors="2"/>
+		<resource x="30" y="6612" type="ru" amount="4000" collectors="2"/>
+
+		<resource x="-3000" y="8000" type="cu" amount="7500" collectors="2"/>
+		<resource x="-3000" y="8050" type="ru" amount="3000" collectors="2"/>
+		<resource x="-3000" y="8100" type="cu" amount="7500" collectors="2"/>
+
+		<resource x="-9050" y="5900" type="cu" amount="10500" collectors="2"/>
+		<resource x="-9000" y="5900" type="ru" amount="4000" collectors="2"/>
+
+		<resource x="-7300" y="4050" type="cu" amount="10500" collectors="2"/>
+		<resource x="-7300" y="4000" type="ru" amount="4000" collectors="2"/>
+
+	</resources>
 
     <units>
      <!-- Coalition -->
@@ -40,6 +72,7 @@
          <!-- Support Unit / +1 SBR -->
          <unit team="0" index="1" x="-250" y="-9500" angle="40" type="C_Baserunner_MP"/>
          <!-- Light Units  / +9 LAV -->
+
     </units>
 </layout>
 </dokmap>
