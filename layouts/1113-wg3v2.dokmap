@@ -6,65 +6,29 @@
 	      description="Whispering Gallery"/>
 
 	<layout map="M09" mode="Team" players="2,3,4,5,6">
-        <bounds top="10000" right="10000" bottom="-10000" left="-10000"/>
-       
- 
-    <spawns>
 
-		<!-- team 1 -->
-		<spawn team="0" index="0" x="-700" y="-1100" angle="90"/>
-		<spawn team="0" index="1" x="-2000" y="-5450" angle="0"/>
-		<spawn team="0" index="2" x="-700" y="-1100" angle="90"/>
-		<!-- team 2 -->
-		<spawn team="1" index="0"  x="-5600" y="3600" angle="130"/>
-		<spawn team="1" index="1" x="-3200" y="8050" angle="0"/>
-		<spawn team="1" index="2"  x="-5600" y="3600" angle="130" fleet="false"/>
-	</spawns>
-	
-	<resources>
-		<!-- team 1 -->
-		<resource x="-780" y="-1300" type="cu" amount="7500" collectors="2"/>
-		<resource x="-730" y="-1300" type="ru" amount="3000" collectors="2"/>
-		<resource x="-680" y="-1300" type="cu" amount="7500" collectors="2"/>
+		<spawns>
+			<!-- team 1 east -->
+			<spawn team="0" index="0" x="8000" y="1000" angle="15" camera="15"/>
+			<spawn team="0" index="1" x="8000" y="2000" angle="0" camera="255" />
+      			<spawn team="0" index="2" x="8000" y="2000" angle="0" camera="255"/>
+			<!-- team 2 west -->
+			<spawn team="1" index="0" x="-5300" y="3800" angle="0" camera="105"/>
+        		<spawn team="1" index="1" x="-5300" y="3800" angle="0" camera="105"/>
+                        <spawn team="1" index="2" x="-5300" y="3800" angle="0" camera="105"/>
+		</spawns>
 
-		<resource x="4250" y="-5000" type="cu" amount="10500" collectors="2"/>
-		<resource x="4250" y="-5050" type="ru" amount="4000" collectors="2"/>
+		<resources>
+			<!-- team 0 index 0 -->
+			<resource x="8200" y="1900" type="cu" amount="7500"/>
+			<resource x="8200" y="2000" type="ru" amount="3000"/>
+			<resource x="8200" y="2100" type="cu" amount="7500"/>
 
-		<resource x="4500" y="-1800" type="cu" amount="10500" collectors="2"/>
-		<resource x="4550" y="-1800" type="ru" amount="4000" collectors="2"/>
-
-		<resource x="-2200" y="-5500" type="cu" amount="7500" collectors="2"/>
-		<resource x="-2200" y="-5450" type="ru" amount="3000" collectors="2"/>
-		<resource x="-2200" y="-5400" type="cu" amount="7500" collectors="2"/>
-
-		<resource x="-7000" y="-1350" type="cu" amount="10500" collectors="2"/>
-		<resource x="-7050" y="-1350" type="ru" amount="4000" collectors="2"/>
-
-		<resource x="-8500" y="500" type="cu" amount="10500" collectors="2"/>
-		<resource x="-8560" y="540" type="ru" amount="4000" collectors="2"/>
-
-		<!-- team 2 -->
-		<resource x="-5500" y="3900" type="cu" amount="7500" collectors="2"/>
-		<resource x="-5540" y="3914" type="ru" amount="3000" collectors="2"/>
-		<resource x="-5580" y="3928" type="cu" amount="7500" collectors="2"/>
-
-		<resource x="500" y="800" type="cu" amount="10500" collectors="2"/>
-		<resource x="500" y="850" type="ru" amount="4000" collectors="2"/>
-
-		<resource x="10" y="6600" type="cu" amount="10500" collectors="2"/>
-		<resource x="30" y="6612" type="ru" amount="4000" collectors="2"/>
-
-		<resource x="-3000" y="8000" type="cu" amount="7500" collectors="2"/>
-		<resource x="-3000" y="8050" type="ru" amount="3000" collectors="2"/>
-		<resource x="-3000" y="8100" type="cu" amount="7500" collectors="2"/>
-
-		<resource x="-9050" y="5900" type="cu" amount="10500" collectors="2"/>
-		<resource x="-9000" y="5900" type="ru" amount="4000" collectors="2"/>
-
-		<resource x="-7300" y="4050" type="cu" amount="10500" collectors="2"/>
-		<resource x="-7300" y="4000" type="ru" amount="4000" collectors="2"/>
-
-	</resources>
+			<!-- team 1 index 0 -->
+			<resource x="-5500" y="3700" type="cu" amount="7500"/>
+			<resource x="-5500" y="3800" type="ru" amount="3000"/>
+			<resource x="-5500" y="3900" type="cu" amount="7500"/>
+		</resources>
 
     <units>
      <!-- Coalition -->
