@@ -435,7 +435,7 @@
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
-					"MaxSpeed": 90,
+					"MaxSpeed": 70,
 					"MaxSpeedTurnRadius": 65,
 					"BrakingTime": 1.1,
 					"AccelerationTime": 1.1
@@ -5554,7 +5554,9 @@
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
 						"Distance": 1350
-					}
+					}"Modifiers": {	
+						"0": { "TargetClass": "Air", "Modifier": "CanTarget"}
+						}
 				}
 			}
 		},
