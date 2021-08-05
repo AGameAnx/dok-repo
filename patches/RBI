@@ -1,0 +1,921 @@
+{
+	"Entities": {
+		"C_Carrier_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -2
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeedTurnRadius": 130,
+					"BrakingTime": 1.1,
+					"AccelerationTime": 1.1,
+					"MaxEaseIntoTurnTime": 1
+				}
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12
+					}
+				}
+			},
+			"AbilityAttributes": {
+  				"Ability_C_CruiseMissile_MP": {
+					"CooldownTimeSecs": 120,
+					"Resource1Cost": 450,
+					"Resource2Cost": 150	
+
+				},
+				"Ability_C_LaunchInterceptor_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchGunShip_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"C_Carrier_Weapon_G2All_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak",
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyShortPercent",
+							"Amount": 130
+						},
+						"2": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyMediumPercent",
+							"Amount": 130
+						},
+						"3": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyLongPercent",
+							"Amount": 130
+						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
+						"7": { "Remove": true },
+						"8": { "Remove": true },
+						"9": { "Remove": true },
+						"10": { "Remove": true },
+						"11": { "Remove": true },
+						"12": { "Remove": true }
+					}
+				},
+				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak"
+				},
+				"C_CarrierMissiles_Weapon_A2G_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
+				"C_Carrier_Weapon_CruiseMissile_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		"C_Sob_Carrier_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -2
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeedTurnRadius": 130,
+					"BrakingTime": 1.1,
+					"AccelerationTime": 1.1,
+					"MaxEaseIntoTurnTime": 1
+				}
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 30000
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_Sob_SobanNuke_MP": {
+					"CooldownTimeSecs": 90,
+					"Resource1Cost": 400,
+					"Resource2Cost": 100				
+},
+				"Ability_C_LaunchInterceptor_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchGunShip_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
+				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				},
+				"C_Sob_Carrier_Weapon_Nuke_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"RangeAttributesLong": {
+						"Distance": 35000
+					}
+				}
+			},
+			"PowerShuntAttributes": {
+				"PowerSystems": {
+					
+					"3": { 
+						"PowerLevels": {
+							
+							"0": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 900m"
+							},
+							
+							"1": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1100m",
+								"StatusEffectsToApply": {
+									"Range_1_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													
+													"0": { "Value": 1100 }, 
+													"1": { "Value": 1100 }, 
+													"2": { "Value": 750 }, 
+													"3": { "Value": 750 }, 
+													"4": { "Value": 450 }, 
+													"5": { "Value": 450 }, 
+													
+													
+													"6": { "Value": 1100 }, 
+													"7": { "Value": 1100 }, 
+													"8": { "Value": 750 }, 
+													"9": { "Value": 750 }, 
+													"10": { "Value": 450 }, 
+													"11": { "Value": 450 }, 
+													
+													
+													"12": { "Value": 1100 }, 
+													"13": { "Value": 1100 }, 
+													"14": { "Value": 750 }, 
+													"15": { "Value": 750 }, 
+													"16": { "Value": 450 }, 
+													"17": { "Value": 450 }, 
+													
+													
+													"18": { "Value": 1100 }, 
+													"19": { "Value": 1100 }, 
+													"20": { "Value": 750 }, 
+													"21": { "Value": 750 }, 
+													"22": { "Value": 450 }, 
+													"23": { "Value": 450 } 
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"2": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1300m",
+								"StatusEffectsToApply": {
+									"Range_2_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													
+													"0": { "Value": 1300 }, 
+													"1": { "Value": 1300 }, 
+													"2": { "Value": 1100 }, 
+													"3": { "Value": 1100 }, 
+													"4": { "Value": 700 }, 
+													"5": { "Value": 700 }, 
+													
+													
+													"6": { "Value": 1300 }, 
+													"7": { "Value": 1300 }, 
+													"8": { "Value": 1100 }, 
+													"9": { "Value": 1100 }, 
+													"10": { "Value": 700 }, 
+													"11": { "Value": 700 }, 
+													
+													
+													"12": { "Value": 1300 }, 
+													"13": { "Value": 1300 }, 
+													"14": { "Value": 1100 }, 
+													"15": { "Value": 1100 }, 
+													"16": { "Value": 700 }, 
+													"17": { "Value": 700 }, 
+													
+													
+													"18": { "Value": 1300 }, 
+													"19": { "Value": 1300 }, 
+													"20": { "Value": 1100 }, 
+													"21": { "Value": 1100 }, 
+													"22": { "Value": 700 }, 
+													"23": { "Value": 700 } 
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"3": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1500m",
+								"StatusEffectsToApply": {
+									"Range_3_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													
+													"0": { "Value": 1500 }, 
+													"1": { "Value": 1500 }, 
+													"2": { "Value": 1300 }, 
+													"3": { "Value": 1300 }, 
+													"4": { "Value": 900 }, 
+													"5": { "Value": 900 }, 
+													
+													
+													"6": { "Value": 1500 }, 
+													"7": { "Value": 1500 }, 
+													"8": { "Value": 1300 }, 
+													"9": { "Value": 1300 }, 
+													"10": { "Value": 900 }, 
+													"11": { "Value": 900 }, 
+													
+													
+													"12": { "Value": 1500 }, 
+													"13": { "Value": 1500 }, 
+													"14": { "Value": 1300 }, 
+													"15": { "Value": 1300 }, 
+													"16": { "Value": 900 }, 
+													"17": { "Value": 900 }, 
+													
+													
+													"18": { "Value": 1500 }, 
+													"19": { "Value": 1500 }, 
+													"20": { "Value": 1300 }, 
+													"21": { "Value": 1300 }, 
+													"22": { "Value": 900 }, 
+													"23": { "Value": 900 } 
+												}
+											}
+										}
+									}
+								}
+							},
+							
+							"4": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1700m"
+							},
+							
+							"5": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 2000m"
+							}
+							
+						}
+					}
+					
+				}
+			}
+		},
+		"G_Carrier_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -2
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12
+					}
+				}
+			},
+			"AbilityAttributes": {	
+				"Ability_G_MissileBarrage": {
+					"CooldownTimeSecs": 120,
+					"Resource1Cost": 300,
+					"Resource2Cost": 150
+				},
+				"Ability_G_LaunchInterceptor_Upgraded_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_G_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"G_Carrier_Weapon_G2All_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
+				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
+				"G_Carrier_Weapon_DefaultMissile_MP": {
+					"ExcludeFromHeightAdvantage": true
+				},
+				"G_Carrier_Weapon_BarrageMissile_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		"K_Carrier_MP": {
+			"UnitAttributes": {
+				"PriorityAsTarget": -2
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_Launch_K_Interceptor": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_Launch_K_Interceptor_Upgraded": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_Launch_K_Bomber": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"K_Carrier_Weapon_G2All_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak"
+				},
+				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak"
+				},
+				"K_Carrier_Weapon_DefaultMissile_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		
+		"N_MissileBarrage_Sight": {
+			"UnitAttributes": {
+				"PopCapCost": 0
+			}
+		},
+		
+		"C_Sob_PopcapScanner": {
+			"UnitAttributes": {
+				"WorldHeightOffset": 15,
+				"AggroRange": 900
+			}
+		},
+		"N_Gun_Turret_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 50,
+				"WorldHeightOffset": 15
+			}
+		},
+		"N_Missle_Turret_MP": {
+			"UnitAttributes": {
+			"Resource1Cost": 200,
+			"Resource2Cost": 50,
+				"PriorityAsTarget": -50
+			},
+			"WeaponAttributes": {
+				"N_Missle_Turret_Weapon_G2A_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		"N_ECMField_MP": {
+			"DetectableAttributes": {
+				"MinimumStateAfterDetection": "Hidden"
+			}
+		},"K_ExplodingSkimmer_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 120,
+				"Resource2Cost": 30
+	}
+},"C_Harvester_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 100,
+				"PopCapCost": 1,
+				"PriorityAsTarget": 1
+			},"AbilityAttributes": {
+				"Ability_Common_DemoChargeLay_MP": {
+					"Resource1Cost": 100,
+					"CooldownTimeSecs": 10
+				}
+			},"StorageAttributes": {
+				"C_Harvester_StorageAttributesAsset_MP": {
+					"InventoryLoadout": {
+						"Resource1": {
+							"Capacity": 200
+						},
+						"Resource2": {
+							"Capacity": 100
+						}
+					}
+				}
+			}
+		},"G_Harvester_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 100,
+				"PopCapCost": 1,
+				"PriorityAsTarget": 1
+			},
+			"AbilityAttributes": {
+				"Ability_Common_DemoChargeLay_MP": {
+					"Resource1Cost": 150,
+					"CooldownTimeSecs": 15
+				}
+			},
+			"StorageAttributes": {
+				"G_Harvester_StorageAttributesAsset_MP": {
+					"InventoryLoadout": {
+						"Resource1": {
+							"Capacity": 200
+						},"Resource2": {
+							"Capacity": 100
+						}
+					}
+				}
+			}
+		},
+		"K_Harvester_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 100,
+				"PopCapCost": 1,
+				"PriorityAsTarget": 2
+			},
+			"AbilityAttributes": {
+				"Ability_Common_DemoChargeLay_MP": {
+					"Resource1Cost": 25,
+					"CooldownTimeSecs": 15
+				}
+			},
+			"StorageAttributes": {
+				"G_Harvester_StorageAttributesAsset_MP": {
+					"InventoryLoadout": {
+						"Resource1": {
+							"Capacity": 200
+						},
+						"Resource2": {
+							"Capacity": 100
+						}
+					}
+				}
+			}
+		},
+		
+		"C_Baserunner_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 50,
+				"PopCapCost": 3,
+				"PriorityAsTarget": -250
+			}
+		},
+		"C_Sob_Baserunner_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 50,
+				"PopCapCost": 3,
+				"PriorityAsTarget": -250
+			}
+		},
+		"G_Baserunner_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 50,
+				"PopCapCost": 3,
+				"PriorityAsTarget": -250
+			}
+		},
+		"K_Baserunner_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 50,
+				"PopCapCost": 3,
+				"PriorityAsTarget": -220
+			}
+		},
+		
+		"C_SupportCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 50,
+				"PopCapCost": 6,
+				"PriorityAsTarget": -220
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxEaseIntoTurnTime": 0.8
+				}
+			}
+		},
+		"C_Sob_SupportCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 50,
+				"PopCapCost": 6,
+				"PriorityAsTarget": -220
+			},"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxEaseIntoTurnTime": 0.8
+				}
+			}
+		},"G_SupportCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 50,
+				"PopCapCost": 6,
+				"PriorityAsTarget": -220
+			}
+},"K_SupportCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 50,
+				"PopCapCost": 6,
+				"PriorityAsTarget": -220
+			}
+},
+		"C_Escort_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 0,
+				"PopCapCost": 2,
+				"PriorityAsTarget": 10
+			}
+		},
+		"C_Sob_Escort_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 0,
+				"PopCapCost": 2,
+				"PriorityAsTarget": 10
+			}
+		},
+		
+		"G_SandSkimmer_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 0,
+				"PopCapCost": 2,
+				"PriorityAsTarget": 5
+			}
+		},
+		"K_Sandskimmer_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 0,
+				"PopCapCost": 2,
+				"PriorityAsTarget": 5
+			}
+		},
+		"C_HAC_MP": {
+			"UnitAttributes": {
+			"Resource1Cost":120,
+			"Resource2Cost": 90,
+			"PopCapCost": 3
+			}
+		
+		},
+		"G_Catamaran_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 170,
+				"Resource2Cost": 90,
+				"PopCapCost" : 3
+			}
+				
+		},
+		"K_AssaultShip_MP": {
+			"UnitAttributes": {
+			"Resource1Cost": 170,
+			"Resource2Cost": 90,
+			"PopCapCost" : 3
+			}
+		},
+		"C_Railgun_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 360,
+				"Resource2Cost": 200,
+				"PopCapCost": 4,
+				"PriorityAsTarget": 25
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"C_Railgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"C_Sob_Railgun_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 360,
+				"Resource2Cost": 200,
+				"PopCapCost": 4,
+				"PriorityAsTarget": 25
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"C_Sob_Railgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		
+		"G_StarHullTank_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 270,
+				"Resource2Cost": 200,
+				"PopCapCost": 4,
+				"PriorityAsTarget": 10
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"K_HeavyRailgun_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 270,
+				"Resource2Cost": 200,
+				"PopCapCost": 4,
+				"PriorityAsTarget": 10
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		
+		"G_StarHull_Upgrade01_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 260,
+				"Resource2Cost": 175,
+				"PopCapCost": 4,
+				"PriorityAsTarget": 10
+			}
+		},
+		"K_AssaultRailgun_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 260,
+				"Resource2Cost": 175,
+				"PopCapCost": 4,
+				"PriorityAsTarget": 10
+			}
+		},
+		"G_Catamaran_Upgrade01_MP": {
+			"UnitAttributes": {
+			"Resource1Cost": 260,
+			"Resource2Cost": 220,
+			"PopCapCost": 3
+			
+			}
+		},
+		"C_HAC_Upgrade01_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 260,
+				"Resource2Cost": 170,
+				"PopCapCost": 3,
+				"PriorityAsTarget": -10
+			}
+		},
+		"K_MissileShip_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 260,
+				"Resource2Cost": 170,
+				"PopCapCost": 3
+				
+			}
+		},
+		"C_Interceptor_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 100,
+				"Resource2Cost": 150,
+				"PopCapCost": 4
+			}
+		},			
+		"C_GunShip_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 450,
+				"Resource2Cost": 180,
+				"PopCapCost": 4,
+				"PriorityAsTarget": -10
+			},
+			"WeaponAttributes": {
+				"C_GunShip_Weapon_DefaultFire_MP": {
+					"RangeAttributesLong": {
+						"Distance": 1050
+					}
+				}
+			}
+		},
+		"G_Interceptor_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 220,
+				"PopCapCost": 4
+			}
+		},"K_Interceptor_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 220,
+				"PopCapCost": 4
+			}
+		},"C_Bomber_MP": {
+			"UnitAttributes": {
+			"Resource1Cost": 450,
+			"Resource2Cost": 350,
+			"PopCapCost": 5
+			}
+		},"G_Bomber_MP": {
+			"UnitAttributes": {
+			"Resource1Cost": 270,
+			"Resource2Cost": 250,
+			"PopCapCost": 5
+			}
+		},"K_Bomber_MP": {
+			"UnitAttributes": {
+			"Resource1Cost": 500,
+			"Resource2Cost": 200,
+			"PopCapCost": 5	
+			}
+		},
+		"G_HonorGuard_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 340,
+				"PopCapCost": 7,
+				"PriorityAsTarget": -10
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"G_HonorGuardRailgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 30,
+						"AngleWeight": 20,
+						"AutoTargetStickyBias": 200,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"K_HonorGuard_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 340,
+				"PopCapCost": 7,
+				"PriorityAsTarget": -10
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"G_HonorGuardRailgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 30,
+						"AngleWeight": 20,
+						"AutoTargetStickyBias": 200,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},"G_BattleCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 150,
+				"PopCapCost": 7
+			}
+		},"C_Sob_AssaultCruiser_MP": {
+			"UnitAttributes": {
+			"Resource1Cost": 600,
+			"Resource2Cost": 150,
+			"PopCapCost": 7
+			}
+			
+		},"C_Battlecruiser_MP": {
+			"UnitAttributes": {
+			"Resource1Cost": 700,
+			"Resource2Cost": 325,
+			"PopCapCost": 8,
+			"PriorityAsTarget": -10
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			}
+		},
+		"C_Sob_Battlecruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 680,
+				"Resource2Cost": 320,
+				"PopCapCost": 8,
+				"PriorityAsTarget": -10
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"C_ArtilleryCruiser_MP": {
+			"UnitAttributes": {
+			"Resource1Cost": 600,
+			"Resource2Cost": 100,
+			"PopCapCost": 7
+			
+			}
+		},"G_ArtilleryCruiser_MP": {
+			"UnitAttributes": {
+			"Resource1Cost": 550,
+			"Resource2Cost": 250,
+			"PopCapCost": 7
+			
+			}
+		},
+		"K_ArtilleryCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 250,
+				"PopCapCost": 7,
+				"PriorityAsTarget": -10
+			},
+			"WeaponAttributes": {
+				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		}
+	}
+}
