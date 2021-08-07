@@ -37,7 +37,8 @@ Look to the right of these instructions you will see a heading that reads **Rele
 | Spam Patch                       | **/p spam**          | SickIGN  | Units no longer have cost, population cost, production time
 | Quality of Life patch            | **/p qol**           | AGameAnx | Vanilla quality of life improvements and bug fixes
 | Who's patch                      | **/p who**           | Who      |
-
+| Turbo Patch                      | **/p turbo**         |Ozymanjeff| Cheaper Units, Buffed Units, Buffed Carriers. 
+| RBI                              | **/p rbi**           |Ozymanjeff| Longer Collection Time for Salvagers, Adjusted CU/RU/Fleet Cost per unit. 
 ## Tournament layouts
 
 | Map                  |Players| Authors  | **Command**         | Preview                             | Description |
