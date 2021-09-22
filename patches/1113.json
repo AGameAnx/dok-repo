@@ -4041,7 +4041,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_G_MissileCraft_CrowdControl_MP": {
-					"CooldownTimeSecs": 80
+					"CooldownTimeSecs": 40
 				}
 			},
 			"ExperienceAttributes": {
@@ -4087,9 +4087,14 @@
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 140,
+					"BaseDamagePerRound": 120,
 					"AreaOfEffectRadius": 150,
-					"AreaOfEffectFalloffType": "Linear"
+					"AreaOfEffectFalloffType": "Linear",
+					"NumberOfBursts": 2,
+					"RateOfFire": 6,
+					"CooldownTimeMS": 200,
+					"BurstPeriodMinTimeMS": 500,
+					"BurstPeriodMaxTimeMS": 1000
 				}
 			}
 		},
@@ -4261,7 +4266,9 @@
 		"Tier_3_G_HonorCruiser": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 0,
-				"Resource2Cost": 0
+				"Resource2Cost": 0,
+				"LocalizedShortDescriptionStringID": "Unlock the production of the fearsome Seraph class Heavy Armored Capital Ship",
+				"LocalizedLongDescriptionStringID": "The Seraph or -Honorguard- cruiser is armed with a devastating spine-mounted ultra-heavy railgun."
 		    }
 		},
 		"Tier_3_G_Bomber": {
@@ -4273,7 +4280,9 @@
 		"Tier_3_K_ArtilleryCruiser": {
 		    "ResearchItemAttributes": {
 				"Resource1Cost": 0,
-				"Resource2Cost": 0
+				"Resource2Cost": 0,
+				"LocalizedShortDescriptionStringID": "Unlock the production of the -Gauntlet- Armored Strike Capital Ship",
+				"LocalizedLongDescriptionStringID": "This cruiser is armed with 2 heavy multiple rocket launcher of 300mm designated to defeat soft targets, armoured units and capital ships with ease. Its clever auto-loader give the Gauntlet the capability to fire a full 12 rocket salvo every 30 seconds."
 		    }
 		},
 		"Tier_3_C_BattleCruiser": {
