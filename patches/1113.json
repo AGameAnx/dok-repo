@@ -2,7 +2,7 @@
 	"Meta": {
 		"Name": "1113 KDS Realism Mod",
 		"Author": "S'Aarum",
-		"Version": "1.5.5.3bis",
+		"Version": "1.5.5.4bis",
 		"LastUpdate": "26-09-2021"
 	},	
 	"Entities": {
@@ -770,24 +770,24 @@
 					"ExcludeFromHeightAdvantage": true,
 					"TargetStyle": "Flak",
 					"Modifiers": {
-						"0": { "TargetClass": "Air","ClassOperator": "And", "Modifier": "CanTarget"},
+						"0": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "CanTarget"},
 						"1": {
-							"TargetClass": "Large, Carrier, XLarge",
+							"TargetClass": "Air, Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyShortPercent",
-							"Amount": 130
+							"Amount": 100
 						},
 						"2": {
-							"TargetClass": "Large, Carrier, XLarge",
+							"TargetClass": "Air, Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyMediumPercent",
-							"Amount": 130
+							"Amount": 70
 						},
 						"3": {
-							"TargetClass": "Large, Carrier, XLarge",
+							"TargetClass": "Air, Large, Carrier, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "AccuracyLongPercent",
-							"Amount": 130
+							"Amount": 60
 						},
 						"4": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
 						"5": { "Remove": true },
