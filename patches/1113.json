@@ -482,7 +482,7 @@
 							"Modifier": "AccuracyLongPercent",
 							"Amount": 130
 						},
-						"4": { "Remove": true },
+						"4": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 200 },
 						"5": { "Remove": true },
 						"6": { "Remove": true },
 						"7": { "Remove": true },
@@ -1892,7 +1892,7 @@
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 10,
-					"NumberOfBursts" : 6,
+					"NumberOfBursts" : 10,
 					"RateOfFire": 10,
 					"DamagePacketsPerShot": 3,
 					"ReloadTimeMS": 2500,
@@ -1969,7 +1969,7 @@
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 10,
-					"NumberOfBursts" : 5,
+					"NumberOfBursts" : 10,
 					"RateOfFire": 10,
 					"DamagePacketsPerShot": 2,
 					"ReloadTimeMS": 2000,
@@ -2061,7 +2061,14 @@
 					"AreaOfEffectFalloffType": "Linear",
 					"RangeAttributesShort": { "Distance": 250, "Accuracy" : 75 },
 					"RangeAttributesMedium": { "Distance": 450, "Accuracy" : 70 },
-					"RangeAttributesLong": { "Distance": 750, "Accuracy" : 60 }
+					"RangeAttributesLong": { "Distance": 750, "Accuracy" : 60 },
+					"Modifiers": {
+					    "0": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
+						"2": { "TargetClass": "Medium", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
+						"3": { "TargetClass": "Large, Carrier, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"4": { "Remove": true }
+					}	
 				}
 			},
 			"AbilityAttributes": {
@@ -2283,9 +2290,9 @@
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
-						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
-						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
-						"3": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 200 },
+						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
 						"4": { "Remove": true }
 					}
 				}
@@ -2395,9 +2402,9 @@
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
-						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
-						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
-						"3": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 200 },
+						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
 						"4": { "Remove": true }
 					}
 				}
@@ -2505,9 +2512,9 @@
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
-						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
-						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
-						"3": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 200 },
+						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
 						"4": { "Remove": true }
 					}
 				}
@@ -2613,9 +2620,9 @@
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
-						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
-						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
-						"3": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 200 },
+						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
 						"4": { "Remove": true }
 					}
 				}
@@ -2758,14 +2765,14 @@
 						"Distance": 500
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 40,
+						"Accuracy": 50,
 						"Distance": 1200
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
 						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
-						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
-						"3": { "Remove": true },
+						"2": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
+						"3": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 150 },
 						"4": { "Remove": true }
 					}
 				}
@@ -2834,7 +2841,7 @@
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 12,
-					"DamagePacketsPerShot": 2,
+					"DamagePacketsPerShot": 0,
 					"NumberOfBursts": 5,
 					"BurstPeriodMinTimeMS": 600,
 					"BurstPeriodMaxTimeMS": 1100,
@@ -2855,9 +2862,9 @@
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
-						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
-						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
-						"3": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 200 },
+						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
 						"4": { "Remove": true }
 					}
 				}
@@ -3467,14 +3474,14 @@
 					"ExcludeFromHeightAdvantage": true,
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 12,
-					"DamagePacketsPerShot": 2,
+					"DamagePacketsPerShot": 0,
 					"NumberOfBursts": 10,
 					"BurstPeriodMinTimeMS": 600,
 					"BurstPeriodMaxTimeMS": 1100,
 					"ReloadTimeMS": 2500,
 					"RateOfFire": 15,
 					"RangeAttributesShort": {
-						"Accuracy": 80,
+						"Accuracy": 90,
 						"Distance": 300
 					},
 					"RangeAttributesMedium": {
@@ -3482,14 +3489,14 @@
 						"Distance": 700
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 40,
+						"Accuracy": 50,
 						"Distance": 1000
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
-						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 },
-						"2": { "TargetClass": "Air, Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
-						"3": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 200 },
+						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
 						"4": { "Remove": true }
 					}
 				}
@@ -3765,8 +3772,8 @@
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
-						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
-						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 200 },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 70 },
+						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 150 },
 						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
 						"4": { "Remove": true }
 					}
@@ -3814,8 +3821,8 @@
 					},
 					"Modifiers": {
 					    "0": { "Remove": true },
-						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
-						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 70 },
+						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 150 },
 						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
 						"4": { "Remove": true }
 					}
