@@ -2,7 +2,7 @@
 	"Meta": {
 		"Name": "1113 KDS Realism Mod",
 		"Author": "S'Aarum",
-		"Version": "1.5.5.4bis",
+		"Version": "1.5.5.5bis",
 		"LastUpdate": "26-09-2021"
 	},	
 	"Entities": {
@@ -2745,6 +2745,12 @@
 				"Armour": 5,
 				"PopCapCost": 0
 			},
+			"AbilityAttributes": {
+				"Ability_C_SmokeGrenade_MP": {
+					"CooldownTimeSecs": 30,
+					"LocalizedLongDescriptionStringID": "Launch a single AL-30 -Vural- smoke canister to the designated area. Prevent any LoS-based aquisitions for a short duration."
+				}
+			},
 			"WeaponAttributes": {
 				"C_HAC_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 15,
@@ -2856,7 +2862,8 @@
 			},
 			"AbilityAttributes": {
 				"Ability_K_ArtilleryBarrage_01_MP": {
-					"CooldownTimeSecs": 30
+					"CooldownTimeSecs": 30,
+					"LocalizedLongDescriptionStringID": "Unleash a salvo of 12 Nashir-R 300mm rockets to the designated area."
 				}
 			},
 		    "UnitMovementAttributes": {
@@ -3723,6 +3730,47 @@
 			},
 		    "WeaponAttributes": {
 		        "G_SupportCruiser_Weapon_G2G_MP": {
+					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
+					"BaseDamagePerRound": 12,
+					"DamagePacketsPerShot": 2,
+					"NumberOfBursts": 6,
+					"BurstPeriodMinTimeMS": 600,
+					"BurstPeriodMaxTimeMS": 1100,
+					"ReloadTimeMS": 2500,
+				    "ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 15,
+					"RangeAttributesShort": {
+						"Accuracy": 90,
+						"Distance": 400
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 65,
+						"Distance": 800
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 60,
+						"Distance": 1200
+					},
+					"Modifiers": {
+					    "0": { "Remove": true },
+						"1": { "TargetClass": "Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
+						"3": { "TargetClass": "Medium, Large, XLarge", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 100 },
+						"4": { "Remove": true }
+					}
+				}
+			}
+		},
+		"G_SupportCruiser" : {
+		    "UnitAttributes": {
+				"MaxHealth": 3100,
+				"ProductionTime": 60,
+				"Armour": 2,
+				"PopCapCost": 0
+			},
+		    "WeaponAttributes": {
+		        "G_SupportCruiser_Weapon_G2G": {
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 12,
