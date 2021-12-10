@@ -3591,23 +3591,30 @@
         "PriorityAsTarget": 12,
         "WorldHeightOffset": 15
       },
-      "WeaponAttributes": { // FIXME: Replace with BC weapon
+      "WeaponAttributes": {
         "N_Gun_Turret_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 50,
-          "DamagePacketsPerShot": 2,
-          "NumberOfBursts": 15,
-          "CooldownTimeMS": 0,
-          "BurstPeriodMinTimeMS": 334,
-          "BurstPeriodMaxTimeMS": 334,
-          "RateOfFire": 4,
-          "ReloadTimeMS": 1650,
-          "AreaOfEffectRadius": 75,
+          "BaseDamagePerRound": 350,
+          "DamagePacketsPerShot": 1,
+          "NumberOfBursts": 2,
+          "WindUpTimeMS": 250,
+          "CooldownTimeMS": 250,
+          "BurstPeriodMinTimeMS": 15,
+          "BurstPeriodMaxTimeMS": 15,
+          "RateOfFire": 1,
+          "ReloadTimeMS": 2500,
+          "AreaOfEffectRadius": 125,
           "AreaOfEffectFalloffType": "Quadratic",
-          "RangeAttributesShort": { "Accuracy": 100 },
-          "RangeAttributesMedium": { "Accuracy": 95 },
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 1000
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 75,
+            "Distance": 1250
+          },
           "RangeAttributesLong": {
-            "Accuracy": 60,
-            "Distance": 1400
+            "Accuracy": 50,
+            "Distance": 1500
           },
           "Turret": { "RotationSpeed": 150 },
           "OutputDPS": true
@@ -3628,6 +3635,11 @@
             "0": {
               "TargetClass": "Air"
             }
+          },
+          "RangeAttributesShort": { "Remove": true },
+          "RangeAttributesMedium": { "Remove": true },
+          "RangeAttributesLong": {
+            "Distance": 500
           }
         }
       }
