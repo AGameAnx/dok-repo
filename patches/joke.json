@@ -1,4 +1,4 @@
-// =============== //
+m// =============== //
 // ~ ANOMALY DOK ~ //
 // --------------- //
 // by Bozocow      //
@@ -3711,11 +3711,11 @@
             "BuffSet": {
               "4": {
                 "Mode": "Set",
-                "Value": 0
+                "Value": 1
               }, // MaxSpeed
               "5": { 
                 "Mode": "Set",
-                "Value": 0
+                "Value": 1
               }, // MaxSpeedTurnRadius
               "6": {
                 "Attribute": "UnitDynamics_AccelerationTime",
@@ -4537,21 +4537,21 @@
       },
       "WeaponAttributes": {
         "G_SupportCruiser_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 5,
+          "BaseDamagePerRound": 10,
           "ExcludeFromHeightAdvantage": false,
           "LineOfSightRequired": true,
           "RateOfFire": 10,
           "RangeAttributesShort": {
             "Accuracy": 50,
-            "Distance": 500
+            "Distance": 900
           },
           "RangeAttributesMedium": {
             "Accuracy": 40,
-            "Distance": 750
+            "Distance": 1200
           },
           "RangeAttributesLong": {
             "Accuracy": 25,
-            "Distance": 900
+            "Distance": 1380
           },
           "Modifiers": {
             "0": {
@@ -4579,28 +4579,26 @@
       },
       "WeaponAttributes": {
         "G_SupportCruiser_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 5,
-          "ExcludeFromHeightAdvantage": false,
-          "LineOfSightRequired": true,
+          "BaseDamagePerRound": 10,
+          "ExcludeFromHeightAdvantage": true,
           "RateOfFire": 10,
           "RangeAttributesShort": {
             "Accuracy": 50,
-            "Distance": 500
+            "Distance": 900
           },
           "RangeAttributesMedium": {
             "Accuracy": 40,
-            "Distance": 750
+            "Distance": 1200
           },
           "RangeAttributesLong": {
             "Accuracy": 25,
-            "Distance": 900
+            "Distance": 1380
           },
           "Modifiers": {
             "0": {
               "TargetClass": "Air",
               "ClassOperator": "Or"
             },
-            "1": { "Remove": true },
             "2": { "Remove": true },
             "3": { "Remove": true },
             "4": { "Remove": true }
