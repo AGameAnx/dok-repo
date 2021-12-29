@@ -618,7 +618,7 @@
     "C_Carrier_MP": {
       "UnitAttributes": {
         "MaxHealth": 10000,
-        "Armour": 0,
+        "Armour": 1,
         "PriorityAsTarget": -15
       },
       "UnitMovementAttributes": {
@@ -961,7 +961,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 3 }
+                          "0": { "Value": 2 }
                         }
                       }
                     }
@@ -976,7 +976,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 6 }
+                          "0": { "Value": 5 }
                         }
                       }
                     }
@@ -991,7 +991,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 18 }
+                          "0": { "Value": 17 }
                         }
                       }
                     }
@@ -1006,7 +1006,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 54 }
+                          "0": { "Value": 53 }
                         }
                       }
                     }
@@ -1021,7 +1021,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 162 }
+                          "0": { "Value": 161 }
                         }
                       }
                     }
@@ -1176,7 +1176,7 @@
     "C_Sob_Carrier_MP": {
       "UnitAttributes": {
         "MaxHealth": 10000,
-        "Armour": 0,
+        "Armour": 1,
         "PriorityAsTarget": -15
       },
       "UnitMovementAttributes": {
@@ -1307,9 +1307,9 @@
                     "UnitTypeBuffsToApply": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 1100 },
-                          "1": { "Value": 1400 },
-                          "5": { "Value": 5500 }
+                          "0": { "Value": 1000 },
+                          "1": { "Value": 1300 },
+                          "5": { "Value": 4500 }
                         }
                       },
                       "1": {
@@ -1325,9 +1325,9 @@
                     "UnitTypeBuffsToApply": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 1200 },
-                          "1": { "Value": 1500 },
-                          "5": { "Value": 4500 }
+                          "0": { "Value": 1000 },
+                          "1": { "Value": 1300 },
+                          "5": { "Value": 3000 }
                         }
                       },
                       "1": {
@@ -1343,14 +1343,14 @@
                     "UnitTypeBuffsToApply": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 1300 },
-                          "1": { "Value": 1700 },
-                          "5": { "Value": 3500 },
-                          "6": { "Value": 30 } // Damage bonus
+                          "0": { "Value": 1000 },
+                          "1": { "Value": 1300 },
+                          "5": { "Value": 1500 },
+                          "6": { "Value": 0 } // Damage bonus
                         }
                       },
                       "1": {
-                        "BuffSet": { "0": { "Value": 1200 } }
+                        "BuffSet": { "0": { "Value": 1100 } }
                       }
                     }
                   }
@@ -1362,14 +1362,14 @@
                     "UnitTypeBuffsToApply": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 1500 },
-                          "1": { "Value": 1900 },
-                          "5": { "Value": 2500 },
-                          "6": { "Value": 50 }
+                          "0": { "Value": 1000 },
+                          "1": { "Value": 1300 },
+                          "5": { "Value": 1000 },
+                          "6": { "Value": 0 }
                         }
                       },
                       "1": {
-                        "BuffSet": { "0": { "Value": 1500 } }
+                        "BuffSet": { "0": { "Value": 1200 } }
                       }
                     }
                   }
@@ -1741,7 +1741,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 3 }
+                          "0": { "Value": 2 }
                         }
                       }
                     }
@@ -1756,7 +1756,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 6 }
+                          "0": { "Value": 5 }
                         }
                       }
                     }
@@ -1771,7 +1771,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 18 }
+                          "0": { "Value": 17 }
                         }
                       }
                     }
@@ -1786,7 +1786,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 54 }
+                          "0": { "Value": 53 }
                         }
                       }
                     }
@@ -1801,7 +1801,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 162 }
+                          "0": { "Value": 161 }
                         }
                       }
                     }
@@ -3594,16 +3594,17 @@
     "C_Sob_PopcapScanner": {
       "UnitAttributes": {
         "Resource1Cost": 270,
-        "Armour": 3,
+        "MaxHealth": 1000,
+        "Armour": 0,
         "WorldHeightOffset": 15,
         "AggroRange": 900,
         "PriorityAsTarget": -12
       },
-      "WeaponAttributes": { // FIXME: reduce damage increase ROF when powered (see carrier)
+      "WeaponAttributes": {
         "C_Sob_PopCapScanner_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 150,
-          "DamagePacketsPerShot": 3,
-          "AreaOfEffectRadius": 86,
+          "BaseDamagePerRound": 50,
+          "DamagePacketsPerShot": 1,
+          "AreaOfEffectRadius": 100,
           "TargetPrioritizationAttributes": {
             "AngleWeight": 10,
             "DistanceWeight": 0.1
@@ -3626,7 +3627,7 @@
       },
       "WeaponAttributes": {
         "N_Gun_Turret_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 120,
+          "BaseDamagePerRound": 100,
           "DamagePacketsPerShot": 1,
           "NumberOfBursts": 6,
           "WindUpTimeMS": 250,
@@ -3711,16 +3712,16 @@
             "BuffSet": {
               "4": {
                 "Mode": "Set",
-                "Value": 5
+                "Value": 1
               }, // MaxSpeed
               "5": { 
                 "Mode": "Set",
-                "Value": 5
+                "Value": 1
               }, // MaxSpeedTurnRadius
               "6": {
                 "Attribute": "UnitDynamics_AccelerationTime",
                 "Mode": "AddPercent",
-                "Value": 25
+                "Value": 250
               },
               "7": {
                 "Attribute": "UnitCombatBehaviour_MinDesiredCombatRange",
@@ -3736,7 +3737,7 @@
     // COALITION/SOBAN PROBE
     "C_Probe_MP": {
       "UnitAttributes": {
-        "MaxHealth": 10000, // significant nerf as it no longer costs 500/500
+        "MaxHealth": 10000,
         "SensorRadius": 3000
       },
       "UnitMovementAttributes": {
@@ -3788,7 +3789,7 @@
         "Resource1Cost": 150,
         "MaxHealth": 950,
         "PopCapCost": 2,
-        "Armour": 0,
+        "Armour": 5,
         "PriorityAsTarget": -25
       },
       "AbilityAttributes": {
@@ -4128,7 +4129,7 @@
       },
       "AbilityAttributes": {
         "Ability_G_DeployScanner_MP": {
-          "CooldownTimeSecs": 140
+          "CooldownTimeSecs": 180
         },
         "Ability_G_BaseRunnerPassiveRegen": {
           "CooldownTimeSecs": 65,
@@ -4165,7 +4166,7 @@
                   "ModifierType": "HealthOverTime",
                   "HealthOverTimeAttributes": {
                     "ID": "G_BaseRunner_HealAura_HealOT_StatusEffect_MP",
-                    "Amount": -3,
+                    "Amount": 3,
                     "MSTickDuration": 50,
                     "DamageType": "Heal"
                   }
@@ -4215,21 +4216,16 @@
           "BurstPeriodMaxTimeMS": 1000,
           "CooldownTimeMS": 0,
           "FriendlyFireDamageScalar": 1,
-          "WeaponOwnerFriendlyFireDamageScalar": 1,
+          "WeaponOwnerFriendlyFireDamageScalar": 0,
           "AreaOfEffectRadius": 500,
           "StatusEffectsTargetAlignment": "None",
           "StatusEffectsSets": {
             "0": { "StatusEffects": [ "G_BaseRunner_HealAura_HealOT_StatusEffect_MP" ] }
-          },
-          "Modifiers": {
-            "0": {
-              "Remove": true
-            }
           }
         },
         "G_Baserunner_Weapon_PopCapAbility_MP": { // Scanner
           "RangeAttributesShort": {
-            "Distance": 5000
+            "Distance": 2500
           }
         }
       }
@@ -5572,7 +5568,7 @@
           "0": {
             "BuffSet": {
               "0": {
-                "Value": -10
+                "Value": -50
               }
             }
           }
@@ -5659,7 +5655,7 @@
         "Resource1Cost": 300,
         "Resource2Cost": 80,
         "MaxHealth": 1650,
-        "Armour": 6,
+        "Armour": 9,
         "ExperienceValue": 470,
         "ProductionTime": 22,
         "PriorityAsTarget": 12,
@@ -5672,18 +5668,13 @@
         "Dynamics": { "MaxSpeed": 85 },
         "Combat": { "MaxDesiredCombatRange": 780 }
       },
-      //"AbilityAttributes": {
-      //  "Ability_C_Railgun_MarkTarget": {
-      //
-      //  }
-      //},
       "WeaponAttributes": {
         "C_Sob_Railgun_Weapon_G2G_MP": {
           "BaseDamagePerRound": 50,
-          "WindDownTimeMS": 100,
-          "WindUpTimeMS": 100,
-          "CooldownTimeMS": 0,
-          "ReloadTimeMS": 100,
+          "WindDownTimeMS": 50,
+          "WindUpTimeMS": 50,
+          "CooldownTimeMS": 50,
+          "ReloadTimeMS": 50,
           "AreaOfEffectFalloffType": "Quadratic",
           "AreaOfEffectRadius": 200,
           "RangeAttributesShort": {
@@ -5768,8 +5759,8 @@
       "UnitAttributes": {
         "Resource1Cost": 380,
         "Resource2Cost": 110,
-        "MaxHealth": 1300,
-        "Armour": 7,
+        "MaxHealth": 1700,
+        "Armour": 11,
         "ProductionTime": 20,
         "PopCapCost": 4,
         "ExperienceValue": 550,
@@ -5852,8 +5843,8 @@
       "UnitAttributes": {
         "Resource1Cost": 380,
         "Resource2Cost": 110,
-        "MaxHealth": 1300,
-        "Armour": 7,
+        "MaxHealth": 1700,
+        "Armour": 11,
         "ProductionTime": 20,
         "PopCapCost": 4,
         "ExperienceValue": 550,
@@ -6039,7 +6030,7 @@
       },
       "WeaponAttributes": {
         "G_StarHull_Upgrade01_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 20,
+          "BaseDamagePerRound": 10,
           "BurstPeriodMinTimeMS": 110,
           "BurstPeriodMaxTimeMS": 110,
           "NumberOfBursts": 5,
@@ -6109,7 +6100,7 @@
       },
       "WeaponAttributes": {
         "G_StarHull_Upgrade01_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 20,
+          "BaseDamagePerRound": 10,
           "BurstPeriodMinTimeMS": 110,
           "BurstPeriodMaxTimeMS": 110,
           "NumberOfBursts": 5,
@@ -6465,22 +6456,22 @@
       "UnitMovementAttributes": {
         "Dynamics": {
           "MaxSpeed": 600,
-          "MaxSpeedTurnRadius": 250
+          "MaxSpeedTurnRadius": 200
         }
       },
       "StorageAttributes": {
         "C_Interceptor_StorageAttributesAsset_MP": {
           "InventoryLoadout": {
             "MISSILES": {
-              "Capacity": 8,
-              "StartingAmount": 8
+              "Capacity": 12,
+              "StartingAmount": 12
             }
           }
         }
       },
       "WeaponAttributes": {
         "C_Interceptor_Weapon_A2G_MP": {
-          "BaseDamagePerRound": 70,
+          "BaseDamagePerRound": 50,
           "DamagePacketsPerShot": 1,
           "BurstPeriodMinTimeMS": 667,
           "BurstPeriodMaxTimeMS": 667,
@@ -6492,6 +6483,14 @@
           },
           "RangeAttributesShort": {
             "Distance": 1500
+          },
+          "Modifiers": {
+            "13": {
+              "TargetClass": "Air",
+              "ClassOperator": "Or",
+              "Modifier": "DamagePercent",
+              "Amount": 200
+            }
           }
         }
       }
@@ -6510,13 +6509,14 @@
       "UnitAttributes": {
         "Resource1Cost": 250,
         "Resource2Cost": 100,
+        "MaxHealth": 750,
         "Armour": 2,
         "ProductionTime": 12
       },
       "UnitMovementAttributes": {
         "Dynamics": {
           "MaxSpeed": 100,
-          "MaxSpeedTurnRadius": 100
+          "MaxSpeedTurnRadius": 250
         }
       },
       "StorageAttributes": {
@@ -6531,7 +6531,7 @@
       },
       "WeaponAttributes": {
         "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-          "BaseDamagePerRound": 240,
+          "BaseDamagePerRound": 450,
           "DamagePacketsPerShot": 1,
           "AreaOfEffectRadius": 150,
           "AreaOfEffectFalloffType": "Quadratic",
@@ -6548,7 +6548,8 @@
             "13": {
               "TargetClass": "Air",
               "ClassOperator": "Or",
-              "Modifier": "CanNotTarget"
+              "Modifier": "DamagePercent",
+              "Amount": 50
             }
           }
         }
@@ -6560,13 +6561,14 @@
       "UnitAttributes": {
         "Resource1Cost": 250,
         "Resource2Cost": 100,
+        "MaxHealth": 750,
         "Armour": 2,
         "ProductionTime": 12
       },
       "UnitMovementAttributes": {
         "Dynamics": {
           "MaxSpeed": 100,
-          "MaxSpeedTurnRadius": 100
+          "MaxSpeedTurnRadius": 250
         }
       },
       "StorageAttributes": {
@@ -6581,7 +6583,7 @@
       },
       "WeaponAttributes": {
         "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-          "BaseDamagePerRound": 240,
+          "BaseDamagePerRound": 450,
           "DamagePacketsPerShot": 1,
           "AreaOfEffectRadius": 150,
           "AreaOfEffectFalloffType": "Quadratic",
@@ -6595,10 +6597,11 @@
             //  "Modifier": "DamagePercent",
             //  "Amount": 60
             //},
-            "14": {
+            "13": {
               "TargetClass": "Air",
               "ClassOperator": "Or",
-              "Modifier": "CanNotTarget"
+              "Modifier": "DamagePercent",
+              "Amount": 50
             }
           }
         }
@@ -6655,20 +6658,9 @@
       "WeaponAttributes": {
         "C_Bomber_Weapon_A2G_MP": {
           "WindUpTimeMS": 0,
-          "BaseDamagePerRound": 1600,
-          "AreaOfEffectRadius": 190,
-          "Modifiers": {
-            "1": {
-              //"TargetClass": "Carrier",
-              "Amount": 60
-            },
-            "2": {
-              "TargetClass": "Small",
-              "ClassOperator": "Or",
-              "Modifier": "DamagePercent",
-              "Amount": 60
-            }
-          }
+          "BaseDamagePerRound": 5000,
+          "AreaOfEffectRadius": 400,
+          "DamagePacketsPerShot": 500
         }
       }
     },
@@ -6684,15 +6676,15 @@
     // GAALSIEN PRECISION BOMBER
     "G_Bomber_MP": {
       "UnitAttributes": {
-        "MaxHealth": 1050,
-        "Armour": 12,
+        "MaxHealth": 250,
+        "Armour": 0,
         "Resource2Cost": 140,
         "PopCapCost": 3,
         "ProductionTime": 22
       },
       "UnitMovementAttributes": {
         "Dynamics": {
-          "MaxSpeed": 450,
+          "MaxSpeed": 600,
           "MaxSpeedTurnRadius": 300
         }
       },
@@ -6704,17 +6696,6 @@
           "AreaOfEffectFalloffType": "Quadratic",
           "RangeAttributesLong": {
             "Distance": 2000
-          },
-          "Modifiers": {
-            "0": {
-              "TargetClass": "Ground"
-            },
-            "2": {
-              "TargetClass": "Small",
-              "ClassOperator": "Or",
-              "Modifier": "DamagePercent",
-              "Amount": 60
-            }
           }
         }
       }
@@ -6723,15 +6704,15 @@
     // KHAANEPH PRECISION BOMBER
     "K_Bomber_MP": {
       "UnitAttributes": {
-        "MaxHealth": 1050,
-        "Armour": 12,
+        "MaxHealth": 250,
+        "Armour": 0,
         "Resource2Cost": 140,
         "PopCapCost": 3,
         "ProductionTime": 22
       },
       "UnitMovementAttributes": {
         "Dynamics": {
-          "MaxSpeed": 450,
+          "MaxSpeed": 600,
           "MaxSpeedTurnRadius": 300
         }
       },
@@ -6743,17 +6724,6 @@
           "AreaOfEffectFalloffType": "Quadratic",
           "RangeAttributesLong": {
             "Distance": 2000
-          },
-          "Modifiers": {
-            "0": {
-              "TargetClass": "Ground"
-            },
-            "2": {
-              "TargetClass": "Small",
-              "ClassOperator": "Or",
-              "Modifier": "DamagePercent",
-              "Amount": 60
-            }
           }
         }
       }
@@ -6806,7 +6776,7 @@
       }
     },
 
-    // COALITION GUNSHIP
+    // COALITION/SOBAN GUNSHIP
     "C_GunShip_MP": {
       "UnitAttributes": {
         "Resource1Cost": 500,
@@ -6817,9 +6787,15 @@
         "ProductionTime": 48,
         "SensorRadius": 300,
         "ContactRadius": 450
-      }, // FIXME: play with movement speed
-      "WeaponAttributes": { // attempted to make gunships graphically fire like railguns but apparently it can't be done :(
-        "C_GunShip_Weapon_DefaultFire_MP": { // still chunks though
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 150,
+          "MaxSpeedTurnRadius": 300
+        }
+      },
+      "WeaponAttributes": {
+        "C_GunShip_Weapon_DefaultFire_MP": {
           "ProjectileEntityTypeToSpawn": "",
           "TracerLength": 5.00,
           "TracerSpeed": 4500.00,
@@ -6831,8 +6807,8 @@
           "RangeAttributesLong": {
             "Distance": 1050
           }
-        } // FIXME: experiment with these values and see if it can be better tuned
-      } // FIXME: packets?
+        }
+      }
     },
 
     // COALITION ASSAULT CRUISER
@@ -6872,7 +6848,7 @@
         }
       },
       "UnitMovementAttributes": {
-        "Dynamics": { "MaxSpeed": 150 } // FIXME: tone down?
+        "Dynamics": { "MaxSpeed": 150 }
       },
       "AbilityAttributes": {
         "Ability_G_BattleCruiser_ArmorBonus_MP": {
@@ -6900,8 +6876,7 @@
     },
 
     // SOBAN ASSAULT CRUISER
-    "C_Sob_AssaultCruiser_MP": { // FIXME: vet!
-      // just work on coal AC and then copy paste
+    "C_Sob_AssaultCruiser_MP": {
       "UnitAttributes": {
         "Resource1Cost": 550,
         "Resource2Cost": 260,
@@ -7524,7 +7499,7 @@
         "Resource1Cost": 550,
         "Resource2Cost": 180,
         "MaxHealth": 3100,
-        "Armour": 10,
+        "Armour": 12,
         "ProductionTime": 45,
         "PopCapCost": 5,
         "SensorRadius": 1400,
@@ -7545,11 +7520,11 @@
       },
       "WeaponAttributes": {
         "G_ArtilleryCruiser_Weapon_PD_MP": {
-          "BaseDamagePerRound": 11,
-          "RateOfFire": 14,
+          "BaseDamagePerRound": 14,
+          "RateOfFire": 22,
           "BurstPeriodMinTimeMS": 78,
           "BurstPeriodMaxTimeMS": 84,
-          "CooldownTimeMS": 35,
+          "CooldownTimeMS": 20,
           "ReloadTimeMS": 60,
           "RangeAttributesShort": {
             "Accuracy": 100,
