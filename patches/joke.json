@@ -8,8 +8,8 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow",
-    "Version": "1.02",
-    "LastUpdate": "2021-12-29",
+    "Version": "1.03",
+    "LastUpdate": "2021-12-30",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
 
@@ -4065,7 +4065,7 @@
       },
       "AbilityAttributes": {
         "Ability_C_Baserunner_ECMField": {
-          "CooldownTimeSecs": 80,
+          "CooldownTimeSecs": 120,
           "Resource1Cost": 0
         },
         "Ability_C_LaunchProbe_MP": {
@@ -6538,6 +6538,15 @@
           "RateOfFire": 4,
           "ReloadTimeMS": 4500,
           //"LeadsTarget": "LeadTarget",
+          "RangeAttributesShort": {
+            "Distance": 1500
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          },
           "Modifiers": {
             //"13": {
             //  "TargetClass": "Carrier",
@@ -6590,6 +6599,15 @@
           "RateOfFire": 4,
           "ReloadTimeMS": 4500,
           //"LeadsTarget": "LeadTarget",
+          "RangeAttributesShort": {
+            "Distance": 1500
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          },
           "Modifiers": {
             //"13": {
             //  "TargetClass": "Carrier",
@@ -6845,18 +6863,19 @@
           "ReloadTimeMS": 3500,
           "OutputDPS": true
         },
+        "G_Battlecruiser_Weapon_G2A_MP": {
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air"
+            }
+          }
+        },
         "G_BattleCruiser_Weapon_Missile_MP": {
           "BaseDamagePerRound": 180,
           "AreaOfEffectFalloffType": "Quadratic",
           "AreaOfEffectRadius": 140,
           "ExcludeFromHeightAdvantage": true,
-          "RangeAttributesLong": { "Distance": 1000 },
-          "Modifiers": {
-            "0": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or"
-            }
-          }
+          "RangeAttributesLong": { "Distance": 1000 }
         }
       },
       "UnitMovementAttributes": {
@@ -6909,18 +6928,19 @@
           "ReloadTimeMS": 3500,
           "OutputDPS": true
         },
+        "G_Battlecruiser_Weapon_G2A_MP": {
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air"
+            }
+          }
+        },
         "G_BattleCruiser_Weapon_Missile_MP": {
           "BaseDamagePerRound": 180,
           "AreaOfEffectFalloffType": "Quadratic",
           "AreaOfEffectRadius": 140,
           "ExcludeFromHeightAdvantage": true,
-          "RangeAttributesLong": { "Distance": 1000 },
-          "Modifiers": {
-            "0": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or"
-            }
-          }
+          "RangeAttributesLong": { "Distance": 1000 }
         }
       },
       "UnitMovementAttributes": {
