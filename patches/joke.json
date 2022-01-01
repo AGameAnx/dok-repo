@@ -8,8 +8,8 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow",
-    "Version": "1.03",
-    "LastUpdate": "2021-12-30",
+    "Version": "1.04",
+    "LastUpdate": "2022-1-1",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
 
@@ -5934,7 +5934,7 @@
     // GAALSIEN/KHAANEPH HEAVY RAILGUN EMP ABILITY
     "MiniStun_StatusEffect": {
       "StatusEffectAttributes": {
-        "Duration": 2.8,
+        "Duration": 4,
         "Modifiers": {
           "1": {
             "ModifierType": "DisableAbilities"
@@ -5957,7 +5957,19 @@
               "2": { "Value": 1800 },
               "3": { "Value": 1800 },
               "4": { "Value": -56 }, // Max speed
-              "5": { "Value": -40 } // Turn radius
+              "5": { "Value": -40 }, // Turn radius
+              "6": {
+                "Remove": true
+              },
+              "7": {
+                "Remove": true
+              },
+              "8": {
+                "Remove": true
+              },
+              "9": {
+                "Remove": true
+              }
             }
           }
         }
@@ -6333,7 +6345,7 @@
         "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
           "ExcludeFromHeightAdvantage": true,
           "BaseDamagePerRound": 2000,
-          "AreaOfEffectRadius": 1000,
+          "AreaOfEffectRadius": 750,
           "AreaOfEffectFalloffType": "Quadratic",
           "RangeAttributesShort": {
             "Distance": 250
@@ -6406,7 +6418,7 @@
         "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
           "ExcludeFromHeightAdvantage": true,
           "BaseDamagePerRound": 2000,
-          "AreaOfEffectRadius": 1000,
+          "AreaOfEffectRadius": 750,
           "AreaOfEffectFalloffType": "Quadratic",
           "RangeAttributesShort": {
             "Distance": 250
@@ -6523,15 +6535,15 @@
         "G_Interceptor_StorageAttributesAsset_MP": {
           "InventoryLoadout": {
             "MISSILES": {
-              "Capacity": 20,
-              "StartingAmount": 20
+              "Capacity": 40,
+              "StartingAmount": 40
             }
           }
         }
       },
       "WeaponAttributes": {
         "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-          "BaseDamagePerRound": 450,
+          "BaseDamagePerRound": 225,
           "DamagePacketsPerShot": 1,
           "AreaOfEffectRadius": 150,
           "AreaOfEffectFalloffType": "Quadratic",
@@ -6539,7 +6551,7 @@
           "ReloadTimeMS": 4500,
           //"LeadsTarget": "LeadTarget",
           "RangeAttributesShort": {
-            "Distance": 1500
+            "Distance": 1000
           },
           "RangeAttributesMedium": {
             "Remove": true
@@ -6584,15 +6596,15 @@
         "G_Interceptor_StorageAttributesAsset_MP": {
           "InventoryLoadout": {
             "MISSILES": {
-              "Capacity": 20,
-              "StartingAmount": 20
+              "Capacity": 40,
+              "StartingAmount": 40
             }
           }
         }
       },
       "WeaponAttributes": {
         "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-          "BaseDamagePerRound": 450,
+          "BaseDamagePerRound": 225,
           "DamagePacketsPerShot": 1,
           "AreaOfEffectRadius": 150,
           "AreaOfEffectFalloffType": "Quadratic",
@@ -6600,7 +6612,7 @@
           "ReloadTimeMS": 4500,
           //"LeadsTarget": "LeadTarget",
           "RangeAttributesShort": {
-            "Distance": 1500
+            "Distance": 1000
           },
           "RangeAttributesMedium": {
             "Remove": true
@@ -7055,6 +7067,16 @@
         "G_HonorGuard_Weapon_G2A_MP": {
           "WindUpTimeMS": 500,
           "ReloadTimeMS": 4000,
+          "RangeAttributesLong": {
+            "Distance": 1750,
+            "Accuracy": 100
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesShort": {
+            "Remove": true
+          },
           "Modifiers": {
             "0": {
               "TargetClass": "Air",
@@ -7124,6 +7146,16 @@
               "TargetClass": "Air",
               "ClassOperator": "Or"
             }
+          },
+          "RangeAttributesLong": {
+            "Distance": 1750,
+            "Accuracy": 100
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesShort": {
+            "Remove": true
           }
         }
       }
@@ -7415,8 +7447,8 @@
       "UnitAttributes": {
         "Resource1Cost": 550,
         "Resource2Cost": 160,
-        "MaxHealth": 1600,
-        "Armour": 2,
+        "MaxHealth": 1900,
+        "Armour": 5,
         "ProductionTime": 60,
         "PopCapCost": 5
       },
@@ -7439,70 +7471,54 @@
       },
       "WeaponAttributes": {
         "C_ArtilleryCruiser_Weapon_Barrage_MP": {
-          "BaseDamagePerRound": 220,
-          "AreaOfEffectRadius": 98,
-          "NumberOfBursts": 6,
-          "RateOfFire": 3,
+          "BaseDamagePerRound": 2200,
+          "AreaOfEffectRadius": 150,
+          "NumberOfBursts": 1,
+          "RateOfFire": 1,
           "CooldownTimeMS": 900,
-          "BurstPeriodMinTimeMS": 1700,
-          "BurstPeriodMaxTimeMS": 1700,
+          "BurstPeriodMinTimeMS": 100,
+          "BurstPeriodMaxTimeMS": 100,
           "RangeAttributesLong": {
             "Distance": 2750
+          }
+        },
+        "C_ArtilleryCruiser_Weapon_PointDefense_MP": {
+          "LineOfSightRequired": false,
+          "ExcludeFromHeightAdvantage": true,
+          "BaseDamagePerRound": 20,
+          "RateOfFire": 10,
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 1750
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 75,
+            "Distance": 2000
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 50,
+            "Distance": 2250
           },
           "Modifiers": {
-            "1": {
-              "TargetClass": "Small",
-              "ClassOperator": "Or",
-              "Modifier": "DamagePercent",
-              "Amount": 50
-            },
-            "2": {
-              "TargetClass": "Carrier",
-              "ClassOperator": "Or",
-              "Modifier": "DamagePercent",
-              "Amount": 60
+            "0": {
+              "TargetClass": "Ground",
+              "Modifier": "CanNotTarget"
             }
           }
         },
         "C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
-          "BaseDamagePerRound": 180,
+          "BaseDamagePerRound": 10,
+          "DamagePacketsPerShot": 0,
           "ExcludeFromHeightAdvantage": true,
+          "NumberOfBursts": 50,
           "RangeAttributesLong": {
             "Distance": 2750
-          },
-          "Modifiers": {
-            "1": {
-              "TargetClass": "Small",
-              "ClassOperator": "Or",
-              "Modifier": "DamagePercent",
-              "Amount": 50
-            },
-            "2": {
-              "TargetClass": "Carrier",
-              "ClassOperator": "Or",
-              "Modifier": "DamagePercent",
-              "Amount": 60
-            }
           }
         },
         "C_ArtilleryCruiser_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 80,
-          "ReloadTimeMS": 7500,
-          "DamagePacketsPerShot": 1,
-          "Modifiers": {
-            "1": {
-              "TargetClass": "Small",
-              "ClassOperator": "Or",
-              "Modifier": "DamagePercent",
-              "Amount": 50
-            },
-            "2": {
-              "TargetClass": "Carrier",
-              "ClassOperator": "Or",
-              "Modifier": "DamagePercent",
-              "Amount": 60
-            }
-          }
+          "BaseDamagePerRound": 10,
+          "ReloadTimeMS": 75,
+          "DamagePacketsPerShot": 0
         }
       }
     },
@@ -7531,7 +7547,7 @@
         "Resource1Cost": 550,
         "Resource2Cost": 180,
         "MaxHealth": 3100,
-        "Armour": 12,
+        "Armour": 16,
         "ProductionTime": 45,
         "PopCapCost": 5,
         "SensorRadius": 1400,
@@ -7539,8 +7555,7 @@
       },
       "AbilityAttributes": {
         "Ability_G_ArtilleryBarrage_01_MP": {
-          "CooldownTimeSecs": 120,
-          "EdgeOfTargetShapeMinDistance": 0
+          "CooldownTimeSecs": 120
         }
       },
       "UnitMovementAttributes": {
@@ -7551,8 +7566,14 @@
         }
       },
       "WeaponAttributes": {
+        "G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
+          "BaseDamagePerRound": 1000,
+          "RangeAttributesLong": {
+            "Distance": 1250
+          }
+        },
         "G_ArtilleryCruiser_Weapon_PD_MP": {
-          "BaseDamagePerRound": 14,
+          "BaseDamagePerRound": 20,
           "RateOfFire": 22,
           "BurstPeriodMinTimeMS": 78,
           "BurstPeriodMaxTimeMS": 84,
@@ -7584,17 +7605,18 @@
           "BaseDamagePerRound": 100,
           "DamagePacketsPerShot": 1,
           "AreaOfEffectRadius": 200,
-          "NumberOfBursts": 2,
-          "RateOfFire": 4,
+          "NumberOfBursts": 1,
+          "RateOfFire": 8,
           "CooldownTimeMS": 3250,
-          "BurstPeriodMinTimeMS": 2050,
-          "BurstPeriodMaxTimeMS": 2050,
+          "BurstPeriodMinTimeMS": 450,
+          "BurstPeriodMaxTimeMS": 550,
           "RangeAttributesLong": {
-            "Distance": 1950
+            "Distance": 1350
           }
         },
         "G_ArtilleryCruiser_Weapon_G2G_MP": {
           "BaseDamagePerRound": 100,
+          "RateOfFire": 1,
           "DamagePacketsPerShot": 1,
           "ReloadTimeMS": 15000
         }
