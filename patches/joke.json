@@ -4682,13 +4682,15 @@
         "Resource2Cost": 50,
         "MaxHealth": 3500,
         "Armour": 6,
+        "ProductionTime": 50,
         "SensorRadius": 1450,
         "ContactRadius": 1600
       },
       "WeaponAttributes": {
         "G_SupportCruiser_Weapon_G2G_MP": {
           "BaseDamagePerRound": 10,
-          "ExcludeFromHeightAdvantage": true,
+          "ExcludeFromHeightAdvantage": false,
+          "LineOfSightRequired": true,
           "RateOfFire": 10,
           "RangeAttributesShort": {
             "Accuracy": 50,
@@ -4707,6 +4709,7 @@
               "TargetClass": "Air",
               "ClassOperator": "Or"
             },
+            "1": { "Remove": true },
             "2": { "Remove": true },
             "3": { "Remove": true },
             "4": { "Remove": true }
@@ -7168,7 +7171,7 @@
       },
       "WeaponAttributes": {
         "G_HonorGuardRailgun_Weapon_G2G_MP": {
-          "TracerSpeed": 100.00,
+          "TracerSpeed": 2000,
           "BaseDamagePerRound": 2500,
           "ReloadTimeMS": 4500,
           "ExcludeFromHeightAdvantage": true,
@@ -7235,7 +7238,7 @@
       },
       "WeaponAttributes": {
         "G_HonorGuardRailgun_Weapon_G2G_MP": {
-          "TracerSpeed": 100.00,
+          "TracerSpeed": 2000,
           "BaseDamagePerRound": 2500,
           "ReloadTimeMS": 4500,
           "ExcludeFromHeightAdvantage": true,
