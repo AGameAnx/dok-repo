@@ -8,8 +8,8 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow",
-    "Version": "0.07.01",
-    "LastUpdate": "2022-1-27",
+    "Version": "0.08.03.playtest_version",
+    "LastUpdate": "2022-1-31",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
 
@@ -19,7 +19,7 @@
       "RelicAttributes": {
         "BuffsWhileHolding": {
           "0": {
-            "Value": 0
+            "Value": -33
           }
         }
       }
@@ -268,7 +268,7 @@
         "Resource2Cost": 400,
         "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 3",
         "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-        "LocalizedLongDescriptionStringID": "Adds 500 hitpoints and 4 extra power to the carrier reserves",
+        "LocalizedLongDescriptionStringID": "Adds 550 hitpoints and 4 extra power to the carrier reserves",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": "Carrier",
@@ -278,7 +278,7 @@
               "0": {
                 "Attribute": "Unit_MaxHealth",
                 "Mode": "Add",
-                "Value": 500
+                "Value": 550
               }
             }
           }
@@ -287,6 +287,7 @@
     },
     "Research_Buff_Power_5": {
       "ResearchItemAttributes": {
+        "Dependencies": [],
         "Resource1Cost": 1200,
         "Resource2Cost": 550,
         "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
@@ -576,32 +577,39 @@
         "C_Carrier_Weapon_G2All_MP": {
           "BaseDamagePerRound": 30,
           "ExcludeFromHeightAdvantage": true,
-          "RateOfFire": 4,
+          "RateOfFire": 5,
           "TargetStyle": "Flak",
-          "RangeAttributesShort": { "Accuracy": 50 },
-          "RangeAttributesMedium": { "Accuracy": 45 },
+          "RangeAttributesShort": { 
+            "Distance": 400,
+            "Accuracy": 50 },
+          "RangeAttributesMedium": { 
+            "Distance": 600,
+            "Accuracy": 35 },
           "RangeAttributesLong": {
-            "Accuracy": 35,
+            "Accuracy": 20,
             "Distance": 800
           },
           "Modifiers": {
+            "0": {
+              "Remove": true
+            },
             "1": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyShortPercent",
-              "Amount": 130
+              "Modifier": "AccuracyShortValue",
+              "Amount": 100
             },
             "2": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyMediumPercent",
-              "Amount": 130
+              "Modifier": "AccuracyMediumValue",
+              "Amount": 95
             },
             "3": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyLongPercent",
-              "Amount": 130
+              "Modifier": "AccuracyLongValue",
+              "Amount": 90
             },
             "4": { "Remove": true },
             "5": { "Remove": true },
@@ -618,34 +626,43 @@
           "BaseDamagePerRound": 30
         },
         "C_Carrier_Weapon_G2All_PenetrationShots_MP": {
-          "BaseDamagePerRound": 70,
+          "BaseDamagePerRound": 30,
           "ExcludeFromHeightAdvantage": true,
-          "RateOfFire": 4,
+          "RateOfFire": 3,
           "TargetStyle": "Flak",
-          "RangeAttributesShort": { "Accuracy": 50 },
-          "RangeAttributesMedium": { "Accuracy": 45 },
+          "RangeAttributesShort": {
+            "Distance": 400,
+            "Accuracy": 50
+          },
+          "RangeAttributesMedium": {
+            "Distance": 600,
+            "Accuracy": 35
+          },
           "RangeAttributesLong": {
-            "Accuracy": 35,
+            "Accuracy": 20,
             "Distance": 800
           },
           "Modifiers": {
+            "0": {
+              "Remove": true
+            },
             "1": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyShortPercent",
-              "Amount": 130
+              "Modifier": "AccuracyShortValue",
+              "Amount": 100
             },
             "2": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyMediumPercent",
-              "Amount": 130
+              "Modifier": "AccuracyMediumValue",
+              "Amount": 95
             },
             "3": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyLongPercent",
-              "Amount": 130
+              "Modifier": "AccuracyLongValue",
+              "Amount": 90
             },
             "4": { "Remove": true },
             "5": { "Remove": true },
@@ -659,25 +676,52 @@
           }
         },
         "C_CarrierMissiles_Weapon_A2G_MP": {
-          "BaseDamagePerRound": 175,
-          "WindUpTimeMS": 500,
+          "FriendlyFireDamageScalar": 1,
+          "WeaponOwnerFriendlyFireDamageScalar": 1,
+          "DamagePacketsPerShot": 1,
+          "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
+          "BaseDamagePerRound": 1250,
+          "AreaOfEffectRadius": 500,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "BurstPeriodMinTimeMS": 50,
+          "BurstPeriodMaxTimeMS": 50,
+          "NumberOfBursts": 1,
+          "WindDownTimeMS": 0,
+          "ReloadTimeMS": 10000,
+          "CooldownTimeMS": 0,
           "RangeAttributesLong": { "Distance": 700 },
           "ExcludeFromHeightAdvantage": true
         },
         "C_Carrier_Weapon_CruiseMissile_MP": {
-          "BaseDamagePerRound": 2300,
-          "AreaOfEffectRadius": 550,
+          "ProjectileEntityTypeToSpawn":
+          "C_Battlecruiser_TacticalMissile_ProjectileAssetContainer_MP",
+          //"C_HAC_Smoke_ProjectileAssetContainer",
+          "BaseWreckDamagePerRound": 1,
+          "BaseDamagePerRound": 20000,
+          "AreaOfEffectRadius": 1000,
+          "DamagePacketsPerShot": 10,
+          "AreaOfEffectFalloffType": "Linear",
           "ExcludeFromHeightAdvantage": true,
           "Modifiers": {
+            "0": {
+              "Remove": true
+            },
             "1": {
-              "TargetClass": "Carrier, Large, XLarge",
+              "TargetClass": "Small, Medium, Strikecraft, Support",
               "ClassOperator": "Or",
               "Modifier": "DamagePercent",
-              "Amount": 160
+              "Amount": 50
             }
           },
+          "RangeAttributesShort": {
+            "Remove": true
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
           "RangeAttributesLong": {
-            "Distance": 4500
+            "MinDistance": 2000,
+            "Distance": 420000
           }
         },
         "C_Carrier_Weapon_Repair_MP": {
@@ -687,37 +731,52 @@
         }
       },
       "PowerShuntAttributes": {
+        "ReservePowerPool": {
+          "HasUnlimitedCapacity": true
+        },
+        "HeatSystem": {
+          "Capacity": 50
+        },
+        "OverheatingPool": {
+          "Capacity": 50
+        },
+        "HeatThreshold": 25,
+        "OverheatDamage": -1000,
         "PowerSystems": {
 
           "1": { // Weapon Systems
             "PowerLevels": {
 
               "0": {
-                "LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 2"
+                "LocalizedShortDescriptionStringID": "Rate of Fire: 3"
               },
 
               "1": {
-                "LocalizedShortDescriptionStringID": "Missiles Enabled. 20% PD ROF Bonus",
+                "LocalizedShortDescriptionStringID": "Rate of Fire: 5",
                 "StatusEffectsToApply": {
                   "C_Weapons_1_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
+                          "0": {
+                            "Mode": "Set",
+                            "Value": 0
+                          },
                           "1": {
-                            "Mode": "AddPercent",
-                            "Value": 20
+                            "Mode": "Set",
+                            "Value": 5
                           }, // TURRET_BR
                           "2": {
-                            "Mode": "AddPercent",
-                            "Value": 20
+                            "Mode": "Set",
+                            "Value": 5
                           }, // TURRET_BL
                           "3": {
-                            "Mode": "AddPercent",
-                            "Value": 20
+                            "Mode": "Set",
+                            "Value": 5
                           }, // TURRET_FL
                           "4": {
-                            "Mode": "AddPercent",
-                            "Value": 20
+                            "Mode": "Set",
+                            "Value": 5
                           } // TURRET_FR
                         }
                       }
@@ -727,27 +786,31 @@
               },
 
               "2": {
-                "LocalizedShortDescriptionStringID": "35% PD ROF Bonus, 2 Missiles",
+                "LocalizedShortDescriptionStringID": "Rate of Fire: 7",
                 "StatusEffectsToApply": {
                   "C_Weapons_2_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
+                          "0": {
+                            "Mode": "Set",
+                            "Value": 0
+                          },
                           "1": {
-                            "Mode": "AddPercent",
-                            "Value": 35
+                            "Mode": "Set",
+                            "Value": 7
                           }, // TURRET_BR
                           "2": {
-                            "Mode": "AddPercent",
-                            "Value": 35
+                            "Mode": "Set",
+                            "Value": 7
                           }, // TURRET_BL
                           "3": {
-                            "Mode": "AddPercent",
-                            "Value": 35
+                            "Mode": "Set",
+                            "Value": 7
                           }, // TURRET_FL
                           "4": {
-                            "Mode": "AddPercent",
-                            "Value": 35
+                            "Mode": "Set",
+                            "Value": 7
                           } // TURRET_FR
                         }
                       }
@@ -757,27 +820,31 @@
               },
 
               "3": {
-                "LocalizedShortDescriptionStringID": "55% PD ROF Bonus, 3 Missiles",
+                "LocalizedShortDescriptionStringID": "Rate of Fire: 10",
                 "StatusEffectsToApply": {
                   "C_Weapons_3_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
+                          "0": {
+                            "Mode": "Set",
+                            "Value": 0
+                          },
                           "1": {
-                            "Mode": "AddPercent",
-                            "Value": 55
+                            "Mode": "Set",
+                            "Value": 10
                           }, // TURRET_BR
                           "2": {
-                            "Mode": "AddPercent",
-                            "Value": 55
+                            "Mode": "Set",
+                            "Value": 10
                           }, // TURRET_BL
                           "3": {
-                            "Mode": "AddPercent",
-                            "Value": 55
+                            "Mode": "Set",
+                            "Value": 10
                           }, // TURRET_FL
                           "4": {
-                            "Mode": "AddPercent",
-                            "Value": 55
+                            "Mode": "Set",
+                            "Value": 10
                           } // TURRET_FR
                         }
                       }
@@ -787,27 +854,31 @@
               },
 
               "4": {
-                "LocalizedShortDescriptionStringID": "80% PD ROF Bonus, 4 Missiles",
+                "LocalizedShortDescriptionStringID": "Rate of Fire: 15",
                 "StatusEffectsToApply": {
                   "C_Weapons_4_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
+                          "0": {
+                            "Mode": "Set",
+                            "Value": 0
+                          },
                           "1": {
-                            "Mode": "AddPercent",
-                            "Value": 80
+                            "Mode": "Set",
+                            "Value": 15
                           }, // TURRET_BR
                           "2": {
-                            "Mode": "AddPercent",
-                            "Value": 80
+                            "Mode": "Set",
+                            "Value": 15
                           }, // TURRET_BL
                           "3": {
-                            "Mode": "AddPercent",
-                            "Value": 80
+                            "Mode": "Set",
+                            "Value": 15
                           }, // TURRET_FL
                           "4": {
-                            "Mode": "AddPercent",
-                            "Value": 80
+                            "Mode": "Set",
+                            "Value": 15
                           } // TURRET_FR
                         }
                       }
@@ -817,29 +888,33 @@
               },
 
               "5": {
-                "LocalizedShortDescriptionStringID": "Armor Piercing Rounds: 250% Damage, 25% PD ROF Bonus, 4 Missiles",
+                "LocalizedShortDescriptionStringID": "Missiles Enabled...",
                 "StatusEffectsToApply": {
                   "C_Weapons_5_StatusEffect_MP": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
+                          "0": {
+                            "Mode": "Set",
+                            "Value": 1
+                          },
                           "1": {
-                            "Mode": "AddPercent",
-                            "Value": 25
+                            "Mode": "Set",
+                            "Value": 15
                           }, // TURRET_BR_APBULLETS
                           "2": {
-                            "Mode": "AddPercent",
-                            "Value": 25
+                            "Mode": "Set",
+                            "Value": 15
                           }, // TURRET_BL_APBULLETS
                           "3": {
-                            "Mode": "AddPercent",
-                            "Value": 25
+                            "Mode": "Set",
+                            "Value": 15
                           }, // TURRET_FL_APBULLETS
                           "4": {
-                            "Mode": "AddPercent",
-                            "Value": 25
+                            "Mode": "Set",
+                            "Value": 15
                           }, // TURRET_FR_APBULLETS
-                          "5": { "Value": 2 } // Fire rate display
+                          "5": { "Value": 15 } // Fire rate display
                         }
                       }
                     }
@@ -848,14 +923,17 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 150 }
+                          "0": {
+                            "Mode": "Set",
+
+                            "Value": 30
+                          }
                         }
                       }
                     }
                   }
                 }
               }
-
             }
           },
 
@@ -935,6 +1013,15 @@
                         "BuffSet": {
                           "0": { "Value": 242 }
                         }
+                      }
+                    },
+                    "Modifiers": {
+                      "0": {
+                        "HealthOverTimeAttributes": {
+                          "Amount": 1,
+                          "MSTickDuration": 20
+                        }
+                        
                       }
                     }
                   }
@@ -1138,6 +1225,7 @@
         },
         "C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
           "BaseDamagePerRound": 195,
+          "DamagePacketsPerShot": 0,
           "ExcludeFromHeightAdvantage": true,
           "BurstPeriodMaxTimeMS": 250,
           "BurstPeriodMinTimeMS": 250,
@@ -1181,11 +1269,24 @@
           }
         },
         "C_Sob_CarrierMissiles_Weapon_A2G_MP": {
-          "BaseDamagePerRound": 175,
-          "WindUpTimeMS": 500,
-          "RangeAttributesLong": { "Distance": 700 }
+          "FriendlyFireDamageScalar": 1,
+          "WeaponOwnerFriendlyFireDamageScalar": 1,
+          "DamagePacketsPerShot": 1,
+          "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
+          "BaseDamagePerRound": 1250,
+          "AreaOfEffectRadius": 500,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "BurstPeriodMinTimeMS": 50,
+          "BurstPeriodMaxTimeMS": 50,
+          "NumberOfBursts": 1,
+          "WindDownTimeMS": 0,
+          "ReloadTimeMS": 10000,
+          "CooldownTimeMS": 0,
+          "RangeAttributesLong": { "Distance": 700 },
+          "ExcludeFromHeightAdvantage": true
         },
         "C_Sob_Carrier_Weapon_Nuke_MP": {
+          "BaseWreckDamagePerRound": 1,
           "ExcludeFromHeightAdvantage": true,
           "AreaOfEffectFalloffType": "Quadratic",
           "RangeAttributesLong": {
@@ -1194,6 +1295,17 @@
         }
       },
       "PowerShuntAttributes": {
+        "ReservePowerPool": {
+          "HasUnlimitedCapacity": true
+        },
+        "HeatSystem": {
+          "Capacity": 50
+        },
+        "OverheatingPool": {
+          "Capacity": 50
+        },
+        "HeatThreshold": 25,
+        "OverheatDamage": -1000,
         "PowerSystems": {
 
           "0": { // Defensive Logistics
@@ -1334,6 +1446,7 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
+
                           "1": { "Remove": true }, // Sets damage on the dummy weapon
                           "2": { "Remove": true }, // Sets damage on TURRET_BR weapon
 
@@ -1746,6 +1859,14 @@
                           "0": { "Value": 242 }
                         }
                       }
+                    },
+                    "Modifiers": {
+                      "0": {
+                        "HealthOverTimeAttributes": {
+                          "Amount": 1,
+                          "MSTickDuration": 20
+                        }
+                      }
                     }
                   }
                 }
@@ -2029,7 +2150,7 @@
         }
       },
       "WeaponAttributes": {
-        "G_Carrier_Weapon_EMP_MP": {
+        "G_Carrier_Weapon_EMP_MP": { // FIXME: wtf?
           "BaseDamagePerRound": 42069
         },
         "G_Carrier_Weapon_G2All_MP": {
@@ -2037,65 +2158,92 @@
           "ExcludeFromHeightAdvantage": true,
           "RateOfFire": 5,
           "TargetStyle": "Flak",
-          "RangeAttributesShort": { "Accuracy": 50 },
-          "RangeAttributesMedium": { "Accuracy": 45 },
+          "RangeAttributesShort": {
+            "Distance": 400,
+            "Accuracy": 50
+          },
+          "RangeAttributesMedium": {
+            "Distance": 600,
+            "Accuracy": 35
+          },
           "RangeAttributesLong": {
-            "Accuracy": 35,
+            "Accuracy": 20,
             "Distance": 800
           },
           "Modifiers": {
+            "0": {
+              "Remove": true
+            },
             "1": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyShortPercent",
-              "Amount": 130
+              "Modifier": "AccuracyShortValue",
+              "Amount": 100
             },
             "2": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyMediumPercent",
-              "Amount": 130
+              "Modifier": "AccuracyMediumValue",
+              "Amount": 95
             },
             "3": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyLongPercent",
-              "Amount": 130
-            }
+              "Modifier": "AccuracyLongValue",
+              "Amount": 90
+            },
+            "4": { "Remove": true },
+            "5": { "Remove": true },
+            "6": { "Remove": true },
+            "7": { "Remove": true },
+            "8": { "Remove": true },
+            "9": { "Remove": true },
+            "10": { "Remove": true },
+            "11": { "Remove": true },
+            "12": { "Remove": true }
           }
         },
         "G_Carrier_Weapon_G2All_Dummy_MP": {
           "BaseDamagePerRound": 30
         },
         "G_Carrier_Weapon_G2All_APBULLETS_MP": {
-          "BaseDamagePerRound": 75,
+          "BaseDamagePerRound": 30,
           "ExcludeFromHeightAdvantage": true,
           "RateOfFire": 5,
           "TargetStyle": "Flak",
-          "RangeAttributesShort": { "Accuracy": 50 },
-          "RangeAttributesMedium": { "Accuracy": 45 },
+          "RangeAttributesShort": {
+            "Distance": 400,
+            "Accuracy": 50
+          },
+          "RangeAttributesMedium": {
+            "Distance": 600,
+            "Accuracy": 35
+          },
           "RangeAttributesLong": {
-            "Accuracy": 35,
+            "Accuracy": 20,
             "Distance": 800
           },
           "Modifiers": {
+            "0": {
+              "Remove": true
+            },
             "1": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyShortPercent",
-              "Amount": 130
+              "Modifier": "AccuracyShortValue",
+              "Amount": 100
             },
             "2": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyMediumPercent",
-              "Amount": 130
+              "Modifier": "AccuracyMediumValue",
+              "Amount": 95
             },
             "3": {
               "TargetClass": "Large, Carrier, XLarge",
               "ClassOperator": "Or",
-              "Modifier": "AccuracyLongPercent",
-              "Amount": 130
+              "Modifier": "AccuracyLongValue",
+              "Amount": 90
             },
             "4": { "Remove": true },
             "5": { "Remove": true },
@@ -2109,30 +2257,73 @@
           }
         },
         "G_Carrier_Weapon_DefaultMissile_MP": {
-          "BaseDamagePerRound": 175,
-          "WindUpTimeMS": 500,
-          "RangeAttributesLong": { "Distance": 700 },
-          "ExcludeFromHeightAdvantage": true
+          "FriendlyFireDamageScalar": 1,
+          "WeaponOwnerFriendlyFireDamageScalar": 1,
+          
+          "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
+          "BaseDamagePerRound": 1250,
+          "AreaOfEffectRadius": 500,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "BurstPeriodMinTimeMS": 50,
+          "BurstPeriodMaxTimeMS": 50,
+          
+          "WindDownTimeMS": 0,
+          "ReloadTimeMS": 10000,
+          "CooldownTimeMS": 0,
+          "RangeAttributesLong": { "Distance": 700 }
         },
         "G_Carrier_Weapon_BarrageMissile_MP": {
+          "FriendlyFireDamageScalar": 1,
+          "WeaponOwnerFriendlyFireDamageScalar": 1,
+          "WindUpTimeMS": 0,
+          "WindDownTimeMS": 0,
+          "NumberOfBursts": 1,
+          "RateOfFire": 1,
+          "BurstPeriodMinTimeMS": 10,
+          "BurstPeriodMaxTimeMS": 50,
+          "CooldownTimeMS": 0,
+          "ReloadTimeMS": 0,
+          "BaseWreckDamagePerRound": 1,
+          "ProjectileEntityTypeToSpawn": "SuperWeapon_Narrow_ProjectileAssetContainer",
           "ExcludeFromHeightAdvantage": true,
-          "BaseDamagePerRound": 260,
-          "AreaOfEffectRadius": 245,
+          "BaseDamagePerRound": 2000,
+          "DamagePacketsPerShot": 0,
+          "AreaOfEffectRadius": 350,
           "AreaOfEffectFalloffType": "Quadratic",
-          "NumberOfBursts": 8,
+
           "Modifiers": {
+            "0": {
+              "Remove": true
+            },
             "1": {
               "Remove": true
             }
           },
+          "RangeAttributesShort": {
+            "Remove": true
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
           "RangeAttributesLong": {
-            "Distance": 4500
+            "MinDistance": 0,
+            "Distance": 420000
           }
         }
       },
       "PowerShuntAttributes": {
+        "ReservePowerPool": {
+          "HasUnlimitedCapacity": true
+        },
+        "HeatSystem": {
+          "Capacity": 100
+        },
+        "OverheatingPool": {
+          "Capacity": 10
+        },
+        "HeatThreshold": 25,
+        "OverheatDamage": 250,
         "PowerSystems": {
-
           "0": { // Speed Power Systems
             "PowerLevels": {
 
@@ -2218,36 +2409,48 @@
             }
           },
 
-          "1": { // Weapon Systems
+          "1": { // Weapon Systems // FIXME: unbelievably broken!
             "PowerLevels": {
 
               "0": {
-                "LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 3"
+                "LocalizedShortDescriptionStringID": "Rate of Fire: 3"
               },
 
               "1": {
-                "LocalizedShortDescriptionStringID": "Missiles Enabled. 20% PD ROF Bonus",
+                "LocalizedShortDescriptionStringID": "Rate of Fire: 5",
                 "StatusEffectsToApply": {
                   "G_Weapons_1_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
                           "0": {
-                            "Mode": "AddPercent",
-                            "Value": 20
-                          }, // TURRET_BR
+                            "Value": 5
+                          },
                           "1": {
-                            "Mode": "AddPercent",
-                            "Value": 20
-                          }, // TURRET_BL
+                            "Value": 5
+                          },
                           "2": {
-                            "Mode": "AddPercent",
-                            "Value": 20
-                          }, // TURRET_FL
+                            "Value": 5
+                          },
                           "3": {
-                            "Mode": "AddPercent",
-                            "Value": 20
-                          } // TURRET_FR
+                            "Value": 5
+                          },
+                          "5": {
+                            "Mode": "Set",
+                            "Value": 0
+                          },
+                          "6": {
+                            "Remove": true
+                          },
+                          "7": {
+                            "Remove": true
+                          },
+                          "8": {
+                            "Remove": true
+                          },
+                          "9": {
+                            "Remove": true
+                          }
                         }
                       }
                     }
@@ -2256,28 +2459,28 @@
               },
 
               "2": {
-                "LocalizedShortDescriptionStringID": "35% PD ROF Bonus, 2 Missiles",
+                "LocalizedShortDescriptionStringID": "Rate of Fire: 7",
                 "StatusEffectsToApply": {
                   "G_Weapons_2_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
+                          "0": {
+                            "Value": 5
+                          },
                           "1": {
-                            "Mode": "AddPercent",
-                            "Value": 35
-                          }, // TURRET_BR
+                            "Value": 5
+                          },
                           "2": {
-                            "Mode": "AddPercent",
-                            "Value": 35
-                          }, // TURRET_BL
+                            "Value": 5
+                          },
                           "3": {
-                            "Mode": "AddPercent",
-                            "Value": 35
-                          }, // TURRET_FL
-                          "4": {
-                            "Mode": "AddPercent",
-                            "Value": 35
-                          } // TURRET_FR
+                            "Value": 5
+                          },
+                          "5": {
+                            "Mode": "Set",
+                            "Value": 0
+                          }
                         }
                       }
                     }
@@ -2286,28 +2489,28 @@
               },
 
               "3": {
-                "LocalizedShortDescriptionStringID": "50% PD ROF Bonus, 3 Missiles",
+                "LocalizedShortDescriptionStringID": "Rate of Fire: 10",
                 "StatusEffectsToApply": {
                   "G_Weapons_3_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
+                          "0": {
+                            "Value": 5
+                          },
                           "1": {
-                            "Mode": "AddPercent",
-                            "Value": 50
-                          }, // TURRET_BR
+                            "Value": 5
+                          },
                           "2": {
-                            "Mode": "AddPercent",
-                            "Value": 50
-                          }, // TURRET_BL
+                            "Value": 5
+                          },
                           "3": {
-                            "Mode": "AddPercent",
-                            "Value": 50
-                          }, // TURRET_FL
-                          "4": {
-                            "Mode": "AddPercent",
-                            "Value": 50
-                          } // TURRET_FR
+                            "Value": 5
+                          },
+                          "5": {
+                            "Mode": "Set",
+                            "Value": 0
+                          }
                         }
                       }
                     }
@@ -2316,28 +2519,28 @@
               },
 
               "4": {
-                "LocalizedShortDescriptionStringID": "70% PD ROF Bonus, 4 Missiles",
+                "LocalizedShortDescriptionStringID": "Rate of Fire: 15",
                 "StatusEffectsToApply": {
                   "G_Weapons_4_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
+                          "0": {
+                            "Value": 5
+                          },
                           "1": {
-                            "Mode": "AddPercent",
-                            "Value": 70
-                          }, // TURRET_BR
+                            "Value": 5
+                          },
                           "2": {
-                            "Mode": "AddPercent",
-                            "Value": 70
-                          }, // TURRET_BL
+                            "Value": 5
+                          },
                           "3": {
-                            "Mode": "AddPercent",
-                            "Value": 70
-                          }, // TURRET_FL
-                          "4": {
-                            "Mode": "AddPercent",
-                            "Value": 70
-                          } // TURRET_FR
+                            "Value": 5
+                          },
+                          "5": {
+                            "Mode": "Set",
+                            "Value": 0
+                          }
                         }
                       }
                     }
@@ -2345,64 +2548,106 @@
                 }
               },
 
-              "5": {
-                "LocalizedShortDescriptionStringID": "Armor Piercing Rounds: 250% Damage, 4 Missiles",
+              "5": { // FIXME: gives no ROF bonus!
+                "LocalizedShortDescriptionStringID": "Missiles Enabled...",
                 "StatusEffectsToApply": {
-                  "G_Weapons_5_StatusEffect": {
-                    "BuffsToApplyToTarget": {
-                      "0": {
-                        "BuffSet": {
-                          "1": { "Remove": true }, // TURRET_FL_APBULLETS
-                          "2": { "Remove": true }, // TURRET_FR_APBULLETS
-                          "3": { "Remove": true }, // TURRET_BR_APBULLETS
-                          "4": { "Remove": true }, // TURRET_BL_APBULLETS
-                          "5": { "Value": 1 } // Fire rate display
-                        }
-                      }
-                    }
-                  },
+                  //"G_Weapons_5_StatusEffect_MP": {
+                  //  "MaxStacks": 1,
+                  //  "Duration": 0,
+                  //  "Lifetime": "Indefinite",
+                  //  "WeaponFireTriggerEndEvent": "None",
+                  //  "StackingBehaviour": "Replace",
+                  //  //"Modifers": {
+                  //  //
+                  //  //},
+                  //  //"UnitTypeBuffsToApply": {
+                  //  //
+                  //  //},
+                  //  "BuffsToApplyToTarget": {
+                  //    "0": {
+                  //      "BuffSet": {
+                  //        "0": {
+                  //          "Value": 5
+                  //        },
+                  //        "1": {
+                  //          "Value": 5
+                  //        },
+                  //        "2": {
+                  //          "Value": 5
+                  //        },
+                  //        "3": {
+                  //          "Value": 5
+                  //        },
+                  //        "5": {
+                  //          "Mode": "Set",
+                  //          "Value": 0
+                  //        },
+                  //        "6": {
+                  //          "Remove": true
+                  //        },
+                  //        "7": {
+                  //          "Remove": true
+                  //        },
+                  //        "8": {
+                  //          "Remove": true
+                  //        },
+                  //        "9": {
+                  //          "Remove": true
+                  //        },
+                  //        "10": {
+                  //          "Remove": true
+                  //        }
+                  //      }
+                  //    }
+                  //  }
+                  //},
                   "G_Weapons_MoreDamage_StatusEffect": {
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "0": { "Value": 150 }
+                          "0": {
+                            "Mode": "Set",
+
+                            "Value": 30
+                          }
                         }
                       }
                     }
                   }
                 }
               }
-
             }
           },
 
           "2": { // Re-establish Systems
             "PowerLevels": {
               "0": {
-                "LocalizedShortDescriptionStringID": "Carrier always takes damage",
-                "StatusEffectsToApply": {
-                  "Regen_0_StatusEffect_MP": {
-                    "MaxStacks": 1,
-                    "Duration": 0,
-                    "Lifetime": "Indefinite",
-                    "WeaponFireTriggerEndEvent": "None",
-                    "StackingBehaviour": "Replace",
-                    "Modifiers": {
-                      "0": {
-                        "ModifierType": "HealthOverTime",
-                        "HealthOverTimeAttributes": {
-                          "ID": "Passive_Regeneration",
-                          "MSTickDuration": 1000,
-                          "DamageType": "Damage",
-                          "Amount": 50
-                        }
-                      }
-                    }
-                  }
-                }
+                "HeatPointsProvided": 27,
+                "LocalizedShortDescriptionStringID": "Carrier always takes damage"
+                //"StatusEffectsToApply": { // This worked, but we found a more elegant solution.
+                //  "Regen_0_StatusEffect_MP": {
+                //    "MaxStacks": 1,
+                //    "Duration": 0,
+                //    "Lifetime": "Indefinite",
+                //    "WeaponFireTriggerEndEvent": "None",
+                //    "StackingBehaviour": "Replace",
+                //    "Modifiers": {
+                //      "0": {
+                //        "ModifierType": "HealthOverTime",
+                //        "HealthOverTimeAttributes": {
+                //          "ID": "Passive_Regeneration",
+                //          "MSTickDuration": 1000,
+                //          "DamageType": "Damage",
+                //          "Amount": 50
+                //        }
+                //      }
+                //    }
+                //  }
+                //}
               },
 
               "1": {
+                "HeatPointsProvided": -26,
                 "LocalizedShortDescriptionStringID": "Carrier hull integrity stabilized",
                 "StatusEffectsToApply": {
                   "Regen_1_StatusEffect_MP": {
@@ -2653,7 +2898,7 @@
           "AirSortie": { "LoiterLength": 40 }
         },
         "Ability_K_GrantShuntingBombToCarrier": {
-          "WarmupTimeSecs": 9
+          "WarmupTimeSecs": 120
         }
       },
       "WeaponAttributes": {
@@ -2746,24 +2991,58 @@
           }
         },
         "K_Carrier_Weapon_DefaultMissile_MP": {
-          "BaseDamagePerRound": 175,
-          "WindUpTimeMS": 500,
-          "ExcludeFromHeightAdvantage": true,
-          "RangeAttributesLong": { "Distance": 950 }
+          "FriendlyFireDamageScalar": 1,
+          "WeaponOwnerFriendlyFireDamageScalar": 1,
+          "DamagePacketsPerShot": 1,
+          "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
+          "BaseDamagePerRound": 1250,
+          "AreaOfEffectRadius": 500,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "BurstPeriodMinTimeMS": 50,
+          "BurstPeriodMaxTimeMS": 50,
+          "NumberOfBursts": 1,
+          "WindDownTimeMS": 0,
+          "ReloadTimeMS": 10000,
+          "CooldownTimeMS": 0,
+          "RangeAttributesLong": { "Distance": 700 },
+          "ExcludeFromHeightAdvantage": true
         },
         "K_Carrier_Weapon_BarrageMissile_MP": {
-          "BaseDamagePerRound": 700,
-          "DamagePacketsPerShot": 5,
-          "AreaOfEffectRadius": 150,
+          "WeaponOwnerFriendlyFireDamageScalar": 1.0,
+          "FriendlyFireDamageScalar": 1.0,
+          "BaseWreckDamagePerRound": null,
+          "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
+          "BaseDamagePerRound": 4000,
+          "DamagePacketsPerShot": 1,
+          "AreaOfEffectRadius": 750,
+          "AreaOfEffectFalloffType": "Linear",
           "ExcludeFromHeightAdvantage": true,
+          "RangeAttributesLong": {
+            "Distance": 3000
+          },
           "Modifiers": {
+            "0": {
+              "Remove": true
+            },
             "1": {
-              "Amount": 75
+              "Remove": true
             }
           }
         }
       },
       "PowerShuntAttributes": {
+        "ReservePowerPool": {
+          "HasUnlimitedCapacity": true
+        },
+        "HeatSystem": {
+          "Capacity": 100
+        },
+        "OverheatingPool": {
+          "Capacity": 10
+        },
+        "HeatThreshold": 25,
+        "OverheatDamage": 250,
+
         "PowerSystems": {
 
           "0": { // Speed Boost. Changed buffs affect radius
@@ -3076,11 +3355,11 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "2": {
-                            "Name": "SHUNTINGBOMB",
-                            "Attribute": "WeaponRange_DistanceLong",
-                            "Mode": "Add",
-                            "Value": 100
+                          "0": {
+                            "Value": 1
+                          },
+                          "1": {
+                            "Value": -10
                           }
                         }
                       }
@@ -3095,11 +3374,11 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "2": {
-                            "Name": "SHUNTINGBOMB",
-                            "Attribute": "WeaponRange_DistanceLong",
-                            "Mode": "Add",
-                            "Value": 200
+                          "0": {
+                            "Value": 1
+                          },
+                          "1": {
+                            "Value": -20
                           }
                         }
                       }
@@ -3114,11 +3393,11 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "2": {
-                            "Name": "SHUNTINGBOMB",
-                            "Attribute": "WeaponRange_DistanceLong",
-                            "Mode": "Add",
-                            "Value": 350
+                          "0": {
+                            "Value": 1
+                          },
+                          "1": {
+                            "Value": -30
                           }
                         }
                       }
@@ -3133,9 +3412,11 @@
                     "BuffsToApplyToTarget": {
                       "0": {
                         "BuffSet": {
-                          "2": {
-                            "Mode": "Add",
-                            "Value": 500
+                          "0": {
+                            "Value": 1
+                          },
+                          "1": {
+                            "Value": -40
                           }
                         }
                       }
@@ -3149,30 +3430,13 @@
           "2": { // Re-establish Systems
             "PowerLevels": {
               "0": {
-                "LocalizedShortDescriptionStringID": "Carrier always takes damage",
-                "StatusEffectsToApply": {
-                  "Regen_0_StatusEffect_MP": {
-                    "MaxStacks": 1,
-                    "Duration": 0,
-                    "Lifetime": "Indefinite",
-                    "WeaponFireTriggerEndEvent": "None",
-                    "StackingBehaviour": "Replace",
-                    "Modifiers": {
-                      "0": {
-                        "ModifierType": "HealthOverTime",
-                        "HealthOverTimeAttributes": {
-                          "ID": "Passive_Regeneration",
-                          "MSTickDuration": 1000,
-                          "DamageType": "Damage",
-                          "Amount": 50
-                        }
-                      }
-                    }
-                  }
-                }
+                "HeatPointsProvided": 27,
+                "LocalizedShortDescriptionStringID": "Carrier always takes damage"
+
               },
 
               "1": {
+                "HeatPointsProvided": -26,
                 "LocalizedShortDescriptionStringID": "Carrier hull integrity stabilized",
                 "StatusEffectsToApply": {
                   "Regen_1_StatusEffect_MP": {
@@ -3744,36 +4008,43 @@
         "MaxHealth": 1100,
         "ContactRadius": 400,
         "SensorRadius": 270
+      },
+      "WeaponAttributes": {
+        "N_ECMField_Weapon_G2G": {
+          "BaseDamagePerRound": 250,
+          "RateOfFire": 2,
+          "FriendlyFireDamageScalar": 1,
+          "WeaponOwnerFriendlyFireDamageScalar": 0
+        }
       }
       //"UnitMovementAttributes": { // attempted to make ECM move, but it has no move attribute
       //  "Dynamics": {
       //    "PermanentlyImmobile": false,
       //    "MaxSpeed": 40
       //  }
-      //},
+      //}
       //"AbilityAttributes": { // and we can't add attributes so uhhh, rip
       //  "Ability_Common_MoveAbility": {
       //    "StartsRemovedInGameMode": 0
       //  }
       //}
     },
+    
     "ECMField_StatusEffect": {
       "StatusEffectAttributes": {
         "BuffsToApplyToTarget": {
           "0": {
             "BuffSet": {
               "4": {
-                "Mode": "Set",
-                "Value": 1
+                "Remove": true
               }, // MaxSpeed
               "5": {
-                "Mode": "Set",
-                "Value": 1
+                "Remove": true
               }, // MaxSpeedTurnRadius
               "6": {
                 "Attribute": "UnitDynamics_AccelerationTime",
                 "Mode": "AddPercent",
-                "Value": 25
+                "Value": 200
               },
               "7": {
                 "Attribute": "UnitCombatBehaviour_MinDesiredCombatRange",
@@ -3987,6 +4258,20 @@
         "Class": "Ground, Strikecraft, Small"
       }
     },
+
+    //// COALITION CRUISE MISSILE
+    //"Carrier_CruiseMissile_ProjectileAssetContainer_MP": {
+    //  //"ProjectileAttributesData": {
+    //    "Carrier_CruiseMissile_ProjectileAttributes_MP": {
+    //      "Stages": {
+    //        "0": {
+    //          "MinSpeed": 100,
+    //          "MaxSpeed": 200
+    //        }
+    //      }
+    //    }
+    //  //}
+    //},
 
     // GAALSIEN/KHAANEPH FLEET CAPACITY UPGRADES
     "Research_Buff_Fleet_Popcap_1": {
@@ -4703,7 +4988,9 @@
         "C_SupportCruiser_Weapon_G2G_MP": {
           "BaseDamagePerRound": 20,
           "ExcludeFromHeightAdvantage": true,
+
           "RateOfFire": 10,
+          "LineOfSightRequired": false,
           //"RangeAttributesShort": {
           //  "Accuracy": 50,
           //  "Distance": 900
@@ -4783,6 +5070,7 @@
           "BaseDamagePerRound": 20,
           "ExcludeFromHeightAdvantage": true,
           "RateOfFire": 10,
+          "LineOfSightRequired": false,
           //"RangeAttributesShort": {
           //  "Accuracy": 50,
           //  "Distance": 900
@@ -4996,7 +5284,7 @@
       }
     },
 
-    // COALITION/SOBAN AAV FABRICATION
+    // COALITION AAV FABRICATION
     "Tier_2_C_ArmouredAssault": {
       "ResearchItemAttributes": {
         "Resource1Cost": 350,
@@ -5004,6 +5292,8 @@
         "ResearchTime": 60
       }
     },
+
+    // SOBAN AAV FABRICATION
     "Tier_2_S_ArmouredAssault": {
       "ResearchItemAttributes": {
         "Resource1Cost": 350,
@@ -5529,7 +5819,7 @@
                 "Attribute": 262148,
                 "Mode": "Add",
                 "Value": 8
-              }              
+              }
             }
           },
           "5": {
@@ -5561,7 +5851,7 @@
         }
       }
     },
-    
+
     // SOBAN LAV
     "C_Sob_Escort_MP": {
       "UnitAttributes": {
@@ -5744,13 +6034,15 @@
       }
     },
 
-    // COALITION/SOBAN LAV FABRICATION
+    // COALITION LAV FABRICATION
     "Tier_1_C_Escorts": {
       "ResearchItemAttributes": {
         "Resource1Cost": 350,
         "ResearchTime": 35
       }
     },
+
+    // SOBAN LAV FABRICATION
     "Tier_1_S_Escorts": {
       "ResearchItemAttributes": {
         "Resource1Cost": 350,
@@ -5849,6 +6141,7 @@
         "G_SandSkimmer_Weapon_G2G_MP": {
           "ExcludeFromHeightAdvantage": true,
           "ProjectileEntityTypeToSpawn": "G_Artillery_Default_ProjectileAssetContainer_MP",
+          //"ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
           "IsTracer": false,
           "TracerSpeed": 0,
           "TracerLength": 5,
@@ -5984,354 +6277,354 @@
       }
     },
 
-        // GAALSIEN/KHAANEPH SANDSKIMMER FABRICATION
-        "Tier_1_G_Sandskimmers": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 350,
-            "ResearchTime": 30
-          }
-        },
+    // GAALSIEN/KHAANEPH SANDSKIMMER FABRICATION
+    "Tier_1_G_Sandskimmers": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 350,
+        "ResearchTime": 30
+      }
+    },
 
-        //"Research_Buff_C_Escort_ROF01": { "ResearchItemAttributes": { "ResearchTime": 40 } }, // What are these??
-        //"Research_Buff_S_Escort_ROF01": { "ResearchItemAttributes": { "ResearchTime": 40 } },
+    //"Research_Buff_C_Escort_ROF01": { "ResearchItemAttributes": { "ResearchTime": 40 } }, // What are these??
+    //"Research_Buff_S_Escort_ROF01": { "ResearchItemAttributes": { "ResearchTime": 40 } },
 
-        // COALITION/SOBAN LAV ASSAULT PACK
-        "Research_Buff_C_Escort": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 150,
-            "Resource2Cost": 200
-          }
-        },
-        "Research_Buff_S_Escort": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 150,
-            "Resource2Cost": 200
-          }
-        },
+    // COALITION/SOBAN LAV ASSAULT PACK
+    "Research_Buff_C_Escort": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 150,
+        "Resource2Cost": 200
+      }
+    },
+    "Research_Buff_S_Escort": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 150,
+        "Resource2Cost": 200
+      }
+    },
 
-        // COALITION LAV DAMAGE UPGRADES
-        "Research_Buff_C_Escort_Damage01": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "ResearchTime": 25,
-            "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": { "Value": 1 }
-                }
+    // COALITION LAV DAMAGE UPGRADES
+    "Research_Buff_C_Escort_Damage01": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "ResearchTime": 25,
+        "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": { "Value": 1 }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_C_Escort_Damage02": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "ResearchTime": 45,
+        "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": { "Value": 1 }
+            }
+          }
+        }
+      }
+    },
+
+    // SOBAN LAV DAMAGE UPGRADES
+    "Research_Buff_S_Escort_Damage01": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "ResearchTime": 25,
+        "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": { "Value": 1 }
+            }
+          },
+          "1": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": { "Value": 1 }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_S_Escort_Damage02": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+        "ResearchTime": 45,
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": { "Value": 1 }
+            }
+          },
+          "1": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": { "Value": 1 }
+            }
+          }
+        }
+      }
+    },
+
+    // GAALSIEN/KHAANEPH SANDSKIMMER RAIDING
+    "Research_Buff_G_SandSkimmers_Speed": { "ResearchItemAttributes": { "ResearchTime": 40 } },
+
+    // GAALSIEN/KHAANEPH SANDSKIMMER DAMAGE UPGRADES
+    "Research_Buff_G_SandSkimmers_Damage01": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "ResearchTime": 25,
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 50 },
+              "1": { "Value": 50 }
+            }
+          },
+          "1": {
+            "BuffSet": {
+              "0": { "Value": 50 },
+              "1": { "Value": 50 }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_G_SandSkimmers_Damage02": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "ResearchTime": 45,
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 50 },
+              "1": { "Value": 50 }
+            }
+          },
+          "1": {
+            "BuffSet": {
+              "0": { "Value": 50 },
+              "1": { "Value": 50 }
+            }
+          }
+        }
+      }
+    },
+
+    // COALITION LAV ARMOR UPGRADES
+    "Research_Buff_C_Escort_VehicleArmor01": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 350,
+        "LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 30
               }
             }
           }
-        },
-        "Research_Buff_C_Escort_Damage02": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "ResearchTime": 45,
-            "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": { "Value": 1 }
-                }
+        }
+      }
+    },
+    "Research_Buff_C_Escort_VehicleArmor02": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 350,
+        "Resource2Cost": 175,
+        "LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 30
               }
             }
           }
-        },
+        }
+      }
+    },
 
-        // SOBAN LAV DAMAGE UPGRADES
-        "Research_Buff_S_Escort_Damage01": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "ResearchTime": 25,
-            "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
-            "UnitTypeBuffs": {
+    // SOBAN LAV ARMOR UPGRADES
+    "Research_Buff_S_Escort_VehicleArmor01": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 350,
+        "Resource2Cost": 100,
+        "LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 30
+              }
+            }
+          },
+          "1": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 30
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_S_Escort_VehicleArmor02": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 350,
+        "Resource2Cost": 175,
+        "LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 30
+              }
+            }
+          },
+          "1": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 30
+              }
+            }
+          }
+        }
+      }
+    },
+
+    // GAALSIEN/KHAANEPH SANDSKIMMER ARMOR UPGRADES
+    "Research_Buff_G_SandSkimmer_VehicleArmor01": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "Resource2Cost": 100,
+        "LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 30
+              }
+            }
+          },
+          "1": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 30
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_G_SandSkimmer_VehicleArmor02": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "Resource2Cost": 175,
+        "LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 30
+              }
+            }
+          },
+          "1": {
+            "BuffSet": {
+              "0": { "Value": 1 },
+              "1": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 30
+              }
+            }
+          }
+        }
+      }
+    },
+
+    // SUNDER TOOLTIP
+    "Ability_C_ArmorDebuff": {
+      "AbilityViewAttributes": {
+        "LocalizedLongDescriptionStringID": "Armor is fractured by your mom. Target armor is reduced by 15 for 15 seconds."
+      }
+    },
+
+    // SUNDER
+    "ArmorDebuff_StatusEffect": {
+      "StatusEffectAttributes": {
+        "Duration": 15,
+        "BuffsToApplyToTarget": {
+          "0": {
+            "BuffSet": {
               "0": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": { "Value": 1 }
-                }
+                "Value": -15
+              }
+            }
+          }
+        }
+      }
+    },
+
+    // MARK TARGET
+    "MarkTarget_StatusEffect": {
+      "StatusEffectAttributes": {
+        "Duration": 5,
+        "BuffsToApplyToTarget": {
+          "0": {
+            "BuffSet": {
+              "0": {
+                "Value": 100
               },
               "1": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": { "Value": 1 }
-                }
+                "Value": 100
               }
             }
           }
-        },
-        "Research_Buff_S_Escort_Damage02": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
-            "ResearchTime": 45,
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": { "Value": 1 }
-                }
-              },
-              "1": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": { "Value": 1 }
-                }
-              }
-            }
-          }
-        },
+        }
+      }
+    },
 
-        // GAALSIEN/KHAANEPH SANDSKIMMER RAIDING
-        "Research_Buff_G_SandSkimmers_Speed": { "ResearchItemAttributes": { "ResearchTime": 40 } },
-
-        // GAALSIEN/KHAANEPH SANDSKIMMER DAMAGE UPGRADES
-        "Research_Buff_G_SandSkimmers_Damage01": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "ResearchTime": 25,
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 50 },
-                  "1": { "Value": 50 }
-                }
-              },
-              "1": {
-                "BuffSet": {
-                  "0": { "Value": 50 },
-                  "1": { "Value": 50 }
-                }
-              }
-            }
-          }
-        },
-        "Research_Buff_G_SandSkimmers_Damage02": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "ResearchTime": 45,
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 50 },
-                  "1": { "Value": 50 }
-                }
-              },
-              "1": {
-                "BuffSet": {
-                  "0": { "Value": 50 },
-                  "1": { "Value": 50 }
-                }
-              }
-            }
-          }
-        },
-
-        // COALITION LAV ARMOR UPGRADES
-        "Research_Buff_C_Escort_VehicleArmor01": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 350,
-            "LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": {
-                    "Attribute": "Unit_MaxHealth",
-                    "Mode": "Add",
-                    "Value": 30
-                  }
-                }
-              }
-            }
-          }
-        },
-        "Research_Buff_C_Escort_VehicleArmor02": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 350,
-            "Resource2Cost": 175,
-            "LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": {
-                    "Attribute": "Unit_MaxHealth",
-                    "Mode": "Add",
-                    "Value": 30
-                  }
-                }
-              }
-            }
-          }
-        },
-
-        // SOBAN LAV ARMOR UPGRADES
-        "Research_Buff_S_Escort_VehicleArmor01": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 350,
-            "Resource2Cost": 100,
-            "LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": {
-                    "Attribute": "Unit_MaxHealth",
-                    "Mode": "Add",
-                    "Value": 30
-                  }
-                }
-              },
-              "1": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": {
-                    "Attribute": "Unit_MaxHealth",
-                    "Mode": "Add",
-                    "Value": 30
-                  }
-                }
-              }
-            }
-          }
-        },
-        "Research_Buff_S_Escort_VehicleArmor02": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 350,
-            "Resource2Cost": 175,
-            "LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": {
-                    "Attribute": "Unit_MaxHealth",
-                    "Mode": "Add",
-                    "Value": 30
-                  }
-                }
-              },
-              "1": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": {
-                    "Attribute": "Unit_MaxHealth",
-                    "Mode": "Add",
-                    "Value": 30
-                  }
-                }
-              }
-            }
-          }
-        },
-
-        // GAALSIEN/KHAANEPH SANDSKIMMER ARMOR UPGRADES
-        "Research_Buff_G_SandSkimmer_VehicleArmor01": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "Resource2Cost": 100,
-            "LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": {
-                    "Attribute": "Unit_MaxHealth",
-                    "Mode": "Add",
-                    "Value": 30
-                  }
-                }
-              },
-              "1": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": {
-                    "Attribute": "Unit_MaxHealth",
-                    "Mode": "Add",
-                    "Value": 30
-                  }
-                }
-              }
-            }
-          }
-        },
-        "Research_Buff_G_SandSkimmer_VehicleArmor02": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "Resource2Cost": 175,
-            "LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": {
-                    "Attribute": "Unit_MaxHealth",
-                    "Mode": "Add",
-                    "Value": 30
-                  }
-                }
-              },
-              "1": {
-                "BuffSet": {
-                  "0": { "Value": 1 },
-                  "1": {
-                    "Attribute": "Unit_MaxHealth",
-                    "Mode": "Add",
-                    "Value": 30
-                  }
-                }
-              }
-            }
-          }
-        },
-
-        // SUNDER TOOLTIP
-        "Ability_C_ArmorDebuff": {
-          "AbilityViewAttributes": {
-            "LocalizedLongDescriptionStringID": "Armor is fractured by your mom. Target armor is reduced by 15 for 15 seconds."
-          }
-        },
-
-        // SUNDER
-        "ArmorDebuff_StatusEffect": {
-          "StatusEffectAttributes": {
-            "Duration": 15,
-            "BuffsToApplyToTarget": {
-              "0": {
-                "BuffSet": {
-                  "0": {
-                    "Value": -15
-                  }
-                }
-              }
-            }
-          }
-        },
-
-        // MARK TARGET
-        "MarkTarget_StatusEffect": {
-          "StatusEffectAttributes": {
-            "Duration": 5,
-            "BuffsToApplyToTarget": {
-              "0": {
-                "BuffSet": {
-                  "0": {
-                    "Value": 100
-                  },
-                  "1": {
-                    "Value": 100
-                  }
-                }
-              }
-            }
-          }
-        },
-
-        // COALITION RAILGUN
+    // COALITION RAILGUN
     "C_Railgun_MP": {
       "UnitAttributes": {
         "Resource1Cost": 300,
@@ -6465,7 +6758,7 @@
       }
     },
 
-        // SOBAN RAILGUN
+    // SOBAN RAILGUN
     "C_Sob_Railgun_MP": {
       "UnitAttributes": {
         "Resource1Cost": 300,
@@ -6593,49 +6886,49 @@
       }
     },
 
-        // COALITION/SOBAN RAILGUN FABRICATION
-        "Tier_2_C_RailGun": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 200,
-            "Resource2Cost": 100,
-            "ResearchTime": 45
-          }
-        },
-        "Tier_2_S_RailGun": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 200,
-            "Resource2Cost": 100,
-            "ResearchTime": 45
-          }
-        },
+    // COALITION/SOBAN RAILGUN FABRICATION
+    "Tier_2_C_RailGun": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 200,
+        "Resource2Cost": 100,
+        "ResearchTime": 45
+      }
+    },
+    "Tier_2_S_RailGun": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 200,
+        "Resource2Cost": 100,
+        "ResearchTime": 45
+      }
+    },
 
-        // COALITION MAG ACCELERATOR
-        "Research_Buff_C_Railgun": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 150,
-            "Resource2Cost": 250,
-            "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 60.",
-            "UnitTypeBuffs": {
-              "0": { "BuffSet": { "0": { "Value": 60 } } },
-              "1": { "BuffSet": { "0": { "Value": 60 } } }
-            }
-          }
-        },
+    // COALITION MAG ACCELERATOR
+    "Research_Buff_C_Railgun": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 150,
+        "Resource2Cost": 250,
+        "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 60.",
+        "UnitTypeBuffs": {
+          "0": { "BuffSet": { "0": { "Value": 60 } } },
+          "1": { "BuffSet": { "0": { "Value": 60 } } }
+        }
+      }
+    },
 
-        // SOBAN MAG ACCELERATOR
-        "Research_Buff_S_Railgun": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 150,
-            "Resource2Cost": 250,
-            "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 20.",
-            "UnitTypeBuffs": {
-              "0": { "BuffSet": { "0": { "Value": 20 } } },
-              "1": { "BuffSet": { "0": { "Value": 20 } } }
-            }
-          }
-        },
+    // SOBAN MAG ACCELERATOR
+    "Research_Buff_S_Railgun": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 150,
+        "Resource2Cost": 250,
+        "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 20.",
+        "UnitTypeBuffs": {
+          "0": { "BuffSet": { "0": { "Value": 20 } } },
+          "1": { "BuffSet": { "0": { "Value": 20 } } }
+        }
+      }
+    },
 
-        // GAALSIEN HEAVY RAILGUN
+    // GAALSIEN HEAVY RAILGUN
     "G_StarHullTank_MP": {
       "UnitAttributes": {
         "Resource1Cost": 380,
@@ -6800,7 +7093,7 @@
       }
     },
 
-        // KHAANEPH HEAVY RAILGUN
+    // KHAANEPH HEAVY RAILGUN
     "K_HeavyRailgun_MP": {
       "UnitAttributes": {
         "Resource1Cost": 380,
@@ -6964,1880 +7257,1959 @@
       }
     },
 
-        // GAALSIEN/KHAANEPH RAILGUN FABRICATION
-        "Tier_2_G_Railgun_U1": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 350,
-            "Resource2Cost": 200,
-            "ResearchTime": 35
-          }
-        },
+    // GAALSIEN/KHAANEPH RAILGUN FABRICATION
+    "Tier_2_G_Railgun_U1": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 350,
+        "Resource2Cost": 200,
+        "ResearchTime": 35
+      }
+    },
 
-        // GAALSIEN/KHAANEPH HEAVY RAILGUN EMP ABILITY
-        "MiniStun_StatusEffect": {
-          "StatusEffectAttributes": {
-            "Duration": 4,
-            "Modifiers": {
-              "1": {
-                "ModifierType": "DisableAbilities"
-              },
-              "2": {
-                "ModifierType": "DisableAllWeapons"
-              }
-            }
-          }
-        },
-
-        // GAALSIEN/KHAANEPH RANGED CALIBRATION
-        "Scope_StatusEffect": {
-          "StatusEffectAttributes": {
-            "BuffsToApplyToTarget": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 1800 },
-                  "1": { "Value": 1800 },
-                  "2": { "Value": 1800 },
-                  "3": { "Value": 1800 },
-                  "4": { "Value": -56 }, // Max speed
-                  "5": { "Value": -40 }, // Turn radius
-                  "6": {
-                    "Remove": true
-                  },
-                  "7": {
-                    "Remove": true
-                  },
-                  "8": {
-                    "Remove": true
-                  },
-                  "9": {
-                    "Remove": true
-                  }
-                }
-              }
-            }
-          }
-        },
-
-        // GAALSIEN/KHAANEPH RANGED CALIBRATION UPGRADE
-        "Research_Buff_G_RailGunScope": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 200,
-            "Resource2Cost": 250,
-            "ResearchTime": 55,
-            "LocalizedLongDescriptionStringID": "Heavy Railguns gain the RANGED CALIBRATION ability - Increasing range at the cost of mobility.\n\n[84a1e8]Weapon and sight range increased by 5000.\nMovement speed reduced by 90%."
-          }
-        },
-
-        // GAALSIEN/KHAANEPH HEAVY RAILGUN EMP UPGRADE
-        "Research_Buff_G_RailGunStun": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 400,
-            "Resource2Cost": 100,
-            "ResearchTime": 35
-          }
-        },
-
-        // GAALSIEN ASSAULT RAILGUN
-        "G_StarHull_Upgrade01_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 250,
-            "Resource2Cost": 55,
-            "MaxHealth": 650,
-            "ExperienceValue": 350,
-            "ProductionTime": 17,
-            "SensorRadius": 1250,
-            "ContactRadius": 1350,
-            "Armour": 5,
-            "PriorityAsTarget": 10
+    // GAALSIEN/KHAANEPH HEAVY RAILGUN EMP ABILITY
+    "MiniStun_StatusEffect": {
+      "StatusEffectAttributes": {
+        "Duration": 4,
+        "Modifiers": {
+          "1": {
+            "ModifierType": "DisableAbilities"
           },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 60,
-              "AccelerationTime": 1.5,
-              "BrakingTime": 1.2
-            }
-          },
-          "AbilityAttributes": {
-            "Ability_G_AssaultRailgunRegen": {
-              "ApplyStatusEffect": {
-                "Regen_AssaultRailguns_StatusEffect": {
-                  "Modifiers": {
-                    "0": {
-                      "HealthOverTimeAttributes": {
-                        "Amount": 7
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "Ability_G_RailGun_Dash_Move_To_MP": {
-              "CooldownTimeSecs": 50
-            },
-            "Ability_G_RailGun_Dash_MP": {
-              "ApplyStatusEffect": {
-                "RailGun_Dash_StatusEffect": {
-                  "Duration": 2.7
-                }
-              }
-            }
-          },
-          "WeaponAttributes": {
-            "G_StarHull_Upgrade01_Weapon_G2G_MP": {
-              "BaseDamagePerRound": 10,
-              "BurstPeriodMinTimeMS": 110,
-              "BurstPeriodMaxTimeMS": 110,
-              "NumberOfBursts": 5,
-              "WindUpTimeMS": 200,
-              "WindDownTimeMS": 50,
-              "ReloadTimeMS": 200,
-              "RangeAttributesShort": {
-                "Accuracy": 30,
-                "Distance": 300
-              },
-              "RangeAttributesMedium": {
-                "Accuracy": 15,
-                "Distance": 1500
-              },
-              "RangeAttributesLong": {
-                "Accuracy": 5,
-                "Distance": 7500
-              }
-            }
-          }
-        },
-
-        // KHAANEPH ASSAULT RAILGUN
-        "K_AssaultRailgun_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 250,
-            "Resource2Cost": 55,
-            "MaxHealth": 650,
-            "ExperienceValue": 350,
-            "ProductionTime": 17,
-            "SensorRadius": 1250,
-            "ContactRadius": 1350,
-            "Armour": 5,
-            "PriorityAsTarget": 10
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 60,
-              "AccelerationTime": 1.5,
-              "BrakingTime": 1.2
-            }
-          },
-          "AbilityAttributes": {
-            "Ability_G_AssaultRailgunRegen": {
-              "ApplyStatusEffect": {
-                "Regen_AssaultRailguns_StatusEffect": {
-                  "Modifiers": {
-                    "0": {
-                      "HealthOverTimeAttributes": {
-                        "Amount": 7
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "Ability_G_RailGun_Dash_Move_To_MP": {
-              "CooldownTimeSecs": 50
-            },
-            "Ability_G_RailGun_Dash_MP": {
-              "ApplyStatusEffect": {
-                "RailGun_Dash_StatusEffect": {
-                  "Duration": 2.7
-                }
-              }
-            }
-          },
-          "WeaponAttributes": {
-            "G_StarHull_Upgrade01_Weapon_G2G_MP": {
-              "BaseDamagePerRound": 10,
-              "BurstPeriodMinTimeMS": 110,
-              "BurstPeriodMaxTimeMS": 110,
-              "NumberOfBursts": 5,
-              "WindUpTimeMS": 200,
-              "WindDownTimeMS": 50,
-              "ReloadTimeMS": 200,
-              "RangeAttributesShort": {
-                "Accuracy": 30,
-                "Distance": 300
-              },
-              "RangeAttributesMedium": {
-                "Accuracy": 15,
-                "Distance": 1500
-              },
-              "RangeAttributesLong": {
-                "Accuracy": 5,
-                "Distance": 7500
-              }
-            }
-          }
-        },
-
-        // GAALSIEN/KHAANEPH ASSAULT RAILGUN DART MANUEVER
-        "RailGun_Dash_StatusEffect": {
-          "StatusEffectAttributes": {
-            "Duration": 3
-          }
-        },
-
-        // GAALSIEN/KHAANEPH ASSAULT RAILGUN DART MANUEVER UPGRADE
-        "Research_Buff_G_RailGun_Ability": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 150,
-            "Resource2Cost": 80,
-            "ResearchTime": 20
-          }
-        },
-
-        // GAALSIEN/KHAANEPH RAILGUN ARMOR UPGRADES
-        "Research_Buff_G_RailGunUnits_Armor1": {
-          "ResearchItemAttributes": {
-            "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 on Assault Railgun and Heavy Railgun.",
-            "UnitTypeBuffs": {
-              "0": { "BuffSet": { "0": { "Value": 1 } } }, // G_StarHull_Upgrade01_MP
-              "1": { "BuffSet": { "0": { "Value": 1 } } }, // G_StarHullTank_MP
-              "2": { "BuffSet": { "0": { "Value": 1 } } }, // K_AssaultRailgun
-              "3": { "BuffSet": { "0": { "Value": 1 } } } // K_HeavyRailgun
-            }
-          }
-        },
-        "Research_Buff_G_RailGunUnits_Armor2": {
-          "ResearchItemAttributes": {
-            "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun, armor by 1 and hull integrity by 50 on Assault Railgun.",
-            "Resource1Cost": 250,
-            "Resource2Cost": 175,
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": { // G_StarHull_Upgrade01_MP
-                  "0": { "Value": 1 },
-                  "1": { "Value": 50 }
-                }
-              },
-              "1": {
-                "BuffSet": { // G_StarHullTank_MP
-                  "0": { "Value": 1 }
-                }
-              },
-              "2": {
-                "BuffSet": { // K_AssaultRailgun
-                  "0": { "Value": 1 },
-                  "1": { "Value": 50 }
-                }
-              },
-              "3": {
-                "BuffSet": { // K_HeavyRailgun
-                  "0": { "Value": 1 }
-                }
-              }
-            }
-          }
-        },
-        "Research_Buff_G_RailGunUnits_Armor3": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "Resource2Cost": 250,
-            "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": { // G_StarHull_Upgrade01_MP
-                  "0": { "Value": 1 },
-                  "1": { "Value": 100 }
-                }
-              },
-              "1": {
-                "BuffSet": { // G_StarHullTank_MP
-                  "0": { "Value": 1 },
-                  "1": { "Value": 100 }
-                }
-              },
-              "2": {
-                "BuffSet": { // K_AssaultRailgun
-                  "0": { "Value": 1 },
-                  "1": { "Value": 100 }
-                }
-              },
-              "3": {
-                "BuffSet": { // K_HeavyRailgun
-                  "0": { "Value": 1 },
-                  "1": { "Value": 100 }
-                }
-              }
-            }
-          }
-        },
-
-        // COALITION/SOBAN MISSILE BATTERY
-        "C_HAC_Upgrade01_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 300,
-            "Resource2Cost": 85,
-            "Armour": 10,
-            "PriorityAsTarget": -10,
-            "AggroRange": 1100
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 60
-            },
-            "Combat": { "MaxDesiredCombatRange": 1020 }
-          },
-          "AbilityAttributes": {
-            "Ability_C_Grenade_MP": {
-              "CooldownTimeSecs": 150
-            }
-          },
-          "WeaponAttributes": {
-            "C_HAC_Upgrade01_Weapon_G2A_MP": {
-              "ReloadTimeMS": 3000,
-              "RangeAttributesShort": {
-                "Distance": 600
-              },
-              "RangeAttributesMedium": {
-                "Distance": 750
-              },
-              "RangeAttributesLong": {
-                "Distance": 1000
-              },
-              "Modifiers": {
-                "0": {
-                  "TargetClass": "Air",
-                  "ClassOperator": "Or"
-                }
-              }
-            },
-            "C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
-              "BaseDamagePerRound": 660,
-              "AreaOfEffectRadius": 260,
-              "DamagePacketsPerShot": 30,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "ExcludeFromHeightAdvantage": true,
-              "RangeAttributesShort": {
-                "Accuracy": 100,
-                "Distance": 1100
-              },
-              "RangeAttributesMedium": {
-                "Remove": true
-              },
-              "RangeAttributesLong": {
-                "Remove": true
-              }
-            }
-          }
-        },
-
-        // GAALSIEN MISSILE SHIP
-        "G_Catamaran_Upgrade01_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 350,
-            "Resource2Cost": 90,
-            "ProductionTime": 24,
-            "Armour": 3,
-            "PriorityAsTarget": -10
-          },
-          "AbilityAttributes": {
-            "Ability_G_MissileCraft_CrowdControl_MP": {
-              "CooldownTimeSecs": 300
-            }
-          },
-          "ExperienceAttributes": {
-            "Levels": {
-              "4": {
-                "Buff": {
-                  "0": {
-                    "Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP",
-                    "Attribute": "UnitWeapon_ReloadTime",
-                    "Mode": "Add",
-                    "Value": -1000
-                  },
-                  "1": {
-                    "Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
-                    "Attribute": "UnitWeapon_ReloadTime",
-                    "Mode": "Add",
-                    "Value": -1000
-                  }
-                }
-              }
-            }
-          },
-          "WeaponAttributes": {
-            "G_Catamaran_Upgrade01_Weapon_G2A_MP": {
-              "ReloadTimeMS": 2300,
-              "Turret": {
-                "RotationSpeed": 160,
-                "FieldOfFire": 40
-              },
-              "RangeAttributesLong": {
-                "Distance": 1330
-              }
-            },
-            "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
-              "ReloadTimeMS": 2300,
-              "Turret": {
-                "RotationSpeed": 240,
-                "FieldOfFire": 40
-              },
-              "RangeAttributesLong": {
-                "Distance": 1500
-              }
-            },
-            "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
-              "ExcludeFromHeightAdvantage": true,
-              "BaseDamagePerRound": 2000,
-              "AreaOfEffectRadius": 750,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "RangeAttributesShort": {
-                "Distance": 250
-              },
-              "RangeAttributesMedium": {
-                "Remove": true
-              },
-              "RangeAttributesLong": {
-                "Remove": true
-              }
-            }
-          }
-        },
-
-        // KHAANEPH MISSILE SHIP
-        "K_MissileShip_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 350,
-            "Resource2Cost": 90,
-            "ProductionTime": 24,
-            "Armour": 3,
-            "PriorityAsTarget": -10
-          },
-          "AbilityAttributes": {
-            "Ability_G_MissileCraft_CrowdControl_MP": {
-              "CooldownTimeSecs": 300
-            }
-          },
-          "ExperienceAttributes": {
-            "Levels": {
-              "4": {
-                "Buff": {
-                  "0": {
-                    "Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP",
-                    "Attribute": "UnitWeapon_ReloadTime",
-                    "Mode": "Add",
-                    "Value": -1000
-                  },
-                  "1": {
-                    "Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
-                    "Attribute": "UnitWeapon_ReloadTime",
-                    "Mode": "Add",
-                    "Value": -1000
-                  }
-                }
-              }
-            }
-          },
-          "WeaponAttributes": {
-            "G_Catamaran_Upgrade01_Weapon_G2A_MP": {
-              "ReloadTimeMS": 2300,
-              "Turret": {
-                "RotationSpeed": 160,
-                "FieldOfFire": 40
-              },
-              "RangeAttributesLong": {
-                "Distance": 1330
-              }
-            },
-            "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
-              "ReloadTimeMS": 2300,
-              "Turret": {
-                "RotationSpeed": 240,
-                "FieldOfFire": 40
-              },
-              "RangeAttributesLong": {
-                "Distance": 1500
-              }
-            },
-            "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
-              "ExcludeFromHeightAdvantage": true,
-              "BaseDamagePerRound": 2000,
-              "AreaOfEffectRadius": 750,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "RangeAttributesShort": {
-                "Distance": 250
-              },
-              "RangeAttributesMedium": {
-                "Remove": true
-              },
-              "RangeAttributesLong": {
-                "Remove": true
-              }
-            }
-          }
-        },
-
-        // GAALSIEN/KHAANEPH MISSILE SHIP FABRICATION
-        "Tier_2_G_Catamaran_AA": {
-          "ResearchItemAttributes": {
-            "ResearchTime": 45
-          }
-        },
-
-        // GAALSIEN/KHAANEPH MISSILE SHIP RADAR GUIDED UPGRADE
-        "Research_Buff_G_CatamaranAA_GlobalMissiles": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 50,
-            "Resource2Cost": 50,
-            "ResearchTime": 15
-          }
-        },
-
-        // GAALSIEN/KHAANEPH MISSILE SHIP DIRECT FIRE UPGRADE
-        "Research_Buff_G_CatamaranAA_AOE": {
-          "ResearchItemAttributes": {
-            "ResearchTime": 20
-          }
-        },
-
-        // COALITION/SOBAN STRIKE FIGHTER
-        "C_Interceptor_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 240,
-            "Resource2Cost": 90,
-            "MaxHealth": 490,
-            "Armour": 0,
-            "ProductionTime": 28
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 600,
-              "MaxSpeedTurnRadius": 200
-            }
-          },
-          "StorageAttributes": {
-            "C_Interceptor_StorageAttributesAsset_MP": {
-              "InventoryLoadout": {
-                "MISSILES": {
-                  "Capacity": 12,
-                  "StartingAmount": 12
-                }
-              }
-            }
-          },
-          "WeaponAttributes": {
-            "C_Interceptor_Weapon_A2G_MP": {
-              "BaseDamagePerRound": 50,
-              "DamagePacketsPerShot": 1,
-              "BurstPeriodMinTimeMS": 667,
-              "BurstPeriodMaxTimeMS": 667,
-              "ReloadTimeMS": 3332,
-              "RateOfFire": 3,
-              "Turret": {
-                "FieldOfView": 55,
-                "FieldOfFire": 55
-              },
-              "RangeAttributesShort": {
-                "Distance": 1500
-              },
-              "Modifiers": {
-                "13": {
-                  "TargetClass": "Air",
-                  "ClassOperator": "Or",
-                  "Modifier": "DamagePercent",
-                  "Amount": 200
-                }
-              }
-            }
-          }
-        },
-
-        // COALITION/SOBAN FIGHTER AND GUNSHIP TECH
-        "Tier_3_C_Interceptor_Bomber": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 500,
-            "Resource2Cost": 200
-          }
-        },
-
-        // GAALSIEN INTERCEPTOR
-        "G_Interceptor_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 250,
-            "Resource2Cost": 100,
-            "MaxHealth": 750,
-            "Armour": 2,
-            "ProductionTime": 12
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 100,
-              "MaxSpeedTurnRadius": 250
-            }
-          },
-          "StorageAttributes": {
-            "G_Interceptor_StorageAttributesAsset_MP": {
-              "InventoryLoadout": {
-                "MISSILES": {
-                  "Capacity": 40,
-                  "StartingAmount": 40
-                }
-              }
-            }
-          },
-          "WeaponAttributes": {
-            "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-              "BaseDamagePerRound": 225,
-              "DamagePacketsPerShot": 1,
-              "AreaOfEffectRadius": 150,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "RateOfFire": 4,
-              "ReloadTimeMS": 4500,
-              //"LeadsTarget": "LeadTarget",
-              "RangeAttributesShort": {
-                "Distance": 1000
-              },
-              "RangeAttributesMedium": {
-                "Remove": true
-              },
-              "RangeAttributesLong": {
-                "Remove": true
-              },
-              "Modifiers": {
-                //"13": {
-                //  "TargetClass": "Carrier",
-                //  "ClassOperator": "Or",
-                //  "Modifier": "DamagePercent",
-                //  "Amount": 60
-                //},
-                "13": {
-                  "TargetClass": "Air",
-                  "ClassOperator": "Or",
-                  "Modifier": "DamagePercent",
-                  "Amount": 50
-                }
-              }
-            }
-          }
-        },
-
-        // KHAANEPH INTERCEPTOR
-        "K_Interceptor_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 250,
-            "Resource2Cost": 100,
-            "MaxHealth": 750,
-            "Armour": 2,
-            "ProductionTime": 12
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 100,
-              "MaxSpeedTurnRadius": 250
-            }
-          },
-          "StorageAttributes": {
-            "G_Interceptor_StorageAttributesAsset_MP": {
-              "InventoryLoadout": {
-                "MISSILES": {
-                  "Capacity": 40,
-                  "StartingAmount": 40
-                }
-              }
-            }
-          },
-          "WeaponAttributes": {
-            "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-              "BaseDamagePerRound": 225,
-              "DamagePacketsPerShot": 1,
-              "AreaOfEffectRadius": 150,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "RateOfFire": 4,
-              "ReloadTimeMS": 4500,
-              //"LeadsTarget": "LeadTarget",
-              "RangeAttributesShort": {
-                "Distance": 1000
-              },
-              "RangeAttributesMedium": {
-                "Remove": true
-              },
-              "RangeAttributesLong": {
-                "Remove": true
-              },
-              "Modifiers": {
-                //"13": {
-                //  "TargetClass": "Carrier",
-                //  "ClassOperator": "Or",
-                //  "Modifier": "DamagePercent",
-                //  "Amount": 60
-                //},
-                "13": {
-                  "TargetClass": "Air",
-                  "ClassOperator": "Or",
-                  "Modifier": "DamagePercent",
-                  "Amount": 50
-                }
-              }
-            }
-          }
-        },
-
-        // GAALSIEN/KHAANEPH INTERCEPTOR FABRICATION
-        "Tier_2_G_Interceptor": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 450,
-            "ResearchTime": 70
-          }
-        },
-
-        // GAALSIEN/KHAANEPH INTERCEPTOR AFTERBURNER UPGRADE
-        "Research_Buff_G_Interceptor_Speed": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 200,
-            "Resource2Cost": 120,
-            "ResearchTime": 40,
-            "LocalizedLongDescriptionStringID": "Interceptor employs afterburner jets, greatly increasing maximum speed.\n\n[84a1e8]Maximum speed increased by 40%",
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": { "Value": 40 },
-                  "1": { "Value": -40 }
-                }
-              },
-              "1": {
-                "BuffSet": {
-                  "0": { "Value": 40 },
-                  "1": { "Value": -40 }
-                }
-              }
-            }
-          }
-        },
-
-        // COALITION/SOBAN BOMBER
-        "C_Bomber_MP": { // FIXME: jokeify
-          "UnitAttributes": {
-            "Resource1Cost": 350,
-            "Resource2Cost": 160,
-            "MaxHealth": 1300,
-            "Armour": 10,
-            "PopCapCost": 4
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 390,
-              "MaxSpeedTurnRadius": 250
-            }
-          },
-          "WeaponAttributes": {
-            "C_Bomber_Weapon_A2G_MP": {
-              "WindUpTimeMS": 0,
-              "BaseDamagePerRound": 5000,
-              "AreaOfEffectRadius": 400,
-              "DamagePacketsPerShot": 500
-            }
-          }
-        },
-
-        // COALITION/SOBAN BOMBER TECH
-        "Tier_3_C_GunShip_Bomber": {
-          "ResearchItemAttributes": {
-            "Resource2Cost": 150,
-            "ResearchTime": 55
-          }
-        },
-
-        // GAALSIEN PRECISION BOMBER
-        "G_Bomber_MP": {
-          "UnitAttributes": {
-            "MaxHealth": 250,
-            "Armour": 0,
-            "Resource2Cost": 140,
-            "PopCapCost": 3,
-            "ProductionTime": 22
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 600,
-              "MaxSpeedTurnRadius": 300
-            }
-          },
-          "WeaponAttributes": {
-            "G_Bomber_Weapon_A2G_MP": {
-              "BaseDamagePerRound": 800,
-              "ReloadTimeMS": 3500,
-              "AreaOfEffectRadius": 360,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "RangeAttributesShort": {
-                "Distance": 1000
-              },
-              "RangeAttributesMedium": {
-                "Remove": true
-              },
-              "RangeAttributesLong": {
-                "Remove": true
-              }
-            }
-          }
-        },
-
-        // KHAANEPH PRECISION BOMBER
-        "K_Bomber_MP": {
-          "UnitAttributes": {
-            "MaxHealth": 250,
-            "Armour": 0,
-            "Resource2Cost": 140,
-            "PopCapCost": 3,
-            "ProductionTime": 22
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 600,
-              "MaxSpeedTurnRadius": 300
-            }
-          },
-          "WeaponAttributes": {
-            "G_Bomber_Weapon_A2G_MP": {
-              "BaseDamagePerRound": 800,
-              "ReloadTimeMS": 3500,
-              "AreaOfEffectRadius": 360,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "RangeAttributesShort": {
-                "Distance": 1000
-              },
-              "RangeAttributesMedium": {
-                "Remove": true
-              },
-              "RangeAttributesLong": {
-                "Remove": true
-              }
-            }
-          }
-        },
-
-        // GAALSIEN/KHAANEPH BOMBER FABRICATION
-        "Tier_3_G_Bomber": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 250,
-            "Resource2Cost": 100,
-            "ResearchTime": 40
-          }
-        },
-
-        // GAALSIEN/KHAANEPH AIRCRAFT RECHARGE UPGRADE
-        "Research_Buff_G_Fighter_Repair": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 200,
-            "ResearchTime": 20
-          }
-        },
-
-        // GAALSIEN/KHAANEPH BOMBER CAPACITY UPGRADE
-        "Research_Buff_G_Bomber_Hold": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 400,
-            "Resource2Cost": 150,
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "0": {
-                    "Value": 3
-                  },
-                  "1": {
-                    "Value": 3
-                  }
-                }
-              },
-              "1": {
-                "BuffSet": {
-                  "0": {
-                    "Value": 3
-                  },
-                  "1": {
-                    "Value": 3
-                  }
-                }
-              }
-            }
-          }
-        },
-
-        // COALITION/SOBAN GUNSHIP
-        "C_GunShip_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 500,
-            "Resource2Cost": 100,
-            "MaxHealth": 1250,
-            "Armour": 9,
-            "PopCapCost": 4,
-            "ProductionTime": 48,
-            "SensorRadius": 300,
-            "ContactRadius": 450
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 150,
-              "MaxSpeedTurnRadius": 300
-            }
-          },
-          "WeaponAttributes": {
-            "C_GunShip_Weapon_DefaultFire_MP": {
-              "ProjectileEntityTypeToSpawn": "",
-              "TracerLength": 5.00,
-              "TracerSpeed": 4500.00,
-              "IsTracer": true,
-              "BaseDamagePerRound": 155,
-              "TargetStyle": 0,
-              "AreaOfEffectRadius": 144,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "RangeAttributesLong": {
-                "Distance": 1050
-              }
-            }
-          }
-        },
-
-        // COALITION ASSAULT CRUISER
-        "G_BattleCruiser_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 550,
-            "Resource2Cost": 260,
-            "MaxHealth": 1000,
-            "PopCapCost": 6,
-            "ProductionTime": 60,
-            "Armour": 5
-          },
-          "WeaponAttributes": {
-            "G_Battlecruiser_Weapon_G2G_MP": {
-              "BaseDamagePerRound": 75,
-              "AreaOfEffectRadius": 75,
-              "BurstPeriodMinTimeMS": 700,
-              "BurstPeriodMaxTimeMS": 700,
-              "RateOfFire": 3,
-              "NumberOfBursts": 4,
-              "WindUpTimeMS": 250,
-              "ReloadTimeMS": 3500,
-              "OutputDPS": true
-            },
-            "G_Battlecruiser_Weapon_G2A_MP": {
-              "RangeAttributesLong": { "Distance": 1250 },
-              "Modifiers": {
-                "0": {
-                  "TargetClass": "Air"
-                }
-              }
-            },
-            "G_BattleCruiser_Weapon_Missile_MP": {
-              "BaseDamagePerRound": 180,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "AreaOfEffectRadius": 140,
-              "ExcludeFromHeightAdvantage": true,
-              "RangeAttributesShort": {
-                "Distance": 600
-              },
-              "RangeAttributesMedium": {
-                "Distance": 750
-              },
-              "RangeAttributesLong": {
-                "Distance": 1000
-              }
-            }
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": { "MaxSpeed": 150 }
-          },
-          "AbilityAttributes": {
-            "Ability_G_BattleCruiser_ArmorBonus_MP": {
-              "CooldownTimeSecs": 50,
-              "ApplyStatusEffect": {
-                "ArmorBonus_StatusEffect": {
-                  "BuffsToApplyToTarget": {
-                    "0": {
-                      "BuffSet": {
-                        "0": { "Value": 400 } // % Armor bonus
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "Ability_G_BattleCruiser_Missile_MP": {
-              "Resource1Cost": 0,
-              "CooldownTimeSecs": 50
-            },
-            "Ability_G_BattleCruiserActiveRegen": {
-              "CooldownTimeSecs": 50
-            }
-          }
-        },
-
-        // SOBAN ASSAULT CRUISER
-        "C_Sob_AssaultCruiser_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 550,
-            "Resource2Cost": 260,
-            "MaxHealth": 1000,
-            "PopCapCost": 6,
-            "ProductionTime": 60,
-            "Armour": 5
-          },
-          "WeaponAttributes": {
-            "G_Battlecruiser_Weapon_G2G_MP": {
-              "BaseDamagePerRound": 75,
-              "AreaOfEffectRadius": 75,
-              "BurstPeriodMinTimeMS": 700,
-              "BurstPeriodMaxTimeMS": 700,
-              "RateOfFire": 3,
-              "NumberOfBursts": 4,
-              "WindUpTimeMS": 250,
-              "ReloadTimeMS": 3500,
-              "OutputDPS": true
-            },
-            "G_Battlecruiser_Weapon_G2A_MP": {
-              "RangeAttributesLong": { "Distance": 1250 },
-              "Modifiers": {
-                "0": {
-                  "TargetClass": "Air"
-                }
-              }
-            },
-            "G_BattleCruiser_Weapon_Missile_MP": {
-              "BaseDamagePerRound": 180,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "AreaOfEffectRadius": 140,
-              "ExcludeFromHeightAdvantage": true,
-              "RangeAttributesShort": {
-                "Distance": 600
-              },
-              "RangeAttributesMedium": {
-                "Distance": 750
-              },
-              "RangeAttributesLong": {
-                "Distance": 1000
-              }
-            }
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": { "MaxSpeed": 150 }
-          },
-          "AbilityAttributes": {
-            "Ability_G_BattleCruiser_ArmorBonus_MP": {
-              "CooldownTimeSecs": 50,
-              "ApplyStatusEffect": {
-                "ArmorBonus_StatusEffect": {
-                  "BuffsToApplyToTarget": {
-                    "0": {
-                      "BuffSet": {
-                        "0": { "Value": 100 } // % Armor bonus
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "Ability_G_BattleCruiser_Missile_MP": {
-              "Resource1Cost": 0,
-              "CooldownTimeSecs": 50
-            },
-            "Ability_G_BattleCruiserActiveRegen": {
-              "CooldownTimeSecs": 50
-            }
-          }
-        },
-
-        // COALITION/SOBAN ASSAULT CRUISER FABRICATION
-        "Tier_3_C_AssaultCruiser": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 450,
-            "Resource2Cost": 200
-          }
-        },
-        "Tier_3_S_AssaultCruiser": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 450,
-            "Resource2Cost": 200
-          }
-        },
-
-        // COALITION/SOBAN ASSAULT CRUISER ANTI-AIR
-        "Research_Buff_G_BattleCruiser_AntiAir": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "Resource2Cost": 150,
-            "ResearchTime": 45
-          }
-        },
-        "Research_Buff_S_AssaultCruiser_AntiAir": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "Resource2Cost": 150,
-            "ResearchTime": 45
-          }
-        },
-
-        // GAALSIEN HONORGUARD
-        "G_HonorGuard_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 550,
-            "Resource2Cost": 250,
-            "MaxHealth": 2400,
-            "PopCapCost": 7,
-            "ProductionTime": 50
-          },
-          "DetectableAttributes": {
-            "TimeVisibleAfterFiring": 4500
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 55,
-              "MaxSpeedTurnRadius": 90
-            },
-            "Combat": { "MaxDesiredCombatRange": 1780 },
-            "Hover": { "TurnAcceleration": 5 }
-          },
-          "WeaponAttributes": {
-            "G_HonorGuardRailgun_Weapon_G2G_MP": {
-              "TracerSpeed": 2000,
-              "BaseDamagePerRound": 2500,
-              "ReloadTimeMS": 4500,
-              "ExcludeFromHeightAdvantage": true,
-              "LineOfSightRequired": false,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "AreaOfEffectRadius": 600,
-              "WindDownTimeMS": 250,
-              "TargetPrioritizationAttributes": {
-                "WeaponEffectivenessWeight": 0.01,
-                "AngleWeight": 50,
-                "AutoTargetStickyBias": 200,
-                "DistanceWeight": 0.01
-              },
-              "Modifiers": {
-                "0": {
-                  "TargetClass": "Ground"
-                }
-              },
-              "RangeAttributesLong": {
-                "Distance": 7500
-              }
-            },
-            "G_HonorGuard_Weapon_G2A_MP": {
-              "WindUpTimeMS": 500,
-              "ReloadTimeMS": 4000,
-              "RangeAttributesShort": {
-                "Distance": 600
-              },
-              "RangeAttributesMedium": {
-                "Distance": 750
-              },
-              "RangeAttributesLong": {
-                "Distance": 1000
-              },
-              "Modifiers": {
-                "0": {
-                  "TargetClass": "Air",
-                  "ClassOperator": "Or"
-                }
-              }
-            }
-          }
-        },
-
-        // KHAANEPH HONORGUARD
-        "K_HonorGuard_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 550,
-            "Resource2Cost": 250,
-            "MaxHealth": 2400,
-            "PopCapCost": 7,
-            "ProductionTime": 50
-          },
-          "DetectableAttributes": {
-            "TimeVisibleAfterFiring": 4500
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 55,
-              "MaxSpeedTurnRadius": 90
-            },
-            "Combat": { "MaxDesiredCombatRange": 1780 },
-            "Hover": { "TurnAcceleration": 5 }
-          },
-          "WeaponAttributes": {
-            "G_HonorGuardRailgun_Weapon_G2G_MP": {
-              "TracerSpeed": 2000,
-              "BaseDamagePerRound": 2500,
-              "ReloadTimeMS": 4500,
-              "ExcludeFromHeightAdvantage": true,
-              "LineOfSightRequired": false,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "AreaOfEffectRadius": 600,
-              "WindDownTimeMS": 250,
-              "TargetPrioritizationAttributes": {
-                "WeaponEffectivenessWeight": 0.01,
-                "AngleWeight": 50,
-                "AutoTargetStickyBias": 200,
-                "DistanceWeight": 0.01
-              },
-              "Modifiers": {
-                "0": {
-                  "TargetClass": "Ground"
-                }
-              },
-              "RangeAttributesLong": {
-                "Distance": 7500
-              }
-            },
-            "G_HonorGuard_Weapon_G2A_MP": {
-              "WindUpTimeMS": 500,
-              "ReloadTimeMS": 4000,
-              "Modifiers": {
-                "0": {
-                  "TargetClass": "Air",
-                  "ClassOperator": "Or"
-                }
-              },
-              "RangeAttributesShort": {
-                "Distance": 600
-              },
-              "RangeAttributesMedium": {
-                "Distance": 750
-              },
-              "RangeAttributesLong": {
-                "Distance": 1000
-              }
-            }
-          }
-        },
-
-        // GAALSIEN/KHAANEPH HONORGUARD FABRICATION
-        "Tier_3_G_HonorCruiser": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 550,
-            "Resource2Cost": 200,
-            "ResearchTime": 60
-          }
-        },
-
-        // GAALSIEN/KHAANEPH HONORGUARD ANTI AIR UPGRADE
-        "Research_Buff_G_HonorCruiser_Defenses": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 550,
-            "Resource2Cost": 200,
-            "ResearchTime": 60
-          }
-        },
-
-        // BATTLECRUISER FIELD REPAIR TOOLTIP
-        "Ability_C_SmokeGrenade_BattleCruiser": {
-          "AbilityViewAttributes": {
-            "LocalizedTitleStringID": "Field repairs",
-            "LocalizedLongDescriptionStringID": "Use defensive smoke and perform field repairs on the battlecruiser"
-          }
-        },
-
-        // COALITION BATTLECRUISER
-        "C_Battlecruiser_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 850,
-            "Resource2Cost": 350,
-            "MaxHealth": 40000,
-            "PopCapCost": 8,
-            "ProductionTime": 65,
-            "Armour": 0
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 15,
-              "MaxSpeedTurnRadius": 100,
-              "AccelerationTime": 0.9,
-              "BrakingTime": 0.9
-            }
-          },
-          "ExperienceAttributes": {
-            "Levels": {
-              "1": {
-                "BuffTooltipLocID": "Officer: 10 Armor",
-                "RequiredExperience": 1000,
-                "Buff": {
-                  "0": {
-                    "Value": 10
-                  }
-                }
-              },
-              "2": {
-                "BuffTooltipLocID": "Lieutenant: 20 Armor",
-                "RequiredExperience": 3000,
-                "Buff": {
-                  "0": {
-                    "Attribute": 65540,
-                    "Mode": "Add",
-                    "Value": 10
-                  }
-                }
-              },
-              "3": {
-                "BuffTooltipLocID": "Lt. Commander: 40 Armor",
-                "RequiredExperience": 6000,
-                "Buff": {
-                  "0": {
-                    "Attribute": 65540,
-                    "Mode": "Add",
-                    "Value": 20
-                  }
-                }
-              },
-              "4": {
-                "BuffTooltipLocID": "Commander: 80 Armor",
-                "RequiredExperience": 8000,
-                "Buff": {
-                  "0": {
-                    "Attribute": 65540,
-                    "Mode": "Add",
-                    "Value": 40
-                  }
-                }
-              },
-              "5": {
-                "BuffTooltipLocID": "Captain: 160 Armor",
-                "RequiredExperience": 10000,
-                "Buff": {
-                  "0": {
-                    "Attribute": 65540,
-                    "Mode": "Add",
-                    "Value": 80
-                  }
-                }
-              }
-            }
-          },
-          "WeaponAttributes": {
-            "C_Battlecruiser_Weapon_G2G_MP": {
-              "BaseDamagePerRound": 1750,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "AreaOfEffectRadius": 100,
-              "ReloadTimeMS": 5000,
-              "RangeAttributesLong": {
-                "Distance": 350,
-                "Accuracy": 100
-              },
-              "RangeAttributesMedium": {
-                "Remove": true
-              },
-              "RangeAttributesShort": {
-                "Remove": true
-              }
-            },
-            "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
-              "StatusEffectsTargetAlignment": "Friend",
-              "AreaOfEffectRadius": 1,
-              "StatusEffectsSets": {
-                "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
-              },
-              "StatusEffectsExcludeTargetType": "Air"
-            }
-          }
-        },
-
-        // SOBAN BATTLECRUISER
-        "C_Sob_Battlecruiser_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 850,
-            "Resource2Cost": 350,
-            "MaxHealth": 40000,
-            "PopCapCost": 8,
-            "ProductionTime": 65,
-            "Armour": 0
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 15,
-              "MaxSpeedTurnRadius": 100,
-              "AccelerationTime": 0.9,
-              "BrakingTime": 0.9
-            }
-          },
-          "DetectableAttributes": {
-            "TimeVisibleAfterFiring": 4500
-          },
-          "ExperienceAttributes": {
-            "Levels": {
-              "1": {
-                "BuffTooltipLocID": "Officer: 10 Armor",
-                "RequiredExperience": 1000,
-                "Buff": {
-                  "0": {
-                    "Value": 10
-                  }
-                }
-              },
-              "2": {
-                "BuffTooltipLocID": "Lieutenant: 20 Armor",
-                "RequiredExperience": 3000,
-                "Buff": {
-                  "0": {
-                    "Attribute": 65540,
-                    "Mode": "Add",
-                    "Value": 10
-                  }
-                }
-              },
-              "3": {
-                "BuffTooltipLocID": "Lt. Commander: 40 Armor",
-                "RequiredExperience": 6000,
-                "Buff": {
-                  "0": {
-                    "Attribute": 65540,
-                    "Mode": "Add",
-                    "Value": 20
-                  }
-                }
-              },
-              "4": {
-                "BuffTooltipLocID": "Commander: 80 Armor",
-                "RequiredExperience": 8000,
-                "Buff": {
-                  "0": {
-                    "Attribute": 65540,
-                    "Mode": "Add",
-                    "Value": 40
-                  }
-                }
-              },
-              "5": {
-                "BuffTooltipLocID": "Captain: 160 Armor",
-                "RequiredExperience": 10000,
-                "Buff": {
-                  "0": {
-                    "Attribute": 65540,
-                    "Mode": "Add",
-                    "Value": 80
-                  }
-                }
-              }
-            }
-          },
-          "WeaponAttributes": {
-            "C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
-              "BaseDamagePerRound": 100,
-              "DamagePacketsPerShot": 0,
-              "TargetPrioritizationAttributes": {
-                "WeaponEffectivenessWeight": 500,
-                "AutoTargetStickyBias": 50,
-                "AngleWeight": 25,
-                "DistanceWeight": 0.05
-              },
-              "RangeAttributesShort": {
-                "Accuracy": 90,
-                "Distance": 1000
-              },
-              "RangeAttributesMedium": {
-                "Accuracy": 70,
-                "Distance": 2000
-              },
-              "RangeAttributesLong": {
-                "Accuracy": 50,
-                "Distance": 3000
-              },
-              "OutputDPS": true
-            },
-            "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
-              "StatusEffectsTargetAlignment": "Friend",
-              "AreaOfEffectRadius": 1,
-              "StatusEffectsSets": {
-                "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
-              },
-              "StatusEffectsExcludeTargetType": "Air"
-            }
-          }
-        },
-
-        // COALITION/SOBAN BATTLECRUISER FABRICATION
-        "Tier_3_C_BattleCruiser": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 500,
-            "Resource2Cost": 250,
-            "ResearchTime": 100
-          }
-        },
-        "Tier_3_S_BattleCruiser": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 500,
-            "Resource2Cost": 250,
-            "ResearchTime": 100
-          }
-        },
-
-        // BATTLE CRUISER FIELD REPAIR ABILITY
-        "Regen_BattleCruiser_StatusEffect": {
-          "StatusEffectAttributes": {
-            "Lifetime": "Finite",
-            "Duration": 10,
-            "MaxStacks": 1,
-            "StackingBehaviour": "Replace",
-            "Modifiers": {
-              "0": {
-                "ModifierType": "Immobilize"
-              },
-              "1": {
-                "ModifierType": "HealthOverTime",
-                "HealthOverTimeAttributes": {
-                  "ID": "SmokeGrenade_BattleCruiser",
-                  "Amount": -50,
-                  "MSTickDuration": 500,
-                  "DamageType": "Heal"
-                }
-              }
-            }
-          }
-        },
-
-        // COALITION/SOBAN ARTILLERY CRUISER
-        "C_ArtilleryCruiser_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 550,
-            "Resource2Cost": 160,
-            "MaxHealth": 1900,
-            "Armour": 5,
-            "ProductionTime": 60,
-            "PopCapCost": 5
-          },
-          "AbilityAttributes": {
-            "Ability_C_ArtilleryBarrage": {
-              "CooldownTimeSecs": 70
-            },
-            "Ability_C_ArtilleryBarrage_Precise": {
-              "Resource1Cost": 0,
-              "CooldownTimeSecs": 70
-            }
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeedTurnRadius": 90,
-              "MaxSpeed": 56,
-              "AccelerationTime": 1.2,
-              "BrakingTime": 0.9
-            }
-          },
-          "WeaponAttributes": {
-            "C_ArtilleryCruiser_Weapon_Barrage_MP": {
-              "BaseDamagePerRound": 2200,
-              "AreaOfEffectRadius": 150,
-              "NumberOfBursts": 1,
-              "RateOfFire": 1,
-              "CooldownTimeMS": 900,
-              "BurstPeriodMinTimeMS": 100,
-              "BurstPeriodMaxTimeMS": 100,
-              "RangeAttributesLong": {
-                "Distance": 2750
-              }
-            },
-            "C_ArtilleryCruiser_Weapon_PointDefense_MP": {
-              "LineOfSightRequired": false,
-              "ExcludeFromHeightAdvantage": true,
-              "BaseDamagePerRound": 20,
-              "RateOfFire": 10,
-              "RangeAttributesShort": {
-                "Accuracy": 100,
-                "Distance": 1750
-              },
-              "RangeAttributesMedium": {
-                "Accuracy": 75,
-                "Distance": 2000
-              },
-              "RangeAttributesLong": {
-                "Accuracy": 50,
-                "Distance": 2250
-              },
-              "Modifiers": {
-                "0": {
-                  "TargetClass": "Ground",
-                  "Modifier": "CanNotTarget"
-                }
-              }
-            },
-            "C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
-              "BaseDamagePerRound": 10,
-              "DamagePacketsPerShot": 0,
-              "ExcludeFromHeightAdvantage": true,
-              "NumberOfBursts": 50,
-              "RangeAttributesLong": {
-                "Distance": 2750
-              }
-            },
-            "C_ArtilleryCruiser_Weapon_G2G_MP": {
-              "BaseDamagePerRound": 10,
-              "ReloadTimeMS": 75,
-              "DamagePacketsPerShot": 0
-            }
-          }
-        },
-
-        // COALITION/SOBAN ARTILLERY FABRICATION
-        "Tier_3_C_Artillery": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 500,
-            "Resource2Cost": 250,
-            "ResearchTime": 65,
-            "Dependencies": [ "Tier_2_C_ArmouredAssault" ]
-          }
-        },
-        "Tier_3_S_Artillery": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 500,
-            "Resource2Cost": 250,
-            "ResearchTime": 65,
-            "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
-          }
-        },
-
-        // GAALSIEN SIEGE CRUISER
-        "G_ArtilleryCruiser_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 550,
-            "Resource2Cost": 180,
-            "MaxHealth": 3100,
-            "Armour": 16,
-            "ProductionTime": 45,
-            "PopCapCost": 5,
-            "SensorRadius": 1400,
-            "ContactRadius": 1550
-          },
-          "AbilityAttributes": {
-            "Ability_G_Artillery_EMP_MP": {
-              "CooldownTimeSecs": 40
-            },
-            "Ability_G_ArtilleryBarrage_01_MP": {
-              "CooldownTimeSecs": 120
-            }
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 64,
-              "AccelerationTime": 3,
-              "BrakingTime": 1.25
-            }
-          },
-          "WeaponAttributes": {
-            "G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
-              "BaseDamagePerRound": 1000,
-              "RangeAttributesLong": {
-                "Distance": 1250
-              }
-            },
-            "G_ArtilleryCruiser_Weapon_PD_MP": {
-              "BaseDamagePerRound": 22,
-              "RateOfFire": 26,
-              "BurstPeriodMinTimeMS": 100,
-              "BurstPeriodMaxTimeMS": 120,
-              "CooldownTimeMS": 10,
-              "ReloadTimeMS": 10,
-              "RangeAttributesShort": {
-                "Accuracy": 100,
-                "Distance": 800
-              },
-              "RangeAttributesMedium": {
-                "Accuracy": 90,
-                "Distance": 1000
-              },
-              "RangeAttributesLong": {
-                "Accuracy": 80,
-                "Distance": 1200
-              },
-              "TargetPrioritizationAttributes": {
-                "TargetPriorityWeight": 150
-              },
-              "Modifiers": {
-                "0": {
-                  "TargetClass": "Air",
-                  "ClassOperator": "Or"
-                }
-              }
-            },
-            "G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-              "BaseDamagePerRound": 100,
-              "DamagePacketsPerShot": 1,
-              "AreaOfEffectRadius": 200,
-              "NumberOfBursts": 1,
-              "RateOfFire": 16,
-              "CooldownTimeMS": 3250,
-              "BurstPeriodMinTimeMS": 225,
-              "BurstPeriodMaxTimeMS": 275,
-              "RangeAttributesLong": {
-                "Distance": 1350
-              }
-            },
-            "G_ArtilleryCruiser_Weapon_G2G_MP": {
-              "BaseDamagePerRound": 100,
-              "RateOfFire": 1,
-              "DamagePacketsPerShot": 1,
-              "ReloadTimeMS": 15000
-            }
-          }
-        },
-
-        // KHAANEPH SIEGE CRUISER
-        "K_ArtilleryCruiser_MP": {
-          "UnitAttributes": {
-            "Resource1Cost": 700,
-            "Resource2Cost": 280,
-            "MaxHealth": 3100,
-            "Armour": 16,
-            "PopCapCost": 6,
-            "SensorRadius": 1400,
-            "ContactRadius": 1550,
-            "ProductionTime": 45
-          },
-          "UnitMovementAttributes": {
-            "Dynamics": {
-              "MaxSpeed": 120,
-              "AccelerationTime": 5,
-              "BrakingTime": 10,
-              "MaxSpeedTurnRadius": 500
-            }
-          },
-          "AbilityAttributes": {
-            "Ability_K_ArtilleryBarrage_01_MP": {
-              "CooldownTimeSecs": 120
-            },
-            "Ability_K_Artillery_EMP_MP": {
-              "CooldownTimeSecs": 40
-            }
-          },
-          "WeaponAttributes": {
-            "G_ArtilleryCruiser_Weapon_PD_MP": {
-              "BaseDamagePerRound": 22,
-              "RateOfFire": 26,
-              "BurstPeriodMinTimeMS": 100,
-              "BurstPeriodMaxTimeMS": 120,
-              "CooldownTimeMS": 10,
-              "ReloadTimeMS": 10,
-              "RangeAttributesShort": {
-                "Accuracy": 100,
-                "Distance": 800
-              },
-              "RangeAttributesMedium": {
-                "Accuracy": 90,
-                "Distance": 1000
-              },
-              "RangeAttributesLong": {
-                "Accuracy": 80,
-                "Distance": 1200
-              },
-              "TargetPrioritizationAttributes": {
-                "TargetPriorityWeight": 150
-              },
-              "Modifiers": {
-                "0": {
-                  "TargetClass": "Air",
-                  "ClassOperator": "Or"
-                }
-              }
-            },
-            "K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-              "AreaOfEffectRadius": 180,
-              "BaseDamagePerRound": 350,
-              "ReloadTimeMS": 4500,
-              "NumberOfBursts": 3,
-              "AreaOfEffectFalloffType": "Quadratic",
-              "RangeAttributesLong": {
-                "Distance": 450
-              }
-            },
-            "K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
-              "ExcludeFromHeightAdvantage": true,
-              "BaseDamagePerRound": 100,
-              "DamagePacketsPerShot": 1,
-              "AreaOfEffectRadius": 200,
-              "NumberOfBursts": 1,
-              "RateOfFire": 16,
-              "CooldownTimeMS": 3250,
-              "BurstPeriodMinTimeMS": 225,
-              "BurstPeriodMaxTimeMS": 275,
-              "RangeAttributesLong": {
-                "Distance": 1350
-              },
-              "Modifiers": {
-                "1": {
-                  "TargetClass": "Small",
-                  "ClassOperator": "Or",
-                  "Modifier": "DamagePercent",
-                  "Amount": 65
-                },
-                "2": {
-                  "TargetClass": "Carrier",
-                  "ClassOperator": "Or",
-                  "Modifier": "DamagePercent",
-                  "Amount": 80
-                }
-              }
-            },
-            "G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
-              "ExcludeFromHeightAdvantage": true,
-              "BaseDamagePerRound": 1000,
-              "RangeAttributesLong": {
-                "Distance": 1250
-              }
-            }
-          }
-        },
-
-        // GAALSIEN SIEGE CRUISER FABRICATION
-        "Tier_3_G_Artillery_BattleCruiser": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 400,
-            "Resource2Cost": 150,
-            "ResearchTime": 55
-          }
-        },
-
-        // KHAANEPH SIEGE CRUISER FABRICATION
-        "Tier_3_K_ArtilleryCruiser": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 600,
-            "ResearchTime": 95
-          }
-        },
-
-        // GAALSIEN SIEGE CRUISER RANGE UPGRADE
-        "Research_Buff_G_Artillery_Barrage": {
-          "ResearchItemAttributes": {
-            "ResearchTime": 70,
-            "UnitTypeBuffs": {
-              "0": {
-                "BuffSet": {
-                  "2": { "Value": 800 },
-                  "3": { "Value": 800 },
-                  "6": { "Value": 1300 },
-                  "7": { "Value": 1300 },
-                  "10": { "Value": 2000 },
-                  "11": { "Value": 2000 }
-                }
-              }
-            }
-          }
-        },
-
-        // KHAANEPH SIEGE CRUISER RANGE UPGRADE
-        "Research_Buff_K_Artillery_Barrage": {
-          "ResearchItemAttributes": {
-            "ResearchTime": 70
-          }
-        },
-
-        // GAALSIEN SIEGE CRUISER EMP UPGRADE
-        "Research_Buff_G_Artillery_EMP_Barrage": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "Resource2Cost": 100,
-            "ResearchTime": 35
-          }
-        },
-
-        // KHAANEPH SIEGE CRUISER EMP UPGRADE
-        "Research_Buff_K_Artillery_EMP_Barrage": {
-          "ResearchItemAttributes": {
-            "Resource1Cost": 300,
-            "Resource2Cost": 100,
-            "ResearchTime": 35
+          "2": {
+            "ModifierType": "DisableAllWeapons"
           }
         }
       }
+    },
+
+    // GAALSIEN/KHAANEPH RANGED CALIBRATION
+    "Scope_StatusEffect": {
+      "StatusEffectAttributes": {
+        "BuffsToApplyToTarget": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 1800 },
+              "1": { "Value": 1800 },
+              "2": { "Value": 1800 },
+              "3": { "Value": 1800 },
+              "4": { "Value": -56 }, // Max speed
+              "5": { "Value": -40 }, // Turn radius
+              "6": {
+                "Remove": true
+              },
+              "7": {
+                "Remove": true
+              },
+              "8": {
+                "Remove": true
+              },
+              "9": {
+                "Remove": true
+              }
+            }
+          }
+        }
+      }
+    },
+
+    // GAALSIEN/KHAANEPH RANGED CALIBRATION UPGRADE
+    "Research_Buff_G_RailGunScope": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 200,
+        "Resource2Cost": 250,
+        "ResearchTime": 55,
+        "LocalizedLongDescriptionStringID": "Heavy Railguns gain the RANGED CALIBRATION ability - Increasing range at the cost of mobility.\n\n[84a1e8]Weapon and sight range increased by 5000.\nMovement speed reduced by 90%."
+      }
+    },
+
+    // GAALSIEN/KHAANEPH HEAVY RAILGUN EMP UPGRADE
+    "Research_Buff_G_RailGunStun": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 400,
+        "Resource2Cost": 100,
+        "ResearchTime": 35
+      }
+    },
+
+    // GAALSIEN ASSAULT RAILGUN
+    "G_StarHull_Upgrade01_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 250,
+        "Resource2Cost": 55,
+        "MaxHealth": 650,
+        "ExperienceValue": 350,
+        "ProductionTime": 17,
+        "SensorRadius": 1250,
+        "ContactRadius": 1350,
+        "Armour": 5,
+        "PriorityAsTarget": 10
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 60,
+          "AccelerationTime": 1.5,
+          "BrakingTime": 1.2
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_G_AssaultRailgunRegen": {
+          "ApplyStatusEffect": {
+            "Regen_AssaultRailguns_StatusEffect": {
+              "Modifiers": {
+                "0": {
+                  "HealthOverTimeAttributes": {
+                    "Amount": 7
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Ability_G_RailGun_Dash_Move_To_MP": {
+          "CooldownTimeSecs": 50
+        },
+        "Ability_G_RailGun_Dash_MP": {
+          "ApplyStatusEffect": {
+            "RailGun_Dash_StatusEffect": {
+              "Duration": 2.7
+            }
+          }
+        }
+      },
+      "WeaponAttributes": {
+        "G_StarHull_Upgrade01_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 10,
+          "BurstPeriodMinTimeMS": 110,
+          "BurstPeriodMaxTimeMS": 110,
+          "NumberOfBursts": 5,
+          "WindUpTimeMS": 200,
+          "WindDownTimeMS": 50,
+          "ReloadTimeMS": 200,
+          "RangeAttributesShort": {
+            "Accuracy": 30,
+            "Distance": 300
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 15,
+            "Distance": 1500
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 5,
+            "Distance": 7500
+          }
+        }
+      }
+    },
+
+    // KHAANEPH ASSAULT RAILGUN
+    "K_AssaultRailgun_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 250,
+        "Resource2Cost": 55,
+        "MaxHealth": 650,
+        "ExperienceValue": 350,
+        "ProductionTime": 17,
+        "SensorRadius": 1250,
+        "ContactRadius": 1350,
+        "Armour": 5,
+        "PriorityAsTarget": 10
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 60,
+          "AccelerationTime": 1.5,
+          "BrakingTime": 1.2
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_G_AssaultRailgunRegen": {
+          "ApplyStatusEffect": {
+            "Regen_AssaultRailguns_StatusEffect": {
+              "Modifiers": {
+                "0": {
+                  "HealthOverTimeAttributes": {
+                    "Amount": 7
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Ability_G_RailGun_Dash_Move_To_MP": {
+          "CooldownTimeSecs": 50
+        },
+        "Ability_G_RailGun_Dash_MP": {
+          "ApplyStatusEffect": {
+            "RailGun_Dash_StatusEffect": {
+              "Duration": 2.7
+            }
+          }
+        }
+      },
+      "WeaponAttributes": {
+        "G_StarHull_Upgrade01_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 10,
+          "BurstPeriodMinTimeMS": 110,
+          "BurstPeriodMaxTimeMS": 110,
+          "NumberOfBursts": 5,
+          "WindUpTimeMS": 200,
+          "WindDownTimeMS": 50,
+          "ReloadTimeMS": 200,
+          "RangeAttributesShort": {
+            "Accuracy": 30,
+            "Distance": 300
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 15,
+            "Distance": 1500
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 5,
+            "Distance": 7500
+          }
+        }
+      }
+    },
+
+    // GAALSIEN/KHAANEPH ASSAULT RAILGUN DART MANUEVER
+    "RailGun_Dash_StatusEffect": {
+      "StatusEffectAttributes": {
+        "Duration": 3
+      }
+    },
+
+    // GAALSIEN/KHAANEPH ASSAULT RAILGUN DART MANUEVER UPGRADE
+    "Research_Buff_G_RailGun_Ability": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 150,
+        "Resource2Cost": 80,
+        "ResearchTime": 20
+      }
+    },
+
+    // GAALSIEN/KHAANEPH RAILGUN ARMOR UPGRADES
+    "Research_Buff_G_RailGunUnits_Armor1": {
+      "ResearchItemAttributes": {
+        "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 on Assault Railgun and Heavy Railgun.",
+        "UnitTypeBuffs": {
+          "0": { "BuffSet": { "0": { "Value": 1 } } }, // G_StarHull_Upgrade01_MP
+          "1": { "BuffSet": { "0": { "Value": 1 } } }, // G_StarHullTank_MP
+          "2": { "BuffSet": { "0": { "Value": 1 } } }, // K_AssaultRailgun
+          "3": { "BuffSet": { "0": { "Value": 1 } } } // K_HeavyRailgun
+        }
+      }
+    },
+    "Research_Buff_G_RailGunUnits_Armor2": {
+      "ResearchItemAttributes": {
+        "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun, armor by 1 and hull integrity by 50 on Assault Railgun.",
+        "Resource1Cost": 250,
+        "Resource2Cost": 175,
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": { // G_StarHull_Upgrade01_MP
+              "0": { "Value": 1 },
+              "1": { "Value": 50 }
+            }
+          },
+          "1": {
+            "BuffSet": { // G_StarHullTank_MP
+              "0": { "Value": 1 }
+            }
+          },
+          "2": {
+            "BuffSet": { // K_AssaultRailgun
+              "0": { "Value": 1 },
+              "1": { "Value": 50 }
+            }
+          },
+          "3": {
+            "BuffSet": { // K_HeavyRailgun
+              "0": { "Value": 1 }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_G_RailGunUnits_Armor3": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "Resource2Cost": 250,
+        "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": { // G_StarHull_Upgrade01_MP
+              "0": { "Value": 1 },
+              "1": { "Value": 100 }
+            }
+          },
+          "1": {
+            "BuffSet": { // G_StarHullTank_MP
+              "0": { "Value": 1 },
+              "1": { "Value": 100 }
+            }
+          },
+          "2": {
+            "BuffSet": { // K_AssaultRailgun
+              "0": { "Value": 1 },
+              "1": { "Value": 100 }
+            }
+          },
+          "3": {
+            "BuffSet": { // K_HeavyRailgun
+              "0": { "Value": 1 },
+              "1": { "Value": 100 }
+            }
+          }
+        }
+      }
+    },
+
+    // COALITION/SOBAN MISSILE BATTERY
+    "C_HAC_Upgrade01_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 300,
+        "Resource2Cost": 85,
+        "Armour": 10,
+        "PriorityAsTarget": -10,
+        "AggroRange": 1100
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 60
+        },
+        "Combat": { "MaxDesiredCombatRange": 1020 }
+      },
+      "AbilityAttributes": {
+        "Ability_C_Grenade_MP": {
+          "CooldownTimeSecs": 150
+        }
+      },
+      "WeaponAttributes": {
+        "C_HAC_Upgrade01_Weapon_G2A_MP": {
+          "ReloadTimeMS": 3000,
+          "RangeAttributesShort": {
+            "Distance": 600
+          },
+          "RangeAttributesMedium": {
+            "Distance": 750
+          },
+          "RangeAttributesLong": {
+            "Distance": 1000
+          },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air",
+              "ClassOperator": "Or"
+            }
+          }
+        },
+        "C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
+          "BaseDamagePerRound": 660,
+          "AreaOfEffectRadius": 260,
+          "DamagePacketsPerShot": 30,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "ExcludeFromHeightAdvantage": true,
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 1100
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
+        }
+      }
+    },
+
+    // GAALSIEN MISSILE SHIP
+    "G_Catamaran_Upgrade01_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 350,
+        "Resource2Cost": 90,
+        "ProductionTime": 24,
+        "Armour": 3,
+        "PriorityAsTarget": -10
+      },
+      "AbilityAttributes": {
+        "Ability_G_MissileCraft_CrowdControl_MP": {
+          "CooldownTimeSecs": 300
+        }
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "4": {
+            "Buff": {
+              "0": {
+                "Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1000
+              },
+              "1": {
+                "Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1000
+              }
+            }
+          }
+        }
+      },
+      "WeaponAttributes": {
+        "G_Catamaran_Upgrade01_Weapon_G2A_MP": {
+          "ReloadTimeMS": 2300,
+          "Turret": {
+            "RotationSpeed": 160,
+            "FieldOfFire": 40
+          },
+          "RangeAttributesLong": {
+            "Distance": 1330
+          }
+        },
+        "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
+          "ReloadTimeMS": 2300,
+          "Turret": {
+            "RotationSpeed": 240,
+            "FieldOfFire": 40
+          },
+          "RangeAttributesLong": {
+            "Distance": 1500
+          }
+        },
+        "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": true,
+          "BaseDamagePerRound": 2000,
+          "AreaOfEffectRadius": 750,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "RangeAttributesShort": {
+            "Distance": 250
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
+        }
+      }
+    },
+
+    // KHAANEPH MISSILE SHIP
+    "K_MissileShip_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 350,
+        "Resource2Cost": 90,
+        "ProductionTime": 24,
+        "Armour": 3,
+        "PriorityAsTarget": -10
+      },
+      "AbilityAttributes": {
+        "Ability_G_MissileCraft_CrowdControl_MP": {
+          "CooldownTimeSecs": 300
+        }
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "4": {
+            "Buff": {
+              "0": {
+                "Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1000
+              },
+              "1": {
+                "Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1000
+              }
+            }
+          }
+        }
+      },
+      "WeaponAttributes": {
+        "G_Catamaran_Upgrade01_Weapon_G2A_MP": {
+          "ReloadTimeMS": 2300,
+          "Turret": {
+            "RotationSpeed": 160,
+            "FieldOfFire": 40
+          },
+          "RangeAttributesLong": {
+            "Distance": 1330
+          }
+        },
+        "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
+          "ReloadTimeMS": 2300,
+          "Turret": {
+            "RotationSpeed": 240,
+            "FieldOfFire": 40
+          },
+          "RangeAttributesLong": {
+            "Distance": 1500
+          }
+        },
+        "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": true,
+          "BaseDamagePerRound": 2000,
+          "AreaOfEffectRadius": 750,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "RangeAttributesShort": {
+            "Distance": 250
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
+        }
+      }
+    },
+
+    // GAALSIEN/KHAANEPH MISSILE SHIP FABRICATION
+    "Tier_2_G_Catamaran_AA": {
+      "ResearchItemAttributes": {
+        "ResearchTime": 45
+      }
+    },
+
+    // GAALSIEN/KHAANEPH MISSILE SHIP RADAR GUIDED UPGRADE
+    "Research_Buff_G_CatamaranAA_GlobalMissiles": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 50,
+        "Resource2Cost": 50,
+        "ResearchTime": 15
+      }
+    },
+
+    // GAALSIEN/KHAANEPH MISSILE SHIP DIRECT FIRE UPGRADE
+    "Research_Buff_G_CatamaranAA_AOE": {
+      "ResearchItemAttributes": {
+        "ResearchTime": 20
+      }
+    },
+
+    // COALITION/SOBAN STRIKE FIGHTER
+    "C_Interceptor_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 240,
+        "Resource2Cost": 90,
+        "MaxHealth": 490,
+        "Armour": 0,
+        "ProductionTime": 28
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 600,
+          "MaxSpeedTurnRadius": 200
+        }
+      },
+      "StorageAttributes": {
+        "C_Interceptor_StorageAttributesAsset_MP": {
+          "InventoryLoadout": {
+            "MISSILES": {
+              "Capacity": 12,
+              "StartingAmount": 12
+            }
+          }
+        }
+      },
+      "WeaponAttributes": {
+        "C_Interceptor_Weapon_A2G_MP": {
+          "BaseDamagePerRound": 50,
+          "DamagePacketsPerShot": 1,
+          "BurstPeriodMinTimeMS": 667,
+          "BurstPeriodMaxTimeMS": 667,
+          "ReloadTimeMS": 3332,
+          "RateOfFire": 3,
+          "Turret": {
+            "FieldOfView": 55,
+            "FieldOfFire": 55
+          },
+          "RangeAttributesShort": {
+            "Distance": 1500
+          },
+          "Modifiers": {
+            "13": {
+              "TargetClass": "Air",
+              "ClassOperator": "Or",
+              "Modifier": "DamagePercent",
+              "Amount": 200
+            }
+          }
+        }
+      }
+    },
+
+    // COALITION/SOBAN FIGHTER AND GUNSHIP TECH
+    "Tier_3_C_Interceptor_Bomber": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 500,
+        "Resource2Cost": 200
+      }
+    },
+
+    // GAALSIEN INTERCEPTOR
+    "G_Interceptor_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 250,
+        "Resource2Cost": 100,
+        "MaxHealth": 750,
+        "Armour": 2,
+        "ProductionTime": 12
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 100,
+          "MaxSpeedTurnRadius": 250
+        }
+      },
+      "StorageAttributes": {
+        "G_Interceptor_StorageAttributesAsset_MP": {
+          "InventoryLoadout": {
+            "MISSILES": {
+              "Capacity": 40,
+              "StartingAmount": 40
+            }
+          }
+        }
+      },
+      "WeaponAttributes": {
+        "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
+          "BaseDamagePerRound": 225,
+          "DamagePacketsPerShot": 1,
+          "AreaOfEffectRadius": 150,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "RateOfFire": 4,
+          "ReloadTimeMS": 4500,
+          //"LeadsTarget": "LeadTarget",
+          "RangeAttributesShort": {
+            "Distance": 1000
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          },
+          "Modifiers": {
+            //"13": {
+            //  "TargetClass": "Carrier",
+            //  "ClassOperator": "Or",
+            //  "Modifier": "DamagePercent",
+            //  "Amount": 60
+            //},
+            "13": {
+              "TargetClass": "Air",
+              "ClassOperator": "Or",
+              "Modifier": "DamagePercent",
+              "Amount": 50
+            }
+          }
+        }
+      }
+    },
+
+    // KHAANEPH INTERCEPTOR
+    "K_Interceptor_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 250,
+        "Resource2Cost": 100,
+        "MaxHealth": 750,
+        "Armour": 2,
+        "ProductionTime": 12
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 100,
+          "MaxSpeedTurnRadius": 250
+        }
+      },
+      "StorageAttributes": {
+        "G_Interceptor_StorageAttributesAsset_MP": {
+          "InventoryLoadout": {
+            "MISSILES": {
+              "Capacity": 40,
+              "StartingAmount": 40
+            }
+          }
+        }
+      },
+      "WeaponAttributes": {
+        "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
+          "BaseDamagePerRound": 225,
+          "DamagePacketsPerShot": 1,
+          "AreaOfEffectRadius": 150,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "RateOfFire": 4,
+          "ReloadTimeMS": 4500,
+          //"LeadsTarget": "LeadTarget",
+          "RangeAttributesShort": {
+            "Distance": 1000
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          },
+          "Modifiers": {
+            //"13": {
+            //  "TargetClass": "Carrier",
+            //  "ClassOperator": "Or",
+            //  "Modifier": "DamagePercent",
+            //  "Amount": 60
+            //},
+            "13": {
+              "TargetClass": "Air",
+              "ClassOperator": "Or",
+              "Modifier": "DamagePercent",
+              "Amount": 50
+            }
+          }
+        }
+      }
+    },
+
+    // GAALSIEN/KHAANEPH INTERCEPTOR FABRICATION
+    "Tier_2_G_Interceptor": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 450,
+        "ResearchTime": 70
+      }
+    },
+
+    // GAALSIEN/KHAANEPH INTERCEPTOR AFTERBURNER UPGRADE
+    "Research_Buff_G_Interceptor_Speed": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 200,
+        "Resource2Cost": 120,
+        "ResearchTime": 40,
+        "LocalizedLongDescriptionStringID": "Interceptor employs afterburner jets, greatly increasing maximum speed.\n\n[84a1e8]Maximum speed increased by 40%",
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": { "Value": 40 },
+              "1": { "Value": -40 }
+            }
+          },
+          "1": {
+            "BuffSet": {
+              "0": { "Value": 40 },
+              "1": { "Value": -40 }
+            }
+          }
+        }
+      }
+    },
+
+    // COALITION/SOBAN BOMBER
+    "C_Bomber_MP": { // FIXME: jokeify
+      "UnitAttributes": {
+        "Resource1Cost": 350,
+        "Resource2Cost": 160,
+        "MaxHealth": 1300,
+        "Armour": 10,
+        "PopCapCost": 4
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 390,
+          "MaxSpeedTurnRadius": 250
+        }
+      },
+      "WeaponAttributes": {
+        "C_Bomber_Weapon_A2G_MP": {
+          "WindUpTimeMS": 0,
+          "BaseDamagePerRound": 5000,
+          "AreaOfEffectRadius": 400,
+          "DamagePacketsPerShot": 500
+        }
+      }
+    },
+
+    // COALITION/SOBAN BOMBER TECH
+    "Tier_3_C_GunShip_Bomber": {
+      "ResearchItemAttributes": {
+        "Resource2Cost": 150,
+        "ResearchTime": 55
+      }
+    },
+
+    // GAALSIEN PRECISION BOMBER
+    "G_Bomber_MP": {
+      "UnitAttributes": {
+        "MaxHealth": 250,
+        "Armour": 0,
+        "Resource2Cost": 140,
+        "PopCapCost": 3,
+        "ProductionTime": 22
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 600,
+          "MaxSpeedTurnRadius": 300
+        }
+      },
+      "WeaponAttributes": {
+        "G_Bomber_Weapon_A2G_MP": {
+          "BaseDamagePerRound": 800,
+          "ReloadTimeMS": 3500,
+          "AreaOfEffectRadius": 360,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "RangeAttributesShort": {
+            "Distance": 1000
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
+        }
+      }
+    },
+
+    // KHAANEPH PRECISION BOMBER
+    "K_Bomber_MP": {
+      "UnitAttributes": {
+        "MaxHealth": 250,
+        "Armour": 0,
+        "Resource2Cost": 140,
+        "PopCapCost": 3,
+        "ProductionTime": 22
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 600,
+          "MaxSpeedTurnRadius": 300
+        }
+      },
+      "WeaponAttributes": {
+        "G_Bomber_Weapon_A2G_MP": {
+          "BaseDamagePerRound": 800,
+          "ReloadTimeMS": 3500,
+          "AreaOfEffectRadius": 360,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "RangeAttributesShort": {
+            "Distance": 1000
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          }
+        }
+      }
+    },
+
+    // GAALSIEN/KHAANEPH BOMBER FABRICATION
+    "Tier_3_G_Bomber": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 250,
+        "Resource2Cost": 100,
+        "ResearchTime": 40
+      }
+    },
+
+    // GAALSIEN/KHAANEPH AIRCRAFT RECHARGE UPGRADE
+    "Research_Buff_G_Fighter_Repair": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 200,
+        "ResearchTime": 20
+      }
+    },
+
+    // GAALSIEN/KHAANEPH BOMBER CAPACITY UPGRADE
+    "Research_Buff_G_Bomber_Hold": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 400,
+        "Resource2Cost": 150,
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "0": {
+                "Value": 3
+              },
+              "1": {
+                "Value": 3
+              }
+            }
+          },
+          "1": {
+            "BuffSet": {
+              "0": {
+                "Value": 3
+              },
+              "1": {
+                "Value": 3
+              }
+            }
+          }
+        }
+      }
+    },
+
+    // COALITION/SOBAN GUNSHIP
+    "C_GunShip_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 500,
+        "Resource2Cost": 100,
+        "MaxHealth": 1250,
+        "Armour": 9,
+        "PopCapCost": 4,
+        "ProductionTime": 48,
+        "SensorRadius": 300,
+        "ContactRadius": 450
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 150,
+          "MaxSpeedTurnRadius": 300
+        }
+      },
+      "WeaponAttributes": {
+        "C_GunShip_Weapon_DefaultFire_MP": {
+          "ProjectileEntityTypeToSpawn": "",
+          "TracerLength": 5.00,
+          "TracerSpeed": 4500.00,
+          "IsTracer": true,
+          "BaseDamagePerRound": 155,
+          "TargetStyle": 0,
+          "AreaOfEffectRadius": 144,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "RangeAttributesLong": {
+            "Distance": 1050
+          }
+        }
+      }
+    },
+
+    // COALITION ASSAULT CRUISER
+    "G_BattleCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 550,
+        "Resource2Cost": 260,
+        "MaxHealth": 1000,
+        "PopCapCost": 6,
+        "ProductionTime": 60,
+        "Armour": 5
+      },
+      "WeaponAttributes": {
+        "G_Battlecruiser_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 75,
+          "AreaOfEffectRadius": 75,
+          "BurstPeriodMinTimeMS": 700,
+          "BurstPeriodMaxTimeMS": 700,
+          "RateOfFire": 3,
+          "NumberOfBursts": 4,
+          "WindUpTimeMS": 250,
+          "ReloadTimeMS": 3500,
+          "OutputDPS": true
+        },
+        "G_Battlecruiser_Weapon_G2A_MP": {
+          "RangeAttributesLong": { "Distance": 1250 },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air"
+            }
+          }
+        },
+        "G_BattleCruiser_Weapon_Missile_MP": {
+          "BaseDamagePerRound": 180,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "AreaOfEffectRadius": 140,
+          "ExcludeFromHeightAdvantage": true,
+          "RangeAttributesShort": {
+            "Distance": 600
+          },
+          "RangeAttributesMedium": {
+            "Distance": 750
+          },
+          "RangeAttributesLong": {
+            "Distance": 1000
+          }
+        }
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": { "MaxSpeed": 150 }
+      },
+      "AbilityAttributes": {
+        "Ability_G_BattleCruiser_ArmorBonus_MP": {
+          "CooldownTimeSecs": 50,
+          "ApplyStatusEffect": {
+            "ArmorBonus_StatusEffect": {
+              "BuffsToApplyToTarget": {
+                "0": {
+                  "BuffSet": {
+                    "0": { "Value": 400 } // % Armor bonus
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Ability_G_BattleCruiser_Missile_MP": {
+          "Resource1Cost": 0,
+          "CooldownTimeSecs": 50
+        },
+        "Ability_G_BattleCruiserActiveRegen": {
+          "CooldownTimeSecs": 50
+        }
+      }
+    },
+
+    // SOBAN ASSAULT CRUISER
+    "C_Sob_AssaultCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 550,
+        "Resource2Cost": 260,
+        "MaxHealth": 1000,
+        "PopCapCost": 6,
+        "ProductionTime": 60,
+        "Armour": 5
+      },
+      "WeaponAttributes": {
+        "G_Battlecruiser_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 75,
+          "AreaOfEffectRadius": 75,
+          "BurstPeriodMinTimeMS": 700,
+          "BurstPeriodMaxTimeMS": 700,
+          "RateOfFire": 3,
+          "NumberOfBursts": 4,
+          "WindUpTimeMS": 250,
+          "ReloadTimeMS": 3500,
+          "OutputDPS": true
+        },
+        "G_Battlecruiser_Weapon_G2A_MP": {
+          "RangeAttributesLong": { "Distance": 1250 },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air"
+            }
+          }
+        },
+        "G_BattleCruiser_Weapon_Missile_MP": {
+          "BaseDamagePerRound": 180,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "AreaOfEffectRadius": 140,
+          "ExcludeFromHeightAdvantage": true,
+          "RangeAttributesShort": {
+            "Distance": 600
+          },
+          "RangeAttributesMedium": {
+            "Distance": 750
+          },
+          "RangeAttributesLong": {
+            "Distance": 1000
+          }
+        }
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": { "MaxSpeed": 150 }
+      },
+      "AbilityAttributes": {
+        "Ability_G_BattleCruiser_ArmorBonus_MP": {
+          "CooldownTimeSecs": 50,
+          "ApplyStatusEffect": {
+            "ArmorBonus_StatusEffect": {
+              "BuffsToApplyToTarget": {
+                "0": {
+                  "BuffSet": {
+                    "0": { "Value": 100 } // % Armor bonus
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Ability_G_BattleCruiser_Missile_MP": {
+          "Resource1Cost": 0,
+          "CooldownTimeSecs": 50
+        },
+        "Ability_G_BattleCruiserActiveRegen": {
+          "CooldownTimeSecs": 50
+        }
+      }
+    },
+
+    // COALITION/SOBAN ASSAULT CRUISER FABRICATION
+    "Tier_3_C_AssaultCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 450,
+        "Resource2Cost": 200
+      }
+    },
+    "Tier_3_S_AssaultCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 450,
+        "Resource2Cost": 200
+      }
+    },
+
+    // COALITION/SOBAN ASSAULT CRUISER ANTI-AIR
+    "Research_Buff_G_BattleCruiser_AntiAir": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "Resource2Cost": 150,
+        "ResearchTime": 45
+      }
+    },
+    "Research_Buff_S_AssaultCruiser_AntiAir": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "Resource2Cost": 150,
+        "ResearchTime": 45
+      }
+    },
+
+    // GAALSIEN HONORGUARD
+    "G_HonorGuard_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 550,
+        "Resource2Cost": 250,
+        "MaxHealth": 2400,
+        "PopCapCost": 7,
+        "ProductionTime": 50
+      },
+      "DetectableAttributes": {
+        "TimeVisibleAfterFiring": 4500
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 55,
+          "MaxSpeedTurnRadius": 90
+        },
+        "Combat": { "MaxDesiredCombatRange": 1780 },
+        "Hover": { "TurnAcceleration": 5 }
+      },
+      "WeaponAttributes": {
+        "G_HonorGuardRailgun_Weapon_G2G_MP": {
+          "TracerSpeed": 2000,
+          "BaseDamagePerRound": 2500,
+          "ReloadTimeMS": 4500,
+          "ExcludeFromHeightAdvantage": true,
+          "LineOfSightRequired": false,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "AreaOfEffectRadius": 600,
+          "WindDownTimeMS": 250,
+          "TargetPrioritizationAttributes": {
+            "WeaponEffectivenessWeight": 0.01,
+            "AngleWeight": 50,
+            "AutoTargetStickyBias": 200,
+            "DistanceWeight": 0.01
+          },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Ground"
+            }
+          },
+          "RangeAttributesLong": {
+            "Distance": 7500
+          }
+        },
+        "G_HonorGuard_Weapon_G2A_MP": {
+          "WindUpTimeMS": 500,
+          "ReloadTimeMS": 4000,
+          "RangeAttributesShort": {
+            "Distance": 600
+          },
+          "RangeAttributesMedium": {
+            "Distance": 750
+          },
+          "RangeAttributesLong": {
+            "Distance": 1000
+          },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air",
+              "ClassOperator": "Or"
+            }
+          }
+        }
+      }
+    },
+
+    // KHAANEPH HONORGUARD
+    "K_HonorGuard_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 550,
+        "Resource2Cost": 250,
+        "MaxHealth": 2400,
+        "PopCapCost": 7,
+        "ProductionTime": 50
+      },
+      "DetectableAttributes": {
+        "TimeVisibleAfterFiring": 4500
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 55,
+          "MaxSpeedTurnRadius": 90
+        },
+        "Combat": { "MaxDesiredCombatRange": 1780 },
+        "Hover": { "TurnAcceleration": 5 }
+      },
+      "WeaponAttributes": {
+        "G_HonorGuardRailgun_Weapon_G2G_MP": {
+          "TracerSpeed": 2000,
+          "BaseDamagePerRound": 2500,
+          "ReloadTimeMS": 4500,
+          "ExcludeFromHeightAdvantage": true,
+          "LineOfSightRequired": false,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "AreaOfEffectRadius": 600,
+          "WindDownTimeMS": 250,
+          "TargetPrioritizationAttributes": {
+            "WeaponEffectivenessWeight": 0.01,
+            "AngleWeight": 50,
+            "AutoTargetStickyBias": 200,
+            "DistanceWeight": 0.01
+          },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Ground"
+            }
+          },
+          "RangeAttributesLong": {
+            "Distance": 7500
+          }
+        },
+        "G_HonorGuard_Weapon_G2A_MP": {
+          "WindUpTimeMS": 500,
+          "ReloadTimeMS": 4000,
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air",
+              "ClassOperator": "Or"
+            }
+          },
+          "RangeAttributesShort": {
+            "Distance": 600
+          },
+          "RangeAttributesMedium": {
+            "Distance": 750
+          },
+          "RangeAttributesLong": {
+            "Distance": 1000
+          }
+        }
+      }
+    },
+
+    // GAALSIEN/KHAANEPH HONORGUARD FABRICATION
+    "Tier_3_G_HonorCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 550,
+        "Resource2Cost": 200,
+        "ResearchTime": 60
+      }
+    },
+
+    // GAALSIEN/KHAANEPH HONORGUARD ANTI AIR UPGRADE
+    "Research_Buff_G_HonorCruiser_Defenses": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 550,
+        "Resource2Cost": 200,
+        "ResearchTime": 60
+      }
+    },
+
+    // BATTLECRUISER FIELD REPAIR TOOLTIP
+    "Ability_C_SmokeGrenade_BattleCruiser": {
+      "AbilityViewAttributes": {
+        "LocalizedTitleStringID": "Field repairs",
+        "LocalizedLongDescriptionStringID": "Use defensive smoke and perform field repairs on the battlecruiser"
+      }
+    },
+
+    // COALITION BATTLECRUISER
+    "C_Battlecruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 850,
+        "Resource2Cost": 350,
+        "MaxHealth": 40000,
+        "PopCapCost": 8,
+        "ProductionTime": 65,
+        "Armour": 1,
+        "AggroRange": 500
+      },
+      "UnitMovementAttributes": {
+        "Combat": { "MaxDesiredCombatRange": 300 },
+        "Dynamics": {
+          "MaxSpeed": 15,
+          "MaxSpeedTurnRadius": 100,
+          "AccelerationTime": 0.9,
+          "BrakingTime": 0.9
+        }
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: 3 armor, +5 speed",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "0": {
+                "Mode": "Set",
+                "Value": 3
+              },
+              "1": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: 9 armor, +5 speed",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Set",
+                "Value": 9
+
+              },
+              "1": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: 27 armor, +5 speed",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Set",
+                "Value": 27
+              },
+
+              "1": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: 81 armor, +5 speed",
+            "RequiredExperience": 8000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Set",
+                "Value": 81
+              },
+              "1": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: 243 armor, +5 speed",
+            "RequiredExperience": 10000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Set",
+                "Value": 243
+              },
+              "1": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          }
+        }
+      },
+      "WeaponAttributes": {
+        "C_Battlecruiser_Weapon_Superweapon_MP": {
+          "BaseDamagePerRound": 1750,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "AreaOfEffectRadius": 100,
+          "ReloadTimeMS": 5000,
+          "RangeAttributesLong": {
+            "Distance": 350,
+            "Accuracy": 100
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesShort": {
+            "Remove": true
+          }
+        },
+        "C_Battlecruiser_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 1750,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "AreaOfEffectRadius": 100,
+          "ReloadTimeMS": 5000,
+          "RangeAttributesLong": {
+            "Distance": 350,
+            "Accuracy": 100
+          },
+          "RangeAttributesMedium": {
+            "Remove": true
+          },
+          "RangeAttributesShort": {
+            "Remove": true
+          }
+        },
+        "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+          "StatusEffectsTargetAlignment": "Friend",
+          "AreaOfEffectRadius": 1,
+          "StatusEffectsSets": {
+            "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
+          },
+          "StatusEffectsExcludeTargetType": "Air"
+        }
+      }
+    },
+
+    // SOBAN BATTLECRUISER
+    "C_Sob_Battlecruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 850,
+        "Resource2Cost": 350,
+        "MaxHealth": 40000,
+        "PopCapCost": 8,
+        "ProductionTime": 65,
+        "Armour": 1,
+        "AggroRange": 3000
+      },
+      "UnitMovementAttributes": {
+        "Combat": { "MaxDesiredCombatRange": 2950 },
+        "Dynamics": {
+
+          "MaxSpeed": 15,
+          "MaxSpeedTurnRadius": 100,
+          "AccelerationTime": 0.9,
+          "BrakingTime": 0.9
+        }
+      },
+      "DetectableAttributes": {
+        "TimeVisibleAfterFiring": 4500
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: 3 armor, +5 speed",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "0": {
+                "Mode": "Set",
+                "Value": 3
+              },
+              "1": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: 9 armor, +5 speed",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Set",
+                "Value": 9
+
+              },
+              "1": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: 27 armor, +5 speed",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Set",
+                "Value": 27
+              },
+
+              "1": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: 81 armor, +5 speed",
+            "RequiredExperience": 8000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Set",
+                "Value": 81
+              },
+              "1": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: 243 armor, +5 speed",
+            "RequiredExperience": 10000,
+            "Buff": {
+              "0": {
+                "Attribute": 65540,
+                "Mode": "Set",
+                "Value": 243
+              },
+              "1": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          }
+        }
+      },
+      "WeaponAttributes": {
+        "C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 100,
+          "DamagePacketsPerShot": 0,
+          "TargetPrioritizationAttributes": {
+            "WeaponEffectivenessWeight": 500,
+            "AutoTargetStickyBias": 50,
+            "AngleWeight": 25,
+            "DistanceWeight": 0.05
+          },
+          "RangeAttributesShort": {
+            "Accuracy": 90,
+            "Distance": 1000
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 70,
+            "Distance": 2000
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 50,
+            "Distance": 3000
+          },
+          "OutputDPS": true
+        },
+        "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+          "StatusEffectsTargetAlignment": "Friend",
+          "AreaOfEffectRadius": 1,
+          "StatusEffectsSets": {
+            "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
+          },
+          "StatusEffectsExcludeTargetType": "Air"
+        }
+      }
+    },
+
+    // COALITION BATTLECRUISER FABRICATION
+    "Tier_3_C_BattleCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0, //500,
+        "Resource2Cost": 0, //250,
+        "ResearchTime": 0 //100
+      }
+    },
+
+    // SOBAN BATTLECRUISER FABRICATION
+    "Tier_3_S_BattleCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 500,
+        "Resource2Cost": 250,
+        "ResearchTime": 100
+      }
+    },
+
+    // BATTLE CRUISER FIELD REPAIR ABILITY
+    "Regen_BattleCruiser_StatusEffect": {
+      "StatusEffectAttributes": {
+        "Lifetime": "Finite",
+        "Duration": 10,
+        "MaxStacks": 1,
+        "StackingBehaviour": "Replace",
+        "Modifiers": {
+          "0": {
+            "ModifierType": "Immobilize"
+          },
+          "1": {
+            "ModifierType": "HealthOverTime",
+            "HealthOverTimeAttributes": {
+              "ID": "SmokeGrenade_BattleCruiser",
+              "Amount": -50,
+              "MSTickDuration": 500,
+              "DamageType": "Heal"
+            }
+          }
+        }
+      }
+    },
+
+    // COALITION/SOBAN ARTILLERY CRUISER
+    "C_ArtilleryCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 550,
+        "Resource2Cost": 160,
+        "MaxHealth": 1900,
+        "Armour": 5,
+        "ProductionTime": 60,
+        "PopCapCost": 5
+      },
+      "AbilityAttributes": {
+        "Ability_C_ArtilleryBarrage": {
+          "CooldownTimeSecs": 70
+        },
+        "Ability_C_ArtilleryBarrage_Precise": {
+          "Resource1Cost": 0,
+          "CooldownTimeSecs": 70
+        }
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeedTurnRadius": 90,
+          "MaxSpeed": 56,
+          "AccelerationTime": 1.2,
+          "BrakingTime": 0.9
+        }
+      },
+      "WeaponAttributes": {
+        "C_ArtilleryCruiser_Weapon_Barrage_MP": {
+          "BaseDamagePerRound": 2200,
+          "AreaOfEffectRadius": 150,
+          "NumberOfBursts": 1,
+          "RateOfFire": 1,
+          "CooldownTimeMS": 900,
+          "BurstPeriodMinTimeMS": 100,
+          "BurstPeriodMaxTimeMS": 100,
+          "RangeAttributesLong": {
+            "Distance": 2750
+          }
+        },
+        "C_ArtilleryCruiser_Weapon_PointDefense_MP": {
+          "LineOfSightRequired": false,
+          "ExcludeFromHeightAdvantage": true,
+          "BaseDamagePerRound": 20,
+          "RateOfFire": 10,
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 1750
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 75,
+            "Distance": 2000
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 50,
+            "Distance": 2250
+          },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Ground",
+              "Modifier": "CanNotTarget"
+            }
+          }
+        },
+        "C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
+          "BaseDamagePerRound": 10,
+          "DamagePacketsPerShot": 0,
+          "ExcludeFromHeightAdvantage": true,
+          "NumberOfBursts": 50,
+          "RangeAttributesLong": {
+            "Distance": 2750
+          }
+        },
+        "C_ArtilleryCruiser_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 10,
+          "ReloadTimeMS": 75,
+          "DamagePacketsPerShot": 0
+        }
+      }
+    },
+
+    // COALITION/SOBAN ARTILLERY FABRICATION
+    "Tier_3_C_Artillery": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 500,
+        "Resource2Cost": 250,
+        "ResearchTime": 65,
+        "Dependencies": [ "Tier_2_C_ArmouredAssault" ]
+      }
+    },
+    "Tier_3_S_Artillery": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 500,
+        "Resource2Cost": 250,
+        "ResearchTime": 65,
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
+      }
+    },
+
+    // GAALSIEN SIEGE CRUISER
+    "G_ArtilleryCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 550,
+        "Resource2Cost": 180,
+        "MaxHealth": 3100,
+        "Armour": 16,
+        "ProductionTime": 45,
+        "PopCapCost": 5,
+        "SensorRadius": 1400,
+        "ContactRadius": 1550
+      },
+      "AbilityAttributes": {
+        "Ability_G_Artillery_EMP_MP": {
+          "CooldownTimeSecs": 40
+        },
+        "Ability_G_ArtilleryBarrage_01_MP": {
+          "CooldownTimeSecs": 120
+        }
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 64,
+          "AccelerationTime": 3,
+          "BrakingTime": 1.25
+        }
+      },
+      "WeaponAttributes": {
+        "G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
+          "BaseDamagePerRound": 1000,
+          "RangeAttributesLong": {
+            "Distance": 1250
+          }
+        },
+        "G_ArtilleryCruiser_Weapon_PD_MP": {
+          "BaseDamagePerRound": 22,
+          "RateOfFire": 26,
+          "BurstPeriodMinTimeMS": 100,
+          "BurstPeriodMaxTimeMS": 120,
+          "CooldownTimeMS": 10,
+          "ReloadTimeMS": 10,
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 800
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 90,
+            "Distance": 1000
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 80,
+            "Distance": 1200
+          },
+          "TargetPrioritizationAttributes": {
+            "TargetPriorityWeight": 150
+          },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air",
+              "ClassOperator": "Or"
+            }
+          }
+        },
+        "G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
+          "BaseDamagePerRound": 100,
+          "DamagePacketsPerShot": 1,
+          "AreaOfEffectRadius": 200,
+          "NumberOfBursts": 1,
+          "RateOfFire": 16,
+          "CooldownTimeMS": 3250,
+          "BurstPeriodMinTimeMS": 225,
+          "BurstPeriodMaxTimeMS": 275,
+          "RangeAttributesLong": {
+            "Distance": 1350
+          }
+        },
+        "G_ArtilleryCruiser_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 100,
+          "RateOfFire": 1,
+          "DamagePacketsPerShot": 1,
+          "ReloadTimeMS": 15000
+        }
+      }
+    },
+
+    // KHAANEPH SIEGE CRUISER
+    "K_ArtilleryCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 700,
+        "Resource2Cost": 280,
+        "MaxHealth": 3100,
+        "Armour": 16,
+        "PopCapCost": 6,
+        "SensorRadius": 1400,
+        "ContactRadius": 1550,
+        "ProductionTime": 45
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "MaxSpeed": 120,
+          "AccelerationTime": 5,
+          "BrakingTime": 10,
+          "MaxSpeedTurnRadius": 500
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_K_ArtilleryBarrage_01_MP": {
+          "CooldownTimeSecs": 120
+        },
+        "Ability_K_Artillery_EMP_MP": {
+          "CooldownTimeSecs": 40
+        }
+      },
+      "WeaponAttributes": {
+        "G_ArtilleryCruiser_Weapon_PD_MP": {
+          "BaseDamagePerRound": 22,
+          "RateOfFire": 26,
+          "BurstPeriodMinTimeMS": 100,
+          "BurstPeriodMaxTimeMS": 120,
+          "CooldownTimeMS": 10,
+          "ReloadTimeMS": 10,
+          "RangeAttributesShort": {
+            "Accuracy": 100,
+            "Distance": 800
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 90,
+            "Distance": 1000
+          },
+          "RangeAttributesLong": {
+            "Accuracy": 80,
+            "Distance": 1200
+          },
+          "TargetPrioritizationAttributes": {
+            "TargetPriorityWeight": 150
+          },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Air",
+              "ClassOperator": "Or"
+            }
+          }
+        },
+        "K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
+          "AreaOfEffectRadius": 180,
+          "BaseDamagePerRound": 350,
+          "ReloadTimeMS": 4500,
+          "NumberOfBursts": 3,
+          "AreaOfEffectFalloffType": "Quadratic",
+          "RangeAttributesLong": {
+            "Distance": 450
+          }
+        },
+        "K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
+          "ExcludeFromHeightAdvantage": true,
+          "BaseDamagePerRound": 100,
+          "DamagePacketsPerShot": 1,
+          "AreaOfEffectRadius": 200,
+          "NumberOfBursts": 1,
+          "RateOfFire": 16,
+          "CooldownTimeMS": 3250,
+          "BurstPeriodMinTimeMS": 225,
+          "BurstPeriodMaxTimeMS": 275,
+          "RangeAttributesLong": {
+            "Distance": 1350
+          },
+          "Modifiers": {
+            "1": {
+              "TargetClass": "Small",
+              "ClassOperator": "Or",
+              "Modifier": "DamagePercent",
+              "Amount": 65
+            },
+            "2": {
+              "TargetClass": "Carrier",
+              "ClassOperator": "Or",
+              "Modifier": "DamagePercent",
+              "Amount": 80
+            }
+          }
+        },
+        "G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
+          "ExcludeFromHeightAdvantage": true,
+          "BaseDamagePerRound": 1000,
+          "RangeAttributesLong": {
+            "Distance": 1250
+          }
+        }
+      }
+    },
+
+    // GAALSIEN SIEGE CRUISER FABRICATION
+    "Tier_3_G_Artillery_BattleCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 400,
+        "Resource2Cost": 150,
+        "ResearchTime": 55
+      }
+    },
+
+    // KHAANEPH SIEGE CRUISER FABRICATION
+    "Tier_3_K_ArtilleryCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 600,
+        "ResearchTime": 95
+      }
+    },
+
+    // GAALSIEN SIEGE CRUISER RANGE UPGRADE
+    "Research_Buff_G_Artillery_Barrage": {
+      "ResearchItemAttributes": {
+        "ResearchTime": 70,
+        "UnitTypeBuffs": {
+          "0": {
+            "BuffSet": {
+              "2": { "Value": 800 },
+              "3": { "Value": 800 },
+              "6": { "Value": 1300 },
+              "7": { "Value": 1300 },
+              "10": { "Value": 2000 },
+              "11": { "Value": 2000 }
+            }
+          }
+        }
+      }
+    },
+
+    // KHAANEPH SIEGE CRUISER RANGE UPGRADE
+    "Research_Buff_K_Artillery_Barrage": {
+      "ResearchItemAttributes": {
+        "ResearchTime": 70
+      }
+    },
+
+    // GAALSIEN SIEGE CRUISER EMP UPGRADE
+    "Research_Buff_G_Artillery_EMP_Barrage": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "Resource2Cost": 100,
+        "ResearchTime": 35
+      }
+    },
+
+    // KHAANEPH SIEGE CRUISER EMP UPGRADE
+    "Research_Buff_K_Artillery_EMP_Barrage": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 300,
+        "Resource2Cost": 100,
+        "ResearchTime": 35
+      }
+    }
+  }
 }
