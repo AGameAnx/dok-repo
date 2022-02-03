@@ -96,6 +96,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-14 12.15](#2021-04-14-1215)
 	- [2021-04-15 12.16](#2021-04-15-1216)
 	- [2021-04-24 12.17](#2021-04-24-1217)
+	- [2022-02-02 12.18](#2022-02-02-1218)
 
 # Changes
 
@@ -2603,5 +2604,5 @@ Full combined changelog can be found [HERE](jaraci.md)
 *Not yet reflected in the main changelog.*
 * General:
 	* Fixed an issue where carriers will lose power from the reserve pool if the available power ever exceeds 30
-*Khaaneph:
+* Khaaneph:
 	* Fixed an issue where Blast Drones fail to destroy themselves when detonating
