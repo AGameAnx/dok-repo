@@ -2599,7 +2599,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Honourguard cruiser hover turn acceleration: `5 => 2`
 * Khaaneph:
 	* Fixed an issue where blast drone displayed damage & packets incorrectly
-	
+
 ## 2022-02-02 12.18
 *Not yet reflected in the main changelog.*
 * General:
