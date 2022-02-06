@@ -3401,39 +3401,65 @@
 		},
 		"G_BattleCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 550,
-				"Resource2Cost": 220,
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"MaxHealth": 2800,
-				"ProductionTime": 60,
+				"ProductionTime": 1,
 				"Armour": 12,
 				"PopCapCost": 0
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 70,
-					"AreaOfEffectRadius": 100,
-					"BurstPeriodMinTimeMS": 700,
-					"BurstPeriodMaxTimeMS": 700,
-					"RateOfFire": 3,
-					"NumberOfBursts": 2,
-					"WindUpTimeMS": 250,
-					"CooldownTimeMS": 1000,
-					"ReloadTimeMS": 3500,
-					"RangeAttributesLong": { "Distance": 1250 },
-					"OutputDPS": true
+					"BaseDamagePerRound": 140,
+					"AreaOfEffectRadius": 80,
+					"BurstPeriodMinTimeMS": 500,
+					"BurstPeriodMaxTimeMS": 1100,
+					"RateOfFire": 2,
+					"NumberOfBursts": 4,
+					"WindUpTimeMS": 500,
+					"CooldownTimeMS": 500,
+					"ReloadTimeMS": 1500,
+					"LeadsTarget": "LeadTarget",
+					"RangeAttributesShort": {
+						"Distance": 300,
+						"Accuracy": 90
+					},
+					"RangeAttributesMedium": {
+						"Distance": 800,
+						"Accuracy": 75
+					},
+					"RangeAttributesLong": {
+						"Distance": 1450,
+						"Accuracy": 60
+					},
+					"OutputDPS": true,
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Large",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						}
+					}
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
-					"BaseDamagePerRound": 180,
+					"BaseDamagePerRound": 120,
 					"AreaOfEffectFalloffType": "Quadratic",
-					"AreaOfEffectRadius": 140,
+					"AreaOfEffectRadius": 100,
+					"BurstPeriodMinTimeMS": 500,
+					"BurstPeriodMaxTimeMS": 500,
+					"CooldownTimeMS": 500,
+					"RateOfFire": 9,
+					"NumberOfBursts": 2,
 					"ExcludeFromHeightAdvantage": true,
-					"RangeAttributesLong": { "Distance": 1000 },
+					"LineOfSightRequired": false,
+					"RangeAttributesLong": { "Distance": 1500 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 80
+							"Amount": 200
 						}
 					}
 				}
@@ -3458,10 +3484,10 @@
 				},
 				"Ability_G_BattleCruiser_Missile_MP": {
 					"Resource1Cost": 0,
-					"CooldownTimeSecs": 40
+					"CooldownTimeSecs": 30
 				},
 				"Ability_G_BattleCruiserActiveRegen": {
-					"CooldownTimeSecs": 40
+					"CooldownTimeSecs": 20
 				}
 			}
 		},
