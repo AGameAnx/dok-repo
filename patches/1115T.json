@@ -2,7 +2,7 @@
 	"Meta": {
 		"Name": "1113 KDS Realism Mod TEST",
 		"Author": "S'Aarum",
-		"Version": "1.5.5.6",
+		"Version": "1.5.5.7",
 		"LastUpdate": "07-02-2022"
 	},
 	"Entities": {
@@ -1995,12 +1995,12 @@
 					"BurstPeriodMinTimeMS": 550,
 					"BurstPeriodMaxTimeMS": 1000,
 					"NumberOfBursts": 4,
-					"RateOfFire": 8,
+					"RateOfFire": 18,
 					"CooldownTimeMS": 500,
 					"ReloadTimeMS": 1800,
-					"DamagePacketsPerShot": 3,
+					"TracerLength": 5,
 					"RangeAttributesShort": {
-						"Accuracy": 80,
+						"Accuracy": 90,
 						"Distance": 300
 					},
 					"RangeAttributesMedium": {
@@ -2162,14 +2162,13 @@
 					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 10,
 					"NumberOfBursts": 10,
-					"RateOfFire": 10,
-					"DamagePacketsPerShot": 3,
+					"RateOfFire": 18,
 					"ReloadTimeMS": 2500,
-					"CooldownTimeMS": 700,
-					"BurstPeriodMinTimeMS": 550,
-					"BurstPeriodMaxTimeMS": 800,
+					"CooldownTimeMS": 500,
+					"BurstPeriodMinTimeMS": 500,
+					"BurstPeriodMaxTimeMS": 1000,
 					"RangeAttributesShort": {
-						"Accuracy": 80,
+						"Accuracy": 90,
 						"Distance": 300
 					},
 					"RangeAttributesMedium": {
@@ -2177,7 +2176,7 @@
 						"Distance": 600
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 45,
+						"Accuracy": 50,
 						"Distance": 1200
 					},
 					"Turret": {
@@ -2189,10 +2188,10 @@
 							"TargetClass": "Small, Support",
 							"ClassOperator": "And",
 							"Modifier": "DamagePercent",
-							"Amount": 70
+							"Amount": 100
 						},
 						"2": {
-							"TargetClass": "Air, Medium",
+							"TargetClass": "Air",
 							"ClassOperator": "And",
 							"Modifier": "DamagePercent",
 							"Amount": 150
@@ -2916,7 +2915,7 @@
 					"BaseDamagePerRound": 200,
 					"DamagePacketsPerShot": 2,
 					"AreaOfEffectRadius": 100,
-					"NumberOfBursts": 8,
+					"NumberOfBursts": 4,
 					"RateOfFire": 6,
 					"CooldownTimeMS": 2000,
 					"BurstPeriodMinTimeMS": 500,
@@ -3022,6 +3021,9 @@
 				"MaxHealth": 500,
 				"Armour": 2,
 				"PopCapCost": 0
+			},
+			"WeaponAttributes": {
+				"TracerSpeed": 1500
 			}
 		},
 		"C_Sob_Escort_MP": {
@@ -3083,6 +3085,8 @@
 					"ReloadTimeMS": 2000,
 					"BurstPeriodMinTimeMS": 500,
 					"BurstPeriodMaxTimeMS": 1200,
+					"TracerSpeed": 800,
+					"TracerLength": 2,
 					"RangeAttributesShort": {
 						"Accuracy": 95,
 						"Distance": 300
@@ -3106,25 +3110,30 @@
 			},
 			"WeaponAttributes": {
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
-					"LineOfSightRequired": true,
+					"LineOfSightRequired": false,
 					"BaseDamagePerRound": 250,
 					"NumberOfBursts": 5,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 5,
+					"RateOfFire": 1,
+					"CooldownTimeMS": 250,
+					"ReloadTimeMS": 250,
+					"BurstPeriodMinTimeMS": 250,
+					"BurstPeriodMaxTimeMS": 250,
 					"RangeAttributesShort": {
-						"Accuracy": 40,
+						"Accuracy": 1,
 						"Distance": 300
 					},
 					"RangeAttributesMedium": {
-						"Accuracy": 40,
+						"Accuracy": 1,
 						"Distance": 500
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 40,
+						"Accuracy": 1,
 						"Distance": 1500
 					}
 				}
-			},
+			}
+		},
 			"G_HonorGuard_MP": {
 				"UnitAttributes": {
 					"PopCapCost": 0
@@ -3818,7 +3827,7 @@
 								"TargetClass": "Small",
 								"ClassOperator": "Or",
 								"Modifier": "DamagePercent",
-								"Amount": 80
+								"Amount": 100
 							}
 						}
 					}
@@ -4721,6 +4730,7 @@
 					},
 					"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 						"ExcludeFromHeightAdvantage": true,
+						"LineOfSightRequired": true,
 						"BaseDamagePerRound": 140,
 						"AreaOfEffectRadius": 100,
 						"AreaOfEffectFalloffType": "Linear",
@@ -4734,12 +4744,12 @@
 			},
 			"G_Catamaran_Upgrade01": {
 				"AbilityAttributes": {
-					"Ability_G_MissileCraft_CrowdControl_MP": {
+					"Ability_G_MissileCraft_CrowdControl": {
 						"CooldownTimeSecs": 80
 					}
 				},
 				"WeaponAttributes": {
-					"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
+					"G_Catamaran_Upgrade01_Weapon_G2A": {
 						"ReloadTimeMS": 2500,
 						"Turret": {
 							"RotationSpeed": 160,
@@ -4749,7 +4759,7 @@
 							"Distance": 1330
 						}
 					},
-					"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
+					"G_Catamaran_Upgrade01_Weapon_G2A_Radar": {
 						"ReloadTimeMS": 2500,
 						"Turret": {
 							"RotationSpeed": 240,
@@ -4759,10 +4769,10 @@
 							"Distance": 1500
 						}
 					},
-					"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
+					"G_Catamaran_Upgrade01_Weapon_G2G": {
 						"ExcludeFromHeightAdvantage": true,
 						"ProjectileEntityTypeToSpawn": "G_Battlecruiser_Missile_ProjectileAttributes_MP",
-						"BaseDamagePerRound": 140,
+						"BaseDamagePerRound": 180,
 						"AreaOfEffectRadius": 100,
 						"AreaOfEffectFalloffType": "Linear",
 						"NumberOfBursts": 2,
