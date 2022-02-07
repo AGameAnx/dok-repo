@@ -1,12 +1,11 @@
 {
 	"Meta": {
-		"Name": "1113 KDS Realism Mod",
+		"Name": "1113 KDS Realism Mod TEST",
 		"Author": "S'Aarum",
-		"Version": "1.0.0.1",
-		"LastUpdate": "06-02-2022"
+		"Version": "1.5.5.5",
+		"LastUpdate": "07-02-2022"
 	},
 	"Entities": {
-		// RESEARCH 
 		"Research_Buff_Power_1": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 50,
@@ -433,7 +432,6 @@
 				"LocalizedLongDescriptionStringID": "Allow the shunting of additional power reserves to relevant sub-systems. Adds 5 extra power to the carrier reserves."
 			}
 		},
-		// CARRIERS
 		"C_Carrier_MP": {
 			"UnitAttributes": {
 				"Class": "Ground, Carrier",
@@ -563,7 +561,7 @@
 		},
 		"G_Carrier_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 5,
+				"MaxHealth": 15500,
 				"Armour": 30
 			},
 			"UnitMovementAttributes": {
@@ -1982,7 +1980,6 @@
 				}
 			}
 		},
-		// UNITS 
 		"G_Baserunner_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 2000,
@@ -1994,7 +1991,6 @@
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
-					"leadsTarget": "LeadTarget",
 					"BaseDamagePerRound": 10,
 					"BurstPeriodMinTimeMS": 550,
 					"BurstPeriodMaxTimeMS": 1000,
@@ -2101,7 +2097,6 @@
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
-					"leadsTarget": "LeadTarget",
 					"BaseDamagePerRound": 10,
 					"BurstPeriodMinTimeMS": 550,
 					"BurstPeriodMaxTimeMS": 1000,
@@ -2165,7 +2160,6 @@
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
-					"leadsTarget": "LeadTarget",
 					"BaseDamagePerRound": 10,
 					"NumberOfBursts": 10,
 					"RateOfFire": 10,
@@ -2175,15 +2169,15 @@
 					"BurstPeriodMinTimeMS": 550,
 					"BurstPeriodMaxTimeMS": 800,
 					"RangeAttributesShort": {
-						"Accuracy": 90,
+						"Accuracy": 80,
 						"Distance": 300
 					},
 					"RangeAttributesMedium": {
-						"Accuracy": 70,
+						"Accuracy": 60,
 						"Distance": 600
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 50,
+						"Accuracy": 45,
 						"Distance": 1200
 					},
 					"Turret": {
@@ -2258,7 +2252,6 @@
 				"C_Sob_Baserunner_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
-					"leadsTarget": "LeadTarget",
 					"BaseDamagePerRound": 10,
 					"NumberOfBursts": 10,
 					"RateOfFire": 10,
@@ -2538,7 +2531,7 @@
 					"CooldownTimeMS": 500,
 					"BurstPeriodMinTimeMS": 1000,
 					"BurstPeriodMaxTimeMS": 1000,
-					"RangeAttributesLong": { "Distance": 3850 },
+					"RangeAttributesLong": { "Distance": 2850 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Carrier, Large",
@@ -2552,8 +2545,6 @@
 					"BaseDamagePerRound": 100,
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 180,
-					"NumberOfBursts": 4,
-					"RateOfFire": 4,
 					"ExcludeFromHeightAdvantage": true,
 					"RangeAttributesLong": {
 						"Distance": 2200
@@ -2667,7 +2658,7 @@
 					"CooldownTimeMS": 800,
 					"BurstPeriodMinTimeMS": 1000,
 					"BurstPeriodMaxTimeMS": 1000,
-					"RangeAttributesLong": { "Distance": 3800 },
+					"RangeAttributesLong": { "Distance": 3200 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Carrier, Large",
@@ -2799,10 +2790,6 @@
 					"CooldownTimeMS": 2000,
 					"BurstPeriodMinTimeMS": 500,
 					"BurstPeriodMaxTimeMS": 500,
-					"RangeAttributesLong": {
-						"Distance": 3200,
-						"Accuracy": 5
-					},
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
@@ -2816,6 +2803,14 @@
 							"Modifier": "DamagePercent",
 							"Amount": 100
 						}
+					},
+					"RangeAttributesMedium": {
+						"Distance": 1225,
+						"Accuracy": 10
+					},
+					"RangeAttributesLong": {
+						"Distance": 2450,
+						"Accuracy": 5
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_G2G_MP": {
@@ -2941,11 +2936,11 @@
 						}
 					},
 					"RangeAttributesMedium": {
-						"Distance": 2200,
+						"Distance": 1225,
 						"Accuracy": 10
 					},
 					"RangeAttributesLong": {
-						"Distance": 3500,
+						"Distance": 2800,
 						"Accuracy": 5
 					}
 				},
@@ -3027,12 +3022,6 @@
 				"MaxHealth": 500,
 				"Armour": 2,
 				"PopCapCost": 0
-			},
-			"WeaponAttributes": {
-				"C_Escort_Weapon_G2G_MP": {
-
-
-				}
 			}
 		},
 		"C_Sob_Escort_MP": {
@@ -3115,21 +3104,8 @@
 				"PopCapCost": 0,
 				"SensorRadius": 1800
 			},
-			"AbilityAttributes": {
-				"Ability_C_Grenade_MP": {
-					"CooldownTimeSecs": 45
-				}
-			},
 			"WeaponAttributes": {
-				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
-					"BaseDamagePerRound": 200,
-					"NumberOfBursts": 1,
-					"RateOfFire": 5,
-					"CooldownTimeMS": 250,
-					"ReloadTimeMS": 0,
-					"BurstPeriodMinTimeMS": 500,
-					"BurstPeriodMaxTimeMS": 500
-				}
+
 			}
 		},
 		"G_HonorGuard_MP": {
@@ -3270,7 +3246,7 @@
 					"BurstPeriodMaxTimeMS": 1000,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
-						"Distance": 3500
+						"Distance": 2300
 					},
 					"Modifiers": {
 						"1": {
@@ -3791,83 +3767,41 @@
 				}
 			}
 		},
-		// TACTICAL MISSILE - Gaalsien
-		"Ability_G_BattleCruiser_Missile_MP": {
-			"AbilityViewAttributes": {
-				"LocalizedTitleStringID": "TACTICAL MISSILES SALVO",
-				"LocalizedLongDescriptionStringID": "Launch a double salvo of 4 Samiel-Class SRDPM to the designated target area. Theses Short-Range Dual Purpose Missiles are effective against concentration of small and medium units.",
-				"LocalizedShortDescriptionStringID": "[f1c232]TACTICAL MISSILES , able to fire over dunes and obstacles."
-			}
-		},
-		// TACTICAL MISSILE - Honorguard
-		"Ability_G_BattleCruiser_Missile": {
-			"AbilityViewAttributes": {
-				"LocalizedTitleStringID": "TACTICAL MISSILES SALVO",
-				"LocalizedLongDescriptionStringID": "Launch a double salvo of 8 Samiel-Class SRDPM to the designated target area. Theses Short-Range Dual Purpose Missiles are effective against concentration of small and medium units.",
-				"LocalizedShortDescriptionStringID": "[f1c232]TACTICAL MISSILES , able to fire over dunes and obstacles."
-			}
-		},
 		"G_BattleCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 0,
-				"Resource2Cost": 0,
+				"Resource1Cost": 550,
+				"Resource2Cost": 220,
 				"MaxHealth": 2800,
-				"ProductionTime": 1,
+				"ProductionTime": 60,
 				"Armour": 12,
 				"PopCapCost": 0
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 140,
-					"AreaOfEffectRadius": 80,
-					"BurstPeriodMinTimeMS": 500,
-					"BurstPeriodMaxTimeMS": 1100,
-					"RateOfFire": 2,
-					"NumberOfBursts": 4,
-					"WindUpTimeMS": 500,
-					"CooldownTimeMS": 500,
-					"ReloadTimeMS": 1500,
-					"LeadsTarget": "LeadTarget",
-					"RangeAttributesShort": {
-						"Distance": 300,
-						"Accuracy": 90
-					},
-					"RangeAttributesMedium": {
-						"Distance": 800,
-						"Accuracy": 75
-					},
-					"RangeAttributesLong": {
-						"Distance": 1450,
-						"Accuracy": 60
-					},
-					"OutputDPS": true,
-					"Modifiers": {
-						"1": {
-							"TargetClass": "Large",
-							"ClassOperator": "Or",
-							"Modifier": "DamagePercent",
-							"Amount": 50
-						}
-					}
+					"BaseDamagePerRound": 70,
+					"AreaOfEffectRadius": 100,
+					"BurstPeriodMinTimeMS": 700,
+					"BurstPeriodMaxTimeMS": 700,
+					"RateOfFire": 3,
+					"NumberOfBursts": 2,
+					"WindUpTimeMS": 250,
+					"CooldownTimeMS": 1000,
+					"ReloadTimeMS": 3500,
+					"RangeAttributesLong": { "Distance": 1250 },
+					"OutputDPS": true
 				},
 				"G_BattleCruiser_Weapon_Missile_MP": {
-					"BaseDamagePerRound": 120,
+					"BaseDamagePerRound": 180,
 					"AreaOfEffectFalloffType": "Quadratic",
-					"AreaOfEffectRadius": 100,
-					"BurstPeriodMinTimeMS": 500,
-					"BurstPeriodMaxTimeMS": 500,
-					"CooldownTimeMS": 500,
-					"RateOfFire": 9,
-					"NumberOfBursts": 2,
+					"AreaOfEffectRadius": 140,
 					"ExcludeFromHeightAdvantage": true,
-					"LineOfSightRequired": false,
-					"RangeAttributesLong": { "Distance": 1500 },
+					"RangeAttributesLong": { "Distance": 1000 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 200
+							"Amount": 80
 						}
 					}
 				}
@@ -3892,10 +3826,10 @@
 				},
 				"Ability_G_BattleCruiser_Missile_MP": {
 					"Resource1Cost": 0,
-					"CooldownTimeSecs": 30
+					"CooldownTimeSecs": 40
 				},
 				"Ability_G_BattleCruiserActiveRegen": {
-					"CooldownTimeSecs": 20
+					"CooldownTimeSecs": 40
 				}
 			}
 		},
@@ -3928,7 +3862,7 @@
 					"CooldownTimeMS": 500,
 					"BurstPeriodMinTimeMS": 1000,
 					"BurstPeriodMaxTimeMS": 1000,
-					"RangeAttributesLong": { "Distance": 3850 },
+					"RangeAttributesLong": { "Distance": 2850 },
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Carrier, Large",
@@ -3964,9 +3898,6 @@
 				"C_ArtilleryCruiser_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 100,
 					"DamagePacketsPerShot": 1,
-					"RangeAttributesLong": {
-						"Distance": 4000
-					},
 					"Modifiers": {
 						"1": {
 							"TargetClass": "Small",
@@ -4662,7 +4593,6 @@
 			"AbilityAttributes": {
 				"Ability_G_MissileCraft_CrowdControl_MP": {
 					"CooldownTimeSecs": 80
-
 				}
 			},
 			"ExperienceAttributes": {
@@ -4708,7 +4638,6 @@
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"ProjectileEntityTypeToSpawn": "G_Battlecruiser_Missile_ProjectileAttributes_MP",
 					"BaseDamagePerRound": 140,
 					"AreaOfEffectRadius": 100,
 					"AreaOfEffectFalloffType": "Linear",
@@ -4716,8 +4645,7 @@
 					"RateOfFire": 6,
 					"CooldownTimeMS": 200,
 					"BurstPeriodMinTimeMS": 500,
-					"BurstPeriodMaxTimeMS": 500,
-					"LineOfSightRequired": true
+					"BurstPeriodMaxTimeMS": 500
 				}
 			}
 		},
@@ -4786,12 +4714,10 @@
 					"RateOfFire": 6,
 					"CooldownTimeMS": 200,
 					"BurstPeriodMinTimeMS": 800,
-					"BurstPeriodMaxTimeMS": 800,
-					"LineOfSightRequired": true
+					"BurstPeriodMaxTimeMS": 800
 				}
 			}
 		},
-		// RESEARCH COST
 		"Research_Buff_G_CatamaranAA_GlobalMissiles": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 220,
@@ -4987,14 +4913,6 @@
 				"Dependencies": [ "Tier_2_C_ArmouredAssault" ]
 			}
 		},
-		"Tier_3_C_AssaultCruiser": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 0,
-				"Resource2Cost": 0,
-				"ResearchTime": 30,
-				"Dependencies": [ "Tier_2_C_ArmouredAssault" ]
-			}
-		},
 		"Tier_3_C_GunShip_Bomber": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 0,
@@ -5059,7 +4977,6 @@
 				"Resource2Cost": 0
 			}
 		},
-		// Artillery Barrage
 		"Ability_C_ArtilleryBarrage": {
 			"AbilityViewAttributes": {
 				"LocalizedTitleStringID": "ROCKET BARRAGE",
@@ -5067,7 +4984,6 @@
 				"LocalizedShortDescriptionStringID": "[f1c232]APHE ROCKETS , long range, large area."
 			}
 		},
-		// Artillery Barrage_2
 		"Ability_C_ArtilleryBarrage_2": {
 			"AbilityViewAttributes": {
 				"LocalizedTitleStringID": "SUBMUNITION BARRAGE",
@@ -5075,7 +4991,6 @@
 				"LocalizedShortDescriptionStringID": "[f1c232]SUBMUNITION ROCKETS , long range, large area."
 			}
 		},
-		// Artillery Barrage_P
 		"Ability_C_ArtilleryBarrage_Precise": {
 			"AbilityViewAttributes": {
 				"LocalizedTitleStringID": "PRECISION SALVO",
@@ -5083,7 +4998,6 @@
 				"LocalizedShortDescriptionStringID": "[f1c232]APHE ROCKETS , medium range, small area."
 			}
 		},
-		// Cluster Grenade
 		"Ability_C_Grenade_MP": {
 			"AbilityViewAttributes": {
 				"LocalizedTitleStringID": "CLUSTER SALVO",
@@ -5091,10 +5005,18 @@
 				"LocalizedShortDescriptionStringID": "[f1c232]CLUSTER GRENADES , able to fire over dunes and obstacles."
 			}
 		},
-		"G_Turret_Heavy_MP": {
-			"UnitAttributes": {
-				"MaxHealth": 7000,
-				"PopCapCost": 1
+		"Ability_G_BattleCruiser_Missile_MP": {
+			"AbilityViewAttributes": {
+				"LocalizedTitleStringID": "TACTICAL MISSILES SALVO",
+				"LocalizedLongDescriptionStringID": "Launch a double salvo of 4 Samiel-Class SRDPM to the designated target area. Theses Short-Range Dual Purpose Missiles are effective against concentration of small and medium units.",
+				"LocalizedShortDescriptionStringID": "[f1c232]TACTICAL MISSILES , able to fire over dunes and obstacles."
+			}
+		},
+		"Ability_G_BattleCruiser_Missile": {
+			"AbilityViewAttributes": {
+				"LocalizedTitleStringID": "TACTICAL MISSILES SALVO",
+				"LocalizedLongDescriptionStringID": "Launch a double salvo of 8 Samiel-Class SRDPM to the designated target area. Theses Short-Range Dual Purpose Missiles are effective against concentration of small and medium units.",
+				"LocalizedShortDescriptionStringID": "[f1c232]TACTICAL MISSILES , able to fire over dunes and obstacles."
 			}
 		}
 	}
