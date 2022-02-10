@@ -8,7 +8,7 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow",
-    "Version": "0.10.01",
+    "Version": "0.10.02",
     "LastUpdate": "2022-02-10",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
@@ -277,7 +277,7 @@
         "Resource1Cost": 0,
         "Resource2Cost": 0,
         "ResearchTime": 0,
-        
+
         //"Resource1Cost": 600,
         //"Resource2Cost": 200,
         "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
@@ -6940,9 +6940,13 @@
     // GAALSIEN/KHAANEPH ASSAULT SHIP FABRICATION
     "Tier_1_G_Catamaran": {
       "ResearchItemAttributes": {
-        "Resource1Cost": 450,
-        "Resource2Cost": 80,
-        "ResearchTime": 60
+        //"Resource1Cost": 450,
+        //"Resource2Cost": 80,
+        //"ResearchTime": 60
+
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
       }
     },
 
@@ -7584,21 +7588,27 @@
     // GAALSIEN/KHAANEPH SANDSKIMMER FABRICATION
     "Tier_1_G_Sandskimmers": {
       "ResearchItemAttributes": {
-        "Resource1Cost": 350,
-        "ResearchTime": 30
+        "Resource1Cost": 0,
+        "ResearchTime": 0
+
+        //"Resource1Cost": 350,
+
+        //"ResearchTime": 30
       }
     },
 
     //"Research_Buff_C_Escort_ROF01": { "ResearchItemAttributes": { "ResearchTime": 40 } }, // What are these??
     //"Research_Buff_S_Escort_ROF01": { "ResearchItemAttributes": { "ResearchTime": 40 } },
 
-    // COALITION/SOBAN LAV ASSAULT PACK
+    // COALITION LAV ASSAULT PACK
     "Research_Buff_C_Escort": {
       "ResearchItemAttributes": {
         "Resource1Cost": 150,
         "Resource2Cost": 200
       }
     },
+
+    ///SOBAN LAV ASSAULT PACK
     "Research_Buff_S_Escort": {
       "ResearchItemAttributes": {
         "Resource1Cost": 150,
@@ -9302,39 +9312,54 @@
     },
 
     // GAALSIEN INTERCEPTOR
-    "G_Interceptor_MP": {
+    "G_Interceptor_MP": { // FIXME: apply changes to K int
       "UnitAttributes": {
-        "Resource1Cost": 250,
-        "Resource2Cost": 100,
-        "MaxHealth": 750,
-        "Armour": 2,
-        "ProductionTime": 12
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 0,
+        //"Resource1Cost": 250,
+        //"Resource2Cost": 100,
+        //"ProductionTime": 12
+        "MaxHealth": 1000,
+        "Armour": 5
+
       },
       "UnitMovementAttributes": {
         "Dynamics": {
-          "MaxSpeed": 100,
-          "MaxSpeedTurnRadius": 250
+          "MaxSpeed": 150,
+          "MaxSpeedTurnRadius": 10
         }
       },
       "StorageAttributes": {
         "G_Interceptor_StorageAttributesAsset_MP": {
           "InventoryLoadout": {
             "MISSILES": {
-              "Capacity": 40,
-              "StartingAmount": 40
+              "Capacity": 20,
+              "StartingAmount": 20
             }
           }
         }
       },
       "WeaponAttributes": {
         "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
-          "BaseDamagePerRound": 225,
+          "Turret": {
+            "FieldOfView": 360, // Doesn't really have the desired effect bc turret can't turn
+            "FieldOfFire": 360
+          },
+          "ProjectileEntityTypeToSpawn": "C_HAC_Smoke_ProjectileAssetContainer",
+          "NumberOfBursts": 2,
+          "BaseDamagePerRound": 380,
           "DamagePacketsPerShot": 1,
-          "AreaOfEffectRadius": 150,
+          "AreaOfEffectRadius": 160,
           "AreaOfEffectFalloffType": "Quadratic",
-          "RateOfFire": 4,
-          "ReloadTimeMS": 4500,
-          //"LeadsTarget": "LeadTarget",
+          "RateOfFire": 1,
+          "WindUpTimeMS": 0,
+          "WindDownTimeMS": 0,
+          "BurstPeriodMinTimeMS": 750,
+          "BurstPeriodMaxTimeMS": 1250,
+          "CooldownTimeMS": 0,
+          "ReloadTimeMS": 250,
+          "LeadsTarget": 1,
           "RangeAttributesShort": {
             "Distance": 1000
           },
@@ -9345,17 +9370,10 @@
             "Remove": true
           },
           "Modifiers": {
-            //"13": {
-            //  "TargetClass": "Carrier",
-            //  "ClassOperator": "Or",
-            //  "Modifier": "DamagePercent",
-            //  "Amount": 60
-            //},
             "13": {
               "TargetClass": "Air",
               "ClassOperator": "Or",
-              "Modifier": "DamagePercent",
-              "Amount": 50
+              "Modifier": "CanNotTarget"
             }
           }
         }
@@ -9426,8 +9444,12 @@
     // GAALSIEN/KHAANEPH INTERCEPTOR FABRICATION
     "Tier_2_G_Interceptor": {
       "ResearchItemAttributes": {
-        "Resource1Cost": 450,
-        "ResearchTime": 70
+        //"Resource1Cost": 450,
+        //"ResearchTime": 70,
+
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
       }
     },
 
@@ -9492,11 +9514,15 @@
     // GAALSIEN PRECISION BOMBER
     "G_Bomber_MP": {
       "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 0,
+
         "MaxHealth": 250,
         "Armour": 0,
-        "Resource2Cost": 140,
-        "PopCapCost": 3,
-        "ProductionTime": 22
+        //"Resource2Cost": 140,
+        "PopCapCost": 3
+        //"ProductionTime": 22
       },
       "UnitMovementAttributes": {
         "Dynamics": {
@@ -9506,20 +9532,33 @@
       },
       "WeaponAttributes": {
         "G_Bomber_Weapon_A2G_MP": {
-          "BaseDamagePerRound": 800,
+          "ProjectileEntityTypeToSpawn": "G_Interceptor_A2GA_ProjectileAssetContainer_MP",
+          "BaseDamagePerRound": 500,
           "ReloadTimeMS": 3500,
-          "AreaOfEffectRadius": 360,
+          "AreaOfEffectRadius": 100,
           "AreaOfEffectFalloffType": "Quadratic",
           "RangeAttributesShort": {
-            "Distance": 1000
+            "Distance": 2000
           },
           "RangeAttributesMedium": {
             "Remove": true
           },
           "RangeAttributesLong": {
             "Remove": true
+          },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Ground",
+              "Modifier": "CanNotTarget"
+            },
+            "1": {
+              "TargetClass": "Small",
+              "Modifier": "DamagePercent",
+              "Amount": 250
+            }
           }
         }
+        
       }
     },
 
@@ -9560,9 +9599,13 @@
     // GAALSIEN/KHAANEPH BOMBER FABRICATION
     "Tier_3_G_Bomber": {
       "ResearchItemAttributes": {
-        "Resource1Cost": 250,
-        "Resource2Cost": 100,
-        "ResearchTime": 40
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+
+        //"Resource1Cost": 250,
+        //"Resource2Cost": 100,
+        //"ResearchTime": 40
       }
     },
 
@@ -9987,7 +10030,7 @@
       "UnitMovementAttributes": {
         "Combat": { "MaxDesiredCombatRange": 300 },
         "Dynamics": {
-          "MaxSpeed": 15,
+          "MaxSpeed": 25,
           "MaxSpeedTurnRadius": 100,
           "AccelerationTime": 0.9,
           "BrakingTime": 0.9
@@ -10137,7 +10180,7 @@
         "Combat": { "MaxDesiredCombatRange": 2950 },
         "Dynamics": {
 
-          "MaxSpeed": 15,
+          "MaxSpeed": 25,
           "MaxSpeedTurnRadius": 100,
           "AccelerationTime": 0.9,
           "BrakingTime": 0.9
@@ -10383,7 +10426,7 @@
           },
           "Modifiers": {
             "0": {
-              
+
               "TargetClass": "Ground",
               "Modifier": "CanNotTarget"
             }
