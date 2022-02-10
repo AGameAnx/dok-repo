@@ -8,7 +8,7 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow",
-    "Version": "0.10.07",
+    "Version": "0.10.08",
     "LastUpdate": "2022-02-10",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
@@ -800,7 +800,8 @@
           }
         },
         "C_Carrier_Weapon_PopCap_MP": {
-          "ProjectileEntityTypeToSpawn": "SuperWeapon_Narrow_ProjectileAssetContainer"
+          "ProjectileEntityTypeToSpawn": "SuperWeapon_Narrow_ProjectileAssetContainer",
+          "BaseWreckDamagePerRound": 100
         }
       },
       "PowerShuntAttributes": {
@@ -1558,6 +1559,7 @@
       },
       "AbilityAttributes": {
         "Ability_C_Sob_DeployPopCapCarrier_MP": {
+          
           "Resource1Cost": 270
         },
         "Ability_C_Sob_SobanNuke_MP": {
@@ -1579,7 +1581,8 @@
       },
       "WeaponAttributes": {
         "C_Sob_Carrier_Weapon_PopCap_MP": {
-          "ProjectileEntityTypeToSpawn": "SuperWeapon_Narrow_ProjectileAssetContainer"
+          "ProjectileEntityTypeToSpawn": "SuperWeapon_Narrow_ProjectileAssetContainer",
+          "BaseWreckDamagePerRound": 100
         },
         "C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
           "BaseDamagePerRound": 195,
@@ -10769,20 +10772,20 @@
           "LineOfSightRequired": false,
           "WeaponOwnerFriendlyFireDamageScalar": 1,
           "ExcludeFromHeightAdvantage": true,
-          "RateOfFire": 5,
+          "RateOfFire": 10,
           "WindUpTimeMS": 100,
           "WindDownTimeMS": 500,
-          "BaseDamagePerRound": 220,
+          "BaseDamagePerRound": 160,
           "DamagePacketsPerShot": 1,
           "AreaOfEffectRadius": 180,
           "AreaOfEffectFalloffType": "Quadratic",
           "NumberOfBursts": 2,
-          "CooldownTimeMS": 700,
+          "CooldownTimeMS": 1000,
           "ReloadTimeMS": 3000,
-          "BurstPeriodMinTimeMS": 1000,
-          "BurstPeriodMaxTimeMS": 1000,
+          "BurstPeriodMinTimeMS": 500,
+          "BurstPeriodMaxTimeMS": 500,
           "RangeAttributesLong": {
-            "Distance": 1450
+            "Distance": 1000
           }
         },
         "G_ArtilleryCruiser_Weapon_G2G_MP": {
@@ -10869,20 +10872,20 @@
           "LineOfSightRequired": false,
           "WeaponOwnerFriendlyFireDamageScalar": 1,
           "ExcludeFromHeightAdvantage": true,
-          "RateOfFire": 5,
+          "RateOfFire": 10,
           "WindUpTimeMS": 100,
           "WindDownTimeMS": 500,
-          "BaseDamagePerRound": 220,
+          "BaseDamagePerRound": 160,
           "DamagePacketsPerShot": 1,
           "AreaOfEffectRadius": 180,
           "AreaOfEffectFalloffType": "Quadratic",
           "NumberOfBursts": 2,
-          "CooldownTimeMS": 700,
+          "CooldownTimeMS": 1000,
           "ReloadTimeMS": 3000,
-          "BurstPeriodMinTimeMS": 1000,
-          "BurstPeriodMaxTimeMS": 1000,
+          "BurstPeriodMinTimeMS": 500,
+          "BurstPeriodMaxTimeMS": 500,
           "RangeAttributesLong": {
-            "Distance": 1450
+            "Distance": 1000
           },
           "Modifiers": {
             "0": {
