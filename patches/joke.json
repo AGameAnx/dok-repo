@@ -891,7 +891,7 @@
                           "6": {
                             "Attribute": 33554432,
                             "Mode": "Set",
-                            "Value": 420000 // FIXME: buff 6 applies to ALL weapons! aaaaaaa!
+                            "Value": 420000
                           }
                         }
                       }
@@ -6998,12 +6998,14 @@
       },
       "AbilityAttributes": {
         "Ability_C_Nitrous_MP": {
+          "CooldownTimeSecs": 60,
           "ApplyStatusEffect": {
             "Nitrous_StatusEffect": {
               "BuffsToApplyToTarget": {
                 "0": {
                   "BuffSet": {
                     "0": {
+                      "Mode": "AddPercent",
                       "Value": 200
                     }
                   }
@@ -7178,13 +7180,15 @@
       },
       "AbilityAttributes": {
         "Ability_S_Nitrous_MP": {
+          "CooldownTimeSecs": 60,
           "ApplyStatusEffect": {
             "Nitrous_StatusEffect": {
               "BuffsToApplyToTarget": {
                 "0": {
                   "BuffSet": {
                     "0": {
-                      "Value": 200 // FIXME: investigate if this had a different effect on soban lav for some reason
+                      "Mode": "AddPercent",
+                      "Value": 200
                     }
                   }
                 }
@@ -7604,6 +7608,7 @@
       "ResearchItemAttributes": {
         "Resource1Cost": 150,
         "Resource2Cost": 200
+
       }
     },
 
