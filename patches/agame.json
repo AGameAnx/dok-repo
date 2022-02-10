@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "14",
-		"LastUpdate": "2022-02-09",
+		"Version": "13.0",
+		"LastUpdate": "2022-02-11",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	/*"Global": {
@@ -3853,7 +3853,7 @@
 
 		"C_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 450,
+				"Resource1Cost": 480,
 				"Resource2Cost": 50,
 				"ProductionTime": 40,
 				"MaxHealth": 2700,
@@ -3934,7 +3934,7 @@
 		},
 		"C_Sob_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 450,
+				"Resource1Cost": 480,
 				"Resource2Cost": 50,
 				"ProductionTime": 40,
 				"MaxHealth": 2700,
@@ -4028,7 +4028,7 @@
 
 		"G_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 550,
+				"Resource1Cost": 560,
 				"Resource2Cost": 50,
 				"MaxHealth": 3500,
 				"Armour": 6,
@@ -4063,7 +4063,7 @@
 		},
 		"K_SupportCruiser_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 550,
+				"Resource1Cost": 560,
 				"Resource2Cost": 50,
 				"MaxHealth": 3500,
 				"Armour": 6,
@@ -4163,16 +4163,16 @@
 		},
 		"Tier_2_C_ArmouredAssault": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 350,
+				"Resource1Cost": 270,
 				"Resource2Cost": 75,
-				"ResearchTime": 60
+				"ResearchTime": 65
 			}
 		},
 		"Tier_2_S_ArmouredAssault": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 350,
+				"Resource1Cost": 270,
 				"Resource2Cost": 75,
-				"ResearchTime": 60
+				"ResearchTime": 65
 			}
 		},
 
@@ -4306,7 +4306,7 @@
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
-					"AreaOfEffectRadius": 125,
+					"AreaOfEffectRadius": 118,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesShort":  { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
@@ -4346,7 +4346,7 @@
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 4,
-					"AreaOfEffectRadius": 125,
+					"AreaOfEffectRadius": 118,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesShort":  { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
@@ -4438,13 +4438,14 @@
 					"RangeAttributesLong": { "Accuracy": 55 },
 					"Turret": { "RotationSpeed": 390 },
 					"Modifiers": {
-						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 60 },
 						"2": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 115 },
 						"3": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 115 },
 						"4": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 115 },
 						"5": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 130 },
 						"6": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 130 },
-						"7": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 }
+						"7": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 },
+						"8": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 }
 					},
 					"TargetPrioritizationAttributes": {
 						"TargetPriorityWeight": 150
@@ -4494,13 +4495,14 @@
 					"RangeAttributesLong": { "Accuracy": 55 },
 					"Turret": { "RotationSpeed": 390 },
 					"Modifiers": {
-						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 60 },
 						"2": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 115 },
 						"3": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 115 },
 						"4": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 115 },
 						"5": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 130 },
 						"6": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 130 },
-						"7": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 }
+						"7": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 },
+						"8": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 }
 					},
 					"TargetPrioritizationAttributes": {
 						"TargetPriorityWeight": 150
@@ -4922,7 +4924,7 @@
 				"C_Sob_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 180,
 					"WindUpTimeMS": 1200,
-					"CooldownTimeMS": 1300,
+					"CooldownTimeMS": 1350,
 					"ReloadTimeMS": 4700,
 					"RangeAttributesShort": {
 						"Accuracy": 40
@@ -5029,7 +5031,7 @@
 				"G_StarHull_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 180,
 					"WindUpTimeMS": 1200,
-					"ReloadTimeMS": 500,
+					"ReloadTimeMS": 600,
 					"RangeAttributesShort": {
 						"Accuracy": 40
 					},
@@ -5110,6 +5112,7 @@
 				"G_StarHull_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 180,
 					"WindUpTimeMS": 1200,
+					"ReloadTimeMS": 600,
 					"RangeAttributesShort": {
 						"Accuracy": 40
 					},
@@ -5497,7 +5500,7 @@
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
 					"BaseDamagePerRound": 140,
-					"AreaOfEffectRadius": 150,
+					"AreaOfEffectRadius": 155,
 					"AreaOfEffectFalloffType": "Linear"
 				}
 			}
@@ -5559,7 +5562,7 @@
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
 					"BaseDamagePerRound": 140,
-					"AreaOfEffectRadius": 150,
+					"AreaOfEffectRadius": 155,
 					"AreaOfEffectFalloffType": "Linear"
 				}
 			}
@@ -5853,14 +5856,14 @@
 				"Resource1Cost": 500,
 				"Resource2Cost": 100,
 				"MaxHealth": 1250,
-				"Armour": 9,
+				"Armour": 8,
 				"PopCapCost": 4,
 				"ProductionTime": 48
 			},
 			"WeaponAttributes": {
 				"C_GunShip_Weapon_DefaultFire_MP": {
 					"DamagePacketsPerShot": 1,
-					"BaseDamagePerRound": 38,
+					"BaseDamagePerRound": 40,
 					"AreaOfEffectRadius": 144,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
@@ -6034,7 +6037,7 @@
 				"Resource1Cost": 550,
 				"Resource2Cost": 250,
 				"MaxHealth": 2400,
-				"PopCapCost": 7,
+				"PopCapCost": 6,
 				"ProductionTime": 50
 			},
 			"DetectableAttributes": {
@@ -6045,17 +6048,17 @@
 					"MaxSpeed": 55,
 					"MaxSpeedTurnRadius": 90
 				},
-				"Combat": { "MaxDesiredCombatRange": 1780 },
+				"Combat": { "MaxDesiredCombatRange": 1980 },
 				"Hover": { "TurnAcceleration": 5 }
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 570,
 					"DamagePacketsPerShot": 4,
-					"ReloadTimeMS": 5000,
-					"WindUpTimeMS": 1600,
+					"ReloadTimeMS": 4850,
+					"WindUpTimeMS": 1700,
 					"AreaOfEffectFalloffType": "Linear",
-					"AreaOfEffectRadius": 170,
+					"AreaOfEffectRadius": 180,
 					"WindDownTimeMS": 250,
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 30,
@@ -6065,7 +6068,7 @@
 						"DistanceWeight": 0.05
 					},
 					"RangeAttributesLong": {
-						"Distance": 1850
+						"Distance": 2000
 					}
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
@@ -6079,7 +6082,7 @@
 				"Resource1Cost": 500,
 				"Resource2Cost": 250,
 				"MaxHealth": 2400,
-				"PopCapCost": 7,
+				"PopCapCost": 6,
 				"ProductionTime": 50
 			},
 			"DetectableAttributes": {
@@ -6090,17 +6093,17 @@
 					"MaxSpeed": 55,
 					"MaxSpeedTurnRadius": 90
 				},
-				"Combat": { "MaxDesiredCombatRange": 1780 },
+				"Combat": { "MaxDesiredCombatRange": 1980 },
 				"Hover": { "TurnAcceleration": 5 }
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 570,
 					"DamagePacketsPerShot": 4,
-					"ReloadTimeMS": 5000,
-					"WindUpTimeMS": 1600,
+					"ReloadTimeMS": 4850,
+					"WindUpTimeMS": 1700,
 					"AreaOfEffectFalloffType": "Linear",
-					"AreaOfEffectRadius": 170,
+					"AreaOfEffectRadius": 180,
 					"WindDownTimeMS": 250,
 					"TargetPrioritizationAttributes": {
 						"WeaponEffectivenessWeight": 30,
@@ -6110,7 +6113,7 @@
 						"DistanceWeight": 0.05
 					},
 					"RangeAttributesLong": {
-						"Distance": 1850
+						"Distance": 2000
 					}
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
@@ -6142,6 +6145,11 @@
 		},
 
 		"C_Battlecruiser_MP": {
+			"AbilityAttributes": {
+				"Ability_C_SmokeGrenade_BattleCruiser": {
+					"CooldownTimeSecs": 65
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 850,
 				"Resource2Cost": 350,
@@ -6186,6 +6194,11 @@
 			}
 		},
 		"C_Sob_Battlecruiser_MP": {
+			"AbilityAttributes": {
+				"Ability_C_SmokeGrenade_BattleCruiser": {
+					"CooldownTimeSecs": 65
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 850,
 				"Resource2Cost": 350,
@@ -6438,7 +6451,7 @@
 			},
 			"WeaponAttributes": {
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"BaseDamagePerRound": 210,
+					"BaseDamagePerRound": 220,
 					"DamagePacketsPerShot": 3,
 					"AreaOfEffectRadius": 90,
 					"NumberOfBursts": 2,
@@ -6497,7 +6510,7 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
-					"BaseDamagePerRound": 400,
+					"BaseDamagePerRound": 350,
 					"ExcludeFromHeightAdvantage": true
 				},
 				"G_ArtilleryCruiser_Weapon_PD_MP": {

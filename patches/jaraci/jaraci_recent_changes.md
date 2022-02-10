@@ -97,6 +97,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-15 12.16](#2021-04-15-1216)
 	- [2021-04-24 12.17](#2021-04-24-1217)
 	- [2022-02-02 12.18](#2022-02-02-1218)
+	- [2022-02-02 13.0](#2022-02-02-130)
 
 # Changes
 
@@ -2606,3 +2607,38 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Fixed an issue where carriers will lose power from the reserve pool if the available power ever exceeds 30
 * Khaaneph:
 	* Fixed an issue where Blast Drones fail to destroy themselves when detonating
+
+## 2022-02-02 13.0
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Support cruiser cost: `450CU 50RU => 480CU 50RU`
+	* LAV:
+		* Boost upgrade cost: `150CU 200RU => 150CU 180RU`
+		* Added a general damage multiplier against air targets: `80%`
+		* Damage multiplier against probes: `50% => 60%` (it stacks with general multiplier)
+	* AAV fabrication:
+		* Cost: `350CU 75RU => 270CU 75RU`
+		* Research time: `60s => 65s`
+	* Gunship:
+		* Armor: `9 => 8`
+		* Damage: `38 => 40`
+	* Battlecruiser field repairs cooldown: `50s => 65s`
+* Soban:
+	* Railgun cooldown duration: `1.3s => 1.35s`
+* Gaalsien/Khaaneph:
+	* Production cruiser cost: `550CU 50RU => 560CU 50RU`
+	* Assault Ship AOE: `125 => 118`
+	* Missile Ship barrage AOE: `150 => 155`
+	* Heavy Railgun reload duration: `0.5s => 0.6s`
+	* Honourguard cruiser:
+		* Population cost: `7 => 6`
+		* AOE: `170 => 180`
+		* Wind-up time: `1.6s => 1.7s`
+		* Reload time: `5s => 4.85s`
+		* Max range: `1850 => 2100`
+* Gaalsien:
+	* Siege cruiser:
+		* Barrage damage: `210 => 220`
+		* EMP shell damage: `400 => 350`
+* Khaaneph:
+	* Fixed an issue where heavy railguns reload statistics weren't matching with gaalsien variant
