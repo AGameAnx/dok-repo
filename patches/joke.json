@@ -8,7 +8,7 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow",
-    "Version": "0.12.01",
+    "Version": "0.12.02",
     "LastUpdate": "2022-03-01",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
@@ -5930,7 +5930,13 @@
                 },
                 "Modifiers": {
                   "0": {
-                    "Remove": true // NO HEAL FOR YOU!
+                    "ModifierType": "HealthOverTime",
+                    "HealthOverTimeAttributes": {
+                      "ID": "G_BaseRunner_HealAura_HealOT_StatusEffect_MP",
+                      "Amount": 1,
+                      "MSTickDuration": 100,
+                      "DamageType": "Heal"
+                    }
                   }
                 }
               }
@@ -5971,19 +5977,22 @@
             }
           },
           "G_Baserunner_Weapon_HealingAura_MP": {
-            "RateOfFire": 10,
+            "DamagePacketsPerShot": 0,
+            "RateOfFire": 25,
             "DamageType": "Damage",
-            "BaseDamagePerRound": 2,
+            "BaseDamagePerRound": 4,
             "BurstPeriodMinTimeMS": 1000,
             "BurstPeriodMaxTimeMS": 1000,
             "CooldownTimeMS": 0,
+            "ReloadTimeMS": 0,
             "FriendlyFireDamageScalar": 1,
             "WeaponOwnerFriendlyFireDamageScalar": 0,
-            "AreaOfEffectRadius": 500,
-            "StatusEffectsTargetAlignment": "None",
-            "StatusEffectsSets": {
-              "0": { "StatusEffects": [ "G_BaseRunner_HealAura_HealOT_StatusEffect_MP" ] }
-            }
+            "AreaOfEffectRadius": 1000,
+            "AreaOfEffectFalloffType": "Quadratic",
+            "StatusEffectsTargetAlignment": "None"
+            //"StatusEffectsSets": {
+            //  "0": { "StatusEffects": [ "G_BaseRunner_HealAura_HealOT_StatusEffect_MP" ] }
+            //}
           },
           "G_Baserunner_Weapon_PopCapAbility_MP": { // Scanner
             "RangeAttributesShort": {
