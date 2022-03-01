@@ -8,8 +8,8 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow",
-    "Version": "0.11.01",
-    "LastUpdate": "2022-02-18",
+    "Version": "0.12.01",
+    "LastUpdate": "2022-03-01",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
 
@@ -1947,7 +1947,7 @@
                             }, // Cooldown
                             "4": {
                               "Mode": "Set",
-                              "Value": 1600
+                              "Value": 16000
                             }, // Reload
                             "5": { "Remove": true }, // Accuracy Short
                             "6": { "Remove": true }, // Accuracy Medium
@@ -1959,7 +1959,7 @@
                             }, // Cooldown
                             "9": {
                               "Mode": "Set",
-                              "Value": 1600,
+                              "Value": 16000,
                               "Attribute": "UnitWeapon_ReloadTime"
                             }, // Reload
                             "10": { "Remove": true }, // Accuracy Short
@@ -1972,7 +1972,7 @@
                             }, // Cooldown
                             "14": {
                               "Mode": "Set",
-                              "Value": 1600,
+                              "Value": 16000,
                               "Attribute": "UnitWeapon_ReloadTime"
                             }, // Reload
                             "15": { "Remove": true }, // Accuracy Short
@@ -1985,7 +1985,7 @@
                             }, // Cooldown
                             "19": {
                               "Mode": "Set",
-                              "Value": 1600,
+                              "Value": 16000,
                               "Attribute": "UnitWeapon_ReloadTime"
                             }, // Reload
                             "20": { "Remove": true }, // Accuracy Short
@@ -4092,7 +4092,7 @@
             "AirSortie": { "LoiterLength": 40 }
           },
           "Ability_K_GrantShuntingBombToCarrier": {
-            "WarmupTimeSecs": 1
+            "WarmupTimeSecs": 100
           }
         },
         "WeaponAttributes": {
@@ -4238,7 +4238,7 @@
             "ExcludeFromHeightAdvantage": true,
             "RangeAttributesLong": {
               "MinDistance": 1000,
-              "Distance": 1500
+              "Distance": 500
             },
             "Modifiers": {
               "0": {
@@ -4544,11 +4544,53 @@
                 "LocalizedLongDescriptionStringID": "Increase power to unlock and improve targeted missile weapon. Shunting power increases maximum ammo, range and reload speed."
               },
               "PowerLevels": {
+
+                "0": {
+                  "LocalizedShortDescriptionStringID": "Reload: 100s; missiles cannot fire",
+                  "StatusEffectsToApply": {
+                    "K_Missiles_0_StatusEffect": {
+                      "BuffsToApplyToTarget": {
+                        "0": {
+                          "BuffSet": {
+                            "0": {
+                              "Value": 1
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
                 "1": {
-                  "LocalizedShortDescriptionStringID": "Reload: 420s"
+                  "LocalizedShortDescriptionStringID": "Reload: 90s, Range: 1500m",
+                  "StatusEffectsToApply": {
+                    "K_Missiles_1_StatusEffect": {
+                      "BuffsToApplyToTarget": {
+                        "0": {
+                          "BuffSet": {
+                            "0": {
+                              "Value": 1
+                            },
+                            "1": {
+                              "Name": "Ability_K_GrantShuntingBombToCarrier",
+                              "Attribute": 16777216,
+                              "Mode": "Set",
+                              "Value": 90
+                            },
+                            "2": {
+                              "Name": "SHUNTINGBOMB",
+                              "Attribute": "WeaponRange_DistanceLong",
+                              "Mode": "Set",
+                              "Value": 1500
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 },
                 "2": {
-                  "LocalizedShortDescriptionStringID": "Reload: 360s",
+                  "LocalizedShortDescriptionStringID": "Reload: 80s, Range: 1750m",
                   "StatusEffectsToApply": {
                     "K_Missiles_2_StatusEffect": {
                       "BuffsToApplyToTarget": {
@@ -4558,8 +4600,8 @@
                               "Value": 1
                             },
                             "1": {
-
-                              "Remove": true
+                              "Mode": "Set",
+                              "Value": 80
                             },
                             "2": {
                               "Name": "SHUNTINGBOMB",
@@ -4574,7 +4616,7 @@
                   }
                 },
                 "3": {
-                  "LocalizedShortDescriptionStringID": "Reload: 250s",
+                  "LocalizedShortDescriptionStringID": "Reload: 70s, Range: 2500m",
                   "StatusEffectsToApply": {
                     "K_Missiles_3_StatusEffect": {
                       "BuffsToApplyToTarget": {
@@ -4585,7 +4627,8 @@
                             },
                             "1": {
 
-                              "Remove": true
+                              "Mode": "Set",
+                              "Value": 70
                             },
                             "2": {
                               "Name": "SHUNTINGBOMB",
@@ -4600,7 +4643,7 @@
                   }
                 },
                 "4": {
-                  "LocalizedShortDescriptionStringID": "Reload: 140s",
+                  "LocalizedShortDescriptionStringID": "Reload: 60s, Range: 3500m",
                   "StatusEffectsToApply": {
                     "K_Missiles_4_StatusEffect": {
                       "BuffsToApplyToTarget": {
@@ -4611,7 +4654,8 @@
                             },
                             "1": {
 
-                              "Remove": true
+                              "Mode": "Set",
+                              "Value": 60
                             },
                             "2": {
                               "Name": "SHUNTINGBOMB",
@@ -4626,7 +4670,7 @@
                   }
                 },
                 "5": {
-                  "LocalizedShortDescriptionStringID": "Reload: nice",
+                  "LocalizedShortDescriptionStringID": "Reload: 50s, Range: infinite",
                   "StatusEffectsToApply": {
                     "K_Missiles_5_StatusEffect": {
                       "BuffsToApplyToTarget": {
@@ -4637,7 +4681,8 @@
                             },
                             "1": {
 
-                              "Remove": true
+                              "Mode": "Set",
+                              "Value": 50
                             },
                             "2": {
                               "Name": "SHUNTINGBOMB",
@@ -9160,7 +9205,7 @@
         },
         "UnitMovementAttributes": {
           "Dynamics": {
-            "MaxSpeed": 60
+            "MaxSpeed": 70
           },
           "Combat": { "MaxDesiredCombatRange": 1020 }
         },
@@ -11129,12 +11174,47 @@
           "UnitTypeBuffs": {
             "0": {
               "BuffSet": {
-                "2": { "Value": 800 },
-                "3": { "Value": 800 },
-                "6": { "Value": 1300 },
-                "7": { "Value": 1300 },
-                "10": { "Value": 2000 },
-                "11": { "Value": 2000 }
+                "0": {
+                  "Remove": true
+                },
+                "1": {
+                  "Remove": true
+                },
+                "2": {
+                  "Remove": true
+                },
+                "3": {
+                  "Remove": true
+                },
+                "4": {
+                  "Remove": true
+                },
+                "5": {
+                  "Remove": true
+                },
+                "6": {
+                  "Remove": true
+                },
+                "7": {
+                  "Remove": true
+                },
+                "8": {
+                  "Mode": "Add",
+                  "Value": 300
+                },
+                "9": {
+                  "Mode": "Add",
+                  "Value": 300
+                },
+                "10": {
+                  "Mode": "Add",
+                  "Value": 300
+                },
+                "11": {
+                  "Mode": "Add",
+                  "Value": 300
+                }
+                
               }
             }
           }
@@ -11144,7 +11224,34 @@
       // KHAANEPH SIEGE CRUISER RANGE UPGRADE
       "Research_Buff_K_Artillery_Barrage": {
         "ResearchItemAttributes": {
-          "ResearchTime": 70
+          "ResearchTime": 70,
+          "UnitTypeBuffs": {
+            "0": {
+              "BuffSet": {
+                "0": {
+                  "Remove": true
+                },
+                "1": {
+                  "Remove": true
+                },
+                "2": {
+                  "Mode": "Add",
+                  "Value": 300
+                },
+                "3": {
+                  "Remove": true
+                },
+                "4": {
+                  "Remove": true
+                },
+                "5": {
+                  "Mode": "Add",
+                  "Value": 300
+                }
+
+              }
+            }
+          }
         }
       },
 
@@ -11163,6 +11270,7 @@
           "Resource1Cost": 300,
           "Resource2Cost": 100,
           "ResearchTime": 35
+         
         }
       }
 
