@@ -613,6 +613,63 @@
                 }
             }
         },
+        //"C_Battlecruiser_TacticalMissile_ProjectileAssetContainer_MP": { //go barrage yourself
+        //    "ProjectileAttributes": {
+        //        "Stages": {
+        //            "MaxSpeed": 100,
+        //            "MinSpeed": 100
+        //        }
+        //    }
+        //},
+        "Ability_Common_StopAbility": { // cannot target any ability except 0 which in this case is ability_common_moveability //you dumb? git good
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "STOP IT",
+                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "Get some help."
+            }
+        },
+        "Ability_Common_MoveAbility": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "MOVE IT",
+                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "Start moving, you lazy ass."
+            }
+        },
+        "Ability_Common_SetRally": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "GO THERE AND DIE",
+                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "Set annoying line from your carrier or production cruiser. Produced units will go there and hopefully dont die."
+            }
+        },
+        "Ability_Common_AttackMoveAbility": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "A-click",
+                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "This is not starcraft II and you are not the protoss, dont use that."
+            }
+        },
+        "Ability_Common_Hold": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "HOOOOOOLLLD THE DOOR",
+                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "Like stop, but more smart."
+            }
+        },
+        "Ability_Common_Retire": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "FREE MONEY",
+                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "Go feed your carrier... With what? With yourself."
+            }
+        },
+        "Ability_Common_Guard": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "MAKE HIM FEEL COOL",
+                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "Make unit act like fancy bodyguard cultist."
+            }
+        },
 
         // COALITION CARRIER
         "C_Carrier_MP": {
@@ -624,7 +681,7 @@
             //    }
             //  }
             //},
-            //"AbilityViewAttributes": { // cannot target any ability except 0 which in this case is ability_common_moveability
+            //"AbilityViewAttributes": { // cannot target any ability except 0 which in this case is ability_common_moveability //you dumb? just name the ability
             //  "IconName": "Die",
             //  "ForcePassiveVisuals": false,
             //  "LocalizedShortDescriptionStringID": "Hello!",
@@ -661,7 +718,7 @@
                 }
             },
             "AbilityAttributes": {
-                //"Ability_Common_MoveAbility": { would you believe this actually worked?
+                //"Ability_Common_MoveAbility": { would you believe this actually worked? no
                 //  "CooldownTimeSecs": 10
                 //},
                 "Ability_C_DeployPopCapCarrier_MP": {
@@ -1625,6 +1682,10 @@
                 }
             },
             "AbilityAttributes": {
+                "Ability_C_Sob_ProduceSupportCruiser_MP": {
+                    "ProduceUnit": { "UnitTypeToProduce": "C_Sob_SupportCruiser_MP" }
+                },
+
                 "Ability_C_Sob_DeployPopCapCarrier_MP": {
                     "CooldownTimeSecs": 0,
                     "ChainCasting": {
@@ -1770,7 +1831,7 @@
                     "ExcludeFromHeightAdvantage": true
                 },
                 "C_Sob_Carrier_Weapon_Nuke_MP": {
-                    "BaseDamagePerRound": 1250,
+                    "BaseDamagePerRound": 50,
                     "AreaOfEffectRadius": 500,
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
@@ -1823,7 +1884,7 @@
                                                     "1": { "Value": 1100 },
                                                     "5": { "Value": 3000 },
                                                     "7": {
-                                                        "Value": 200,
+                                                        "Value": 40,
                                                         "Attribute": 262148,
                                                         "Mode": 0
                                                     },
@@ -1851,7 +1912,7 @@
                                                     "1": { "Value": 1600 },
                                                     "5": { "Value": 3000 },
                                                     "7": {
-                                                        "Value": 400,
+                                                        "Value": 60,
                                                         "Attribute": 262148,
                                                         "Mode": 0
                                                     },
@@ -1878,7 +1939,7 @@
                                                     "0": { "Value": 2000 },
                                                     "1": { "Value": 2100 },
                                                     "5": { "Value": 3000 },
-                                                    "6": { "Value": 600 }, // Damage bonus
+                                                    "6": { "Value": 80 }, // Damage bonus
                                                     "7": {
                                                         "Value": 1500,
                                                         "Attribute": 33554434,
@@ -1902,7 +1963,7 @@
                                                     "0": { "Value": 5000 },
                                                     "1": { "Value": 5100 },
                                                     "5": { "Value": 3000 },
-                                                    "6": { "Value": 800 },
+                                                    "6": { "Value": 180 },
                                                     "7": {
                                                         "Value": 4500,
                                                         "Attribute": 33554434,
@@ -3177,7 +3238,20 @@
                 }
             }
         },
-
+        "Ability_Produce_G_Interceptor_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "BUILD SMOKEFISH",
+                "LocalizedShortDescriptionStringID": "FISH",
+                "LocalizedLongDescriptionStringID": "Slow moving areal fish. Strong against ground non-shoting back targets."
+            }
+        },
+        "Ability_Produce_K_Interceptor": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "BUILD SMOKEFISH",
+                "LocalizedShortDescriptionStringID": "FISH",
+                "LocalizedLongDescriptionStringID": "Slow moving areal fish. Strong against ground non-shoting back targets."
+            }
+        },
         // GAALSIEN CARRIER
         "G_Carrier_MP": {
             "UnitAttributes": {
@@ -3205,6 +3279,7 @@
                     }
                 }
             },
+
             "AbilityAttributes": {
                 "Ability_G_MissileBarrage": {
                     "CooldownTimeSecs": 160,
@@ -5114,6 +5189,13 @@
                 "SensorRadius": 0,
                 "DamageReceivedMultiplier": 0,
                 "AccuracyReceivedMultiplier": 0
+            },
+            "AbilityAttributes": {
+                "Ability_C_CruiseSightSelfDestruct": {
+                    "SelfDestruct": {
+                        "DurationSeconds": 300
+                    }
+                }
             }
         },
         "N_MissileBarrage_Sight": {
@@ -5138,7 +5220,7 @@
             "AbilityAttributes": {
                 "Ability_C_CruiseSightSelfDestruct": {
                     "SelfDestruct": {
-                        "DurationSeconds": 39
+                        "DurationSeconds": 300
                     }
                 }
             }
@@ -5170,11 +5252,13 @@
             },
             "WeaponAttributes": {
                 "C_Sob_PopCapScanner_Weapon_G2G_MP": {
+                    "TracerSpeed": 1500,
+                    "StatusEffectsExcludeTargetType": "Ground",
                     "LineOfSightRequired": false,
                     "ExcludeFromHeightAdvantage": true,
-                    "BaseDamagePerRound": 200,
+                    "BaseDamagePerRound": 20,
                     "DamagePacketsPerShot": 1,
-                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectRadius": 0,
                     "TargetPrioritizationAttributes": {
                         "AngleWeight": 10,
                         "DistanceWeight": 0.1
@@ -5194,6 +5278,16 @@
                 }
             }
         },
+        //"Scanner_Stun_StatusEffect": {
+        //    "StatusEffectAttributes": {
+        //        "Modifiers": {
+        //            "0": {
+        //                "ModifierType": "Hack"
+        //
+        //            }
+        //        }
+        //    }
+        //},
 
         // COALITION GROUND TURRET
         "N_Gun_Turret_MP": {
@@ -5358,7 +5452,7 @@
         "K_ExplodingSkimmer_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 120,
-                "MaxHealth": 2000, 
+                "MaxHealth": 2000,
                 "Armour": 0,
                 "ProductionTime": 70,
                 "PopCapCost": 2
@@ -5760,7 +5854,7 @@
                             }
                         }
                     },
-                    "5": { // FIXME: target correct ability!
+                    "5": {
                         "BuffTooltipLocID": "Captain: -50% cooldown on ability",
                         "RequiredExperience": 1200,
                         "Buff": {
@@ -5839,6 +5933,7 @@
             "AbilityAttributes": {
                 "Ability_C_DeployTurret_MP": {
                     "CooldownTimeSecs": 90
+                    //"ProduceUnit": { "UnitTypeToProduce": "G_Battlecruiser_MP" }// testing yaknow
                 },
                 "Ability_C_DeployTurret_BeginCooldown_MP": {
                     "CooldownTimeSecs": 90
@@ -6417,13 +6512,16 @@
                     "ReloadTimeMS": 5000,
                     "AreaOfEffectRadius": 60,
                     "RangeAttributesShort": {
-                        "Distance": 600
+                        "Distance": 600,
+                        "Accuracy": 100
                     },
                     "RangeAttributesMedium": {
-                        "Distance": 750
+                        "Distance": 750,
+                        "Accuracy": 100
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1000
+                        "Distance": 1000,
+                        "Accuracy": 100
                     },
                     "Modifiers": {
                         "0": {
@@ -6501,11 +6599,16 @@
                     "ReloadTimeMS": 5000,
                     "AreaOfEffectRadius": 60,
                     "RangeAttributesShort": {
-                        "Distance": 600
+                        "Distance": 600,
+                        "Accuracy": 100
                     },
-                    "RangeAttributesMedium": { "Distance": 750 },
+                    "RangeAttributesMedium": {
+                        "Distance": 750,
+                        "Accuracy": 100
+                    },
                     "RangeAttributesLong": {
-                        "Distance": 1000
+                        "Distance": 1000,
+                        "Accuracy": 100
                     },
                     "Modifiers": {
                         "0": {
@@ -6642,7 +6745,7 @@
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
-                                "Mode": "Set",//fraking work already you annoying werid thing
+                                "Mode": "Set", //fraking work already you annoying werid thing
                                 "Value": 15
                             },
 
@@ -6824,7 +6927,7 @@
                                 "Mode": "Add",
                                 "Value": 500
                             },
-                            
+
                             "3": {
                                 "Attribute": 33554435,
                                 "Mode": "Add",
@@ -6977,7 +7080,7 @@
                                 "Mode": "Add",
                                 "Value": 1500
                             },
-                            
+
                             "3": {
                                 "Attribute": 33554432,
                                 "Mode": "Add",
@@ -6993,7 +7096,7 @@
                                 "Mode": "Add",
                                 "Value": 400
                             }
-                           
+
                         }
                     }
                 },
@@ -7023,14 +7126,14 @@
             "WeaponAttributes": {
                 "C_HAC_Weapon_G2G_MP": {
                     "Turret": {
-                        "RotationSpeed": 200
+                        "RotationSpeed": 3600
                     },
                     "LeadsTarget": 1,
                     "TargetStyle": "Flak",
                     "TracerSpeed": 1500,
                     "LineOfSightRequired": false,
                     "ExcludeFromHeightAdvantage": true,
-                    "BaseDamagePerRound": 100,
+                    "BaseDamagePerRound": 30,
                     "RateOfFire": 25,
                     "NumberOfBursts": 4,
                     "CooldownTimeMS": 1000,
@@ -8475,19 +8578,32 @@
         // MARK TARGET
         "MarkTarget_StatusEffect": {
             "StatusEffectAttributes": {
-                "Duration": 5,
+                "Duration": 30,
+                "Modifiers": {
+                    "0": {
+                        "ModifierType": "DisableAbilities"
+                    },
+                    "1": {
+                        "ModifierType": "DisableAllWeapons"
+                    }
+                },
                 "BuffsToApplyToTarget": {
                     "0": {
                         "BuffSet": {
                             "0": {
-                                "Value": -50
+                                "Attribute": 131073,
+                                "Mode": "AddPercent",
+                                "Value": 20 
                             },
                             "1": {
-                                "Remove": true
+                                "Attribute": 131076,
+                                "Mode": "AddPercent",
+                                "Value": 20 
                             }
                         }
                     }
                 }
+
             }
         },
 
@@ -8680,7 +8796,7 @@
                 "Resource1Cost": 300,
                 "Resource2Cost": 80,
                 "MaxHealth": 820,
-                "Armour": 3,
+                "Armour": 0,
                 "ExperienceValue": 450,
                 "ProductionTime": 22,
                 "PriorityAsTarget": 12,
@@ -8770,7 +8886,40 @@
             },
             "AbilityAttributes": {
                 "Ability_C_Railgun_MarkTarget": {
-                    "CooldownTimeSecs": 60
+                    "IsToggleable": true,
+                    "CooldownTimeSecs": 60,
+                    "ApplyStatusEffect": {
+                        "MarkTarget_Self_StatusEffect": {
+                            "Lifetime": "Indefinite",
+                            "Modifiers": {
+                                "0": {
+                                    "ModifierType": "SwapWeapons"
+                                }
+                            }
+                            //"BuffsToApplyToTarget": { //that thing dosent work
+                            //    "0": {
+                            //        "BuffSet": {
+                            //            "0": {
+                            //                "Name": "C_Sob_Railgun_Weapon_MarkTarget",
+                            //                "Attribute": 262153,
+                            //                "Mode": "Set",
+                            //                "Value": 0
+                            //            },
+                            //            "1": {
+                            //                "Name": "C_Sob_Railgun_Weapon_G2G_MP",
+                            //                "Attribute": 262153,
+                            //                "Mode": "Set",
+                            //                "Value": true
+                            //
+                            //            }
+                            //
+                            //        }
+                            //    }
+                            //}
+
+                        }
+                    }
+
                 }
             },
             "UnitMovementAttributes": {
@@ -8779,14 +8928,15 @@
             },
             "WeaponAttributes": {
                 "C_Sob_Railgun_Weapon_MarkTarget": {
-                    "BaseDamagePerRound": 700, // divided by two!
+                    //"ExcludeFromAutoTargetAcquisition": true,//bs no work(
+                    "BaseDamagePerRound": 1, // no damage for you
                     "DamagePacketsPerShot": 1,
                     "NumberOfBursts": 1,
                     "RateOfFire": 1,
                     "WindDownTimeMS": 50,
                     "WindUpTimeMS": 50,
-                    "CooldownTimeMS": 2100,
-                    "ReloadTimeMS": 2100,
+                    "CooldownTimeMS": 60000,
+                    "ReloadTimeMS": 60000,
                     "BurstPeriodMinTimeMS": 100,
                     "BurstPeriodMaxTimeMS": 100,
                     "RangeAttributesShort": {
@@ -8797,8 +8947,7 @@
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 100,
-                        "MinDistance": 1000,
-                        "Distance": 1800
+                        "Distance": 1600
                     }
                 },
                 "C_Sob_Railgun_Weapon_G2G_MP": {
@@ -8809,7 +8958,7 @@
                     "ReloadTimeMS": 100,
                     "CooldownTimeMS": 0,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "AreaOfEffectRadius": 150,
+                    "AreaOfEffectRadius": 0,
                     "RangeAttributesShort": {
                         "Accuracy": 100,
                         "Distance": 1200
@@ -8837,7 +8986,10 @@
                             "Remove": true
                         },
                         "2": {
-                            "Remove": true
+                            "TargetClass": "Strikecraft",
+                            "ClassOperator": "And",
+                            "Modifier": "DamagePercent",
+                            "Amount": 50
                         },
                         "3": {
                             "Remove": true
@@ -8897,8 +9049,13 @@
                 }
             }
         },
+        "Ability_C_Railgun_MarkTarget": {
+            "AbilityViewAttributes": {
+                "IconName": "Icon-Command-RailGunReload",
+                "ToggledIconName": "Icon-Command-RailGunFire"
+            }
 
-
+        },
         // COALITION/SOBAN RAILGUN FABRICATION
         "Tier_2_C_RailGun": {
             "ResearchItemAttributes": {
@@ -9048,50 +9205,50 @@
                 "Ability_G_RailGun_Scope_MP": {
                     "ApplyStatusEffect": {
                         "Scope_StatusEffect": {
-                            
-                                "BuffsToApplyToTarget": {
-                                    "0": {
-                                        "BuffSet": {
-                                            "0": {
-                                                "Attribute": 33554434,
-                                                "Mode": "Set",
-                                                "Value": 700
-                                            },
-                                            "1": {
-                                                "Attribute": 33554433,
-                                                "Mode": "Set",
-                                                "Value": 700
-                                            },
-                                            "2": {
-                                                "Attribute": 33554432,
-                                                "Mode": "Set",
-                                                "Value": 700
-                                            },
-                                            "3": {
-                                                "Attribute": 262151,
-                                                "Mode": "Set",
-                                                "Value": 1
-                                            },
-                                            "4": {
-                                                "Attribute": 131073,
-                                                "Mode": "Set",
-                                                "Value": 5 //luuuuuuuuuube
-                                            },
-                                            "5": {
-                                                "Attribute": 131076,
-                                                "Mode": "Set",
-                                                "Value": 10 // more luuuuuuuuuuuube
-                                            },
-                                            "6": {
-                                                "Attribute": 262149,
-                                                "Mode": "Set",
-                                                "Value": 2
-                                            }
 
+                            "BuffsToApplyToTarget": {
+                                "0": {
+                                    "BuffSet": {
+                                        "0": {
+                                            "Attribute": 33554434,
+                                            "Mode": "Set",
+                                            "Value": 700
+                                        },
+                                        "1": {
+                                            "Attribute": 33554433,
+                                            "Mode": "Set",
+                                            "Value": 700
+                                        },
+                                        "2": {
+                                            "Attribute": 33554432,
+                                            "Mode": "Set",
+                                            "Value": 700
+                                        },
+                                        "3": {
+                                            "Attribute": 262151,
+                                            "Mode": "Set",
+                                            "Value": 1
+                                        },
+                                        "4": {
+                                            "Attribute": 131073,
+                                            "Mode": "Set",
+                                            "Value": 5 //luuuuuuuuuube
+                                        },
+                                        "5": {
+                                            "Attribute": 131076,
+                                            "Mode": "Set",
+                                            "Value": 10 // more luuuuuuuuuuuube
+                                        },
+                                        "6": {
+                                            "Attribute": 262149,
+                                            "Mode": "Set",
+                                            "Value": 2
                                         }
+
                                     }
                                 }
-                            
+                            }
+
                         }
                     }
                 },
@@ -9469,7 +9626,7 @@
                                 "Attribute": 131076,
                                 "Mode": "Set",
                                 "Value": 10 // more luuuuuuuuuuuube
-                            }, 
+                            },
                             "6": {
                                 "Remove": true
                             },
@@ -10040,7 +10197,7 @@
         "C_Interceptor_MP": {
 
             "UnitAttributes": {
-                
+                //"StartsInHangar": false,//was false???? what the hell game
 
                 "MaxHealth": 490,
                 "Armour": 0,
@@ -10072,11 +10229,12 @@
             "WeaponAttributes": {
                 "C_Interceptor_Weapon_A2G_MP": {
                     "ProjectileEntityTypeToSpawn": "G_Bomber_Bomb_ProjectileAssetContainer_MP",
-                    "BaseDamagePerRound": 250,
+                    "BaseDamagePerRound": 375,
                     "BurstPeriodMinTimeMS": 667,
                     "BurstPeriodMaxTimeMS": 667,
                     "ReloadTimeMS": 3000,
                     "RateOfFire": 1,
+                    "AreaOfEffectRadius": 200,
                     "Turret": {
                         "FieldOfView": 360, // is this needed?
                         "FieldOfFire": 360
@@ -10155,8 +10313,8 @@
                 "Resource1Cost": 250,
                 "Resource2Cost": 100,
                 "ProductionTime": 12,
-                "MaxHealth": 1000,
-                "Armour": 5
+                "MaxHealth": 500,
+                "Armour": 3
 
             },
             "UnitMovementAttributes": {
@@ -10258,8 +10416,8 @@
                 "Resource1Cost": 250,
                 "Resource2Cost": 100,
                 "ProductionTime": 12,
-                "MaxHealth": 1000,
-                "Armour": 5
+                "MaxHealth": 500,
+                "Armour": 2
 
             },
             "UnitMovementAttributes": {
@@ -10358,6 +10516,9 @@
         // GAALSIEN/KHAANEPH INTERCEPTOR FABRICATION
         "Tier_2_G_Interceptor": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "SMOKEFISH FABRICATION",
+                "LocalizedShortDescriptionStringID": "FISH UNLOCK",
+                "LocalizedLongDescriptionStringID": "Slow moving areal fish. Strong against ground targets",
                 "Resource1Cost": 450,
                 "ResearchTime": 70
             }
@@ -10366,21 +10527,39 @@
         // GAALSIEN/KHAANEPH INTERCEPTOR AFTERBURNER UPGRADE
         "Research_Buff_G_Interceptor_Speed": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "SMOKEFISH ARMOR",
+                "LocalizedShortDescriptionStringID": "ARMOR UPGRADE",
+                "LocalizedLongDescriptionStringID": "Increases armor by 3 and hull integrety by 550",
                 "Resource1Cost": 200,
                 "Resource2Cost": 120,
                 "ResearchTime": 40,
-                "LocalizedLongDescriptionStringID": "Interceptor employs afterburner jets, greatly increasing maximum speed.\n\n[84a1e8]Maximum speed increased by 40%",
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
-                            "0": { "Value": 40 },
-                            "1": { "Value": -40 }
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 550
+                            },
+                            "1": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 3
+                            }
                         }
                     },
                     "1": {
                         "BuffSet": {
-                            "0": { "Value": 40 },
-                            "1": { "Value": -40 }
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 550
+                            },
+                            "1": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 3
+                            }
                         }
                     }
                 }
@@ -10686,6 +10865,7 @@
                 "C_GunShip_Weapon_DefaultFire_MP": {
                     //"ProjectileEntityTypeToSpawn": "K_DirectFire_Shell_ProjectileAssetContainer_MP", // can't make anything funny happen :(
                     "BaseDamagePerRound": 155,
+                    "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 144,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesLong": {
@@ -10799,61 +10979,61 @@
                     "BurstPeriodMaxTimeMS": 1000,
                     "StatusEffectsTargetAlignment": "Friend",
                     "StatusEffectsExcludeTargetType": "Air"
-                    
-                    
+
+
                 },
 
                 "G_Battlecruiser_Weapon_G2G_MP": {
-                        //"ProjectileEntityTypeToSpawn": "C_Battlecruiser_TacticalMissile_ProjectileAssetContainer_MP",
-                        "BaseDamagePerRound": 75,
-                        "AreaOfEffectRadius": 75,
-                        "BurstPeriodMinTimeMS": 700,
-                        "BurstPeriodMaxTimeMS": 700,
-                        "RateOfFire": 3,
-                        "NumberOfBursts": 4,
-                        "WindUpTimeMS": 250,
-                        "ReloadTimeMS": 3500,
-                        "OutputDPS": true
-                 },
+                    //"ProjectileEntityTypeToSpawn": "C_Battlecruiser_TacticalMissile_ProjectileAssetContainer_MP",
+                    "BaseDamagePerRound": 75,
+                    "AreaOfEffectRadius": 75,
+                    "BurstPeriodMinTimeMS": 700,
+                    "BurstPeriodMaxTimeMS": 700,
+                    "RateOfFire": 3,
+                    "NumberOfBursts": 4,
+                    "WindUpTimeMS": 250,
+                    "ReloadTimeMS": 3500,
+                    "OutputDPS": true
+                },
                 "G_Battlecruiser_Weapon_G2A_MP": {
-                        "RangeAttributesLong": { "Distance": 1250 },
-                        "Modifiers": {
-                            "0": {
-                                "TargetClass": "Air"
-                            }
+                    "RangeAttributesLong": { "Distance": 1250 },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Air"
                         }
-                 },
-                "G_BattleCruiser_Weapon_Missile_MP": { 
-                        "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Arc_ProjectileAssetContainer_MP",
-                        "BaseDamagePerRound": 150,
-                        "AreaOfEffectRadius": 150,
-                        "NumberOfBursts": 4,
-                        "RateOfFire": 5,
-                        "CooldownTimeMS": 500,
-                        "BurstPeriodMinTimeMS": 800,
-                        "BurstPeriodMaxTimeMS": 800,
-                        "AreaOfEffectFalloffType": "Quadratic",
-                        "RangeAttributesLong": {
-                            "Distance": 1550
-                        },
-
-                        "ExcludeFromHeightAdvantage": true,
-                        "RangeAttributesShort": {
-                            "Distance": 600
-                        },
-                        "RangeAttributesMedium": {
-                            "Distance": 750
-                        }
-
                     }
                 },
+                "G_BattleCruiser_Weapon_Missile_MP": {
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Arc_ProjectileAssetContainer_MP",
+                    "BaseDamagePerRound": 150,
+                    "AreaOfEffectRadius": 150,
+                    "NumberOfBursts": 4,
+                    "RateOfFire": 5,
+                    "CooldownTimeMS": 500,
+                    "BurstPeriodMinTimeMS": 800,
+                    "BurstPeriodMaxTimeMS": 800,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "RangeAttributesLong": {
+                        "Distance": 1550
+                    },
+
+                    "ExcludeFromHeightAdvantage": true,
+                    "RangeAttributesShort": {
+                        "Distance": 600
+                    },
+                    "RangeAttributesMedium": {
+                        "Distance": 750
+                    }
+
+                }
+            },
             "UnitMovementAttributes": {
                 "Dynamics": { "MaxSpeed": 150 }
             },
             "AbilityAttributes": {
                 "Ability_G_BattleCruiser_ArmorBonus_MP": {
                     "UseWeapon": {
-                        "WeaponID":"G_BattleCruiser_Weapon_MovemenBonus_MP" 
+                        "WeaponID": "G_BattleCruiser_Weapon_MovemenBonus_MP"
 
                     },
                     "CooldownTimeSecs": 50,
@@ -10902,8 +11082,19 @@
                     "CooldownTimeSecs": 50
                 }
             }
-        
+
         },
+        //"ArmorBonus_StatusEffect": { //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        //    "StatusEffectAttributes": {
+        //        "Modifiers": {
+        //            "0": {
+        //                "ModifierType": "SwapWeapons",
+        //                "SwapFromWeaponID": "G_Battlecruiser_Weapon_G2G_MP",
+        //                "SwapToWeaponID": "G_BattleCruiser_Weapon_MovemenBonus_MP"
+        //            }
+        //        }
+        //    }
+        //},
         // SOBAN ASSAULT CRUISER
         "C_Sob_AssaultCruiser_MP": {
             "UnitAttributes": {
@@ -11044,7 +11235,7 @@
                     }
 
                 }
-                },
+            },
             "UnitMovementAttributes": {
                 "Dynamics": { "MaxSpeed": 150 }
             },
@@ -11170,8 +11361,8 @@
                         }
                     },
                     "RangeAttributesLong": {
-                        "Distance": 7500,
-                        "Accuracy": 0
+                        "Distance": 7500
+
                     },
                     "RangeAttributesShort": {
                         "Remove": true
@@ -11200,6 +11391,10 @@
                     }
                 },
                 "G_HonorGuard_Weapon_G2G_CAT_MP": {
+                    "Turret": {
+                        "FieldOfView": 360, 
+                        "FieldOfFire": 360
+                    },
                     "ProjectileEntityTypeToSpawn": "G_Artillery_Shell_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
@@ -11230,7 +11425,10 @@
                     "ExcludeFromHeightAdvantage": true,
                     "LineOfSightRequired": false,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "RangeAttributesShort": { "Distance": 2000 }
+                    "RangeAttributesShort": {
+                        "Distance": 2000,
+                        "Accuracy": 100
+                    }
                 }
             }
         },
@@ -11276,6 +11474,10 @@
             },
             "WeaponAttributes": {
                 "G_HonorGuard_Weapon_G2G_CAT_MP": {
+                    "Turret": {
+                        "FieldOfView": 360,
+                        "FieldOfFire": 360
+                    },
                     "ProjectileEntityTypeToSpawn": "K_Artillery_Shell_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
@@ -11306,7 +11508,10 @@
                     "ExcludeFromHeightAdvantage": true,
                     "LineOfSightRequired": false,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "RangeAttributesShort": { "Distance": 2000 }
+                    "RangeAttributesShort": {
+                        "Distance": 2000,
+                        "Accuracy": 100
+                    }
                 },
                 "G_HonorGuardRailgun_Weapon_G2G_MP": {
                     "TracerSpeed": 2000,
@@ -11336,8 +11541,7 @@
                         }
                     },
                     "RangeAttributesLong": {
-                        "Distance": 7500,
-                        "Accuracy": 0
+                        "Distance": 7500
                     }
                 },
                 "G_HonorGuard_Weapon_G2A_MP": {
