@@ -8,7 +8,7 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "0.13.05",
+    "Version": "0.13.06",
     "LastUpdate": "2022-03-18",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
@@ -10269,7 +10269,77 @@
 
         // COALITION/SOBAN STRIKE FIGHTER
         "C_Interceptor_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Officer: +25% sensor range",
+                        "RequiredExperience": 300,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_SensorRadius",
+                                "Mode": "AddPercent",
+                                "Value": 25
+                            },
+                            "1": {
+                                "Attribute": "Unit_ContactRadius",
+                                "Mode": "AddPercent",
+                                "Value": 25
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Lieutenant: +3 armor",
+                        "RequiredExperience": 600,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 3
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +575 to bombercraft hull",
+                        "RequiredExperience": 1200,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 575
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Matrix Commander: +50% to dodge chance",
+                        "RequiredExperience": 1400,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_AccuracyReceivedMultiplier",
+                                "Mode": "Add",
+                                "Value": -50
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Captain: Double the bomb amount",
+                        "RequiredExperience": 1650,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Inventory_Capacity",
+                                "Mode": "Add",
+                                "Value": 2
 
+                            },
+                            "1": {
+                                "Attribute": "Inventory_StartingAmount",
+                                "Mode": "Add",
+                                "Value": 2
+
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 //"StartsInHangar": false,//was false???? what the hell game
 
@@ -10314,7 +10384,7 @@
                         "FieldOfFire": 360
                     },
                     "RangeAttributesShort": {
-                        "Distance": 250
+                        "Distance": 300
                     },
                     "RangeAttributesMedium": {
                         "Remove": true
@@ -12249,15 +12319,15 @@
                     "ReloadTimeMS": 1500,
                     "RangeAttributesShort": {
                         "Accuracy": 35,
-                        "Distance": 1000
+                        "Distance": 700
                     },
                     "RangeAttributesMedium": {
                         "Accuracy": 30,
-                        "Distance": 1200
+                        "Distance": 900
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 25,
-                        "Distance": 1400
+                        "Distance": 1100
                     },
                     "TargetPrioritizationAttributes": {
                         "TargetPriorityWeight": 150
@@ -12426,15 +12496,15 @@
                     "ReloadTimeMS": 1500,
                     "RangeAttributesShort": {
                         "Accuracy": 35,
-                        "Distance": 1000
+                        "Distance": 700
                     },
                     "RangeAttributesMedium": {
                         "Accuracy": 30,
-                        "Distance": 1200
+                        "Distance": 900
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 25,
-                        "Distance": 1400
+                        "Distance": 1100
                     },
                     "TargetPrioritizationAttributes": {
                         "TargetPriorityWeight": 150
