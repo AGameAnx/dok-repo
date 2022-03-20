@@ -4,8 +4,8 @@ C_Carrier_MP:
   ru: 5000
   time: 0
   pop: 0
-  hp: 9000
-  armor: 25
+  hp: 8700
+  armor: 20
   sensor: 800
   contact: 1250
   xp: 2000
@@ -15,7 +15,7 @@ C_Sob_Carrier_MP:
   ru: 5000
   time: 0
   pop: 0
-  hp: 8800
+  hp: 8400
   armor: 15
   sensor: 800
   contact: 1250
@@ -26,7 +26,7 @@ G_Carrier_MP:
   ru: 5000
   time: 0
   pop: 0
-  hp: 8100
+  hp: 8300
   armor: 20
   sensor: 800
   contact: 1000
@@ -37,8 +37,8 @@ K_Carrier_MP:
   ru: 5000
   time: 0
   pop: 0
-  hp: 9600
-  armor: 15
+  hp: 9100
+  armor: 18
   sensor: 1200
   contact: 1350
   xp: 2000
@@ -47,20 +47,31 @@ C_Sob_NukeEmitter_MP:
   cu: 0
   ru: 0
   time: 0
-  pop: 1
+  pop: 0
   hp: 1500
   armor: 0
-  sensor: 1000
-  contact: 1000
+  sensor: 0
+  contact: 0
   xp: 0
-C_Sob_PopcapScanner:
-  readableName: ALM
-  cu: 150
+C_PopcapScanner:
+  readableName: Logistics Module
+  cu: 270
   ru: 0
   time: 0
   pop: 0
   hp: 1100
-  armor: 5
+  armor: 3
+  sensor: 1400
+  contact: 1550
+  xp: 0
+C_Sob_PopcapScanner:
+  readableName: Armed Logistics Module (ALM)
+  cu: 270
+  ru: 0
+  time: 0
+  pop: 0
+  hp: 1100
+  armor: 3
   sensor: 900
   contact: 1225
   xp: 0
@@ -70,7 +81,7 @@ N_Gun_Turret_MP:
   ru: 0
   time: 0
   pop: 0
-  hp: 720
+  hp: 850
   armor: 1
   sensor: 1000
   contact: 1250
@@ -121,12 +132,12 @@ G_Scanner_MP:
   xp: 0
 K_ExplodingSkimmer_MP:
   readableName: Blast Drone
-  cu: 150
+  cu: 120
   ru: 0
   time: 70
   pop: 2
-  hp: 540
-  armor: 0
+  hp: 600
+  armor: 1
   sensor: 650
   contact: 900
   xp: 100
@@ -135,7 +146,7 @@ C_Harvester_MP:
   cu: 150
   ru: 0
   time: 12
-  pop: 1
+  pop: 2
   hp: 950
   armor: 0
   sensor: 1000
@@ -143,33 +154,33 @@ C_Harvester_MP:
   xp: 250
 G_Harvester_MP:
   readableName: G Salvager
-  cu: 150
+  cu: 170
   ru: 0
   time: 20
-  pop: 1
+  pop: 2
   hp: 950
-  armor: 3
+  armor: 5
   sensor: 1000
   contact: 250
   xp: 200
 K_Harvester_MP:
   readableName: K Salvager
-  cu: 150
+  cu: 170
   ru: 0
   time: 20
-  pop: 1
+  pop: 2
   hp: 950
-  armor: 3
+  armor: 5
   sensor: 1000
   contact: 250
   xp: 200
 C_Baserunner_MP:
   readableName: C Baserunner
-  cu: 250
-  ru: 50
+  cu: 220
+  ru: 40
   time: 16
   pop: 2
-  hp: 2400
+  hp: 1700
   armor: 2
   sensor: 1000
   contact: 1250
@@ -236,11 +247,11 @@ C_Baserunner_MP:
           value: 200
 C_Sob_Baserunner_MP:
   readableName: S Baserunner
-  cu: 250
-  ru: 50
+  cu: 220
+  ru: 40
   time: 16
   pop: 2
-  hp: 2400
+  hp: 1700
   armor: 2
   sensor: 1000
   contact: 1250
@@ -307,11 +318,11 @@ C_Sob_Baserunner_MP:
           value: 200
 G_Baserunner_MP:
   readableName: G Baserunner
-  cu: 250
-  ru: 50
+  cu: 220
+  ru: 40
   time: 16
   pop: 2
-  hp: 2000
+  hp: 1600
   armor: 2
   sensor: 1000
   contact: 1250
@@ -378,11 +389,11 @@ G_Baserunner_MP:
           value: 1
 K_Baserunner_MP:
   readableName: K Baserunner
-  cu: 250
-  ru: 50
+  cu: 220
+  ru: 40
   time: 16
   pop: 2
-  hp: 1700
+  hp: 1500
   armor: 2
   sensor: 1000
   contact: 1250
@@ -449,11 +460,11 @@ K_Baserunner_MP:
           value: 1
 C_SupportCruiser_MP:
   readableName: C Support Cruiser
-  cu: 450
+  cu: 480
   ru: 50
-  time: 35
+  time: 40
   pop: 5
-  hp: 3200
+  hp: 2700
   armor: 5
   sensor: 1000
   contact: 1250
@@ -555,11 +566,11 @@ C_SupportCruiser_MP:
           value: 2
 C_Sob_SupportCruiser_MP:
   readableName: S Support Cruiser
-  cu: 450
+  cu: 480
   ru: 50
-  time: 35
+  time: 40
   pop: 5
-  hp: 3200
+  hp: 2700
   armor: 5
   sensor: 1000
   contact: 1250
@@ -661,9 +672,9 @@ C_Sob_SupportCruiser_MP:
           value: 2
 G_SupportCruiser_MP:
   readableName: G Production Cruiser
-  cu: 650
-  ru: 60
-  time: 60
+  cu: 560
+  ru: 50
+  time: 50
   pop: 4
   hp: 3500
   armor: 6
@@ -809,8 +820,8 @@ G_SupportCruiser_MP:
           value: 500
 K_SupportCruiser_MP:
   readableName: K Production Cruiser
-  cu: 650
-  ru: 60
+  cu: 560
+  ru: 50
   time: 60
   pop: 4
   hp: 3500
@@ -957,12 +968,12 @@ K_SupportCruiser_MP:
           value: 500
 C_HAC_MP:
   readableName: AAV
-  cu: 260
+  cu: 270
   ru: 20
   time: 17
   pop: 2
-  hp: 980
-  armor: 6
+  hp: 970
+  armor: 7
   sensor: 1100
   contact: 1250
   xp: 230
@@ -1039,8 +1050,8 @@ C_Escort_MP:
   ru: 0
   time: 12
   pop: 2
-  hp: 450
-  armor: 1
+  hp: 440
+  armor: 2
   sensor: 1350
   contact: 1550
   xp: 100
@@ -1117,8 +1128,8 @@ C_Sob_Escort_MP:
   ru: 0
   time: 12
   pop: 2
-  hp: 450
-  armor: 1
+  hp: 440
+  armor: 2
   sensor: 1350
   contact: 1550
   xp: 100
@@ -1195,10 +1206,10 @@ G_SandSkimmer_MP:
   ru: 0
   time: 10
   pop: 2
-  hp: 490
+  hp: 500
   armor: 0
-  sensor: 1150
-  contact: 1250
+  sensor: 1200
+  contact: 1300
   xp: 100
   experience:
     0:
@@ -1266,10 +1277,10 @@ K_Sandskimmer_MP:
   ru: 0
   time: 10
   pop: 2
-  hp: 490
+  hp: 480
   armor: 0
-  sensor: 1150
-  contact: 1250
+  sensor: 1200
+  contact: 1300
   xp: 100
   experience:
     0:
@@ -1333,12 +1344,12 @@ K_Sandskimmer_MP:
           value: 200
 C_Railgun_MP:
   readableName: C Railgun
-  cu: 240
+  cu: 300
   ru: 80
-  time: 16
+  time: 22
   pop: 3
-  hp: 750
-  armor: 0
+  hp: 820
+  armor: 1
   sensor: 1200
   contact: 1250
   xp: 450
@@ -1397,12 +1408,12 @@ C_Railgun_MP:
           value: -20
 C_Sob_Railgun_MP:
   readableName: S Railgun
-  cu: 240
+  cu: 300
   ru: 80
-  time: 16
+  time: 22
   pop: 3
-  hp: 750
-  armor: 0
+  hp: 820
+  armor: 1
   sensor: 1200
   contact: 1250
   xp: 470
@@ -1461,12 +1472,12 @@ C_Sob_Railgun_MP:
           value: -20
 G_StarHullTank_MP:
   readableName: G Heavy Railgun
-  cu: 350
+  cu: 380
   ru: 110
-  time: 18
+  time: 20
   pop: 4
   hp: 820
-  armor: 0
+  armor: 2
   sensor: 1000
   contact: 1250
   xp: 550
@@ -1546,12 +1557,12 @@ G_StarHullTank_MP:
           value: 150
 K_HeavyRailgun_MP:
   readableName: K Heavy Railgun
-  cu: 350
+  cu: 380
   ru: 110
-  time: 18
+  time: 20
   pop: 4
   hp: 820
-  armor: 0
+  armor: 2
   sensor: 1000
   contact: 1250
   xp: 550
@@ -1632,11 +1643,11 @@ K_HeavyRailgun_MP:
 G_Catamaran_MP:
   readableName: G Assault Ship
   cu: 300
-  ru: 35
-  time: 17
+  ru: 30
+  time: 18
   pop: 3
-  hp: 960
-  armor: 5
+  hp: 850
+  armor: 7
   sensor: 1100
   contact: 1250
   xp: 260
@@ -1717,11 +1728,11 @@ G_Catamaran_MP:
 K_AssaultShip_MP:
   readableName: K Assault Ship
   cu: 300
-  ru: 35
-  time: 17
+  ru: 30
+  time: 18
   pop: 3
-  hp: 960
-  armor: 5
+  hp: 850
+  armor: 7
   sensor: 1100
   contact: 1250
   xp: 260
@@ -2049,12 +2060,12 @@ K_MissileShip_MP:
           value: 100
 G_StarHull_Upgrade01_MP:
   readableName: G Assault Railgun
-  cu: 240
-  ru: 45
+  cu: 250
+  ru: 55
   time: 17
   pop: 2
-  hp: 600
-  armor: 4
+  hp: 650
+  armor: 5
   sensor: 1250
   contact: 1350
   xp: 350
@@ -2134,12 +2145,12 @@ G_StarHull_Upgrade01_MP:
           value: 150
 K_AssaultRailgun_MP:
   readableName: K Assault Railgun
-  cu: 240
-  ru: 45
+  cu: 250
+  ru: 55
   time: 17
   pop: 2
-  hp: 600
-  armor: 4
+  hp: 650
+  armor: 5
   sensor: 1250
   contact: 1350
   xp: 350
@@ -2219,12 +2230,12 @@ K_AssaultRailgun_MP:
           value: 150
 C_Interceptor_MP:
   readableName: Strike Fighter
-  cu: 200
+  cu: 240
   ru: 90
-  time: 26
+  time: 28
   pop: 2
   hp: 490
-  armor: 4
+  armor: 0
   sensor: 2000
   contact: 2100
   xp: 370
@@ -2431,7 +2442,7 @@ G_Interceptor_MP:
           value: 200
 K_Interceptor_MP:
   readableName: K Interceptor
-  cu: 250
+  cu: 300
   ru: 100
   time: 12
   pop: 2
@@ -2541,8 +2552,8 @@ C_Bomber_MP:
   ru: 160
   time: 26
   pop: 4
-  hp: 1350
-  armor: 20
+  hp: 1300
+  armor: 10
   sensor: 2000
   contact: 2000
   xp: 1560
@@ -2648,7 +2659,7 @@ G_Bomber_MP:
   time: 22
   pop: 3
   hp: 1050
-  armor: 15
+  armor: 12
   sensor: 1500
   contact: 2000
   xp: 1560
@@ -2754,7 +2765,7 @@ K_Bomber_MP:
   time: 22
   pop: 3
   hp: 1050
-  armor: 15
+  armor: 12
   sensor: 1500
   contact: 2000
   xp: 1560
@@ -2858,9 +2869,9 @@ C_GunShip_MP:
   cu: 500
   ru: 100
   time: 48
-  pop: 3
+  pop: 4
   hp: 1250
-  armor: 9
+  armor: 8
   sensor: 1600
   contact: 1800
   xp: 1560
@@ -2962,10 +2973,10 @@ C_GunShip_MP:
 G_Battlecruiser_MP:
   readableName: C Assault Cruiser
   cu: 550
-  ru: 220
+  ru: 260
   time: 60
-  pop: 5
-  hp: 2900
+  pop: 6
+  hp: 2800
   armor: 12
   sensor: 1000
   contact: 1150
@@ -3082,10 +3093,10 @@ G_Battlecruiser_MP:
 C_Sob_AssaultCruiser_MP:
   readableName: S Assault Cruiser
   cu: 550
-  ru: 220
+  ru: 260
   time: 60
-  pop: 5
-  hp: 2900
+  pop: 6
+  hp: 2800
   armor: 12
   sensor: 1000
   contact: 1150
@@ -3203,9 +3214,9 @@ G_HonorGuard_MP:
   readableName: G Honourguard Cruiser
   cu: 550
   ru: 250
-  time: 55
-  pop: 7
-  hp: 2700
+  time: 50
+  pop: 6
+  hp: 2400
   armor: 6
   sensor: 1000
   contact: 1250
@@ -3412,11 +3423,11 @@ G_HonorGuard_MP:
           value: 300
 K_HonorGuard_MP:
   readableName: K Honourguard Cruiser
-  cu: 550
+  cu: 500
   ru: 250
-  time: 55
-  pop: 7
-  hp: 2700
+  time: 50
+  pop: 6
+  hp: 2400
   armor: 6
   sensor: 1000
   contact: 1250
@@ -3623,12 +3634,12 @@ K_HonorGuard_MP:
           value: 300
 C_Battlecruiser_MP:
   readableName: C Battlecruiser
-  cu: 650
-  ru: 280
+  cu: 850
+  ru: 350
   time: 65
-  pop: 6
-  hp: 3000
-  armor: 15
+  pop: 8
+  hp: 3800
+  armor: 20
   sensor: 1000
   contact: 1250
   xp: 3200
@@ -3743,12 +3754,12 @@ C_Battlecruiser_MP:
           value: 300
 C_Sob_Battlecruiser_MP:
   readableName: S Battlecruiser
-  cu: 650
-  ru: 280
+  cu: 850
+  ru: 350
   time: 65
-  pop: 6
-  hp: 2900
-  armor: 13
+  pop: 8
+  hp: 3800
+  armor: 19
   sensor: 1000
   contact: 1250
   xp: 3200
@@ -3863,11 +3874,11 @@ C_Sob_Battlecruiser_MP:
           value: 300
 C_ArtilleryCruiser_MP:
   readableName: Artillery Cruiser
-  cu: 500
-  ru: 200
+  cu: 550
+  ru: 160
   time: 60
   pop: 5
-  hp: 1900
+  hp: 1600
   armor: 2
   sensor: 1000
   contact: 1250
@@ -4074,12 +4085,12 @@ C_ArtilleryCruiser_MP:
           value: -20
 G_ArtilleryCruiser_MP:
   readableName: G Siege Cruiser
-  cu: 400
+  cu: 550
   ru: 180
   time: 45
-  pop: 6
-  hp: 2000
-  armor: 9
+  pop: 5
+  hp: 1700
+  armor: 3
   sensor: 1400
   contact: 1550
   xp: 1120
@@ -4285,8 +4296,8 @@ G_ArtilleryCruiser_MP:
           value: 300
 K_ArtilleryCruiser_MP:
   readableName: K Siege Cruiser
-  cu: 620
-  ru: 250
+  cu: 700
+  ru: 280
   time: 45
   pop: 6
   hp: 2800
