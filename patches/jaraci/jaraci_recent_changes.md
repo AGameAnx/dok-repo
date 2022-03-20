@@ -2642,3 +2642,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* EMP shell damage: `400 => 350`
 * Khaaneph:
 	* Fixed an issue where heavy railguns reload statistics weren't matching with gaalsien variant
+
+## 2022-03-20 13.1
+*Not yet reflected in the main changelog.*
+* Gaalsien/Khaaneph:
+	* Heavy Railgun - fixed an issue where sunder was not being applied to carriers.
