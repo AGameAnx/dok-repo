@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dokmap version="1.1">
 	<!-- More Maps by SSSS, GE by AgameAnx -->
-	<meta name="1115ks2v2"
+	<meta name="Liran'Saal"
 	      authors="S'Aarum"
 	      description="Weather Station 17"/>
 
-	<layout map="MP_23" mode="Team" players="2">
-                   <heat>10</heat>
-		<bounds top="9000" bottom="-9000" left="-9000" right="9000"/>
+	<layout map="MP_23" mode="Team" players="4">
+                   <heat>12</heat>
+		<bounds top="8000" bottom="-8000" left="-8000" right="8000"/>
                 <blocker class="Ground" blocklof="true" verts="-4600,3200;-3500,4200;-4200,4000;-3000,4000;-2800,3400;-2000,3500;-1900,3300;-1000,3100;-900,2900;-1800,2300;-2000,1000;-1800,500;-2300,300;-2400,-300-3000,-800;-3800,-500;-3500,200;-3800,400;-4800,300"/>
+
 		<spawns>
+
 <!-- team 1 Gaalsien -->
       <spawn team="0" index="0" x="-5000" y="7500" angle="90" camera="90"/>
-      <spawn team="0" index="1" x="-8000" y="-4500" angle="25" camera="90" fleet="false"/>
+      <spawn team="0" index="1" x="-8000" y="-4500" angle="25" camera="90"/>
       <spawn team="0" index="2" x="9000" y="-8200" angle="270" camera="270" fleet="false"/>
 <!-- team 2 Khaaneph -->
       <spawn team="1" index="0" x="6000" y="2600" angle="270" camera="270"/>
       <spawn team="1" index="1" x="7800" y="5100" angle="225" camera="270" fleet="false"/>
       <spawn team="1" index="2" x="-5300" y="3800" angle="0" camera="105" fleet="false"/>
+
 		</spawns>
 
 		<resources>
 
-			<!-- team 1 Gaalsien -->
-         <!-- Shaeira -->
+			<!-- team 1 Coalition -->
+         <!-- Atasen -->
 			<resource x="-5000" y="7000" type="cu" amount="2500"/>
 			<resource x="-5200" y="7000" type="ru" amount="1500"/>
 			<resource x="-5400" y="7000" type="cu" amount="2500"/>
@@ -37,20 +40,18 @@
 		</resources>
 
     <units>
+
      <!-- Coalition -->
 
        <!-- Atasen Core Group -->
          <!-- Strike Units  / +5 SandSkimmers -->
-	       <unit team="0" index="0" x="-2000" y="5000" angle="90" type="C_Sob_Escort_MP"/>
+	  <unit team="0" index="0" x="-2000" y="5000" angle="90" type="C_Sob_Escort_MP"/>
 
      <!-- Khaaneph -->
 
        <!-- Skaal'Tel Core Group -->
          <!-- Strike Units  / +12 Sandskimmers -->
-       <unit team="1" index="0" x="4800" y="1000" angle="270" type="K_Sandskimmer_MP"/>
-
-         <!-- Capital Ship / +1 Armored Siege Cruiser -->
-       <unit team="1" index="0" x="6800" y="2100" angle="270" type="K_ArtilleryCruiser_MP"/>
+         <unit team="1" index="0" x="4800" y="1000" angle="270" type="K_Sandskimmer_MP"/>
 
     </units>
 
