@@ -8,6 +8,8 @@
 	<layout map="MP_23" mode="Team" players="2">
                    <heat>10</heat>
 		<bounds top="8000" bottom="1000" left="-6000" right="8000"/>
+                <blocker class="Ground" blocklof="true" verts="-5200,1000;-4500,2000;-4600,3200;-3500,4200;-4200,4000;-3000,4000;-2100,3800;-500,3000;-500,1000"/>
+
 		<spawns>
 <!-- team 1 Gaalsien -->
       <spawn team="0" index="0" x="-5000" y="7500" angle="90" camera="90"/>
@@ -36,17 +38,93 @@
 		</resources>
 
     <units>
-     <!-- Coalition -->
+     <!-- Gaalsien -->
 
-       <!-- Atasen Core Group -->
+       <!-- Shaeira Core Group -->
          <!-- Strike Units  / +5 SandSkimmers -->
-	       <unit team="0" index="0" x="-2000" y="5000" angle="90" type="C_Sob_Escort_MP"/>
+	       <unit team="0" index="0" x="-2000" y="5000" angle="90" type="G_SandSkimmer_MP"/>
+	       <unit team="0" index="0" x="-2000" y="5100" angle="90" type="G_SandSkimmer_MP"/>
+	       <unit team="0" index="0" x="-2000" y="5200" angle="90" type="G_SandSkimmer_MP"/>
+	       <unit team="0" index="0" x="-2000" y="5300" angle="90" type="G_SandSkimmer_MP"/>
+	       <unit team="0" index="0" x="-2000" y="5400" angle="90" type="G_SandSkimmer_MP"/>
+
+         <!-- Medium Units  / +5 Assault Ships -->
+	       <unit team="0" index="0" x="-3000" y="5800" angle="90" type="G_Catamaran_MP"/>
+	       <unit team="0" index="0" x="-3000" y="5900" angle="90" type="G_Catamaran_MP"/>
+	       <unit team="0" index="0" x="-3000" y="5700" angle="90" type="G_Catamaran_MP"/>
+	       <unit team="0" index="0" x="-3000" y="5600" angle="90" type="G_Catamaran_MP"/>
+	       <unit team="0" index="0" x="-3000" y="5500" angle="90" type="G_Catamaran_MP"/>
+
+         <!-- Medium Units  / +3 Assault Railguns -->
+	       <unit team="0" index="0" x="-3200" y="5800" angle="90" type="G_StarHull_Upgrade01_MP"/>
+	       <unit team="0" index="0" x="-3200" y="5700" angle="90" type="G_StarHull_Upgrade01_MP"/>
+	       <unit team="0" index="0" x="-3200" y="5900" angle="90" type="G_StarHull_Upgrade01_MP"/>
+
+         <!-- Medium Units  / +7 Heavy Railguns -->
+	       <unit team="0" index="0" x="-4100" y="5000" angle="90" type="G_StarHullTank_MP"/>
+	       <unit team="0" index="0" x="-4100" y="5100" angle="90" type="G_StarHullTank_MP"/>
+	       <unit team="0" index="0" x="-4100" y="5200" angle="90" type="G_StarHullTank_MP"/>
+	       <unit team="0" index="0" x="-4100" y="5300" angle="90" type="G_StarHullTank_MP"/>
+	       <unit team="0" index="0" x="-4100" y="5400" angle="90" type="G_StarHullTank_MP"/>
+	       <unit team="0" index="0" x="-4100" y="5500" angle="90" type="G_StarHullTank_MP"/>
+	       <unit team="0" index="0" x="-4100" y="5600" angle="90" type="G_StarHullTank_MP"/>
+
+       <!-- Medium Units  / +4 Missile Ships -->
+	       <unit team="0" index="0" x="-4500" y="5800" angle="90" type="G_Catamaran_Upgrade01_MP"/>
+	       <unit team="0" index="0" x="-4500" y="5900" angle="90" type="G_Catamaran_Upgrade01_MP"/>
+	       <unit team="0" index="0" x="-4500" y="5700" angle="90" type="G_Catamaran_Upgrade01_MP"/>
+	       <unit team="0" index="0" x="-4500" y="5600" angle="90" type="G_Catamaran_Upgrade01_MP"/>
+
+       <!-- Capital Ship / +1 Honorguard Cruiser -->
+               <unit team="0" index="0" x="-4000" y="6000" angle="90" type="G_HonorGuard_MP"/>
 
      <!-- Khaaneph -->
 
        <!-- Skaal'Tel Core Group -->
          <!-- Strike Units  / +12 Sandskimmers -->
        <unit team="1" index="0" x="4800" y="1000" angle="270" type="K_Sandskimmer_MP"/>
+       <unit team="1" index="0" x="4800" y="1100" angle="270" type="K_Sandskimmer_MP"/>
+       <unit team="1" index="0" x="4800" y="1200" angle="270" type="K_Sandskimmer_MP"/>
+       <unit team="1" index="0" x="4800" y="1300" angle="270" type="K_Sandskimmer_MP"/>
+       <unit team="1" index="0" x="4800" y="1400" angle="270" type="K_Sandskimmer_MP"/>
+       <unit team="1" index="0" x="4800" y="1500" angle="270" type="K_Sandskimmer_MP"/>
+
+       <unit team="1" index="0" x="4800" y="400" angle="270" type="K_Sandskimmer_MP"/>
+       <unit team="1" index="0" x="4800" y="500" angle="270" type="K_Sandskimmer_MP"/>
+       <unit team="1" index="0" x="4800" y="600" angle="270" type="K_Sandskimmer_MP"/>
+       <unit team="1" index="0" x="4800" y="700" angle="270" type="K_Sandskimmer_MP"/>
+       <unit team="1" index="0" x="4800" y="800" angle="270" type="K_Sandskimmer_MP"/>
+       <unit team="1" index="0" x="4800" y="900" angle="270" type="K_Sandskimmer_MP"/>
+
+         <!-- Medium Units  / +12 Assault Ships -->
+       <unit team="1" index="0" x="5800" y="1900" angle="270" type="K_AssaultShip_MP"/>
+       <unit team="1" index="0" x="5800" y="1800" angle="270" type="K_AssaultShip_MP"/>
+       <unit team="1" index="0" x="5800" y="1700" angle="270" type="K_AssaultShip_MP"/>
+       <unit team="1" index="0" x="5800" y="1600" angle="270" type="K_AssaultShip_MP"/>
+
+       <unit team="1" index="0" x="5800" y="1400" angle="270" type="K_AssaultShip_MP"/>
+       <unit team="1" index="0" x="5800" y="1300" angle="270" type="K_AssaultShip_MP"/>
+       <unit team="1" index="0" x="5800" y="1200" angle="270" type="K_AssaultShip_MP"/>
+       <unit team="1" index="0" x="5800" y="1100" angle="270" type="K_AssaultShip_MP"/>
+
+       <unit team="1" index="0" x="5700" y="1500" angle="270" type="K_AssaultShip_MP"/>
+       <unit team="1" index="0" x="5700" y="1600" angle="270" type="K_AssaultShip_MP"/>
+       <unit team="1" index="0" x="5700" y="1700" angle="270" type="K_AssaultShip_MP"/>
+       <unit team="1" index="0" x="5700" y="1700" angle="270" type="K_AssaultShip_MP"/>
+
+         <!-- Medium Units  / +8 Heavy Railguns -->
+       <unit team="1" index="0" x="6200" y="2000" angle="270" type="K_HeavyRailgun_MP"/>
+       <unit team="1" index="0" x="6200" y="1900" angle="270" type="K_HeavyRailgun_MP"/>
+       <unit team="1" index="0" x="6200" y="1800" angle="270" type="K_HeavyRailgun_MP"/>
+       <unit team="1" index="0" x="6200" y="1600" angle="270" type="K_HeavyRailgun_MP"/>
+       <unit team="1" index="0" x="6200" y="1500" angle="270" type="K_HeavyRailgun_MP"/>
+       <unit team="1" index="0" x="6200" y="1400" angle="270" type="K_HeavyRailgun_MP"/>
+       <unit team="1" index="0" x="6200" y="1200" angle="270" type="K_HeavyRailgun_MP"/>
+       <unit team="1" index="0" x="6200" y="1100" angle="270" type="K_HeavyRailgun_MP"/>
+
+         <!-- Medium Units  / +2 Missile Ships -->
+       <unit team="1" index="0" x="6500" y="1800" angle="270" type="K_MissileShip_MP"/>
+       <unit team="1" index="0" x="6500" y="1200" angle="270" type="K_MissileShip_MP"/>
 
          <!-- Capital Ship / +1 Armored Siege Cruiser -->
        <unit team="1" index="0" x="6800" y="2100" angle="270" type="K_ArtilleryCruiser_MP"/>
