@@ -1,15 +1,15 @@
 // =============== //
 // ~ ANOMALY DOK ~ //
 // --------------- //
-// by Bozocow      //
+// by Bozocow and Bozocow//
 // =============== //
 
 {
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "0.13.04",
-    "LastUpdate": "2022-03-10",
+    "Version": "0.13.05",
+    "LastUpdate": "2022-04-15",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
 
@@ -603,50 +603,57 @@
         "Ability_Common_StopAbility": { // cannot target any ability except 0 which in this case is ability_common_moveability //you dumb? git good
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "STOP IT",
-                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
-                "LocalizedLongDescriptionStringID": "Get some help."
+                "LocalizedShortDescriptionStringID": "[00ff00]SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Get some help."
             }
         },
         "Ability_Common_MoveAbility": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "MOVE IT",
-                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
-                "LocalizedLongDescriptionStringID": "Start moving, you lazy ass."
+                "LocalizedShortDescriptionStringID": "[00ff00]SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Start moving, you lazy ass."
             }
         },
         "Ability_Common_SetRally": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "GO THERE AND DIE",
-                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
-                "LocalizedLongDescriptionStringID": "Set annoying line from your carrier or production cruiser. Produced units will go there and hopefully dont die."
+                "LocalizedShortDescriptionStringID": "[00ff00]SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Set annoying line from your carrier or production cruiser. Produced units will go there and hopefully dont die."
             }
         },
         "Ability_Common_AttackMoveAbility": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "A-click",
-                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
-                "LocalizedLongDescriptionStringID": "This is not starcraft II and you are not the protoss, dont use that."
+                "LocalizedShortDescriptionStringID": "[00ff00]SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]This is not starcraft II and you are not the protoss, dont use that."
             }
         },
         "Ability_Common_Hold": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "HOOOOOOLLLD THE DOOR",
-                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
-                "LocalizedLongDescriptionStringID": "Like stop, but more smart."
+                "LocalizedShortDescriptionStringID": "[00ff00]SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Like stop, but more smart."
             }
         },
         "Ability_Common_Retire": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "FREE MONEY",
-                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
-                "LocalizedLongDescriptionStringID": "Go feed your carrier... With what? With yourself."
+                "LocalizedShortDescriptionStringID": "[00ff00]SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Go feed your carrier... With what? With yourself."
+            }
+        },
+        "Ability_G_Retire": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "FREE MONEY",
+                "LocalizedShortDescriptionStringID": "[00ff00]SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Go feed your carrier... With what? With yourself."
             }
         },
         "Ability_Common_Guard": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "MAKE HIM FEEL COOL",
-                "LocalizedShortDescriptionStringID": "SKILL ISSUE",
-                "LocalizedLongDescriptionStringID": "Make unit act like fancy bodyguard cultist."
+                "LocalizedShortDescriptionStringID": "[00ff00]SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Make unit act like fancy bodyguard cultist."
             }
         },
 
@@ -4196,7 +4203,7 @@
                 },
                 "Ability_K_GrantShuntingBombToCarrier": {
                     "WarmupTimeSecs": 100
-                }               
+                }
             },
             "WeaponAttributes": {
                 "G_Carrier_Weapon_G2All_Dummy_MP": {
@@ -5289,7 +5296,7 @@
                     "RangeAttributesMedium": { "Remove": true },
                     "RangeAttributesLong": {
                         "Distance": 500,
-                        "Accuracy": 100
+                        "Accuracy": 50
                     },
                     "Modifiers": {
                         "0": {
@@ -5474,6 +5481,7 @@
         // COALITION/SOBAN PROBE
         "C_Probe_MP": {
             "UnitAttributes": {
+                "AccuracyReceivedMultiplier": 2.0,
                 "ExperienceValue": 1500,
                 "MaxHealth": 10000,
                 "SensorRadius": 3000
@@ -6555,6 +6563,122 @@
 
         // COALITION SUPPORT CRUISER
         "C_SupportCruiser_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Officer: +600m range to repair beams",
+                        "RequiredExperience": 300,
+                        "Buff": {
+                            "0": {
+                                "Name": "REPAIR",
+                                "Attribute": 33554432,
+                                "Mode": "Set",
+                                "Value": 1200
+                            },
+                            "1": {
+                                "Name": "REPAIR_FL",
+                                "Attribute": 33554432,
+                                "Mode": "Set",
+                                "Value": 1200
+                            },
+                            "2": {
+                                "Name": "REPAIR_BR",
+                                "Attribute": 33554432,
+                                "Mode": "Set",
+                                "Value": 1200
+                            },
+                            "3": {
+                                "Name": "REPAIR_BL",
+                                "Attribute": 33554432,
+                                "Mode": "Set",
+                                "Value": 1200
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Lieutenant: +50%  to repair speed",
+                        "RequiredExperience": 500,
+                        "Buff": {
+                            "0": {
+                                "Name": "REPAIR",
+                                "Attribute": 262149,
+                                "Mode": "Add",
+                                "Value": 4
+                            },
+                            "1": {
+                                "Name": "REPAIR_BL",
+                                "Attribute": 262149,
+                                "Mode": "Add",
+                                "Value": 4
+                            },
+                            "2": {
+                                "Name": "REPAIR_BR",
+                                "Attribute": 262149,
+                                "Mode": "Add",
+                                "Value": 4
+                            },
+                            "3": {
+                                "Name": "REPAIR_FL",
+                                "Attribute": 262149,
+                                "Mode": "Add",
+                                "Value": 4
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +4 armor",
+                        "RequiredExperience": 750,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 4
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Commander: +1000 to hull",
+                        "RequiredExperience": 950,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 1000
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Captain: +100m to healing area of effect",
+                        "RequiredExperience": 1250,
+                        "Buff": {
+                            "0": {
+                                "Name": "REPAIR",
+                                "Attribute": 262152,
+                                "Mode": "Set",
+                                "Value": 100
+                            },
+                            "1": {
+                                "Name": "REPAIR_FL",
+                                "Attribute": 262152,
+                                "Mode": "Set",
+                                "Value": 100
+                            },
+                            "2": {
+                                "Name": "REPAIR_BR",
+                                "Attribute": 262152,
+                                "Mode": "Set",
+                                "Value": 100
+                            },
+                            "3": {
+                                "Name": "REPAIR_BL",
+                                "Attribute": 262152,
+                                "Mode": "Set",
+                                "Value": 100
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "Resource1Cost": 480,
                 "Resource2Cost": 50,
@@ -6574,6 +6698,8 @@
             "WeaponAttributes": {
                 "C_SupportCruiser_Weapon_Repair_Small_MP": {
                     "RateOfFire": 7,
+                    "OutputDPS": true,
+                    "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesShort": {
                         "Distance": 600
                     }
@@ -6615,15 +6741,15 @@
 
                     "RateOfFire": 10,
                     "LineOfSightRequired": false,
-                    //"RangeAttributesShort": {
+                    //"RangeAttributesShort": { // work with it its ok
                     //  "Accuracy": 50,
                     //  "Distance": 900
                     //},
-                    //"RangeAttributesMedium": {
+                    //RangeAttributesMedium": { // dont touch it! itll halfblow the world, its cursed, no you cant even remove that
                     //  "Accuracy": 40,
                     //  "Distance": 1200
                     //},
-                    //"RangeAttributesLong": {
+                    //"RangeAttributesLong": { // works too 
                     //  "Accuracy": 25,
                     //  "Distance": 1380
                     //},
@@ -6643,6 +6769,122 @@
 
         // SOBAN SUPPORT CRUISER
         "C_Sob_SupportCruiser_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Officer: +600m range to repair beams",
+                        "RequiredExperience": 300,
+                        "Buff": {
+                            "0": {
+                                "Name": "REPAIR",
+                                "Attribute": 33554432,
+                                "Mode": "Set",
+                                "Value": 1200
+                            },
+                            "1": {
+                                "Name": "REPAIR_FL",
+                                "Attribute": 33554432,
+                                "Mode": "Set",
+                                "Value": 1200
+                            },
+                            "2": {
+                                "Name": "REPAIR_BR",
+                                "Attribute": 33554432,
+                                "Mode": "Set",
+                                "Value": 1200
+                            },
+                            "3": {
+                                "Name": "REPAIR_BL",
+                                "Attribute": 33554432,
+                                "Mode": "Set",
+                                "Value": 1200
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Lieutenant: +50%  to repair speed",
+                        "RequiredExperience": 500,
+                        "Buff": {
+                            "0": {
+                                "Name": "REPAIR",
+                                "Attribute": 262149,
+                                "Mode": "Add",
+                                "Value": 4
+                            },
+                            "1": {
+                                "Name": "REPAIR_BL",
+                                "Attribute": 262149,
+                                "Mode": "Add",
+                                "Value": 4
+                            },
+                            "2": {
+                                "Name": "REPAIR_BR",
+                                "Attribute": 262149,
+                                "Mode": "Add",
+                                "Value": 4
+                            },
+                            "3": {
+                                "Name": "REPAIR_FL",
+                                "Attribute": 262149,
+                                "Mode": "Add",
+                                "Value": 4
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +4 armor",
+                        "RequiredExperience": 750,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 4
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Commander: +1000 to hull",
+                        "RequiredExperience": 950,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 1000
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Captain: +100m to healing area of effect",
+                        "RequiredExperience": 1250,
+                        "Buff": {
+                            "0": {
+                                "Name": "REPAIR",
+                                "Attribute": 262152,
+                                "Mode": "Set",
+                                "Value": 100
+                            },
+                            "1": {
+                                "Name": "REPAIR_FL",
+                                "Attribute": 262152,
+                                "Mode": "Set",
+                                "Value": 100
+                            },
+                            "2": {
+                                "Name": "REPAIR_BR",
+                                "Attribute": 262152,
+                                "Mode": "Set",
+                                "Value": 100
+                            },
+                            "3": {
+                                "Name": "REPAIR_BL",
+                                "Attribute": 262152,
+                                "Mode": "Set",
+                                "Value": 100
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "Resource1Cost": 480,
                 "Resource2Cost": 50,
@@ -6700,15 +6942,15 @@
                     "ExcludeFromHeightAdvantage": true,
                     "RateOfFire": 10,
                     "LineOfSightRequired": false,
-                    //"RangeAttributesShort": {
+                    //"RangeAttributesShort": { // work with it its ok
                     //  "Accuracy": 50,
                     //  "Distance": 900
                     //},
-                    //"RangeAttributesMedium": {
+                    //"RangeAttributesMedium": { // dont touch it! itll halfblow the world, its cursed, no you cant even remove that
                     //  "Accuracy": 40,
                     //  "Distance": 1200
                     //},
-                    //"RangeAttributesLong": {
+                    //"RangeAttributesLong": { // works too 
                     //  "Accuracy": 25,
                     //  "Distance": 1380
                     //},
@@ -6819,6 +7061,7 @@
                                 "Mode": "Add",
                                 "Value": 20
                             }
+
                         }
                     },
                     "5": {
@@ -6827,11 +7070,9 @@
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
-                                "Mode": "Set", //fraking work already you annoying werid thing FIXME
+                                "Mode": "Set",
                                 "Value": 15
                             },
-
-
                             "1": {
                                 "Attribute": 262149,
                                 "Mode": "Set",
@@ -6977,6 +7218,7 @@
                         "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
+                                "Name": "G_SupportCruiser_Weapon_G2G_MP",
                                 "Attribute": 262149,
                                 "Mode": "Add",
                                 "Value": 10
@@ -6989,12 +7231,6 @@
                         "Buff": {
                             "0": {
                                 "Name": "G_SupportCruiser_Weapon_G2G_MP",
-                                "Attribute": 262148,
-                                "Mode": "Add",
-                                "Value": 10
-                            },
-                            "1": {
-                                "Name": "G_SupportCruiser_Weapon_Front_MP",
                                 "Attribute": 262148,
                                 "Mode": "Add",
                                 "Value": 10
@@ -7029,7 +7265,7 @@
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Elder: AP bullets removed, turrets fire rate overcharged", //dosent work apperently
+                        "BuffTooltipLocID": "Elder: AP bullets removed, turrets fire rate overcharged",
                         "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
@@ -7041,8 +7277,8 @@
                             "1": {
                                 "Name": "G_SupportCruiser_Weapon_G2G_MP",
                                 "Attribute": 262149,
-                                "Mode": "Set",
-                                "Value": 100
+                                "Mode": "Add",
+                                "Value": 90
                             },
                             "2": {
                                 "Name": "G_SupportCruiser_Weapon_G2G_MP",
@@ -7064,24 +7300,6 @@
                                 "Attribute": 33554437,
                                 "Mode": "Add",
                                 "Value": -25
-                            },
-                            "6": {
-                                "Name": "G_SupportCruiser_Weapon_Front_MP",
-                                "Attribute": 262148,
-                                "Mode": "Set",
-                                "Value": 15
-                            },
-                            "7": {
-                                "Name": "G_SupportCruiser_Weapon_Front_MP",
-                                "Attribute": 262149,
-                                "Mode": "Set",
-                                "Value": 100
-                            },
-                            "8": {
-                                "Name": "G_SupportCruiser_Weapon_Front_MP",
-                                "Attribute": 262151,
-                                "Mode": "Add",
-                                "Value": 500
                             }
                         }
                     }
@@ -7297,13 +7515,13 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: +500 hull",
-                        "RequiredExperience": 300,
+                        "BuffTooltipLocID": "Officer: +200 to hull", //
+                        "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
-                                "Value": 500
+                                "Value": 200
                             }
                         }
                     },
@@ -7312,7 +7530,7 @@
                         "RequiredExperience": 500,
                         "Buff": {
                             "0": {
-                                "Name": "C_HAC_Weapon_Ballistic_Smoke_MP",
+                                "Name": "SMOKE",
                                 "Attribute": "UnitWeapon_BaseDamagePerRound",
                                 "Mode": "Add",
                                 "Value": 190
@@ -7368,6 +7586,13 @@
                     }
                 }
             },
+            //"AbilityAttributes": {
+            //    "Ability_C_SmokeGrenade_MP": {
+            //        "UseWeapon": {
+            //            "WeaponID": "yourmom"
+            //        }
+            //    }
+            // },
             "UnitMovementAttributes": {
                 "Combat": {
                     "MaxDesiredCombatRange": 1030
@@ -7376,7 +7601,7 @@
                     "MaxSpeed": 83
                 }
             },
-           
+
             "WeaponAttributes": {
                 "C_HAC_Weapon_G2G_MP": {
                     "Turret": {
@@ -7418,6 +7643,12 @@
                             "ClassOperator": "Or",
                             "Modifier": "DamagePercent",
                             "Amount": 15
+                        },
+                        "1": {
+                            "TargetClass": "Air",
+                            "ClassOperator": "Or",
+                            "Modifier": "DamagePercent",
+                            "Amount": 50
                         }
                     }
                 },
@@ -7433,9 +7664,6 @@
                     "AreaOfEffectFalloffType": "Quadratic",
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
-
-
-
                     "RangeAttributesLong": {
                         "Distance": 2000
                     }
@@ -7505,19 +7733,56 @@
         // COALITION AAV UPGRADES
         "Research_Buff_C_TrackedUnits_Armor01": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 on AAAV, Railgun and Missile Battery",
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on AAAV, Railgun and Missile Battery",
                 "Resource1Cost": 200,
                 "UnitTypeBuffs": {
-                    "0": { "BuffSet": { "0": { "Value": 1 } } },
-                    "1": { "BuffSet": { "0": { "Value": 1 } } },
-                    "2": { "BuffSet": { "0": { "Value": 1 } } },
-                    "3": { "BuffSet": { "0": { "Value": 1 } } }
+                    "0": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "1": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    }
                 }
             }
         },
         "Research_Buff_C_TrackedUnits_Armor02": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on AAAV, Railgun and Missile Battery",
+                "LocalizedResearchTitleStringID": "HEAVY VEHICLES ARMOR LEVEL 1: 2 ELECTRIC BOOGALOO",
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on AAAV, Railgun and Missile Battery.\n\n[84a1e8]Same thing 2 times in a row?",
                 "Resource1Cost": 250,
                 "Resource2Cost": 175,
                 "UnitTypeBuffs": {
@@ -7530,7 +7795,8 @@
         },
         "Research_Buff_C_TrackedUnits_Armor03": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on AAAV, Railgun and Missile Battery",
+                "LocalizedResearchTitleStringID": "HEAVY VEHICLES ARMOR LEVEL 1: 3 UNWANTED SEQUEL",
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on AAAV, Railgun and Missile Battery.\n\n[84a1e8]Same thing? But costs even more? What a scam!",
                 "Resource1Cost": 300,
                 "Resource2Cost": 250,
                 "UnitTypeBuffs": {
@@ -7565,19 +7831,56 @@
         // SOBAN AAV UPGRADES
         "Research_Buff_S_TrackedUnits_Armor01": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 on AAAV, Railgun and Missile Battery",
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on AAAV, Railgun and Missile Battery",
                 "Resource1Cost": 200,
                 "UnitTypeBuffs": {
-                    "0": { "BuffSet": { "0": { "Value": 1 } } },
-                    "1": { "BuffSet": { "0": { "Value": 1 } } },
-                    "2": { "BuffSet": { "0": { "Value": 1 } } },
-                    "3": { "BuffSet": { "0": { "Value": 1 } } }
+                    "0": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "1": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    }
                 }
             }
         },
         "Research_Buff_S_TrackedUnits_Armor02": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on AAAV, Railgun and Missile Battery",
+                "LocalizedResearchTitleStringID": "HEAVY VEHICLES ARMOR LEVEL 1: 2 ELECTRIC BOOGALOO",
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on AAAV, Railgun and Missile Battery.\n\n[84a1e8]Same thing 2 times in a row?",
                 "Resource1Cost": 250,
                 "Resource2Cost": 175,
                 "UnitTypeBuffs": {
@@ -7590,7 +7893,8 @@
         },
         "Research_Buff_S_TrackedUnits_Armor03": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on AAAV, Railgun and Missile Battery",
+                "LocalizedResearchTitleStringID": "HEAVY VEHICLES ARMOR LEVEL 1: 3 UNWANTED SEQUEL",
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on AAAV, Railgun and Missile Battery.\n\n[84a1e8]Same thing? But costs even more? What a scam!",
                 "Resource1Cost": 300,
                 "Resource2Cost": 250,
                 "UnitTypeBuffs": {
@@ -7884,18 +8188,55 @@
         "Research_Buff_G_ShipUnits_Armor1": {
             "ResearchItemAttributes": {
                 "Resource1Cost": 150,
-                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 on Assault Ship and Missile Ship",
+                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Ship and Missile Ship",
                 "UnitTypeBuffs": {
-                    "0": { "BuffSet": { "0": { "Value": 1 } } },
-                    "1": { "BuffSet": { "0": { "Value": 1 } } },
-                    "2": { "BuffSet": { "0": { "Value": 1 } } },
-                    "3": { "BuffSet": { "0": { "Value": 1 } } }
+                    "0": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "1": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    }
                 }
             }
         },
         "Research_Buff_G_ShipUnits_Armor2": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Ship and Missile Ship",
+                "LocalizedResearchTitleStringID": "ARMORED UNIT DEFENSES LEVEL 1: 2 ELECTRIC BOOGALOO",
+                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Ship and Missile Ship.\n\n[84a1e8]Same thing 2 times in a row?",
                 "UnitTypeBuffs": {
                     "0": { "BuffSet": { "0": { "Value": 1 } } },
                     "1": { "BuffSet": { "0": { "Value": 1 } } },
@@ -7906,10 +8247,37 @@
         },
         "Research_Buff_G_ShipUnits_Armor3": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "ARMORED UNIT DEFENSES LEVEL 1: 3 UNWANTED SEQUEL",
                 "Resource1Cost": 250,
                 "Resource2Cost": 250,
                 "ResearchTime": 25,
-                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 200 on Assault Ship and Missile Ship"
+                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Ship and Missile Ship.\n\n[84a1e8]Same thing? But costs even more? What a scam!",
+                "UnitTypeBuffs": {
+                    "0": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 100 }
+                        }
+                    },
+                    "1": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 100 }
+                        }
+                    },
+                    "2": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 100 }
+                        }
+                    },
+                    "3": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 100 }
+                        }
+                    }
+                }
             }
         },
 
@@ -9378,7 +9746,7 @@
             "ResearchItemAttributes": {
                 "Resource1Cost": 150,
                 "Resource2Cost": 250,
-                "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 60.",
+                "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 20.",
                 "UnitTypeBuffs": {
                     "0": { "BuffSet": { "0": { "Value": 20 } } },
                     "1": { "BuffSet": { "0": { "Value": 20 } } }
@@ -9391,7 +9759,7 @@
             "ResearchItemAttributes": {
                 "Resource1Cost": 150,
                 "Resource2Cost": 250,
-                "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 20.",
+                "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 60.",
                 "UnitTypeBuffs": {
                     "0": { "BuffSet": { "0": { "Value": 60 } } },
                     "1": { "BuffSet": { "0": { "Value": 60 } } }
@@ -10090,7 +10458,11 @@
                 }
             }
         },
-
+        "Ability_G_RailGun_Dash_Move_To_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "YEEET MANUEVER"
+            }
+        },
         // GAALSIEN/KHAANEPH ASSAULT RAILGUN DART MANUEVER
         "RailGun_Dash_StatusEffect": {
             "StatusEffectAttributes": {
@@ -10101,6 +10473,8 @@
         // GAALSIEN/KHAANEPH ASSAULT RAILGUN DART MANUEVER UPGRADE
         "Research_Buff_G_RailGun_Ability": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "ASSAULT RAILGUN - YEEET MANUEVER",
+                "LocalizedLongDescriptionStringID": "Unlocks an ability that when activated... blah blah blah...\n\n[ff2800]YEEET THE RAILGUN!!!",
                 "Resource1Cost": 150,
                 "Resource2Cost": 80,
                 "ResearchTime": 20
@@ -10110,25 +10484,62 @@
         // GAALSIEN/KHAANEPH RAILGUN ARMOR UPGRADES
         "Research_Buff_G_RailGunUnits_Armor1": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 on Assault Railgun and Heavy Railgun.",
+                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
                 "UnitTypeBuffs": {
-                    "0": { "BuffSet": { "0": { "Value": 1 } } }, // G_StarHull_Upgrade01_MP
-                    "1": { "BuffSet": { "0": { "Value": 1 } } }, // G_StarHullTank_MP
-                    "2": { "BuffSet": { "0": { "Value": 1 } } }, // K_AssaultRailgun
-                    "3": { "BuffSet": { "0": { "Value": 1 } } } // K_HeavyRailgun
+                    "0": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "1": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    }
                 }
             }
         },
         "Research_Buff_G_RailGunUnits_Armor2": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun, armor by 1 and hull integrity by 50 on Assault Railgun.",
+                "LocalizedResearchTitleStringID": "RAILGUN ARMOR LEVEL 1: 2 ELECTRIC BOOGALOO",
+                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun and Assault Railgun.\n\n[84a1e8]Same thing 2 times in a row?",
                 "Resource1Cost": 250,
                 "Resource2Cost": 175,
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": { // G_StarHull_Upgrade01_MP
                             "0": { "Value": 1 },
-                            "1": { "Value": 50 }
+                            "1": { "Value": 100 }
                         }
                     },
                     "1": {
@@ -10139,7 +10550,7 @@
                     "2": {
                         "BuffSet": { // K_AssaultRailgun
                             "0": { "Value": 1 },
-                            "1": { "Value": 50 }
+                            "1": { "Value": 100 }
                         }
                     },
                     "3": {
@@ -10154,7 +10565,8 @@
             "ResearchItemAttributes": {
                 "Resource1Cost": 300,
                 "Resource2Cost": 250,
-                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
+                "LocalizedResearchTitleStringID": "RAILGUN ARMOR LEVEL 1: 3 UNWANTED SEQUEL",
+                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.\n\n[84a1e8]Same thing? But costs even more? What a scam!",
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": { // G_StarHull_Upgrade01_MP
@@ -10309,7 +10721,8 @@
                         "FieldOfFire": 40
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1330
+                        "Distance": 1330,
+                        "Accuracy": 50
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
@@ -10320,7 +10733,8 @@
                         "FieldOfFire": 40
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1500
+                        "Distance": 1500,
+                        "Accuracy": 50
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
@@ -10401,7 +10815,8 @@
                         "FieldOfFire": 40
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1330
+                        "Distance": 1330,
+                        "Accuracy": 50
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
@@ -10412,7 +10827,8 @@
                         "FieldOfFire": 40
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1500
+                        "Distance": 1500,
+                        "Accuracy": 50
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
@@ -10504,8 +10920,8 @@
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_AccuracyReceivedMultiplier",
-                                "Mode": "Add",
-                                "Value": -10
+                                "Mode": "Set",
+                                "Value": 1
                             }
                         }
                     },
@@ -10530,8 +10946,8 @@
                 }
             },
             "UnitAttributes": {
+                "AccuracyReceivedMultiplier": 2.0,
                 //"StartsInHangar": false,//was false???? what the hell game
-
                 "MaxHealth": 490,
                 "Armour": 0,
                 "Resource1Cost": 240,
@@ -10541,7 +10957,6 @@
             "UnitMovementAttributes": {
                 "Combat": {
                     "MinDesiredCombatRange": 50
-
                 },
                 "Dynamics": {
                     "MaxSpeed": 550,
@@ -10654,6 +11069,7 @@
         // GAALSIEN INTERCEPTOR
         "G_Interceptor_MP": {
             "UnitAttributes": {
+                "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 250,
                 "Resource2Cost": 100,
                 "ProductionTime": 12,
@@ -10762,6 +11178,7 @@
         // KHAANEPH INTERCEPTOR
         "K_Interceptor_MP": {
             "UnitAttributes": {
+                "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 250,
                 "Resource2Cost": 100,
                 "ProductionTime": 12,
@@ -10923,6 +11340,7 @@
         // COALITION/SOBAN BOMBER
         "C_Bomber_MP": {
             "UnitAttributes": {
+                "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 350,
                 "Resource2Cost": 160,
                 "MaxHealth": 1300,
@@ -10957,8 +11375,7 @@
         // GAALSIEN PRECISION BOMBER
         "G_Bomber_MP": {
             "UnitAttributes": {
-
-
+                "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 2500,
                 "Armour": 15,
                 "Resource2Cost": 140,
@@ -11010,15 +11427,15 @@
                     "ReloadTimeMS": 1000,
                     "RangeAttributesShort": {
                         "Distance": 1000,
-                        "Accuracy": 100
+                        "Accuracy": 50
                     },
                     "RangeAttributesMedium": {
                         "Distance": 1250,
-                        "Accuracy": 80
+                        "Accuracy": 40
                     },
                     "RangeAttributesLong": {
                         "Distance": 1500,
-                        "Accuracy": 60
+                        "Accuracy": 30
                     },
                     "Modifiers": {
                         "0": {
@@ -11063,8 +11480,7 @@
         // KHAANEPH PRECISION BOMBER
         "K_Bomber_MP": {
             "UnitAttributes": {
-
-
+                "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 2500,
                 "Armour": 15,
                 "Resource2Cost": 140,
@@ -11103,7 +11519,7 @@
                     "NumberOfBursts": 1,
                     "BaseDamagePerRound": 30,
                     "DamagePacketsPerShot": 1,
-                    "AreaOfEffectRadius": 250,
+                    "AreaOfEffectRadius": 0,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RateOfFire": 10,
                     "WindUpTimeMS": 0,
@@ -11114,15 +11530,15 @@
                     "ReloadTimeMS": 1000,
                     "RangeAttributesShort": {
                         "Distance": 1000,
-                        "Accuracy": 100
+                        "Accuracy": 50
                     },
                     "RangeAttributesMedium": {
                         "Distance": 1250,
-                        "Accuracy": 80
+                        "Accuracy": 40
                     },
                     "RangeAttributesLong": {
                         "Distance": 1500,
-                        "Accuracy": 60
+                        "Accuracy": 30
                     },
                     "Modifiers": {
                         "0": {
@@ -11226,6 +11642,7 @@
         // COALITION/SOBAN GUNSHIP
         "C_GunShip_MP": {
             "UnitAttributes": {
+                "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 500,
                 "Resource2Cost": 100,
                 "MaxHealth": 1250,
@@ -11678,7 +12095,7 @@
 
         // COALITION/SOBAN ASSAULT CRUISER FABRICATION
         "Tier_3_C_AssaultCruiser": {
-            "ResearchItemAttributes": {               
+            "ResearchItemAttributes": {
                 "Resource1Cost": 450,
                 "Resource2Cost": 200
             }
@@ -12405,9 +12822,7 @@
                 },
                 "C_ArtilleryCruiser_Weapon_PointDefense_MP": {
                     "Turret": {
-
                         "FieldOfView": 360.0
-
                     },
                     "LeadsTarget": 1,
                     "TargetStyle": "Flak",
@@ -12424,15 +12839,15 @@
                     "WindDownTimeMS": 0,
                     "ReloadTimeMS": 2500,
                     "RangeAttributesShort": {
-                        "Accuracy": 20,
+                        "Accuracy": 10,
                         "Distance": 1400
                     },
                     "RangeAttributesMedium": {
-                        "Accuracy": 10,
+                        "Accuracy": 5,
                         "Distance": 1800
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 5,
+                        "Accuracy": 3,
                         "Distance": 2250
                     },
                     "Modifiers": {
@@ -13076,7 +13491,8 @@
         "Ability_Produce_K_HeavyRailgun": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Medium-range heavely armored weapons platform. Strong against all ground targets." } },
         "Ability_C_ProduceRailgun_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Armor-piercing, short-range, heavely armored shotgun platform. Effective at engaging groups of ground targetsat short range." } },
         "Ability_C_DeployPopCapCarrier_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Beams logistics module from orbit. Adds 15 fleet capacity up to 125 limit. Deals small amout of damage and opens wreck builkheads in its impact area." } },
-        "Ability_C_DeployTurret_AA_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Deploy immobile missile platform. Strong against ground targets over the dunes.\n\n[ff0000] Do not make sure its combat ready, who needs that." } },
+        "Ability_C_DeployTurret_AA_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Deploy immobile missile platform. Strong against ground targets over the dunes.\n\n[ff0000]Do not make sure its combat ready, who needs that." } },
+        "Ability_C_DeployTurret_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Deploy immobile weapons platform. Strong against armored targets.\n\n[ff0000]Do not make sure its combat ready, who needs that." } },
         "Ability_C_Sob_DeployPopCapCarrier_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Beams anti-air logistics module from orbit. Adds 15 fleet capacity up to 125 limit. Deals small amout of damage and opens wreck builkheads in its impact area. Shunting enables and improves AA weapon range, vison range, deploy range." } },
         "Ability_C_SupportCruiser_AA": {
             "AbilityViewAttributes": {
