@@ -1,15 +1,15 @@
 // =============== //
 // ~ ANOMALY DOK ~ //
 // --------------- //
-// by Bozocow and Bozocow//
+// by Bozocow      //
 // =============== //
 
 {
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "0.13.05",
-    "LastUpdate": "2022-04-15",
+    "Version": "0.13.99",
+    "LastUpdate": "2022-04-27",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
 
@@ -27,7 +27,25 @@
                 }
             }
         },
+        "Ability_C_OrbitalWeapon_Narrow": {
+            "AbilityViewAttributes": {
+                "IconName": "Icon-Command-RailGunReload"
 
+            }
+        },
+        //"SobanTechTree": { // preserved if saajuk strikes json
+        //    "TechTreeAttributes": {
+        //        "TechTrees": {
+        //            "9": { //tech tree number, support cruiser 
+        //               "Upgrades": {
+        //                    "0": { //uprade number or tier number both found via counting from 0, sc aa
+        //                        "ResearchItem": "Research_Buff_SupportCruiser_AA", // it works but it dosent, sc aa upgrade cant be researched, acts like you dont have enoth rus/cus
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //},
         // GAALSIEN/KHAANEPH POWER UPGRADES
         "Research_Buff_G_Power_1": {
             "ResearchItemAttributes": {
@@ -715,7 +733,7 @@
                     }
                 },
                 "Ability_C_CruiseMissile_MP": {
-                    "CooldownTimeSecs": 170,
+                    "CooldownTimeSecs": 300,
                     //"RequiredResearch": [], //it dosent want to obey me!
                     //"Resource1Cost": 0,
                     "ChainCasting": {
@@ -792,6 +810,7 @@
                 },
                 "C_Carrier_Weapon_G2All_PenetrationShots_MP": { // Are these even used at all??
                     "LineOfSightRequired": true,
+                    "TracerLength": 50,
                     "BaseDamagePerRound": 30,
                     "ExcludeFromHeightAdvantage": true,
                     "RateOfFire": 3,
@@ -868,7 +887,7 @@
                     "ExcludeFromHeightAdvantage": true
                 },
                 "C_Carrier_Weapon_CruiseMissile_MP": {
-                    "TracerSpeed": 50, // did not work :(
+                    "TracerSpeed": 50, // did not work :( // its not a tracer you dumbass
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     //"C_HAC_Smoke_ProjectileAssetContainer",
                     "BaseWreckDamagePerRound": 100,
@@ -892,6 +911,7 @@
                         }
                     },
                     "RangeAttributesLong": {
+                        "MinDistance": 2000,
                         "Distance": 420000
                     }
                 },
@@ -3255,6 +3275,14 @@
                 "LocalizedLongDescriptionStringID": "Slow moving areal fish. Strong against ground non-shoting back targets."
             }
         },
+        "Ability_G_MissileBarrage": {
+            "AbilityViewAttributes": {
+                "IconName": "Icon-Command-OrbitalWeapon",
+                "LocalizedTitleStringID": "WRATH OF SAJUUK",
+                "LocalizedLongDescriptionStringID": "[84a1e8]No heretic shall escape his fate.\n\n[ff0000]#gaalsienwereright"
+
+            }
+        },
         // GAALSIEN CARRIER
         "G_Carrier_MP": {
             "UnitAttributes": {
@@ -4361,6 +4389,7 @@
                 }
             },
             "PowerShuntAttributes": {
+                "PowerLevelChargeTimeSeconds": 3,
                 "ReservePowerPool": {
                     "HasUnlimitedCapacity": true
                 },
@@ -5990,7 +6019,7 @@
             "AbilityAttributes": {
                 "Ability_C_DeployTurret_MP": {
                     "CooldownTimeSecs": 90
-                    //"ProduceUnit": { "UnitTypeToProduce": "G_BattleCruiser_MP" } // testing yaknow
+                    //"ProduceUnit": { "UnitTypeToProduce": "C_ArtilleryCruiser_MP" } // testing yaknow
                 },
                 "Ability_C_DeployTurret_BeginCooldown_MP": {
                     "CooldownTimeSecs": 90
@@ -6566,114 +6595,96 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: +600m range to repair beams",
+                        "BuffTooltipLocID": "Officer: +200m range to anti-ground",
                         "RequiredExperience": 300,
                         "Buff": {
                             "0": {
-                                "Name": "REPAIR",
-                                "Attribute": 33554432,
+                                "Name": "ANTI-AIR",
+                                "Attribute": 33554434,
                                 "Mode": "Set",
                                 "Value": 1200
                             },
                             "1": {
-                                "Name": "REPAIR_FL",
-                                "Attribute": 33554432,
-                                "Mode": "Set",
-                                "Value": 1200
+                                "Remove": true
                             },
                             "2": {
-                                "Name": "REPAIR_BR",
-                                "Attribute": 33554432,
-                                "Mode": "Set",
-                                "Value": 1200
+                                "Remove": true
                             },
                             "3": {
-                                "Name": "REPAIR_BL",
-                                "Attribute": 33554432,
-                                "Mode": "Set",
-                                "Value": 1200
+                                "Remove": true
                             }
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Lieutenant: +50%  to repair speed",
-                        "RequiredExperience": 500,
+                        "BuffTooltipLocID": "Lieutenant: 20 damage to anti-ground",
+                        "RequiredExperience": 650,
                         "Buff": {
                             "0": {
-                                "Name": "REPAIR",
-                                "Attribute": 262149,
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
                                 "Mode": "Add",
-                                "Value": 4
-                            },
-                            "1": {
-                                "Name": "REPAIR_BL",
-                                "Attribute": 262149,
-                                "Mode": "Add",
-                                "Value": 4
-                            },
-                            "2": {
-                                "Name": "REPAIR_BR",
-                                "Attribute": 262149,
-                                "Mode": "Add",
-                                "Value": 4
-                            },
-                            "3": {
-                                "Name": "REPAIR_FL",
-                                "Attribute": 262149,
-                                "Mode": "Add",
-                                "Value": 4
+                                "Value": 20
                             }
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Lt. Commander: +4 armor",
-                        "RequiredExperience": 750,
+                        "BuffTooltipLocID": "Lt. Commander: +5 armor",
+                        "RequiredExperience": 900,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
                                 "Mode": "Add",
                                 "Value": 4
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
                             }
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Commander: +1000 to hull",
-                        "RequiredExperience": 950,
+                        "BuffTooltipLocID": "Commander: +1250 to hull",
+                        "RequiredExperience": 1100,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
                                 "Mode": "Add",
-                                "Value": 1000
+                                "Value": 1250
                             }
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Captain: +100m to healing area of effect",
-                        "RequiredExperience": 1250,
+                        "BuffTooltipLocID": "Captain Calliope: we got the rockets", // actual calliope, what did you think im *joking*???????????????
+                        "RequiredExperience": 2550,
                         "Buff": {
                             "0": {
-                                "Name": "REPAIR",
-                                "Attribute": 262152,
-                                "Mode": "Set",
-                                "Value": 100
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 49
                             },
                             "1": {
-                                "Name": "REPAIR_FL",
-                                "Attribute": 262152,
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_CooldownTime",
                                 "Mode": "Set",
-                                "Value": 100
+                                "Value": 300
                             },
                             "2": {
-                                "Name": "REPAIR_BR",
-                                "Attribute": 262152,
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_ReloadTime",
                                 "Mode": "Set",
-                                "Value": 100
+                                "Value": 10000
                             },
                             "3": {
-                                "Name": "REPAIR_BL",
-                                "Attribute": 262152,
-                                "Mode": "Set",
-                                "Value": 100
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "AddPercent",
+                                "Value": -85
                             }
                         }
                     }
@@ -6766,7 +6777,6 @@
                 }
             }
         },
-
         // SOBAN SUPPORT CRUISER
         "C_Sob_SupportCruiser_MP": {
             "ExperienceAttributes": {
@@ -7016,13 +7026,13 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Acolyte: +10 damage",
+                        "BuffTooltipLocID": "Acolyte: +5 damage", // ye 10 was a bit op 
                         "RequiredExperience": 1250,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
                                 "Mode": "Add",
-                                "Value": 10
+                                "Value": 5
                             }
                         }
                     },
@@ -7070,8 +7080,8 @@
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
-                                "Mode": "Set",
-                                "Value": 15
+                                "Mode": "AddPercent",
+                                "Value": -50
                             },
                             "1": {
                                 "Attribute": 262149,
@@ -7218,7 +7228,6 @@
                         "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
-                                "Name": "G_SupportCruiser_Weapon_G2G_MP",
                                 "Attribute": 262149,
                                 "Mode": "Add",
                                 "Value": 10
@@ -7226,14 +7235,13 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Acolyte: +10 damage",
+                        "BuffTooltipLocID": "Acolyte: +5 damage",
                         "RequiredExperience": 1250,
                         "Buff": {
                             "0": {
-                                "Name": "G_SupportCruiser_Weapon_G2G_MP",
                                 "Attribute": 262148,
-                                "Mode": "Add",
-                                "Value": 10
+                                "Mode": "AddPercent",
+                                "Value": 50
                             }
                         }
                     },
@@ -7269,19 +7277,16 @@
                         "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
-                                "Name": "G_SupportCruiser_Weapon_G2G_MP",
                                 "Attribute": 262148,
-                                "Mode": "Set", //fraking work already you annoying werid thing FIXME
-                                "Value": 15
+                                "Mode": "AddPercent", //fraking work already you annoying werid thing FIXME
+                                "Value": -50 //that suppose to add -5 to 15... eeeeh??? maybe it adds -7.5 who fraking knows but it defenetly dose less damage
                             },
                             "1": {
-                                "Name": "G_SupportCruiser_Weapon_G2G_MP",
                                 "Attribute": 262149,
                                 "Mode": "Add",
                                 "Value": 90
                             },
                             "2": {
-                                "Name": "G_SupportCruiser_Weapon_G2G_MP",
                                 "Attribute": 262151,
                                 "Mode": "Add",
                                 "Value": 500
@@ -7408,6 +7413,8 @@
         // GAALSIEN REFINERY MODE
         "Research_Buff_G_ProductionCruiserResourcer": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "PRODUCTION CRUISER - SUPPORT MODE",
+                "LocalizedLongDescriptionStringID": "\n\n[84a1e8]Enable all Production Cruisers act as resource drop-off points. Also improves Production Cruisers hull integrety by 1000, speed by 25 and increses weapon range.",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": -1, // how tf this worked?
@@ -7419,26 +7426,21 @@
                                 "Value": 25
                             },
                             "1": {
-                                "Attribute": 262148,
-                                "Mode": "Add",
-                                "Value": 10
-                            },
-                            "2": {
                                 "Attribute": 65536,
                                 "Mode": "Add",
                                 "Value": 1000
                             },
-                            "3": {
+                            "2": {
                                 "Attribute": 33554432,
                                 "Mode": "Add",
                                 "Value": 300
                             },
-                            "4": {
+                            "3": {
                                 "Attribute": 33554433,
                                 "Mode": "Add",
                                 "Value": 400
                             },
-                            "5": {
+                            "4": {
                                 "Attribute": 33554434,
                                 "Mode": "Add",
                                 "Value": 400
@@ -7454,6 +7456,8 @@
         // KHAANEPH REFINERY MODE
         "Research_Buff_K_ProductionCruiserResourcer": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "PRODUCTION CRUISER - SUPPORT MODE",
+                "LocalizedLongDescriptionStringID": "\n\n[84a1e8]Enable all Production Cruisers act as resource drop-off points. Also improves Production Cruisers hull integrety by 1500, armor by 5 and increses weapon range.",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": -1, // how tf this worked?
@@ -7464,29 +7468,17 @@
                                 "Mode": "Add",
                                 "Value": 5
                             },
-
                             "1": {
-                                "Attribute": 262148,
-                                "Mode": "Add",
-                                "Value": 10
-                            },
-                            "2": {
                                 "Attribute": 65536,
                                 "Mode": "Add",
                                 "Value": 1500
                             },
-
-                            "3": {
-                                "Attribute": 33554432,
-                                "Mode": "Add",
-                                "Value": 300
-                            },
-                            "4": {
+                            "2": {
                                 "Attribute": 33554433,
                                 "Mode": "Add",
                                 "Value": 400
                             },
-                            "5": {
+                            "3": {
                                 "Attribute": 33554434,
                                 "Mode": "Add",
                                 "Value": 400
@@ -8382,6 +8374,9 @@
                                 "Attribute": 262148,
                                 "Mode": "Add",
                                 "Value": 4
+                            },
+                            "1": {
+                                "Remove": true
                             }
                         }
                     },
@@ -8557,87 +8552,73 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: +4 damage",
+                        "BuffTooltipLocID": "Officer: +20 speed",
                         "RequiredExperience": 100,
                         "Buff": {
                             "0": {
-                                "Attribute": 262148,
+                                "Attribute": "UnitDynamics_MaxSpeed",
                                 "Mode": "Add",
-                                "Value": 4
+                                "Value": 20
+                            },
+                            "1": {
+                                "Remove": true
                             }
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Lieutenant: +400m range",
-                        "RequiredExperience": 200,
+                        "BuffTooltipLocID": "Lieutenant: +3 armor",
+                        "RequiredExperience": 250,
                         "Buff": {
                             "0": {
-                                "Attribute": 33554434,
-                                "Mode": "Add",
-                                "Value": 400
-                            },
-                            "1": {
-                                "Attribute": 33554433,
-                                "Mode": "Add",
-                                "Value": 300
-                            },
-                            "2": {
-                                "Attribute": 33554432,
-                                "Mode": "Add",
-                                "Value": 250
-                            }
-                        }
-                    },
-                    "3": {
-                        "BuffTooltipLocID": "Lt. Commander: +30 speed, +3 armor",
-                        "RequiredExperience": 400,
-                        "Buff": {
-                            "0": {
-                                "Attribute": 131072,
-                                "Mode": "Add",
-                                "Value": 30
-                            },
-                            "1": {
-                                "Attribute": 65540,
+                                "Attribute": "Unit_Armour",
                                 "Mode": "Add",
                                 "Value": 3
                             }
                         }
                     },
-                    "4": {
-                        "BuffTooltipLocID": "Commander: +400 hull",
-                        "RequiredExperience": 800,
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +400 hull",
+                        "RequiredExperience": 500,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 400
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Commander: +8 damage",
+                        "RequiredExperience": 1000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
                                 "Mode": "Add",
                                 "Value": 400
                             }
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Captain: +1200m range, +4 damage",
+                        "BuffTooltipLocID": "Captain: +1600m range",
                         "RequiredExperience": 1600,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554434,
                                 "Mode": "Add",
-                                "Value": 1200
+                                "Value": 1600
                             },
                             "1": {
                                 "Attribute": 33554433,
                                 "Mode": "Add",
-                                "Value": 1100
+                                "Value": 1500
                             },
                             "2": {
                                 "Attribute": 33554432,
                                 "Mode": "Add",
-                                "Value": 1050
-                            },
-                            "3": {
-                                "Attribute": 262148,
-                                "Mode": "Add",
-                                "Value": 4
+                                "Value": 1450
                             }
                         }
                     }
@@ -8761,6 +8742,7 @@
 
             "WeaponAttributes": {
                 "G_SandSkimmer_Weapon_G2G_MP": {
+                    "FriendlyFireDamageScalar": 1,
                     //"EntityTypesToSpawnOnImpact": { would you believe this worked? no
                     //  "0": {
                     //    "EntityTypeToSpawn": "C_Battlecruiser_MP"
@@ -8888,6 +8870,7 @@
             },
             "WeaponAttributes": {
                 "G_SandSkimmer_Weapon_G2G_MP": {
+                    "FriendlyFireDamageScalar": 1,
                     "ExcludeFromHeightAdvantage": true,
                     "ProjectileEntityTypeToSpawn": "K_Artillery_Shell_ProjectileAssetContainer_MP",
                     "IsTracer": false,
@@ -9268,7 +9251,7 @@
                 "ToggledIconName": "Icon-Command-RailGunFire",
                 "LocalizedTitleStringID": "SWAP TO BLINDING LAZOR",
                 "LocalizedShortDescriptionStringID": "TOGGLE",
-                "LocalizedLongDescriptionStringID": "Swaps main weapon military grade lazor designed to blind target into oblivion, rendering them unable to fire and recive orders for short duration, untill other hit...",
+                "LocalizedLongDescriptionStringID": "Swaps main weapon for military grade lazor designed to blind target into oblivion, rendering them unable to fire and recive orders for short duration, untill other hit...",
                 "LocalizedToggledTitleStringID": "SWAP TO MAGACCELERATED (MAYBE) RAILGUN",
                 "LocalizedToggledShortDescriptionStringID": "TOGGLE",
                 "LocalizedToggledLongDescriptionStringID": "Swaps domination lazor for main duity railgun, in case you dont want to make pets from enemy units anymore..."
@@ -10290,6 +10273,87 @@
 
         // GAALSIEN ASSAULT RAILGUN
         "G_StarHull_Upgrade01_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: +5 accuracy ",
+                        "RequiredExperience": 69,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "WeaponRange_AccuracyMedium",
+                                "Mode": "Add",
+                                "Value": 5
+                            },
+                            "1": {
+                                "Attribute": "WeaponRange_AccuracyLong",
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +1 weapon damage",
+                        "RequiredExperience": 420,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 1
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: +69 hull",
+                        "RequiredExperience": 500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 69
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: +5 more accuracy",
+                        "RequiredExperience": 666,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "WeaponRange_AccuracyMedium",
+                                "Mode": "Add",
+                                "Value": 5
+                            },
+                            "1": {
+                                "Attribute": "WeaponRange_AccuracyLong",
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "PANIC MODE: Max speed dosent exist, keep yeeting to keep moving",
+                        "RequiredExperience": 690,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Set",
+                                "Value": 1
+                            },
+                            "1": {
+                                "Name": "Ability_G_RailGun_Dash_Move_To_MP",
+                                "Attribute": "Ability_CooldownTimeSecs",
+                                "Mode": "AddPercent",
+                                "Value": -95
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "Resource1Cost": 250,
                 "Resource2Cost": 55,
@@ -10376,6 +10440,88 @@
 
         // KHAANEPH ASSAULT RAILGUN
         "K_AssaultRailgun_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: +5 accuracy ",
+                        "RequiredExperience": 69,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "WeaponRange_AccuracyMedium",
+                                "Mode": "Add",
+                                "Value": 5
+                            },
+                            "1": {
+                                "Attribute": "WeaponRange_AccuracyLong",
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +1 weapon damage",
+                        "RequiredExperience": 420,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 1
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: +69 hull",
+                        "RequiredExperience": 500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 69
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: +5 more accuracy",
+                        "RequiredExperience": 666,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "WeaponRange_AccuracyMedium",
+                                "Mode": "Add",
+                                "Value": 5
+                            },
+                            "1": {
+                                "Attribute": "WeaponRange_AccuracyLong",
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "PANIC MODE: Max speed dosent exist, keep yeeting to keep moving",
+                        "RequiredExperience": 690,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Set",
+                                "Value": 1
+                            },
+                            "1": {
+                                "Name": "Ability_G_RailGun_Dash_Move_To_MP",
+                                "Attribute": "Ability_CooldownTimeSecs",
+                                "Mode": "AddPercent",
+                                "Value": -95
+                            }
+                        }
+                    }
+
+                }
+            },
             "UnitAttributes": {
                 "Resource1Cost": 250,
                 "Resource2Cost": 55,
@@ -10598,6 +10744,97 @@
 
         // COALITION/SOBAN MISSILE BATTERY
         "C_HAC_Upgrade01_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Officer: +25% weapon range",
+                        "RequiredExperience": 700,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "WeaponRange_DistanceShort",
+                                "Mode": "AddPercent",
+                                "Value": 25
+                            },
+                            "1": {
+                                "Attribute": "WeaponRange_DistanceLong",
+                                "Mode": "AddPercent",
+                                "Value": 25
+                            },
+                            "2": {
+                                "Attribute": "WeaponRange_DistanceMedium",
+                                "Mode": "AddPercent",
+                                "Value": 25
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Lieutenant: +50m damage",
+                        "RequiredExperience": 900,
+                        "Buff": {
+                            "0": {
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 50
+                            },
+                            "1": {
+                                "Name": "DEFAULT",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 50
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +10 speed",
+                        "RequiredExperience": 1100,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 10
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Commander: +100 to area of effect of weapons",
+                        "RequiredExperience": 1300,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_AreaOfEffect",
+                                "Mode": "Add",
+                                "Value": 100
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Captain Sonic: replaces tracks with race car tracks.",
+                        "RequiredExperience": 1800,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 100
+                            },
+                            "1": {
+                                "Attribute": "UnitDynamics_AccelerationTime",
+                                "Mode": "Set",
+                                "Value": 7
+                            },
+                            "2": {
+                                "Attribute": "UnitDynamics_BrakingTime",
+                                "Mode": "Set",
+                                "Value": 10
+                            },
+                            "3": {
+                                "Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+                                "Mode": "Set",
+                                "Value": 10
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "Resource1Cost": 300,
                 "Resource2Cost": 85,
@@ -10622,6 +10859,7 @@
             },
             "WeaponAttributes": {
                 "C_HAC_Upgrade01_Weapon_G2A_MP": {
+                    "FriendlyFireDamageScalar": 1,
                     "OutputDPS": true,
                     "ReloadTimeMS": 3000,
                     "RangeAttributesShort": {
@@ -10642,6 +10880,7 @@
                 },
                 "C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
                     "BaseDamagePerRound": 660,
+                    "FriendlyFireDamageScalar": 1,
                     "AreaOfEffectRadius": 260,
                     "DamagePacketsPerShot": 30,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -10659,7 +10898,14 @@
                 }
             }
         },
+        "Ability_G_MissileCraft_CrowdControl_MP": {
+            "AbilityViewAttributes": {
+                "IconName": "Icon-Command-MissileBarrage3",
+                "LocalizedTitleStringID": "CARRIER REPELLENT",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Casual 1000 damage 8 missiles barrage.\n\n[ff0000]My name is Jafar\nI came from a far\nThere is a cruise missile in my car\nTake evasive action"
 
+            }
+        },
         // GAALSIEN MISSILE SHIP
         "G_Catamaran_Upgrade01_MP": {
             "UnitAttributes": {
@@ -10695,19 +10941,74 @@
             },
             "ExperienceAttributes": {
                 "Levels": {
-                    "4": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: +3 armor",
+                        "RequiredExperience": 1200,
                         "Buff": {
                             "0": {
-                                "Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP", //THIS NO WORK? FIXME
-                                "Attribute": "UnitWeapon_ReloadTime",
+                                "Attribute": "Unit_Armour",
                                 "Mode": "Add",
-                                "Value": -1000
+                                "Value": 3
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +15% vison range",
+                        "RequiredExperience": 1550,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_SensorRadius",
+                                "Mode": "AddPercent",
+                                "Value": 15
                             },
                             "1": {
-                                "Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
-                                "Attribute": "UnitWeapon_ReloadTime",
+                                "Attribute": "Unit_ContactRadius",
+                                "Mode": "AddPercent",
+                                "Value": 15
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: +1 weapon rate of fire",
+                        "RequiredExperience": 2950,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_RateOfFire",
                                 "Mode": "Add",
-                                "Value": -1000
+                                "Value": 1
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: -50% weapon cooldown",
+                        "RequiredExperience": 4400,
+                        "Buff": {
+                            "0": {
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_ReloadTime",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            },
+                            "1": {
+                                "Name": "ANTI-AIR-RADIO",
+                                "Attribute": "UnitWeapon_ReloadTime",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Fat Elder: +6666 to hull",
+                        "RequiredExperience": 6666,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 6666
+
                             }
                         }
                     }
@@ -10782,26 +11083,76 @@
                         "TakeNoDamageForMS": 15000
                     }
 
-                },
+                },                
                 "Ability_G_MissileCraft_CrowdControl_MP": {
                     "CooldownTimeSecs": 300
                 }
             },
             "ExperienceAttributes": {
                 "Levels": {
-                    "4": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: +3 armor",
+                        "RequiredExperience": 1200,
                         "Buff": {
                             "0": {
-                                "Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP", // THIS NO WOR? FIXME
-                                "Attribute": "UnitWeapon_ReloadTime",
+                                "Attribute": "Unit_Armour",
                                 "Mode": "Add",
-                                "Value": -1000
+                                "Value": 3
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +4 armor",
+                        "RequiredExperience": 1550,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 4
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: +1 weapon rate of fire",
+                        "RequiredExperience": 2950,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: -50% weapon cooldown",
+                        "RequiredExperience": 4400,
+                        "Buff": {
+                            "0": {
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_ReloadTime",
+                                "Mode": "AddPercent",
+                                "Value": -50
                             },
                             "1": {
-                                "Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
+                                "Name": "ANTI-AIR-RADIO",
                                 "Attribute": "UnitWeapon_ReloadTime",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Fat Elder: +5000 to hull",
+                        "RequiredExperience": 6666,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
-                                "Value": -1000
+                                "Value": 6666
+
                             }
                         }
                     }
@@ -10868,8 +11219,9 @@
         // GAALSIEN/KHAANEPH MISSILE SHIP DIRECT FIRE UPGRADE
         "Research_Buff_G_CatamaranAA_AOE": {
             "ResearchItemAttributes": {
-                "ResearchTime": 20
-            }
+                
+                    "ResearchTime": 20
+                }
         },
 
         // COALITION/SOBAN STRIKE FIGHTER
@@ -11068,6 +11420,83 @@
         },
         // GAALSIEN INTERCEPTOR
         "G_Interceptor_MP": {
+            "ExperienceAttributes": {
+                "Levels": { //names of actual flying fish XD
+                    "1": {
+                        "BuffTooltipLocID": "Fodiator: +150 weapon range",
+                        "RequiredExperience": 850,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "WeaponRange_DistanceShort",
+                                "Mode": "Add",
+                                "Value": 150
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Parexocoetus: +1 rate of fire",
+                        "RequiredExperience": 1000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Exocoetus: +5 armor",
+                        "RequiredExperience": 1300,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 5
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Cheilopogon: +400 fishcraft hull",
+                        "RequiredExperience": 1600,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 400
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Prognichthys: +50% chance to slip away",
+                        "RequiredExperience": 1900,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_AccuracyReceivedMultiplier",
+                                "Mode": "Set",
+                                "Value": 1
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 250,
@@ -11174,9 +11603,85 @@
                 }
             }
         },
-
         // KHAANEPH INTERCEPTOR
         "K_Interceptor_MP": {
+            "ExperienceAttributes": {
+                "Levels": { //names of actual flying fish XD
+                    "1": {
+                        "BuffTooltipLocID": "Fodiator: +5 armor",
+                        "RequiredExperience": 650,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 5
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Parexocoetus: +400 fishcraft hull",
+                        "RequiredExperience": 800,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 400
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Exocoetus: +150 weapon range",
+                        "RequiredExperience": 1300,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "WeaponRange_DistanceShort",
+                                "Mode": "Add",
+                                "Value": 150
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Cheilopogon: +1 rate of fire",
+                        "RequiredExperience": 1600,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Prognichthys: +50% chance to slip away",
+                        "RequiredExperience": 1900,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_AccuracyReceivedMultiplier",
+                                "Mode": "Set",
+                                "Value": 1
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 250,
@@ -11339,6 +11844,83 @@
 
         // COALITION/SOBAN BOMBER
         "C_Bomber_MP": {
+            "ExperienceAttributes": {
+                "Levels": { //boring and fat like yourmom
+                    "1": {
+                        "BuffTooltipLocID": "Officer: +3 armor",
+                        "RequiredExperience": 1000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 3
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Lieutenant: +1500 to bombercraft hull",
+                        "RequiredExperience": 2000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 1500
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +5 armor",
+                        "RequiredExperience": 3000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 5
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Commander: +3000 to bombercraft hull",
+                        "RequiredExperience": 4000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 3000
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Captain: +7 armor",
+                        "RequiredExperience": 5000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 7
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 350,
@@ -11374,6 +11956,86 @@
 
         // GAALSIEN PRECISION BOMBER
         "G_Bomber_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: +more vison range",
+                        "RequiredExperience": 1200,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_SensorRadius",
+                                "Mode": "Set",
+                                "Value": 2000
+                            },
+                            "1": {
+                                "Attribute": "Unit_ContactRadius",
+                                "Mode": "Set",
+                                "Value": 2500
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +100m area of effect of the weapon",
+                        "RequiredExperience": 1500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_AreaOfEffect",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: +15 damage",
+                        "RequiredExperience": 2000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: -50% weapon reload time",
+                        "RequiredExperience": 2200,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_ReloadTime",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Fat, Delusional Elder: back in my days we bombed cruisers with atomic warheads, and Im telling you son, one day I oneshoted coalition carrier... oh ye that was that... zzzzzzzzzzzzz...",
+                        "RequiredExperience": 3333,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Set",
+                                "Value": 4200
+
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 2500,
@@ -11479,6 +12141,84 @@
 
         // KHAANEPH PRECISION BOMBER
         "K_Bomber_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: +6 armor",
+                        "RequiredExperience": 1400,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 6
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +100m area of effect of the weapon",
+                        "RequiredExperience": 1600,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_AreaOfEffect",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: +15 damage",
+                        "RequiredExperience": 2000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: -50% weapon reload time",
+                        "RequiredExperience": 2200,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_ReloadTime",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Very Fat, Delusional Elder: back in my days we bombed cruisers with atomic warheads, and Im telling you son, one day I oneshoted coalition carrier... oh ye that was that... zzzzzzzzzzzzz...",
+                        "RequiredExperience": 3333,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Set",
+                                "Value": 6666
+
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 2500,
@@ -11641,6 +12381,94 @@
 
         // COALITION/SOBAN GUNSHIP
         "C_GunShip_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Officer: +300 gunship hull",
+                        "RequiredExperience": 800,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 500
+                            },
+                            "1": {
+                                "Remove": true
+
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Lieutenant: -lotta% of vison range",
+                        "RequiredExperience": 1500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_SensorRadius",
+                                "Mode": "AddPercent",
+                                "Value": -99
+                            },
+                            "1": {
+                                "Remove": true
+
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +5 armor",
+                        "RequiredExperience": 2500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 5
+                            },
+                            "1": {
+                                "Remove": true
+
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Commander: -25 speed", //and thats a buff, it stays longer on target
+                        "RequiredExperience": 3500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": -25
+                            },
+                            "1": {
+                                "Remove": true
+
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Captain: double the ammo capacity",
+                        "RequiredExperience": 5000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Inventory_Capacity",
+                                "Mode": "Add",
+                                "Value": 40
+
+                            },
+                            "1": {
+                                "Attribute": "Inventory_StartingAmount",
+                                "Mode": "Add",
+                                "Value": 40
+
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 500,
@@ -12129,6 +12957,72 @@
 
         // GAALSIEN HONORGUARD
         "G_HonorGuard_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: : +10 speed",
+                        "RequiredExperience": 500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 10
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +30% sensor range",
+                        "RequiredExperience": 750,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_SensorRadius",
+                                "Mode": "AddPercent",
+                                "Value": 30
+                            },
+                            "1": {
+                                "Attribute": "Unit_ContactRadius",
+                                "Mode": "AddPercent",
+                                "Value": 30
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: +75m area of effect radius",
+                        "RequiredExperience": 1500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_AreaOfEffect",
+                                "Mode": "Add",
+                                "Value": 75
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: +25 speed",
+                        "RequiredExperience": 2000,
+
+                        "Buff": {
+                            "0": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 25
+                            }
+                        }
+
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Elder: +1 fire rate to every weapon...",
+                        "RequiredExperience": 3500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "Resource1Cost": 550,
                 "Resource2Cost": 250,
@@ -12268,6 +13162,71 @@
 
         // KHAANEPH HONORGUARD
         "K_HonorGuard_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: : +4 armor",
+                        "RequiredExperience": 500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 4
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +30% sensor range",
+                        "RequiredExperience": 750,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_SensorRadius",
+                                "Mode": "AddPercent",
+                                "Value": 30
+                            },
+                            "1": {
+                                "Attribute": "Unit_ContactRadius",
+                                "Mode": "AddPercent",
+                                "Value": 30
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: +75m area of effect radius",
+                        "RequiredExperience": 1500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_AreaOfEffect",
+                                "Mode": "Add",
+                                "Value": 75
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: +1500 to cruiser hull",
+                        "RequiredExperience": 2000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 1500
+                            }
+                        }
+
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Elder: +1 fire rate to every weapon...",
+                        "RequiredExperience": 3500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "Resource1Cost": 550,
                 "Resource2Cost": 250,
@@ -12780,6 +13739,145 @@
 
         // COALITION/SOBAN ARTILLERY CRUISER
         "C_ArtilleryCruiser_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Officer: +500 to cruiser hull",
+                        "RequiredExperience": 850,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 500
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Lieutenant: +10 damage to rocket spam",
+                        "RequiredExperience": 1100,
+                        "Buff": {
+                            "0": {
+                                "Name": "MISSILE_BACK", // i hate you
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 10
+                            },
+                            "1": {
+                                "Name": "MISSILE_FRONT",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 10
+                            },
+                            "2": {
+                                "Name": "DEFAULT",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 10
+                            },
+                            "3": {
+                                "Name": "MisslePods_FL",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 10
+                            },
+                            "4": {
+                                "Name": "ARTILLERY_BARRAGE_BR_PRECISE",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 10
+                            },
+                            "5": {
+                                "Name": "ARTILLERY_BARRAGE_FL_PRECISE",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 10
+                            },
+                            "6": {
+                                "Remove": true
+                            },
+                            "7": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +600 hull, +3 armor",
+                        "RequiredExperience": 1600,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 600
+                            },
+                            "1": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 3
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Commander: +15 damage to rocket spam",
+                        "RequiredExperience": 2950,
+                        "Buff": {
+                            "0": {
+                                "Name": "MISSILE_BACK", // i hate you
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "1": {
+                                "Name": "MISSILE_FRONT",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "2": {
+                                "Name": "DEFAULT",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "3": {
+                                "Name": "MisslePods_FL",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "4": {
+                                "Name": "ARTILLERY_BARRAGE_BR_PRECISE",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "5": {
+                                "Name": "ARTILLERY_BARRAGE_FL_PRECISE",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "6": {
+                                "Remove": true
+                            },
+                            "7": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Captain: -50% cooldown on not precise barrage",
+                        "RequiredExperience": 6250,
+                        "Buff": {
+                            "0": {
+                                "Name": "Ability_C_ArtilleryBarrage",
+                                "Attribute": "Ability_CooldownTimeSecs",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "Resource1Cost": 550,
                 "Resource2Cost": 160,
@@ -12809,6 +13907,8 @@
             },
             "WeaponAttributes": {
                 "C_ArtilleryCruiser_Weapon_Barrage_MP": {
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
+                    "FriendlyFireDamageScalar": 1,
                     "BaseDamagePerRound": 2200,
                     "AreaOfEffectRadius": 150,
                     "NumberOfBursts": 1,
@@ -12859,6 +13959,7 @@
                     }
                 },
                 "C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
+                    "FriendlyFireDamageScalar": 1,
                     "BaseDamagePerRound": 10,
                     "DamagePacketsPerShot": 0,
                     "ExcludeFromHeightAdvantage": true,
@@ -12868,6 +13969,7 @@
                     }
                 },
                 "C_ArtilleryCruiser_Weapon_G2G_MP": {
+                    "FriendlyFireDamageScalar": 1,
                     "ProjectileEntityTypeToSpawn": "C_Artillery_Shell_ProjectileAssetContainer_MP",
                     "BaseDamagePerRound": 10,
                     "ReloadTimeMS": 75,
@@ -12899,6 +14001,142 @@
         },
         // GAALSIEN SIEGE CRUISER
         "G_ArtilleryCruiser_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: : +20% sensor range",
+                        "RequiredExperience": 900,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_SensorRadius",
+                                "Mode": "AddPercent",
+                                "Value": 30
+                            },
+                            "1": {
+                                "Attribute": "Unit_ContactRadius",
+                                "Mode": "AddPercent",
+                                "Value": 30
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
+                            },
+                            "5": {
+                                "Remove": true
+                            },
+                            "6": {
+                                "Remove": true
+                            },
+                            "7": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +1000 to cruiser hull",
+                        "RequiredExperience": 1100,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 1000
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
+                            },
+                            "5": {
+                                "Remove": true
+                            },
+                            "6  ": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: 6 armor",
+                        "RequiredExperience": 1500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 6
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: +9 armor, + 2000 hull",
+                        "RequiredExperience": 2500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 9
+                            },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 2000
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
+                            },
+                            "5": {
+                                "Remove": true
+                            },
+                            "6": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Elder: EMP barrage, target set, fire.",
+                        "RequiredExperience": 4000,
+                        "Buff": {
+                            "0": {
+                                "Name": "EMP",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 14
+                            },
+                            "1": {
+                                "Name": "EMP",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "AddPercent",
+                                "Value": -75
+                            },
+                            "2": {
+                                "Name": "Ability_G_Artillery_EMP_MP",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "AddPercent",
+                                "Value": -75
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 //"Resource1Cost": 0,
                 //"Resource2Cost": 0,
@@ -12937,7 +14175,7 @@
                     "CooldownTimeSecs": 40
                 },
                 "Ability_G_ArtilleryBarrage_01_MP": {
-                    "CooldownTimeSecs": 40
+                    "CooldownTimeSecs": 80
                     //"RequiredResearch": [ "Research_Buff_G_Artillery_Barrage" ] // works but botton still shows up as active so fuck it
 
                 }
@@ -12951,6 +14189,9 @@
             },
             "WeaponAttributes": {
                 "G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
+                    "FriendlyFireDamageScalar": 1,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
                     "Turret": {
                         "FieldOfFire": 135.0,
                         "FieldOfView": 135.0
@@ -12968,6 +14209,7 @@
                         "FieldOfView": 360.0
 
                     },
+                    "OutputDPS": true,
                     "LeadsTarget": 1,
                     "TargetStyle": "Flak",
                     "TracerSpeed": 1500,
@@ -13053,8 +14295,10 @@
                     }
                 },
                 "G_ArtilleryCruiser_Weapon_G2G_MP": {
+                    "AreaOfEffectRadius": 0,
+                    "OutputDPS": true,
                     "ProjectileEntityTypeToSpawn": "G_BattleCruiserDefault_ProjectileAssetContainer",
-                    "BaseDamagePerRound": 100,
+                    "BaseDamagePerRound": 75,
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "ExcludeFromHeightAdvantage": false,
@@ -13078,7 +14322,7 @@
                     "RangeAttributesLong": {
                         "MinDistance": 0,
                         "Accuracy": 100,
-                        "Distance": 1200
+                        "Distance": 1000
                     }
                 }
             }
@@ -13090,6 +14334,140 @@
         //},        
         // KHAANEPH SIEGE CRUISER
         "K_ArtilleryCruiser_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: : +1000 to cruiser hull",
+                        "RequiredExperience": 900,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 1000
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
+                            },
+                            "5": {
+                                "Remove": true
+                            },
+                            "6": {
+                                "Remove": true
+                            },
+                            "7": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +1500 to cruiser hull",
+                        "RequiredExperience": 1100,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 1500
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
+                            },
+                            "5": {
+                                "Remove": true
+                            },
+                            "6  ": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: 6 armor",
+                        "RequiredExperience": 1500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 6
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: +9 armor, + 2000 hull",
+                        "RequiredExperience": 2500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 9
+                            },
+                            "1": {
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 2000
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
+                            },
+                            "5": {
+                                "Remove": true
+                            },
+                            "6": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Elder: EMP barrage, target set, fire.",
+                        "RequiredExperience": 4000,
+                        "Buff": {
+                            "0": {
+                                "Name": "EMP",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 14
+                            },
+                            "1": {
+                                "Name": "EMP",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "AddPercent",
+                                "Value": -75
+                            },
+                            "2": {
+                                "Name": "Ability_G_Artillery_EMP_MP",
+                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Mode": "AddPercent",
+                                "Value": -75
+                            }
+                        }
+                    }
+                }
+            },
             "UnitAttributes": {
                 "Resource1Cost": 700,
                 "Resource2Cost": 280,
@@ -13132,7 +14510,7 @@
                     }
                 },
                 "Ability_K_ArtilleryBarrage_01_MP": {
-                    "CooldownTimeSecs": 40
+                    "CooldownTimeSecs": 80
                 },
                 "Ability_K_Artillery_EMP_MP": {
                     "CooldownTimeSecs": 40
@@ -13187,6 +14565,7 @@
                         "FieldOfView": 30.0
 
                     },
+                    "OutputDPS": true,
                     "AreaOfEffectRadius": 180,
                     "BaseDamagePerRound": 350,
                     "ReloadTimeMS": 4500,
@@ -13250,6 +14629,8 @@
                         "FieldOfView": 145.0
 
                     },
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
                     "ExcludeFromHeightAdvantage": true,
                     "StatusEffectsExcludeTargetType": "Carrier",
                     "BaseDamagePerRound": 400,
