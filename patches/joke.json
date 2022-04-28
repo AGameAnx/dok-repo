@@ -8,8 +8,8 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "0.13.99",
-    "LastUpdate": "2022-04-27",
+    "Version": "0.19.99", //Nines are creeping
+    "LastUpdate": "2022-04-28",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
 
@@ -25,12 +25,6 @@
                         "Value": -25
                     }
                 }
-            }
-        },
-        "Ability_C_OrbitalWeapon_Narrow": {
-            "AbilityViewAttributes": {
-                "IconName": "Icon-Command-RailGunReload"
-
             }
         },
         //"SobanTechTree": { // preserved if saajuk strikes json
@@ -674,7 +668,13 @@
                 "LocalizedLongDescriptionStringID": "[84a1e8]Make unit act like fancy bodyguard cultist."
             }
         },
-
+        "Ability_Common_ReturnToResourceController": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "QUICK DROP",
+                "LocalizedShortDescriptionStringID": "[00ff00]SKILL ISSUE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]WHAT DO YOU MEAN WE MISSING ONE RU???."
+            }
+        },
         // COALITION CARRIER
         "C_Carrier_MP": {
             //"ExperienceAttributes": { // alas can't be done, needs to have experience attributes already or it can't be created
@@ -4182,7 +4182,6 @@
                 }
             }
         },
-
         // KHAANEPH CARRIER
         "K_Carrier_MP": {
             "UnitAttributes": {
@@ -6019,7 +6018,7 @@
             "AbilityAttributes": {
                 "Ability_C_DeployTurret_MP": {
                     "CooldownTimeSecs": 90
-                    //"ProduceUnit": { "UnitTypeToProduce": "C_ArtilleryCruiser_MP" } // testing yaknow
+                    //"ProduceUnit": { "UnitTypeToProduce": "C_Battlecruiser" } // testing yaknow
                 },
                 "Ability_C_DeployTurret_BeginCooldown_MP": {
                     "CooldownTimeSecs": 90
@@ -8272,7 +8271,12 @@
                 }
             }
         },
+        "Ability_C_Nitrous_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedLongDescriptionStringID": "[84a1e8]We dont know what crazy things they throw into LAV engines but they get 200% speed boost for 10 seconds."
 
+            }
+        },
         // COALITION LAV
         "C_Escort_MP": {
             "UnitAttributes": {
@@ -11083,7 +11087,7 @@
                         "TakeNoDamageForMS": 15000
                     }
 
-                },                
+                },
                 "Ability_G_MissileCraft_CrowdControl_MP": {
                     "CooldownTimeSecs": 300
                 }
@@ -11219,9 +11223,9 @@
         // GAALSIEN/KHAANEPH MISSILE SHIP DIRECT FIRE UPGRADE
         "Research_Buff_G_CatamaranAA_AOE": {
             "ResearchItemAttributes": {
-                
-                    "ResearchTime": 20
-                }
+
+                "ResearchTime": 20
+            }
         },
 
         // COALITION/SOBAN STRIKE FIGHTER
@@ -12499,7 +12503,13 @@
                 }
             }
         },
-
+        //"Ability_G_BattleCruiser_ArmorBonus_MP": {
+        //    "AbilityViewAttributes": {
+        //        "IconName": "",
+        //        "LocalizedTitleStringID": "",
+        //        "LocalizedLongDescriptionStringID": "[84a1e8]"      
+        //    }
+        // },
         // COALITION ASSAULT CRUISER
         "G_BattleCruiser_MP": {
             "UnitAttributes": {
@@ -13176,18 +13186,13 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Acolyte: +30% sensor range",
+                        "BuffTooltipLocID": "Acolyte: +500 to cruiser hull",
                         "RequiredExperience": 750,
                         "Buff": {
                             "0": {
-                                "Attribute": "Unit_SensorRadius",
-                                "Mode": "AddPercent",
-                                "Value": 30
-                            },
-                            "1": {
-                                "Attribute": "Unit_ContactRadius",
-                                "Mode": "AddPercent",
-                                "Value": 30
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 1500
                             }
                         }
                     },
@@ -14782,12 +14787,44 @@
 
             }
         }, // shhhhhhhhhhhhhhhhhhhhhh dont look here, you gona find them in game you cheater
-        "Ability_C_CruiseMissile": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
-        "Ability_G_BattleCruiser_Missile_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
+        "Ability_C_CruiseMissile_MP": {
+            "AbilityViewAttributes": {
+                "InvertFillCooldown": true,
+                "LocalizedTitleStringID": "LAUNCH THE NUKE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Fires an actual anti-matter nuke. Capable of wiping out whole armys and unlucky carriers by its own."
+            }
+        },
+        "Ability_G_BattleCruiser_Missile_MP": {
+            "AbilityViewAttributes": {
+                "InvertFillCooldown": true,
+                "IconName": "Icon-Command-GroundTargetAA",
+                "LocalizedTitleStringID": "UNDIRECT FIRE BARRAGE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Fires punishing Timmy class HE shells, damaging (what a surprise) enemies in small area."
+            }
+        },
         "Ability_C_ArtilleryBarrage_Precise": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
+        "Ability_C_ArtilleryBarrage": {
+            "AbilityViewAttributes": {
+                "IconName": "Icon-Command-CruiseMissile",
+                "LocalizedTitleStringID": "UNPRECISON BARRAGE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Fires single, high damage missile that hits random spot in the targeted area."
+            }
+        },
         "Ability_C_ProduceProbe_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
         "Ability_C_LaunchProbe_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
-        "Ability_K_MissileBarrage": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
+        "Ability_K_MissileBarrage": {
+            "AbilityViewAttributes": {
+                "LocalizedLongDescriptionStringID": "[84a1e8]Launch a single stolen coalition cruise missile at the targeted area. Shounting increases range and decrises cooldown. Will opens wreck builkheads in its impact area. More missiles will be stolen over time.\n\nHow dose one steal a coalition cruise missile?\n\nWE STEAL IT MID-FLIGHT"
+            }
+        },
+        "Ability_K_GrantShuntingBombToCarrier": {
+            "AbilityViewAttributes": {
+                "InvertFillCooldown": true,
+                "IconName": "Icon-Command-TacticalMissile",
+                "LocalizedTitleStringID": "ACQUIRE MISSILE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Automaticly steal, appropriate, nab, scrump, heist a coalition cruise missile."
+            }
+        },
         "Ability_G_DeployScanner_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
         "Ability_G_HonorSwitchMode": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
         "Ability_G_ArtilleryBarrage_01_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
@@ -14796,6 +14833,12 @@
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD STARHULL TANK",
                 "LocalizedLongDescriptionStringID": "Medium-range heavely armored weapons platform. Strong against all ground targets."
+            }
+        },
+        "Ability_G_BaseRunnerPassiveRegen": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "RELEASE ANGRY NANITES",
+                "LocalizedLongDescriptionStringID": "Baserunner spews out nanits that feed on any surounding unit hull to restore baserunner health. Capable of repairing even without units around it using sand power.\n\n[999da0]Nanomachines son."
             }
         },
         "Ability_Produce_G_StarHull_U1_MP": {
@@ -14823,8 +14866,18 @@
         "Ability_C_ProduceInterceptor_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD PEANUT LIGHT BOMBER" } },
         "Ability_C_Sob_ProduceInterceptor_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD PEANUT LIGHT BOMBER" } },
         "Ability_G_ProduceBattlecruiser_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD GAALSIEN BATTLECRUISER" } },
-        "Ability_G_ProduceSupportCruiser_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD SUPPORT CRUISER" } },
-        "Ability_K_ProduceSupportCruiser_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD SUPPORT CRUISER" } },
+        "Ability_G_ProduceSupportCruiser_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "BUILD SUPPORT CRUISER",
+                "LocalizedLongDescriptionStringID": "Build cuiser capable of producing light and heavy vehicles. Alos able to protect itself from lightly armored ground units.\n\nCan be upgraded to act as resource drop off point."
+            }
+        },
+        "Ability_K_ProduceSupportCruiser_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "BUILD SUPPORT CRUISER",
+                "LocalizedLongDescriptionStringID": "Build cuiser capable of producing light and heavy vehicles. Alos able to protect itself from lightly armored ground units. Shounting increases range and effect of movement buff.\n\nCan be upgraded to act as resource drop off point."
+            }
+        },
         "Ability_K_ProduceExplodingSkimmer_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD EXPLODING SKIMMER" } },
         "Ability_C_Sob_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Strong against air targets and carriers." } },
         "Ability_C_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Strong against air targets and carriers." } },
@@ -14864,6 +14917,11 @@
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD SANDSIEGER",
                 "LocalizedLongDescriptionStringID": "Fast-moving Strike vehicle. Strong against large or not moving targets."
+            }
+        },
+        "Ability_Common_DemoChargeLay_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedLongDescriptionStringID": "Dploy timed charge designed to blow-open wreck builkheads. [ff0000]CAUTION WILL DEAL HEAVY DAMAGE TO ANYTHING THAT IN CLOSE PROXIMITY!"
             }
         },
         "Ability_G_ProduceHonorCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Ultimate Gaalsien anti air cruiser. Armed with Huge AA burst-fiered raingun and strong undirect fire weapons." } },
