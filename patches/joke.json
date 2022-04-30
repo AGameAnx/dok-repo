@@ -8,7 +8,7 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "0.19.99", //Nines are creeping
+    "Version": "0.19.nine9", //Nines are creeping
     "LastUpdate": "2022-04-28",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
@@ -3265,14 +3265,14 @@
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD SMOKEFISH",
                 "LocalizedShortDescriptionStringID": "FISH",
-                "LocalizedLongDescriptionStringID": "Slow moving areal fish. Strong against ground non-shoting back targets."
+                "LocalizedLongDescriptionStringID": "Slow moving aerial fish. Strong against ground non-shoting back targets."
             }
         },
         "Ability_Produce_K_Interceptor": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD SMOKEFISH",
                 "LocalizedShortDescriptionStringID": "FISH",
-                "LocalizedLongDescriptionStringID": "Slow moving areal fish. Strong against ground non-shoting back targets."
+                "LocalizedLongDescriptionStringID": "Slow moving aerial fish. Strong against ground non-shoting back targets."
             }
         },
         "Ability_G_MissileBarrage": {
@@ -7676,7 +7676,11 @@
                 }
             }
         },
-
+        "Ability_C_SlowDebuff": {
+            "AbilityViewAttributes": {
+                "LocalizedLongDescriptionStringID": "When firing, any enemy target is slowed by 50% for 2 seconds.\n\nNot only men abut women and carriers too."
+            }
+        },
         // COALITION AAV FABRICATION
         "Tier_2_C_ArmouredAssault": {
             "ResearchItemAttributes": {
@@ -11798,7 +11802,7 @@
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "SMOKEFISH FABRICATION",
                 "LocalizedShortDescriptionStringID": "FISH UNLOCK",
-                "LocalizedLongDescriptionStringID": "Slow moving areal fish. Strong against ground targets",
+                "LocalizedLongDescriptionStringID": "Slow moving aerial fish. Strong against ground targets",
                 "Resource1Cost": 450,
                 "ResearchTime": 70
             }
@@ -13376,20 +13380,8 @@
         // GAALSIEN/KHAANEPH HONORGUARD ANTI AIR UPGRADE
         "Research_Buff_G_HonorCruiser_Defenses": {
             "ResearchItemAttributes": {
-                "UnitTypeBuffs": {
-                    "0": {
-                        "UnitClass": -1,
-                        "ClassOperator": "Or",
-                        "BuffSet": {
-                            "0": {
-                                "Name": "G_HonorGuard_Weapon_G2G_CAT_MP", //work damn you
-                                "Attribute": 33554432,
-                                "Mode": "Add",
-                                "Value": 2000
-                            }
-                        }
-                    }
-                },
+                "LocalizedTitleStringID": "HONORGUARD CLOSE RANGE DEFENSES",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Unlocks an ability to reroute power form main weapon to close range anti-ground undirect fire missile weapons for 25 seconds.\n\n cough cough... What is that you smoking dude? Our armor?",
                 "Resource1Cost": 300,
                 "Resource2Cost": 200,
                 "ResearchTime": 45
@@ -13399,8 +13391,8 @@
         // BATTLECRUISER FIELD REPAIR TOOLTIP
         "Ability_C_SmokeGrenade_BattleCruiser": {
             "AbilityViewAttributes": {
-                "LocalizedTitleStringID": "Field repairs",
-                "LocalizedLongDescriptionStringID": "Use defensive smoke and perform field repairs on the battlecruiser"
+                "LocalizedTitleStringID": "INTENSE SMOKING",
+                "LocalizedLongDescriptionStringID": "Temporary allow smoking on battlecruiser bridge, direct effect is damage to health, secondary effect nobody can directly shoot it."
             }
         },
 
@@ -14826,7 +14818,13 @@
             }
         },
         "Ability_G_DeployScanner_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
-        "Ability_G_HonorSwitchMode": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
+        "Ability_G_HonorSwitchMode": {
+            "AbilityViewAttributes": {
+                "InvertFillCooldown": true,
+                "LocalizedTitleStringID": "ENABLE DEFENCE SYSTEMS",
+                "LocalizedLongDescriptionStringID": "[84a1e8]For 25 seconds power from main weapon rerouted to anti-ground missile defences from main weapon.."
+            }
+        },
         "Ability_G_ArtilleryBarrage_01_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
         "Ability_G_RailGun_Scope_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
         "Ability_Produce_G_StarHull_MP": {
@@ -14876,6 +14874,11 @@
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD SUPPORT CRUISER",
                 "LocalizedLongDescriptionStringID": "Build cuiser capable of producing light and heavy vehicles. Alos able to protect itself from lightly armored ground units. Shounting increases range and effect of movement buff.\n\nCan be upgraded to act as resource drop off point."
+            }
+        },
+        "Ability_C_SmokeGrenade_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedLongDescriptionStringID": "Provide c-c-cough cough... coover by lying down a smoke screen for 10 seconds.\n\nSmoking is bad for unit health."
             }
         },
         "Ability_K_ProduceExplodingSkimmer_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD EXPLODING SKIMMER" } },
