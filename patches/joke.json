@@ -8,8 +8,8 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "1.01.01",
-    "LastUpdate": "2022-05-04",
+    "Version": "1.02.00",
+    "LastUpdate": "2022-05-06",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
 
@@ -3311,195 +3311,198 @@
         }
       },
 
-      "AbilityAttributes": {
-        "Ability_G_MissileBarrage": {
-          "CooldownTimeSecs": 160,
-          "ChainCasting": { "QueuedAbility": "Ability_G_MissileBarrage_Sight" }
-          //"UseWeapon": { "WeaponID": "G_Carrier_Weapon_EMP_MP" } wtf?
-        },
-        "Ability_G_LaunchInterceptor_Upgraded_MP": {
-          "AirSortie": {
-            "LoiterLength": 90,
-            "SetAttackTargetsWithinRadius": 1100,
-            "SortieSquadSize": 1
-          }
-        },
-        "Ability_G_LaunchBomber_MP": {
-          "AirSortie": {
-            "LoiterLength": 120,
-            "SetAttackTargetsWithinRadius": 2000
-          }
-        }
-      },
-      "WeaponAttributes": {
-        "G_Carrier_Weapon_G2All_MP": {
-          "BaseDamagePerRound": 30,
-          "ExcludeFromHeightAdvantage": true,
-          "RateOfFire": 3,
-          "TargetStyle": "Flak",
-          "RangeAttributesShort": {
-            "Distance": 400,
-            "Accuracy": 50
-          },
-          "RangeAttributesMedium": {
-            "Distance": 600,
-            "Accuracy": 35
-          },
-          "RangeAttributesLong": {
-            "Accuracy": 20,
-            "Distance": 800
-          },
-          "Modifiers": {
-            "0": {
-              "Remove": true
+        "AbilityAttributes": {            
+            "Ability_G_MissileBarrage": {
+                "CooldownTimeSecs": 160,
+                "ChainCasting": { "QueuedAbility": "Ability_G_MissileBarrage_Sight" }
+                //"UseWeapon": { "WeaponID": "G_Carrier_Weapon_EMP_MP" } wtf?
             },
-            "1": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyShortValue",
-              "Amount": 50
+            "Ability_G_LaunchInterceptor_Upgraded_MP": {
+                "AirSortie": {
+                    "LoiterLength": 90,
+                    "SetAttackTargetsWithinRadius": 1100,
+                    "SortieSquadSize": 1
+                }
             },
-            "2": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyMediumValue",
-              "Amount": 45
-            },
-            "3": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyLongValue",
-              "Amount": 35
-            },
-            "4": { "Remove": true },
-            "5": { "Remove": true },
-            "6": { "Remove": true },
-            "7": { "Remove": true },
-            "8": { "Remove": true },
-            "9": { "Remove": true },
-            "10": { "Remove": true },
-            "11": { "Remove": true },
-            "12": { "Remove": true }
-          }
-        },
-        "G_Carrier_Weapon_G2All_Dummy_MP": {
-          "BaseDamagePerRound": 30
-        },
-        "G_Carrier_Weapon_G2All_APBULLETS_MP": {
-          "BaseDamagePerRound": 30,
-          "ExcludeFromHeightAdvantage": true,
-          "RateOfFire": 3,
-          "TargetStyle": "Flak",
-          "RangeAttributesShort": {
-            "Distance": 400,
-            "Accuracy": 50
-          },
-          "RangeAttributesMedium": {
-            "Distance": 600,
-            "Accuracy": 35
-          },
-          "RangeAttributesLong": {
-            "Accuracy": 20,
-            "Distance": 800
-          },
-          "Modifiers": {
-            "0": {
-              "Remove": true
-            },
-            "1": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyShortValue",
-              "Amount": 50
-            },
-            "2": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyMediumValue",
-              "Amount": 45
-            },
-            "3": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyLongValue",
-              "Amount": 35
-            },
-            "4": { "Remove": true },
-            "5": { "Remove": true },
-            "6": { "Remove": true },
-            "7": { "Remove": true },
-            "8": { "Remove": true },
-            "9": { "Remove": true },
-            "10": { "Remove": true },
-            "11": { "Remove": true },
-            "12": { "Remove": true }
-          }
-        },
-        "G_Carrier_Weapon_DefaultMissile_MP": {
-          "FriendlyFireDamageScalar": 1,
-          "WeaponOwnerFriendlyFireDamageScalar": 1,
-          "LineOfSightRequired": false,
-          "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
-          "BaseDamagePerRound": 1250,
-          "AreaOfEffectRadius": 500,
-          "AreaOfEffectFalloffType": "Quadratic",
-          "BurstPeriodMinTimeMS": 50,
-          "BurstPeriodMaxTimeMS": 50,
-
-          "WindDownTimeMS": 0,
-          "ReloadTimeMS": 10000,
-          "CooldownTimeMS": 0,
-          "RangeAttributesShort": {
-            "Remove": true
-          },
-          "RangeAttributesMedium": {
-            "Remove": true
-          },
-          "RangeAttributesLong": {
-            "MinDistance": 350, // don't gib urself
-            "Distance": 700
-          }
-        },
-        "G_Carrier_Weapon_BarrageMissile_MP": {
-          "FriendlyFireDamageScalar": 1,
-          "WeaponOwnerFriendlyFireDamageScalar": 1,
-          "WindUpTimeMS": 0,
-          "WindDownTimeMS": 0,
-          "NumberOfBursts": 1,
-          "RateOfFire": 1,
-          "BurstPeriodMinTimeMS": 1,
-          "BurstPeriodMaxTimeMS": 1,
-          "CooldownTimeMS": 0,
-          "ReloadTimeMS": 0,
-          "BaseWreckDamagePerRound": 100,
-          "ProjectileEntityTypeToSpawn": "SuperWeapon_Narrow_ProjectileAssetContainer",
-          "ExcludeFromHeightAdvantage": true,
-          "BaseDamagePerRound": 7500,
-          "DamagePacketsPerShot": 0,
-          "AreaOfEffectRadius": 350,
-          "AreaOfEffectFalloffType": "Linear",
-          "Modifiers": {
-            "0": {
-              "TargetClass": "Carrier",
-              "Modifier": "DamagePercent",
-              "Amount": 50
-            },
-            "1": {
-              "Remove": true
+            "Ability_G_LaunchBomber_MP": {
+                "AirSortie": {
+                    "LoiterLength": 120,
+                    "SetAttackTargetsWithinRadius": 2000
+                }
             }
-          },
-          "RangeAttributesShort": {
-            "Remove": true
-          },
-          "RangeAttributesMedium": {
-            "Remove": true
-          },
-          "RangeAttributesLong": {
-            "MinDistance": 0,
-            "Distance": 420000
-          }
-        }
-      },
+        },
+        "WeaponAttributes": {
+            "G_Carrier_Weapon_Missile_SightLauncher_MP 1": {
+                "RangeAttributesLong": { "Distance": 420000 }                
+            },
+            "G_Carrier_Weapon_G2All_MP": {
+                "BaseDamagePerRound": 30,
+                "ExcludeFromHeightAdvantage": true,
+                "RateOfFire": 3,
+                "TargetStyle": "Flak",
+                "RangeAttributesShort": {
+                    "Distance": 400,
+                    "Accuracy": 50
+                },
+                "RangeAttributesMedium": {
+                    "Distance": 600,
+                    "Accuracy": 35
+                },
+                "RangeAttributesLong": {
+                    "Accuracy": 20,
+                    "Distance": 800
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyShortValue",
+                        "Amount": 50
+                    },
+                    "2": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyMediumValue",
+                        "Amount": 45
+                    },
+                    "3": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyLongValue",
+                        "Amount": 35
+                    },
+                    "4": { "Remove": true },
+                    "5": { "Remove": true },
+                    "6": { "Remove": true },
+                    "7": { "Remove": true },
+                    "8": { "Remove": true },
+                    "9": { "Remove": true },
+                    "10": { "Remove": true },
+                    "11": { "Remove": true },
+                    "12": { "Remove": true }
+                }
+            },
+            "G_Carrier_Weapon_G2All_Dummy_MP": {
+                "BaseDamagePerRound": 30
+            },
+            "G_Carrier_Weapon_G2All_APBULLETS_MP": {
+                "BaseDamagePerRound": 30,
+                "ExcludeFromHeightAdvantage": true,
+                "RateOfFire": 3,
+                "TargetStyle": "Flak",
+                "RangeAttributesShort": {
+                    "Distance": 400,
+                    "Accuracy": 50
+                },
+                "RangeAttributesMedium": {
+                    "Distance": 600,
+                    "Accuracy": 35
+                },
+                "RangeAttributesLong": {
+                    "Accuracy": 20,
+                    "Distance": 800
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyShortValue",
+                        "Amount": 50
+                    },
+                    "2": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyMediumValue",
+                        "Amount": 45
+                    },
+                    "3": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyLongValue",
+                        "Amount": 35
+                    },
+                    "4": { "Remove": true },
+                    "5": { "Remove": true },
+                    "6": { "Remove": true },
+                    "7": { "Remove": true },
+                    "8": { "Remove": true },
+                    "9": { "Remove": true },
+                    "10": { "Remove": true },
+                    "11": { "Remove": true },
+                    "12": { "Remove": true }
+                }
+            },
+            "G_Carrier_Weapon_DefaultMissile_MP": {
+                "FriendlyFireDamageScalar": 1,
+                "WeaponOwnerFriendlyFireDamageScalar": 1,
+                "LineOfSightRequired": false,
+                "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
+                "BaseDamagePerRound": 1250,
+                "AreaOfEffectRadius": 500,
+                "AreaOfEffectFalloffType": "Quadratic",
+                "BurstPeriodMinTimeMS": 50,
+                "BurstPeriodMaxTimeMS": 50,
+
+                "WindDownTimeMS": 0,
+                "ReloadTimeMS": 10000,
+                "CooldownTimeMS": 0,
+                "RangeAttributesShort": {
+                    "Remove": true
+                },
+                "RangeAttributesMedium": {
+                    "Remove": true
+                },
+                "RangeAttributesLong": {
+                    "MinDistance": 350, // don't gib urself
+                    "Distance": 700
+                }
+            },
+            "G_Carrier_Weapon_BarrageMissile_MP": {
+                "FriendlyFireDamageScalar": 1,
+                "WeaponOwnerFriendlyFireDamageScalar": 1,
+                "WindUpTimeMS": 0,
+                "WindDownTimeMS": 0,
+                "NumberOfBursts": 1,
+                "RateOfFire": 1,
+                "BurstPeriodMinTimeMS": 1,
+                "BurstPeriodMaxTimeMS": 1,
+                "CooldownTimeMS": 0,
+                "ReloadTimeMS": 0,
+                "BaseWreckDamagePerRound": 100,
+                "ProjectileEntityTypeToSpawn": "SuperWeapon_Narrow_ProjectileAssetContainer",
+                "ExcludeFromHeightAdvantage": true,
+                "BaseDamagePerRound": 7500,
+                "DamagePacketsPerShot": 0,
+                "AreaOfEffectRadius": 350,
+                "AreaOfEffectFalloffType": "Linear",
+                "Modifiers": {
+                    "0": {
+                        "TargetClass": "Carrier",
+                        "Modifier": "DamagePercent",
+                        "Amount": 50
+                    },
+                    "1": {
+                        "Remove": true
+                    }
+                },
+                "RangeAttributesShort": {
+                    "Remove": true
+                },
+                "RangeAttributesMedium": {
+                    "Remove": true
+                },
+                "RangeAttributesLong": {
+                    "MinDistance": 0,
+                    "Distance": 420000
+                }
+            }
+        },
       "PowerShuntAttributes": {
         "ReservePowerPool": {
           "HasUnlimitedCapacity": true
@@ -4207,186 +4210,227 @@
           }
         }
       },
-      "AbilityAttributes": {
-        "Ability_Launch_K_Interceptor": {
-          "AirSortie": {
-            "LoiterLength": 90,
-            "SetAttackTargetsWithinRadius": 1100,
-            "SortieSquadSize": 1
-          }
-        },
-        "Ability_Launch_K_Interceptor_Upgraded": {
-          "AirSortie": {
-            "LoiterLength": 90,
-            "SetAttackTargetsWithinRadius": 1100,
-            "SortieSquadSize": 1
-          }
-        },
-        "Ability_Launch_K_Bomber": {
-          "AirSortie": {
-            "LoiterLength": 120,
-            "SetAttackTargetsWithinRadius": 2000
-          }
-        },
-        "Ability_K_GrantShuntingBombToCarrier": {
-          "WarmupTimeSecs": 100
-        }
-      },
-      "WeaponAttributes": {
-        "G_Carrier_Weapon_G2All_Dummy_MP": {
-          "BaseDamagePerRound": 30
-        },
-        "K_Carrier_Weapon_G2All_MP": {
-          "BaseDamagePerRound": 30,
-          "ExcludeFromHeightAdvantage": true,
-          "RateOfFire": 3,
-          "TargetStyle": "Flak",
-          "RangeAttributesShort": {
-            "Distance": 600,
-            "Accuracy": 50
-          },
-          "RangeAttributesMedium": {
-            "Distance": 800,
-            "Accuracy": 35
-          },
-          "RangeAttributesLong": {
-            "Accuracy": 20,
-            "Distance": 1000
-          },
-          "Modifiers": {
-            "0": {
-              "Remove": true
+        "AbilityAttributes": {
+            //"Ability_G_MissileBarrage_Sight": { // cant have nice things
+            //    "StartsRemovedInGameMode": "None",
+            //    "TargetingType": "Ground",
+            //    "UseWeapon": { "WeaponID": "EMP" }
+            //},
+            //"Ability_K_MissileBarrage": { "ChainCasting": { "QueuedAbility": "Ability_G_MissileBarrage_Sight" } },
+            "Ability_Launch_K_Interceptor": {
+                "AirSortie": {
+                    "LoiterLength": 90,
+                    "SetAttackTargetsWithinRadius": 1100,
+                    "SortieSquadSize": 1
+                }
             },
-            "1": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyShortValue",
-              "Amount": 50
+            "Ability_Launch_K_Interceptor_Upgraded": {
+                "AirSortie": {
+                    "LoiterLength": 90,
+                    "SetAttackTargetsWithinRadius": 1100,
+                    "SortieSquadSize": 1
+                }
             },
-            "2": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyMediumValue",
-              "Amount": 45
+            "Ability_Launch_K_Bomber": {
+                "AirSortie": {
+                    "LoiterLength": 120,
+                    "SetAttackTargetsWithinRadius": 2000
+                }
             },
-            "3": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyLongValue",
-              "Amount": 35
-            },
-            "4": { "Remove": true },
-            "5": { "Remove": true },
-            "6": { "Remove": true },
-            "7": { "Remove": true },
-            "8": { "Remove": true },
-            "9": { "Remove": true },
-            "10": { "Remove": true },
-            "11": { "Remove": true },
-            "12": { "Remove": true }
-          }
-        },
-        "G_Carrier_Weapon_G2All_APBULLETS_MP": {
-          "BaseDamagePerRound": 30,
-          "ExcludeFromHeightAdvantage": true,
-          "RateOfFire": 3,
-          "TargetStyle": "Flak",
-          "RangeAttributesShort": {
-            "Distance": 350,
-            "Accuracy": 50
-          },
-          "RangeAttributesMedium": {
-            "Distance": 650,
-            "Accuracy": 35
-          },
-          "RangeAttributesLong": {
-            "Accuracy": 20,
-            "Distance": 950
-          },
-          "Modifiers": {
-            "0": {
-              "Remove": true
-            },
-            "1": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyShortValue",
-              "Amount": 50
-            },
-            "2": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyMediumValue",
-              "Amount": 45
-            },
-            "3": {
-              "TargetClass": "Air",
-              "ClassOperator": "Or",
-              "Modifier": "AccuracyLongValue",
-              "Amount": 35
-            },
-            "4": { "Remove": true },
-            "5": { "Remove": true },
-            "6": { "Remove": true },
-            "7": { "Remove": true },
-            "8": { "Remove": true },
-            "9": { "Remove": true },
-            "10": { "Remove": true },
-            "11": { "Remove": true },
-            "12": { "Remove": true }
-          }
-        },
-        "K_Carrier_Weapon_DefaultMissile_MP": {
-          "FriendlyFireDamageScalar": 1,
-          "WeaponOwnerFriendlyFireDamageScalar": 1,
-          "LineOfSightRequired": false,
-          "DamagePacketsPerShot": 1,
-          "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
-          "BaseDamagePerRound": 1250,
-          "AreaOfEffectRadius": 500,
-          "AreaOfEffectFalloffType": "Quadratic",
-          "BurstPeriodMinTimeMS": 50,
-          "BurstPeriodMaxTimeMS": 50,
-          "NumberOfBursts": 1,
-          "WindDownTimeMS": 0,
-          "ReloadTimeMS": 10000,
-          "CooldownTimeMS": 0,
-          "RangeAttributesShort": {
-            "Remove": true
-          },
-          "RangeAttributesMedium": {
-            "Remove": true
-          },
-          "RangeAttributesLong": {
-            "MinDistance": 350, // don't gib urself
-            "Distance": 1650
-          },
-          "ExcludeFromHeightAdvantage": true
-        },
-        "K_Carrier_Weapon_BarrageMissile_MP": {
-          "WeaponOwnerFriendlyFireDamageScalar": 1.0,
-          "FriendlyFireDamageScalar": 1.0,
-          "BaseWreckDamagePerRound": 100,
-          "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
-          "BaseDamagePerRound": 1250,
-          "DamagePacketsPerShot": 1,
-          "AreaOfEffectRadius": 500,
-          "AreaOfEffectFalloffType": "Quadratic",
-          "ExcludeFromHeightAdvantage": true,
-          "RangeAttributesLong": {
-            "MinDistance": 1000,
-            "Distance": 500
-          },
-          "Modifiers": {
-            "0": {
-              "Remove": true
-            },
-            "1": {
-              "Remove": true
+            "Ability_K_GrantShuntingBombToCarrier": {
+                "WarmupTimeSecs": 100
             }
-          }
-        }
-      },
+        },
+        "WeaponAttributes": {
+            //"G_Carrier_Weapon_EMP_MP": {
+            //    "ExcludeFromAutoTargetAcquisition": true,
+            //    "ExcludeFromAutoFire": true,
+            //    "LineOfSightRequired": false,
+            //    "TracerSpeed": 100000,
+            //    "TracerLength": 1,
+            //    "BaseDamagePerRound": 0,
+            //    "BaseWreckDamagePerRound": 0,
+            //    "FiringRecoil": 0,
+            //    "WindUpTimeMS": 0,
+            //    "RateOfFire": 1,
+            //    "NumberOfBursts": 1,
+            //    "DamagePacketsPerShot": 0,
+            //    "BurstPeriodMinTimeMS": 1000,
+            //    "BurstPeriodMaxTimeMS": 2000,
+            //    "CooldownTimeMS": 1,
+            //    "WindDownTimeMS": 1,
+            //    "ReloadTimeMS": 1,
+            //    "AreaOfEffectRadius": 1,
+            //    "FriendlyFireDamageScalar": 0,
+            //    "WeaponOwnerFriendlyFireDamageScalar": 1,
+            //    "ActiveStatusEffectsIndex": 1,
+            //    "IsTracer": false,
+            //    "RangeAttributesShort": { "Distance": 35000 },
+            //    "ProjectileEntityTypeToSpawn": "K_ExplodingSkimmer_Shell_ProjectileAssetContainer_MP",
+            //    "EntityTypesToSpawnOnImpact": {
+            //        "0": {
+            //            "EntityTypeToSpawn": "N_MissileBarrage_Sight"
+            //        }
+            //    },
+            //    "Turret": {
+            //        "FieldOfView": 360,
+            //        "FieldOfFire": 360
+            //    }
+            //},
+            "G_Carrier_Weapon_G2All_Dummy_MP": {
+                "BaseDamagePerRound": 30
+            },
+            "K_Carrier_Weapon_G2All_MP": {
+                "BaseDamagePerRound": 30,
+                "ExcludeFromHeightAdvantage": true,
+                "RateOfFire": 3,
+                "TargetStyle": "Flak",
+                "RangeAttributesShort": {
+                    "Distance": 600,
+                    "Accuracy": 50
+                },
+                "RangeAttributesMedium": {
+                    "Distance": 800,
+                    "Accuracy": 35
+                },
+                "RangeAttributesLong": {
+                    "Accuracy": 20,
+                    "Distance": 1000
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyShortValue",
+                        "Amount": 50
+                    },
+                    "2": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyMediumValue",
+                        "Amount": 45
+                    },
+                    "3": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyLongValue",
+                        "Amount": 35
+                    },
+                    "4": { "Remove": true },
+                    "5": { "Remove": true },
+                    "6": { "Remove": true },
+                    "7": { "Remove": true },
+                    "8": { "Remove": true },
+                    "9": { "Remove": true },
+                    "10": { "Remove": true },
+                    "11": { "Remove": true },
+                    "12": { "Remove": true }
+                }
+            },
+            "G_Carrier_Weapon_G2All_APBULLETS_MP": {
+                "BaseDamagePerRound": 30,
+                "ExcludeFromHeightAdvantage": true,
+                "RateOfFire": 3,
+                "TargetStyle": "Flak",
+                "RangeAttributesShort": {
+                    "Distance": 350,
+                    "Accuracy": 50
+                },
+                "RangeAttributesMedium": {
+                    "Distance": 650,
+                    "Accuracy": 35
+                },
+                "RangeAttributesLong": {
+                    "Accuracy": 20,
+                    "Distance": 950
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyShortValue",
+                        "Amount": 50
+                    },
+                    "2": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyMediumValue",
+                        "Amount": 45
+                    },
+                    "3": {
+                        "TargetClass": "Air",
+                        "ClassOperator": "Or",
+                        "Modifier": "AccuracyLongValue",
+                        "Amount": 35
+                    },
+                    "4": { "Remove": true },
+                    "5": { "Remove": true },
+                    "6": { "Remove": true },
+                    "7": { "Remove": true },
+                    "8": { "Remove": true },
+                    "9": { "Remove": true },
+                    "10": { "Remove": true },
+                    "11": { "Remove": true },
+                    "12": { "Remove": true }
+                }
+            },
+            "K_Carrier_Weapon_DefaultMissile_MP": {
+                "FriendlyFireDamageScalar": 1,
+                "WeaponOwnerFriendlyFireDamageScalar": 1,
+                "LineOfSightRequired": false,
+                "DamagePacketsPerShot": 1,
+                "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
+                "BaseDamagePerRound": 1250,
+                "AreaOfEffectRadius": 500,
+                "AreaOfEffectFalloffType": "Quadratic",
+                "BurstPeriodMinTimeMS": 50,
+                "BurstPeriodMaxTimeMS": 50,
+                "NumberOfBursts": 1,
+                "WindDownTimeMS": 0,
+                "ReloadTimeMS": 10000,
+                "CooldownTimeMS": 0,
+                "RangeAttributesShort": {
+                    "Remove": true
+                },
+                "RangeAttributesMedium": {
+                    "Remove": true
+                },
+                "RangeAttributesLong": {
+                    "MinDistance": 350, // don't gib urself
+                    "Distance": 1650
+                },
+                "ExcludeFromHeightAdvantage": true
+            },
+            "K_Carrier_Weapon_BarrageMissile_MP": {
+                "WeaponOwnerFriendlyFireDamageScalar": 1.0,
+                "FriendlyFireDamageScalar": 1.0,
+                "BaseWreckDamagePerRound": 100,
+                "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
+                "BaseDamagePerRound": 1250,
+                "DamagePacketsPerShot": 1,
+                "AreaOfEffectRadius": 500,
+                "AreaOfEffectFalloffType": "Quadratic",
+                "ExcludeFromHeightAdvantage": true,
+                "RangeAttributesLong": {
+                    "MinDistance": 1000,
+                    "Distance": 500
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "Remove": true
+                    }
+                }
+            }
+        },
       "PowerShuntAttributes": {
         "PowerLevelChargeTimeSeconds": 3,
         "ReservePowerPool": {
@@ -5362,36 +5406,36 @@
       },
       "WeaponAttributes": {
         "N_Gun_Turret_Weapon_G2G_MP": {
-          "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
-          "IsTracer": false,
-          "TracerSpeed": 0,
-          "TracerLength": 5,
-          "BaseDamagePerRound": 100,
-          "DamagePacketsPerShot": 1,
-          "NumberOfBursts": 6,
-          "WindUpTimeMS": 250,
-          "CooldownTimeMS": 250,
-          "BurstPeriodMinTimeMS": 15,
-          "BurstPeriodMaxTimeMS": 15,
-          "RateOfFire": 1,
-          "ReloadTimeMS": 2500,
-          "LeadsTarget": 1,
-          "AreaOfEffectRadius": 125,
-          "AreaOfEffectFalloffType": "Quadratic",
-          "RangeAttributesShort": {
-            "Accuracy": 100,
-            "Distance": 1000
-          },
-          "RangeAttributesMedium": {
-            "Accuracy": 75,
-            "Distance": 1250
-          },
-          "RangeAttributesLong": {
-            "Accuracy": 50,
-            "Distance": 1500
-          },
-          "Turret": { "RotationSpeed": 150 },
-          "OutputDPS": true
+            "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
+            "IsTracer": false,
+            "TracerSpeed": 0,
+            "TracerLength": 5,
+            "BaseDamagePerRound": 100,
+            "DamagePacketsPerShot": 1,
+            "NumberOfBursts": 6,
+            "WindUpTimeMS": 250,
+            "CooldownTimeMS": 1,
+            "BurstPeriodMinTimeMS": 264,
+            "BurstPeriodMaxTimeMS": 264,
+            "RateOfFire": 1,
+            "ReloadTimeMS": 2500,
+            "LeadsTarget": 1,
+            "AreaOfEffectRadius": 125,
+            "AreaOfEffectFalloffType": "Quadratic",
+            "RangeAttributesShort": {
+                "Accuracy": 100,
+                "Distance": 1000
+            },
+            "RangeAttributesMedium": {
+                "Accuracy": 75,
+                "Distance": 1250
+            },
+            "RangeAttributesLong": {
+                "Accuracy": 50,
+                "Distance": 1500
+            },
+            "Turret": { "RotationSpeed": 150 },
+            "OutputDPS": true
         }
       }
     },
@@ -7008,7 +7052,7 @@
       "UnitAttributes": {
         "Resource1Cost": 560,
         "Resource2Cost": 50,
-        "MaxHealth": 3000,
+        "MaxHealth": 4000,
         "Armour": 6,
         "ProductionTime": 50,
         "SensorRadius": 1450,
@@ -7016,7 +7060,7 @@
       },
       "UnitMovementAttributes": {
         "Dynamics": {
-          "MaxSpeed": 45
+          "MaxSpeed": 70
         }
       },
       "ExperienceAttributes": {
@@ -7044,23 +7088,23 @@
             }
           },
           "3": {
-            "BuffTooltipLocID": "Sentinel: +300m range, +1 production line",
+            "BuffTooltipLocID": "Sentinel: +150m range, +1 production line",
             "RequiredExperience": 1750,
             "Buff": {
               "0": {
                 "Attribute": 33554434,
                 "Mode": "Add",
-                "Value": 300
+                "Value": 150
               },
               "1": {
                 "Attribute": 33554433,
                 "Mode": "Add",
-                "Value": 300
+                "Value": 150
               },
               "2": {
                 "Attribute": 33554432,
                 "Mode": "Add",
-                "Value": 300
+                "Value": 150
               },
               "3": {
                 "Attribute": 65544,
@@ -7156,15 +7200,15 @@
           "ReloadTimeMS": 1000,
           "RangeAttributesShort": {
             "Accuracy": 100,
-            "Distance": 700
+            "Distance": 100
           },
           "RangeAttributesMedium": {
             "Accuracy": 80,
-            "Distance": 800
+            "Distance": 200
           },
           "RangeAttributesLong": {
             "Accuracy": 50,
-            "Distance": 1000
+            "Distance": 300
           },
           "Modifiers": {
             "0": {
@@ -7193,15 +7237,15 @@
           "ReloadTimeMS": 1000,
           "RangeAttributesShort": {
             "Accuracy": 100,
-            "Distance": 700
+            "Distance": 100
           },
           "RangeAttributesMedium": {
             "Accuracy": 80,
-            "Distance": 800
+            "Distance": 200
           },
           "RangeAttributesLong": {
             "Accuracy": 50,
-            "Distance": 1000
+            "Distance": 300
           },
           "Modifiers": {
             "0": {
@@ -7222,8 +7266,8 @@
       "UnitAttributes": {
         "Resource1Cost": 560,
         "Resource2Cost": 50,
-        "MaxHealth": 3500,
-        "Armour": 6,
+        "MaxHealth": 4500,
+        "Armour": 7,
         "ProductionTime": 50,
         "SensorRadius": 1450,
         "ContactRadius": 1600
@@ -7234,11 +7278,11 @@
             "BuffTooltipLocID": "Novice: +10 firerate",
             "RequiredExperience": 1000,
             "Buff": {
-              "0": {
-                "Attribute": 262149,
-                "Mode": "Add",
-                "Value": 10
-              }
+                "0": {
+                    "Attribute": 262149,
+                    "Mode": "AddPercent",
+                    "Value": 100
+                }
             }
           },
           "2": {
@@ -7288,11 +7332,11 @@
                 "Mode": "AddPercent", //fraking work already you annoying werid thing FIXME
                 "Value": -50 //that suppose to add -5 to 15... eeeeh??? maybe it adds -7.5 who fraking knows but it defenetly dose less damage
               },
-              "1": {
-                "Attribute": 262149,
-                "Mode": "Add",
-                "Value": 90
-              },
+                "1": {
+                    "Attribute": 262149,
+                    "Mode": "AddPercent",
+                    "Value": 800
+                },
               "2": {
                 "Attribute": 262151,
                 "Mode": "Add",
@@ -7353,15 +7397,15 @@
           "ReloadTimeMS": 1000,
           "RangeAttributesShort": {
             "Accuracy": 100,
-            "Distance": 700
+            "Distance": 100
           },
           "RangeAttributesMedium": {
             "Accuracy": 80,
-            "Distance": 800
+            "Distance": 200
           },
           "RangeAttributesLong": {
             "Accuracy": 50,
-            "Distance": 1000
+            "Distance": 300
           },
           "Modifiers": {
             "0": {
@@ -7390,15 +7434,15 @@
           "ReloadTimeMS": 1000,
           "RangeAttributesShort": {
             "Accuracy": 100,
-            "Distance": 700
+            "Distance": 100
           },
           "RangeAttributesMedium": {
             "Accuracy": 80,
-            "Distance": 800
+            "Distance": 200
           },
           "RangeAttributesLong": {
             "Accuracy": 50,
-            "Distance": 1000
+            "Distance": 300
           },
           "Modifiers": {
             "0": {
@@ -7421,36 +7465,26 @@
     "Research_Buff_G_ProductionCruiserResourcer": {
       "ResearchItemAttributes": {
         "LocalizedResearchTitleStringID": "PRODUCTION CRUISER - SUPPORT MODE",
-        "LocalizedLongDescriptionStringID": "\n\n[84a1e8]Enable all Production Cruisers act as resource drop-off points. Also improves Production Cruisers hull integrity by 1000, speed by 25 and increses weapon range.",
+        "LocalizedLongDescriptionStringID": "\n\n[84a1e8]Enable all Production Cruisers act as resource drop-off points. Also improves Production Cruiser weapon range.",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": -1, // how tf this worked?
             "ClassOperator": "Or",
-            "BuffSet": {
+            "BuffSet": {              
               "0": {
-                "Attribute": 131072,
-                "Mode": "Add",
-                "Value": 25
-              },
-              "1": {
-                "Attribute": 65536,
-                "Mode": "Add",
-                "Value": 1000
-              },
-              "2": {
                 "Attribute": 33554432,
                 "Mode": "Add",
                 "Value": 300
               },
-              "3": {
+              "1": {
                 "Attribute": 33554433,
                 "Mode": "Add",
                 "Value": 400
               },
-              "4": {
+              "2": {
                 "Attribute": 33554434,
                 "Mode": "Add",
-                "Value": 400
+                "Value": 700
               }
             }
           }
@@ -7464,31 +7498,27 @@
     "Research_Buff_K_ProductionCruiserResourcer": {
       "ResearchItemAttributes": {
         "LocalizedResearchTitleStringID": "PRODUCTION CRUISER - SUPPORT MODE",
-        "LocalizedLongDescriptionStringID": "\n\n[84a1e8]Enable all Production Cruisers act as resource drop-off points. Also improves Production Cruisers hull integrety by 1500, armor by 5 and increses weapon range.",
+        "LocalizedLongDescriptionStringID": "\n\n[84a1e8]Enable all Production Cruisers act as resource drop-off points. Also improves Production Cruiser weapon range.",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": -1, // how tf this worked?
             "ClassOperator": "Or",
             "BuffSet": {
-              "0": {
-                "Attribute": 65540,
-                "Mode": "Add",
-                "Value": 5
-              },
+              
+                "0": {
+                    "Attribute": 33554433,
+                    "Mode": "Add",
+                    "Value": 300
+                },
               "1": {
-                "Attribute": 65536,
-                "Mode": "Add",
-                "Value": 1500
-              },
-              "2": {
                 "Attribute": 33554433,
                 "Mode": "Add",
                 "Value": 400
               },
-              "3": {
+              "2": {
                 "Attribute": 33554434,
                 "Mode": "Add",
-                "Value": 400
+                "Value": 700
               }
 
             }
@@ -10918,7 +10948,7 @@
       "AbilityViewAttributes": {
         "IconName": "Icon-Command-MissileBarrage3",
         "LocalizedTitleStringID": "CARRIER REPELLENT",
-        "LocalizedLongDescriptionStringID": "[84a1e8]Casual 1000 damage 8 missiles barrage.\n\n[ff0000]My name is Jafar\nI came from a far\nThere is a cruise missile in my car\nTake evasive action"
+        "LocalizedLongDescriptionStringID": "[84a1e8]Casual 2000 damage per missile, 8 missiles barrage.\n\n[ff0000]My name is Jafar\nI came from a far\nThere is a cruise missile in my car\nTake evasive action"
 
       }
     },
@@ -11055,19 +11085,24 @@
           }
         },
         "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
-          "ExcludeFromHeightAdvantage": true,
-          "BaseDamagePerRound": 2000,
-          "AreaOfEffectRadius": 750,
-          "AreaOfEffectFalloffType": "Quadratic",
-          "RangeAttributesShort": {
-            "Distance": 250
-          },
-          "RangeAttributesMedium": {
-            "Remove": true
-          },
-          "RangeAttributesLong": {
-            "Remove": true
-          }
+            "ExcludeFromHeightAdvantage": true,
+            "EntityTypesToSpawnOnImpact": {
+                "0": {
+                    "EntityTypeToSpawn": "N_MissileBarrage_Sight"
+                }
+            },
+            "BaseDamagePerRound": 2000,
+            "AreaOfEffectRadius": 750,
+            "AreaOfEffectFalloffType": "Quadratic",
+            "RangeAttributesShort": {
+                "Distance": 250
+            },
+            "RangeAttributesMedium": {
+                "Remove": true
+            },
+            "RangeAttributesLong": {
+                "Remove": true
+            }
         }
       }
     },
@@ -11199,19 +11234,24 @@
           }
         },
         "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
-          "ExcludeFromHeightAdvantage": true,
-          "BaseDamagePerRound": 2000,
-          "AreaOfEffectRadius": 750,
-          "AreaOfEffectFalloffType": "Quadratic",
-          "RangeAttributesShort": {
-            "Distance": 250
-          },
-          "RangeAttributesMedium": {
-            "Remove": true
-          },
-          "RangeAttributesLong": {
-            "Remove": true
-          }
+            "EntityTypesToSpawnOnImpact": {
+                "0": {
+                    "EntityTypeToSpawn": "N_MissileBarrage_Sight"
+                }
+            },
+            "ExcludeFromHeightAdvantage": true,
+            "BaseDamagePerRound": 2000,
+            "AreaOfEffectRadius": 750,
+            "AreaOfEffectFalloffType": "Quadratic",
+            "RangeAttributesShort": {
+                "Distance": 250
+            },
+            "RangeAttributesMedium": {
+                "Remove": true
+            },
+            "RangeAttributesLong": {
+                "Remove": true
+            }
         }
       }
     },
