@@ -8,9 +8,9 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "1.02.00",
-    "LastUpdate": "2022-05-06",
-    "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
+    "Version": "1.03.00",
+    "LastUpdate": "2022-05-08",
+    "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
   },
 
 
@@ -8359,9 +8359,18 @@
           "NumberOfBursts": 2,
           "BurstPeriodMinTimeMS": 950,
           "BurstPeriodMaxTimeMS": 1050,
-          "RangeAttributesShort": { "Accuracy": 85 },
-          "RangeAttributesMedium": { "Accuracy": 82 },
-          "RangeAttributesLong": { "Accuracy": 55 },
+            "RangeAttributesShort": {
+                "Accuracy": 10,
+                "Distance": 500
+            },
+            "RangeAttributesMedium": {
+                "Accuracy": 50,
+                "Distance": 900
+            },
+            "RangeAttributesLong": {
+                "Accuracy": 70,
+                "Distance": 1300
+            },
           "Turret": { "RotationSpeed": 390 },
           "Modifiers": {
             "0": {
@@ -8372,37 +8381,37 @@
               "TargetClass": "Medium",
               "ClassOperator": "Or",
               "Modifier": "AccuracyShortPercent",
-              "Amount": 115
+              "Amount": 100
             },
             "2": {
               "TargetClass": "Medium",
               "ClassOperator": "Or",
               "Modifier": "AccuracyMediumPercent",
-              "Amount": 115
+              "Amount": 100
             },
             "3": {
               "TargetClass": "Medium",
               "ClassOperator": "Or",
               "Modifier": "AccuracyLongPercent",
-              "Amount": 115
+              "Amount": 100
             },
             "4": {
               "TargetClass": "Large, XLarge",
               "ClassOperator": "Or",
               "Modifier": "AccuracyShortPercent",
-              "Amount": 130
+              "Amount": 100
             },
             "5": {
               "TargetClass": "Large, XLarge",
               "ClassOperator": "Or",
               "Modifier": "AccuracyMediumPercent",
-              "Amount": 130
+              "Amount": 100
             },
             "6": {
               "TargetClass": "Large, XLarge",
               "ClassOperator": "Or",
               "Modifier": "AccuracyLongPercent",
-              "Amount": 130
+              "Amount": 100
             }
           },
           "TargetPrioritizationAttributes": {
@@ -8438,12 +8447,12 @@
               "1": {
                 "Attribute": 33554433,
                 "Mode": "Add",
-                "Value": 300
+                "Value": 100
               },
               "2": {
                 "Attribute": 33554432,
                 "Mode": "Add",
-                "Value": 250
+                "Value": 50
               }
             }
           },
@@ -8486,12 +8495,12 @@
               "1": {
                 "Attribute": 33554433,
                 "Mode": "Add",
-                "Value": 1100
+                "Value": 300
               },
               "2": {
                 "Attribute": 33554432,
                 "Mode": "Add",
-                "Value": 1050
+                "Value": 150
               },
               "3": {
                 "Attribute": 262148,
@@ -8544,9 +8553,18 @@
           "NumberOfBursts": 2,
           "BurstPeriodMinTimeMS": 950,
           "BurstPeriodMaxTimeMS": 1050,
-          "RangeAttributesShort": { "Accuracy": 85 },
-          "RangeAttributesMedium": { "Accuracy": 82 },
-          "RangeAttributesLong": { "Accuracy": 55 },
+          "RangeAttributesShort": {
+                "Accuracy": 10,
+                "Distance": 500
+            },
+            "RangeAttributesMedium": {
+                "Accuracy": 50,
+                "Distance": 900
+            },
+            "RangeAttributesLong": {
+                "Accuracy": 70,
+                "Distance": 1300
+            },
           "Turret": { "RotationSpeed": 390 },
           "Modifiers": {
             "0": {
@@ -8557,37 +8575,37 @@
               "TargetClass": "Medium",
               "ClassOperator": "Or",
               "Modifier": "AccuracyShortPercent",
-              "Amount": 115
+              "Amount": 100
             },
             "2": {
               "TargetClass": "Medium",
               "ClassOperator": "Or",
               "Modifier": "AccuracyMediumPercent",
-              "Amount": 115
+              "Amount": 100
             },
             "3": {
               "TargetClass": "Medium",
               "ClassOperator": "Or",
               "Modifier": "AccuracyLongPercent",
-              "Amount": 115
+              "Amount": 100
             },
             "4": {
               "TargetClass": "Large, XLarge",
               "ClassOperator": "Or",
               "Modifier": "AccuracyShortPercent",
-              "Amount": 130
+              "Amount": 100
             },
             "5": {
               "TargetClass": "Large, XLarge",
               "ClassOperator": "Or",
               "Modifier": "AccuracyMediumPercent",
-              "Amount": 130
+              "Amount": 100
             },
             "6": {
               "TargetClass": "Large, XLarge",
               "ClassOperator": "Or",
               "Modifier": "AccuracyLongPercent",
-              "Amount": 130
+              "Amount": 100
             }
           },
           "TargetPrioritizationAttributes": {
@@ -8598,13 +8616,13 @@
       "ExperienceAttributes": {
         "Levels": {
           "1": {
-            "BuffTooltipLocID": "Officer: +20 speed",
+            "BuffTooltipLocID": "Officer: +4 damage",
             "RequiredExperience": 100,
             "Buff": {
               "0": {
-                "Attribute": "UnitDynamics_MaxSpeed",
+                "Attribute": 262148,
                 "Mode": "Add",
-                "Value": 20
+                "Value": 4
               },
               "1": {
                 "Remove": true
@@ -8612,18 +8630,28 @@
             }
           },
           "2": {
-            "BuffTooltipLocID": "Lieutenant: +3 armor",
-            "RequiredExperience": 250,
+            "BuffTooltipLocID": "Lieutenant: +400m range",
+            "RequiredExperience": 200,
             "Buff": {
               "0": {
-                "Attribute": "Unit_Armour",
+                "Attribute": 33554434,
                 "Mode": "Add",
-                "Value": 3
+                "Value": 400
+              },
+              "1": {
+                "Attribute": 33554433,
+                "Mode": "Add",
+                "Value": 100
+              },
+              "2": {
+                "Attribute": 33554432,
+                "Mode": "Add",
+                "Value": 50
               }
             }
           },
           "3": {
-            "BuffTooltipLocID": "Lt. Commander: +400 hull",
+            "BuffTooltipLocID": "Lt. Commander: +400 hull, +3 armor",
             "RequiredExperience": 500,
             "Buff": {
               "0": {
@@ -8632,39 +8660,36 @@
                 "Value": 400
               },
               "1": {
-                "Remove": true
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
               }
             }
           },
           "4": {
-            "BuffTooltipLocID": "Commander: +8 damage",
+            "BuffTooltipLocID": "Commander: +4 damage",
             "RequiredExperience": 1000,
             "Buff": {
               "0": {
                 "Attribute": "UnitWeapon_BaseDamagePerRound",
                 "Mode": "Add",
-                "Value": 400
+                "Value": 4  
               }
             }
           },
           "5": {
-            "BuffTooltipLocID": "Captain: +1600m range",
+            "BuffTooltipLocID": "Captain: +400 hull, +3 armor",
             "RequiredExperience": 1600,
             "Buff": {
               "0": {
-                "Attribute": 33554434,
+                "Attribute": 65536,
                 "Mode": "Add",
-                "Value": 1600
+                "Value": 500
               },
               "1": {
-                "Attribute": 33554433,
+                "Attribute": "Unit_Armour",
                 "Mode": "Add",
-                "Value": 1500
-              },
-              "2": {
-                "Attribute": 33554432,
-                "Mode": "Add",
-                "Value": 1450
+                "Value": 4
               }
             }
           }
@@ -8674,18 +8699,22 @@
 
     // COALITION LAV FABRICATION
     "Tier_1_C_Escorts": {
-      "ResearchItemAttributes": {
-        "Resource1Cost": 350,
-        "ResearchTime": 35
-      }
+        "ResearchItemAttributes": {
+            "LocalizedResearchTitleStringID": "LONG-RANGE ASSAULT VEHICLE FABRICATION",
+            "LocalizedLongDescriptionStringID": "Fast-moving Strike vehicle. Effective at pew pewing targets from long range. More accurate if target is far from it.\n\n[ff0000]Imma pew pew pew you from that dune.",
+            "Resource1Cost": 350,
+            "ResearchTime": 35
+        }
     },
 
     // SOBAN LAV FABRICATION
     "Tier_1_S_Escorts": {
-      "ResearchItemAttributes": {
-        "Resource1Cost": 350,
-        "ResearchTime": 35
-      }
+        "ResearchItemAttributes": {
+            "LocalizedResearchTitleStringID": "LONG-RANGE ASSAULT VEHICLE FABRICATION",
+            "LocalizedLongDescriptionStringID": "Fast-moving Strike vehicle. Effective at pew pewing targets from long range. More accurate if target is far from it.\n\n[ff0000]Imma pew pew pew you from that dune.",
+            "Resource1Cost": 350,
+            "ResearchTime": 35
+        }
     },
 
 
@@ -14957,8 +14986,18 @@
         "LocalizedLongDescriptionStringID": "Missile-equiped anti-tank heavy vehicle. Designated to engage targets over dunes."
       }
     },
-    "Ability_C_ProduceEscort_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD ESCORT" } },
-    "Ability_C_Sob_ProduceEscort_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD SOBAN ESCORT" } },
+    "Ability_C_ProduceEscort_MP": {
+        "AbilityViewAttributes": {
+            "LocalizedTitleStringID": "BUILD LONG-RANGE ASSAULT VEHICLE FABRICATION",
+            "LocalizedLongDescriptionStringID": "Fast-moving Strike vehicle. Effective at pew pewing targets from long range. More accurate if target is far from it.\n\n[ff0000]Imma pew pew pew you from that dune."
+        }
+    },
+    "Ability_C_Sob_ProduceEscort_MP": {
+        "AbilityViewAttributes": {
+            "LocalizedTitleStringID": "BUILD SOBAN LONG-RANGE ASSAULT VEHICLE FABRICATION",
+            "LocalizedLongDescriptionStringID": "Fast-moving Strike vehicle. Effective at pew pewing targets from long range. More accurate if target is far from it.\n\n[ff0000]Imma pew pew pew you from that dune."
+        }
+    },
     "Ability_C_ProduceInterceptor_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD PEANUT LIGHT BOMBER" } },
     "Ability_C_Sob_ProduceInterceptor_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD PEANUT LIGHT BOMBER" } },
     "Ability_G_ProduceBattlecruiser_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD GAALSIEN BATTLECRUISER" } },
