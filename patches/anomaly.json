@@ -8,9 +8,9 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "1.03.00",
+    "Version": "1.03.01",
     "LastUpdate": "2022-05-08",
-    "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
+    "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
 
 
@@ -8321,17 +8321,24 @@
     },
     // COALITION LAV
     "C_Escort_MP": {
-      "UnitAttributes": {
-        "MaxHealth": 440,
-        "Armour": 4,
-        "ProductionTime": 12,
-        "PriorityAsTarget": 2
-      },
-      "UnitMovementAttributes": {
-        "Dynamics": {
-          "MaxSpeed": 90
-        }
-      },
+        "UnitAttributes": {
+            "AggroRange": 1300,
+            "MaxHealth": 440,
+            "Armour": 4,
+            "ProductionTime": 12,
+            "PriorityAsTarget": 2
+        },
+        "UnitMovementAttributes": {
+            "Combat": {
+                "MinDesiredCombatRange": 1000,
+                "MaxDesiredCombatRange": 1300,
+                "PassiveCombatApproachMode": "Snipe",
+                "ActiveCombatApproachMode": "Snipe"
+            },
+            "Dynamics": {
+                "MaxSpeed": 90
+            }
+        },
       "AbilityAttributes": {
         "Ability_C_Nitrous_MP": {
           "CooldownTimeSecs": 60,
@@ -8521,11 +8528,17 @@
         "ProductionTime": 12,
         "PriorityAsTarget": 2
       },
-      "UnitMovementAttributes": {
-        "Dynamics": {
-          "MaxSpeed": 90
-        }
-      },
+        "UnitMovementAttributes": {
+            "Combat": {
+                "MinDesiredCombatRange": 1000,
+                "MaxDesiredCombatRange": 1300,
+                "PassiveCombatApproachMode": "Snipe",
+                "ActiveCombatApproachMode": "Snipe"
+            },
+            "Dynamics": {
+                "MaxSpeed": 90
+            }
+        },
       "AbilityAttributes": {
         "Ability_S_Nitrous_MP": {
           "CooldownTimeSecs": 60,
@@ -10440,13 +10453,19 @@
         "Armour": 2,
         "PriorityAsTarget": 10
       },
-      "UnitMovementAttributes": {
-        "Dynamics": {
-          "MaxSpeed": 60,
-          "AccelerationTime": 1.5,
-          "BrakingTime": 1.2
-        }
-      },
+        "UnitMovementAttributes": {
+            "Combat": {
+                "MinDesiredCombatRange": 3000,
+                "MaxDesiredCombatRange": 3500,
+                "PassiveCombatApproachMode": "Snipe",
+                "ActiveCombatApproachMode": "Snipe"
+            },
+            "Dynamics": {
+                "MaxSpeed": 60,
+                "AccelerationTime": 1.5,
+                "BrakingTime": 1.2
+            }
+        },
       "AbilityAttributes": {
 
         "Ability_G_AssaultRailgunRegen": {
@@ -10608,13 +10627,19 @@
         "Armour": 2,
         "PriorityAsTarget": 10
       },
-      "UnitMovementAttributes": {
-        "Dynamics": {
-          "MaxSpeed": 60,
-          "AccelerationTime": 1.5,
-          "BrakingTime": 1.2
-        }
-      },
+        "UnitMovementAttributes": {
+            "Combat": {
+                "MinDesiredCombatRange": 3000,
+                "MaxDesiredCombatRange": 3500,
+                "PassiveCombatApproachMode": "Snipe",
+                "ActiveCombatApproachMode": "Snipe"
+            },
+            "Dynamics": {
+                "MaxSpeed": 60,
+                "AccelerationTime": 1.5,
+                "BrakingTime": 1.2
+            }
+        },
       "AbilityAttributes": {
         "Ability_G_AssaultRailgunRegen": {
           "ApplyStatusEffect": {
@@ -14021,14 +14046,20 @@
           "CooldownTimeSecs": 70
         }
       },
-      "UnitMovementAttributes": {
-        "Dynamics": {
-          "MaxSpeedTurnRadius": 90,
-          "MaxSpeed": 56,
-          "AccelerationTime": 1.2,
-          "BrakingTime": 0.9
-        }
-      },
+        "UnitMovementAttributes": {
+            "Combat": {
+                "MinDesiredCombatRange": 2000,
+                "MaxDesiredCombatRange": 2200,
+                "PassiveCombatApproachMode": "Snipe",
+                "ActiveCombatApproachMode": "Snipe"
+            },
+            "Dynamics": {
+                "MaxSpeedTurnRadius": 90,
+                "MaxSpeed": 56,
+                "AccelerationTime": 1.2,
+                "BrakingTime": 0.9
+            }
+        },
       "WeaponAttributes": {
         "C_ArtilleryCruiser_Weapon_Barrage_MP": {
           "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
@@ -14910,7 +14941,7 @@
       "AbilityViewAttributes": {
         "InvertFillCooldown": true,
         "LocalizedTitleStringID": "LAUNCH THE NUKE",
-        "LocalizedLongDescriptionStringID": "[84a1e8]Fires an actual anti-matter nuke. Capable of wiping out whole armys and unlucky carriers by its own."
+        "LocalizedLongDescriptionStringID": "Fires an actual anti-matter nuke. Capable of wiping out whole armys and unlucky carriers by its own."
       }
     },
     "Ability_G_BattleCruiser_Missile_MP": {
@@ -14918,7 +14949,7 @@
         "InvertFillCooldown": true,
         "IconName": "Icon-Command-GroundTargetAA",
         "LocalizedTitleStringID": "UNDIRECT FIRE BARRAGE",
-        "LocalizedLongDescriptionStringID": "[84a1e8]Fires punishing Timmy class HE shells, damaging (what a surprise) enemies in small area."
+        "LocalizedLongDescriptionStringID": "Fires punishing Timmy class HE shells, damaging (what a surprise) enemies in small area."
       }
     },
     "Ability_C_ArtilleryBarrage_Precise": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
@@ -14926,14 +14957,14 @@
       "AbilityViewAttributes": {
         "IconName": "Icon-Command-CruiseMissile",
         "LocalizedTitleStringID": "UNPRECISON BARRAGE",
-        "LocalizedLongDescriptionStringID": "[84a1e8]Fires single, high damage missile that hits random spot in the targeted area."
+        "LocalizedLongDescriptionStringID": "Fires single, high damage missile that hits random spot in the targeted area."
       }
     },
     "Ability_C_ProduceProbe_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
     "Ability_C_LaunchProbe_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
     "Ability_K_MissileBarrage": {
       "AbilityViewAttributes": {
-        "LocalizedLongDescriptionStringID": "[84a1e8]Launch a single stolen coalition cruise missile at the targeted area. Shounting increases range and decrises cooldown. Will opens wreck builkheads in its impact area. More missiles will be stolen over time.\n\nHow dose one steal a coalition cruise missile?\n\nWE STEAL IT MID-FLIGHT"
+        "LocalizedLongDescriptionStringID": "Launch a single stolen coalition cruise missile at the targeted area. Shounting increases range and decrises cooldown. Will opens wreck builkheads in its impact area. More missiles will be stolen over time.\n\nHow dose one steal a coalition cruise missile?\n\nWE STEAL IT MID-FLIGHT"
       }
     },
     "Ability_K_GrantShuntingBombToCarrier": {
@@ -14941,7 +14972,7 @@
         "InvertFillCooldown": true,
         "IconName": "Icon-Command-TacticalMissile",
         "LocalizedTitleStringID": "ACQUIRE MISSILE",
-        "LocalizedLongDescriptionStringID": "[84a1e8]Automaticly steal, appropriate, nab, scrump, heist a coalition cruise missile."
+        "LocalizedLongDescriptionStringID": "Automaticly steal, appropriate, nab, scrump, heist a coalition cruise missile."
       }
     },
     "Ability_G_DeployScanner_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
@@ -14949,7 +14980,7 @@
       "AbilityViewAttributes": {
         "InvertFillCooldown": true,
         "LocalizedTitleStringID": "ENABLE DEFENCE SYSTEMS",
-        "LocalizedLongDescriptionStringID": "[84a1e8]For 25 seconds power from main weapon rerouted to anti-ground missile defences from main weapon.."
+        "LocalizedLongDescriptionStringID": "For 25 seconds power from main weapon rerouted to anti-ground missile defences from main weapon.."
       }
     },
     "Ability_G_ArtilleryBarrage_01_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
