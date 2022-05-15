@@ -96,9 +96,9 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-14 12.15](#2021-04-14-1215)
 	- [2021-04-15 12.16](#2021-04-15-1216)
 	- [2021-04-24 12.17](#2021-04-24-1217)
-	- [2022-02-02 12.18](#2022-02-02-1218)
+	- [2022-02-02 12.18 (Jaraci Cup #12 and #13)](#2022-02-02-1218-jaraci-cup-12-and-13)
 	- [2022-02-02 13.0](#2022-02-02-130)
-	- [2022-03-20 13.1](#2022-03-20-131)
+	- [2022-03-20 13.1 (Jaraci Cup #14)](#2022-03-20-131-jaraci-cup-14)
 	- [2022-05-12 14.0](#2022-05-12-140)
 
 # Changes
@@ -2603,7 +2603,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Khaaneph:
 	* Fixed an issue where blast drone displayed damage & packets incorrectly
 
-## 2022-02-02 12.18
+## 2022-02-02 12.18 (Jaraci Cup #12 and #13)
 *Not yet reflected in the main changelog.*
 * General:
 	* Fixed an issue where carriers will lose power from the reserve pool if the available power ever exceeds 30
@@ -2645,14 +2645,14 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Khaaneph:
 	* Fixed an issue where heavy railguns reload statistics weren't matching with gaalsien variant
 
-## 2022-03-20 13.1
+## 2022-03-20 13.1 (Jaraci Cup #14)
 *Not yet reflected in the main changelog.*
 * Gaalsien/Khaaneph:
 	* Heavy Railgun - fixed an issue where sunder was not being applied to carriers.
 
 ## 2022-05-12 14.0
 *Not yet reflected in the main changelog.*
-*Thanks Just_carrier for most of the bug fixes in this patch!*
+*Thanks Just_carrier and Bozocow for most of the bug fixes in this patch!*
 * General:
 	* Units lost tab improvements for replay viewing:
 		* All carriers now have their costs set to `0CU 0RU`
