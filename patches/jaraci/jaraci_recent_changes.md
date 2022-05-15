@@ -98,6 +98,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2021-04-24 12.17](#2021-04-24-1217)
 	- [2022-02-02 12.18](#2022-02-02-1218)
 	- [2022-02-02 13.0](#2022-02-02-130)
+	- [2022-03-20 13.1](#2022-03-20-131)
+	- [2022-05-12 14.0](#2022-05-12-140)
 
 # Changes
 
@@ -2647,3 +2649,48 @@ Full combined changelog can be found [HERE](jaraci.md)
 *Not yet reflected in the main changelog.*
 * Gaalsien/Khaaneph:
 	* Heavy Railgun - fixed an issue where sunder was not being applied to carriers.
+
+## 2022-05-12 14.0
+*Not yet reflected in the main changelog.*
+*Thanks Just_carrier for most of the bug fixes in this patch!*
+* General:
+	* Units lost tab improvements for replay viewing:
+		* All carriers now have their costs set to `0CU 0RU`
+		* Turret now affects units lost tab
+		* AA Turret now affects units lost tab
+		* Logistics module now affects units lost tab
+		* ALM now affects units lost tab
+* Coalition/Soban:
+	* LAV boost upgrade cost: `150CU 200RU => 150CU 180RU`
+	* Gunship:
+		* Damage: `40 => 43`
+		* AOE: `144 => 138`
+	* Fixed AAV suppression ability description
+* Coalition:
+	* Baserunner turret construction cooldown (including initial): `110s => 120s`
+	* Turret (DPS: `135.2 => 134.7`):
+		* Damage: `55 => 57`
+		* Number of bursts: `15 => 16`
+		* Burst duration: `0.26s => 0.32s`
+		* Wind-down: `0.25s => 0.05s`
+		* Reload: `1.65s => 1.4s`
+* Soban:
+	* Baserunner turret initial construction cooldown: `110s => 60s` (To match AA turret)
+	* ALM damage: `150 => 145`
+	* Railgun cost: `300CU 80RU => 320CU 80RU`
+* Gaalsien/Khaaneph:
+	* Salvager armor: `5 => 4`
+	* Fixed sandskimmer damage upgrade descriptions
+	* Missile ship:
+		* Barrage damage: `140 => 150`
+		* Barrage can no longer damage air units
+		* Fixed level 4 veterancy not working
+		* Fixed level 4 veterancy description
+	* Production cruiser:
+		* Fixed level 3 and 4 veterancy buffs
+		* Fixed an issue where weapon indicated being blocked by terrain and being affected by high ground
+	* Fixed precision bomber ammo upgrade description
+	* Fixed honourguard cruiser level 1, 2 and 4 veterancy buffs
+* Khaaneph:
+	* Carrier power level change time: `5s => 3s` (Now matches other carriers)
+	* Fixed an issue where interceptor cost didn't match Gaalsien variant: `300CU 100RU => 250CU 100RU`

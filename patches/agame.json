@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "13.1",
-		"LastUpdate": "2022-03-20",
+		"Version": "14.0",
+		"LastUpdate": "2022-05-13",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	/*"Global": {
@@ -628,6 +628,8 @@
 
 		"C_Carrier_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"MaxHealth": 8700,
 				"Armour": 20,
 				"PriorityAsTarget": -15
@@ -1120,6 +1122,8 @@
 		},
 		"C_Sob_Carrier_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"MaxHealth": 8400,
 				"Armour": 15,
 				"PriorityAsTarget": -15
@@ -1877,6 +1881,8 @@
 		},
 		"G_Carrier_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"MaxHealth": 8300,
 				"Armour": 20,
 				"PriorityAsTarget": -15
@@ -2406,6 +2412,8 @@
 		},
 		"K_Carrier_MP": {
 			"UnitAttributes": {
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
 				"MaxHealth": 9100,
 				"SensorRadius": 1200,
 				"ContactRadius": 1350,
@@ -2529,6 +2537,7 @@
 				}
 			},
 			"PowerShuntAttributes": {
+				"PowerLevelChargeTimeSeconds": 3,
 				"ReservePowerPool": {
 					"HasUnlimitedCapacity": true
 				},
@@ -3212,6 +3221,7 @@
 
 		"C_PopcapScanner": {
 			"UnitAttributes": {
+				"ExcludeFromUnitStats": false,
 				"Resource1Cost": 270,
 				"MaxHealth": 1100,
 				"Armour": 3,
@@ -3222,6 +3232,7 @@
 		},
 		"C_Sob_PopcapScanner": {
 			"UnitAttributes": {
+				"ExcludeFromUnitStats": false,
 				"Resource1Cost": 270,
 				"Armour": 3,
 				"WorldHeightOffset": 15,
@@ -3230,7 +3241,7 @@
 			},
 			"WeaponAttributes": {
 				"C_Sob_PopCapScanner_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 150,
+					"BaseDamagePerRound": 145,
 					"DamagePacketsPerShot": 3,
 					"AreaOfEffectRadius": 86,
 					"TargetPrioritizationAttributes": {
@@ -3244,6 +3255,7 @@
 		},
 		"N_Gun_Turret_MP": {
 			"UnitAttributes": {
+				"ExcludeFromUnitStats": false,
 				"Resource1Cost": 300,
 				"MaxHealth": 850,
 				"Armour": 1,
@@ -3253,14 +3265,15 @@
 			},
 			"WeaponAttributes": {
 				"N_Gun_Turret_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 55,
+					"BaseDamagePerRound": 57,
 					"DamagePacketsPerShot": 2,
-					"NumberOfBursts": 15,
+					"NumberOfBursts": 16,
 					"CooldownTimeMS": 0,
-					"BurstPeriodMinTimeMS": 280,
-					"BurstPeriodMaxTimeMS": 280,
+					"BurstPeriodMaxTimeMS": 320,
+					"BurstPeriodMinTimeMS": 320,
+					"WindDownTimeMS": 50,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 1650,
+					"ReloadTimeMS": 1400,
 					"AreaOfEffectRadius": 80,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesShort": { "Accuracy": 100 },
@@ -3272,6 +3285,7 @@
 		},
 		"N_Missle_Turret_MP": {
 			"UnitAttributes": {
+				"ExcludeFromUnitStats": false,
 				"MaxHealth": 900,
 				"Resource1Cost": 300,
 				"PriorityAsTarget": -50
@@ -3398,7 +3412,7 @@
 				"Resource1Cost": 170,
 				"MaxHealth": 950,
 				"PopCapCost": 2,
-				"Armour": 5,
+				"Armour": 4,
 				"PriorityAsTarget": -25
 			},
 			"AbilityAttributes": {
@@ -3557,10 +3571,10 @@
 			},
 			"AbilityAttributes": {
 				"Ability_C_DeployTurret_MP": {
-					"CooldownTimeSecs": 110
+					"CooldownTimeSecs": 120
 				},
 				"Ability_C_DeployTurret_BeginCooldown_MP": {
-					"CooldownTimeSecs": 110
+					"CooldownTimeSecs": 120
 				},
 				"Ability_C_LaunchProbe_MP": {
 					"Resource1Cost": 150
@@ -3586,7 +3600,7 @@
 					"Resource1Cost": 0
 				},
 				"Ability_C_DeployTurret_BeginCooldown_MP": {
-					"CooldownTimeSecs": 110
+					"CooldownTimeSecs": 60
 				},
 				"Ability_C_LaunchProbe_MP": {
 					"Resource1Cost": 150
@@ -4027,6 +4041,30 @@
 		},
 
 		"G_SupportCruiser_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"3": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 560,
 				"Resource2Cost": 50,
@@ -4037,6 +4075,10 @@
 				"ContactRadius": 1600
 			},
 			"WeaponAttributes": {
+				"G_SupportCruiser_Weapon_Front_MP": { // dummy weapon
+					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": false
+				},
 				"G_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 10,
@@ -4062,6 +4104,30 @@
 			}
 		},
 		"K_SupportCruiser_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"3": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 560,
 				"Resource2Cost": 50,
@@ -4071,6 +4137,10 @@
 				"ContactRadius": 1600
 			},
 			"WeaponAttributes": {
+				"G_SupportCruiser_Weapon_Front_MP": { // dummy weapon
+					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": false
+				},
 				"G_SupportCruiser_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 10,
@@ -4159,6 +4229,11 @@
 						}
 					}
 				}
+			}
+		},
+		"Ability_C_SlowDebuff": {
+			"AbilityViewAttributes": {
+				"LocalizedLongDescriptionStringID": "When firing, enemy STRIKE ground target is slowed by 40% for 2.65 seconds."
 			}
 		},
 		"Tier_2_C_ArmouredAssault": {
@@ -4609,13 +4684,13 @@
 		"Research_Buff_C_Escort": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 150,
-				"Resource2Cost": 200
+				"Resource2Cost": 180
 			}
 		},
 		"Research_Buff_S_Escort": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 150,
-				"Resource2Cost": 200
+				"Resource2Cost": 180
 			}
 		},
 		"Research_Buff_C_Escort_Damage01": {
@@ -4695,6 +4770,7 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
 				"ResearchTime": 25,
+				"LocalizedLongDescriptionStringID": "Improves the SandSkimmer's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
 				"UnitTypeBuffs": {
 					"0": {
 						"BuffSet": {
@@ -4715,6 +4791,7 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
 				"ResearchTime": 45,
+				"LocalizedLongDescriptionStringID": "Improves the SandSkimmer's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
 				"UnitTypeBuffs": {
 					"0": {
 						"BuffSet": {
@@ -4905,7 +4982,7 @@
 		},
 		"C_Sob_Railgun_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 300,
+				"Resource1Cost": 320,
 				"Resource2Cost": 80,
 				"MaxHealth": 820,
 				"Armour": 1,
@@ -5463,15 +5540,16 @@
 			"ExperienceAttributes": {
 				"Levels": {
 					"4": {
+						"BuffTooltipLocID": "Guardian: -50% weapon cooldown",
 						"Buff": {
 							"0": {
-								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP",
+								"Name": "ANTI-AIR",
 								"Attribute": "UnitWeapon_ReloadTime",
 								"Mode": "Add",
 								"Value": -1000
 							},
 							"1": {
-								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
+								"Name": "ANTI-AIR-RADIO",
 								"Attribute": "UnitWeapon_ReloadTime",
 								"Mode": "Add",
 								"Value": -1000
@@ -5503,9 +5581,15 @@
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 140,
+					"BaseDamagePerRound": 150,
 					"AreaOfEffectRadius": 155,
-					"AreaOfEffectFalloffType": "Linear"
+					"AreaOfEffectFalloffType": "Linear",
+					"Modifiers": {
+						"2": {
+							"TargetClass": "Air",
+							"Modifier": "CanNotTarget"
+						}
+					}
 				}
 			}
 		},
@@ -5525,15 +5609,16 @@
 			"ExperienceAttributes": {
 				"Levels": {
 					"4": {
+						"BuffTooltipLocID": "Guardian: -50% weapon cooldown",
 						"Buff": {
 							"0": {
-								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_MP",
+								"Name": "ANTI-AIR",
 								"Attribute": "UnitWeapon_ReloadTime",
 								"Mode": "Add",
 								"Value": -1000
 							},
 							"1": {
-								"Name": "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP",
+								"Name": "ANTI-AIR-RADIO",
 								"Attribute": "UnitWeapon_ReloadTime",
 								"Mode": "Add",
 								"Value": -1000
@@ -5565,9 +5650,15 @@
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": true,
-					"BaseDamagePerRound": 140,
+					"BaseDamagePerRound": 150,
 					"AreaOfEffectRadius": 155,
-					"AreaOfEffectFalloffType": "Linear"
+					"AreaOfEffectFalloffType": "Linear",
+					"Modifiers": {
+						"2": {
+							"TargetClass": "Air",
+							"Modifier": "CanNotTarget"
+						}
+					}
 				}
 			}
 		},
@@ -5657,7 +5748,7 @@
 		},
 		"K_Interceptor_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 300,
+				"Resource1Cost": 250,
 				"Resource2Cost": 100,
 				"Armour": 2,
 				"ProductionTime": 12
@@ -5828,6 +5919,7 @@
 		},
 		"Research_Buff_G_Bomber_Hold": {
 			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Precision Bomber carries more bombs per sortie.\n\n[84a1e8]Increases bomb count from 2 to 3.",
 				"Resource1Cost": 400,
 				"Resource2Cost": 150,
 				"UnitTypeBuffs": {
@@ -5867,8 +5959,8 @@
 			"WeaponAttributes": {
 				"C_GunShip_Weapon_DefaultFire_MP": {
 					"DamagePacketsPerShot": 1,
-					"BaseDamagePerRound": 40,
-					"AreaOfEffectRadius": 144,
+					"BaseDamagePerRound": 43,
+					"AreaOfEffectRadius": 138,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
 						"Distance": 1050
@@ -6037,6 +6129,50 @@
 		},
 
 		"G_HonorGuard_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "Add",
+								"Value": 100
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"2": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "Add",
+								"Value": 100
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 550,
 				"Resource2Cost": 250,
@@ -6082,6 +6218,50 @@
 			}
 		},
 		"K_HonorGuard_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "Add",
+								"Value": 100
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"2": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "Add",
+								"Value": 100
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 500,
 				"Resource2Cost": 250,
