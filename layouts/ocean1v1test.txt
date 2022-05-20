@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<!-- More Maps by SSSS -->
+	<meta name="Dune 1v1 - Test"
+	      authors="HottestManEver, FrostyTeeth, Bozocow"
+	      description="The nearest wreck pops resources in your opponents base- Defend it!"/>
+	
+	<layout map="M06" mode="Team" players="2">
+   
+	<bounds top="-3000" right="6200" bottom="-10000" left="-7500"/>
+ 
+    	<spawns>
+        		<!-- team 1 -->
+        		<spawn team="0" index="0" x="5200" y="-4400" angle="0"/>
+         			<spawn team="0" index="1" x="5300" y="-4400" angle="0" fleet="false"/>
+		        	<spawn team="0" index="2" x="5300" y="-4400" angle="0" fleet="false"/>
+        		<!-- team 2 -->
+        		<spawn team="1" index="0" x="-6900" y="-7500" angle="0"/>
+        			<spawn team="1" index="1" x="5300" y="-4400" angle="0" fleet="false"/>
+        			<spawn team="1" index="2" x="5300" y="-4400" angle="0" fleet="false"/>
+    	</spawns>
+   
+    	<resources>
+        
+		<!-- east -->
+		<resource x="5500" y="-4250" type="cu" amount="7500"/>
+		<resource x="5500" y="-4400" type="ru" amount="3000"/>
+		<resource x="5500" y="-4550" type="cu" amount="7500" />
+ 
+		<resource x="2900" y="-4300" type="ru" amount="4000" />
+		<resource x="2900" y="-4200" type="cu" amount="10500" />
+ 
+
+ 
+ 		<!-- west -->
+		<resource x="-7200" y="-7350" type="cu" amount="7500" />
+		<resource x="-7200" y="-7500" type="ru" amount="3000" />
+		<resource x="-7200" y="-7650" type="cu" amount="7500" />
+ 
+		<resource x="-4750" y="-5900" type="ru" amount="4000" />
+		<resource x="-4650" y="-6000" type="cu" amount="10500" />
+ 
+
+ 
+ 
+ 
+   		</resources>
+   
+		<wrecks>
+			<!-- West Wreck for East resources -->
+			<wreck x="-7000" y="-5000" angle="315">
+				<resource x="5700" y="-4250" type="cu" amount="17500" collectors="2"/>
+				<resource x="5700" y="-4400" type="ru" amount="12000" collectors="4"/>
+				<resource x="5700" y="-4550" type="cu" amount="12000" collectors="2"/>
+			</wreck>
+
+			<!-- East Wreck for West resources -->
+			<wreck x="5725" y="-6500" angle="124">
+				<resource x="-7500" y="-7350" type="cu" amount="17500" collectors="2"/>
+				<resource x="-7500" y="-7500" type="ru" amount="12000" collectors="4"/>
+				<resource x="-7500" y="-7650" type="cu" amount="12000" collectors="2"/>
+			</wreck>
+		</wrecks>
+
+    		<artifacts>
+ 
+        			<artifact x="-2700" y="-3950"/>
+        			<artifact x="-1300" y="-3650"/>
+        			<artifact x="0" y="-3650"/>
+ 
+
+    		</artifacts>
+ 
+		<ezs>
+       			<!-- extraction zones -->
+        			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+        			<ez team="0" x="-1700" y="-8900" radius="500"/>
+        			<ez team="1" x="1250" y="-8120" radius="500"/>
+    		</ezs>
+ 
+    		
+ 
+   	 	
+ 
+ 		<units>
+			<!-- spectator units -->
+			<unit team="0" index="1" x="0" y="400" angle="0" type="N_DemoCharge"/>
+			<unit team="0" index="2" x="0" y="400" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="1" x="0" y="400" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="2" x="0" y="400" angle="0" type="N_DemoCharge"/>
+						
+		</units>
+
+	</layout>
+</dokmap>
