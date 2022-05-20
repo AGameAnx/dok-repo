@@ -8,8 +8,8 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "1.04.02",
-    "LastUpdate": "2022-05-14",
+    "Version": "1.04.10",
+    "LastUpdate": "2022-05-20",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
   },
 
@@ -2234,7 +2234,7 @@
                           "1": { "Value": 1600 },
                           "5": { "Value": 3000 },
                           "7": {
-                            "Value": 55,
+                            "Value": 40,
                             "Attribute": 262148,
                             "Mode": 0
                           },
@@ -2262,7 +2262,7 @@
                           "0": { "Value": 2000 },
                           "1": { "Value": 2100 },
                           "5": { "Value": 3000 },
-                          "6": { "Value": 70 }, // Damage bonus
+                          "6": { "Value": 40 }, // Damage bonus
                           "7": {
                             "Value": 1500,
                             "Attribute": 33554434,
@@ -2287,7 +2287,7 @@
                           "0": { "Value": 5000 },
                           "1": { "Value": 5100 },
                           "5": { "Value": 3000 },
-                          "6": { "Value": 60 },
+                          "6": { "Value": 10 },
                           "7": {
                             "Value": 4500,
                             "Attribute": 33554434,
@@ -4913,6 +4913,11 @@
                     "Accuracy": 20,
                     "Distance": 1000
                 },
+                "Turret": {
+                    "FieldOfView": 200,
+                    "FieldOfFire": 2,
+                    "RotationSpeed": 85
+                },
                 "Modifiers": {
                     "0": {
                         "TargetClass": "Air",
@@ -4964,6 +4969,11 @@
                 "RangeAttributesLong": {
                     "Accuracy": 20,
                     "Distance": 950
+                },
+                "Turret": {
+                    "FieldOfView": 200,
+                    "FieldOfFire": 2,
+                    "RotationSpeed": 85
                 },
                 "Modifiers": {
                     "0": {
@@ -5595,11 +5605,11 @@
             "PowerLevels": {
 
               "0": {
-                "LocalizedShortDescriptionStringID": "Rate of Fire: 3"
+                "LocalizedShortDescriptionStringID": "Point Defence Rate of Fire: 3, Anti-Air offline."
               },
 
               "1": {
-                "LocalizedShortDescriptionStringID": "Rate of Fire: 5",
+                "LocalizedShortDescriptionStringID": "Anti-Air online, PD and AA Rate of Fire: 5",
                 "StatusEffectsToApply": {
                     "K_Weapons_1_StatusEffect": {
                         "Modifiers": {
@@ -5691,7 +5701,7 @@
               },
 
               "2": {
-                "LocalizedShortDescriptionStringID": "Rate of Fire: 7",
+                "LocalizedShortDescriptionStringID": " PD and AA Rate of Fire: 7",
                 "StatusEffectsToApply": {
                     "K_Weapons_2_StatusEffect": {
                         "Modifiers": {
@@ -5783,7 +5793,7 @@
               },
 
               "3": {
-                "LocalizedShortDescriptionStringID": "Rate of Fire: 12",
+                "LocalizedShortDescriptionStringID": " PD and AA Rate of Fire: 12",
                 "StatusEffectsToApply": {
                     "K_Weapons_3_StatusEffect": {
 
@@ -5876,7 +5886,7 @@
               },
 
               "4": {
-                "LocalizedShortDescriptionStringID": "Rate of Fire: 20",
+                "LocalizedShortDescriptionStringID": " PD and AA Rate of Fire: 20",
                 "StatusEffectsToApply": {
                     "K_Weapons_4_StatusEffect": {
 
@@ -6637,7 +6647,7 @@
         "Resource1Cost": 170,
         "MaxHealth": 950,
         "PopCapCost": 2,
-        "Armour": 5,
+        "Armour": 4,
         "PriorityAsTarget": -25
       },
       "AbilityAttributes": {
@@ -6971,11 +6981,11 @@
       },
       "AbilityAttributes": {
         "Ability_C_DeployTurret_MP": {
-          "CooldownTimeSecs": 90
+          "CooldownTimeSecs": 120
           //"ProduceUnit": { "UnitTypeToProduce": "G_BattleCruiser_MP" } // testing yaknow
         },
         "Ability_C_DeployTurret_BeginCooldown_MP": {
-          "CooldownTimeSecs": 90
+          "CooldownTimeSecs": 120
         },
         "Ability_C_LaunchProbe_MP": {
           "Resource1Cost": 150
@@ -8870,7 +8880,7 @@
         "ProductionTime": 18,
         "SensorRadius": 1100,
         "ContactRadius": 1250,
-        "Armour": 10,
+        "Armour": 7,
         "MaxHealth": 300
       },
       "UnitMovementAttributes": {
@@ -8995,7 +9005,7 @@
         "ProductionTime": 18,
         "SensorRadius": 1100,
         "ContactRadius": 1250,
-        "Armour": 10,
+        "Armour": 7,
         "MaxHealth": 300
       },
       "UnitMovementAttributes": {
@@ -9890,7 +9900,7 @@
     "Research_Buff_C_Escort": {
       "ResearchItemAttributes": {
         "Resource1Cost": 150,
-        "Resource2Cost": 200
+        "Resource2Cost": 180
 
       }
     },
@@ -9899,7 +9909,7 @@
     "Research_Buff_S_Escort": {
       "ResearchItemAttributes": {
         "Resource1Cost": 150,
-        "Resource2Cost": 200
+        "Resource2Cost": 180
       }
     },
 
@@ -14545,7 +14555,7 @@
             "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Arc_ProjectileAssetContainer_MP",
             "BaseDamagePerRound": 100,
             "AreaOfEffectFalloffType": "Quadratic",
-            "AreaOfEffectRadius": 150,
+            "AreaOfEffectRadius": 125,
             "NumberOfBursts": 1,
             "RateOfFire": 2,
             "ReloadTimeMS": 10000,
@@ -14902,7 +14912,8 @@
         "MaxHealth": 1900,
         "Armour": 5,
         "ProductionTime": 60,
-        "PopCapCost": 5
+        "PopCapCost": 5,
+        "AggroRange": 2250
       },
       "AbilityAttributes": {
         "Ability_C_ArtilleryBarrage": {
@@ -14931,7 +14942,7 @@
             "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
             "FriendlyFireDamageScalar": 1,
             "BaseDamagePerRound": 1500,
-            "AreaOfEffectRadius": 150,
+            "AreaOfEffectRadius": 100,
             "NumberOfBursts": 3,
             "RateOfFire": 1,
             "CooldownTimeMS": 10,
