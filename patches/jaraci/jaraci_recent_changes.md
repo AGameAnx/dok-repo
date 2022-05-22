@@ -2702,7 +2702,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Baserunner:
 		* Slow down when carrying an artifact: `25% => 35%`
 		* Cost: `220CU 40RU => 200CU 30RU`
-		* AA weapon (DPS: `97.0 => 91.2`):
+		* AA weapon (DPS: `87/78 => 82/74`):
 			* Damage: `17 => 16`
 			* Max range: `1250 => 1280`
 			* Accuracy: `90%/80% => 90%/82%`
