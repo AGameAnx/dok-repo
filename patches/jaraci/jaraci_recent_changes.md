@@ -100,6 +100,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-02-02 13.0](#2022-02-02-130)
 	- [2022-03-20 13.1 (Jaraci Cup #14)](#2022-03-20-131-jaraci-cup-14)
 	- [2022-05-12 14.0](#2022-05-12-140)
+	- [2022-05-22 14.1](#2022-05-22-141)
 
 # Changes
 
@@ -2694,3 +2695,56 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Khaaneph:
 	* Carrier power level change time: `5s => 3s` (Now matches other carriers)
 	* Fixed an issue where interceptor cost didn't match Gaalsien variant: `300CU 100RU => 250CU 100RU`
+
+## 2022-05-22 14.1
+*Not yet reflected in the main changelog.*
+* General:
+	* Baserunner:
+		* Slow down when carrying an artifact: `25% => 35%`
+		* Cost: `220CU 40RU => 200CU 30RU`
+		* AA weapon (DPS: `97.0 => 91.2`):
+			* Damage: `17 => 16`
+			* Max range: `1250 => 1280`
+			* Accuracy: `90%/80% => 90%/82%`
+	* Strike craft damage upgrade CU cost: `300 => 200`
+	* Reduced baserunner priority as target
+* Coalition/Soban:
+	* Salvager armor: `0 => 1`
+	* AAV:
+		* AOE: `50 => 35`
+		* Burst duration: `0.5-0.55s => 0.48-0.52s` (DPS: `83.7 => 81.9`)
+	* Bomber:
+		* Tech cost: `550CU 150RU => 500CU 150RU`
+		* Cost: `350CU 160RU => 450CU 160RU`
+	* Assault cruiser:
+		* Damage: `52 => 53`
+		* AOE: `75 => 79`
+* Soban:
+	* ALM:
+		* Damage: `145 => 150`
+		* Armor: `3 => 2`
+		* Stun duration: `1s => 0.85s`
+		* Reduced priority as target
+	* Targeting jammer:
+		* Max speed reduction: `45% => 35%`
+		* Reduced priority as target
+* Gaalsien/Khaaneph:
+	* Sandskimmer raiding upgrade cost: `200CU 125RU => 200CU 100RU`
+	* Assault railgun max speed: `89 => 91`
+	* Railgun EMP ability no longer applies sunder (Thanks Just_Carrier)
+	* Ranged calibration:
+		* Range bonus: `400 => 550`
+		* Movement speed penalty: `40% => 35%`
+		* Fixed upgrade description
+	* Interceptor tech research time: `70s => 65s`
+* Khaaneph:
+	* Carrier:
+		* Power systems:
+			* Level 2 re-establish systems regeneration rate: `35 => 40`
+			* Mobility and sensors support bonus sensors radius:
+				* Level 1: `100 => 150`
+				* Level 2: `150 => 220`
+				* Level 3: `200 => 300`
+				* Level 4: `250 => 400`
+				* Level 5: `300 => 500`
+		* PD field of fire: `130 => 200` (Now matches other carriers. Thanks Just_Carrier)
