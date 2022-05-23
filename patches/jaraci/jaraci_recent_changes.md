@@ -233,9 +233,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Speed reduction modifier: `65% => 45%`
 	* Battlecruiser population cost: `5 => 7`
 * Gaalsien/Khaaneph:
-	* Ranged calibration penalties:
-		* Max speed: `66% => 50%`
-		* Turn radius: `66% => 50%`
 	* Honourguard cruiser population cost: `5 => 7`
 * Gaalsien:
 	* Siege cruiser population cost: `4 => 5`
@@ -1745,10 +1742,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 			* Start time threshold: `10s => 15s`
 			* Health recovered per tick: `15 => 12`
 	* Dart maneuver research time: `30s => 20s`
-	* Heavy railgun ranged calibration:
-		* Research time: `45s => 55s`
-		* Movement speed penalty: `50% => 65%`
-		* Range bonus: `370 => 330`
+	* Heavy railgun ranged calibration research time: `45s => 55s`
 
 ## 2021-01-06 (2)
 *Not yet reflected in the main changelog.*
@@ -2199,7 +2193,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Heavy railgun:
 		* Production time: `24s => 20s`
 		* Reload: `1.2s => 0.8s`
-		* Ranged calibration speed modifier: `-65% => -40%`
 	* Sandskimmer armor upgrade hitpoints granted per upgrade: `20 => 30`
 	* Honourguard cruiser:
 		* Wind-up: `2.2s => 1.6s`
@@ -2422,7 +2415,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Dart maneuver:
 			* Cooldown: `35s => 50s`
 			* Duration: `3s => 2.7s`
-	* Heavy railgun ranged calibration upgrade range bonus: `330 => 400`
 	* Railgun armor upgrade RU cost:
 		* Level 2: `200 => 175`
 		* Level 3: `300 => 250`
@@ -2733,8 +2725,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Assault railgun max speed: `89 => 91`
 	* Railgun EMP ability no longer applies sunder (Thanks Just_Carrier)
 	* Ranged calibration:
-		* Range bonus: `400 => 550`
-		* Movement speed penalty: `40% => 35%`
+		* Range bonus: `300 => 500`
+		* Movement speed penalty: `66% => 40%`
 		* Fixed upgrade description
 	* Interceptor tech research time: `70s => 65s`
 * Khaaneph:
