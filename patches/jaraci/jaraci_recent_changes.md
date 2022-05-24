@@ -101,6 +101,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-03-20 13.1 (Jaraci Cup #14)](#2022-03-20-131-jaraci-cup-14)
 	- [2022-05-12 14.0](#2022-05-12-140)
 	- [2022-05-22 14.1](#2022-05-22-141)
+	- [2022-05-24 14.2](#2022-05-24-142)
 
 # Changes
 
@@ -2740,3 +2741,13 @@ Full combined changelog can be found [HERE](jaraci.md)
 				* Level 4: `250 => 400`
 				* Level 5: `300 => 500`
 		* PD field of fire: `130 => 200` (Now matches other carriers. Thanks Just_Carrier)
+
+## 2022-05-24 14.2
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* AAV (DPS: `81.9 => 77.5`):
+		* AOE: `35 => 42`
+		* Cooldown: `0.5s => 0.6s`
+		* Reload: `1s => 1.1s`
+* Soban:
+	* ALM AOE: `86 => 78`
