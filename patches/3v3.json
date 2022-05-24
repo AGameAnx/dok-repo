@@ -1,0 +1,852 @@
+{
+    "Meta": {
+        "Name": "3v3",
+        "Author": "Just_Carrier",
+        "Version": "zero_zero_one",
+        "LastUpdate": "2022-05-24",
+        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/3v3.json"
+    },
+    "Global": {
+        "DetectableAttributes": {
+            "TimeVisibleAfterFiring": 4500
+        }
+    },
+    "Entities": {
+        "C_Carrier_MP": {
+            "UnitAttributes": {
+                "Resource1Cost": 0,
+                "Resource2Cost": 0
+            },
+            "DetectableAttributes": {
+                "TimeVisibleAfterFiring": 4500
+            },
+            "AbilityAttributes": {
+                "Ability_C_LaunchInterceptor_MP": {
+                    "AirSortie": {
+                        "LoiterLength": 40
+                    }
+                },
+                "Ability_C_LaunchBomber_MP": {
+                    "AirSortie": { "LoiterLength": 40 }
+                },
+                "Ability_C_LaunchGunShip_MP": {
+                    "AirSortie": { "LoiterLength": 40 }
+                }
+            },
+            "WeaponAttributes": {
+                "C_Carrier_Weapon_CruiseMissile_MP": {
+                    "ExcludeFromHeightAdvantage": true
+                }
+            },
+            "PowerShuntAttributes": {
+                "ReservePowerPool": {
+                    "HasUnlimitedCapacity": true
+                }
+            }
+
+        },
+        "C_Sob_Carrier_MP": {
+            "UnitAttributes": {
+                "Resource1Cost": 0,
+                "Resource2Cost": 0
+            },
+            "DetectableAttributes": {
+                "TimeVisibleAfterFiring": 4500
+            },
+            "AbilityAttributes": {
+                "Ability_C_LaunchInterceptor_MP": {
+                    "AirSortie": {
+                        "LoiterLength": 40
+                    }
+                },
+                "Ability_C_LaunchBomber_MP": {
+                    "AirSortie": { "LoiterLength": 40 }
+                },
+                "Ability_C_LaunchGunShip_MP": {
+                    "AirSortie": { "LoiterLength": 40 }
+                }
+            },
+            "WeaponAttributes": {
+                "C_Sob_Carrier_Weapon_Nuke_MP": {
+                    "ExcludeFromHeightAdvantage": true
+                },
+                "C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
+                    "BurstPeriodMaxTimeMS": 250,
+                    "BurstPeriodMinTimeMS": 250,
+                    "NumberOfBursts": 2,
+                    "WindUpTimeMS": 1000,
+                    "WindDownTimeMS": 500,
+                    "ReloadTimeMS": 10000,
+                    "CooldownTimeMS": 5000
+                }
+            },
+            "PowerShuntAttributes": {
+                "ReservePowerPool": {
+                    "HasUnlimitedCapacity": true
+                },
+                "PowerSystems": {
+                    "1": { // Turret Network
+                        "PowerLevels": {
+
+                            "1": {
+                                "StatusEffectsToApply": {
+                                    "C_Sob_Weapons_1_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "1": { "Remove": true }, // Sets damage on the dummy weapon
+                                                    "2": { "Remove": true }, // Sets damage on TURRET_BR weapon
+
+                                                    // TURRET_BR
+                                                    "3": {
+                                                        "Value": 5000
+                                                    }, // Cooldown
+                                                    "4": {
+                                                        "Value": 10000
+                                                    }, // Reload
+                                                    "5": { "Value": 10 }, // Accuracy Short
+                                                    "6": { "Value": 10 }, // Accuracy Medium
+                                                    "7": { "Value": 10 }, // Accuracy Long
+
+                                                    // TURRET_BL
+                                                    "8": {
+                                                        "Value": 5000
+                                                    }, // Cooldown
+                                                    "9": {
+                                                        "Value": 10000,
+                                                        "Attribute": "UnitWeapon_ReloadTime"
+                                                    }, // Reload
+                                                    "10": { "Value": 10 }, // Accuracy Short
+                                                    "11": { "Value": 10 }, // Accuracy Medium
+                                                    "12": { "Value": 10 }, // Accuracy Long
+
+                                                    // TURRET_FL
+                                                    "13": {
+                                                        "Value": 5000
+                                                    }, // Cooldown
+                                                    "14": {
+                                                        "Value": 10000,
+                                                        "Attribute": "UnitWeapon_ReloadTime"
+                                                    }, // Reload
+                                                    "15": { "Value": 10 }, // Accuracy Short
+                                                    "16": { "Value": 10 }, // Accuracy Medium
+                                                    "17": { "Value": 10 }, // Accuracy Long
+
+                                                    // TURRET_FR
+                                                    "18": {
+                                                        "Value": 5000
+                                                    }, // Cooldown
+                                                    "19": {
+                                                        "Value": 10000
+                                                    }, // Reload
+                                                    "20": { "Value": 10 }, // Accuracy Short
+                                                    "21": { "Value": 10 }, // Accuracy Medium
+                                                    "22": { "Value": 10 } // Accuracy Long
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+
+                            "2": {
+                                "StatusEffectsToApply": {
+                                    "C_Sob_Weapons_2_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "1": { "Remove": true }, // Sets damage on the dummy weapon
+
+                                                    // TURRET_BR
+                                                    "2": {
+                                                        "Value": 3000
+                                                    }, // Cooldown
+                                                    "3": {
+                                                        "Value": 6000
+                                                    }, // Reload
+                                                    "4": { "Value": 25 }, // Accuracy Short
+                                                    "5": { "Value": 25 }, // Accuracy Medium
+                                                    "6": { "Value": 25 }, // Accuracy Long
+
+                                                    // TURRET_BL
+                                                    "7": {
+                                                        "Value": 3000
+                                                    }, // Cooldown
+                                                    "8": {
+                                                        "Value": 6000
+                                                    }, // Reload
+                                                    "9": { "Value": 25 }, // Accuracy Short
+                                                    "10": { "Value": 25 }, // Accuracy Medium
+                                                    "11": { "Value": 25 }, // Accuracy Long
+
+                                                    // TURRET_FL
+                                                    "12": {
+                                                        "Value": 3000
+                                                    }, // Cooldown
+                                                    "13": {
+                                                        "Value": 6000
+                                                    }, // Reload
+                                                    "14": { "Value": 25 }, // Accuracy Short
+                                                    "15": { "Value": 25 }, // Accuracy Medium
+                                                    "16": { "Value": 25 }, // Accuracy Long
+
+                                                    // TURRET_FR
+                                                    "17": {
+                                                        "Value": 3000
+                                                    }, // Cooldown
+                                                    "18": {
+                                                        "Value": 6000,
+                                                        "Attribute": "UnitWeapon_ReloadTime"
+                                                    }, // Reload
+                                                    "19": { "Value": 25 }, // Accuracy Short
+                                                    "20": { "Value": 25 }, // Accuracy Medium
+                                                    "21": { "Value": 25 } // Accuracy Long
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+
+                            "3": {
+                                "StatusEffectsToApply": {
+                                    "C_Sob_Weapons_3_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "1": { "Remove": true }, // Sets damage on the dummy weapon
+                                                    "2": { "Remove": true }, // Duplicate cooldown buff for TURRET_BR weapon, the fuk?
+
+                                                    // TURRET_BR
+                                                    "3": {
+                                                        "Value": 2000
+                                                    }, // Cooldown
+                                                    "4": {
+                                                        "Value": 4000
+                                                    }, // Reload
+                                                    "5": { "Value": 40 }, // Accuracy Short
+                                                    "6": { "Value": 40 }, // Accuracy Medium
+                                                    "7": { "Value": 40 }, // Accuracy Long
+
+                                                    // TURRET_BL
+                                                    "8": {
+                                                        "Value": 2000
+                                                    }, // Cooldown
+                                                    "9": {
+                                                        "Value": 4000
+                                                    }, // Reload
+                                                    "10": { "Value": 40 }, // Accuracy Short
+                                                    "11": { "Value": 40 }, // Accuracy Medium
+                                                    "12": { "Value": 40 }, // Accuracy Long
+
+                                                    // TURRET_FL
+                                                    "13": {
+                                                        "Value": 2000
+                                                    }, // Cooldown
+                                                    "14": {
+                                                        "Value": 4000
+                                                    }, // Reload
+                                                    "15": { "Value": 40 }, // Accuracy Short
+                                                    "16": { "Value": 40 }, // Accuracy Medium
+                                                    "17": { "Value": 40 }, // Accuracy Long
+
+                                                    // TURRET_FR
+                                                    "18": {
+                                                        "Value": 2000
+                                                    }, // Cooldown
+                                                    "19": {
+                                                        "Value": 4000
+                                                    }, // Reload
+                                                    "20": { "Value": 40 }, // Accuracy Short
+                                                    "21": { "Value": 40 }, // Accuracy Medium
+                                                    "22": { "Value": 40 } // Accuracy Long
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "4": {
+                                "StatusEffectsToApply": {
+                                    "C_Sob_Weapons_4_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "1": { "Remove": true }, // Sets damage on the dummy weapon
+
+                                                    // TURRET_BR
+                                                    "2": {
+                                                        "Value": 1500
+                                                    }, // Cooldown
+                                                    "3": {
+                                                        "Value": 2000
+                                                    }, // Reload
+                                                    "4": { "Value": 50 }, // Accuracy Short
+                                                    "5": { "Value": 50 }, // Accuracy Medium
+                                                    "6": { "Value": 50 }, // Accuracy Long
+
+                                                    // TURRET_BL
+                                                    "7": {
+                                                        "Value": 1500
+                                                    }, // Cooldown
+                                                    "8": {
+                                                        "Value": 2000
+                                                    }, // Reload
+                                                    "9": { "Value": 50 }, // Accuracy Short
+                                                    "10": { "Value": 50 }, // Accuracy Medium
+                                                    "11": { "Value": 50 }, // Accuracy Long
+
+                                                    // TURRET_FL
+                                                    "12": {
+                                                        "Value": 1500
+                                                    }, // Cooldown
+                                                    "13": {
+                                                        "Value": 2000
+                                                    }, // Reload
+                                                    "14": { "Value": 50 }, // Accuracy Short
+                                                    "15": { "Value": 50 }, // Accuracy Medium
+                                                    "16": { "Value": 50 }, // Accuracy Long
+
+                                                    // TURRET_FR
+                                                    "17": {
+                                                        "Value": 1500
+                                                    }, // Cooldown
+                                                    "18": {
+                                                        "Value": 2000
+                                                    }, // Reload
+                                                    "19": { "Value": 50 }, // Accuracy Short
+                                                    "20": { "Value": 50 }, // Accuracy Medium
+                                                    "21": { "Value": 50 } // Accuracy Long
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+
+                            "5": {
+                                "StatusEffectsToApply": {
+                                    "C_Sob_Weapons_5_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "1": { "Remove": true }, // Sets damage on the dummy weapon
+
+                                                    // TURRET_BR
+                                                    "2": {
+                                                        "Value": 1000
+                                                    }, // Cooldown
+                                                    "3": {
+                                                        "Value": 2000
+                                                    }, // Reload
+                                                    "4": { "Value": 60 }, // Accuracy Short
+                                                    "5": { "Value": 60 }, // Accuracy Medium
+                                                    "6": { "Value": 60 }, // Accuracy Long
+
+                                                    // TURRET_BL
+                                                    "7": {
+                                                        "Value": 1000
+                                                    }, // Cooldown
+                                                    "8": {
+                                                        "Value": 2000
+                                                    }, // Reload
+                                                    "9": { "Value": 60 }, // Accuracy Short
+                                                    "10": { "Value": 60 }, // Accuracy Medium
+                                                    "11": { "Value": 60 }, // Accuracy Long
+
+                                                    // TURRET_FL
+                                                    "12": {
+                                                        "Value": 1000
+                                                    }, // Cooldown
+                                                    "13": {
+                                                        "Value": 2000
+                                                    }, // Reload
+                                                    "14": { "Value": 60 }, // Accuracy Short
+                                                    "15": { "Value": 60 }, // Accuracy Medium
+                                                    "16": { "Value": 60 }, // Accuracy Long
+
+                                                    // TURRET_FR
+                                                    "17": {
+                                                        "Value": 1000
+                                                    }, // Cooldown
+                                                    "18": {
+                                                        "Value": 2000
+                                                    }, // Reload
+                                                    "19": { "Value": 60 }, // Accuracy Short
+                                                    "20": { "Value": 60 }, // Accuracy Medium
+                                                    "21": { "Value": 60 } // Accuracy Long
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
+        },
+        "G_Carrier_MP": {
+            "UnitAttributes": {
+                "Resource1Cost": 0,
+                "Resource2Cost": 0
+            },
+            "DetectableAttributes": {
+                "TimeVisibleAfterFiring": 4500
+            },
+            "AbilityAttributes": {
+                "Ability_G_LaunchInterceptor_Upgraded_MP": {
+                    "AirSortie": {
+                        "LoiterLength": 40
+                    }
+                },
+                "Ability_G_LaunchBomber_MP": {
+                    "AirSortie": { "LoiterLength": 40 }
+                }
+            },
+            "WeaponAttributes": {
+                "G_Carrier_Weapon_BarrageMissile_MP": {
+                    "ExcludeFromHeightAdvantage": true
+                }
+            },
+            "PowerShuntAttributes": {
+                "ReservePowerPool": {
+                    "HasUnlimitedCapacity": true
+                }
+            }
+        },
+        "K_Carrier_MP": {
+            "UnitAttributes": {
+                "Resource1Cost": 0,
+                "Resource2Cost": 0
+            },
+            "DetectableAttributes": {
+                "TimeVisibleAfterFiring": 4500
+            },
+            "AbilityAttributes": {
+                "Ability_Launch_K_Interceptor_Upgraded": {
+                    "AirSortie": {
+                        "LoiterLength": 40
+                    }
+                },
+                "Ability_Launch_K_Bomber": {
+                    "AirSortie": { "LoiterLength": 40 }
+                }
+            },
+            "WeaponAttributes": {
+                "K_Carrier_Weapon_BarrageMissile_MP": {
+                    "ExcludeFromHeightAdvantage": true
+                },
+                "K_Carrier_Weapon_G2All_MP": {
+                    "Turret": {
+                        "FieldOfView": 200,
+                        "FieldOfFire": 2,
+                        "RotationSpeed": 85
+                    }
+                },
+                "G_Carrier_Weapon_G2All_APBULLETS_MP": {
+                    "Turret": {
+                        "FieldOfView": 200,
+                        "FieldOfFire": 2,
+                        "RotationSpeed": 85
+                    }
+                }
+            },
+            "PowerShuntAttributes": {
+                "PowerLevelChargeTimeSeconds": 3,
+                "ReservePowerPool": {
+                    "HasUnlimitedCapacity": true
+                },
+                "PowerSystems": {
+                    "3": { // Weapon Systems. Changed buffs affect PD rate of fire
+                        "PowerLevels": {
+                            "2": {
+                                "StatusEffectsToApply": {
+                                    "K_Weapons_2_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "5": {
+                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Mode": "Set",
+                                                        "Value": 2
+                                                    } // Missiles ROF
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "3": {
+                                "StatusEffectsToApply": {
+                                    "K_Weapons_3_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "5": {
+                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Mode": "Set",
+                                                        "Value": 3
+                                                    } // Missiles ROF
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+
+                            "4": {
+                                "StatusEffectsToApply": {
+                                    "K_Weapons_4_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "5": {
+                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Mode": "Set",
+                                                        "Value": 4
+                                                    } // Missiles ROF
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+
+                            "5": {
+                                "StatusEffectsToApply": {
+                                    "K_Weapons_5_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+
+                                                    "4": { "Value": 2 }, // Fire rate display
+                                                    "5": {
+                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Mode": "Set",
+                                                        "Value": 4
+                                                    }, // Missiles ROF
+                                                    "6": { "Remove": true },
+                                                    "7": { "Remove": true },
+                                                    "8": { "Remove": true }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }
+        },
+        "C_Interceptor_MP": {
+            "WeaponAttributes": {
+                "C_Interceptor_Weapon_A2G_MP": {
+                    "DamagePacketsPerShot": 2
+                }
+            }
+        },
+        "G_Interceptor_MP": {
+            "WeaponAttributes": {
+                "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
+                    "DamagePacketsPerShot": 2
+                }
+            }
+        },
+        "K_Interceptor_MP": {
+            "WeaponAttributes": {
+                "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
+                    "DamagePacketsPerShot": 2
+                }
+            }
+        },
+        "Tier_3_C_Artillery": {
+            "ResearchItemAttributes": {
+                "Dependencies": [ "Tier_2_C_ArmouredAssault" ]
+            }
+        },
+        "Tier_3_S_Artillery": {
+            "ResearchItemAttributes": {
+                "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
+            }
+        },
+        "C_Railgun_MP": {
+            "UnitAttributes": {
+                "Armour": 2,
+                "MaxHealth": 475
+            }
+        },
+        "C_Sob_Railgun_MP": {
+            "UnitAttributes": {
+                "Armour": 3,
+                "MaxHealth": 480
+            }
+        },
+        "Research_Buff_C_TrackedUnits_Armor01": {
+            "ResearchItemAttributes": {
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 3 on Armored Assault and Missile Battery, armor by 1 on Railgun.",
+                "UnitTypeBuffs": {
+                    "0": { "BuffSet": { "0": { "Value": 1 } } }, //rail
+                    "1": { "BuffSet": { "0": { "Value": 3 } } }, //mb
+                    "2": { "BuffSet": { "0": { "Value": 3 } } }, //aav
+                    "3": { "BuffSet": { "0": { "Value": 3 } } } //??? yourmom?
+                }
+            }
+        },
+        "Research_Buff_C_TrackedUnits_Armor02": {
+            "ResearchItemAttributes": {
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 2 and hull integrity by 100 on Armored Assault and Missile Battery, armor by 1 and hull integrity by 50 on Railgun.",
+                "UnitTypeBuffs": {
+                    "0": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 50 }
+                        }
+                    },
+                    "1": { "BuffSet": { "0": { "Value": 2 } } },
+                    "2": { "BuffSet": { "0": { "Value": 2 } } },
+                    "3": { "BuffSet": { "0": { "Value": 2 } } }
+                }
+            }
+        },
+        "Research_Buff_C_TrackedUnits_Armor03": {
+            "ResearchItemAttributes": {
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 200 on Armored Assault and Missile Battery, armor by 1 and hull integrity by 100 on Railgun.",
+                "UnitTypeBuffs": {
+                    "0": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 100 }
+                        }
+                    },
+                    "1": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 200 }
+                        }
+                    },
+                    "2": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 200 }
+                        }
+                    },
+                    "3": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 200 }
+                        }
+                    }
+                }
+            }
+        },
+        "Research_Buff_S_TrackedUnits_Armor01": {
+            "ResearchItemAttributes": {
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 3 on Armored Assault and Missile Battery, armor by 1 on Railgun.",
+                "UnitTypeBuffs": {
+                    "0": { "BuffSet": { "0": { "Value": 1 } } }, //rail
+                    "1": { "BuffSet": { "0": { "Value": 3 } } }, //mb
+                    "2": { "BuffSet": { "0": { "Value": 3 } } }, //aav
+                    "3": { "BuffSet": { "0": { "Value": 3 } } } //??? yourmom?
+                }
+            }
+        },
+        "Research_Buff_S_TrackedUnits_Armor02": {
+            "ResearchItemAttributes": {
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 2 and hull integrity by 100 on Armored Assault and Missile Battery, armor by 1 and hull integrity by 50 on Railgun.",
+                "UnitTypeBuffs": {
+                    "0": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 50 }
+                        }
+                    },
+                    "1": { "BuffSet": { "0": { "Value": 2 } } },
+                    "2": { "BuffSet": { "0": { "Value": 2 } } },
+                    "3": { "BuffSet": { "0": { "Value": 2 } } }
+                }
+            }
+        },
+        "Research_Buff_S_TrackedUnits_Armor03": {
+            "ResearchItemAttributes": {
+                "LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 200 on Armored Assault and Missile Battery, armor by 1 and hull integrity by 100 on Railgun.",
+                "UnitTypeBuffs": {
+                    "0": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 100 }
+                        }
+                    },
+                    "1": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 200 }
+                        }
+                    },
+                    "2": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 200 }
+                        }
+                    },
+                    "3": {
+                        "BuffSet": {
+                            "0": { "Value": 1 },
+                            "1": { "Value": 200 }
+                        }
+                    }
+                }
+            }
+        },
+
+
+        "G_StarHullTank_MP": {
+            "UnitAttributes": {
+                "Armour": 2,
+                "MaxHealth": 450
+            },
+            "WeaponAttributes": {
+                "G_StarHull_Weapon_G2G_MP": {
+                    "StatusEffectsExcludeTargetType": "None"
+                }
+            }
+        },
+        "G_StarHull_Upgrade01_MP": {
+            "UnitAttributes": {
+                "Armour": 5
+            }
+        },
+        "K_HeavyRailgun_MP": {
+            "UnitAttributes": {
+                "Armour": 2,
+                "MaxHealth": 450
+            },
+            "WeaponAttributes": {
+                "G_StarHull_Weapon_G2G_MP": {
+                    "StatusEffectsExcludeTargetType": "None"
+                }
+            }
+        },
+        "K_AssaultRailgun_MP": {
+            "UnitAttributes": {
+                "Armour": 5
+            }
+        },
+        "Research_Buff_G_RailGunUnits_Armor1": {
+            "ResearchItemAttributes": {
+                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 Heavy Railgun and armor by 3 on Assault Railgun.",
+                "UnitTypeBuffs": {
+                    "0": {
+                        "BuffSet": {
+                            "0": { "Value": 3 }
+                        }
+                    },
+                    "1": {
+                        "BuffSet": {
+                            "0": { "Value": 1 }
+                        }
+                    },
+                    "2": {
+                        "BuffSet": {
+                            "0": { "Value": 3 }
+                        }
+                    },
+                    "3": {
+                        "BuffSet": {
+                            "0": { "Value": 1 }
+                        }
+                    }
+                }
+            }
+        },
+        "Research_Buff_G_RailGunUnits_Armor2": {
+            "ResearchItemAttributes": {
+                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 50 on Heavy Railgun. Increases armor by 2 and hull integrity by 50 on Assault Railgun.",
+                "UnitTypeBuffs": {
+                    "0": {
+                        "BuffSet": { // G_StarHull_Upgrade01_MP
+                            "0": { "Value": 2 },
+                            "1": { "Value": 50 }
+                        }
+                    },
+                    "1": {
+                        "BuffSet": { // G_StarHullTank_MP
+                            "0": { "Value": 1 },
+                            "1": { "Value": 50 }
+                        }
+                    },
+                    "2": {
+                        "BuffSet": { // K_AssaultRailgun
+                            "0": { "Value": 2 },
+                            "1": { "Value": 50 }
+                        }
+                    },
+                    "3": {
+                        "BuffSet": { // K_HeavyRailgun
+                            "0": { "Value": 1 },
+                            "1": { "Value": 50 }
+                        }
+                    }
+                }
+            }
+        },
+        "Research_Buff_G_RailGunUnits_Armor3": {
+            "ResearchItemAttributes": {
+                "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
+                "UnitTypeBuffs": {
+                    "0": {
+                        "BuffSet": { // G_StarHull_Upgrade01_MP
+                            "0": { "Value": 1 },
+                            "1": { "Value": 100 }
+                        }
+                    },
+                    "1": {
+                        "BuffSet": { // G_StarHullTank_MP
+                            "0": { "Value": 1 },
+                            "1": { "Value": 100 }
+                        }
+                    },
+                    "2": {
+                        "BuffSet": { // K_AssaultRailgun
+                            "0": { "Value": 1 },
+                            "1": { "Value": 100 }
+                        }
+                    },
+                    "3": {
+                        "BuffSet": { // K_HeavyRailgun
+                            "0": { "Value": 1 },
+                            "1": { "Value": 100 }
+                        }
+                    }
+                }
+            }
+        },
+        "G_BattleCruiser_MP": {
+            "AbilityAttributes": {
+                "Ability_G_BattleCruiser_Missile_MP": {
+                    "Resource1Cost": 0
+                }
+            }
+        },
+        "C_Sob_AssaultCruiser_MP": {
+            "AbilityAttributes": {
+                "Ability_G_BattleCruiser_Missile_MP": {
+                    "Resource1Cost": 0
+                }
+            }
+        },
+        "C_ArtilleryCruiser_MP": {
+            "AbilityAttributes": {
+                "Ability_C_ArtilleryBarrage_Precise": {
+                    "Resource1Cost": 0
+                }
+            }
+        }
+    }
+}
