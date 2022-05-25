@@ -102,6 +102,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-05-12 14.0](#2022-05-12-140)
 	- [2022-05-22 14.1](#2022-05-22-141)
 	- [2022-05-24 14.2](#2022-05-24-142)
+	- [2022-05-25 14.3](#2022-05-25-143)
 
 # Changes
 
@@ -2751,3 +2752,12 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Reload: `1s => 1.1s`
 * Soban:
 	* ALM AOE: `86 => 78`
+
+## 2022-05-25 14.3
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Fixed an issue where salvager armor wasn't updated as intended: `0 => 1`
+* Gaalsien:
+	* Carrier re-establish systems level 2 regeneration rage: `35 => 40` (Now matches Khaaneph carrier as intended)
+* Khaaneph:
+	* Fixed an issue where salvager armor wasn't updated as intended: `5 => 4`
