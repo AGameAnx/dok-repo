@@ -12,7 +12,7 @@
     "LastUpdate": "2022-05-25",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
   },
-
+ 
 
 
 
@@ -177,37 +177,42 @@
       }
     },
     "Research_Buff_G_Power_6": {
-      "ResearchItemAttributes": {
-        //"Resource1Cost": 0,
-        //"Resource2Cost": 0,
-        //"ResearchTime": 0,
+        "ResearchItemAttributes": {
+            //"Resource1Cost": 0,
+            //"Resource2Cost": 0,
+            //"ResearchTime": 0,
 
-        "Resource1Cost": 1300,
-        "Resource2Cost": 700,
-        "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
-        "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-        "LocalizedLongDescriptionStringID": "Adds 1100 hitpoints and 5 extra power to the carrier reserves",
-        "UnitTypeBuffs": {
-          "0": {
-            "UnitClass": "Carrier",
-            "UseAsPrefix": true,
-            "UnitType": "",
-            "BuffSet": {
-              "0": {
-                "Attribute": "Unit_MaxHealth",
-                "Mode": "Add",
-                "Value": 1100
-              },
-              "1": {
-                "Attribute": "Unit_NumProductionQueues",
-                "Mode": "Add",
-                "Value": 1
-              }
+            "Resource1Cost": 1300,
+            "Resource2Cost": 700,
+            "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
+            "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+            "LocalizedLongDescriptionStringID": "Adds 1100 hitpoints and 5 extra power to the carrier reserves one more production line, and 2 more heat capacity.",
+            "UnitTypeBuffs": {
+                "0": {
+                    "UnitClass": "Carrier",
+                    "UseAsPrefix": true,
+                    "UnitType": "",
+                    "BuffSet": {
+                        "0": {
+                            "Attribute": "Unit_MaxHealth",
+                            "Mode": "Add",
+                            "Value": 1100
+                        },
+                        "1": {
+                            "Attribute": "Unit_NumProductionQueues",
+                            "Mode": "Add",
+                            "Value": 1
+                        },
+                        "2": {
+                            "Attribute": "PowerShunt_HeatThreshold",
+                            "Mode": "Add",
+                            "Value": 2
+                        }
 
+                    }
+                }
             }
-          }
         }
-      }
     },
     "Research_Buff_G_Power_7": {
       "ResearchItemAttributes": {
@@ -219,23 +224,28 @@
         "Resource2Cost": 850,
         "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 7",
         "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-        "LocalizedLongDescriptionStringID": "Adds 1250 hitpoints and 5 extra power to the carrier reserves",
+        "LocalizedLongDescriptionStringID": "Adds 1250 hitpoints, 5 extra power to the carrier reserves, one more production line, and 8 more heat capacity.",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": "Carrier",
             "UseAsPrefix": true,
             "UnitType": "",
             "BuffSet": {
-              "0": {
-                "Attribute": "Unit_MaxHealth",
-                "Mode": "Add",
-                "Value": 1250
-              },
-              "1": {
-                "Attribute": "Unit_NumProductionQueues",
-                "Mode": "Add",
-                "Value": 1
-              }
+                "0": {
+                    "Attribute": "Unit_MaxHealth",
+                    "Mode": "Add",
+                    "Value": 1250
+                },
+                "1": {
+                    "Attribute": "Unit_NumProductionQueues",
+                    "Mode": "Add",
+                    "Value": 1
+                },
+                "2": {
+                    "Attribute": "PowerShunt_HeatThreshold",
+                    "Mode": "Add",
+                    "Value": 8
+                }
             }
           }
         }
@@ -381,30 +391,35 @@
       }
     },
     "Research_Buff_Power_6": {
-      "ResearchItemAttributes": {
-        //"Resource1Cost": 0,
-        //"Resource2Cost": 0,
-        //"ResearchTime": 0,
-        "Resource1Cost": 1300,
-        "Resource2Cost": 700,
-        "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
-        "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-        "LocalizedLongDescriptionStringID": "Adds 1250 hitpoints and 5 extra power to the carrier reserves",
-        "UnitTypeBuffs": {
-          "0": {
-            "UnitClass": "Carrier",
-            "UseAsPrefix": true,
-            "UnitType": "",
-            "BuffSet": {
-              "0": {
-                "Attribute": "Unit_MaxHealth",
-                "Mode": "Add",
-                "Value": 1250
-              }
+        "ResearchItemAttributes": {
+            //"Resource1Cost": 0,
+            //"Resource2Cost": 0,
+            //"ResearchTime": 0,
+            "Resource1Cost": 1300,
+            "Resource2Cost": 700,
+            "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
+            "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+            "LocalizedLongDescriptionStringID": "Adds 1250 hitpoints and 5 extra power to the carrier reserves and 2 heat capacity to carrier heatsinks",
+            "UnitTypeBuffs": {
+                "0": {
+                    "UnitClass": "Carrier",
+                    "UseAsPrefix": true,
+                    "UnitType": "",
+                    "BuffSet": {
+                        "0": {
+                            "Attribute": "Unit_MaxHealth",
+                            "Mode": "Add",
+                            "Value": 1250
+                        },
+                        "1": {
+                            "Attribute": "PowerShunt_HeatThreshold",
+                            "Mode": "Add",
+                            "Value": 2
+                        }
+                    }
+                }
             }
-          }
         }
-      }
     },
     "Research_Buff_Power_7": {
       "ResearchItemAttributes": {
@@ -415,23 +430,23 @@
         //"ResearchTime": 0,
         "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
         "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-        "LocalizedLongDescriptionStringID": "Adds 2000 hitpoints and 5 extra power to the carrier reserves",
+        "LocalizedLongDescriptionStringID": "Adds 2000 hitpoints, 5 extra power to the carrier reserves and 8 more heat capacity to carrier heatsinks",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": "Carrier",
             "UseAsPrefix": true,
             "UnitType": "",
             "BuffSet": {
-              "0": {
-                "Attribute": "Unit_MaxHealth",
-                "Mode": "Add",
-                "Value": 2000
-              },
-              "1": {
-                "Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "Add",
-                "Value": 0
-              }
+                "0": {
+                    "Attribute": "Unit_MaxHealth",
+                    "Mode": "Add",
+                    "Value": 2000
+                },
+                "2": {
+                    "Attribute": "PowerShunt_HeatThreshold",
+                    "Mode": "Add",
+                    "Value": 8
+                }
             }
           }
         }
@@ -564,18 +579,23 @@
         "Resource2Cost": 700,
         "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
         "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-        "LocalizedLongDescriptionStringID": "Adds 6 extra power to the carrier reserves, but removes 1250 hull integrity",
+        "LocalizedLongDescriptionStringID": "Adds 6 extra power to the carrier reserves and 2 heat capacity, but removes 1250 hull integrity",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": "Carrier",
             "UseAsPrefix": true,
             "UnitType": "",
             "BuffSet": {
-              "0": {
-                "Attribute": "Unit_MaxHealth",
-                "Mode": "Add",
-                "Value": -1250
-              }
+                "0": {
+                    "Attribute": "Unit_MaxHealth",
+                    "Mode": "Add",
+                    "Value": -1250
+                },
+                "1": {
+                    "Attribute": "PowerShunt_HeatThreshold",
+                    "Mode": "Add",
+                    "Value": 2
+                }
             }
           }
         }
@@ -587,18 +607,23 @@
         "Resource2Cost": 850,
         "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
         "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-        "LocalizedLongDescriptionStringID": "Adds 7 extra power to the carrier reserves, but removes 2000 hull integrity",
+        "LocalizedLongDescriptionStringID": "Adds 7 extra power to the carrier reserves and 8 more heat capacity, but removes 2000 hull integrity",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": "Carrier",
             "UseAsPrefix": true,
             "UnitType": "",
             "BuffSet": {
-              "0": {
-                "Attribute": "Unit_MaxHealth",
-                "Mode": "Add",
-                "Value": -2000
-              }
+                "0": {
+                    "Attribute": "Unit_MaxHealth",
+                    "Mode": "Add",
+                    "Value": -2000
+                },
+                "1": {
+                    "Attribute": "PowerShunt_HeatThreshold",
+                    "Mode": "Add",
+                    "Value": 8
+                }
             }
           }
         }
@@ -3822,7 +3847,10 @@
         "OverheatDamage": 250,
         "PowerSystems": {
             "0": { // Speed Power Systems
-                "View": { "LocalizedTitleStringID": "THE RUN AWAY SYSTEM" },
+                "View": {
+                    "LocalizedTitleStringID": "THE RUN AWAY SYSTEM",
+                    "LocalizedLongDescriptionStringID": "Increase power to maximize runawayableness"
+                },
                 "PowerLevels": {
 
                     "0": {
