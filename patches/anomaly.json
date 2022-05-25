@@ -8,8 +8,8 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "1.04.20",
-    "LastUpdate": "2022-05-24",
+    "Version": "1.04.21",
+    "LastUpdate": "2022-05-25",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
   },
 
@@ -6771,10 +6771,11 @@
           "BaseDamagePerRound": 1200
         }
       },
-      "UnitAttributes": {
-        "ExcludeFromUnitStats": false,
-        "Class": "Ground, Strikecraft, Small"
-      }
+        "UnitAttributes": {
+            "Resource1Cost": 100,
+            "ExcludeFromUnitStats": false,
+            "Class": "Ground, Strikecraft, Small"
+        }
     },
 
     //// COALITION CRUISE MISSILE
@@ -14458,15 +14459,19 @@
         "Armour": 1,
         "AggroRange": 500
       },
-      "UnitMovementAttributes": {
-        "Combat": { "MaxDesiredCombatRange": 3500 },
-        "Dynamics": {
-          "MaxSpeed": 25,
-          "MaxSpeedTurnRadius": 100,
-          "AccelerationTime": 0.9,
-          "BrakingTime": 0.9
-        }
-      },
+        "UnitMovementAttributes": {
+            "Combat": {
+                "MinDesiredCombatRange": 1000,
+                "MaxDesiredCombatRange": 3000,
+                "ActiveCombatApproachMode": "Snipe"
+            },
+            "Dynamics": {
+                "MaxSpeed": 25,
+                "MaxSpeedTurnRadius": 100,
+                "AccelerationTime": 0.9,
+                "BrakingTime": 0.9
+            }
+        },
       "ExperienceAttributes": {
         "Levels": {
           "1": {
@@ -14945,7 +14950,7 @@
         "C_ArtilleryCruiser_Weapon_Barrage_MP": {
             "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
             "FriendlyFireDamageScalar": 1,
-            "BaseDamagePerRound": 1200,
+            "BaseDamagePerRound": 1000,
             "AreaOfEffectRadius": 100,
             "NumberOfBursts": 3,
             "RateOfFire": 1,
