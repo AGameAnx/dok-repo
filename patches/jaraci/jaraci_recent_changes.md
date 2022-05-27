@@ -103,7 +103,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-05-22 14.1](#2022-05-22-141)
 	- [2022-05-24 14.2](#2022-05-24-142)
 	- [2022-05-25 14.3](#2022-05-25-143)
-	- [2022-05-27 14.4](#2022-05-27-144)
 
 # Changes
 
@@ -2762,8 +2761,3 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Carrier re-establish systems level 2 regeneration rage: `35 => 40` (Now matches Khaaneph carrier as intended)
 * Khaaneph:
 	* Fixed an issue where salvager armor wasn't updated as intended: `5 => 4`
-
-## 2022-05-27 14.4
-*Not yet reflected in the main changelog.*
-* Coalition/Soban:
-	* Fixed an issue where probe unit itself didn't have a cost causing it to not appear as resources lost when viewing the replay.
