@@ -103,6 +103,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-05-22 14.1](#2022-05-22-141)
 	- [2022-05-24 14.2](#2022-05-24-142)
 	- [2022-05-25 14.3](#2022-05-25-143)
+	- [2022-05-29 14.4](#2022-05-29-144)
 
 # Changes
 
@@ -2761,3 +2762,14 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Carrier re-establish systems level 2 regeneration rage: `35 => 40` (Now matches Khaaneph carrier as intended)
 * Khaaneph:
 	* Fixed an issue where salvager armor wasn't updated as intended: `5 => 4`
+
+## 2022-05-29 14.4
+*Not yet reflected in the main changelog.*
+* Gaalsien:
+	* Carrier hangar bay parameters:
+		* Interceptor undock animation seconds: `3s => 2.66s`
+		* Bomber undock total seconds: `8s => 5s` (matches Khaaneph)
+* Khaaneph:
+	* Carrier hangar bay parameters:
+		* Interceptor undock animation seconds: `2.67s => 2.66s`
+		* Bomber undock animation seconds: `3.33s => 2.75s` (matches Gaalsien)

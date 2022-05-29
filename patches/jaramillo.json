@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "14.3",
-		"LastUpdate": "2022-05-25",
+		"Version": "14.4",
+		"LastUpdate": "2022-05-29",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	/*"Global": {
@@ -21,7 +21,7 @@
 			"Any": {
 				"Resource1Cost": 0,
 				"Resource2Cost": 0,
-				"CooldownTimeSecs": 1
+				"CooldownTimeSecsMult": 0.01
 			}
 		}
 	},*/
@@ -1896,7 +1896,11 @@
 			"UnitHangarAttributes": {
 				"HangarBays": {
 					"Interceptor": {
-						"MaxCount": 12
+						"MaxCount": 12,
+						"UndockAnimationSeconds": 2.66
+					},
+					"Bomber": {
+						"UndockTotalSeconds": 5
 					}
 				}
 			},
@@ -2429,7 +2433,11 @@
 			"UnitHangarAttributes": {
 				"HangarBays": {
 					"Interceptor": {
-						"MaxCount": 12
+						"MaxCount": 12,
+						"UndockAnimationSeconds": 2.66
+					},
+					"Bomber": {
+						"UndockAnimationSeconds": 2.75
 					}
 				}
 			},
