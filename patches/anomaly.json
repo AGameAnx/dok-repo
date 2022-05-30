@@ -8,8 +8,8 @@
   "Meta": {
     "Name": "Anomaly DOK",
     "Author": "Bozocow, Just_Carrier",
-    "Version": "1.04.22",
-    "LastUpdate": "2022-05-25",
+    "Version": "1.04.23",
+    "LastUpdate": "2022-05-30",
     "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
   },
  
@@ -741,9 +741,11 @@
       },
       "UnitHangarAttributes": {
         "HangarBays": {
-          "Interceptor": {
-            "MaxCount": 12
-          }
+            "Interceptor": {
+                "MaxCount": 12,
+                "UndockSpeed": 550
+            },
+            "Ground": { "UndockSpeed": 150 }
         }
       },
       "AbilityAttributes": {
@@ -2016,13 +2018,15 @@
       "DetectableAttributes": {
         "TimeVisibleAfterFiring": 4500
       },
-      "UnitHangarAttributes": {
-        "HangarBays": {
-          "Interceptor": {
-            "MaxCount": 12
-          }
-        }
-      },
+        "UnitHangarAttributes": {
+            "HangarBays": {
+                "Interceptor": {
+                    "MaxCount": 12,
+                    "UndockSpeed": 550
+                },
+                "Ground": { "UndockSpeed": 150 }
+            }
+        },
       "AbilityAttributes": {
         "Ability_C_Sob_DeployPopCapCarrier_MP": {
           "CooldownTimeSecs": 0,
@@ -3630,13 +3634,23 @@
       "DetectableAttributes": {
         "TimeVisibleAfterFiring": 4500
       },
-      "UnitHangarAttributes": {
-        "HangarBays": {
-          "Interceptor": {
-            "MaxCount": 12
-          }
-        }
-      },
+        "UnitHangarAttributes": {
+            "HangarBays": {
+                "Interceptor": {
+                    "MaxCount": 12,
+                    "UndockSpeed": 150,
+                    "UndockAnimationSeconds": 2.66
+                },
+                "Bomber": {
+                    "UndockTotalSeconds": 2.7
+                },
+                "Ground": {
+                    "UndockSpeed": 150,
+                    "UndockTotalSeconds": 1,
+                    "UndockAnimationSeconds": 1
+                }
+            }
+        },
 
         "AbilityAttributes": {            
             "Ability_G_MissileBarrage": {
@@ -4848,13 +4862,23 @@
       "DetectableAttributes": {
         "TimeVisibleAfterFiring": 4500
       },
-      "UnitHangarAttributes": {
-        "HangarBays": {
-          "Interceptor": {
-            "MaxCount": 12
-          }
-        }
-      },
+        "UnitHangarAttributes": {
+            "HangarBays": {
+                "Interceptor": {
+                    "MaxCount": 12,
+                    "UndockSpeed": 150,
+                    "UndockAnimationSeconds": 2.66
+                },
+                "Bomber": {
+                    "UndockAnimationSeconds": 2.7
+                },
+                "Ground": {
+                    "UndockSpeed": 150,
+                    "UndockTotalSeconds": 1,
+                    "UndockAnimationSeconds": 1
+                }
+            }
+        },
         "AbilityAttributes": {
             //"Ability_G_MissileBarrage_Sight": { // cant have nice things
             //    "StartsRemovedInGameMode": "None",
