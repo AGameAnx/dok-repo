@@ -386,8 +386,6 @@
                     },
                     "3": { // Range Systems
                         "PowerLevels": {
-                            "0": {
-                            },
                             "1": {
                                 "StatusEffectsToApply": {
                                     "Range_1_StatusEffect_Gaalsi_MP": {
@@ -673,16 +671,52 @@
                 },
                 "K_Carrier_Weapon_G2All_MP": {
                     "Turret": {
-                        "FieldOfView": 200,
-                        "FieldOfFire": 2,
-                        "RotationSpeed": 85
+                        "FieldOfView": 200
                     }
                 },
                 "G_Carrier_Weapon_G2All_APBULLETS_MP": {
-                    "Turret": {
-                        "FieldOfView": 200,
-                        "FieldOfFire": 2,
-                        "RotationSpeed": 85
+                    "ExcludeFromHeightAdvantage": true,
+                    "RangeAttributesShort": {
+                        "Accuracy": 100,
+                        "Distance": 250
+                    },
+                    "RangeAttributesMedium": {
+                        "Accuracy": 90,
+                        "Distance": 500
+                    },
+                    "RangeAttributesLong": {
+                        "Accuracy": 80,
+                        "Distance": 750
+                    },
+                    "Turret": { "FieldOfFire": 200 },
+                    "Modifiers": {
+                        "1": {
+                            "TargetClass": "Large, Carrier, XLarge",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyShortPercent",
+                            "Amount": 130
+                        },
+                        "2": {
+                            "TargetClass": "Large, Carrier, XLarge",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyMediumPercent",
+                            "Amount": 130
+                        },
+                        "3": {
+                            "TargetClass": "Large, Carrier, XLarge",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyLongPercent",
+                            "Amount": 130
+                        },
+                        "4": { "Remove": true },
+                        "5": { "Remove": true },
+                        "6": { "Remove": true },
+                        "7": { "Remove": true },
+                        "8": { "Remove": true },
+                        "9": { "Remove": true },
+                        "10": { "Remove": true },
+                        "11": { "Remove": true },
+                        "12": { "Remove": true }
                     }
                 }
             },
@@ -753,7 +787,6 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-
                                                     "4": { "Value": 2 }, // Fire rate display
                                                     "5": {
                                                         "Attribute": "UnitWeapon_RateOfFire",
