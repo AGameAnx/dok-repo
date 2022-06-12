@@ -8,11 +8,11 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.05.00",
-        "LastUpdate": "2022-06-07",
+        "Version": "1.05.01",
+        "LastUpdate": "2022-06-12",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
-    /*"Global": {
+    "Global": {
 		"UnitAttributes": {
 			"Resource1Cost": 0,
 			"Resource2Cost": 0,
@@ -30,7 +30,7 @@
 				"CooldownTimeSecsMult": 0.01
 			}
 		}
-	},*/
+	},
 
 
 
@@ -3896,7 +3896,12 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 15 }
+                                                    "0": { "Value": 15 },
+                                                    "1": {
+                                                        "Value": 125,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
+                                                    }
                                                 }
                                             }
                                         }
@@ -3911,7 +3916,12 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 30 }
+                                                    "0": { "Value": 30 },
+                                                    "1": {
+                                                        "Value": 250,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
+                                                    }
                                                 }
                                             }
                                         }
@@ -3926,7 +3936,12 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 60 }
+                                                    "0": { "Value": 60 },
+                                                    "1": {
+                                                        "Value": 375,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
+                                                    }
                                                 }
                                             }
                                         }
@@ -3941,7 +3956,12 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 100 }
+                                                    "0": { "Value": 100 },
+                                                    "1": {
+                                                        "Value": 500,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
+                                                    }
                                                 }
                                             }
                                         }
@@ -3956,7 +3976,12 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 170 }
+                                                    "0": { "Value": 170 },
+                                                    "1": {
+                                                        "Value": 625,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
+                                                    }
                                                 }
                                             }
                                         }
@@ -4056,6 +4081,11 @@
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 5
+                                                    },
+                                                    "10": {
+                                                        "Value": 125,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
                                                     }
                                                 }
                                             }
@@ -4148,6 +4178,11 @@
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 7
+                                                    },
+                                                    "10": {
+                                                        "Value": 250,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
                                                     }
                                                 }
                                             }
@@ -4240,6 +4275,11 @@
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 12
+                                                    },
+                                                    "10": {
+                                                        "Value": 375,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
                                                     }
                                                 }
                                             }
@@ -4332,6 +4372,11 @@
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 20
+                                                    },
+                                                    "10": {
+                                                        "Value": 500,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
                                                     }
                                                 }
                                             }
@@ -4389,6 +4434,11 @@
                                                     "0": {
                                                         "Value": 30,
                                                         "Mode": "Set"
+                                                    },
+                                                    "1": {
+                                                        "Value": 625,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
                                                     }
                                                 }
                                             }
@@ -4602,11 +4652,11 @@
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
-                                                        "Value": 1250
+                                                        "Value": 1500
                                                     },
                                                     "27": { // SENS RAD
-                                                        "Mode": "Set",
-                                                        "Value": 800
+                                                        "Mode": "Add",
+                                                        "Value": 125
                                                     },
                                                     "28": { // min desired combat dist
                                                         "Attribute": 1073741825,
@@ -4661,11 +4711,11 @@
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
-                                                        "Value": 1250
+                                                        "Value": 1750
                                                     },
                                                     "27": { // SENS RAD
-                                                        "Mode": "Set",
-                                                        "Value": 800
+                                                        "Mode": "Add",
+                                                        "Value": 250
                                                     },
                                                     "28": { // min desired combat dist
                                                         "Attribute": 1073741825,
@@ -4720,11 +4770,11 @@
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
-                                                        "Value": 1250
+                                                        "Value": 1950
                                                     },
                                                     "27": { // SENS RAD
-                                                        "Mode": "Set",
-                                                        "Value": 800
+                                                        "Mode": "Add",
+                                                        "Value": 375
                                                     },
                                                     "28": { // min desired combat dist
                                                         "Attribute": 1073741825,
@@ -4779,11 +4829,11 @@
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
-                                                        "Value": 1250
+                                                        "Value": 2150
                                                     },
                                                     "27": { // SENS RAD
-                                                        "Mode": "Set",
-                                                        "Value": 800
+                                                        "Mode": "Add",
+                                                        "Value": 500
                                                     },
                                                     "28": { // min desired combat dist
                                                         "Attribute": 1073741825,
@@ -4838,11 +4888,11 @@
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
-                                                        "Value": 1250
+                                                        "Value": 2350
                                                     },
                                                     "27": { // SENS RAD
-                                                        "Mode": "Set",
-                                                        "Value": 800
+                                                        "Mode": "Add",
+                                                        "Value": 625
                                                     },
                                                     "28": { // min desired combat dist
                                                         "Attribute": 1073741825,
@@ -10497,7 +10547,7 @@
                 }
             },
             "UnitMovementAttributes": {
-                "Dynamics": { "MaxSpeed": 85 },
+                "Dynamics": { "MaxSpeed": 75 },
                 "Combat": { "MaxDesiredCombatRange": 780 }
             },
             "WeaponAttributes": {
@@ -10707,7 +10757,7 @@
                 }
             },
             "UnitMovementAttributes": {
-                "Dynamics": { "MaxSpeed": 75 },
+                "Dynamics": { "MaxSpeed": 65 },
                 "Combat": { "MaxDesiredCombatRange": 1530 }
             },
             "WeaponAttributes": {
@@ -11990,7 +12040,7 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 70
+                    "MaxSpeed": 65
                 },
                 "Combat": {
                     "MaxDesiredCombatRange": 1000
@@ -15397,7 +15447,7 @@
             "UnitMovementAttributes": {
                 "Dynamics": {
                     "MaxSpeed": 64, // 64,
-                    "AccelerationTime": 3,
+                    "AccelerationTime": 1.5,
                     "BrakingTime": 1.25
                 }
             },
@@ -15440,15 +15490,15 @@
                     "ReloadTimeMS": 1500,
                     "RangeAttributesShort": {
                         "Accuracy": 35,
-                        "Distance": 700
+                        "Distance": 800
                     },
                     "RangeAttributesMedium": {
                         "Accuracy": 30,
-                        "Distance": 900
+                        "Distance": 1000
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 25,
-                        "Distance": 1100
+                        "Distance": 1200
                     },
                     "TargetPrioritizationAttributes": {
                         "TargetPriorityWeight": 150
@@ -15509,7 +15559,7 @@
                     }
                 },
                 "G_ArtilleryCruiser_Weapon_G2G_MP": {
-                    "AreaOfEffectRadius": 0,
+                    "AreaOfEffectRadius": 100,
                     "OutputDPS": true,
                     "ProjectileEntityTypeToSpawn": "G_BattleCruiserDefault_ProjectileAssetContainer",
                     "BaseDamagePerRound": 75,
@@ -15519,11 +15569,11 @@
                     "LineOfSightRequired": true,
                     "NumberOfBursts": 2,
                     "LeadsTarget": 1,
-                    "WindUpTimeMS": 100,
+                    "WindUpTimeMS": 0,
                     "WindDownTimeMS": 200,
                     "BurstPeriodMinTimeMS": 500,
                     "BurstPeriodMaxTimeMS": 500,
-                    "RateOfFire": 2,
+                    "RateOfFire": 1,
                     "CooldownTimeMS": 1000,
                     "DamagePacketsPerShot": 1,
                     "ReloadTimeMS": 2000,
@@ -15685,7 +15735,7 @@
             "UnitAttributes": {
                 "Resource1Cost": 700,
                 "Resource2Cost": 280,
-                "MaxHealth": 3100,
+                "MaxHealth": 4100,
                 "Armour": 16,
                 "PopCapCost": 6,
                 "SensorRadius": 1400,
@@ -15753,15 +15803,15 @@
                     "ReloadTimeMS": 1500,
                     "RangeAttributesShort": {
                         "Accuracy": 35,
-                        "Distance": 700
+                        "Distance": 800
                     },
                     "RangeAttributesMedium": {
                         "Accuracy": 30,
-                        "Distance": 900
+                        "Distance": 1000
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 25,
-                        "Distance": 1100
+                        "Distance": 1200
                     },
                     "TargetPrioritizationAttributes": {
                         "TargetPriorityWeight": 150
