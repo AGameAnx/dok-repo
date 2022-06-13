@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.05.01",
-        "LastUpdate": "2022-06-12",
+        "Version": "1.05.10",
+        "LastUpdate": "2022-06-14",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
@@ -26,8 +26,8 @@
 		"AbilityAttributes": {
 			"Any": {
 				"Resource1Cost": 0,
-				"Resource2Cost": 0,
-				"CooldownTimeSecsMult": 0.01
+				"Resource2Cost": 0
+				//"CooldownTimeSecsMult": 0.01
 			}
 		}
 	},*/
@@ -460,7 +460,7 @@
                                 "Mode": "Add",
                                 "Value": 2000
                             },
-                            "2": {
+                            "1": {
                                 "Attribute": "PowerShunt_HeatThreshold",
                                 "Mode": "Add",
                                 "Value": 8
@@ -4524,6 +4524,20 @@
                                                     "Amount": 0
                                                 }
                                             }
+                                        },
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "UnitClass": "Carrier",
+                                                "UseAsPrefix": true,
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 125,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -4538,6 +4552,20 @@
                                                 "HealthOverTimeAttributes": {
                                                     "Amount": 1,
                                                     "MSTickDuration": 50
+                                                }
+                                            }
+                                        },
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "UnitClass": "Carrier",
+                                                "UseAsPrefix": true,
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 250,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
+                                                    }
                                                 }
                                             }
                                         }
@@ -4556,6 +4584,20 @@
                                                     "MSTickDuration": 25
                                                 }
                                             }
+                                        },
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "UnitClass": "Carrier",
+                                                "UseAsPrefix": true,
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 375,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -4572,6 +4614,20 @@
                                                     "MSTickDuration": 12
                                                 }
                                             }
+                                        },
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "UnitClass": "Carrier",
+                                                "UseAsPrefix": true,
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 500,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -4586,6 +4642,20 @@
                                                 "HealthOverTimeAttributes": {
                                                     "Amount": 1,
                                                     "MSTickDuration": 6
+                                                }
+                                            }
+                                        },
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "UnitClass": "Carrier",
+                                                "UseAsPrefix": true,
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 625,
+                                                        "Mode": "Add",
+                                                        "Attribute": "Unit_SensorRadius"
+                                                    }
                                                 }
                                             }
                                         }
@@ -7045,7 +7115,8 @@
                 "Resource1Cost": 200,
                 "Resource2Cost": 30,
                 "MaxHealth": 1700,
-                "PriorityAsTarget": -250
+                "PriorityAsTarget": -250,
+                "Armour": 1
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -7131,7 +7202,7 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 70,
+                    "MaxSpeed": 60,
                     "MaxEaseIntoTurnTime": 0.6
                 }
             },
@@ -7298,7 +7369,7 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 70,
+                    "MaxSpeed": 60,
                     "MaxEaseIntoTurnTime": 0.6
                 }
             },
@@ -7307,7 +7378,7 @@
                     "SharedCooldownChannel": 1 //decide yourself
                 },
                 "Ability_C_Baserunner_ECMField": {
-                    "SharedCooldownChannel": 1,//decide yourself id like that crap nerfed
+                    "SharedCooldownChannel": 1, //decide yourself id like that crap nerfed
                     "CooldownTimeSecs": 120,
                     "Resource1Cost": 0
                 },
@@ -7365,11 +7436,12 @@
                 "Resource1Cost": 200,
                 "Resource2Cost": 30,
                 "MaxHealth": 1600,
-                "PriorityAsTarget": -250
+                "PriorityAsTarget": -250,
+                "Armour": 1
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 75
+                    "MaxSpeed": 65
                 }
             },
             "ExperienceAttributes": {
@@ -7555,7 +7627,8 @@
                 "Resource1Cost": 200,
                 "Resource2Cost": 30,
                 "MaxHealth": 1500,
-                "PriorityAsTarget": -220
+                "PriorityAsTarget": -220,
+                "Armour": 1
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -7627,7 +7700,7 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 84
+                    "MaxSpeed": 74
                 }
             },
             "AbilityAttributes": {
@@ -7872,6 +7945,7 @@
                 },
                 "C_SupportCruiser_Weapon_G2A_MP": {
                     "BaseDamagePerRound": 70,
+                    "ProjectileEntityTypeToSpawn": "Carrier_ShuntWeapon_ProjectileAssetContainer_MP 1",
                     "NumberOfBursts": 4,
                     "BurstPeriodMinTimeMS": 300,
                     "BurstPeriodMaxTimeMS": 300,
@@ -8084,6 +8158,7 @@
                     "RateOfFire": 1,
                     "ReloadTimeMS": 5000,
                     "AreaOfEffectRadius": 60,
+                    "ProjectileEntityTypeToSpawn": "Carrier_ShuntWeapon_ProjectileAssetContainer_MP 1",
                     "RangeAttributesShort": {
                         "Distance": 600,
                         "Accuracy": 100
@@ -12078,6 +12153,7 @@
                     "FriendlyFireDamageScalar": 1,
                     "AreaOfEffectRadius": 260,
                     "DamagePacketsPerShot": 30,
+                    "StatusEffectsTargetAlignment": "Foe",
                     "AreaOfEffectFalloffType": "Quadratic",
                     "ExcludeFromHeightAdvantage": true,
                     "RangeAttributesShort": {
@@ -12089,6 +12165,35 @@
                     },
                     "RangeAttributesLong": {
                         "Remove": true
+                    }
+                }
+            }
+        },
+        "MortarSuppress_StatusEffect": {
+            "StatusEffectAttributes": {
+                "Duration": 5,
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": "Ground",
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Attribute": "WeaponRange_AccuracyShort",
+                                "Mode": "AddPercent",
+                                "Value": -100
+                            },
+                            "1": {
+                                "Attribute": "WeaponRange_AccuracyMedium",
+                                "Mode": "AddPercent",
+                                "Value": -100
+                            },
+                            "2": {
+                                "Attribute": "WeaponRange_AccuracyLong",
+                                "Mode": "AddPercent",
+                                "Value": -100
+                            }
+                        }
                     }
                 }
             }
@@ -15106,6 +15211,12 @@
                                 "Attribute": "Ability_CooldownTimeSecs",
                                 "Mode": "AddPercent",
                                 "Value": -50
+                            },
+                            "2": {
+                                "Name": "Ability_C_ToggleAutoFire",
+                                "Attribute": "Ability_CooldownTimeSecs",
+                                "Mode": "AddPercent",
+                                "Value": -50
                             }
                         }
                     }
@@ -15121,6 +15232,46 @@
                 "AggroRange": 2250
             },
             "AbilityAttributes": {
+                "Ability_C_ToggleAutoFire": {
+                    "CooldownTimeSecs": 90,
+                    "SharedCooldownChannel": 1,
+                    "ApplyStatusEffect": {
+                        "ToggleAutoFire_StatusEffect": {
+                            "BuffsToApplyToTarget": {
+                                "0": {
+                                    "UnitClass": "Ground",
+                                    "UseAsPrefix": true,
+                                    "UnitType": "",
+                                    "BuffSet": {
+                                        "0": {
+                                            "Attribute": "Unit_Armour",
+                                            "Mode": "Add",
+                                            "Value": 10
+                                        }
+
+                                    }
+                                }
+                            },
+                            "Modifiers": {
+                                "0": {
+                                    "ModifierType": "Immobilize"
+                                },
+                                "1": {
+                                    "ModifierType": "DisableAllWeapons"
+                                },
+                                "2": {
+                                    "ModifierType": "HealthOverTime",
+                                    "HealthOverTimeAttributes": {
+                                        "MSTickDuration": 20,
+                                        "Amount": 1,
+                                        "DamageType": "Heal"
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                },
                 "Ability_C_ArtilleryBarrage": {
                     "CooldownTimeSecs": 90
                 },
@@ -16252,6 +16403,22 @@
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "THROW A BEEHIVE WITH A MICROWAVE",
                 "LocalizedLongDescriptionStringID": "Launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 300 ANGRY BEES."
+            }
+        },
+        "Ability_C_ToggleAutoFire": {
+            "AbilityViewAttributes": {
+                "IconName": "Shunt_Armour_on",
+                "ToggledIconName": "Shunt_Armour_off",
+                "LocalizedTitleStringID": "HUNKER DOWN MODE",
+                "LocalizedToggledTitleStringID": "DISABLE HUNKER",
+                "LocalizedLongDescriptionStringID": "Divert cruiser power from wepons and movement systems into self-repair and armor systems.",
+                "LocalizedToggledLongDescriptionStringID": "Continue normal cruiser operations."
+            }
+        },
+        "C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "THROW A SAND GRENADE",
+                "LocalizedLongDescriptionStringID": "I hate sand, its rough and gets everywhere, especialy in emey targeting systems for 5 seconds."
             }
         }
     }
