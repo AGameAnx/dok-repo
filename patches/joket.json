@@ -8,7 +8,7 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.05.10",
+        "Version": "1.05.11",
         "LastUpdate": "2022-06-14",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joket.json"
     },
@@ -15586,6 +15586,63 @@
                         "TakeNoDamageForMS": 15000
                     }
                 },
+                "Ability_G_ToggleAutoFire": {
+                    "ApplyStatusEffect": {
+                        "ToggleAutoFire_StatusEffect": {
+                            "BuffsToApplyToTarget": {
+                                "0": {
+                                    "UnitClass": "Ground",
+                                    "UseAsPrefix": true,
+                                    "UnitType": "",
+                                    "BuffSet": {
+                                        "0": {
+                                            "Attribute": "Unit_DamageReceivedMultiplier",
+                                            "Mode": "AddPercent",
+                                            "Value": -25
+                                        },
+                                        "1": {
+                                            "Name": "",
+                                            "Attribute": "WeaponRange_DistanceLong",
+                                            "Mode": "AddPercent",
+                                            "Value": 25
+                                        },
+                                        "9": {
+                                            "Name": "",
+                                            "Attribute": "WeaponRange_DistanceMedium",
+                                            "Mode": "AddPercent",
+                                            "Value": 25
+                                        },
+                                        "10": {
+                                            "Name": "",
+                                            "Attribute": "WeaponRange_DistanceShort",
+                                            "Mode": "AddPercent",
+                                            "Value": 25
+                                        },
+                                        "2": {
+                                            "Name": "",
+                                            "Attribute": "UnitWeapon_ReloadTime",
+                                            "Mode": "AddPercent",
+                                            "Value": -20
+                                        },
+                                        "13": {
+                                            "Name": "",
+                                            "Attribute": "UnitWeapon_CooldownTime",
+                                            "Mode": "AddPercent",
+                                            "Value": -20
+                                        }
+
+                                    }
+                                }
+                            },
+                            "Modifiers": {
+                                "0": {
+                                    "ModifierType": "Immobilize"
+                                }
+                            }
+
+                        }
+                    }
+                },
                 "Ability_G_Artillery_EMP_MP": {
                     "CooldownTimeSecs": 40
                 },
@@ -16412,6 +16469,16 @@
                 "LocalizedTitleStringID": "HUNKER DOWN MODE",
                 "LocalizedToggledTitleStringID": "DISABLE HUNKER",
                 "LocalizedLongDescriptionStringID": "Divert cruiser power from wepons and movement systems into self-repair and armor systems.",
+                "LocalizedToggledLongDescriptionStringID": "Continue normal cruiser operations."
+            }
+        },
+        "Ability_G_ToggleAutoFire": {
+            "AbilityViewAttributes": {
+                "IconName": "Shunt_Armour_on",
+                "ToggledIconName": "Shunt_Armour_off",
+                "LocalizedTitleStringID": "HULL DOWN MODE",
+                "LocalizedToggledTitleStringID": "HULL UP MODE",
+                "LocalizedLongDescriptionStringID": "Immodilize cruiser to bust its weapon range and reload, as well as making it recive less damage.",
                 "LocalizedToggledLongDescriptionStringID": "Continue normal cruiser operations."
             }
         },
