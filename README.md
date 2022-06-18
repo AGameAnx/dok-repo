@@ -1,44 +1,44 @@
-# Homeworld: Deserts of Kharak - More Maps Repository
+# Homeworld: Deserts of Kharak - GE Mod Repository
 
 ## Installation Instructions
 
-Installing this mod will grant you access to all of the most widely used patches through the in-game chat commands. For more information reffer to the Discord pinned posts in `#mod-releases` channel
+Download: https://github.com/AGameAnx/dok-ge-mod/releases
 
-Look to the right of these instructions you will see a heading that reads **Releases** 
+Extract the downloaded file to:
 
-### Windows Instalation
+- Windows: Steam/steamapps/common/Deserts of Kharak/Data/Managed 
+- Mac: Steam/steamapps/common/Deserts of Kharak/DesertsofKharak.app/Contents/Resources/Data/Managed
+You may need to right click the apps and choose Show package contents to get to this directory.
+- Linux: home/$username/.local/share/Steam/steamapps/common
+Use the files from Mac folder. Easiest way to get to the directory is to browse to local files using Steam.
 
-- Click the link to the latest release version
-- Download the zip file as of this writing it is named `more-maps-v1.1.zip`
-- Before continuing make note of where DoK is installed on your machine
-  - The easiest way to do this is to go to Steam
-  - Right click DoK in your games library, go to `Manage > Browse local files`
-  - This is the path you want to give the installer
-- Unzip the folder and run `install.exe`
-- If you run into issues please reffer to the troubleshooting section or ask the Discord
+Extracting the archive should prompt to replace all files within.
 
-[Mac install](info/install.md)
+In case of issues, verify the integrity of your DoK installation, this will revert all the mod changes.
+
+If installation is successful, you will see [ GE mod *Version* ] alongside game version in the bottom left corner of the screen in the main menu as well as a message when joining a multiplayer lobby.
 
 ***Copy and paste the command line into the multiplayer chat window.***
 
 ## Patches
 
-| Name                             | **Command**          | Authors  | Description |
-| ---                              | ---                  | ---      | ---
-| 1113 Patch                       | **/p 1113**          | S'Aarum  | Patch made for the 1113KDS Multiplayer Campaign
-| Baserunner Nothing               | **/p br**            | Bozocow  | Use only carrier, salvagers with strong det packs and baserunners to win
-| Jaraci balance mod (tournament)  | **/p jaraci**        | AGameAnx | [Changelog and description](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci/jaraci.md)
-| Jaraci balance mod (old versions)| **/p jaraci(number)**| AGameAnx | Older versions of jaraci balance mod (numbers relate to jaraci cup tournaments, /p jaraci1, /p jaraci2 etc)
-| Jaraci balance mod (development) | **/p agame**         | AGameAnx | Development versions of jaraci balance mod
-| Joke patch                       | **/p joke**          | Bozocow  | Units can have all sorts of crazy new roles, balance and capabilities
-| Joke patch V2                    | **/p jokev2**        | SickIGN  | Pretty much the same as Bozo's Joke patch but better in every way
-| Khraak Deserts balance patch     | **/p deserts**       | pbobbert | [Changelog and description](https://cdn.discordapp.com/attachments/509996599955554305/541211898771931136/Balancing_a_Desert_TooTwo_version_18.pdf)
-| Shitskimmer                      | **/p shitskimmer**   | SickIGN  |
-| Spam Patch                       | **/p spam**          | SickIGN  | Units no longer have cost, population cost, production time
-| Quality of Life patch            | **/p qol**           | AGameAnx | Vanilla quality of life improvements and bug fixes
-| Who's patch                      | **/p who**           | Who      |
-| Turbo Patch                      | **/p turbo**         |Ozymanjeff| Cheaper Units, Buffed Units, Buffed Carriers. 
-| RBI                              | **/p rbi**           |Ozymanjeff| Longer Collection Time for Salvagers, Adjusted CU/RU/Fleet Cost per unit. 
+| Name                             | **Command**          | Authors    | Description |
+| ---                              | ---                  | ---        | ---
+| 1113 Patch                       | **/p 1113**          | S'Aarum    | Patch made for the 1113KDS Multiplayer Campaign
+| Baserunner Nothing               | **/p br**            | Bozocow    | Use only carrier, salvagers with strong det packs and baserunners to win
+| Jaraci balance mod (tournament)  | **/p jaraci**        | AGameAnx   | [Changelog and description](https://github.com/S5SS/dok-repo/blob/master/patches/jaraci/jaraci.md)
+| Jaraci balance mod (old versions)| **/p jaraci(number)**| AGameAnx   | Older versions of jaraci balance mod (numbers relate to jaraci cup tournaments, /p jaraci1, /p jaraci2 etc)
+| Jaraci balance mod (development) | **/p agame**         | AGameAnx   | Development versions of jaraci balance mod
+| Joke patch                       | **/p joke**          | Bozocow    | Units can have all sorts of crazy new roles, balance and capabilities
+| Joke patch V2                    | **/p jokev2**        | SickIGN    | Pretty much the same as Bozo's Joke patch but better in every way
+| Khraak Deserts balance patch     | **/p deserts**       | pbobbert   | [Changelog and description](https://cdn.discordapp.com/attachments/509996599955554305/541211898771931136/Balancing_a_Desert_TooTwo_version_18.pdf)
+| Shitskimmer                      | **/p shitskimmer**   | SickIGN    |
+| Spam Patch                       | **/p spam**          | SickIGN    | Units no longer have cost, population cost, production time
+| Quality of Life patch            | **/p qol**           | AGameAnx   | Vanilla quality of life improvements and bug fixes
+| Who's patch                      | **/p who**           | Who        |
+| Turbo Patch                      | **/p turbo**         | Ozymanjeff | Cheaper Units, Buffed Units, Buffed Carriers.
+| RBI                              | **/p rbi**           | Ozymanjeff | Longer Collection Time for Salvagers, Adjusted CU/RU/Fleet Cost per unit.
+
 ## Tournament layouts
 
 | Map                  |Players| Authors  | **Command**         | Preview                             | Description |
@@ -46,13 +46,14 @@ Look to the right of these instructions you will see a heading that reads **Rele
 | Gaalsien Territories | [2,2] | SSSS     | **/l gt-alt**       | [preview](layouts/gt-alt.png)       | Alternative layout for Gaalsien Territories
 | Canyon Outpost       | [2,2] | AGameAnx | **/l canyon-alt**   | [preview](layouts/canyon-alt.png)   | 2v2 canyon outpost converted into a 1v1 layout
 | Khar-Toba            | [2,2] | AGameAnx | **/l kt-alt**       | [preview](layouts/kt-alt.png)       | 3v3 Khar-Toba converted into a 1v1 layout
-| Taiidan Passage      | [2,2] | AGameAnx | **/l taiidan-alt**  | [preview](layouts/taiidan-alt.png)  | Adjusted vanilla Taiidan Passage adjusting high ground advantages across the map
 | Torin Crater         | [2,2] | AGameAnx | **/l torin-alt**    | [preview](layouts/torin-alt.png)    | Adjusted vanilla Torin Crater to make spawning location more difficult to attack
 | Shallows             | [2,2] | Bozocow  | **/l shallows-alt** | [preview](layouts/shallows-alt.png) | New layout for the shallows
+| The Boneyard         | [2,2] | Bozocow  | **/l boneyard-alt** | [preview](layouts/boneyard-alt.png) | Adjusted vanilla Boneyard to make spawning location more difficult to attack
 
 ## Community layouts
 
 ### 1v1
+
 | Map                   | Authors                     | **Command**               | Preview                                    | Description |
 | :---                  | :---                        | ---                       | ---                                        | :---
 | Canyon Outpost        | HottestManEver              | **/l canyon1v1**          | [preview](layouts/canyon1v1.png)           |
@@ -65,8 +66,10 @@ Look to the right of these instructions you will see a heading that reads **Rele
 | Gaalsien Base         | HottestManEver              | **/l gbase1v1**           | [preview](layouts/gbase1v1.jpg)            |
 | Whispering Gallery    | FrostyTeeth                 | **/l wg-1v1**             | [preview](layouts/wg-1v1.png)              | Allows for spectators
 | Taiidan Passage       | HottestManEver              | **/l taiidan**            | [preview](layouts/taiidan.png)             | 1v1 2v2
+| Taiidan Passage       | AGameAnx                    | **/l taiidan-alt**        | [preview](layouts/taiidan-alt.png)         | Reworked Taiidan Passage
 
 ### 2v2
+
 | Map                   | Authors                     | **Command**               | Preview                                    | Description |
 | :---                  | :---                        | ---                       | ---                                        | :---
 | Torin Crater          | HottestManEver, FrostyTeeth | **/l crater2v2**          | [preview](layouts/crater2v2.png)           | Allows 2 spectators
@@ -79,6 +82,7 @@ Look to the right of these instructions you will see a heading that reads **Rele
 | Taiidan Passage       | HottestManEver              | **/l taiidan**            | [preview](layouts/taiidan.png)             | 1v1 2v2
 
 ## 3v3
+
 | Map                   | Authors                     | **Command**               | Preview                                    | Description |
 | :---                  | :---                        | ---                       | ---                                        | :---
 | Torin Crater          | HottestManEver              | **/l torin**              | [preview](layouts/crater2v2.png)           |
