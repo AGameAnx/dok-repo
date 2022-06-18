@@ -48,7 +48,7 @@ If installation is successful, you will see [ GE mod *Version* ] alongside game 
 | Khar-Toba            | [2,2] | AGameAnx | **/l kt-alt**       | [preview](layouts/kt-alt.png)       | 3v3 Khar-Toba converted into a 1v1 layout
 | Torin Crater         | [2,2] | AGameAnx | **/l torin-alt**    | [preview](layouts/torin-alt.png)    | Adjusted vanilla Torin Crater to make spawning location more difficult to attack
 | Shallows             | [2,2] | Bozocow  | **/l shallows-alt** | [preview](layouts/shallows-alt.png) | New layout for the shallows
-| The Boneyard         | [2,2] | Bozocow  | **/l boneyard-alt** | [preview](layouts/boneyard-alt.png) | Adjusted vanilla Boneyard to make spawning location more difficult to attack
+| The Boneyard         | [2,2] | AGameAnx | **/l boneyard-alt** | [preview](layouts/boneyard-alt.png) | Adjusted vanilla Boneyard to make spawning location more difficult to attack
 
 ## Community layouts
 
