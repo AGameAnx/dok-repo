@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<meta name="boneyard-alt" authors="AGameAnx" description="boneyard-alt"/>
+	<layout map="MP_14_1v1_Smaller" mode="Team" players="2,3,4,5,6">
+		<bounds top="2950" right="5100" bottom="-5000" left="-2500"/>
+		<spawns>
+			<!-- team top right -->
+			<spawn team="0" index="0" x="3530" y="1920" angle="225" camera="225"/>
+			<spawn team="0" index="1" x="3530" y="1920" angle="225" camera="225" fleet="false"/>
+			<spawn team="0" index="2" x="3530" y="1920" angle="225" camera="225" fleet="false"/>
+			<!-- team bot left -->
+			<spawn team="1" index="0" x="-1550" y="-4200" angle="45" camera="45"/>
+			<spawn team="1" index="1" x="-1550" y="-4200" angle="45" camera="45" fleet="false"/>
+			<spawn team="1" index="2" x="-1550" y="-4200" angle="45" camera="45" fleet="false"/>
+		</spawns>
+		<resources>
+			<!-- top right -->
+			<resource x="3280" y="1980" type="cu" amount="7500" collectors="2"/>
+			<resource x="3400" y="2100" type="ru" amount="3000" collectors="2"/>
+			<resource x="3520" y="2220" type="cu" amount="7500" collectors="2"/>
+			<!-- bot left -->
+			<resource x="-1250" y="-4310" type="cu" amount="7500" collectors="2"/>
+			<resource x="-1370" y="-4430" type="ru" amount="3000" collectors="2"/>
+			<resource x="-1490" y="-4550" type="cu" amount="7500" collectors="2"/>
+		</resources>
+		<units>
+			<!-- spectator units -->
+			<unit team="0" index="1" x="2850" y="2540" angle="0" type="N_DemoCharge"/>
+			<unit team="0" index="2" x="2850" y="2540" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="1" x="2850" y="2540" angle="0" type="N_DemoCharge"/>
+			<unit team="1" index="2" x="2850" y="2540" angle="0" type="N_DemoCharge"/>
+		</units>
+		<wrecks>
+			<!-- top right -->
+			<wreck x="4600" y="450" angle="315">
+				<resource x="4540" y="650" type="cu" amount="10500" collectors="2"/>
+				<resource x="4660" y="650" type="ru" amount="4000" collectors="2"/>
+			</wreck>
+			<wreck x="4600" y="-1400" angle="45">
+				<resource x="4540" y="-1200" type="ru" amount="4000" collectors="2"/>
+				<resource x="4660" y="-1200" type="cu" amount="10500" collectors="2"/>
+			</wreck>
+			<!-- bot left -->
+			<wreck x="-1900" y="-2200" angle="60">
+				<resource x="-1840" y="-2400" type="cu" amount="10500" collectors="2"/>
+				<resource x="-1960" y="-2400" type="ru" amount="4000" collectors="2"/>
+			</wreck>
+			<wreck x="-1500" y="0" angle="315">
+				<resource x="-1460" y="-200" type="ru" amount="4000" collectors="2"/>
+				<resource x="-1560" y="-200" type="cu" amount="10500" collectors="2"/>
+			</wreck>
+		</wrecks>
+		<artifacts>
+			<artifact x="310" y="-290"/>
+			<artifact x="1590" y="-1440"/>
+			<artifact x="3065" y="-2150"/>
+		</artifacts>
+		<ezs>
+			<!-- extraction zones -->
+			<ez team="0" x="270" y="2300" radius="500"/>
+			<ez team="1" x="2200" y="-4870" radius="500"/>
+		</ezs>
+	</layout>
+</dokmap>
