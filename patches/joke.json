@@ -8,16 +8,17 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.05.12",
-        "LastUpdate": "2022-06-14",
+        "Version": "1.05.13",
+        "LastUpdate": "2022-06-20",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
     },
     /*"Global": {
-		"UnitAttributes": {
-			"Resource1Cost": 0,
-			"Resource2Cost": 0,
-			"ProductionTime": 0
-		},
+        "UnitAttributes": {
+            "Resource1Cost": 0,
+            "Resource2Cost": 0,
+            "ProductionTime": 0,
+            "PopCapCost": 0
+        },
 		"ResearchItemAttributes": {
 			"Resource1Cost": 0,
 			"Resource2Cost": 0,
@@ -3888,7 +3889,6 @@
                             "0": {
                                 "LocalizedShortDescriptionStringID": "Movement: 10 km/h"
                             },
-
                             "1": {
                                 "LocalizedShortDescriptionStringID": "Movement: 25 km/h",
                                 "StatusEffectsToApply": {
@@ -6624,6 +6624,7 @@
             "WeaponAttributes": {
                 "N_Missle_Turret_Weapon_G2A_MP": {
                     "ExcludeFromHeightAdvantage": true,
+                    "ProjectileEntityTypeToSpawn": "Carrier_ShuntWeapon_ProjectileAssetContainer_MP 1",
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Air",
@@ -7116,7 +7117,8 @@
                 "Resource2Cost": 30,
                 "MaxHealth": 1700,
                 "PriorityAsTarget": -250,
-                "Armour": 1
+                "Armour": 1,
+                "FireRateDisplay": 3
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -7161,6 +7163,9 @@
                                 "Attribute": 65536,
                                 "Mode": "Add",
                                 "Value": 300
+                            },
+                            "1": {
+                                "Remove": true
                             }
                         }
                     },
@@ -7283,7 +7288,8 @@
                 "Resource1Cost": 200,
                 "Resource2Cost": 30,
                 "MaxHealth": 1700,
-                "PriorityAsTarget": -250
+                "PriorityAsTarget": -250,
+                "FireRateDisplay": 3
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -7328,6 +7334,9 @@
                                 "Attribute": 65536,
                                 "Mode": "Add",
                                 "Value": 300
+                            },
+                            "1": {
+                                "Remove": true
                             }
                         }
                     },
@@ -7437,7 +7446,8 @@
                 "Resource2Cost": 30,
                 "MaxHealth": 1600,
                 "PriorityAsTarget": -250,
-                "Armour": 1
+                "Armour": 1,
+                "FireRateDisplay": 3
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -7628,7 +7638,8 @@
                 "Resource2Cost": 30,
                 "MaxHealth": 1500,
                 "PriorityAsTarget": -220,
-                "Armour": 1
+                "Armour": 1,
+                "FireRateDisplay": 3
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -7688,10 +7699,9 @@
 
                             },
                             "1": {
-                                "Name": "Ability_K_ProduceExplodingSkimmer_MP",
-                                "Attribute": 16777216,
-                                "Mode": "AddPercent",
-                                "Value": -50
+                                "Attribute": "Unit_NumProductionQueues",
+                                "Mode": "Add",
+                                "Value": 1
 
                             }
                         }
@@ -7945,7 +7955,7 @@
                 },
                 "C_SupportCruiser_Weapon_G2A_MP": {
                     "BaseDamagePerRound": 70,
-                    "ProjectileEntityTypeToSpawn": "Carrier_ShuntWeapon_ProjectileAssetContainer_MP 1",
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "NumberOfBursts": 4,
                     "BurstPeriodMinTimeMS": 300,
                     "BurstPeriodMaxTimeMS": 300,
@@ -8237,7 +8247,8 @@
                 "Armour": 6,
                 "ProductionTime": 50,
                 "SensorRadius": 1450,
-                "ContactRadius": 1600
+                "ContactRadius": 1600,
+                "FireRateDisplay": 3
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -8254,6 +8265,11 @@
                                 "Attribute": 262149,
                                 "Mode": "Add",
                                 "Value": 10
+                            },
+                            "1": {
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             }
                         }
                     },
@@ -8340,6 +8356,11 @@
                                 "Attribute": 33554437,
                                 "Mode": "Add",
                                 "Value": -25
+                            },
+                            "6": {
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             }
                         }
                     }
@@ -8451,7 +8472,8 @@
                 "Armour": 7,
                 "ProductionTime": 50,
                 "SensorRadius": 1450,
-                "ContactRadius": 1600
+                "ContactRadius": 1600,
+                "FireRateDisplay": 3
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -8463,6 +8485,11 @@
                                 "Attribute": 262149,
                                 "Mode": "AddPercent",
                                 "Value": 100
+                            },
+                            "1": {
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             }
                         }
                     },
@@ -8537,6 +8564,11 @@
                                 "Attribute": 33554437,
                                 "Mode": "Add",
                                 "Value": -25
+                            },
+                            "6": {
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             }
                         }
                     }
@@ -9149,7 +9181,8 @@
                 "SensorRadius": 1100,
                 "ContactRadius": 1250,
                 "Armour": 7,
-                "MaxHealth": 300
+                "MaxHealth": 300,
+                "FireRateDisplay": 5
             },
             "UnitMovementAttributes": {
                 "Dynamics": { "MaxSpeed": 140 }
@@ -9274,7 +9307,8 @@
                 "SensorRadius": 1100,
                 "ContactRadius": 1250,
                 "Armour": 7,
-                "MaxHealth": 300
+                "MaxHealth": 300,
+                "FireRateDisplay": 5
             },
             "UnitMovementAttributes": {
                 "Dynamics": { "MaxSpeed": 140 }
@@ -9901,7 +9935,8 @@
                 "SensorRadius": 1200,
                 "ContactRadius": 1300,
                 "ProductionTime": 10,
-                "PriorityAsTarget": 3
+                "PriorityAsTarget": 3,
+                "FireRateDisplay": 3
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -10030,7 +10065,8 @@
                 "SensorRadius": 1200,
                 "ContactRadius": 1300,
                 "ProductionTime": 10,
-                "PriorityAsTarget": 3
+                "PriorityAsTarget": 3,
+                "FireRateDisplay": 3
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -10473,14 +10509,14 @@
             }
         },
 
-        // SUNDER TOOLTIP
+        // TSUNDER TOOLTIP
         "Ability_C_ArmorDebuff": {
             "AbilityViewAttributes": {
                 "LocalizedLongDescriptionStringID": "Armor is fractured by the sheer weight of your mom. Target armor is reduced by 15 for 15 seconds."
             }
         },
 
-        // SUNDER
+        // TSUNDER
         "ArmorDebuff_StatusEffect": {
             "StatusEffectAttributes": {
                 "Duration": 15,
@@ -10552,7 +10588,8 @@
                 "ExperienceValue": 470,
                 "ProductionTime": 22,
                 "PriorityAsTarget": 12,
-                "AggroRange": 900
+                "AggroRange": 900,
+                "FireRateDisplay": 3
             },
             "DetectableAttributes": {
                 "TimeVisibleAfterFiring": 4500
@@ -10735,7 +10772,8 @@
                 "ExperienceValue": 450,
                 "ProductionTime": 22,
                 "PriorityAsTarget": 12,
-                "AggroRange": 1600
+                "AggroRange": 1600,
+                "FireRateDisplay": 4
             },
             "DetectableAttributes": {
                 "TimeVisibleAfterFiring": 4500
@@ -11013,7 +11051,8 @@
                 "PopCapCost": 4,
                 "ExperienceValue": 550,
                 "PriorityAsTarget": 15,
-                "AggroRange": 1200
+                "AggroRange": 1200,
+                "FireRateDisplay": 3
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -11147,6 +11186,11 @@
                                             "Attribute": 262149,
                                             "Mode": "Set",
                                             "Value": 2
+                                        },
+                                        "7": {
+                                            "Attribute": "Unit_FireRateDisplay",
+                                            "Mode": "Set",
+                                            "Value": 5
                                         }
 
                                     }
@@ -11254,7 +11298,8 @@
                 "PopCapCost": 4,
                 "ExperienceValue": 550,
                 "PriorityAsTarget": 15,
-                "AggroRange": 1200
+                "AggroRange": 1200,
+                "FireRateDisplay": 3
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -11388,6 +11433,11 @@
                                             "Attribute": 262149,
                                             "Mode": "Set",
                                             "Value": 2
+                                        },
+                                        "7": {
+                                            "Attribute": "Unit_FireRateDisplay",
+                                            "Mode": "Set",
+                                            "Value": 5
                                         }
                                     }
                                 }
@@ -11621,7 +11671,8 @@
                 "SensorRadius": 1250,
                 "ContactRadius": 1350,
                 "Armour": 2,
-                "PriorityAsTarget": 10
+                "PriorityAsTarget": 10,
+                "FireRateDisplay": 5
             },
             "UnitMovementAttributes": {
                 "Combat": {
@@ -11795,7 +11846,8 @@
                 "SensorRadius": 1250,
                 "ContactRadius": 1350,
                 "Armour": 2,
-                "PriorityAsTarget": 10
+                "PriorityAsTarget": 10,
+                "FireRateDisplay": 5
             },
             "UnitMovementAttributes": {
                 "Combat": {
@@ -12130,6 +12182,7 @@
             "WeaponAttributes": {
                 "C_HAC_Upgrade01_Weapon_G2A_MP": {
                     "FriendlyFireDamageScalar": 1,
+                    "ProjectileEntityTypeToSpawn": "Carrier_ShuntWeapon_ProjectileAssetContainer_MP 1",
                     "OutputDPS": true,
                     "ReloadTimeMS": 3000,
                     "RangeAttributesShort": {
@@ -12273,6 +12326,18 @@
                         "RequiredExperience": 2950,
                         "Buff": {
                             "0": {
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            },
+                            "1": {
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
+                            },
+                            "2": {
+                                "Name": "ANTI-AIR-RADIO",
                                 "Attribute": "UnitWeapon_RateOfFire",
                                 "Mode": "Add",
                                 "Value": 1
@@ -12296,7 +12361,9 @@
                                 "Value": -50
                             },
                             "2": {
-                                "Remove": true
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             }
                         }
                     },
@@ -12422,7 +12489,19 @@
                         "RequiredExperience": 2950,
                         "Buff": {
                             "0": {
+                                "Name": "ANTI-AIR",
                                 "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            },
+                            "1": {
+                                "Name": "ANTI-AIR-RADIO",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            },
+                            "2": {
+                                "Attribute": "Unit_FireRateDisplay",
                                 "Mode": "Add",
                                 "Value": 1
                             }
@@ -12445,7 +12524,9 @@
                                 "Value": -50
                             },
                             "2": {
-                                "Remove": true
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             }
                         }
                     },
@@ -12725,8 +12806,8 @@
         // COALITION FIGHTER AND GUNSHIP TECH
         "Tier_3_C_Interceptor_Bomber": {
             "ResearchItemAttributes": {
-                "LocalizedResearchTitleStringID": "PEANUT LIGTH BOMBER AND GUNSHIP FABRICATION",
-                "LocalizedLongDescriptionStringID": "Fast and slow moving aircrafts, effective at blowing up ground units.\n\n[84a1e8]Unlock Peanut Light Bomber and gunship for fabrication.",
+                "LocalizedResearchTitleStringID": "PEANUT LIGTH BOMBER AND HEAVY GUNSHIP FABRICATION",
+                "LocalizedLongDescriptionStringID": "Fast and slow moving aircrafts, effective at blowing up ground units.\n\n[84a1e8]Unlock Peanut Light Bomber and heavy gunship for fabrication.",
                 "Resource1Cost": 500,
                 "Resource2Cost": 200
 
@@ -12735,8 +12816,8 @@
         // SOBAN FIGHTER AND GUNSHIP TECH
         "Tier_3_S_Interceptor_Bomber": {
             "ResearchItemAttributes": {
-                "LocalizedResearchTitleStringID": "PEANUT LIGTH BOMBER AND GUNSHIP FABRICATION",
-                "LocalizedLongDescriptionStringID": "Fast and slow moving aircrafts, effective at blowing up ground units.\n\n[84a1e8]Unlock Peanut Light Bomber and gunship for fabrication.",
+                "LocalizedResearchTitleStringID": "PEANUT LIGTH BOMBER AND HEAVY GUNSHIP FABRICATION",
+                "LocalizedLongDescriptionStringID": "Fast and slow moving aircrafts, effective at blowing up ground units.\n\n[84a1e8]Unlock Peanut Light Bomber and heavy gunship for fabrication.",
                 "Resource1Cost": 500,
                 "Resource2Cost": 200
 
@@ -12770,7 +12851,9 @@
                                 "Value": 1
                             },
                             "1": {
-                                "Remove": true
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             },
                             "2": {
                                 "Remove": true
@@ -12827,8 +12910,8 @@
                 "Resource2Cost": 100,
                 "ProductionTime": 12,
                 "MaxHealth": 500,
-                "Armour": 3
-
+                "Armour": 3,
+                "FireRateDisplay": 4
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -12986,7 +13069,9 @@
                                 "Value": 1
                             },
                             "1": {
-                                "Remove": true
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             },
                             "2": {
                                 "Remove": true
@@ -13012,8 +13097,8 @@
                 "Resource2Cost": 100,
                 "ProductionTime": 12,
                 "MaxHealth": 500,
-                "Armour": 2
-
+                "Armour": 2,
+                "FireRateDisplay": 4
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -13340,7 +13425,9 @@
                                 "Value": -50
                             },
                             "1": {
-                                "Remove": true
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             },
                             "2": {
                                 "Remove": true
@@ -13367,7 +13454,8 @@
                 "Armour": 15,
                 "Resource2Cost": 140,
                 "PopCapCost": 3,
-                "ProductionTime": 22
+                "ProductionTime": 22,
+                "FireRateDisplay": 4
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -13523,7 +13611,9 @@
                                 "Value": -50
                             },
                             "1": {
-                                "Remove": true
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             },
                             "2": {
                                 "Remove": true
@@ -13550,7 +13640,8 @@
                 "Armour": 15,
                 "Resource2Cost": 140,
                 "PopCapCost": 3,
-                "ProductionTime": 22
+                "ProductionTime": 22,
+                "FireRateDisplay": 4
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -13937,6 +14028,7 @@
                 },
                 "G_Battlecruiser_Weapon_G2A_MP": {
                     "RangeAttributesLong": { "Distance": 1250 },
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Air"
@@ -14169,6 +14261,7 @@
                 },
                 "G_Battlecruiser_Weapon_G2A_MP": {
                     "RangeAttributesLong": { "Distance": 1250 },
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Air"
@@ -14354,13 +14447,13 @@
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Sentinel: +75m area of effect radius",
+                        "BuffTooltipLocID": "Sentinel: +50% to area of effect radius of weapons",
                         "RequiredExperience": 1500,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_AreaOfEffect",
-                                "Mode": "Add",
-                                "Value": 75
+                                "Mode": "AddPercent",
+                                "Value": 50
                             }
                         }
                     },
@@ -14395,7 +14488,8 @@
                 "Resource2Cost": 250,
                 "MaxHealth": 2400,
                 "PopCapCost": 6,
-                "ProductionTime": 50
+                "ProductionTime": 50,
+                "FireRateDisplay": 4
             },
             "DetectableAttributes": {
                 "TimeVisibleAfterFiring": 4500
@@ -14441,7 +14535,7 @@
                     "ExcludeFromHeightAdvantage": true,
                     "LineOfSightRequired": false,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "AreaOfEffectRadius": 250,
+                    "AreaOfEffectRadius": 0,
                     "WindDownTimeMS": 250,
                     "TargetPrioritizationAttributes": {
                         "WeaponEffectivenessWeight": 0.01,
@@ -14468,6 +14562,7 @@
                 "G_HonorGuard_Weapon_G2A_MP": {
                     "WindUpTimeMS": 500,
                     "ReloadTimeMS": 4000,
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "RangeAttributesShort": {
                         "Distance": 600
                     },
@@ -14554,13 +14649,13 @@
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Sentinel: +75m area of effect radius",
+                        "BuffTooltipLocID": "Sentinel: +50% to area of effect radius of weapons",
                         "RequiredExperience": 1500,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_AreaOfEffect",
-                                "Mode": "Add",
-                                "Value": 75
+                                "Mode": "AddPercent",
+                                "Value": 50
                             }
                         }
                     },
@@ -14594,7 +14689,8 @@
                 "Resource2Cost": 250,
                 "MaxHealth": 2400,
                 "PopCapCost": 6,
-                "ProductionTime": 50
+                "ProductionTime": 50,
+                "FireRateDisplay": 4
             },
             "DetectableAttributes": {
                 "TimeVisibleAfterFiring": 4500
@@ -14680,7 +14776,7 @@
                     "ExcludeFromHeightAdvantage": true,
                     "LineOfSightRequired": false,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "AreaOfEffectRadius": 250,
+                    "AreaOfEffectRadius": 0,
                     "WindDownTimeMS": 250,
                     "TargetPrioritizationAttributes": {
                         "WeaponEffectivenessWeight": 0.01,
@@ -14701,6 +14797,7 @@
                 "G_HonorGuard_Weapon_G2A_MP": {
                     "WindUpTimeMS": 500,
                     "ReloadTimeMS": 4000,
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Air",
@@ -14758,7 +14855,8 @@
                 "PopCapCost": 8,
                 "ProductionTime": 65,
                 "Armour": 1,
-                "AggroRange": 500
+                "AggroRange": 500,
+                "FireRateDisplay": 1
             },
             "UnitMovementAttributes": {
                 "Combat": {
@@ -14901,7 +14999,8 @@
                 "PopCapCost": 8,
                 "ProductionTime": 65,
                 "Armour": 1,
-                "AggroRange": 3000
+                "AggroRange": 3000,
+                "FireRateDisplay": 2
             },
             "UnitMovementAttributes": {
                 "Combat": { "MaxDesiredCombatRange": 2950 },
@@ -15125,7 +15224,9 @@
                                 "Value": -25
                             },
                             "4": {
-                                "Remove": true
+                                "Attribute": "Unit_FireRateDisplay",
+                                "Mode": "Add",
+                                "Value": 1
                             },
                             "5": {
                                 "Remove": true
@@ -15197,7 +15298,7 @@
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Captain: -50% cooldown on not precise barrage",
+                        "BuffTooltipLocID": "Captain: -50% cooldown on abilitis",
                         "RequiredExperience": 6250,
                         "Buff": {
                             "0": {
@@ -15229,7 +15330,8 @@
                 "Armour": 5,
                 "ProductionTime": 60,
                 "PopCapCost": 5,
-                "AggroRange": 2250
+                "AggroRange": 2250,
+                "FireRateDisplay": 1
             },
             "AbilityAttributes": {
                 "Ability_C_ToggleAutoFire": {
@@ -15565,7 +15667,8 @@
                 "ProductionTime": 45,
                 "PopCapCost": 5,
                 "SensorRadius": 1400,
-                "ContactRadius": 1550
+                "ContactRadius": 1550,
+                "FireRateDisplay": 4
             },
             "AbilityAttributes": {
 
@@ -15588,7 +15691,6 @@
                 },
                 "Ability_G_ToggleAutoFire": {
                     "CooldownTimeSecs": 90,
-                    "SharedCooldownChannel": 1,
                     "ApplyStatusEffect": {
                         "ToggleAutoFire_StatusEffect": {
                             "BuffsToApplyToTarget": {
@@ -15950,7 +16052,8 @@
                 "PopCapCost": 6,
                 "SensorRadius": 1400,
                 "ContactRadius": 1550,
-                "ProductionTime": 45
+                "ProductionTime": 45,
+                "FireRateDisplay": 4
 
                 //"ProductionTime": 0,
                 //"Resource1Cost": 0,
@@ -16255,7 +16358,8 @@
                 "ResearchTime": 35
 
             }
-        }, // shhhhhhhhhhhhhhhhhhhhhh dont look here, you gona find them in game you cheater
+        },
+        // shhhhhhhhhhhhhhhhhhhhhh dont look here, you gona find them in game you cheater
         "Ability_C_CruiseMissile_MP": {
             "AbilityViewAttributes": {
                 "InvertFillCooldown": true,
@@ -16466,8 +16570,8 @@
         },
         "Ability_C_ToggleAutoFire": {
             "AbilityViewAttributes": {
-                "IconName": "Shunt_Armour_on",
-                "ToggledIconName": "Shunt_Armour_off",
+                "IconName": "Shunt_Armour_off",
+                "ToggledIconName": "Shunt_Move_off",
                 "LocalizedTitleStringID": "HUNKER DOWN MODE",
                 "LocalizedToggledTitleStringID": "DISABLE HUNKER",
                 "LocalizedLongDescriptionStringID": "Divert cruiser power from wepons and movement systems into self-repair and armor systems.",
@@ -16476,8 +16580,8 @@
         },
         "Ability_G_ToggleAutoFire": {
             "AbilityViewAttributes": {
-                "IconName": "Shunt_Armour_on",
-                "ToggledIconName": "Shunt_Armour_off",
+                "IconName": "Shunt_Armour_off",
+                "ToggledIconName": "Shunt_Move_off",
                 "LocalizedTitleStringID": "HULL DOWN MODE",
                 "LocalizedToggledTitleStringID": "HULL UP MODE",
                 "LocalizedLongDescriptionStringID": "Immodilize cruiser to bust its weapon range and reload, as well as making it recive less damage.",
@@ -16487,7 +16591,7 @@
         "C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "THROW A SAND GRENADE",
-                "LocalizedLongDescriptionStringID": "I hate sand, its rough and gets everywhere, especialy in emey targeting systems for 5 seconds."
+                "LocalizedLongDescriptionStringID": "I hate sand, its rough and gets everywhere, especialy in foe targeting systems for 5 seconds."
             }
         }
     }
