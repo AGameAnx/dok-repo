@@ -2,8 +2,8 @@
     "Meta": {
         "Name": "3v3",
         "Author": "Just_Carrier",
-        "Version": "zero_zero_two",
-        "LastUpdate": "2022-06-14",
+        "Version": "zero_zero_three",
+        "LastUpdate": "2022-07-02",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/3v3.json"
     },
     "Global": {
@@ -54,6 +54,7 @@
                 "TimeVisibleAfterFiring": 4500
             },
             "AbilityAttributes": {
+                "Ability_C_Sob_ProduceSupportCruiser_MP": { "ProduceUnit": { "UnitTypeToProduce": "C_SupportCruiser_MP" } },
                 "Ability_C_LaunchInterceptor_MP": {
                     "AirSortie": {
                         "LoiterLength": 40
@@ -828,7 +829,7 @@
         "G_Baserunner_MP": {
             "AbilityAttributes": {
                 "Ability_G_DeployScanner_MP": {
-                    "CooldownTimeSecs": 35,
+                    "CooldownTimeSecs": 85,
                     "Resource1Cost": 25
                 }
             }
@@ -864,6 +865,63 @@
                     },
                     "ChainCasting": {
                         "QueuedAbility": ""
+                    }
+                }
+            }
+        },
+        "C_SupportCruiser_MP": {
+            "AbilityAttributes": {
+                "Ability_C_SupportCruiser_AA": {
+                    "RequiredResearch": []
+                }
+            },
+            "WeaponAttributes": {
+                "C_SupportCruiser_Weapon_G2A_MP": {
+                    "RateOfFire": 0
+                },
+                "C_SupportCruiser_Weapon_G2G_MP": {
+                    "Turret": {
+                        "FieldOfView": 360,
+                        "FieldOfFire": 360,
+                        "RotationSpeed": 160
+                    }
+                }
+            }
+        },
+        "Research_Buff_SupportCruiser_AA": {
+            "ResearchItemAttributes": {
+                "UnitTypeBuffs": {
+                    "0": {
+                        "UnitClass": -1,
+                        "UseAsPrefix": false,
+                        "UnitType": "C_SupportCruiser_MP",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 2
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Research_Buff_S_SupportCruiser_AA": {
+            "ResearchItemAttributes": {
+                "UnitTypeBuffs": {
+                    "0": {
+                        "UnitClass": -1,
+                        "UseAsPrefix": false,
+                        "UnitType": "C_SupportCruiser_MP",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "ANTI-AIR",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 2
+                            }
+                        }
                     }
                 }
             }
