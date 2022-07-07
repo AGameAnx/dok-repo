@@ -104,6 +104,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-05-24 14.2](#2022-05-24-142)
 	- [2022-05-25 14.3](#2022-05-25-143)
 	- [2022-05-29 14.4](#2022-05-29-144)
+	- [2022-06-29 15.0](#2022-06-29-150)
 
 # Changes
 
@@ -2773,3 +2774,145 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Carrier hangar bay parameters:
 		* Interceptor undock animation seconds: `2.67s => 2.66s`
 		* Bomber undock animation seconds: `3.33s => 2.75s` (matches Gaalsien)
+
+## 2022-06-29 15.0
+*Not yet reflected in the main changelog.*
+* General:
+	* Carrier power systems level 1 cost: `200CU 100RU => 150CU 50RU`
+	* Strike craft damage upgrade cost and research time:
+		* Level 1: `200CU 75RU 25s => 150CU 25RU 15s`
+		* Level 2: `200CU 150RU 45s => 200CU 75RU 15s`
+	* Reduced baserunner priority as target
+* Coalition/Soban:
+	* Carrier mobility system cost: `600CU 300RU => 550CU 250RU`
+	* Salvager armor: `1 => 2`
+	* LAV:
+		* Tech research time: `35s => 37s`
+		* Hitpoints: `440 => 470`
+		* Medium range accuracy: `82% => 79%`
+		* Max range: `900 => 870`
+		* Turn radius: `65 => 60`
+		* Braking time: `0.75s => 0.7s`
+		* Acceleration time: `0.75s => 0.7s`
+		* Armor upgrade CU cost: `350 => 300` (matches G/K)
+		* Increased priority as target
+	* Support cruiser repair rate: `7 => 6`
+	* AAV (DPS: `77.5 => 77.2`, vs 2 armor `67.8 => 68.2`, vs 7 armor: `43.6 => 45.5`, vs 10 armor: `29.1 => 31.8`):
+		* Cost: `270CU 20RU => 280CU 20RU`
+		* Damage: `16 => 17`
+		* Rate of fire: `13 => 12`
+		* Cooldown: `0.55s => 0.65s`
+		* Burst duration: `0.48-0.53s => 0.49-0.54s`
+		* Suppression slow: `40% => 33%`
+	* Assault cruiser:
+		* Cost: `550CU 260RU => 550CU 240RU`
+		* Production time: `60s => 57s`
+		* Damage: `52 => 55`
+	* Missile battery:
+		* Tech research time: `40s => 30s`
+		* Cost: `300CU 85RU => 300CU 75RU`
+		* Hitpoints: `1800 => 1400`
+		* Production time: `21s => 20s`
+		* Sensors radius: `1400 => 1600`
+		* Contact radius: `1600 => 1800`
+	* Strike fighter:
+		* Cost: `270CU 90RU => 270CU 85RU`
+		* Sensors radius: `2000 => 2200`
+		* Contact radius: `2100 => 2400`
+	* Gunship:
+		* Cost: `500CU 100RU => 400CU 120RU`
+		* Production time: `48s => 35s`
+		* Damage: `43 => 50`
+		* AOE: `138 => 130`
+	* Bomber:
+		* Production time: `26s => 37s`
+		* Damage: `1600 => 1700`
+		* AOE: `190 => 220`
+		* AOE falloff: `Quadratic => Linear`
+* Coalition:
+	* Carrier power systems level 4 cost: `1200CU 550RU => 1200CU 650RU`
+* Soban:
+	* Carrier:
+		* PD railgun damage: `195 => 180` (matches normal railguns)
+		* Level 1 range systems weapon range: `1200 => 1150`
+		* Turret network power shunt weapon reload and cooldown reduction:
+			* Level 1: `25% => 35%`
+			* Level 2: `40% => 50%`
+			* Level 3: `55% => 65%`
+			* Level 4: `70% => 75%`
+		* Defensive logistics power shunt contact radius:
+			* Level 1: `1300 => 1100`
+			* Level 2: `1400 => 1250`
+			* Level 3: `1500 => 1350`
+			* Level 4: `1700 => 1450`
+			* Level 5: `1900 => 1650`
+	* ALM:
+		* Base damage: `150 => 130`
+		* Contact radius: `1225 => 1000`
+	* Baserunner:
+		* Hitpoints: `1700 => 1500`
+		* Targeting jammer:
+			* Hitpoints: `1100 => 1000`
+			* Deployment range max range: `1250 => 1000` (this matches BR sensors range, still on the edge of most units' sensors range)
+			* Implemented deployment radius preview and better range visualization
+			* Reduced priority as target
+	* Railgun:
+		* Cooldown: `1.35s => 1.5s`
+		* Reload: `4.7s => 4.55s`
+* Gaalsien/Khaaneph:
+	* Carrier power systems cost:
+		* Level 2: `400CU 175RU => 300CU 150RU`
+		* Level 5: `1200CU 550RU => 1200CU 650RU`
+	* Railgun armor upgrade costs:
+		* Level 1: `200CU 100RU => 150CU 100RU`
+		* Level 2: `250CU 175RU => 200CU 150RU`
+		* Level 3: `300CU 250RU => 250CU 250RU`
+	* Heavy railgun:
+		* Cost: `380CU 110RU => 360CU 100RU`
+		* Movement speed: `61 => 64`
+		* Experience value: `550 => 650`
+		* Population cost: `4 => 3`
+		* Weapon (DPS: `64.3 => 60.0`):
+			* Max range: `1700 => 1770`
+			* Wind-up time: `1.2s => 0.9s`
+			* Reload time: `0.6s => 1.1s`
+		* EMP upgrade cost: `400CU 100RU => 400CU 150RU`
+		* Ranged calibration:
+			* Research cost: `200CU 250RU => 300CU 100RU`
+			* Research time: `55s => 50s`
+			* Cooldown: `10s => 0s` (allows instant toggling of ability, should help with micromanaging multiple railguns at a time)
+			* Reverted all ranged calibration buff modifications because it caused ability's visual effect to no longer show up
+	* Interceptor:
+		* Cost: `250CU 100RU => 300CU 90RU`
+		* Sensors radius: `2000 => 2300`
+		* Contact radius: `2500 => 2600`
+		* Damage: `100 => 90`
+		* Damage against carriers: `60% => 100%` (modifier removed)
+		* Afterburner upgrade cost: `200CU 120RU => 200CU 150RU`
+	* Missile ship:
+		* Tech research time: `45s => 35s`
+		* Cost: `350CU 90RU => 350CU 75RU`
+		* Production time: `24s => 22s`
+		* Hitpoints: `1800 => 1400`
+		* Armor: `3 => 5`
+		* Sensors radius: `1400 => 1600`
+		* Contact radius: `1600 => 1800`
+	* Bomber:
+		* Cost: `300CU 140RU => 340CU 140RU`
+		* Damage: `800 => 760`
+		* Fixed an issue where bomber recharge upgrade wasn't modified as intended:
+			* Cost: `350CU 70RU => 200CU 70RU`
+			* Research time: `40s => 20s`
+* Gaalsien:
+	* Baserunner heal duration: `10s => 9s` (this also reduces total amount healed)
+* Khaaneph:
+	* Fixed an issue where carrier mobility support aura was not displayed on the carrier
+	* Fixed an issue where sandskimmer hitpoints didn't match G variant: `480 => 500`
+	* Blast drone:
+		* Cost: `120CU => 100CU`
+		* Production time: `70s => 60s`
+		* Hitpoints: `600 => 500`
+		* Armor: `1 => 0`
+		* AOE falloff type: `Quadratic => Linear`
+		* Slightly increased priority as target
+	* Fixed an issue where honourguard cost didn't match G variant: `500CU 250RU => 550CU 250RU`
