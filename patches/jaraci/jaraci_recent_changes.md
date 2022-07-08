@@ -104,7 +104,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-05-24 14.2](#2022-05-24-142)
 	- [2022-05-25 14.3](#2022-05-25-143)
 	- [2022-05-29 14.4](#2022-05-29-144)
-	- [2022-06-29 15.0](#2022-06-29-150)
+	- [2022-07-08 15.0](#2022-07-08-150)
 
 # Changes
 
@@ -2775,10 +2775,12 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Interceptor undock animation seconds: `2.67s => 2.66s`
 		* Bomber undock animation seconds: `3.33s => 2.75s` (matches Gaalsien)
 
-## 2022-06-29 15.0
+## 2022-07-08 15.0
 *Not yet reflected in the main changelog.*
 * General:
-	* Carrier power systems level 1 cost: `200CU 100RU => 150CU 50RU`
+	* Carrier power systems level 1:
+		* Cost: `200CU 100RU => 150CU 50RU`
+		* Research time: `20s => 15s`
 	* Strike craft damage upgrade cost and research time:
 		* Level 1: `200CU 75RU 25s => 150CU 25RU 15s`
 		* Level 2: `200CU 150RU 45s => 200CU 75RU 15s`
@@ -2789,7 +2791,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* LAV:
 		* Tech research time: `35s => 37s`
 		* Hitpoints: `440 => 470`
-		* Medium range accuracy: `82% => 79%`
 		* Max range: `900 => 870`
 		* Turn radius: `65 => 60`
 		* Braking time: `0.75s => 0.7s`
@@ -2803,6 +2804,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Rate of fire: `13 => 12`
 		* Cooldown: `0.55s => 0.65s`
 		* Burst duration: `0.48-0.53s => 0.49-0.54s`
+		* AOE: `36 => 42`
 		* Suppression slow: `40% => 33%`
 	* Assault cruiser:
 		* Cost: `550CU 260RU => 550CU 240RU`
@@ -2849,11 +2851,13 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* ALM:
 		* Base damage: `150 => 130`
 		* Contact radius: `1225 => 1000`
+		* Armor: `2 => 3` (now matches C logistics module)
+		* Increased priority as target (now matches C logistics module)
 	* Baserunner:
 		* Hitpoints: `1700 => 1500`
 		* Targeting jammer:
 			* Hitpoints: `1100 => 1000`
-			* Deployment range max range: `1250 => 1000` (this matches BR sensors range, still on the edge of most units' sensors range)
+			* Deployment range max range: `1250 => 1100`
 			* Implemented deployment radius preview and better range visualization
 			* Reduced priority as target
 	* Railgun:
