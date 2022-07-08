@@ -2798,14 +2798,17 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Armor upgrade CU cost: `350 => 300` (matches G/K)
 		* Boost upgrade cost: `150CU 180RU => 200CU 100RU` (matches raiding)
 		* Increased priority as target
-	* Support cruiser repair rate: `7 => 6`
-	* AAV (DPS: `77.5 => 77.2`, vs 2 armor `67.8 => 68.2`, vs 7 armor: `43.6 => 45.5`, vs 10 armor: `29.1 => 31.8`):
+	* Support cruiser:
+		* Hitpoints: `2700 => 2900`
+		* Repair rate: `7 => 6`
+	* AAV (gets higher upfront damage, lower overall sustained damage. DPS: `77.5 => 74.5`, vs 2 armor `67.8 => 65.7`, vs 7 armor: `43.6 => 43.8`, vs 10 armor: `29.1 => 30.7`):
 		* Cost: `270CU 20RU => 280CU 20RU`
 		* Damage: `16 => 17`
 		* Rate of fire: `13 => 12`
-		* Cooldown: `0.55s => 0.65s`
+		* Cooldown: `0.55s => 0.45s`
+		* Reload: `1.1s => 1.6s`
 		* Burst duration: `0.48-0.53s => 0.49-0.54s`
-		* AOE: `36 => 42`
+		* AOE: `36 => 45`
 		* Suppression slow: `40% => 33%`
 	* Assault cruiser:
 		* Cost: `550CU 260RU => 550CU 240RU`
@@ -2828,9 +2831,9 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Damage: `43 => 50`
 		* AOE: `138 => 130`
 	* Bomber:
+		* Armor: `10 => 6`
+		* Hitpoints: `1300 => 1250` (AA rockets to kill unchanged, Interceptor volleys to kill: `5 => 4`)
 		* Production time: `26s => 37s`
-		* Damage: `1600 => 1700`
-		* AOE: `190 => 220`
 		* AOE falloff: `Quadratic => Linear`
 * Coalition:
 	* Carrier power systems level 4 cost: `1200CU 550RU => 1200CU 650RU`
@@ -2857,7 +2860,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Baserunner:
 		* Hitpoints: `1700 => 1500`
 		* Targeting jammer:
-			* Hitpoints: `1100 => 1000`
+			* Hitpoints: `1100 => 600`
+			* Armor: `0 => 2`
 			* Deployment range max range: `1250 => 1100`
 			* Implemented deployment radius preview and better range visualization
 			* Reduced priority as target
@@ -2888,10 +2892,14 @@ Full combined changelog can be found [HERE](jaraci.md)
 			* Cooldown: `10s => 0s` (allows instant toggling of ability, should help with micromanaging multiple railguns at a time)
 			* Reverted all ranged calibration buff modifications because it caused ability's visual effect to no longer show up
 	* Interceptor:
-		* Cost: `250CU 100RU => 300CU 90RU`
+		* Cost: `250CU 100RU => 250CU 80RU`
+		* Production time: `12s => 11s`
 		* Sensors radius: `2000 => 2300`
 		* Contact radius: `2500 => 2600`
-		* Damage: `100 => 90`
+		* Rate of fire: `4 => 6` (Volleys of rockets: `3 => 2`)
+		* Damage packets: `3 => 2`
+		* Damage: `100 => 70` (Per volley: `400 => 420`, Total damage: `1200 => 840`, Total damage against SC: `1020 => 720`, Ints needed to kill SC: `3 (if lucky) => 5`)
+		* Reload: `4.5s => 4s`
 		* Damage against carriers: `60% => 100%` (modifier removed)
 		* Afterburner upgrade cost: `200CU 120RU => 200CU 150RU`
 	* Missile ship:

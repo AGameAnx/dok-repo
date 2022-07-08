@@ -325,7 +325,7 @@ C_Sob_Carrier_MP:
   weapons:
     C_Sob_Carrier_Railgun_Weapon_G2G_MP:
       damageType: Damage
-      dmg: 195
+      dmg: 180
       packets: 1
       excludeFromHighGround: True
       lineOfSightRequired: True
@@ -453,11 +453,11 @@ C_Sob_Carrier_MP:
         avgShots: 1
         trueROF: 4
         sequenceDuration: 23.5
-        dpsBeforeAccuracy: 16.5957446808511
+        dpsBeforeAccuracy: 15.3191489361702
         accuracyDps:
-          Short: 6.63829787234043
-          Medium: 16.5957446808511
-          Long: 10.7872340425532
+          Short: 6.12765957446809
+          Medium: 15.3191489361702
+          Long: 9.95744680851064
     C_Sob_Carrier_Weapon_Nuke_MP:
       damageType: Damage
       dmg: 200
@@ -499,7 +499,7 @@ C_Sob_Carrier_MP:
           Long: 126.582278481013
     C_Sob_Carrier_Weapon_G2All_Dummy_MP:
       damageType: Damage
-      dmg: 195
+      dmg: 180
       packets: 1
       excludeFromHighGround: True
       lineOfSightRequired: True
@@ -1253,11 +1253,11 @@ C_Sob_PopcapScanner:
   time: 0
   pop: 0
   hp: 1100
-  armor: 2
+  armor: 3
   sensor: 900
-  contact: 1225
+  contact: 1000
   xp: 0
-  priorityAsTarget: -19
+  priorityAsTarget: -15
   movement:
     driveType: Wheeled
     dynamics:
@@ -1283,7 +1283,7 @@ C_Sob_PopcapScanner:
   weapons:
     C_Sob_PopCapScanner_Weapon_G2G_MP:
       damageType: Damage
-      dmg: 150
+      dmg: 130
       packets: 3
       excludeFromHighGround: False
       lineOfSightRequired: True
@@ -1337,11 +1337,11 @@ C_Sob_PopcapScanner:
         avgShots: 1
         trueROF: 2
         sequenceDuration: 2.5
-        dpsBeforeAccuracy: 60
+        dpsBeforeAccuracy: 52
         accuracyDps:
-          Short: 60
-          Medium: 60
-          Long: 60
+          Short: 52
+          Medium: 52
+          Long: 52
 N_Gun_Turret_MP:
   readableName: Baserunner Turret
   cu: 300
@@ -1504,12 +1504,12 @@ N_ECMField_MP:
   ru: 0
   time: 0
   pop: 0
-  hp: 1100
-  armor: 0
+  hp: 700
+  armor: 2
   sensor: 270
   contact: 400
   xp: 0
-  priorityAsTarget: -700
+  priorityAsTarget: -1500
   movement:
     driveType: Hover
     dynamics:
@@ -1602,16 +1602,16 @@ G_Scanner_MP:
         avoidanceDistance: 50
 K_ExplodingSkimmer_MP:
   readableName: Blast Drone
-  cu: 120
+  cu: 100
   ru: 0
-  time: 70
+  time: 60
   pop: 2
-  hp: 600
-  armor: 1
+  hp: 500
+  armor: 0
   sensor: 650
   contact: 900
   xp: 100
-  priorityAsTarget: 3
+  priorityAsTarget: 6
   movement:
     driveType: Hover
     dynamics:
@@ -1652,7 +1652,7 @@ K_ExplodingSkimmer_MP:
       cooldown: 0
       reload: 1000
       aoe: 260
-      falloff: Quadratic
+      falloff: Linear
       ranges:
         Short:
           distance: 25
@@ -1681,7 +1681,7 @@ C_Harvester_MP:
   time: 12
   pop: 2
   hp: 950
-  armor: 1
+  armor: 2
   sensor: 1000
   contact: 1250
   xp: 250
@@ -1919,7 +1919,7 @@ C_Baserunner_MP:
   sensor: 1000
   contact: 1250
   xp: 150
-  priorityAsTarget: -350
+  priorityAsTarget: -550
   movement:
     driveType: Wheeled
     dynamics:
@@ -2018,12 +2018,12 @@ C_Sob_Baserunner_MP:
   ru: 30
   time: 16
   pop: 2
-  hp: 1700
+  hp: 1500
   armor: 2
   sensor: 1000
   contact: 1250
   xp: 150
-  priorityAsTarget: -350
+  priorityAsTarget: -550
   movement:
     driveType: Wheeled
     dynamics:
@@ -2127,7 +2127,7 @@ G_Baserunner_MP:
   sensor: 1000
   contact: 1250
   xp: 150
-  priorityAsTarget: -350
+  priorityAsTarget: -550
   movement:
     driveType: Hover
     dynamics:
@@ -2286,7 +2286,7 @@ K_Baserunner_MP:
   sensor: 1000
   contact: 1250
   xp: 150
-  priorityAsTarget: -320
+  priorityAsTarget: -520
   movement:
     driveType: Hover
     dynamics:
@@ -2385,7 +2385,7 @@ C_SupportCruiser_MP:
   ru: 50
   time: 40
   pop: 5
-  hp: 2700
+  hp: 2900
   armor: 5
   sensor: 1000
   contact: 1250
@@ -2485,7 +2485,7 @@ C_SupportCruiser_MP:
       leadsTarget: LeadTarget
       windUp: 0
       windDown: 500
-      rof: 7
+      rof: 6
       burstMin: 10000
       burstMax: 10000
       numBursts: 1
@@ -2513,12 +2513,12 @@ C_SupportCruiser_MP:
           modifierType: CanNotTarget
           amount: 0
       dpsInfo:
-        avgShots: 70
-        trueROF: 7
+        avgShots: 60
+        trueROF: 6
         sequenceDuration: 10
-        dpsBeforeAccuracy: 7
+        dpsBeforeAccuracy: 6
         accuracyDps:
-          Short: 7
+          Short: 6
     C_SupportCruiser_Weapon_G2A_MP:
       damageType: Damage
       dmg: 70
@@ -2564,7 +2564,7 @@ C_Sob_SupportCruiser_MP:
   ru: 50
   time: 40
   pop: 5
-  hp: 2700
+  hp: 2900
   armor: 5
   sensor: 1000
   contact: 1250
@@ -3090,7 +3090,7 @@ C_HAC_MP:
   weapons:
     C_HAC_Weapon_G2G_MP:
       damageType: Damage
-      dmg: 16
+      dmg: 17
       packets: 1
       excludeFromHighGround: False
       lineOfSightRequired: True
@@ -3098,12 +3098,12 @@ C_HAC_MP:
       leadsTarget: LeadTarget
       windUp: 0
       windDown: 500
-      rof: 13
-      burstMin: 480
-      burstMax: 530
+      rof: 12
+      burstMin: 500
+      burstMax: 540
       numBursts: 3
-      cooldown: 550
-      reload: 1100
+      cooldown: 450
+      reload: 1650
       aoe: 42
       falloff: Linear
       ranges:
@@ -3148,7 +3148,7 @@ C_HAC_MP:
                   category: UnitDynamics
                   name: 
                   mode: AddPercent
-                  value: -40
+                  value: -33
                 -
                   attribute: UnitDynamics_MinCruiseSpeed
                   attributeID: 2
@@ -3165,34 +3165,34 @@ C_HAC_MP:
                   value: -50
       dpsInfo:
         avgShots: 6
-        trueROF: 11.8811881188119
-        sequenceDuration: 3.715
-        dpsBeforeAccuracy: 77.5235531628533
+        trueROF: 11.5384615384615
+        sequenceDuration: 4.11
+        dpsBeforeAccuracy: 74.4525547445255
         accuracyDps:
-          Short: 62.0188425302826
-          Medium: 54.2664872139973
-          Long: 47.2893674293405
+          Short: 59.5620437956204
+          Medium: 52.1167883211679
+          Long: 45.4160583941606
 C_Escort_MP:
   readableName: C LAV
   cu: 100
   ru: 0
   time: 12
   pop: 2
-  hp: 440
+  hp: 470
   armor: 2
   sensor: 1350
   contact: 1550
   xp: 100
-  priorityAsTarget: 2
+  priorityAsTarget: 4
   movement:
     driveType: Wheeled
     dynamics:
       permanentlyImmobile: False
       minCruiseSpeed: 50
       maxEaseIntoTurnTime: 0.400000005960464
-      maxSpeedTurnRadius: 65
-      brakingTime: 0.75
-      accelerationTime: 0.75
+      maxSpeedTurnRadius: 60
+      brakingTime: 0.699999999953434
+      accelerationTime: 0.699999999953434
       reverseFactor: 1
       maxSpeed: 120
       width: 10
@@ -3231,9 +3231,9 @@ C_Escort_MP:
           accuracy: 85
         Medium:
           distance: 600
-          accuracy: 82
+          accuracy: 79
         Long:
-          distance: 900
+          distance: 870
           accuracy: 55
       turret:
         fieldOfView: 360
@@ -3292,7 +3292,7 @@ C_Escort_MP:
         dpsBeforeAccuracy: 36.6028985507246
         accuracyDps:
           Short: 31.1124637681159
-          Medium: 30.0143768115942
+          Medium: 28.9162898550725
           Long: 20.1315942028986
 C_Sob_Escort_MP:
   readableName: S LAV
@@ -3300,21 +3300,21 @@ C_Sob_Escort_MP:
   ru: 0
   time: 12
   pop: 2
-  hp: 440
+  hp: 470
   armor: 2
   sensor: 1350
   contact: 1550
   xp: 100
-  priorityAsTarget: 2
+  priorityAsTarget: 4
   movement:
     driveType: Wheeled
     dynamics:
       permanentlyImmobile: False
       minCruiseSpeed: 50
       maxEaseIntoTurnTime: 0.400000005960464
-      maxSpeedTurnRadius: 65
-      brakingTime: 0.75
-      accelerationTime: 0.75
+      maxSpeedTurnRadius: 60
+      brakingTime: 0.699999999953434
+      accelerationTime: 0.699999999953434
       reverseFactor: 1
       maxSpeed: 120
       width: 10
@@ -3353,9 +3353,9 @@ C_Sob_Escort_MP:
           accuracy: 85
         Medium:
           distance: 600
-          accuracy: 82
+          accuracy: 79
         Long:
-          distance: 900
+          distance: 870
           accuracy: 55
       turret:
         fieldOfView: 360
@@ -3414,13 +3414,13 @@ C_Sob_Escort_MP:
         dpsBeforeAccuracy: 36.6028985507246
         accuracyDps:
           Short: 31.1124637681159
-          Medium: 30.0143768115942
+          Medium: 28.9162898550725
           Long: 20.1315942028986
 G_SandSkimmer_MP:
   readableName: G Sandskimmer
   cu: 100
   ru: 0
-  time: 10
+  time: 11
   pop: 2
   hp: 500
   armor: 0
@@ -3503,9 +3503,9 @@ K_Sandskimmer_MP:
   readableName: K Sandskimmer
   cu: 100
   ru: 0
-  time: 10
+  time: 11
   pop: 2
-  hp: 480
+  hp: 500
   armor: 0
   sensor: 1200
   contact: 1300
@@ -3801,8 +3801,8 @@ C_Sob_Railgun_MP:
       burstMin: 999
       burstMax: 999
       numBursts: 2
-      cooldown: 1350
-      reload: 4700
+      cooldown: 1500
+      reload: 4550
       aoe: 0
       falloff: Linear
       ranges:
@@ -3924,8 +3924,8 @@ C_Sob_Railgun_MP:
           Long: 25.30276816609
 G_StarHullTank_MP:
   readableName: G Heavy Railgun
-  cu: 380
-  ru: 110
+  cu: 350
+  ru: 100
   time: 20
   pop: 4
   hp: 820
@@ -3944,7 +3944,7 @@ G_StarHullTank_MP:
       brakingTime: 1
       accelerationTime: 1
       reverseFactor: 0.899999976158142
-      maxSpeed: 61
+      maxSpeed: 64
       width: 25
       length: 40
       hover:
@@ -3965,14 +3965,14 @@ G_StarHullTank_MP:
       lineOfSightRequired: True
       friendlyFireDamageScalar: 0
       leadsTarget: DirectAtTarget
-      windUp: 1200
+      windUp: 900
       windDown: 500
       rof: 1
       burstMin: 1000
       burstMax: 1000
       numBursts: 1
       cooldown: 0
-      reload: 600
+      reload: 1100
       aoe: 0
       falloff: Linear
       ranges:
@@ -3983,7 +3983,7 @@ G_StarHullTank_MP:
           distance: 1400
           accuracy: 100
         Long:
-          distance: 1700
+          distance: 1770
           accuracy: 65
       turret:
         fieldOfView: 12
@@ -4106,12 +4106,12 @@ G_StarHullTank_MP:
       dpsInfo:
         avgShots: 1
         trueROF: 1
-        sequenceDuration: 2.8
-        dpsBeforeAccuracy: 64.2857142857143
+        sequenceDuration: 3
+        dpsBeforeAccuracy: 60
         accuracyDps:
-          Short: 25.7142857142857
-          Medium: 64.2857142857143
-          Long: 41.7857142857143
+          Short: 24
+          Medium: 60
+          Long: 39
     G_StarHull_Weapon_G2GEMP_MP:
       damageType: Damage
       dmg: 110
@@ -4252,8 +4252,8 @@ G_StarHullTank_MP:
           Long: 62.8571428571429
 K_HeavyRailgun_MP:
   readableName: K Heavy Railgun
-  cu: 380
-  ru: 110
+  cu: 350
+  ru: 100
   time: 20
   pop: 4
   hp: 820
@@ -4272,7 +4272,7 @@ K_HeavyRailgun_MP:
       brakingTime: 1
       accelerationTime: 1
       reverseFactor: 0.899999976158142
-      maxSpeed: 61
+      maxSpeed: 64
       width: 25
       length: 40
       hover:
@@ -4293,14 +4293,14 @@ K_HeavyRailgun_MP:
       lineOfSightRequired: True
       friendlyFireDamageScalar: 0
       leadsTarget: DirectAtTarget
-      windUp: 1200
+      windUp: 900
       windDown: 500
       rof: 1
       burstMin: 1000
       burstMax: 1000
       numBursts: 1
       cooldown: 0
-      reload: 600
+      reload: 1100
       aoe: 0
       falloff: Linear
       ranges:
@@ -4311,7 +4311,7 @@ K_HeavyRailgun_MP:
           distance: 1400
           accuracy: 100
         Long:
-          distance: 1700
+          distance: 1770
           accuracy: 65
       turret:
         fieldOfView: 12
@@ -4434,12 +4434,12 @@ K_HeavyRailgun_MP:
       dpsInfo:
         avgShots: 1
         trueROF: 1
-        sequenceDuration: 2.8
-        dpsBeforeAccuracy: 64.2857142857143
+        sequenceDuration: 3
+        dpsBeforeAccuracy: 60
         accuracyDps:
-          Short: 25.7142857142857
-          Medium: 64.2857142857143
-          Long: 41.7857142857143
+          Short: 24
+          Medium: 60
+          Long: 39
     G_StarHull_Weapon_G2GEMP_MP:
       damageType: Damage
       dmg: 110
@@ -4745,13 +4745,13 @@ K_AssaultShip_MP:
 C_HAC_Upgrade01_MP:
   readableName: Missile Battery
   cu: 300
-  ru: 85
-  time: 21
+  ru: 75
+  time: 20
   pop: 3
-  hp: 1800
-  armor: 3
-  sensor: 1400
-  contact: 1600
+  hp: 1400
+  armor: 4
+  sensor: 1600
+  contact: 1800
   xp: 740
   priorityAsTarget: -10
   movement:
@@ -4875,13 +4875,13 @@ C_HAC_Upgrade01_MP:
 G_Catamaran_Upgrade01_MP:
   readableName: G Missile Ship
   cu: 350
-  ru: 90
-  time: 24
+  ru: 75
+  time: 22
   pop: 3
-  hp: 1800
-  armor: 3
-  sensor: 1400
-  contact: 1600
+  hp: 1400
+  armor: 5
+  sensor: 1600
+  contact: 1800
   xp: 760
   priorityAsTarget: -10
   movement:
@@ -5037,13 +5037,13 @@ G_Catamaran_Upgrade01_MP:
 K_MissileShip_MP:
   readableName: K Missile Ship
   cu: 350
-  ru: 90
-  time: 24
+  ru: 75
+  time: 22
   pop: 3
-  hp: 1800
-  armor: 3
-  sensor: 1400
-  contact: 1600
+  hp: 1400
+  armor: 5
+  sensor: 1600
+  contact: 1800
   xp: 760
   priorityAsTarget: -10
   movement:
@@ -5512,14 +5512,14 @@ K_AssaultRailgun_MP:
           Long: 8.2962962962963
 C_Interceptor_MP:
   readableName: Strike Fighter
-  cu: 240
-  ru: 90
+  cu: 270
+  ru: 85
   time: 28
   pop: 2
   hp: 490
   armor: 0
-  sensor: 2000
-  contact: 2100
+  sensor: 2200
+  contact: 2400
   xp: 370
   priorityAsTarget: 1000000
   movement:
@@ -5647,13 +5647,13 @@ C_Interceptor_MP:
 G_Interceptor_MP:
   readableName: G Interceptor
   cu: 250
-  ru: 100
-  time: 12
+  ru: 80
+  time: 11
   pop: 2
   hp: 475
   armor: 2
-  sensor: 2000
-  contact: 2500
+  sensor: 2300
+  contact: 2600
   xp: 370
   priorityAsTarget: 1000000
   movement:
@@ -5773,20 +5773,20 @@ G_Interceptor_MP:
           Long: 7.5
     G_Interceptor_Weapon_A2GA_Upgraded_MP:
       damageType: Damage
-      dmg: 100
-      packets: 3
+      dmg: 70
+      packets: 2
       excludeFromHighGround: True
       lineOfSightRequired: False
       friendlyFireDamageScalar: 0
       leadsTarget: LeadTarget
       windUp: 0
       windDown: 500
-      rof: 4
+      rof: 6
       burstMin: 1000
       burstMax: 1000
       numBursts: 1
       cooldown: 0
-      reload: 4500
+      reload: 4000
       aoe: 69
       falloff: None
       ranges:
@@ -5869,30 +5869,25 @@ G_Interceptor_MP:
           classOperator: Or
           modifierType: AccuracyLongPercent
           amount: 2000
-        13:
-          targetClass: Carrier
-          classOperator: Or
-          modifierType: DamagePercent
-          amount: 60
       dpsInfo:
-        avgShots: 4
-        trueROF: 4
-        sequenceDuration: 5.5
-        dpsBeforeAccuracy: 72.7272727272727
+        avgShots: 6
+        trueROF: 6
+        sequenceDuration: 5
+        dpsBeforeAccuracy: 84
         accuracyDps:
-          Short: 2.18181818181818
-          Medium: 2.18181818181818
-          Long: 2.18181818181818
+          Short: 2.52
+          Medium: 2.52
+          Long: 2.52
 K_Interceptor_MP:
   readableName: K Interceptor
   cu: 250
-  ru: 100
-  time: 12
+  ru: 80
+  time: 11
   pop: 2
   hp: 475
   armor: 2
-  sensor: 2000
-  contact: 2500
+  sensor: 2300
+  contact: 2600
   xp: 370
   priorityAsTarget: 1000000
   movement:
@@ -6012,20 +6007,20 @@ K_Interceptor_MP:
           Long: 7.5
     G_Interceptor_Weapon_A2GA_Upgraded_MP:
       damageType: Damage
-      dmg: 100
-      packets: 3
+      dmg: 70
+      packets: 2
       excludeFromHighGround: True
       lineOfSightRequired: False
       friendlyFireDamageScalar: 0
       leadsTarget: LeadTarget
       windUp: 0
       windDown: 500
-      rof: 4
+      rof: 6
       burstMin: 1000
       burstMax: 1000
       numBursts: 1
       cooldown: 0
-      reload: 4500
+      reload: 4000
       aoe: 69
       falloff: None
       ranges:
@@ -6108,28 +6103,23 @@ K_Interceptor_MP:
           classOperator: Or
           modifierType: AccuracyLongPercent
           amount: 2000
-        13:
-          targetClass: Carrier
-          classOperator: Or
-          modifierType: DamagePercent
-          amount: 60
       dpsInfo:
-        avgShots: 4
-        trueROF: 4
-        sequenceDuration: 5.5
-        dpsBeforeAccuracy: 72.7272727272727
+        avgShots: 6
+        trueROF: 6
+        sequenceDuration: 5
+        dpsBeforeAccuracy: 84
         accuracyDps:
-          Short: 2.18181818181818
-          Medium: 2.18181818181818
-          Long: 2.18181818181818
+          Short: 2.52
+          Medium: 2.52
+          Long: 2.52
 C_Bomber_MP:
   readableName: Tactical Bomber
   cu: 450
   ru: 160
-  time: 26
+  time: 37
   pop: 4
-  hp: 1300
-  armor: 10
+  hp: 1250
+  armor: 6
   sensor: 2000
   contact: 2000
   xp: 1560
@@ -6208,7 +6198,7 @@ C_Bomber_MP:
           Short: 188.235294117647
 G_Bomber_MP:
   readableName: G Precision Bomber
-  cu: 300
+  cu: 340
   ru: 140
   time: 22
   pop: 3
@@ -6243,7 +6233,7 @@ G_Bomber_MP:
   weapons:
     G_Bomber_Weapon_A2G_MP:
       damageType: Damage
-      dmg: 800
+      dmg: 760
       packets: 1
       excludeFromHighGround: True
       lineOfSightRequired: False
@@ -6287,12 +6277,12 @@ G_Bomber_MP:
         avgShots: 1
         trueROF: 1
         sequenceDuration: 4.55
-        dpsBeforeAccuracy: 175.824175824176
+        dpsBeforeAccuracy: 167.032967032967
         accuracyDps:
-          Short: 175.824175824176
+          Short: 167.032967032967
 K_Bomber_MP:
   readableName: K Precision Bomber
-  cu: 300
+  cu: 340
   ru: 140
   time: 22
   pop: 3
@@ -6327,7 +6317,7 @@ K_Bomber_MP:
   weapons:
     G_Bomber_Weapon_A2G_MP:
       damageType: Damage
-      dmg: 800
+      dmg: 760
       packets: 1
       excludeFromHighGround: True
       lineOfSightRequired: False
@@ -6371,14 +6361,14 @@ K_Bomber_MP:
         avgShots: 1
         trueROF: 1
         sequenceDuration: 4.55
-        dpsBeforeAccuracy: 175.824175824176
+        dpsBeforeAccuracy: 167.032967032967
         accuracyDps:
-          Short: 175.824175824176
+          Short: 167.032967032967
 C_GunShip_MP:
   readableName: Gunship
-  cu: 500
-  ru: 100
-  time: 48
+  cu: 400
+  ru: 120
+  time: 26
   pop: 4
   hp: 1250
   armor: 8
@@ -6411,7 +6401,7 @@ C_GunShip_MP:
   weapons:
     C_GunShip_Weapon_DefaultFire_MP:
       damageType: Damage
-      dmg: 43
+      dmg: 50
       packets: 1
       excludeFromHighGround: True
       lineOfSightRequired: False
@@ -6425,7 +6415,7 @@ C_GunShip_MP:
       numBursts: 5
       cooldown: 350
       reload: 2000
-      aoe: 138
+      aoe: 130
       falloff: Quadratic
       ranges:
         Long:
@@ -6448,14 +6438,14 @@ C_GunShip_MP:
         avgShots: 4
         trueROF: 4
         sequenceDuration: 8.45
-        dpsBeforeAccuracy: 101.775147928994
+        dpsBeforeAccuracy: 118.343195266272
         accuracyDps:
-          Long: 4.07100591715976
+          Long: 4.73372781065089
 G_Battlecruiser_MP:
   readableName: C Assault Cruiser
   cu: 550
-  ru: 260
-  time: 60
+  ru: 240
+  time: 57
   pop: 6
   hp: 2800
   armor: 12
@@ -6488,7 +6478,7 @@ G_Battlecruiser_MP:
   weapons:
     G_Battlecruiser_Weapon_G2G_MP:
       damageType: Damage
-      dmg: 53
+      dmg: 55
       packets: 1
       excludeFromHighGround: False
       lineOfSightRequired: True
@@ -6573,11 +6563,11 @@ G_Battlecruiser_MP:
         avgShots: 2
         trueROF: 2.85714285714286
         sequenceDuration: 7.15
-        dpsBeforeAccuracy: 44.4755244755245
+        dpsBeforeAccuracy: 46.1538461538462
         accuracyDps:
-          Short: 8.8951048951049
-          Medium: 8.0055944055944
-          Long: 7.11608391608392
+          Short: 9.23076923076923
+          Medium: 8.30769230769231
+          Long: 7.38461538461539
     G_Battlecruiser_Weapon_G2A_MP:
       damageType: Damage
       dmg: 175
@@ -6767,8 +6757,8 @@ G_Battlecruiser_MP:
 C_Sob_AssaultCruiser_MP:
   readableName: S Assault Cruiser
   cu: 550
-  ru: 260
-  time: 60
+  ru: 240
+  time: 57
   pop: 6
   hp: 2800
   armor: 12
@@ -6801,7 +6791,7 @@ C_Sob_AssaultCruiser_MP:
   weapons:
     G_Battlecruiser_Weapon_G2G_MP:
       damageType: Damage
-      dmg: 53
+      dmg: 55
       packets: 1
       excludeFromHighGround: False
       lineOfSightRequired: True
@@ -6886,11 +6876,11 @@ C_Sob_AssaultCruiser_MP:
         avgShots: 2
         trueROF: 2.85714285714286
         sequenceDuration: 7.15
-        dpsBeforeAccuracy: 44.4755244755245
+        dpsBeforeAccuracy: 46.1538461538462
         accuracyDps:
-          Short: 8.8951048951049
-          Medium: 8.0055944055944
-          Long: 7.11608391608392
+          Short: 9.23076923076923
+          Medium: 8.30769230769231
+          Long: 7.38461538461539
     G_Battlecruiser_Weapon_G2A_MP:
       damageType: Damage
       dmg: 175
@@ -7259,7 +7249,7 @@ G_HonorGuard_MP:
           Short: 41.5896487985213
 K_HonorGuard_MP:
   readableName: K Honourguard Cruiser
-  cu: 500
+  cu: 550
   ru: 250
   time: 50
   pop: 6
