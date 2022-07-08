@@ -2796,6 +2796,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Braking time: `0.75s => 0.7s`
 		* Acceleration time: `0.75s => 0.7s`
 		* Armor upgrade CU cost: `350 => 300` (matches G/K)
+		* Boost upgrade cost: `150CU 180RU => 200CU 100RU` (matches raiding)
 		* Increased priority as target
 	* Support cruiser repair rate: `7 => 6`
 	* AAV (DPS: `77.5 => 77.2`, vs 2 armor `67.8 => 68.2`, vs 7 armor: `43.6 => 45.5`, vs 10 armor: `29.1 => 31.8`):
