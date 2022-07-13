@@ -2529,7 +2529,7 @@ C_SupportCruiser_MP:
       leadsTarget: DirectAtTarget
       windUp: 50
       windDown: 500
-      rof: 1
+      rof: 0
       burstMin: 300
       burstMax: 300
       numBursts: 4
@@ -2553,32 +2553,32 @@ C_SupportCruiser_MP:
           amount: 0
       dpsInfo:
         avgShots: 1
-        trueROF: 3.33333333333333
+        trueROF: 1
         sequenceDuration: 6.25
         dpsBeforeAccuracy: 44.8
         accuracyDps:
           Long: 44.8
 C_Sob_SupportCruiser_MP:
   readableName: S Support Cruiser
-  cu: 480
-  ru: 50
-  time: 40
-  pop: 5
-  hp: 2900
-  armor: 5
+  cu: 600
+  ru: 0
+  time: 45
+  pop: 6
+  hp: 4100
+  armor: 2
   sensor: 1000
   contact: 1250
   xp: 300
-  priorityAsTarget: -10
+  priorityAsTarget: -1
   movement:
     driveType: Tracked
     dynamics:
       permanentlyImmobile: False
       minCruiseSpeed: 15
-      maxEaseIntoTurnTime: 0.25
-      maxSpeedTurnRadius: 75
+      maxEaseIntoTurnTime: 3
+      maxSpeedTurnRadius: 100
       brakingTime: 1
-      accelerationTime: 0.899999999906868
+      accelerationTime: 1.5
       reverseFactor: 0.699999988079071
       maxSpeed: 70
       width: 70
@@ -2595,65 +2595,51 @@ C_Sob_SupportCruiser_MP:
   weapons:
     C_SupportCruiser_Weapon_G2G_MP:
       damageType: Damage
-      dmg: 16
+      dmg: 3
       packets: 1
-      excludeFromHighGround: True
+      excludeFromHighGround: False
       lineOfSightRequired: True
       friendlyFireDamageScalar: 0
       leadsTarget: LeadTarget
       windUp: 500
       windDown: 500
-      rof: 6
-      burstMin: 800
-      burstMax: 830
+      rof: 12
+      burstMin: 400
+      burstMax: 800
       numBursts: 2
-      cooldown: 500
-      reload: 2000
+      cooldown: 2000
+      reload: 4000
       aoe: 0
       falloff: Linear
       ranges:
         Short:
-          distance: 400
-          accuracy: 45
+          distance: 300
+          accuracy: 75
         Medium:
           distance: 600
           accuracy: 55
         Medium:
           distance: 900
           accuracy: 35
-        Long:
-          distance: 950
-          accuracy: 35
       turret:
-        fieldOfView: 360
-        fieldOfFire: 360
-        rotationSpeed: 160
+        fieldOfView: 140
+        fieldOfFire: 8
+        rotationSpeed: 75
       modifiers:
         0:
-          targetClass: Medium, Large, XLarge
-          classOperator: Or
-          modifierType: AccuracyShortPercent
-          amount: 150
-        1:
-          targetClass: Medium, Large, XLarge
-          classOperator: Or
-          modifierType: AccuracyMediumPercent
-          amount: 150
-        2:
-          targetClass: Medium, Large, XLarge
-          classOperator: Or
-          modifierType: AccuracyLongPercent
-          amount: 150
+          targetClass: Air
+          classOperator: And
+          modifierType: CanNotTarget
+          amount: 0
       dpsInfo:
-        avgShots: 4.03333333333333
-        trueROF: 4.94887525562372
-        sequenceDuration: 4.63
-        dpsBeforeAccuracy: 27.8761699064075
+        avgShots: 6.335
+        trueROF: 10.5583333333333
+        sequenceDuration: 7.7
+        dpsBeforeAccuracy: 4.93636363636364
         accuracyDps:
-          Short: 12.5442764578834
-          Medium: 9.75665946724262
-          Medium: 9.75665946724262
-          Long: 9.75665946724262
+          Short: 3.70227272727273
+          Medium: 1.72772727272727
+          Medium: 1.72772727272727
     C_SupportCruiser_Weapon_Repair_Small_MP:
       damageType: Heal
       dmg: 1
@@ -2664,7 +2650,7 @@ C_Sob_SupportCruiser_MP:
       leadsTarget: LeadTarget
       windUp: 0
       windDown: 500
-      rof: 7
+      rof: 10
       burstMin: 10000
       burstMax: 10000
       numBursts: 1
@@ -2674,7 +2660,7 @@ C_Sob_SupportCruiser_MP:
       falloff: Linear
       ranges:
         Short:
-          distance: 600
+          distance: 400
           accuracy: 100
       turret:
         fieldOfView: 360
@@ -2692,33 +2678,33 @@ C_Sob_SupportCruiser_MP:
           modifierType: CanNotTarget
           amount: 0
       dpsInfo:
-        avgShots: 70
-        trueROF: 7
+        avgShots: 100
+        trueROF: 10
         sequenceDuration: 10
-        dpsBeforeAccuracy: 7
+        dpsBeforeAccuracy: 10
         accuracyDps:
-          Short: 7
+          Short: 10
     C_SupportCruiser_Weapon_G2A_MP:
       damageType: Damage
-      dmg: 70
+      dmg: 250
       packets: 1
       excludeFromHighGround: True
       lineOfSightRequired: False
       friendlyFireDamageScalar: 0
       leadsTarget: DirectAtTarget
-      windUp: 50
+      windUp: 0
       windDown: 500
-      rof: 1
-      burstMin: 300
-      burstMax: 300
-      numBursts: 4
-      cooldown: 0
-      reload: 5000
-      aoe: 60
+      rof: 2
+      burstMin: 1000
+      burstMax: 1000
+      numBursts: 1
+      cooldown: 700
+      reload: 4000
+      aoe: 40
       falloff: Linear
       ranges:
         Long:
-          distance: 1200
+          distance: 1550
           accuracy: 100
       turret:
         fieldOfView: 360
@@ -2731,12 +2717,12 @@ C_Sob_SupportCruiser_MP:
           modifierType: CanNotTarget
           amount: 0
       dpsInfo:
-        avgShots: 1
-        trueROF: 3.33333333333333
-        sequenceDuration: 6.25
-        dpsBeforeAccuracy: 44.8
+        avgShots: 2
+        trueROF: 2
+        sequenceDuration: 5
+        dpsBeforeAccuracy: 100
         accuracyDps:
-          Long: 44.8
+          Long: 100
 G_SupportCruiser_MP:
   readableName: G Production Cruiser
   cu: 560
@@ -5513,8 +5499,8 @@ K_AssaultRailgun_MP:
 C_Interceptor_MP:
   readableName: Strike Fighter
   cu: 270
-  ru: 85
-  time: 28
+  ru: 75
+  time: 26
   pop: 2
   hp: 490
   armor: 0
@@ -5787,7 +5773,7 @@ G_Interceptor_MP:
       numBursts: 1
       cooldown: 0
       reload: 4000
-      aoe: 69
+      aoe: 60
       falloff: None
       ranges:
         Short:
@@ -5869,6 +5855,11 @@ G_Interceptor_MP:
           classOperator: Or
           modifierType: AccuracyLongPercent
           amount: 2000
+        13:
+          targetClass: Small
+          classOperator: Or
+          modifierType: DamagePercent
+          amount: 60
       dpsInfo:
         avgShots: 6
         trueROF: 6
@@ -6021,7 +6012,7 @@ K_Interceptor_MP:
       numBursts: 1
       cooldown: 0
       reload: 4000
-      aoe: 69
+      aoe: 60
       falloff: None
       ranges:
         Short:
@@ -6103,6 +6094,11 @@ K_Interceptor_MP:
           classOperator: Or
           modifierType: AccuracyLongPercent
           amount: 2000
+        13:
+          targetClass: Small
+          classOperator: Or
+          modifierType: DamagePercent
+          amount: 60
       dpsInfo:
         avgShots: 6
         trueROF: 6
