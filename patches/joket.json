@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.05.20",
-        "LastUpdate": "2022-07-02",
+        "Version": "1.06.00",
+        "LastUpdate": "2022-07-12",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joket.json"
     },
     "Global": {
@@ -66,8 +66,9 @@
                 //"Resource2Cost": 0,
                 //"ResearchTime": 0,
 
-                "Resource1Cost": 200,
-                "Resource2Cost": 100,
+                "Resource1Cost": 150,
+                "Resource2Cost": 50,
+                "ResearchTime": 15,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 150 hitpoints and 1 extra power to the carrier reserves",
@@ -93,8 +94,8 @@
                 //"Resource2Cost": 0,
                 // "ResearchTime": 0,
 
-                "Resource1Cost": 400,
-                "Resource2Cost": 175,
+                "Resource1Cost": 300,
+                "Resource2Cost": 150,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 250 hitpoints and 2 extra power to the carrier reserves",
@@ -175,7 +176,7 @@
                 //"ResearchTime": 0,
 
                 "Resource1Cost": 1200,
-                "Resource2Cost": 550,
+                "Resource2Cost": 650,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 1000 hitpoints and 5 extra power to the carrier reserves, unlock the Super-Sonic Missile barrage",
@@ -277,9 +278,9 @@
                 //"Resource1Cost": 0,
                 //"Resource2Cost": 0,
                 //"ResearchTime": 0,
-
-                "Resource1Cost": 200,
-                "Resource2Cost": 100,
+                "Resource1Cost": 150,
+                "Resource2Cost": 50,
+                "ResearchTime": 15,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 150 hitpoints and 1 extra power to the carrier reserves",
@@ -307,8 +308,8 @@
                 //"Resource2Cost": 0,
                 //"ResearchTime": 0,
 
-                "Resource1Cost": 600,
-                "Resource2Cost": 300,
+                "Resource1Cost": 550,
+                "Resource2Cost": 250,
                 "LocalizedResearchTitleStringID": "CARRIER MOBILITY",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier mobility",
                 "LocalizedLongDescriptionStringID": "Adds 30 extra max speed and 2 extra power to the carrier reserves",
@@ -389,7 +390,7 @@
                 //"Resource2Cost": 0,
                 //"ResearchTime": 0,
                 "Resource1Cost": 1200,
-                "Resource2Cost": 550,
+                "Resource2Cost": 650,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 750 hitpoints and 5 extra power to the carrier reserves, unlock the Cruise Missile",
@@ -475,8 +476,9 @@
         // SOBAN POWER UPGRADES
         "Research_S_Buff_Power_1": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 200,
-                "Resource2Cost": 100,
+                "Resource1Cost": 150,
+                "Resource2Cost": 50,
+                "ResearchTime": 15,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
                 "LocalizedLongDescriptionStringID": "Adds 1 extra power to the carrier reserves, but removes 150 hull integrity",
@@ -499,8 +501,8 @@
         // Carrier Mobility Upgrade
         "Research_S_Buff_Power_2": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 600,
-                "Resource2Cost": 300,
+                "Resource1Cost": 550,
+                "Resource2Cost": 250,
                 "LocalizedResearchTitleStringID": "CARRIER MOBILITY",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier mobility",
                 "LocalizedLongDescriptionStringID": "Adds 30 extra max speed and 2 extra power to the carrier reserves",
@@ -6243,18 +6245,26 @@
                                             "0": {
                                                 "BuffSet": {
                                                     "0": {
+                                                        "Name": "TURRET_FR",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 100
                                                     }, // TURRET_BR
                                                     "1": {
+                                                        "Name": "TURRET_FL",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 100
                                                     }, // TURRET_BL
                                                     "2": {
+                                                        "Name": "TURRET_BR",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 100
                                                     }, // TURRET_FL
                                                     "3": {
+                                                        "Name": "TURRET_BL",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 100
                                                     }, // TURRET_FR
@@ -6294,7 +6304,7 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 30 }
+                                                    "0": { "Value": 0 }
                                                 }
                                             }
                                         }
@@ -6677,7 +6687,7 @@
             "UnitAttributes": {
                 "ExperienceValue": 250,
                 "PopCapCost": 0,
-                "MaxHealth": 750,
+                "MaxHealth": 600,
                 "ContactRadius": 400,
                 "SensorRadius": 270,
                 "PriorityAsTarget": -700
@@ -6787,10 +6797,10 @@
         "K_ExplodingSkimmer_MP": {
             "UnitAttributes": {
                 "ExcludeFromUnitStats": false,
-                "Resource1Cost": 120,
+                "Resource1Cost": 100,
                 "MaxHealth": 2000,
                 "Armour": 0,
-                "ProductionTime": 70,
+                "ProductionTime": 60,
                 "PopCapCost": 2
             },
             "AbilityAttributes": {
@@ -7315,7 +7325,7 @@
             "UnitAttributes": {
                 "Resource1Cost": 200,
                 "Resource2Cost": 30,
-                "MaxHealth": 1700,
+                "MaxHealth": 1500,
                 "PriorityAsTarget": -250,
                 "FireRateDisplay": 3
             },
@@ -7960,7 +7970,7 @@
                 "Resource1Cost": 480,
                 "Resource2Cost": 50,
                 "ProductionTime": 40,
-                "MaxHealth": 2700,
+                "MaxHealth": 2900,
                 "Armour": 5,
                 "PopCapCost": 5,
                 "PriorityAsTarget": -10
@@ -7979,7 +7989,7 @@
             },
             "WeaponAttributes": {
                 "C_SupportCruiser_Weapon_Repair_Small_MP": {
-                    "RateOfFire": 7,
+                    "RateOfFire": 6,
                     "OutputDPS": true,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesShort": {
@@ -9601,7 +9611,7 @@
         "C_Escort_MP": {
             "UnitAttributes": {
                 "AggroRange": 1300,
-                "MaxHealth": 440,
+                "MaxHealth": 470,
                 "Armour": 4,
                 "ProductionTime": 12,
                 "PriorityAsTarget": 2
@@ -9614,7 +9624,10 @@
                     "ActiveCombatApproachMode": "Snipe"
                 },
                 "Dynamics": {
-                    "MaxSpeed": 90
+                    "MaxSpeed": 90,
+                    "MaxSpeedTurnRadius": 60,
+                    "BrakingTime": 0.7,
+                    "AccelerationTime": 0.7
                 }
             },
             "AbilityAttributes": {
@@ -9793,7 +9806,7 @@
         // SOBAN LAV
         "C_Sob_Escort_MP": {
             "UnitAttributes": {
-                "MaxHealth": 440,
+                "MaxHealth": 470,
                 "Armour": 4,
                 "ProductionTime": 12,
                 "PriorityAsTarget": 2
@@ -9806,7 +9819,10 @@
                     "ActiveCombatApproachMode": "Snipe"
                 },
                 "Dynamics": {
-                    "MaxSpeed": 90
+                    "MaxSpeed": 90,
+                    "MaxSpeedTurnRadius": 60,
+                    "BrakingTime": 0.7,
+                    "AccelerationTime": 0.7
                 }
             },
             "AbilityAttributes": {
@@ -9976,7 +9992,7 @@
                 "LocalizedResearchTitleStringID": "LONG-RANGE ASSAULT VEHICLE FABRICATION",
                 "LocalizedLongDescriptionStringID": "Fast-moving Strike vehicle. Effective at pew pewing targets from long range. More accurate if target is far from it.\n\n[ff0000]Imma pew pew pew you from that dune.",
                 "Resource1Cost": 350,
-                "ResearchTime": 35
+                "ResearchTime": 37
             }
         },
 
@@ -10266,8 +10282,8 @@
         // COALITION LAV ASSAULT PACK
         "Research_Buff_C_Escort": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 150,
-                "Resource2Cost": 180
+                "Resource1Cost": 200,
+                "Resource2Cost": 100
 
             }
         },
@@ -10275,16 +10291,17 @@
         ///SOBAN LAV ASSAULT PACK
         "Research_Buff_S_Escort": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 150,
-                "Resource2Cost": 180
+                "Resource1Cost": 200,
+                "Resource2Cost": 100
             }
         },
 
         // COALITION LAV DAMAGE UPGRADES
         "Research_Buff_C_Escort_Damage01": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 200,
-                "ResearchTime": 25,
+                "Resource1Cost": 150,
+                "Resource2Cost": 25,
+                "ResearchTime": 15,
                 "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
                 "UnitTypeBuffs": {
                     "0": {
@@ -10299,7 +10316,8 @@
         "Research_Buff_C_Escort_Damage02": {
             "ResearchItemAttributes": {
                 "Resource1Cost": 200,
-                "ResearchTime": 45,
+                "Resource2Cost": 75,
+                "ResearchTime": 15,
                 "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
                 "UnitTypeBuffs": {
                     "0": {
@@ -10315,8 +10333,9 @@
         // SOBAN LAV DAMAGE UPGRADES
         "Research_Buff_S_Escort_Damage01": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 200,
-                "ResearchTime": 25,
+                "Resource1Cost": 150,
+                "Resource2Cost": 25,
+                "ResearchTime": 15,
                 "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
                 "UnitTypeBuffs": {
                     "0": {
@@ -10337,8 +10356,9 @@
         "Research_Buff_S_Escort_Damage02": {
             "ResearchItemAttributes": {
                 "Resource1Cost": 200,
+                "Resource2Cost": 75,
+                "ResearchTime": 15,
                 "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
-                "ResearchTime": 45,
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
@@ -10370,8 +10390,9 @@
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "SANDSIEGER DAMAGE LEVEL 1",
                 "LocalizedLongDescriptionStringID": "Improves the Sandsieger's' offensive capabilities.\n\n[84a1e8]Increases weapon damage by 50.",
-                "Resource1Cost": 200,
-                "ResearchTime": 25,
+                "Resource1Cost": 150,
+                "Resource2Cost": 25,
+                "ResearchTime": 15,
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
@@ -10393,7 +10414,8 @@
                 "LocalizedResearchTitleStringID": "SANDSIEGER DAMAGE LEVEL 2",
                 "LocalizedLongDescriptionStringID": "Improves the Sandsieger's' offensive capabilities.\n\n[84a1e8]Increases weapon damage by 50.",
                 "Resource1Cost": 200,
-                "ResearchTime": 45,
+                "Resource2Cost": 75,
+                "ResearchTime": 15,
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
@@ -10414,7 +10436,8 @@
         // COALITION LAV ARMOR UPGRADES
         "Research_Buff_C_Escort_VehicleArmor01": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 350,
+                "Resource1Cost": 300,
+                "Resource2Cost": 100,
                 "LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
                 "UnitTypeBuffs": {
                     "0": {
@@ -10432,7 +10455,7 @@
         },
         "Research_Buff_C_Escort_VehicleArmor02": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 350,
+                "Resource1Cost": 300,
                 "Resource2Cost": 175,
                 "LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
                 "UnitTypeBuffs": {
@@ -10453,7 +10476,7 @@
         // SOBAN LAV ARMOR UPGRADES
         "Research_Buff_S_Escort_VehicleArmor01": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 350,
+                "Resource1Cost": 300,
                 "Resource2Cost": 100,
                 "LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
                 "UnitTypeBuffs": {
@@ -10482,7 +10505,7 @@
         },
         "Research_Buff_S_Escort_VehicleArmor02": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 350,
+                "Resource1Cost": 300,
                 "Resource2Cost": 175,
                 "LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
                 "UnitTypeBuffs": {
@@ -11113,13 +11136,13 @@
         // GAALSIEN HEAVY RAILGUN
         "G_StarHullTank_MP": {
             "UnitAttributes": {
-                "Resource1Cost": 380,
-                "Resource2Cost": 110,
+                "Resource1Cost": 360,
+                "Resource2Cost": 100,
                 "MaxHealth": 1700,
                 "Armour": 11,
                 "ProductionTime": 20,
-                "PopCapCost": 4,
-                "ExperienceValue": 550,
+                "PopCapCost": 3,
+                "ExperienceValue": 650,
                 "PriorityAsTarget": 15,
                 "AggroRange": 1200,
                 "FireRateDisplay": 3
@@ -11360,13 +11383,13 @@
         // KHAANEPH HEAVY RAILGUN
         "K_HeavyRailgun_MP": {
             "UnitAttributes": {
-                "Resource1Cost": 380,
-                "Resource2Cost": 110,
+                "Resource1Cost": 360,
+                "Resource2Cost": 100,
                 "MaxHealth": 1700,
                 "Armour": 11,
                 "ProductionTime": 20,
-                "PopCapCost": 4,
-                "ExperienceValue": 550,
+                "PopCapCost": 3,
+                "ExperienceValue": 650,
                 "PriorityAsTarget": 15,
                 "AggroRange": 1200,
                 "FireRateDisplay": 3
@@ -11633,9 +11656,9 @@
         // GAALSIEN/KHAANEPH RANGED CALIBRATION UPGRADE
         "Research_Buff_G_RailGunScope": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 200,
-                "Resource2Cost": 250,
-                "ResearchTime": 55,
+                "Resource1Cost": 300,
+                "Resource2Cost": 100,
+                "ResearchTime": 50,
                 "LocalizedLongDescriptionStringID": "Heavy Railguns gain the RANGED CALIBRATION ability - Increasing fire rate at the cost of range.\n\n[84a1e8]Fire rate greatly increased.\nRange reduced to 700."
             }
         },
@@ -11644,7 +11667,7 @@
         "Research_Buff_G_RailGunStun": {
             "ResearchItemAttributes": {
                 "Resource1Cost": 400,
-                "Resource2Cost": 100,
+                "Resource2Cost": 150,
                 "ResearchTime": 35
             }
         },
@@ -12022,6 +12045,8 @@
         // GAALSIEN/KHAANEPH RAILGUN ARMOR UPGRADES
         "Research_Buff_G_RailGunUnits_Armor1": {
             "ResearchItemAttributes": {
+                "Resource1Cost": 150,
+                "Resource2Cost": 100,
                 "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
                 "UnitTypeBuffs": {
                     "0": {
@@ -12071,8 +12096,8 @@
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "RAILGUN ARMOR LEVEL 1: 2 ELECTRIC BOOGALOO",
                 "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun and Assault Railgun.\n\n[84a1e8]Same thing 2 times in a row?",
-                "Resource1Cost": 250,
-                "Resource2Cost": 175,
+                "Resource1Cost": 200,
+                "Resource2Cost": 150,
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": { // G_StarHull_Upgrade01_MP
@@ -12101,7 +12126,7 @@
         },
         "Research_Buff_G_RailGunUnits_Armor3": {
             "ResearchItemAttributes": {
-                "Resource1Cost": 300,
+                "Resource1Cost": 250,
                 "Resource2Cost": 250,
                 "LocalizedResearchTitleStringID": "RAILGUN ARMOR LEVEL 1: 3 UNWANTED SEQUEL",
                 "LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.\n\n[84a1e8]Same thing? But costs even more? What a scam!",
@@ -12229,8 +12254,10 @@
             },
             "UnitAttributes": {
                 "Resource1Cost": 300,
-                "Resource2Cost": 85,
+                "Resource2Cost": 75,
                 "Armour": 10,
+                "MaxHealth": 1400,
+                "ProductionTime": 20,
                 "PriorityAsTarget": -10,
                 "AggroRange": 1001,
                 "UnitPositionReaggroConditions": "TargetWithinAggroRange"
@@ -12333,10 +12360,12 @@
         "G_Catamaran_Upgrade01_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 350,
-                "Resource2Cost": 90,
-                "ProductionTime": 24,
+                "Resource2Cost": 75,
+                "ProductionTime": 22,
                 "Armour": 0,
-                "PriorityAsTarget": -10
+                "PriorityAsTarget": -10,
+                "SensorRadius": 1600,
+                "ContactRadius": 1800
             },
             "AbilityAttributes": {
 
@@ -12502,10 +12531,12 @@
         "K_MissileShip_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 350,
-                "Resource2Cost": 90,
-                "ProductionTime": 24,
+                "Resource2Cost": 75,
+                "ProductionTime": 22,
                 "Armour": 0,
-                "PriorityAsTarget": -10
+                "PriorityAsTarget": -10,
+                "SensorRadius": 1600,
+                "ContactRadius": 1800
             },
             "AbilityAttributes": {
                 "Ability_G_MissileShipRegen": {
@@ -12664,7 +12695,7 @@
         // GAALSIEN/KHAANEPH MISSILE SHIP FABRICATION
         "Tier_2_G_Catamaran_AA": {
             "ResearchItemAttributes": {
-                "ResearchTime": 45
+                "ResearchTime": 35
             }
         },
 
@@ -12778,8 +12809,10 @@
                 "MaxHealth": 490,
                 "Armour": 0,
                 "Resource1Cost": 240,
-                "Resource2Cost": 90,
-                "ProductionTime": 28
+                "Resource2Cost": 85,
+                "ProductionTime": 28,
+                "SensorRadius": 2200,
+                "ContactRadius": 2400
             },
             "UnitMovementAttributes": {
                 "Combat": {
@@ -12977,8 +13010,8 @@
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 250,
-                "Resource2Cost": 100,
-                "ProductionTime": 12,
+                "Resource2Cost": 80,
+                "ProductionTime": 11,
                 "MaxHealth": 500,
                 "Armour": 3,
                 "FireRateDisplay": 4
@@ -13164,8 +13197,8 @@
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 250,
-                "Resource2Cost": 100,
-                "ProductionTime": 12,
+                "Resource2Cost": 80,
+                "ProductionTime": 11,
                 "MaxHealth": 500,
                 "Armour": 2,
                 "FireRateDisplay": 4
@@ -13286,7 +13319,7 @@
                 "LocalizedShortDescriptionStringID": "ARMOR UPGRADE",
                 "LocalizedLongDescriptionStringID": "Increases armor by 3 and hull integrety by 550",
                 "Resource1Cost": 200,
-                "Resource2Cost": 120,
+                "Resource2Cost": 150,
                 "ResearchTime": 40,
                 "UnitTypeBuffs": {
                     "0": {
@@ -13404,9 +13437,10 @@
                 "AccuracyReceivedMultiplier": 2.0,
                 "Resource1Cost": 450,
                 "Resource2Cost": 160,
-                "MaxHealth": 1300,
-                "Armour": 10,
-                "PopCapCost": 4
+                "MaxHealth": 1250,
+                "Armour": 6,
+                "PopCapCost": 4,
+                "ProductionTime": 37
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -13522,6 +13556,7 @@
                 "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 2500,
                 "Armour": 15,
+                "Resource1Cost": 340,
                 "Resource2Cost": 140,
                 "PopCapCost": 3,
                 "ProductionTime": 22,
@@ -13708,6 +13743,7 @@
                 "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 2500,
                 "Armour": 15,
+                "Resource1Cost": 340,
                 "Resource2Cost": 140,
                 "PopCapCost": 3,
                 "ProductionTime": 22,
@@ -13957,8 +13993,8 @@
             },
             "UnitAttributes": {
                 "AccuracyReceivedMultiplier": 2.0,
-                "Resource1Cost": 500,
-                "Resource2Cost": 100,
+                "Resource1Cost": 400,
+                "Resource2Cost": 120,
                 "MaxHealth": 1250,
                 "Armour": 9,
                 "PopCapCost": 4,
@@ -13990,10 +14026,10 @@
         "G_BattleCruiser_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 550,
-                "Resource2Cost": 260,
+                "Resource2Cost": 240,
                 "MaxHealth": 1000,
                 "PopCapCost": 6,
-                "ProductionTime": 60,
+                "ProductionTime": 57,
                 "Armour": 5
             },
             "ExperienceAttributes": {
@@ -14233,10 +14269,10 @@
         "C_Sob_AssaultCruiser_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 550,
-                "Resource2Cost": 260,
+                "Resource2Cost": 280,
                 "MaxHealth": 1000,
                 "PopCapCost": 6,
-                "ProductionTime": 60,
+                "ProductionTime": 57,
                 "Armour": 5
             },
             "ExperienceAttributes": {
