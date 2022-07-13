@@ -2,7 +2,7 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "15.1",
+		"Version": "15.1.1",
 		"LastUpdate": "2022-07-13",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
@@ -3893,6 +3893,92 @@
 		},
 
 		"C_SupportCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 480,
+				"Resource2Cost": 50,
+				"ProductionTime": 40,
+				"MaxHealth": 2900,
+				"Armour": 5,
+				"PopCapCost": 5,
+				"PriorityAsTarget": -10
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxEaseIntoTurnTime": 0.25,
+					"MaxSpeedTurnRadius": 75,
+					"AccelerationTime": 0.9
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_SupportCruiser_AA": {
+					"RequiredResearch": [] // Always active
+				}
+			},
+			"WeaponAttributes": {
+				"C_SupportCruiser_Weapon_Repair_Small_MP": {
+					"RateOfFire": 6,
+					"RangeAttributesShort": {
+						"Distance": 600
+					}
+				},
+				"C_SupportCruiser_Weapon_G2A_MP": {
+					"BaseDamagePerRound": 70,
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"CooldownTimeMS": 0,
+					"WindUpTimeMS": 50,
+					"RateOfFire": 0, // Rate of fire is changed by the upgrade
+					"ReloadTimeMS": 5000,
+					"AreaOfEffectRadius": 60,
+					"RangeAttributesLong": {
+						"Distance": 1200
+					}
+				},
+				"C_SupportCruiser_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak",
+					"TracerSpeed": 1300,
+					"BaseDamagePerRound": 16,
+					"RateOfFire": 6,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 830,
+					"CooldownTimeMS": 500,
+					"ReloadTimeMS": 2000,
+					"RangeAttributesShort": { "Distance": 400, "Accuracy": 45 },
+					"RangeAttributesLong": { "Distance": 950, "Accuracy": 35 },
+					"Turret": {
+						"FieldOfView": 360,
+						"FieldOfFire": 360,
+						"RotationSpeed": 160
+					},
+					"Modifiers": {
+						"0": {
+							"Remove": true
+						},
+						"1": {
+							"Modifier": "AccuracyShortPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						},
+						"2": {
+							"Modifier": "AccuracyMediumPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						},
+						"3": {
+							"Modifier": "AccuracyLongPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						}
+					}
+				}
+			}
+		},
+		"C_Sob_SupportCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 480,
 				"Resource2Cost": 50,
