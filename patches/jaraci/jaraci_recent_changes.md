@@ -105,6 +105,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-05-25 14.3](#2022-05-25-143)
 	- [2022-05-29 14.4](#2022-05-29-144)
 	- [2022-07-08 15.0](#2022-07-08-150)
+	- [2022-07-13 15.1](#2022-07-13-151)
 
 # Changes
 
@@ -2929,3 +2930,19 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* AOE falloff type: `Quadratic => Linear`
 		* Slightly increased priority as target
 	* Fixed an issue where honourguard cost didn't match G variant: `500CU 250RU => 550CU 250RU`
+
+## 2022-07-13 15.1
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Strike Fighter:
+		* Cost: `270CU 85RU => 270CU 75RU`
+		* Number of rockets per sortie: `8 => 6`
+		* Production time: `28s => 26s`
+* Soban:
+	* Support cruiser:
+		* Fixed an issue where repair rate wasn't modified as intended: `7 => 6`
+		* Introduced slightly changed soban-specific visuals (thanks Just_Carrier)
+* Gaalsien/Khaaneph:
+	* Interceptor:
+		* AOE: `69 => 60`
+		* Damage against small: `100% => 60%`

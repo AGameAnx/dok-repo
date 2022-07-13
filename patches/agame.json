@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "15.0",
-		"LastUpdate": "2022-07-08",
+		"Version": "15.1",
+		"LastUpdate": "2022-07-13",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	/*"Global": {
@@ -1150,6 +1150,9 @@
 				}
 			},
 			"AbilityAttributes": {
+				"Ability_C_Sob_ProduceSupportCruiser_MP": {
+					"ProduceUnit": { "UnitTypeToProduce": "C_SupportCruiser_MP" } // Use unit which properly changes its visuals to S variant
+				},
 				"Ability_C_Sob_DeployPopCapCarrier_MP": {
 					"Resource1Cost": 270
 				},
@@ -3906,6 +3909,11 @@
 					"AccelerationTime": 0.9
 				}
 			},
+			"AbilityAttributes": {
+				"Ability_C_SupportCruiser_AA": {
+					"RequiredResearch": [] // Always active
+				}
+			},
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
 					"RateOfFire": 6,
@@ -3920,88 +3928,7 @@
 					"BurstPeriodMaxTimeMS": 300,
 					"CooldownTimeMS": 0,
 					"WindUpTimeMS": 50,
-					"RateOfFire": 1,
-					"ReloadTimeMS": 5000,
-					"AreaOfEffectRadius": 60,
-					"RangeAttributesLong": {
-						"Distance": 1200
-					}
-				},
-				"C_SupportCruiser_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": true,
-					"TargetStyle": "Flak",
-					"TracerSpeed": 1300,
-					"BaseDamagePerRound": 16,
-					"RateOfFire": 6,
-					"BurstPeriodMinTimeMS": 800,
-					"BurstPeriodMaxTimeMS": 830,
-					"CooldownTimeMS": 500,
-					"ReloadTimeMS": 2000,
-					"RangeAttributesShort": { "Distance": 400, "Accuracy": 45 },
-					"RangeAttributesLong": { "Distance": 950, "Accuracy": 35 },
-					"Turret": {
-						"FieldOfView": 360,
-						"FieldOfFire": 360,
-						"RotationSpeed": 160
-					},
-					"Modifiers": {
-						"0": {
-							"Remove": true
-						},
-						"1": {
-							"Modifier": "AccuracyShortPercent",
-							"TargetClass": "Medium, Large, XLarge",
-							"ClassOperator": "Or",
-							"Amount": 150
-						},
-						"2": {
-							"Modifier": "AccuracyMediumPercent",
-							"TargetClass": "Medium, Large, XLarge",
-							"ClassOperator": "Or",
-							"Amount": 150
-						},
-						"3": {
-							"Modifier": "AccuracyLongPercent",
-							"TargetClass": "Medium, Large, XLarge",
-							"ClassOperator": "Or",
-							"Amount": 150
-						}
-					}
-				}
-			}
-		},
-		"C_Sob_SupportCruiser_MP": {
-			"UnitAttributes": {
-				"Resource1Cost": 480,
-				"Resource2Cost": 50,
-				"ProductionTime": 40,
-				"MaxHealth": 2900,
-				"Armour": 5,
-				"PopCapCost": 5,
-				"PriorityAsTarget": -10
-			},
-			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxEaseIntoTurnTime": 0.25,
-					"MaxSpeedTurnRadius": 75,
-					"AccelerationTime": 0.9
-				}
-			},
-			"WeaponAttributes": {
-				"C_SupportCruiser_Weapon_Repair_Small_MP": {
-					"RateOfFire": 7,
-					"RangeAttributesShort": {
-						"Distance": 600
-					}
-				},
-				"C_SupportCruiser_Weapon_G2A_MP": {
-					"BaseDamagePerRound": 70,
-					"NumberOfBursts": 4,
-					"BurstPeriodMinTimeMS": 300,
-					"BurstPeriodMaxTimeMS": 300,
-					"CooldownTimeMS": 0,
-					"WindUpTimeMS": 50,
-					"RateOfFire": 1,
+					"RateOfFire": 0, // Rate of fire is changed by the upgrade
 					"ReloadTimeMS": 5000,
 					"AreaOfEffectRadius": 60,
 					"RangeAttributesLong": {
@@ -4054,13 +3981,43 @@
 		"Research_Buff_SupportCruiser_AA": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 450,
-				"Resource2Cost": 250
+				"Resource2Cost": 250,
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": -1,
+						"UseAsPrefix": false,
+						"UnitType": "C_SupportCruiser_MP",
+						"BuffSet": {
+							"0": {
+								"Name": "ANTI-AIR",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
 			}
 		},
 		"Research_Buff_S_SupportCruiser_AA": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 450,
-				"Resource2Cost": 250
+				"Resource2Cost": 250,
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": -1,
+						"UseAsPrefix": false,
+						"UnitType": "C_SupportCruiser_MP",
+						"BuffSet": {
+							"0": {
+								"Name": "ANTI-AIR",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
 			}
 		},
 
@@ -5732,10 +5689,10 @@
 		"C_Interceptor_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 270,
-				"Resource2Cost": 85,
+				"Resource2Cost": 75,
 				"MaxHealth": 490,
 				"Armour": 0,
-				"ProductionTime": 28,
+				"ProductionTime": 26,
 				"SensorRadius": 2200,
 				"ContactRadius": 2400
 			},
@@ -5743,8 +5700,8 @@
 				"C_Interceptor_StorageAttributesAsset_MP": {
 					"InventoryLoadout": {
 						"MISSILES": {
-							"Capacity": 8,
-							"StartingAmount": 8
+							"Capacity": 6,
+							"StartingAmount": 6
 						}
 					}
 				}
@@ -5784,10 +5741,17 @@
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
 					"BaseDamagePerRound": 70,
 					"DamagePacketsPerShot": 2,
-					"AreaOfEffectRadius": 69,
+					"AreaOfEffectRadius": 60,
 					"RateOfFire": 6,
 					"ReloadTimeMS": 4000,
-					"LeadsTarget": "LeadTarget"
+					"LeadsTarget": "LeadTarget",
+					"Modifiers": {
+						"13": {
+							"TargetClass": "Small",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
 				}
 			}
 		},
@@ -5804,10 +5768,17 @@
 				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
 					"BaseDamagePerRound": 70,
 					"DamagePacketsPerShot": 2,
-					"AreaOfEffectRadius": 69,
+					"AreaOfEffectRadius": 60,
 					"RateOfFire": 6,
 					"ReloadTimeMS": 4000,
-					"LeadsTarget": "LeadTarget"
+					"LeadsTarget": "LeadTarget",
+					"Modifiers": {
+						"13": {
+							"TargetClass": "Small",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
 				}
 			}
 		},
