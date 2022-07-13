@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.00",
-        "LastUpdate": "2022-07-12",
+        "Version": "1.06.01",
+        "LastUpdate": "2022-07-13",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joket.json"
     },
     "Global": {
@@ -721,6 +721,11 @@
                 "LocalizedLongDescriptionStringID": "[84a1e8]WHAT DO YOU MEAN WE MISSING ONE RU???."
             }
         },
+        /*"Buffset_C_EMP_Rachel_StatusEffect": {
+            "StatusEffectAttributes": {
+                "Duration": 15                
+            }
+        },*/
         // COALITION CARRIER
         "C_Carrier_MP": {
             //"ExperienceAttributes": { // alas can't be done, needs to have experience attributes already or it can't be created
@@ -953,6 +958,14 @@
                     "AreaOfEffectRadius": 1000,
                     "DamagePacketsPerShot": 10,
                     "AreaOfEffectFalloffType": "Linear",
+                    /*"ActiveStatusEffectsIndex": 1,
+                    "StatusEffectsTargetAlignment": "Foe",
+                    "StatusEffectsExcludeTargetType": 0,
+                    "StatusEffectsSets": {
+                        "0": {
+                            "StatusEffects": [ "Buffset_C_EMP_Rachel_StatusEffect" ]
+                        }
+                    },*/
                     "ExcludeFromHeightAdvantage": true,
                     "Modifiers": {
                         "0": {
@@ -6388,9 +6401,10 @@
                     "BurstPeriodMinTimeMS": 250,
                     "BurstPeriodMaxTimeMS": 250,
                     "CooldownTimeMS": 0,
+                    "ActiveStatusEffectsIndex": 1,
                     "BaseDamagePerRound": 100,
                     "DamagePacketsPerShot": 0,
-                    "StatusEffectsExcludeTargetType": "All",
+                    "StatusEffectsExcludeTargetType": 0,
                     "FriendlyFireDamageScalar": 0,
                     "EntityTypesToSpawnOnImpact": {
                         "0": {
@@ -6420,7 +6434,48 @@
                     }
                 },
                 "C_Sob_NukeEmitter_Weapon_Self": {
-                    "BaseDamagePerRound": 0
+                    "BaseDamagePerRound": 1,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
+                    "RateOfFire": 1,
+                    "NumberOfBursts": 1,
+                    "ActiveStatusEffectsIndex": 1,
+                    "ReloadTimeMS": 1000,
+                    "CooldownTimeMS": 0,
+                    "AreaOfEffectRadius": 42000,
+                    "FriendlyFireDamageScalar": 1,
+                    "StatusEffectsExcludeTargetType": 0,
+                    "StatusEffectsSets": {
+                        "0": {
+                            "StatusEffects": [ "EmitterDeath_StatusEffect" ] // i need that no touchy!
+
+                        }
+                    }
+                }
+            }
+        },
+        "EmitterDeath_StatusEffect": {
+            "StatusEffectAttributes": {
+                "Duration": 15,
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": "Carrier",
+                        "UseAsPrefix": false,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Attribute": "PowerShunt_HeatThreshold",
+                                "Value": -10
+                            }
+                        }
+                    }
+                },
+                "Modifiers": {
+                    "0": {
+                        "HealthOverTimeAttributes": {
+                            "Amount": 0
+                        }
+                    }
                 }
             }
         },
@@ -10758,15 +10813,15 @@
             "WeaponAttributes": {
                 "C_Railgun_Weapon_G2G_MP": {
                     "NumberOfBursts": 1,
-                    "RateOfFire": 10,
+                    "RateOfFire": 100,
                     "BaseDamagePerRound": 50,
                     "DamagePacketsPerShot": 0,
                     "WindDownTimeMS": 50,
-                    "WindUpTimeMS": 50,
+                    "WindUpTimeMS": 1050,
                     "CooldownTimeMS": 2000,
-                    "ReloadTimeMS": 2000,
-                    "BurstPeriodMinTimeMS": 300,
-                    "BurstPeriodMaxTimeMS": 700,
+                    "ReloadTimeMS": 1400,
+                    "BurstPeriodMinTimeMS": 30,
+                    "BurstPeriodMaxTimeMS": 70,
                     "AreaOfEffectFalloffType": "Linear",
                     "AreaOfEffectRadius": 100,
                     "RangeAttributesShort": {
@@ -10991,10 +11046,12 @@
                 },
                 "C_Sob_Railgun_Weapon_G2G_MP": {
                     "NumberOfBursts": 1,
-                    "WindUpTimeMS": 100,
+                    "WindUpTimeMS": 600,
                     "WindDownTimeMS": 100,
                     "BaseDamagePerRound": 30,
                     "DamagePacketsPerShot": 0,
+                    "BurstPeriodMinTimeMS": 500,
+                    "BurstPeriodMaxTimeMS": 500,
                     "ReloadTimeMS": 100,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "AreaOfEffectRadius": 0,
@@ -12809,8 +12866,8 @@
                 "MaxHealth": 490,
                 "Armour": 0,
                 "Resource1Cost": 240,
-                "Resource2Cost": 85,
-                "ProductionTime": 28,
+                "Resource2Cost": 75,
+                "ProductionTime": 26,
                 "SensorRadius": 2200,
                 "ContactRadius": 2400
             },
