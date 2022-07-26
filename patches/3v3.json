@@ -2,8 +2,8 @@
     "Meta": {
         "Name": "3v3",
         "Author": "Just_Carrier",
-        "Version": "zero_zero_three",
-        "LastUpdate": "2022-07-07",
+        "Version": "zero_zero_four",
+        "LastUpdate": "2022-07-26",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/3v3.json"
     },
     "Global": {
@@ -141,6 +141,15 @@
             "WeaponAttributes": {
                 "C_Carrier_Weapon_CruiseMissile_MP": {
                     "ExcludeFromHeightAdvantage": true
+                },
+                "C_Carrier_Weapon_Repair_MP": {
+                    "TargetStyle": "Flak"
+                },
+                "C_Carrier_Weapon_G2All_Dummy_MP": {
+                    "BaseDamagePerRound": 8
+                },
+                "C_Carrier_Weapon_G2All_MP": {
+                    "BaseDamagePerRound": 8
                 }
             },
             "PowerShuntAttributes": {
@@ -1142,14 +1151,6 @@
                 }
             }
         },
-        "G_Baserunner_MP": {
-            "AbilityAttributes": {
-                "Ability_G_DeployScanner_MP": {
-                    "CooldownTimeSecs": 85,
-                    "Resource1Cost": 25
-                }
-            }
-        },
         "K_Baserunner_MP": {
             "AbilityAttributes": {
                 "Ability_G_BaseRunnerPassiveRegen": {
@@ -1671,11 +1672,23 @@
                 }
             }
         },
+        "Tier_3_G_Artillery_BattleCruiser": {
+            "ResearchItemAttributes": {
+                "Resource1Cost": 500,
+                "Resource2Cost": 250
+            }
+        },
         "G_ArtilleryCruiser_MP": {
             "WeaponAttributes": {
                 "G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
                     "ExcludeFromHeightAdvantage": true
                 }
+            }
+        },
+        "Tier_3_K_ArtilleryCruiser": {
+            "ResearchItemAttributes": {
+                "Resource1Cost": 600,
+                "Resource2Cost": 450
             }
         },
         "K_ArtilleryCruiser_MP": {
