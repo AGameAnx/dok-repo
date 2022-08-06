@@ -3,7 +3,7 @@
         "Name": "3v3",
         "Author": "Just_Carrier",
         "Version": "zero_zero_four",
-        "LastUpdate": "2022-07-26",
+        "LastUpdate": "2022-08-06",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/3v3.json"
     },
     "Global": {
@@ -169,6 +169,7 @@
             },
             "AbilityAttributes": {
                 "Ability_C_Sob_ProduceSupportCruiser_MP": { "ProduceUnit": { "UnitTypeToProduce": "C_SupportCruiser_MP" } },
+                "Ability_C_Sob_ProduceAssaultCruiser_MP": { "ProduceUnit": { "UnitTypeToProduce": "G_BattleCruiser_MP" } },
                 "Ability_C_LaunchInterceptor_MP": {
                     "AirSortie": {
                         "LoiterLength": 40
@@ -1243,6 +1244,44 @@
                 }
             }
         },
+        "Tier_3_C_AssaultCruiser": {
+            "ResearchItemAttributes": {
+                "UnitTypeBuffs": {
+                    "0": {
+                        "UnitClass": -1,
+                        "UseAsPrefix": false,
+                        "UnitType": "G_BattleCruiser_MP",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "AA_RIGHT",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Tier_3_S_AssaultCruiser": {
+            "ResearchItemAttributes": {
+                "UnitTypeBuffs": {
+                    "0": {
+                        "UnitClass": -1,
+                        "UseAsPrefix": false,
+                        "UnitType": "G_BattleCruiser_MP",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "AA_RIGHT",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "K_ExplodingSkimmer_MP": {
             "UnitAttributes": {
                 "ProductionTime": 70
@@ -1653,15 +1692,16 @@
         },
         "G_BattleCruiser_MP": {
             "AbilityAttributes": {
+                "Ability_G_BattleCruiser_EnableAir_MP": {
+                    "RequiredResearch": []
+                },
                 "Ability_G_BattleCruiser_Missile_MP": {
                     "Resource1Cost": 0
                 }
-            }
-        },
-        "C_Sob_AssaultCruiser_MP": {
-            "AbilityAttributes": {
-                "Ability_G_BattleCruiser_Missile_MP": {
-                    "Resource1Cost": 0
+            },
+            "WeaponAttributes": {
+                "G_Battlecruiser_Weapon_G2A_MP": {
+                    "RateOfFire": 0
                 }
             }
         },
