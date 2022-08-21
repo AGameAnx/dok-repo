@@ -6215,11 +6215,11 @@
 					"ExcludeFromHeightAdvantage": false,
 					"BurstPeriodMaxTimeMS": 250,
 					"BurstPeriodMinTimeMS": 250,
-					"NumberOfBursts": 18,
+					"NumberOfBursts": 2,
 					"WindUpTimeMS": 1000,
 					"WindDownTimeMS": 500,
 
-					"ReloadTimeMS": 15000,
+					"ReloadTimeMS": 10000,
 					"CooldownTimeMS": 10000,
 
 					"RangeAttributesShort": {
@@ -9895,7 +9895,7 @@
 			"WeaponAttributes": {
 				"C_Sob_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 745,
-					"CooldownTimeMS": 1300,
+					"CooldownTimeMS": 4250,
 					"ReloadTimeMS": 4250,
 					"RangeAttributesShort": {
 						"Accuracy": 7
@@ -9971,12 +9971,126 @@
 		},
 		"Research_Buff_S_Railgun": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 100,
-				"Resource2Cost": 250,
-				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 250.",
+				"Resource1Cost": 300,
+				"Resource2Cost": 450,
+				"LocalizedResearchTitleStringID": "MULTIPHASIC RAILGUNS",
+				"LocalizedLongDescriptionStringID": "Improves railgun armed combat capabilities.\n\n[84a1e8]Railgun weapons burst number doubled.",
 				"UnitTypeBuffs": {
-					"0": { "BuffSet": { "0": { "Value": 250 } } },
-					"1": { "BuffSet": { "0": { "Value": 250 } } }
+					"0": {
+						"UseAsPrefix": true,
+						"UnitType": "C_Sob_Railgun_MP",
+						"BuffSet": {
+							"0": {
+								"Name": "DEFAULT",
+								"Attribute": "UnitWeapon_CooldownTime",
+								"Mode": "Add",
+								"Value": -4000
+							},
+							"1": {
+								"Name": "DEFAULT",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": 50
+							}
+						}
+					},
+					"1": {
+						"UseAsPrefix": true,
+						"UnitType": "C_Sob_Battlecruiser_MP",
+						"BuffSet": {
+							"0": {
+								"Name": "BACK",
+								"Attribute": "UnitWeapon_CooldownTime",
+								"Mode": "Add",
+								"Value": -6000
+							},
+							"1": {
+								"Name": "BACK",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": 50
+							},
+							"2": {
+								"Name": "FRONT",
+								"Attribute": "UnitWeapon_CooldownTime",
+								"Mode": "Add",
+								"Value": -6000
+							},
+							"3": {
+								"Name": "FRONT",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": 50
+							},
+							"4": {
+								"Name": "MISSILE_FRONT",
+								"Attribute": "UnitWeapon_CooldownTime",
+								"Mode": "Add",
+								"Value": -6000
+							},
+							"5": {
+								"Name": "MISSILE_FRONT",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": 50
+							},
+							"6": {
+								"Name": "MISSILE_BACK",
+								"Attribute": "UnitWeapon_CooldownTime",
+								"Mode": "Add",
+								"Value": -6000
+							},
+							"7": {
+								"Name": "MISSILE_BACK",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": 50
+							},
+							"8": {
+								"Name": "DEFAULT",
+								"Attribute": "UnitWeapon_CooldownTime",
+								"Mode": "Add",
+								"Value": -6000
+							},
+							"9": {
+								"Name": "DEFAULT",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": 50
+							}
+						}
+					},
+					"2": {
+						"UnitClass": "All",
+						"UseAsPrefix": true,
+						"UnitType": "C_Sob_Carrier_MP",
+						"BuffSet": {
+							"0": {
+								"Name": "TURRET_BR",
+								"Attribute": "UnitWeapon_CooldownTime",
+								"Mode": "AddPercent",
+								"Value": -50
+							},
+							"1": {
+								"Name": "TURRET_BL",
+								"Attribute": "UnitWeapon_CooldownTime",
+								"Mode": "AddPercent",
+								"Value": -50
+							},
+							"2": {
+								"Name": "TURRET_FL",
+								"Attribute": "UnitWeapon_CooldownTime",
+								"Mode": "AddPercent",
+								"Value": -50
+							},
+							"3": {
+								"Name": "TURRET_FR",
+								"Attribute": "UnitWeapon_CooldownTime",
+								"Mode": "AddPercent",
+								"Value": -50
+							}
+						}
+					}
 				}
 			}
 		},
@@ -11249,8 +11363,8 @@
 					"AreaOfEffectRadius": 75,
 					"BaseDamagePerRound": 1740,
 					"WindUpTimeMS": 1200,
-					"CooldownTimeMS": 2200,
-					"ReloadTimeMS": 8500,
+					"CooldownTimeMS": 7500,
+					"ReloadTimeMS": 7500,
 					"RangeAttributesShort": { "Accuracy": 7 },
 					"RangeAttributesMedium": { "Accuracy": 6 },
 					"RangeAttributesLong": { "Distance": 1650 },
@@ -11267,7 +11381,7 @@
 		},
 		"Tier_3_S_BattleCruiser": {
 			"ResearchItemAttributes": {
-				"Dependencies": [ "Tier_2_S_ArmouredAssault", "Tier_2_S_RailGun" ],
+				"Dependencies": [ "Tier_2_S_RailGun" ],
 				"Resource1Cost": 350,
 				"Resource2Cost": 225,
 				"ResearchTime": 105
