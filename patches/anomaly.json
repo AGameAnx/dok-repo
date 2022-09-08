@@ -8,9 +8,9 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.01",
-        "LastUpdate": "2022-07-13",
-        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
+        "Version": "1.06.12",
+        "LastUpdate": "2022-09-08",
+        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
     },
     /*"Global": {
         "UnitAttributes": {
@@ -3711,13 +3711,16 @@
                 "Ability_G_LaunchBomber_MP": {
                     "AirSortie": {
                         "LoiterLength": 120,
-                        "SetAttackTargetsWithinRadius": 2000
+                        "SetAttackTargetsWithinRadius": 500
                     }
                 }
             },
             "WeaponAttributes": {
                 "G_Carrier_Weapon_Missile_SightLauncher_MP 1": {
-                    "RangeAttributesLong": { "Distance": 420000 }
+                    "RangeAttributesLong": {
+                        "Distance": 420000,
+                        "MinDistance": 0
+                    }
                 },
                 "G_Carrier_Weapon_G2All_MP": {
                     "BaseDamagePerRound": 30,
@@ -5073,7 +5076,7 @@
                 "Ability_Launch_K_Bomber": {
                     "AirSortie": {
                         "LoiterLength": 120,
-                        "SetAttackTargetsWithinRadius": 2000
+                        "SetAttackTargetsWithinRadius": 500
                     }
                 },
                 "Ability_K_GrantShuntingBombToCarrier": {
@@ -6402,7 +6405,8 @@
                     "BurstPeriodMaxTimeMS": 250,
                     "CooldownTimeMS": 0,
                     "ActiveStatusEffectsIndex": 1,
-                    "BaseDamagePerRound": 100,
+                    "BaseDamagePerRound": 1000,
+                    "ReloadTimeMS": 10000,
                     "DamagePacketsPerShot": 0,
                     "StatusEffectsExcludeTargetType": 0,
                     "FriendlyFireDamageScalar": 0,
@@ -6482,7 +6486,7 @@
         "G_SandSkimmer": {
             "UnitAttributes": {
                 "ExcludeFromUnitStats": true,
-                "MaxHealth": 200,
+                "MaxHealth": 2000,
                 "PopCapCost": 0,
                 "ExperienceValue": 10,
                 "AggroRange": 40000,
@@ -6498,7 +6502,7 @@
                     "BurstPeriodMaxTimeMS": 1000,
                     "CooldownTimeMS": 0,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 2,
+                    "RateOfFire": 20,
                     "ReloadTimeMS": 0,
                     "RangeAttributesShort": {
                         "Accuracy": 100,
@@ -10756,13 +10760,13 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Lieutenant: +30 damage",
+                        "BuffTooltipLocID": "Lieutenant: +15 damage",
                         "RequiredExperience": 900,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
                                 "Mode": "Add",
-                                "Value": 30
+                                "Value": 15
                             }
                         }
                     },
@@ -10813,8 +10817,9 @@
             "WeaponAttributes": {
                 "C_Railgun_Weapon_G2G_MP": {
                     "NumberOfBursts": 1,
-                    "RateOfFire": 100,
-                    "BaseDamagePerRound": 50,
+                    "TracerSpeed": 2500,
+                    "RateOfFire": 200,
+                    "BaseDamagePerRound": 25,
                     "DamagePacketsPerShot": 0,
                     "WindDownTimeMS": 50,
                     "WindUpTimeMS": 1050,
@@ -11169,10 +11174,10 @@
             "ResearchItemAttributes": {
                 "Resource1Cost": 150,
                 "Resource2Cost": 250,
-                "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 20.",
+                "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 10.",
                 "UnitTypeBuffs": {
-                    "0": { "BuffSet": { "0": { "Value": 20 } } },
-                    "1": { "BuffSet": { "0": { "Value": 20 } } }
+                    "0": { "BuffSet": { "0": { "Value": 10 } } },
+                    "1": { "BuffSet": { "0": { "Value": 10 } } }
                 }
             }
         },
@@ -13546,13 +13551,13 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Acolyte: +100m area of effect of the weapon",
+                        "BuffTooltipLocID": "Acolyte: +50m area of effect of the weapon",
                         "RequiredExperience": 1500,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_AreaOfEffect",
                                 "Mode": "Add",
-                                "Value": 15
+                                "Value": 50
                             },
                             "1": {
                                 "Remove": true
@@ -13625,7 +13630,7 @@
                     "MaxSpeedTurnRadius": 150
                 },
                 "Combat": {
-                    "MinDesiredCombatRange": 900
+                    "MinDesiredCombatRange": 1400
                 }
 
 
@@ -13634,8 +13639,8 @@
                 "G_Bomber_StorageAttributesAsset_MP": {
                     "InventoryLoadout": {
                         "BOMBER MISSILES": {
-                            "Capacity": 60,
-                            "StartingAmount": 60
+                            "Capacity": 12,
+                            "StartingAmount": 12
                         }
                     }
                 }
@@ -13647,42 +13652,39 @@
                         "RotationSpeed": 360,
                         "FieldOfView": 360
                     },
-                    "ProjectileEntityTypeToSpawn": "G_CatamaranProjectile_ProjectileAssetContainer",
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "NumberOfBursts": 1,
-                    "BaseDamagePerRound": 30,
+                    "BaseDamagePerRound": 185,
                     "DamagePacketsPerShot": 1,
-                    "AreaOfEffectRadius": 0,
+                    "AreaOfEffectRadius": 100,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "RateOfFire": 10,
+                    "RateOfFire": 2,
                     "WindUpTimeMS": 0,
                     "WindDownTimeMS": 0,
-                    "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
+                    "BurstPeriodMinTimeMS": 1500,
+                    "BurstPeriodMaxTimeMS": 1500,
                     "CooldownTimeMS": 0,
-                    "ReloadTimeMS": 1000,
+                    "ReloadTimeMS": 3000,
                     "RangeAttributesShort": {
-                        "Distance": 1000,
-                        "Accuracy": 50
+                        "Distance": 1500,
+                        "Accuracy": 10
                     },
                     "RangeAttributesMedium": {
-                        "Distance": 1250,
-                        "Accuracy": 40
+                        "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1500,
-                        "Accuracy": 30
+                        "Remove": true
                     },
                     "Modifiers": {
                         "0": {
-                            "TargetClass": "Ground",
-                            "Modifier": "CanNotTarget"
+                            "TargetClass": "Air",
+                            "Modifier": "AccuracyShortPercent",
+                            "Amount": 500
                         },
                         "1": {
-                            "TargetClass": "Small",
-                            "Modifier": "DamagePercent",
-                            "Amount": 500
+                            "Remove": true
                         },
                         "2": {
                             "Remove": true
@@ -13733,13 +13735,13 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Acolyte: +100m area of effect of the weapon",
+                        "BuffTooltipLocID": "Acolyte: +50m area of effect of the weapon",
                         "RequiredExperience": 1600,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_AreaOfEffect",
                                 "Mode": "Add",
-                                "Value": 15
+                                "Value": 50
                             },
                             "1": {
                                 "Remove": true
@@ -13812,15 +13814,15 @@
                     "MaxSpeedTurnRadius": 150
                 },
                 "Combat": {
-                    "MinDesiredCombatRange": 900
+                    "MinDesiredCombatRange": 1400
                 }
             },
             "StorageAttributes": {
                 "G_Bomber_StorageAttributesAsset_MP": {
                     "InventoryLoadout": {
                         "BOMBER MISSILES": {
-                            "Capacity": 60,
-                            "StartingAmount": 60
+                            "Capacity": 12,
+                            "StartingAmount": 12
                         }
                     }
                 }
@@ -13832,42 +13834,39 @@
                         "RotationSpeed": 360,
                         "FieldOfView": 360
                     },
-                    "ProjectileEntityTypeToSpawn": "G_CatamaranProjectile_ProjectileAssetContainer",
+                    "ProjectileEntityTypeToSpawn": "K_Carrier_Barrage_ProjectileAssetContainer_MP",
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "NumberOfBursts": 1,
-                    "BaseDamagePerRound": 30,
-                    "DamagePacketsPerShot": 1,
-                    "AreaOfEffectRadius": 0,
+                    "BaseDamagePerRound": 200,
+                    "DamagePacketsPerShot": 2,
+                    "AreaOfEffectRadius": 150,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "RateOfFire": 10,
+                    "RateOfFire": 2,
                     "WindUpTimeMS": 0,
                     "WindDownTimeMS": 0,
-                    "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
+                    "BurstPeriodMinTimeMS": 1500,
+                    "BurstPeriodMaxTimeMS": 1500,
                     "CooldownTimeMS": 0,
-                    "ReloadTimeMS": 1000,
+                    "ReloadTimeMS": 3000,
                     "RangeAttributesShort": {
-                        "Distance": 1000,
-                        "Accuracy": 50
+                        "Distance": 1500,
+                        "Accuracy": 5
                     },
                     "RangeAttributesMedium": {
-                        "Distance": 1250,
-                        "Accuracy": 40
+                        "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1500,
-                        "Accuracy": 30
+                        "Remove": true
                     },
                     "Modifiers": {
                         "0": {
-                            "TargetClass": "Ground",
-                            "Modifier": "CanNotTarget"
+                            "TargetClass": "Air",
+                            "Modifier": "AccuracyShortPercent",
+                            "Amount": 1000
                         },
                         "1": {
-                            "TargetClass": "Small",
-                            "Modifier": "DamagePercent",
-                            "Amount": 500
+                            "Remove": true
                         },
                         "2": {
                             "Remove": true
@@ -13926,7 +13925,7 @@
         "Research_Buff_G_Bomber_Hold": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "FLYING FORTRESS - AMMO CAPACITY",
-                "LocalizedLongDescriptionStringID": "Flying Fortress carries more ammo per sortie.\n\n[84a1e8]Increases burst count from 6 to 18.",
+                "LocalizedLongDescriptionStringID": "Flying Fortress carries more ammo per sortie.\n\n[84a1e8]Increases burst count from 4 to 10.",
                 "Resource1Cost": 400,
                 "Resource2Cost": 150,
                 "UnitTypeBuffs": {
@@ -13934,11 +13933,11 @@
                         "BuffSet": {
                             "0": {
                                 "Mode": "Add",
-                                "Value": 120
+                                "Value": 18
                             },
                             "1": {
                                 "Mode": "Add",
-                                "Value": 120
+                                "Value": 18
                             }
                         }
                     },
@@ -13946,11 +13945,11 @@
                         "BuffSet": {
                             "0": {
                                 "Mode": "Add",
-                                "Value": 120
+                                "Value": 18
                             },
                             "1": {
                                 "Mode": "Add",
-                                "Value": 120
+                                "Value": 18
                             }
                         }
                     }
@@ -14722,7 +14721,7 @@
                         }
                     },
                     "RangeAttributesLong": {
-                        "Distance": 7500,
+                        "Distance": 4500,
                         "Accuracy": 50
                     },
                     "RangeAttributesShort": {
@@ -14964,7 +14963,7 @@
                         }
                     },
                     "RangeAttributesLong": {
-                        "Distance": 7500,
+                        "Distance": 4500,
                         "Accuracy": 50
                     }
                 },
@@ -16652,6 +16651,7 @@
                 "LocalizedLongDescriptionStringID": "Provide c-c-cough cough... cover by lying down a smoke screen for 10 seconds.\n\nSmoking is bad for unit health."
             }
         },
+        "Ability_K_ProduceBaserunner": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD BLAST DRONE FACTORY" } },
         "Ability_K_ProduceExplodingSkimmer_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD EXPLODING SKIMMER" } },
         "Ability_C_Sob_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Strong against air targets and carriers." } },
         "Ability_C_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Strong against air targets and carriers." } },
@@ -16672,13 +16672,13 @@
         "Ability_Produce_G_Bomber_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD FLYING FORTRESS",
-                "LocalizedLongDescriptionStringID": "Heavely armored anti air Strikecraft. Exelent at air superioroty duty."
+                "LocalizedLongDescriptionStringID": "Heavely armored anti air Strikecraft. Capable of striking ground targets and exelent at air superioroty duty."
             }
         },
         "Ability_Produce_K_Bomber": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD FLYING FORTRESS",
-                "LocalizedLongDescriptionStringID": "Heavely armored anti air Strikecraft. Exelent at air superioroty duty."
+                "LocalizedLongDescriptionStringID": "Heavely armored anti air Strikecraft. Capable of striking ground targets and exelent at air superioroty duty."
             }
         },
         "Ability_Produce_G_Sandskimmer": {
