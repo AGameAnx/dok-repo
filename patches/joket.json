@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.12",
-        "LastUpdate": "2022-09-08",
+        "Version": "1.06.20",
+        "LastUpdate": "2022-09-11",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
     },
     "Global": {
@@ -481,7 +481,7 @@
                 "ResearchTime": 15,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 1 extra power to the carrier reserves, but removes 150 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 1 extra power to the carrier reserves and 5 max speed, but removes 150 hull integrity",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": "Carrier",
@@ -492,6 +492,11 @@
                                 "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
                                 "Value": -150
+                            },
+                            "1": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Add",
+                                "Value": 5
                             }
                         }
                     }
@@ -529,7 +534,7 @@
                 "Resource2Cost": 200,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 3 extra power to the carrier reserves, but removes 300 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 3 extra power to the carrier reserves and 5 max speed, but removes 300 hull integrity",
                 "Dependencies": [ "Research_S_Buff_Power_1" ],
                 "UnitTypeBuffs": {
                     "0": {
@@ -541,6 +546,11 @@
                                 "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
                                 "Value": -300
+                            },
+                            "1": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Add",
+                                "Value": 5
                             }
 
                         }
@@ -554,7 +564,7 @@
                 "Resource2Cost": 400,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 3",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 4 extra power to the carrier reserves, but removes 550 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 4 extra power to the carrier reserves and 5 max speed, but removes 550 hull integrity",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": "Carrier",
@@ -565,6 +575,11 @@
                                 "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
                                 "Value": -550
+                            },
+                            "1": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Add",
+                                "Value": 5
                             }
                         }
                     }
@@ -577,7 +592,7 @@
                 "Resource2Cost": 550,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 5 extra power to the carrier reserves, but removes 750 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 5 extra power to the carrier reserves and 5 max speed, but removes 750 hull integrity",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": "Carrier",
@@ -588,6 +603,11 @@
                                 "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
                                 "Value": -750
+                            },
+                            "1": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Add",
+                                "Value": 5
                             }
                         }
                     }
@@ -600,7 +620,7 @@
                 "Resource2Cost": 700,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 6 extra power to the carrier reserves and 2 heat capacity, but removes 1250 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 6 extra power to the carrier reserves, 2 heat capacity, 5 max speed, but removes 1250 hull integrity",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": "Carrier",
@@ -616,6 +636,11 @@
                                 "Attribute": "PowerShunt_HeatThreshold",
                                 "Mode": "Add",
                                 "Value": 2
+                            },
+                            "2": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Add",
+                                "Value": 5
                             }
                         }
                     }
@@ -628,7 +653,7 @@
                 "Resource2Cost": 850,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 7 extra power to the carrier reserves and 8 more heat capacity, but removes 2000 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 7 extra power to the carrier reserves, 8 more heat capacity, 5 max speed, but removes 2000 hull integrity",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": "Carrier",
@@ -644,6 +669,11 @@
                                 "Attribute": "PowerShunt_HeatThreshold",
                                 "Mode": "Add",
                                 "Value": 8
+                            },
+                            "2": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Add",
+                                "Value": 5
                             }
                         }
                     }
@@ -954,6 +984,11 @@
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     //"C_HAC_Smoke_ProjectileAssetContainer",
                     "BaseWreckDamagePerRound": 100,
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "C_Rachel_EMP_StatusEffect" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "None",
                     "BaseDamagePerRound": 20000,
                     "AreaOfEffectRadius": 1000,
                     "DamagePacketsPerShot": 10,
@@ -2085,6 +2120,7 @@
                     }
                 },
                 "Ability_C_Sob_ProduceSupportCruiser_MP": { "ProduceUnit": { "UnitTypeToProduce": "C_SupportCruiser_MP" } },
+                "Ability_C_Sob_ProduceAssaultCruiser_MP": { "ProduceUnit": { "UnitTypeToProduce": "G_BattleCruiser_MP" } },
                 "Ability_C_LaunchInterceptor_MP": {
                     "AirSortie": {
                         "LoiterLength": 40,
@@ -6494,7 +6530,8 @@
                 "FireRateDisplay": 2,
                 "Resource1Cost": 0,
                 "Controllable": false,
-                "Selectable": false
+                "Selectable": false,
+                "Class": "Ground"
             },
             "WeaponAttributes": {
                 "G_SandSkimmer_Weapon_G2G": {
@@ -9028,11 +9065,16 @@
                 },
                 "C_HAC_Weapon_Ballistic_Smoke_MP": {
                     "RateOfFire": 1,
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "EMP_CoalitionArtillery_StatusEffect" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "None",
                     "NumberOfBursts": 1,
                     "CooldownTimeMS": 1000,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
-                    "BaseDamagePerRound": 190,
+                    "BaseDamagePerRound": 10,
                     "AreaOfEffectRadius": 160,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -12404,6 +12446,39 @@
                                 "Attribute": "WeaponRange_AccuracyLong",
                                 "Mode": "AddPercent",
                                 "Value": -100
+                            },
+                            "3": {
+                                "Attribute": "Unit_ContactRadius",
+                                "Mode": "AddPercent",
+                                "Value": -100
+                            },
+                            "4": {
+                                "Attribute": "Unit_SensorRadius",
+                                "Mode": "AddPercent",
+                                "Value": -100
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "C_Rachel_EMP_StatusEffect": {
+            "StatusEffectAttributes": {
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": "Ground",
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Attribute": "Unit_ContactRadius",
+                                "Mode": "AddPercent",
+                                "Value": -100
+                            },
+                            "1": {
+                                "Attribute": "Unit_SensorRadius",
+                                "Mode": "AddPercent",
+                                "Value": -100
                             }
                         }
                     }
@@ -12412,9 +12487,9 @@
         },
         "Ability_G_MissileCraft_CrowdControl_MP": {
             "AbilityViewAttributes": {
-                "IconName": "Icon-Command-MissileBarrage3",
-                "LocalizedTitleStringID": "CARRIER REPELLENT",
-                "LocalizedLongDescriptionStringID": "[84a1e8]Casual 2000 damage per missile, 8 missiles barrage.\n\n[ff0000]My name is Jafar\nI came from a far\nThere is a cruise missile in my car\nTake evasive action"
+                "IconName": "Icon-Command-EMP",
+                "LocalizedTitleStringID": "SACRAFICIAL EMP",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Orders missile ship to emp itself on the targeted spot. Deals 2500 damage to missiel ship itself and 250 to anything around it\n\n[ff0000]My name is Jafar\nI came from a far\nThere is an EMP in my car\nTake evasive action"
 
             }
         },
@@ -12430,7 +12505,22 @@
                 "ContactRadius": 1800
             },
             "AbilityAttributes": {
-
+                /*"Ability_G_MissileCraft_GlobalAA_MP": {
+                    "ApplyStatusEffect": {
+                        "Upgraded_AARadio_StatusEffect": {
+                            "Modifiers": {
+                                "0": {
+                                    "SwapFromWeaponID": "af",
+                                    "SwapToWeaponID": "das"
+                                },
+                                "1": {
+                                    "SwapFromWeaponID": "das",
+                                    "SwapToWeaponID": "dqw"
+                                }
+                            }
+                        }
+                    }
+                },*/
                 "Ability_G_MissileShipRegen": {
                     "ApplyStatusEffect": {
                         "Regen_MissileShip_StatusEffect": {
@@ -12568,16 +12658,25 @@
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
                     "ExcludeFromHeightAdvantage": true,
-                    "EntityTypesToSpawnOnImpact": {
-                        "0": {
-                            "EntityTypeToSpawn": "N_MissileBarrage_Sight"
-                        }
+                    "AreaOfEffectFalloffType": "None",
+                    "WeaponOwnerFriendlyFireDamageScalar": 10,
+                    "FriendlyFireDamageScalar": 1,
+                    "RevealTriggers": "OnBurstStart",
+                    "WindUpTimeMS": 0,
+                    "NumberOfBursts": 1,
+                    "RateOfFire": 1,
+                    "BaseDamagePerRound": 250,
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "C_Rachel_EMP_StatusEffect" ] }
                     },
-                    "BaseDamagePerRound": 2000,
+                    "StatusEffectsExcludeTargetType": "None",
                     "AreaOfEffectRadius": 750,
-                    "AreaOfEffectFalloffType": "Quadratic",
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     "RangeAttributesShort": {
-                        "Distance": 250
+                        "Distance": 30,
+                        "MinDistance": 0,
+                        "Accuracy": 100
                     },
                     "RangeAttributesMedium": {
                         "Remove": true
@@ -12601,6 +12700,22 @@
                 "ContactRadius": 1800
             },
             "AbilityAttributes": {
+                "Ability_G_MissileCraft_GlobalAA_MP": {
+                    "ApplyStatusEffect": {
+                        "Upgraded_AARadio_StatusEffect": {
+                            "Modifiers": {
+                                "0": {
+                                    "SwapFromWeaponID": "",
+                                    "SwapToWeaponID": ""
+                                },
+                                "1": {
+                                    "SwapFromWeaponID": "",
+                                    "SwapToWeaponID": ""
+                                }
+                            }
+                        }
+                    }
+                },
                 "Ability_G_MissileShipRegen": {
                     "ApplyStatusEffect": {
                         "Regen_MissileShip_StatusEffect": {
@@ -12732,17 +12847,26 @@
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
-                    "EntityTypesToSpawnOnImpact": {
-                        "0": {
-                            "EntityTypeToSpawn": "N_MissileBarrage_Sight"
-                        }
-                    },
                     "ExcludeFromHeightAdvantage": true,
-                    "BaseDamagePerRound": 2000,
+                    "WeaponOwnerFriendlyFireDamageScalar": 10,
+                    "FriendlyFireDamageScalar": 1,
+                    "RevealTriggers": "OnBurstStart",
+                    "WindUpTimeMS": 0,
+                    "NumberOfBursts": 1,
+                    "RateOfFire": 1,
+                    "BaseDamagePerRound": 250,
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "C_Rachel_EMP_StatusEffect" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "None",
                     "AreaOfEffectRadius": 750,
-                    "AreaOfEffectFalloffType": "Quadratic",
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
+                    "AreaOfEffectFalloffType": "None",
                     "RangeAttributesShort": {
-                        "Distance": 250
+                        "Distance": 30,
+                        "MinDistance": 0,
+                        "Accuracy": 100
                     },
                     "RangeAttributesMedium": {
                         "Remove": true
@@ -12988,6 +13112,27 @@
 
             }
         },
+        "EMP_CoalitionArtillery_StatusEffect": { //poison smoke 
+            "StatusEffectAttributes": {
+                "Duration": 10,
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "Remove": true
+                    },
+                    "2": {
+                        "ModifierType": "HealthOverTime",
+                        "HealthOverTimeAttributes": {
+                            "MSTickDuration": 20,
+                            "Amount": 1,
+                            "DamageType": "Damage"
+                        }
+                    }
+                }
+            }
+        },
         // GAALSIEN INTERCEPTOR
         "G_Interceptor_MP": {
             "ExperienceAttributes": {
@@ -13105,9 +13250,14 @@
                         "FieldOfView": 360, // Doesn't really have the desired effect bc turret can't turn
                         "FieldOfFire": 360
                     },
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "EMP_CoalitionArtillery_StatusEffect" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "None",
                     "ProjectileEntityTypeToSpawn": "C_HAC_Smoke_ProjectileAssetContainer",
-                    "NumberOfBursts": 2,
-                    "BaseDamagePerRound": 380,
+                    "NumberOfBursts": 1,
+                    "BaseDamagePerRound": 170,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 160,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -14200,6 +14350,7 @@
                 },
                 "G_Battlecruiser_Weapon_G2A_MP": {
                     "RangeAttributesLong": { "Distance": 1250 },
+                    "RateOfFire": 0,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "Modifiers": {
                         "0": {
@@ -14235,6 +14386,9 @@
                 "Dynamics": { "MaxSpeed": 150 }
             },
             "AbilityAttributes": {
+                "Ability_G_BattleCruiser_EnableAir_MP": {
+                    "RequiredResearch": []
+                },
                 "Ability_G_BattleCruiser_ArmorBonus_MP": {
                     "SharedCooldownChannel": 0,
                     "CooldownTimeSecs": 50,
@@ -14322,7 +14476,7 @@
         },
 
         // SOBAN ASSAULT CRUISER
-        "C_Sob_AssaultCruiser_MP": {
+        "C_Sob_AssaultCruiser_MP": { // bye
             "UnitAttributes": {
                 "Resource1Cost": 550,
                 "Resource2Cost": 280,
@@ -14574,7 +14728,23 @@
                 "LocalizedLongDescriptionStringID": "Unlock Gaalsien Battlecruiser missiles.\n\n[84a1e8]Enables undirect autofire capabilities.",
                 "Resource1Cost": 300,
                 "Resource2Cost": 150,
-                "ResearchTime": 45
+                "ResearchTime": 45,
+                "UnitTypeBuffs": {
+                    "0": {
+                        "UnitClass": -1,
+                        "ClassOperator": "Or",
+                        "UseAsPrefix": true,
+                        "UnitType": "G_Battlecruiser_MP",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "AA_RIGHT",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            }
+                        }
+                    }
+                }
             }
         },
         "Research_Buff_S_AssaultCruiser_AntiAir": {
@@ -14583,7 +14753,23 @@
                 "LocalizedLongDescriptionStringID": "Unlock Assault Cruiser missiles.\n\n[84a1e8]Enables undirect autofire capabilities.",
                 "Resource1Cost": 300,
                 "Resource2Cost": 150,
-                "ResearchTime": 45
+                "ResearchTime": 45,
+                "UnitTypeBuffs": {
+                    "0": {
+                        "UnitClass": -1,
+                        "ClassOperator": "Or",
+                        "UseAsPrefix": true,
+                        "UnitType": "G_Battlecruiser_MP",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "AA_RIGHT",
+                                "Attribute": "UnitWeapon_RateOfFire",
+                                "Mode": "Add",
+                                "Value": 1
+                            }
+                        }
+                    }
+                }
             }
         },
 
@@ -14733,6 +14919,7 @@
                 },
                 "G_HonorGuard_Weapon_G2A_MP": {
                     "WindUpTimeMS": 500,
+                    "BaseDamagePerRound": 125,
                     "ReloadTimeMS": 4000,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "RangeAttributesShort": {
@@ -14764,7 +14951,7 @@
                     "DamagePacketsPerShot": 2,
                     "ReloadTimeMS": 9000,
                     "CooldownTimeMS": 1000,
-                    "NumberOfBursts": 2,
+                    "NumberOfBursts": 1,
                     "Modifiers": {
                         "1": {
                             "TargetClass": "Small",
@@ -14908,7 +15095,7 @@
                     "DamagePacketsPerShot": 2,
                     "ReloadTimeMS": 9000,
                     "CooldownTimeMS": 1000,
-                    "NumberOfBursts": 2,
+                    "NumberOfBursts": 1,
                     "Modifiers": {
                         "1": {
                             "TargetClass": "Small",
@@ -14970,6 +15157,7 @@
                 "G_HonorGuard_Weapon_G2A_MP": {
                     "WindUpTimeMS": 500,
                     "ReloadTimeMS": 4000,
+                    "BaseDamagePerRound": 125,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "Modifiers": {
                         "0": {
@@ -15127,6 +15315,12 @@
                             }
                         }
                     }
+                }
+            },
+            "AbilityAttributes": {
+                "Ability_C_SmokeGrenade_BattleCruiser": {
+                    "AbilityType": "UseWeapon",
+                    "TargetingType": "Self"
                 }
             },
             "WeaponAttributes": {
@@ -15647,6 +15841,11 @@
                 },
                 "C_ArtilleryCruiser_Weapon_G2G_MP": {
                     "FriendlyFireDamageScalar": 1,
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "MortarSuppress_StatusEffect" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "Carrier",
                     "ProjectileEntityTypeToSpawn": "C_HAC_Grenade_ProjectileAssetContainer_MP",
                     "BaseDamagePerRound": 100,
                     "ReloadTimeMS": 10000,
@@ -16732,13 +16931,13 @@
         "Research_Buff_C_Sob_CruiseMissileUnlock": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "CARRIER - BEEHIVE WITH A MICROWAVE",
-                "LocalizedLongDescriptionStringID": "Upgrade Carrier throwing arm; launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 300 ANGRY BEES"
+                "LocalizedLongDescriptionStringID": "Upgrade Carrier throwing arm; launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 30 ANGRY BEES"
             }
         },
         "Ability_C_Sob_SobanNuke_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "THROW A BEEHIVE WITH A MICROWAVE",
-                "LocalizedLongDescriptionStringID": "Launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 300 ANGRY BEES."
+                "LocalizedLongDescriptionStringID": "Launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 30 ANGRY BEES."
             }
         },
         "Ability_C_ToggleAutoFire": {
