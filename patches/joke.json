@@ -8,9 +8,9 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.20",
-        "LastUpdate": "2022-09-11",
-        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
+        "Version": "1.06.30",
+        "LastUpdate": "2022-09-30",
+        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
     },
     /*"Global": {
         "UnitAttributes": {
@@ -6448,7 +6448,7 @@
                     "FriendlyFireDamageScalar": 0,
                     "EntityTypesToSpawnOnImpact": {
                         "0": {
-                            "EntityTypeToSpawn": "G_SandSkimmer"
+                            "EntityTypeToSpawn": "G_Interceptor"
                         }
                     },
                     "StatusEffectsSets": {
@@ -6517,6 +6517,193 @@
                         }
                     }
                 }
+            }
+        },
+        "G_Interceptor": {
+            "UnitAttributes": {
+                "AggroRange": 40000,
+                "LeashRange": 40000,
+                "FireRateDisplay": 2,
+                "Resource1Cost": 0,
+                "Controllable": false,
+                "Selectable": false,
+                "Class": "Ground",
+                "AccuracyReceivedMultiplier": 1.0,
+                "MaxHealth": 2100,
+                "Armour": 0
+            },
+            "UnitMovementAttributes": {
+                "Dynamics": {
+                    "MaxSpeed": 450,
+                    "MaxSpeedTurnRadius": 200
+                },
+                "Combat": {
+                    "MinDesiredCombatRange": 800,
+                    "MaxDesiredCombatRange": 900,
+                    "PassiveCombatApproachMode": "Circle",
+                    "ActiveCombatApproachMode": "Circle"
+                }
+            },
+            "StorageAttributes": {
+                "G_Interceptor_StorageAttributesAsset": {
+                    "InventoryLoadout": {
+                        "MISSILES": {
+                            "Capacity": 200,
+                            "StartingAmount": 200
+                        }
+                    }
+                }
+            },
+            "WeaponAttributes": {
+                "G_Interceptor_Weapon_A2GA_Upgraded_Campaign": {
+                    "Turret": {
+                        "FieldOfView": 360, // Doesn't really have the desired effect bc turret can't turn
+                        "FieldOfFire": 360
+                    },
+                    "ProjectileEntityTypeToSpawn": "Cat_G2G_ProjectileAssetContainer_MP",
+                    "NumberOfBursts": 1,
+                    "ExcludeFromAutoTargetAcquisition": false,
+                    "ExcludeFromAutoFire": false,
+                    "BaseDamagePerRound": 180,
+                    "DamagePacketsPerShot": 1,
+                    "AreaOfEffectRadius": 160,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "RateOfFire": 1,
+                    "WindUpTimeMS": 0,
+                    "WindDownTimeMS": 0,
+                    "BurstPeriodMinTimeMS": 750,
+                    "BurstPeriodMaxTimeMS": 1250,
+                    "CooldownTimeMS": 0,
+                    "ReloadTimeMS": 250,
+                    "LeadsTarget": 1,
+                    "RangeAttributesShort": {
+                        "Distance": 1000
+                    },
+                    "RangeAttributesMedium": {
+                        "Remove": true
+                    },
+                    "RangeAttributesLong": {
+                        "Remove": true
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Air",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanNotTarget"
+                        },
+                        "2": {
+                            "Remove": true
+                        },
+                        "3": {
+                            "Remove": true
+                        },
+                        "4": {
+                            "Remove": true
+                        },
+                        "5": {
+                            "Remove": true
+                        },
+                        "6": {
+                            "Remove": true
+                        },
+                        "7": {
+                            "Remove": true
+                        },
+                        "8": {
+                            "Remove": true
+                        },
+                        "9": {
+                            "Remove": true
+                        },
+                        "10": {
+                            "Remove": true
+                        },
+                        "11": {
+                            "Remove": true
+                        },
+                        "12": {
+                            "Remove": true
+                        },
+                        "13": {
+                            "Remove": true
+                        }
+
+                    }
+                },
+                "G_Interceptor_Weapon_A2G_Primary_Campaign": {
+                    "Turret": {
+                        "FieldOfView": 360, // Doesn't really have the desired effect bc turret can't turn
+                        "FieldOfFire": 360
+                    },
+                    "ProjectileEntityTypeToSpawn": "Cat_G2G_ProjectileAssetContainer_MP",
+                    "NumberOfBursts": 1,
+                    "ExcludeFromAutoTargetAcquisition": false,
+                    "ExcludeFromAutoFire": false,
+                    "BaseDamagePerRound": 180,
+                    "DamagePacketsPerShot": 1,
+                    "AreaOfEffectRadius": 160,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "RateOfFire": 1,
+                    "WindUpTimeMS": 0,
+                    "WindDownTimeMS": 0,
+                    "BurstPeriodMinTimeMS": 750,
+                    "BurstPeriodMaxTimeMS": 1250,
+                    "CooldownTimeMS": 0,
+                    "ReloadTimeMS": 250,
+                    "LeadsTarget": 1,
+                    "RangeAttributesShort": {
+                        "Distance": 1000
+                    },
+                    "RangeAttributesMedium": {
+                        "Remove": true
+                    },
+                    "RangeAttributesLong": {
+                        "Remove": true
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Air",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanNotTarget"
+                        },
+                        "2": {
+                            "Remove": true
+                        },
+                        "3": {
+                            "Remove": true
+                        },
+                        "4": {
+                            "Remove": true
+                        },
+                        "5": {
+                            "Remove": true
+                        },
+                        "6": {
+                            "Remove": true
+                        },
+                        "7": {
+                            "Remove": true
+                        },
+                        "8": {
+                            "Remove": true
+                        },
+                        "9": {
+                            "Remove": true
+                        },
+                        "10": {
+                            "Remove": true
+                        },
+                        "11": {
+                            "Remove": true
+                        },
+                        "12": {
+                            "Remove": true
+                        },
+                        "13": {
+                            "Remove": true
+                        }
+
+                    }   }
             }
         },
         "G_SandSkimmer": {
@@ -12674,7 +12861,7 @@
                     "AreaOfEffectRadius": 750,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     "RangeAttributesShort": {
-                        "Distance": 30,
+                        "Distance": 100,
                         "MinDistance": 0,
                         "Accuracy": 100
                     },
@@ -12864,7 +13051,7 @@
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     "AreaOfEffectFalloffType": "None",
                     "RangeAttributesShort": {
-                        "Distance": 30,
+                        "Distance": 100,
                         "MinDistance": 0,
                         "Accuracy": 100
                     },
@@ -13443,8 +13630,13 @@
                         "FieldOfFire": 360
                     },
                     "ProjectileEntityTypeToSpawn": "C_HAC_Smoke_ProjectileAssetContainer",
-                    "NumberOfBursts": 2,
-                    "BaseDamagePerRound": 380,
+                    "NumberOfBursts": 1,
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "EMP_CoalitionArtillery_StatusEffect" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "None",
+                    "BaseDamagePerRound": 170,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 160,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -13780,7 +13972,10 @@
                     "MaxSpeedTurnRadius": 150
                 },
                 "Combat": {
-                    "MinDesiredCombatRange": 1400
+                    "MinDesiredCombatRange": 1000,
+                    "MaxDesiredCombatRange": 1400,
+                    "PassiveCombatApproachMode": "Circle",
+                    "ActiveCombatApproachMode": "Circle"
                 }
 
 
@@ -13964,7 +14159,10 @@
                     "MaxSpeedTurnRadius": 150
                 },
                 "Combat": {
-                    "MinDesiredCombatRange": 1400
+                    "MinDesiredCombatRange": 1000,
+                    "MaxDesiredCombatRange": 1400,
+                    "PassiveCombatApproachMode": "Circle",
+                    "ActiveCombatApproachMode": "Circle"
                 }
             },
             "StorageAttributes": {
@@ -14216,8 +14414,11 @@
             },
             "WeaponAttributes": {
                 "C_GunShip_Weapon_DefaultFire_MP": {
-                    //"ProjectileEntityTypeToSpawn": "K_DirectFire_Shell_ProjectileAssetContainer_MP", // can't make anything funny happen :(
+                    "ProjectileEntityTypeToSpawn": "Cat_G2G_ProjectileAssetContainer_MP",
                     "BaseDamagePerRound": 155,
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "TracerLength": 5,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 144,
                     "AreaOfEffectFalloffType": "Quadratic",
