@@ -2,11 +2,29 @@
     "Meta": {
         "Name": "3v3",
         "Author": "Just_Carrier",
-        "Version": "zero_zero_four",
-        "LastUpdate": "2022-08-18",
+        "Version": "zero_zero_five",
+        "LastUpdate": "2022-10-10",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/3v3.json"
     },
-    "Global": {
+    "Global": {/*
+        "UnitAttributes": {
+            "Resource1Cost": 0,
+            "Resource2Cost": 0,
+            "ProductionTime": 0,
+            "PopCapCost": 0
+        },
+        "ResearchItemAttributes": {
+            "Resource1Cost": 0,
+            "Resource2Cost": 0,
+            "ResearchTime": 0
+        },
+        "AbilityAttributes": {
+            "Any": {
+                "Resource1Cost": 0,
+                "Resource2Cost": 0
+                //"CooldownTimeSecsMult": 0.01
+            }
+        },*/
         "DetectableAttributes": {
             "TimeVisibleAfterFiring": 4500
         }
@@ -180,21 +198,23 @@
                 },
                 "Ability_C_LaunchGunShip_MP": {
                     "AirSortie": { "LoiterLength": 40 }
+                },
+                "Ability_C_Sob_SobanNuke_MP": {
+                    "ChainCasting": {
+                        "QueuedAbilityDelay": 2
+                    }
                 }
             },
             "WeaponAttributes": {
                 "C_Sob_Carrier_Weapon_Nuke_MP": {
-                    "ExcludeFromHeightAdvantage": true
-                },                
-                "C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
-                    "BaseDamagePerRound": 195,
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
                     "ExcludeFromHeightAdvantage": true
                 },
                 "C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
                     "BurstPeriodMaxTimeMS": 250,
                     "BurstPeriodMinTimeMS": 250,
-                    "NumberOfBursts": 2,
                     "BaseDamagePerRound": 195,
+                    "NumberOfBursts": 2,
                     "WindUpTimeMS": 1000,
                     "WindDownTimeMS": 500,
                     "ReloadTimeMS": 10000,
@@ -788,8 +808,7 @@
             },
             "WeaponAttributes": {
                 "K_Carrier_Weapon_BarrageMissile_MP": {
-                    "ExcludeFromHeightAdvantage": true,
-                    "BaseDamagePerRound": 600
+                    "ExcludeFromHeightAdvantage": true
                 },
                 "K_Carrier_Weapon_G2All_MP": {
                     "TargetStyle": "TurretImpactRun",
