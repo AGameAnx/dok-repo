@@ -10770,6 +10770,14 @@
 					},
 					"RangeAttributesShort": {
 						"Distance": 1250
+					},
+					"Modifiers": {
+						"0": {
+							"TargetClass": "Air",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 200
+						}
 					}
 				}
 			}
@@ -10786,7 +10794,7 @@
 				"MaxHealth": 4780,
 				"Resource1Cost": 175,
 				"Resource2Cost": 10,
-				"Armour": 18,
+				"Armour": 10,
 				"ProductionTime": 12,
 				"PopCapCost": 2
 			},
@@ -10796,7 +10804,15 @@
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 67,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 2500
+					"ReloadTimeMS": 2500,
+					"Modifiers": {
+						"0": {
+							"TargetClass": "Air",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 250
+						}
+					}
 				}
 			}
 		},
@@ -10804,7 +10820,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 4780,
 				"Resource2Cost": 10,
-				"Armour": 18,
+				"Armour": 10,
 				"ProductionTime": 7,
 				"PopCapCost": 2,
 				"Resource1Cost": 125
@@ -10815,7 +10831,15 @@
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 67,
 					"RateOfFire": 4,
-					"ReloadTimeMS": 2500
+					"ReloadTimeMS": 2500,
+					"Modifiers": {
+						"0": {
+							"TargetClass": "Air",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 250
+						}
+					}
 				}
 			}
 		},
@@ -10830,18 +10854,18 @@
 				"Resource1Cost": 200,
 				"Resource2Cost": 120,
 				"ResearchTime": 40,
-				"LocalizedLongDescriptionStringID": "Interceptor employs afterburner jets, greatly increasing maximum speed.\n\n[84a1e8]Maximum speed increased by 40%",
+				"LocalizedLongDescriptionStringID": "Interceptor employs afterburner jets, greatly increasing maximum speed.\n\n[84a1e8]Maximum speed increased by 66%",
 				"UnitTypeBuffs": {
 					"0": {
 						"BuffSet": {
-							"0": { "Value": 40 },
-							"1": { "Value": -40 }
+							"0": { "Value": 66 },
+							"1": { "Value": -66 }
 						}
 					},
 					"1": {
 						"BuffSet": {
-							"0": { "Value": 40 },
-							"1": { "Value": -40 }
+							"0": { "Value": 66 },
+							"1": { "Value": -66 }
 						}
 					}
 				}
@@ -10852,7 +10876,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 225,
 				"Resource2Cost": 25,
-				"MaxHealth": 5100,
+				"MaxHealth": 6100,
 				"Armour": 22,
 				"PopCapCost": 2,
 				"ProductionTime": 14
@@ -11022,18 +11046,18 @@
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 125,
-				"MaxHealth": 8400,
+				"MaxHealth": 9400,
 				"ProductionTime": 44,
 				"Armour": 55,
 				"PopCapCost": 6
 			},
 			"WeaponAttributes": {
 				"G_Battlecruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 175,
+					"BaseDamagePerRound": 275,
 					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
-					"RateOfFire": 3,
+					"RateOfFire": 6,
 					"NumberOfBursts": 4,
 					"WindUpTimeMS": 250,
 					"ReloadTimeMS": 3500,
@@ -11060,10 +11084,11 @@
 				}
 			},
 			"UnitMovementAttributes": {
-				"Dynamics": { "MaxSpeed": 75 }
+				"Dynamics": { "MaxSpeed": 95 }
 			},
 			"AbilityAttributes": {
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
+					"SharedCooldownChannel": 0,
 					"CooldownTimeSecs": 30,
 					"ApplyStatusEffect": {
 						"ArmorBonus_StatusEffect": {
@@ -11080,12 +11105,35 @@
 				"Ability_G_BattleCruiser_EnableAir_MP": {
 					"RequiredResearch": []
 				},
-
 				"Ability_G_BattleCruiser_Missile_MP": {
+					"SharedCooldownChannel": 0,
 					"Resource1Cost": 0,
 					"CooldownTimeSecs": 30
 				},
 				"Ability_G_BattleCruiserActiveRegen": {
+					"ApplyStatusEffect": {
+						"Regen_BattleCruiser_StatusEffect_Campaign": {
+							"Modifiers": {
+								"0": {
+									"HealthOverTimeAttributes": {
+										"Amount": 1,
+										"MSTickDuration": 10
+									}
+								},
+								"1": { // disable weapon
+									"Remove": true
+								},
+								"2": { // disable ability
+									"Remove": true
+								},
+								"3": { // immobilize
+									"Remove": true
+								}
+
+							}
+						}
+					},
+					"SharedCooldownChannel": 0,
 					"CooldownTimeSecs": 30
 				}
 			}
@@ -11401,10 +11449,10 @@
 						"AngleWeight": 25,
 						"DistanceWeight": 0.05
 					},
-					"WindUpTimeMS": 1200,
-					"BaseDamagePerRound": 1040,
+					"WindUpTimeMS": 200,
+					"BaseDamagePerRound": 1540,
 					"AreaOfEffectFalloffType": "Quadratic",
-					"AreaOfEffectRadius": 75,
+					"AreaOfEffectRadius": 100,
 					"ReloadTimeMS": 4800,
 					"RangeAttributesLong": {
 						"Distance": 1400
@@ -11440,6 +11488,7 @@
 						"AngleWeight": 25,
 						"DistanceWeight": 0.05
 					},
+					"TracerSpeed": 8000,
 					"BaseDamagePerRound": 1040,
 					"WindUpTimeMS": 1200,
 					"CooldownTimeMS": 7500,
