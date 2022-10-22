@@ -11057,7 +11057,7 @@
 					"AreaOfEffectRadius": 75,
 					"BurstPeriodMinTimeMS": 700,
 					"BurstPeriodMaxTimeMS": 700,
-					"RateOfFire": 6,
+					"RateOfFire": 3,
 					"NumberOfBursts": 4,
 					"WindUpTimeMS": 250,
 					"ReloadTimeMS": 3500,
@@ -11070,7 +11070,7 @@
 				"G_BattleCruiser_Weapon_Missile_MP": {
 					"BaseDamagePerRound": 550,
 					"AreaOfEffectFalloffType": "Quadratic",
-					"AreaOfEffectRadius": 300,
+					"AreaOfEffectRadius": 200,
 					"ExcludeFromHeightAdvantage": false,
 					"RangeAttributesLong": { "Distance": 1000 },
 					"Modifiers": {
@@ -11095,7 +11095,12 @@
 							"BuffsToApplyToTarget": {
 								"0": {
 									"BuffSet": {
-										"0": { "Value": 50 }
+										"0": { "Value": 50 },
+										"4": {
+											"Attribute": "UnitWeapon_RateOfFire",
+											"Mode": "AddPercent",
+											"Value": 100
+										}
 									}
 								}
 							}
