@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.32",
-        "LastUpdate": "2022-10-14",
+        "Version": "1.06.40",
+        "LastUpdate": "2022-11-02",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
@@ -4580,12 +4580,12 @@
                     "2": { // Re-establish Systems
                         "PowerLevels": {
                             "0": {
-                                "HeatPointsProvided": 30,
+                                "HeatPointsProvided": 26,
                                 "LocalizedShortDescriptionStringID": "Carrier always takes damage"
                             },
 
                             "1": {
-                                "HeatPointsProvided": -29,
+                                "HeatPointsProvided": -25,
                                 "LocalizedShortDescriptionStringID": "Carrier hull integrity stabilized",
                                 "StatusEffectsToApply": {
                                     "Regen_1_StatusEffect_MP": {
@@ -5786,13 +5786,13 @@
                     "2": { // Re-establish Systems
                         "PowerLevels": {
                             "0": {
-                                "HeatPointsProvided": 30,
+                                "HeatPointsProvided": 26,
                                 "LocalizedShortDescriptionStringID": "Carrier always takes damage"
 
                             },
 
                             "1": {
-                                "HeatPointsProvided": -29,
+                                "HeatPointsProvided": -25,
                                 "LocalizedShortDescriptionStringID": "Carrier hull integrity stabilized",
                                 "StatusEffectsToApply": {
                                     "Regen_1_StatusEffect_MP": {
@@ -6524,8 +6524,8 @@
                 "AggroRange": 40000,
                 "LeashRange": 40000,
                 "FireRateDisplay": 2,
+                "PopCapCost": 0,
                 "Resource1Cost": 0,
-		"PopCapCost": 0,
                 "Controllable": false,
                 "Selectable": false,
                 "Class": "Ground",
@@ -6539,8 +6539,8 @@
                     "MaxSpeedTurnRadius": 200
                 },
                 "Combat": {
-                    "MinDesiredCombatRange": 800,
-                    "MaxDesiredCombatRange": 900,
+                    "MinDesiredCombatRange": 700,
+                    "MaxDesiredCombatRange": 800,
                     "PassiveCombatApproachMode": "Circle",
                     "ActiveCombatApproachMode": "Circle"
                 }
@@ -6704,7 +6704,8 @@
                             "Remove": true
                         }
 
-                    }   }
+                    }
+                }
             }
         },
         "G_SandSkimmer": {
@@ -12652,6 +12653,7 @@
         },
         "C_Rachel_EMP_StatusEffect": {
             "StatusEffectAttributes": {
+                "Duration": 15,
                 "BuffsToApplyToTarget": {
                     "0": {
                         "UnitClass": "Ground",
@@ -12677,7 +12679,7 @@
             "AbilityViewAttributes": {
                 "IconName": "Icon-Command-EMP",
                 "LocalizedTitleStringID": "SACRAFICIAL EMP",
-                "LocalizedLongDescriptionStringID": "[84a1e8]Orders missile ship to emp itself on the targeted spot. Deals 2500 damage to missiel ship itself and 250 to anything around it\n\n[ff0000]My name is Jafar\nI came from a far\nThere is an EMP in my car\nTake evasive action"
+                "LocalizedLongDescriptionStringID": "[84a1e8]Orders missile ship to emp itself on the targeted spot. Deals 2500 damage to missile ship ship or to any carrier in the area and 250 to anything around it\n\n[ff0000]My name is Jafar\nI came from a far\nThere is an EMP in my car\nTake evasive action"
 
             }
         },
@@ -12858,7 +12860,15 @@
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "C_Rachel_EMP_StatusEffect" ] }
                     },
-                    "StatusEffectsExcludeTargetType": "None",
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Carrier",
+                            "ClassOperator": "Or",
+                            "Modifier": "DamagePercent",
+                            "Amount": 1000
+                        }
+                    },
+                    "StatusEffectsExcludeTargetType": "Carrier",
                     "AreaOfEffectRadius": 750,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     "RangeAttributesShort": {
@@ -13047,7 +13057,15 @@
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "C_Rachel_EMP_StatusEffect" ] }
                     },
-                    "StatusEffectsExcludeTargetType": "None",
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Carrier",
+                            "ClassOperator": "Or",
+                            "Modifier": "DamagePercent",
+                            "Amount": 1000
+                        }
+                    },
+                    "StatusEffectsExcludeTargetType": "Carrier",
                     "AreaOfEffectRadius": 750,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     "AreaOfEffectFalloffType": "None",
