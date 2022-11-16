@@ -5654,7 +5654,7 @@
 					"ExcludeFromHeightAdvantage": false
 				},
 				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
-					"BaseDamagePerRound": 20,
+					"BaseDamagePerRound": 10,
 					"Turret": {
 						"RotationSpeed": 160
 					},
@@ -5861,7 +5861,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Litaraly Armor Piercing Rounds, Rate of Fire: 50, Rapid Missiles",
+								"LocalizedShortDescriptionStringID": "Litaraly Armor Piercing Rounds, Rate of Fire: 100, Rapid Missiles",
 								"StatusEffectsToApply": {
 									"C_Weapons_5_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
@@ -5873,19 +5873,19 @@
 													},
 													"1": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"2": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"3": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"4": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"5": { "Value": 5 },
 													"6": {
@@ -5926,7 +5926,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": -59 }
+													"0": { "Value": -79 }
 												}
 											}
 										}
@@ -6213,7 +6213,7 @@
 				},
 				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 550,
-					"RateOfFire": 6,					
+					"RateOfFire": 6,
 					"TargetStyle": "Flak",
 					"ExcludeFromHeightAdvantage": false,
 					"BurstPeriodMaxTimeMS": 250,
@@ -6250,8 +6250,8 @@
 						"DistanceWeight": 0.05
 					}
 				},
-				"C_Sob_Carrier_Weapon_Nuke_MP": {					
-                                        "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
+				"C_Sob_Carrier_Weapon_Nuke_MP": {
+					"ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
 					"ExcludeFromHeightAdvantage": true,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesLong": {
@@ -7131,7 +7131,7 @@
 					"ExcludeFromHeightAdvantage": false
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
-					"BaseDamagePerRound": 20,
+					"BaseDamagePerRound": 10,
 					"DamagePacketsPerShot": 0,
 					"TargetStyle": "TurretImpactRun",
 					"ExcludeFromHeightAdvantage": false,
@@ -7426,7 +7426,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Litaraly Armor Piercing Rounds, Rate of Fire: 50, Rapid Missiles",
+								"LocalizedShortDescriptionStringID": "Litaraly Armor Piercing Rounds, Rate of Fire: 100, Rapid Missiles",
 								"StatusEffectsToApply": {
 									"G_Weapons_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -7438,19 +7438,19 @@
 													},
 													"1": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"2": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"3": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"4": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"5": { "Value": 5 },
 													"6": {
@@ -7467,7 +7467,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": -59 }
+													"0": { "Value": -79 }
 												}
 											}
 										}
@@ -7783,7 +7783,7 @@
 					}
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
-					"BaseDamagePerRound": 20,
+					"BaseDamagePerRound": 10,
 					"Turret": {
 						"FieldOfFire": 200,
 						"RotationSpeed": 160
@@ -8227,7 +8227,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Litaraly Armor Piercing Rounds, Rate of Fire: 50, Rapid Missiles",
+								"LocalizedShortDescriptionStringID": "Litaraly Armor Piercing Rounds, Rate of Fire: 100, Rapid Missiles",
 								"StatusEffectsToApply": {
 									"K_Weapons_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -8235,19 +8235,19 @@
 												"BuffSet": {
 													"0": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"1": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"2": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"3": {
 														"Mode": "Set",
-														"Value": 50
+														"Value": 100
 													},
 													"6": {
 														"Name": "ANTI-AIR",
@@ -8278,7 +8278,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": -59 }
+													"0": { "Value": -79 }
 												}
 											}
 										}
@@ -11314,7 +11314,11 @@
 			},
 			"WeaponAttributes": {
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
+					"OutputDPS": true,
 					"BaseDamagePerRound": 2050,
+					"RangeAttributesLong": {
+						"Distance": 2500
+					},
 					"ReloadTimeMS": 4500,
 					"AreaOfEffectFalloffType": "Linear",
 					"AreaOfEffectRadius": 250,
@@ -11327,6 +11331,7 @@
 					}
 				},
 				"G_HonorGuard_Weapon_G2G_CAT_MP": {
+					"OutputDPS": true,
 					"BaseDamagePerRound": 60,
 					"TracerSpeed": 1500,
 					"RateOfFire": 20,
@@ -11393,6 +11398,10 @@
 					}
 				},
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
+					"OutputDPS": true,
+					"RangeAttributesLong": {
+						"Distance": 2500
+					},
 					"BaseDamagePerRound": 2050,
 					"ReloadTimeMS": 4500,
 					"AreaOfEffectFalloffType": "Linear",
@@ -11676,11 +11685,11 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
-					"BaseDamagePerRound": 380,
+					"BaseDamagePerRound": 450,
 					"DamagePacketsPerShot": 1,
-					"AreaOfEffectRadius": 95,
+					"AreaOfEffectRadius": 115,
 					"NumberOfBursts": 2,
-					"RateOfFire": 7,
+					"RateOfFire": 9,
 					"CooldownTimeMS": 2500,
 					"BurstPeriodMinTimeMS": 1350,
 					"BurstPeriodMaxTimeMS": 1350,
@@ -11712,7 +11721,7 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 280,
+					"BaseDamagePerRound": 450,
 					"DamagePacketsPerShot": 1,
 					"ReloadTimeMS": 9000,
 					"NumberOfBursts": 2,
@@ -11757,7 +11766,7 @@
 			},
 			"AbilityAttributes": {
 				"Ability_K_ArtilleryBarrage_01_MP": {
-					"CooldownTimeSecs": 40
+					"CooldownTimeSecs": 100
 				},
 				"Ability_G_ArtilleryCruiserRegen": {
 					"ApplyStatusEffect": {
@@ -11789,9 +11798,12 @@
 					}
 				},
 				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
-					"ExcludeFromHeightAdvantage": false,
-					"NumberOfBursts": 4,
-					"CooldownTimeMS": 2500,
+					"ExcludeFromHeightAdvantage": true,
+					"NumberOfBursts": 1,
+					"BurstPeriodMinTimeMS": 10000,
+					"BurstPeriodMaxTimeMS": 10000,
+					"RateOfFire": 2,
+					"CooldownTimeMS": 0,
 					"BaseDamagePerRound": 400,
 					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 240,
