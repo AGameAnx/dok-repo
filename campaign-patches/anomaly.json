@@ -1,5 +1,7 @@
 {
-    /*"Global": {
+    "Global": {
+         /*,
+
         "UnitAttributes": {
             "Resource1Cost": 0,
             "Resource2Cost": 0,
@@ -17,9 +19,45 @@
 				"Resource2Cost": 0
 				//"CooldownTimeSecsMult": 0.01
 			}
-		}
-	},*/
-    "Entities": {
+		}*/
+    },
+    "Entities": { /*
+        "Faction_Campaign_Gaalsi": {
+            "FactionAttributes": {
+                "GlobalBuffs": {
+                    "BuffSet_SandSkimmers_Speed_DPS": {
+                        "UnitClass": -1,
+                        "UseAsPrefix": true,
+                        "UnitType": "G_StarHullTank",
+                        "BuffSet": {
+                            "0": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Add",
+                                "Value": 16
+                            },
+                            "1": {
+                                "Name": "DEFAULT",
+                                "Attribute": "WeaponRange_DistanceShort",
+                                "Mode": "Add",
+                                "Value": 400
+                            },
+                            "2": {
+                                "Name": "DEFAULT",
+                                "Attribute": "WeaponRange_DistanceMedium",
+                                "Mode": "Add",
+                                "Value": 400
+                            },
+                            "3": {
+                                "Name": "DEFAULT",
+                                "Attribute": "WeaponRange_DistanceLong",
+                                "Mode": "Add",
+                                "Value": 400
+                            }
+                        }
+                    }
+                }
+            }
+        },*/
         "Ability_Common_StopAbility": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "STOP IT",
@@ -197,6 +235,27 @@
                 }
             }
         },
+        "Upgrade_Baserunner_2": {
+            "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "BASERUNNER - DRONE INTERCEPTOR COOLDOWN",
+                "LocalizedLongDescriptionStringID": "-33% cooldown.",
+                "UnitTypeBuffs": {
+                    "0": {
+                        "UnitClass": -1,
+                        "UseAsPrefix": true,
+                        "UnitType": "C_Baserunner",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "C_Baserunner_Weapon_Minelay",
+                                "Attribute": 16777216,
+                                "Mode": "AddPercent",
+                                "Value": -33
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "Upgrade_Rachel_G2": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "ANIME PROTAGONIST - SUPPORT UPGRADE",
@@ -238,7 +297,7 @@
         "Upgrade_Rachel_G3": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "ANIME PROTAGONIST - EMP DAMAGE"
-                
+
             }
         },
         "C_Rachel": {
@@ -647,7 +706,7 @@
                 }
             }
         },
-        "Ability_C_Rachel_Weapon_Superweapon_Broad_Dud": {
+        "Ability_C_OrbitalWeapon_Broad": {
             "AbilityViewAttributes": {
                 "InvertFillCooldown": true,
                 "IconName": "Icon-Command-MissileBarrage3",
@@ -655,7 +714,7 @@
                 "LocalizedLongDescriptionStringID": "Hey Gaals i heard you like missiles! HAVE NOU BACK AT YOU AHAHAHAAHAHAHAHAHAHA."
             }
         },
-        "Ability_C_Rachel_Weapon_Superweapon_Broad_New": {
+        "Ability_C_OrbitalWeapon_Broad_Dud": {
             "AbilityViewAttributes": {
                 "InvertFillCooldown": true,
                 "IconName": "Icon-Command-MissileBarrage3",
@@ -663,10 +722,10 @@
                 "LocalizedLongDescriptionStringID": "Hey Gaals i heard you like missiles! HAVE NOU BACK AT YOU AHAHAHAAHAHAHAHAHAHA."
             }
         },
-        "Ability_C_Rachel_Weapon_Superweapon_Narrow": {
+        "Ability_C_OrbitalWeapon_Narrow": {
             "AbilityViewAttributes": {
                 "InvertFillCooldown": true,
-                "IconName": "Icon-Command-MissileBarrage3",
+                "IconName": "Icon-Command-CruiseMissile",
                 "LocalizedTitleStringID": "FOCUS RACHEL GAALSIEN ANIME POWERS",
                 "LocalizedLongDescriptionStringID": "HUMMMMMM What if i smash one FIRE ZE MISSILES botton instead of all?."
             }
@@ -676,19 +735,22 @@
                 "Class": "Hover, Carrier",
                 "MaxHealth": 66666,
                 "Armour": 20,
-                "AggroRange": 110000
+                "AggroRange": 110000,
+                "LeashRange": 110000
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
                     "MaxSpeedTurnRadius": 105,
                     "BrakingTime": 0.9,
+                    "MaxSpeed": 50,
                     "AccelerationTime": 0.9,
                     "MaxEaseIntoTurnTime": 0.25
                 },
                 "Combat": {
-                    "PassiveCombatApproachMode": "Circle",
-                    "ActiveCombatApproachMode": "Circle",
-                    "MinDesiredCombatRange": 1500
+                    "PassiveCombatApproachMode": "Flyby",
+                    "ActiveCombatApproachMode": "Flyby",
+                    "MinDesiredCombatRange": 1500,
+                    "MaxDesiredCombatRange": 2500
                 }
             },
             "AbilityAttributes": {
@@ -769,24 +831,36 @@
                     }
                 },
                 "G_Fathership_Weapon_Cannon": {
-                    "RateOfFire": 50,
-                    "NumberOfBursts": 4,
+                    "RateOfFire": 10,
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "Suppress_StatusEffect", "ArmorDebuff_StatusEffect" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "None",
+                    "NumberOfBursts": 2,
                     "ReloadTimeMS": 1550,
+                    "BurstPeriodMinTimeMS": 200,
+                    "BurstPeriodMaxTimeMS": 299,
                     "CooldownTimeMS": 450,
                     "DamagePacketsPerShot": 1,
-                    "BaseDamagePerRound": 20,
+                    "BaseDamagePerRound": 200,
+                    "AreaOfEffectRadius": 450,
+                    "ProjectileEntityTypeToSpawn": "G_BattleCruiserDefault_ProjectileAssetContainer",
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "TracerLength": 5,
                     "TargetStyle": "Flak",
                     "RangeAttributesShort": {
                         "Distance": 600,
-                        "Accuracy": 50
+                        "Accuracy": 100
                     },
                     "RangeAttributesMedium": {
                         "Distance": 1000,
-                        "Accuracy": 35
+                        "Accuracy": 80
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 20,
-                        "Distance": 1200
+                        "Accuracy": 70,
+                        "Distance": 1400
                     },
                     "Modifiers": {
                         "0": {
@@ -794,7 +868,8 @@
                             "Modifier": "CanTarget"
                         },
                         "1": {
-                            "Remove": true
+                            "TargetClass": "Ground",
+                            "Modifier": "CanTarget"
                         },
                         "2": {
                             "Remove": true
@@ -813,8 +888,8 @@
                         "12": { "Remove": true }
                     },
                     "Turret": {
-                        "FieldOfView": 180,
-                        "FieldOfFire": 5,
+                        "FieldOfView": 165,
+                        "FieldOfFire": 30,
                         "RotationSpeed": 85
                     }
                 }
@@ -870,29 +945,16 @@
             "WeaponAttributes": {
                 "C_Carrier_Weapon_G2All": {
                     "LineOfSightRequired": true,
-                    "BaseDamagePerRound": 20,
+                    "BaseDamagePerRound": 10,
+                    "WindDownTimeMS": 0,
+                    "WindUpTimeMS": 0,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 15,
-                    "ReloadTimeMS": 1950,
-                    "CooldownTimeMS": 950,
-                    "BurstPeriodMinTimeMS": 200,
-                    "BurstPeriodMaxTimeMS": 300,
-                    "TargetStyle": "Flak"
-                },
-                "C_Carrier_Weapon_G2All_Dummy": {
-                    "BaseDamagePerRound": 20
-                },
-                "C_Carrier_Weapon_G2All_PenetrationShots": { // Are these even used at all?? //yes, and you did it wrong dumbass
-                    "LineOfSightRequired": true,
-                    "TracerLength": 5,
-                    "ReloadTimeMS": 4500,
-                    "BurstPeriodMinTimeMS": 6000,
-                    "BurstPeriodMaxTimeMS": 6000,
-                    "BaseDamagePerRound": 2,
-                    "DamagePacketsPerShot": 0,
-                    "NumberOfBursts": 1,
-                    "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 0,
+                    "RateOfFire": 10,
+                    "ReloadTimeMS": 0,
+                    "CooldownTimeMS": 0,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
+                    "TargetStyle": "TurretImpactRun",
                     "RangeAttributesShort": {
                         "Remove": true
                     },
@@ -905,10 +967,65 @@
                         "Distance": 800
                     }
                 },
+                "C_Carrier_Weapon_G2All_Dummy": {
+                    "BaseDamagePerRound": 10
+                },
+                "C_Carrier_Weapon_G2All_PenetrationShots": {
+                    "ExcludeFromHeightAdvantage": true,
+                    "ProjectileEntityTypeToSpawn": "C_GunShip_DefaultBombs_ProjectileAssetContainer_MP",
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "TracerLength": 5,
+                    "AreaOfEffectFalloffType": "None",
+                    "RateOfFire": 2,
+                    "AreaOfEffectRadius": 450,
+                    "BaseDamagePerRound": 50,
+                    "LineOfSightRequired": false,
+                    "ReloadTimeMS": 4500,
+                    "BurstPeriodMinTimeMS": 2000,
+                    "BurstPeriodMaxTimeMS": 2250,
+                    "DamagePacketsPerShot": 1,
+                    "NumberOfBursts": 1,
+                    "Modifiers": {
+                        "0": {
+                            "Modifier": "CanTarget",
+                            "TargetClass": "Air",
+                            "ClassOperator": "Or"
+                        },
+                        "1": {
+                            "Modifier": "CanNotTarget",
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or"
+                        },
+                        "2": {
+                            "Remove": true
+                        },
+                        "3": {
+                            "Remove": true
+                        },
+                        "4": {
+                            "Remove": true
+                        },
+                        "5": {
+                            "Remove": true
+                        }
+                    },
+                    "RangeAttributesShort": {
+                        "Remove": true
+                    },
+                    "RangeAttributesMedium": {
+                        "Distance": 1200,
+                        "Accuracy": 50
+                    },
+                    "RangeAttributesLong": {
+                        "Accuracy": 50,
+                        "Distance": 1600
+                    }
+                },
                 "C_Carrier_Weapon_AA": {
                     "FriendlyFireDamageScalar": 1,
                     "LineOfSightRequired": false,
-                    "RateOfFire": 12,
+                    "RateOfFire": 0,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "DamagePacketsPerShot": 1,
                     "ProjectileEntityTypeToSpawn": "G_Interceptor_A2GA_ProjectileAssetContainer_MP",
@@ -961,20 +1078,56 @@
                 "C_CarrierMissiles_Weapon_A2G": {
                     "FriendlyFireDamageScalar": 1,
                     "LineOfSightRequired": false,
+                    "RateOfFire": 0,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "DamagePacketsPerShot": 1,
-                    "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
-                    "BaseDamagePerRound": 1250,
-                    "AreaOfEffectRadius": 500,
+                    "ProjectileEntityTypeToSpawn": "G_Interceptor_A2GA_ProjectileAssetContainer_MP",
+                    "BaseDamagePerRound": 150,
+                    "AreaOfEffectRadius": 150,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "BurstPeriodMinTimeMS": 50,
-                    "BurstPeriodMaxTimeMS": 50,
+                    "BurstPeriodMinTimeMS": 500,
+                    "BurstPeriodMaxTimeMS": 500,
                     "NumberOfBursts": 1,
                     "WindDownTimeMS": 0,
-                    "ReloadTimeMS": 10000,
+                    "ReloadTimeMS": 12000,
                     "CooldownTimeMS": 0,
+                    "RangeAttributesShort": {
+                        "Distance": 1500
+                    },
+                    "RangeAttributesMedium": {
+                        "Remove": true
+                    },
+                    "RangeAttributesLong": {
+                        "Remove": true
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "Modifier": "CanTarget",
+                            "TargetClass": "Air",
+                            "ClassOperator": "Or"
+                        },
+                        "1": {
+                            "Modifier": "CanTarget",
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or"
+                        },
+                        "2": {
+                            "Modifier": "CanTarget",
+                            "TargetClass": "Hover",
+                            "ClassOperator": "Or"
+                        },
+                        "3": {
+                            "Remove": true
+                        },
+                        "4": {
+                            "Remove": true
+                        },
+                        "5": {
+                            "Remove": true
+                        }
+                    },
                     "ExcludeFromHeightAdvantage": true
-                },
+                }, 
                 "C_Carrier_Weapon_CruiseMissile": {
                     "StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
@@ -1154,158 +1307,53 @@
                     "1": { // Weapon Systems
                         "PowerLevels": {
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Uncommon PD fire rate bonus",
+                                "LocalizedShortDescriptionStringID": "Uncommon PD, Flak, Thunder missiles fire rate bonus",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_1_StatusEffect": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 0
+                                                        "Value": 6
                                                     },
                                                     "1": {
-                                                        "Value": 25
+                                                        "Value": 15
                                                     }, // TURRET_BR
                                                     "2": {
-                                                        "Value": 25
+                                                        "Value": 15
                                                     }, // TURRET_BL
                                                     "3": {
-                                                        "Value": 25
+                                                        "Value": 15
                                                     }, // TURRET_FL
                                                     "4": {
-                                                        "Value": 25
+                                                        "Value": 15
                                                     }, // TURRET_FR
                                                     "6": {
-                                                        "Name": "ANTI-AIR",
+                                                        "Name": "MAIN_MISSILES",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
                                                         "Value": 10000
                                                     },
+                                                    "10": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 4000
+                                                    },
                                                     "7": {
-                                                        "Name": "ANTI-AIR",
-                                                        "Attribute": "UnitWeapon_RateOfFire",
-                                                        "Mode": "Set",
-                                                        "Value": 12
-                                                    }
-
-                                                }
-                                            }
-                                        },
-                                        "Modifiers": {
-                                            "0": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "ANTI-AIR"
-                                            }
-                                        }
-                                    }
-                                }
-                            },
-                            "2": {
-                                "LocalizedShortDescriptionStringID": "Rare PD fire rate bonus",
-                                "StatusEffectsToApply": {
-                                    "C_Weapons_2_StatusEffect": {
-                                        "BuffsToApplyToTarget": {
-                                            "0": {
-                                                "BuffSet": {
-                                                    "0": {
-                                                        "Value": 0
-                                                    },
-                                                    "1": {
-                                                        "Value": 45
-                                                    }, // TURRET_BR
-                                                    "2": {
-                                                        "Value": 45
-                                                    }, // TURRET_BL
-                                                    "3": {
-                                                        "Value": 45
-                                                    }, // TURRET_FL
-                                                    "4": {
-                                                        "Value": 45
-                                                    }, // TURRET_FR
-                                                    "6": {
-                                                        "Name": "ANTI-AIR",
+                                                        "Name": "TURRET_FL_APBULLETS",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 8000
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        "Modifiers": {
-                                            "0": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "ANTI-AIR"
-                                            }
-                                        }
-                                    }
-                                }
-                            },
-
-                            "3": {
-                                "LocalizedShortDescriptionStringID": "Very Rare PD fire rate bonus",
-                                "StatusEffectsToApply": {
-                                    "C_Weapons_3_StatusEffect": {
-                                        "BuffsToApplyToTarget": {
-                                            "0": {
-                                                "BuffSet": {
-                                                    "0": {
-                                                        "Value": 0
+                                                        "Value": 4000
                                                     },
-                                                    "1": {
-                                                        "Value": 75
-                                                    }, // TURRET_BR
-                                                    "2": {
-                                                        "Value": 75
-                                                    }, // TURRET_BL
-                                                    "3": {
-                                                        "Value": 75
-                                                    }, // TURRET_FL
-                                                    "4": {
-                                                        "Value": 75
-                                                    }, // TURRET_FR
-                                                    "6": {
-                                                        "Name": "ANTI-AIR",
+                                                    "8": {
+                                                        "Name": "TURRET_BR_APBULLETS",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 6000
-                                                    }
-                                                }
-                                            }
-                                        },
-                                        "Modifiers": {
-                                            "0": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "ANTI-AIR"
-                                            }
-                                        }
-                                    }
-                                }
-                            },
-
-                            "4": {
-                                "LocalizedShortDescriptionStringID": "Legendary PD fire rate bonus",
-                                "StatusEffectsToApply": {
-                                    "C_Weapons_4_StatusEffect": {
-                                        "BuffsToApplyToTarget": {
-                                            "0": {
-                                                "BuffSet": {
-                                                    "0": {
-                                                        "Value": 0
+                                                        "Value": 4000
                                                     },
-                                                    "1": {
-                                                        "Value": 100
-                                                    }, // TURRET_BR
-                                                    "2": {
-                                                        "Value": 100
-                                                    }, // TURRET_BL
-                                                    "3": {
-                                                        "Value": 100
-                                                    }, // TURRET_FL
-                                                    "4": {
-                                                        "Value": 100
-                                                    }, // TURRET_FR
-                                                    "6": {
-                                                        "Name": "ANTI-AIR",
+                                                    "9": {
+                                                        "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
                                                         "Value": 4000
@@ -1313,11 +1361,182 @@
 
                                                 }
                                             }
-                                        },
-                                        "Modifiers": {
+                                        }
+                                    }
+                                }
+                            },
+                            "2": {
+                                "LocalizedShortDescriptionStringID": "Rare PD, Flak, Thunder missiles fire rate bonus",
+                                "StatusEffectsToApply": {
+                                    "C_Weapons_2_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
                                             "0": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "ANTI-AIR"
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 6
+                                                    },
+                                                    "1": {
+                                                        "Value": 25
+                                                    }, // TURRET_BR
+                                                    "2": {
+                                                        "Value": 25
+                                                    }, // TURRET_BL
+                                                    "3": {
+                                                        "Value": 25
+                                                    }, // TURRET_FL
+                                                    "4": {
+                                                        "Value": 25
+                                                    }, // TURRET_FR
+                                                    "6": {
+                                                        "Name": "MAIN_MISSILES",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8000
+                                                    },
+                                                    "10": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 3000
+                                                    },
+                                                    "7": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 3000
+                                                    },
+                                                    "8": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 3000
+                                                    },
+                                                    "9": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 3000
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+
+                            "3": {
+                                "LocalizedShortDescriptionStringID": "Very Rare PD, Flak, Thunder missiles fire rate bonus",
+                                "StatusEffectsToApply": {
+                                    "C_Weapons_3_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 8
+                                                    },
+                                                    "1": {
+                                                        "Value": 45
+                                                    }, // TURRET_BR
+                                                    "2": {
+                                                        "Value": 45
+                                                    }, // TURRET_BL
+                                                    "3": {
+                                                        "Value": 45
+                                                    }, // TURRET_FL
+                                                    "4": {
+                                                        "Value": 45
+                                                    }, // TURRET_FR
+                                                    "6": {
+                                                        "Name": "MAIN_MISSILES",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 6000
+                                                    },
+                                                    "10": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 2000
+                                                    },
+                                                    "7": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 2000
+                                                    },
+                                                    "8": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 2000
+                                                    },
+                                                    "9": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 2000
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+
+                            "4": {
+                                "LocalizedShortDescriptionStringID": "Legendary PD, Flak, Thunder missiles fire rate bonus",
+                                "StatusEffectsToApply": {
+                                    "C_Weapons_4_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 12
+                                                    },
+                                                    "1": {
+                                                        "Value": 75
+                                                    }, // TURRET_BR
+                                                    "2": {
+                                                        "Value": 75
+                                                    }, // TURRET_BL
+                                                    "3": {
+                                                        "Value": 75
+                                                    }, // TURRET_FL
+                                                    "4": {
+                                                        "Value": 75
+                                                    }, // TURRET_FR
+                                                    "6": {
+                                                        "Name": "MAIN_MISSILES",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 4000
+                                                    },
+                                                    "10": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 1000
+                                                    },
+                                                    "7": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 1000
+                                                    },
+                                                    "8": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 1000
+                                                    },
+                                                    "9": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 1000
+                                                    }
+
+                                                }
                                             }
                                         }
                                     },
@@ -1336,42 +1555,63 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Missiles and Beams Of Death Enabled...",
+                                "LocalizedShortDescriptionStringID": "Artifact tier PD, Flak, Thunder missiles fire rate bonus.",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_5_StatusEffect": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Mode": "Add",
-                                                        "Value": 1
+                                                        "Mode": "Set",
+                                                        "Value": 12
                                                     },
                                                     "1": {
+                                                        "Name": "TURRET_BR",
                                                         "Value": 100
                                                     }, // TURRET_BR
                                                     "2": {
+                                                        "Name": "TURRET_BL",
                                                         "Value": 100
                                                     }, // TURRET_BL
                                                     "3": {
+                                                        "Name": "TURRET_FL",
                                                         "Value": 100
                                                     }, // TURRET_FL
                                                     "4": {
+                                                        "Name": "TURRET_FR",
                                                         "Value": 100
                                                     }, // TURRET_FR
                                                     "6": {
-                                                        "Name": "ANTI-AIR",
+                                                        "Name": "MAIN_MISSILES",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
                                                         "Value": 2000
+                                                    },
+                                                    "10": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "7": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "8": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "9": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
                                                     }
                                                 }
-                                            }
-                                        },
-                                        "Modifiers": {
-
-                                            "1": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         }
                                     },
@@ -1496,23 +1736,23 @@
 
                             "0": {
 
-                                "LocalizedShortDescriptionStringID": "Turret / Missile Range: 800m"
+                                "LocalizedShortDescriptionStringID": "Turret / Missile Range: cant see without glasses"
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Turret / Missile Range: 1100m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1100, Flak / Missile Range: 1700m",
                                 "StatusEffectsToApply": {
                                     "Range_1_StatusEffect": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
                                                     "0": { "Value": 1100 },
-                                                    "1": { "Value": 1100 },
+                                                    "1": { "Value": 1700 },
                                                     "2": { // TURRET_BR, Set, Med
                                                         "Value": 675
                                                     },
                                                     "3": { // TURRET_BR_APBULLETS, Set, Med
-                                                        "Value": 675
+                                                        "Value": 1300
                                                     },
                                                     "4": { // TURRET_BR, Set, Short
                                                         "Remove": true
@@ -1521,21 +1761,21 @@
                                                         "Remove": true
                                                     },
                                                     "6": { "Value": 1100 }, // TURRET_BL, Set
-                                                    "7": { "Value": 1100 }, // TURRET_BL_APBULLETS, Set
+                                                    "7": { "Value": 1700 }, // TURRET_BL_APBULLETS, Set
                                                     "8": { "Value": 675 },
-                                                    "9": { "Value": 675 },
+                                                    "9": { "Value": 1300 },
                                                     "10": { "Remove": true },
                                                     "11": { "Remove": true },
                                                     "12": { "Value": 1100 }, // TURRET_FL, Set
-                                                    "13": { "Value": 1100 }, // TURRET_FL_APBULLETS, Set
+                                                    "13": { "Value": 1700 }, // TURRET_FL_APBULLETS, Set
                                                     "14": { "Value": 675 },
-                                                    "15": { "Value": 675 },
+                                                    "15": { "Value": 1300 },
                                                     "16": { "Remove": true },
                                                     "17": { "Remove": true },
                                                     "18": { "Value": 1100 }, // TURRET_FR, Set
-                                                    "19": { "Value": 1100 }, // TURRET_FR_APBULLETS, Set
+                                                    "19": { "Value": 1700 }, // TURRET_FR_APBULLETS, Set
                                                     "20": { "Value": 675 },
-                                                    "21": { "Value": 675 },
+                                                    "21": { "Value": 1300 },
                                                     "22": { "Remove": true },
                                                     "23": { "Remove": true },
                                                     "24": {
@@ -1567,43 +1807,43 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Turret / Missile Range: 1400m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1400, Flak / Missile Range: 1800m",
                                 "StatusEffectsToApply": {
                                     "Range_2_StatusEffect": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
                                                     "0": { "Value": 1400 },
-                                                    "1": { "Value": 1400 },
+                                                    "1": { "Value": 1800 },
                                                     "2": { "Value": 825 },
-                                                    "3": { "Value": 825 },
+                                                    "3": { "Value": 1400 },
                                                     "4": { "Remove": true },
                                                     "5": { "Remove": true },
                                                     "6": { "Value": 1400 },
-                                                    "7": { "Value": 1400 },
+                                                    "7": { "Value": 1800 },
                                                     "8": { "Value": 825 },
-                                                    "9": { "Value": 825 },
+                                                    "9": { "Value": 1400 },
                                                     "10": { "Remove": true },
                                                     "11": { "Remove": true },
                                                     "12": { "Value": 1400 },
-                                                    "13": { "Value": 1400 },
+                                                    "13": { "Value": 1800 },
                                                     "14": { "Value": 825 },
-                                                    "15": { "Value": 825 },
+                                                    "15": { "Value": 1400 },
                                                     "16": { "Remove": true },
                                                     "17": { "Remove": true },
                                                     "18": { "Value": 1400 },
-                                                    "19": { "Value": 1400 },
+                                                    "19": { "Value": 1800 },
                                                     "20": { "Value": 825 },
-                                                    "21": { "Value": 825 },
+                                                    "21": { "Value": 1400 },
                                                     "22": { "Value": 550 },
                                                     "23": { "Value": 550 },
                                                     "24": {
                                                         "Mode": "Add",
-                                                        "Value": 400
+                                                        "Value": 300
                                                     }, // ANTI-AIR, Add
                                                     "25": {
                                                         "Mode": "Add",
-                                                        "Value": 400
+                                                        "Value": 300
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
@@ -1626,43 +1866,43 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Turret / Missile Range: 1700m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1450, Flak / Missile Range: 1900m",
                                 "StatusEffectsToApply": {
                                     "Range_3_StatusEffect": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
                                                     "0": { "Value": 1700 },
-                                                    "1": { "Value": 1700 },
+                                                    "1": { "Value": 1900 },
                                                     "2": { "Value": 1050 },
-                                                    "3": { "Value": 1050 },
+                                                    "3": { "Value": 1450 },
                                                     "4": { "Remove": true },
                                                     "5": { "Remove": true },
                                                     "6": { "Value": 1700 },
-                                                    "7": { "Value": 1700 },
+                                                    "7": { "Value": 1800 },
                                                     "8": { "Value": 1050 },
-                                                    "9": { "Value": 1050 },
+                                                    "9": { "Value": 1450 },
                                                     "10": { "Remove": true },
                                                     "11": { "Remove": true },
                                                     "12": { "Value": 1700 },
-                                                    "13": { "Value": 1700 },
+                                                    "13": { "Value": 1800 },
                                                     "14": { "Value": 1050 },
-                                                    "15": { "Value": 1050 },
+                                                    "15": { "Value": 1450 },
                                                     "16": { "Remove": true },
                                                     "17": { "Remove": true },
                                                     "18": { "Value": 1700 },
-                                                    "19": { "Value": 1700 },
+                                                    "19": { "Value": 1800 },
                                                     "20": { "Value": 1050 },
-                                                    "21": { "Value": 1050 },
+                                                    "21": { "Value": 1450 },
                                                     "22": { "Remove": true },
                                                     "23": { "Remove": true },
                                                     "24": {
                                                         "Mode": "Add",
-                                                        "Value": 600
+                                                        "Value": 500
                                                     }, // ANTI-AIR, Add
                                                     "25": {
                                                         "Mode": "Add",
-                                                        "Value": 600
+                                                        "Value": 500
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
@@ -1685,7 +1925,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Turret / Missile Range: 2000m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1550, Flak / Missile Range: 2000m",
                                 "StatusEffectsToApply": {
                                     "Range_4_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1694,34 +1934,34 @@
                                                     "0": { "Value": 2000 },
                                                     "1": { "Value": 2000 },
                                                     "2": { "Value": 1350 },
-                                                    "3": { "Value": 1350 },
+                                                    "3": { "Value": 1550 },
                                                     "4": { "Remove": true },
                                                     "5": { "Remove": true },
                                                     "6": { "Value": 2000 },
                                                     "7": { "Value": 2000 },
                                                     "8": { "Value": 1350 },
-                                                    "9": { "Value": 1350 },
+                                                    "9": { "Value": 1550 },
                                                     "10": { "Remove": true },
                                                     "11": { "Remove": true },
                                                     "12": { "Value": 2000 },
                                                     "13": { "Value": 2000 },
                                                     "14": { "Value": 1350 },
-                                                    "15": { "Value": 1350 },
+                                                    "15": { "Value": 1550 },
                                                     "16": { "Remove": true },
                                                     "17": { "Remove": true },
                                                     "18": { "Value": 2000 },
                                                     "19": { "Value": 2000 },
                                                     "20": { "Value": 1350 },
-                                                    "21": { "Value": 1350 },
+                                                    "21": { "Value": 1550 },
                                                     "22": { "Remove": true },
                                                     "23": { "Remove": true },
                                                     "24": {
                                                         "Mode": "Add",
-                                                        "Value": 800
+                                                        "Value": 600
                                                     }, // ANTI-AIR, Add
                                                     "25": {
                                                         "Mode": "Add",
-                                                        "Value": 800
+                                                        "Value": 600
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
@@ -1744,7 +1984,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Turret / Missile Range: 2300m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1825, Flak / Missile Range: 2300m",
                                 "StatusEffectsToApply": {
                                     "Range_5_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1776,11 +2016,11 @@
                                                     "23": { "Remove": true }, //"Value": 1150 },
                                                     "24": {
                                                         "Mode": "Add",
-                                                        "Value": 1000
+                                                        "Value": 900
                                                     }, // ANTI-AIR
                                                     "25": {
                                                         "Mode": "Add",
-                                                        "Value": 1000
+                                                        "Value": 900
                                                     }, // MAIN_MISSILES
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
@@ -3666,7 +3906,7 @@
                     "LineOfSightRequired": false,
                     "ReloadTimeMS": 4500,
                     "BurstPeriodMinTimeMS": 2000,
-                    "BurstPeriodMaxTimeMS": 2000,
+                    "BurstPeriodMaxTimeMS": 2250,
                     "DamagePacketsPerShot": 1,
                     "NumberOfBursts": 1,
                     "Modifiers": {
@@ -5533,7 +5773,7 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 480 },//ahahahhahahahahahahhahahahahahahahahahahhahahahahahhahaha
+                                                    "0": { "Value": 480 }, //ahahahhahahahahahahhahahahahahahahahahahhahahahahahhahaha
                                                     "1": {
                                                         "Value": 625,
                                                         "Mode": "Add",
@@ -6044,7 +6284,7 @@
                     "WindUpTimeMS": 250,
                     "CooldownTimeMS": 1,
                     "BurstPeriodMinTimeMS": 264,
-                    "BurstPeriodMaxTimeMS": 264,
+                    "BurstPeriodMaxTimeMS": 265,
                     "RateOfFire": 1,
                     "ReloadTimeMS": 2500,
                     "LeadsTarget": 1,
@@ -6337,13 +6577,13 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: +3 damage",
+                        "BuffTooltipLocID": "Officer: +30 damage",
                         "RequiredExperience": 400,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
                                 "Mode": "Add",
-                                "Value": 3
+                                "Value": 30
                             }
                         }
                     },
@@ -6421,6 +6661,13 @@
                                 "Mode": "AddPercent",
                                 "Value": -50
 
+                            },
+                            "5": {
+                                "Name": "Ability_C_MineLay",
+                                "Attribute": 16777216,
+                                "Mode": "AddPercent",
+                                "Value": -50
+
                             }
                         }
                     }
@@ -6436,8 +6683,16 @@
                 "C_Baserunner_Weapon_G2G": {
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
-                    "BaseDamagePerRound": 10,
-                    "RateOfFire": 10,
+                    "BaseDamagePerRound": 130,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
+                    "RateOfFire": 2,
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "TracerLength": 5,
+                    "CooldownTimeMS": 1500,
+                    "ReloadTimeMS": 3400,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1050,
                     "DamagePacketsPerShot": 1,
                     "RangeAttributesShort": {
                         "Accuracy": 100,
@@ -6445,11 +6700,11 @@
                     },
                     "RangeAttributesMedium": {
                         "Accuracy": 80,
-                        "Distance": 800
+                        "Distance": 1000
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 50,
-                        "Distance": 1000
+                        "Distance": 1500
                     },
                     "Turret": {
                         "RotationSpeed": 200
@@ -6466,22 +6721,20 @@
                     }
                 },
                 "C_Baserunner_Weapon_Minelay": {
-                    "RangeAttributesShort": {
-                        "Accuracy": 100,
-                        "Distance": 100
-                    },
-                    "RangeAttributesMedium": {
-                        "Accuracy": 80,
-                        "Distance": 110
-                    },
-                    "RangeAttributesLong": {
-                        "Accuracy": 50,
-                        "Distance": 111
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "EntityTypeToSpawn": "G_Interceptor_MP"
+                        }
                     }
                 }
             },
 
             "AbilityAttributes": {
+                "Ability_C_MineLay": {
+                    "CooldownTimeSecs": 60,
+                    "Resource1Cost": 125,
+                    "Resource2Cost": 10
+                },
                 "Ability_C_DeployTurret": {
                     "CooldownTimeSecs": 120
                     //"ProduceUnit": { "UnitTypeToProduce": "C_Escort_Dummy" } // testing yaknow
@@ -6489,7 +6742,191 @@
 
             }
         },
+        "G_Interceptor_MP": {
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Drone unit: unable to rank up",
+                        "RequiredExperience": 1000110,
+                        "Buff": {
+                            "0": {
+                                "Remove": true
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "",
+                        "RequiredExperience": 1000110,
+                        "Buff": {
+                            "0": {
+                                "Remove": true
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "",
+                        "RequiredExperience": 1000110,
+                        "Buff": {
+                            "0": {
+                                "Remove": true
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "",
+                        "RequiredExperience": 1000110,
+                        "Buff": {
+                            "0": {
+                                "Remove": true
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "",
+                        "RequiredExperience": 1000110,
+                        "Buff": {
+                            "0": {
+                                "Remove": true
+                            }
+                        }
+                    }
+                }
+            },
+            "UnitAttributes": {
+                "AccuracyReceivedMultiplier": 1.0,
+                "Resource1Cost": 0,
+                "PopCapCost": 0,
+                "Resource2Cost": 0,
+                "ProductionTime": 11,
+                "MaxHealth": 250,
+                "DoNotPersist": true,
+                "LevelBound": true,
+                "Armour": 0,
+                "FireRateDisplay": 5,
+                "AggroRange": 1800,
+                "LeashRange": 1800
+            },
+            "UnitMovementAttributes": {
+                "Dynamics": {
+                    "MaxSpeed": 450,
+                    "MaxSpeedTurnRadius": 200
+                },
+                "Combat": {
+                    "PassiveCombatApproachMode": "Flyby",
+                    "ActiveCombatApproachMode": "Flyby",
+                    "MinDesiredCombatRange": 0,
+                    "MaxDesiredCombatRange": 1400
 
+                }
+            },
+            "StorageAttributes": {
+                "G_Interceptor_StorageAttributesAsset_MP": {
+                    "InventoryLoadout": {
+                        "MISSILES": {
+                            "Capacity": 400,
+                            "StartingAmount": 400
+                        }
+                    }
+                }
+            },
+            "WeaponAttributes": {
+                "G_Interceptor_Weapon_A2GA_Upgraded_MP": {
+                    "Turret": {
+                        "FieldOfView": 60,
+                        "FieldOfFire": 60
+                    },
+                    "ProjectileEntityTypeToSpawn": "G_CatamaranProjectile_ProjectileAssetContainer",
+                    "NumberOfBursts": 6,
+                    "BaseDamagePerRound": 80,
+                    "DamagePacketsPerShot": 1,
+                    "AreaOfEffectRadius": 0,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "RateOfFire": 1,
+                    "WindUpTimeMS": 0,
+                    "WindDownTimeMS": 0,
+                    "BurstPeriodMinTimeMS": 750,
+                    "BurstPeriodMaxTimeMS": 850,
+                    "CooldownTimeMS": 0,
+                    "ReloadTimeMS": 2250,
+                    "LeadsTarget": 1,
+                    "ExcludeFromAutoFire": false,
+                    "ExcludeFromAutoTargetAcquisition": false,
+                    "RangeAttributesShort": {
+                        "Distance": 1500
+                    },
+                    "RangeAttributesMedium": {
+                        "Remove": true
+                    },
+                    "RangeAttributesLong": {
+                        "Remove": true
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Air",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanTarget"
+                        },
+                        "2": {
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanNotTarget"
+                        },
+                        "3": {
+                            "Remove": true
+                        },
+                        "4": {
+                            "Remove": true
+                        },
+                        "5": {
+                            "Remove": true
+                        },
+                        "6": {
+                            "Remove": true
+                        },
+                        "7": {
+                            "Remove": true
+                        },
+                        "8": {
+                            "Remove": true
+                        },
+                        "9": {
+                            "Remove": true
+                        },
+                        "10": {
+                            "Remove": true
+                        },
+                        "11": {
+                            "Remove": true
+                        },
+                        "12": {
+                            "Remove": true
+                        },
+                        "13": {
+                            "Remove": true
+                        }
+
+                    }
+                }
+            }
+        },
         // COALITION SUPPORT CRUISER
         "C_SupportCruiser": {
             "ExperienceAttributes": {
@@ -6610,7 +7047,7 @@
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "NumberOfBursts": 4,
                     "BurstPeriodMinTimeMS": 300,
-                    "BurstPeriodMaxTimeMS": 300,
+                    "BurstPeriodMaxTimeMS": 350,
                     "CooldownTimeMS": 0,
                     "WindUpTimeMS": 50,
                     "RateOfFire": 1,
@@ -6625,7 +7062,7 @@
                         "Accuracy": 100
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1000,
+                        "Distance": 1250,
                         "Accuracy": 100
                     },
                     "Modifiers": {
@@ -6734,104 +7171,79 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Novice: +10 firerate",
+                        "BuffTooltipLocID": "Drone unit: unable to rank up",
+                        "RequiredExperience": 1000110,
                         "Buff": {
                             "0": {
-                                "Attribute": 262149,
-                                "Mode": "Add",
-                                "Value": 10
+                                "Remove": true
                             },
                             "1": {
-                                "Attribute": "Unit_FireRateDisplay",
-                                "Mode": "Add",
-                                "Value": 1
+                                "Remove": true
                             }
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Acolyte: +5 damage", // ye 10 was a bit op 
+                        "RequiredExperience": 1000110,
+                        "BuffTooltipLocID": "", // ye 10 was a bit op 
                         "Buff": {
                             "0": {
-                                "Attribute": 262148,
-                                "Mode": "Add",
-                                "Value": 5
+                                "Remove": true
                             }
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Sentinel: +150m range, +1 production line",
+                        "RequiredExperience": 1000110,
+                        "BuffTooltipLocID": "",
                         "Buff": {
                             "0": {
-                                "Attribute": 33554434,
-                                "Mode": "Add",
-                                "Value": 150
+                                "Remove": true
                             },
                             "1": {
-                                "Attribute": 33554433,
-                                "Mode": "Add",
-                                "Value": 150
+                                "Remove": true
                             },
                             "2": {
-                                "Attribute": 33554432,
-                                "Mode": "Add",
-                                "Value": 150
+                                "Remove": true
                             },
                             "3": {
-                                "Attribute": 65544,
-                                "Mode": "Add",
-                                "Value": 1
+                                "Remove": true
                             }
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Guardian: +20 speed",
+                        "RequiredExperience": 1000110,
+                        "BuffTooltipLocID": "",
                         "Buff": {
                             "0": {
-                                "Attribute": 131072,
-                                "Mode": "Add",
-                                "Value": 20
+                                "Remove": true
                             }
 
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Elder: AP bullets removed, turrets fire rate overcharged",
+                        "RequiredExperience": 1000110,
+                        "BuffTooltipLocID": "",
                         "Buff": {
                             "0": {
-                                "Attribute": 262148,
-                                "Mode": "AddPercent",
-                                "Value": -50
+                                "Remove": true
                             },
                             "1": {
-                                "Attribute": 262149,
-                                "Mode": "Set",
-                                "Value": 100
+                                "Remove": true
                             },
                             "2": {
-                                "Attribute": 262151,
-                                "Mode": "Add",
-                                "Value": 500
+                                "Remove": true
                             },
 
                             "3": {
-                                "Attribute": 33554435,
-                                "Mode": "Add",
-                                "Value": -65
+                                "Remove": true
                             },
                             "4": {
-                                "Attribute": 33554436,
-                                "Mode": "Add",
-                                "Value": -50
+                                "Remove": true
                             },
                             "5": {
-                                "Attribute": 33554437,
-                                "Mode": "Add",
-                                "Value": -25
+                                "Remove": true
                             },
                             "6": {
-                                "Attribute": "Unit_FireRateDisplay",
-                                "Mode": "Add",
-                                "Value": 1
+                                "Remove": true
                             }
                         }
                     }
@@ -6871,6 +7283,11 @@
                     "BurstPeriodMaxTimeMS": 1000,
                     "NumberOfBursts": 6,
                     "CooldownTimeMS": 500,
+                    "Turret": {
+                        "FieldOfView": 360,
+                        "FieldOfFire": 2,
+                        "RotationSpeed": 85
+                    },
                     "ReloadTimeMS": 1000,
                     "RangeAttributesShort": {
                         "Accuracy": 100,
@@ -6897,6 +7314,7 @@
                 },
                 "G_SupportCruiser_Weapon_G2G": {
                     "TargetStyle": "Flak",
+                    "DamageType": "Heal",
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
@@ -6910,6 +7328,11 @@
                     "NumberOfBursts": 6,
                     "CooldownTimeMS": 500,
                     "ReloadTimeMS": 1000,
+                    "Turret": {
+                        "FieldOfView": 360,
+                        "FieldOfFire": 2,
+                        "RotationSpeed": 85
+                    },
                     "RangeAttributesShort": {
                         "Accuracy": 100,
                         "Distance": 300
@@ -7504,63 +7927,50 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Novice: +200m range",
-                        "RequiredExperience": 100,
+                        "BuffTooltipLocID": "Drone unit: unable to rank up",
+                        "RequiredExperience": 1000110,
                         "Buff": {
                             "0": {
-                                "Attribute": 33554434,
-                                "Mode": "Add",
-                                "Value": 200
+                                "Remove": true
                             }
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Acolyte: +75m area of effect radius",
-                        "RequiredExperience": 200,
+                        "BuffTooltipLocID": "",
+                        "RequiredExperience": 1000110,
                         "Buff": {
                             "0": {
-                                "Attribute": 262152,
-                                "Mode": "Add",
-                                "Value": 75
+                                "Remove": true
                             }
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Sentinel: +5 armor, +20 speed",
-                        "RequiredExperience": 500,
+                        "BuffTooltipLocID": "",
+                        "RequiredExperience": 1000110,
                         "Buff": {
                             "0": {
-                                "Attribute": 65540,
-                                "Mode": "Add",
-                                "Value": 5
+                                "Remove": true
                             },
                             "1": {
-                                "Attribute": 131072,
-                                "Mode": "Add",
-                                "Value": 20
+                                "Remove": true
                             }
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Guardian: +500 hull",
-                        "RequiredExperience": 1000,
+                        "BuffTooltipLocID": "",
+                        "RequiredExperience": 1000110,
                         "Buff": {
                             "0": {
-                                "Attribute": 65536,
-                                "Mode": "Add",
-                                "Value": 500
+                                "Remove": true
                             }
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Elder: +200 damage",
-                        "RequiredExperience": 2000,
+                        "BuffTooltipLocID": "",
+                        "RequiredExperience": 1000110,
                         "Buff": {
                             "0": {
-                                "Name": "",
-                                "Attribute": 262148,
-                                "Mode": "Add",
-                                "Value": 200
+                                "Remove": true
                             }
                         }
                     }
@@ -7796,7 +8206,7 @@
         // COALITION RAILGUN
         "C_Railgun": {
             "UnitAttributes": {
-                "MaxHealth": 2650,
+                "MaxHealth": 2250,
                 "Armour": 9,
                 "ExperienceValue": 470,
                 "PriorityAsTarget": 12,
@@ -8058,7 +8468,7 @@
                     "MaxSpeed": 60,
                     "MaxSpeedTurnRadius": 40
                 },
-                "Combat": { "MaxDesiredCombatRange": 550 },
+                "Combat": { "MaxDesiredCombatRange": 50 },
                 "Hover": { "TurnAcceleration": 90 }
             },
             "DetectableAttributes": {
@@ -8145,7 +8555,7 @@
                     "StatusEffectsExcludeTargetType": "None",
                     "BurstPeriodMinTimeMS": 1000,
                     "TracerSpeed": 2500,
-                    "BurstPeriodMaxTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1100,
                     "RateOfFire": 2,
                     "BaseDamagePerRound": 180,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -8351,7 +8761,7 @@
                     "RateOfFire": 20,
                     "DamagePacketsPerShot": 0,
                     "BurstPeriodMinTimeMS": 100,
-                    "BurstPeriodMaxTimeMS": 100,
+                    "BurstPeriodMaxTimeMS": 110,
                     "NumberOfBursts": 3,
                     "WindUpTimeMS": 500,
                     "WindDownTimeMS": 50,
@@ -8497,6 +8907,8 @@
             "WeaponAttributes": {
                 "C_HAC_Upgrade01_Weapon_G2A_Campaign": {
                     "BaseDamagePerRound": 250,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1050,
                     "FriendlyFireDamageScalar": 1,
                     "ProjectileEntityTypeToSpawn": "Carrier_ShuntWeapon_ProjectileAssetContainer_MP 1",
                     "OutputDPS": true,
@@ -8760,6 +9172,8 @@
             "WeaponAttributes": {
                 "G_Catamaran_Upgrade01_Weapon_G2A": {
                     "ReloadTimeMS": 2300,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1050,
                     "BaseDamagePerRound": 200,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 0,
@@ -9764,12 +10178,12 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: +300 gunship hull",
+                        "BuffTooltipLocID": "Officer: +1000 gunship hull",
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
                                 "Mode": "Add",
-                                "Value": 500
+                                "Value": 1000
                             },
                             "1": {
                                 "Remove": true
@@ -9975,6 +10389,8 @@
                 },
                 "G_Battlecruiser_Weapon_G2A": {
                     "RangeAttributesLong": { "Distance": 1250 },
+                    "ExcludeFromAutoTargetAcquisition": false,
+                    "ExcludeFromAutoFire": false,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "Modifiers": {
                         "0": {
@@ -10332,6 +10748,8 @@
                 },
                 "G_HonorGuard_Weapon_G2A_Campaign": {
                     "WindUpTimeMS": 500,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1499,
                     "BaseDamagePerRound": 250,
                     "DamagePacketsPerShot": 1,
                     "CooldownTimeMS": 300,
@@ -10402,7 +10820,7 @@
                         }
                     },
                     "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1499,
                     "RateOfFire": 1,
                     "AreaOfEffectRadius": 150,
                     "ExcludeFromHeightAdvantage": true,
@@ -10578,6 +10996,8 @@
                 },
                 "G_HonorGuard_Weapon_G2A": {
                     "WindUpTimeMS": 500,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1499,
                     "BaseDamagePerRound": 50,
                     "RateOfFire": 1,
                     "DamagePacketsPerShot": 1,
@@ -10659,7 +11079,7 @@
                         }
                     },
                     "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1499,
                     "RateOfFire": 1,
                     "AreaOfEffectRadius": 150,
                     "ExcludeFromHeightAdvantage": true,
@@ -10782,7 +11202,6 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Officer: 3 armor, +5 speed",
-                        "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
                                 "Mode": "Set",
@@ -10797,7 +11216,6 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: 9 armor, +5 speed",
-                        "RequiredExperience": 3000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -10814,7 +11232,6 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: 27 armor, +5 speed",
-                        "RequiredExperience": 6000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -10831,7 +11248,6 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Commander: 81 armor, +5 speed",
-                        "RequiredExperience": 8000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -10847,7 +11263,6 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Captain: 243 armor, +5 speed",
-                        "RequiredExperience": 10000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -10909,14 +11324,14 @@
                     "ExcludeFromHeightAdvantage": true,
                     "LineOfSightRequired": false,
                     "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
-                    "BaseDamagePerRound": 3200,
+                    "BaseDamagePerRound": 100,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "AreaOfEffectRadius": 125,
                     "NumberOfBursts": 1,
-                    "RateOfFire": 2,
+                    "RateOfFire": 20,
                     "ReloadTimeMS": 3000,
                     "RangeAttributesLong": {
-                        "Distance": 500,
+                        "Distance": 700,
                         "MinDistance": 0,
                         "Accuracy": 0
                     },
@@ -11245,6 +11660,8 @@
                     },
                     "StatusEffectsExcludeTargetType": "Carrier",
                     "FriendlyFireDamageScalar": 1,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1999,
                     "ProjectileEntityTypeToSpawn": "C_HAC_Grenade_ProjectileAssetContainer_MP",
                     "BaseDamagePerRound": 100,
                     "ReloadTimeMS": 10000,
@@ -12072,6 +12489,13 @@
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "ANTI-GROUND CAPABILITIES",
                 "LocalizedLongDescriptionStringID": "Support cruiser anti-ground missile system online."
+            }
+        },
+        "Ability_C_MineLay": {
+            "AbilityViewAttributes": {
+                "IconName": "Icon-Command-Production-G_Interceptor",
+                "LocalizedTitleStringID": "DEPLY ANTI-AIR DRONE INTERCEPTOR",
+                "LocalizedLongDescriptionStringID": "Fragalie air unit. Effective at intercepting air units, more effective in packs."
             }
         }
     }
