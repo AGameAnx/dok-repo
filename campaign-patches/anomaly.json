@@ -8386,7 +8386,8 @@
                 "MaxHealth": 1700,
                 "Armour": 11,
                 "PriorityAsTarget": 15,
-                "AggroRange": 1500,
+                "AggroRange": 1000,
+                "LeashRange": 2500,
                 "FireRateDisplay": 3
             },
             "ExperienceAttributes": {
@@ -8468,7 +8469,12 @@
                     "MaxSpeed": 60,
                     "MaxSpeedTurnRadius": 40
                 },
-                "Combat": { "MaxDesiredCombatRange": 50 },
+                "Combat": {
+                    "MinDesiredCombatRange": 30,
+                    "MaxDesiredCombatRange": 350,
+                    "PassiveCombatApproachMode": "Circle",
+                    "ActiveCombatApproachMode": "Circle"
+                },
                 "Hover": { "TurnAcceleration": 90 }
             },
             "DetectableAttributes": {
