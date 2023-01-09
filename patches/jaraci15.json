@@ -1,0 +1,6917 @@
+{
+	"Meta": {
+		"Name": "Jaraci Balance Mod",
+		"Author": "AGameAnx",
+		"Version": "15.1.1",
+		"LastUpdate": "2023-01-09",
+		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
+	},
+	/*"Global": {
+		"UnitAttributes": {
+			"Resource1Cost": 0,
+			"Resource2Cost": 0,
+			"ProductionTime": 0
+		},
+		"ResearchItemAttributes": {
+			"Resource1Cost": 0,
+			"Resource2Cost": 0,
+			"ResearchTime": 0
+		},
+		"AbilityAttributes": {
+			"Any": {
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
+				"CooldownTimeSecsMult": 0.01
+			}
+		}
+	},*/
+	"Entities": {
+		"Artifact": {
+			"RelicAttributes": {
+				"BuffsWhileHolding": {
+					"0": { "Value": -35 }
+				}
+			}
+		},
+
+		"Research_Buff_G_Power_1": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 50,
+				"ResearchTime": 15,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 1 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_Power_1": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 50,
+				"ResearchTime": 15,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 1 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_S_Buff_Power_1": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 50,
+				"ResearchTime": 15,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 1 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"Research_Buff_G_Power_2": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 150,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 2 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"Research_Buff_G_Power_3": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 650,
+				"Resource2Cost": 250,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 3",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 3 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_Power_3": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 200,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 3 extra power to the carrier reserves",
+				"Dependencies": ["Research_Buff_Power_1"],
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_S_Buff_Power_3": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 200,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 3 extra power to the carrier reserves",
+				"Dependencies": ["Research_S_Buff_Power_1"],
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"Research_Buff_G_Power_4": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 900,
+				"Resource2Cost": 400,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 4 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_Power_4": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 900,
+				"Resource2Cost": 400,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 3",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 4 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_S_Buff_Power_4": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 900,
+				"Resource2Cost": 400,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 3",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 4 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"Research_Buff_G_Power_5": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1200,
+				"Resource2Cost": 650,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves, unlock the Super-Sonic Missile barrage",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_Power_5": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1200,
+				"Resource2Cost": 650,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves, unlock the Cruise Missile",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_S_Buff_Power_5": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1200,
+				"Resource2Cost": 550,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"Research_Buff_G_Power_6": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1300,
+				"Resource2Cost": 700,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_Power_6": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1300,
+				"Resource2Cost": 700,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_S_Buff_Power_6": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1300,
+				"Resource2Cost": 700,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"Research_Buff_G_Power_7": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1400,
+				"Resource2Cost": 850,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 7",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_Power_7": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1400,
+				"Resource2Cost": 850,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_S_Buff_Power_7": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 1400,
+				"Resource2Cost": 850,
+				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "Add",
+								"Value": 150
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+
+		// Carrier mobility
+		"Research_Buff_Power_2": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 250,
+				"LocalizedResearchTitleStringID": "CARRIER MOBILITY",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier mobility",
+				"LocalizedLongDescriptionStringID": "Adds 13 extra max speed and 2 extra power to the carrier reserves",
+				"Dependencies": [],
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 13
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_S_Buff_Power_2": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 250,
+				"LocalizedResearchTitleStringID": "CARRIER MOBILITY",
+				"LocalizedShortDescriptionStringID": "Upgrade carrier mobility",
+				"LocalizedLongDescriptionStringID": "Adds 13 extra max speed and 2 extra power to the carrier reserves",
+				"Dependencies": [],
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "Add",
+								"Value": 13
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"C_Carrier_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
+				"MaxHealth": 8700,
+				"Armour": 20,
+				"PriorityAsTarget": -15
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 37,
+					"MaxSpeedTurnRadius": 105,
+					"BrakingTime": 0.9,
+					"AccelerationTime": 0.9,
+					"MaxEaseIntoTurnTime": 0.25
+				}
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_DeployPopCapCarrier_MP": {
+					"Resource1Cost": 270
+				},
+				"Ability_C_CruiseMissile_MP": {
+					"CooldownTimeSecs": 170,
+					"ChainCasting": {
+						"QueuedAbilityDelay": 1.5
+					}
+				},
+				"Ability_C_LaunchInterceptor_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchGunShip_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"C_Carrier_Weapon_G2All_MP": {
+					"BaseDamagePerRound": 30,
+					"ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 4,
+					"TargetStyle": "Flak",
+					"RangeAttributesShort": { "Accuracy": 50 },
+					"RangeAttributesMedium": { "Accuracy": 45 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 800 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyShortPercent",
+							"Amount": 130
+						},
+						"2": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyMediumPercent",
+							"Amount": 130
+						},
+						"3": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyLongPercent",
+							"Amount": 130
+						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
+						"7": { "Remove": true },
+						"8": { "Remove": true },
+						"9": { "Remove": true },
+						"10": { "Remove": true },
+						"11": { "Remove": true },
+						"12": { "Remove": true }
+					}
+				},
+				"C_Carrier_Weapon_G2All_Dummy_MP": {
+					"BaseDamagePerRound": 30
+				},
+				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
+					"BaseDamagePerRound": 70,
+					"ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 4,
+					"TargetStyle": "Flak",
+					"RangeAttributesShort": { "Accuracy": 50 },
+					"RangeAttributesMedium": { "Accuracy": 45 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 800 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyShortPercent",
+							"Amount": 130
+						},
+						"2": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyMediumPercent",
+							"Amount": 130
+						},
+						"3": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyLongPercent",
+							"Amount": 130
+						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
+						"7": { "Remove": true },
+						"8": { "Remove": true },
+						"9": { "Remove": true },
+						"10": { "Remove": true },
+						"11": { "Remove": true },
+						"12": { "Remove": true }
+					}
+				},
+				"C_CarrierMissiles_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 175,
+					"WindUpTimeMS": 500,
+					"RangeAttributesLong": { "Distance": 700 },
+					"ExcludeFromHeightAdvantage": true
+				},
+				"C_Carrier_Weapon_CruiseMissile_MP": {
+					"BaseDamagePerRound": 2300,
+					"AreaOfEffectRadius": 550,
+					"ExcludeFromHeightAdvantage": true,
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Carrier, Large, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 160
+						}
+					},
+					"RangeAttributesLong": {
+						"Distance": 4500
+					}
+				},
+				"C_Carrier_Weapon_Repair_MP": {
+					"RangeAttributesShort": {
+						"Distance": 800
+					}
+				}
+			},
+			"PowerShuntAttributes": {
+				"ReservePowerPool": {
+					"HasUnlimitedCapacity": true
+				},
+				"PowerSystems": {
+
+					"1": { // Weapon Systems
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 2"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Missiles Enabled. 20% PD ROF Bonus",
+								"StatusEffectsToApply": {
+									"C_Weapons_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 20 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 20 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 20 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 20 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "35% PD ROF Bonus, 2 Missiles",
+								"StatusEffectsToApply": {
+									"C_Weapons_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 35 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 35 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 35 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 35 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "55% PD ROF Bonus, 3 Missiles",
+								"StatusEffectsToApply": {
+									"C_Weapons_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 55 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 55 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 55 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 55 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "80% PD ROF Bonus, 4 Missiles",
+								"StatusEffectsToApply": {
+									"C_Weapons_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 80 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 80 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 80 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 80 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Armor Piercing Rounds: 250% Damage, 25% PD ROF Bonus, 4 Missiles",
+								"StatusEffectsToApply": {
+									"C_Weapons_5_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 25 }, // TURRET_BR_APBULLETS
+													"2": { "Mode": "AddPercent", "Value": 25 }, // TURRET_BL_APBULLETS
+													"3": { "Mode": "AddPercent", "Value": 25 }, // TURRET_FL_APBULLETS
+													"4": { "Mode": "AddPercent", "Value": 25 }, // TURRET_FR_APBULLETS
+													"5": { "Value": 2 } // Fire rate display
+												}
+											}
+										}
+									},
+									"C_Weapons_MoreDamage_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 150 }
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					},
+
+					"2": { // Reactive Armor
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Armor: 20"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Armor: 25",
+								"StatusEffectsToApply": {
+									"Armour_2_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 5 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "Armor: 30",
+								"StatusEffectsToApply": {
+									"Armour_3_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 10 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Armor: 35",
+								"StatusEffectsToApply": {
+									"Armour_4_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 15 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "Armor: 50",
+								"StatusEffectsToApply": {
+									"Armour_5_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 30 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"StatusEffectsToApply": {
+									"Armour_6_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 30 }
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					},
+
+					"3": { // Range Systems
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 800m"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 900m",
+								"StatusEffectsToApply": {
+									"Range_1_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 900 }, // TURRET_BR, Set
+													"1": { "Value": 900 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 900 }, // TURRET_BL, Set
+													"7": { "Value": 900 }, // TURRET_BL_APBULLETS, Set
+													"12": { "Value": 900 }, // TURRET_FL, Set
+													"13": { "Value": 900 }, // TURRET_FL_APBULLETS, Set
+													"18": { "Value": 900 }, // TURRET_FR, Set
+													"19": { "Value": 900 }, // TURRET_FR_APBULLETS, Set
+													"24": { "Value": 100 }, // ANTI-AIR, Add
+													"25": { "Value": 100 } // MAIN_MISSILES, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1050m",
+								"StatusEffectsToApply": {
+									"Range_2_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1050 }, // TURRET_BR, Set
+													"1": { "Value": 1050 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 1050 }, // TURRET_BL, Set
+													"7": { "Value": 1050 }, // TURRET_BL_APBULLETS, Set
+													"12": { "Value": 1050 }, // TURRET_FL, Set
+													"13": { "Value": 1050 }, // TURRET_FL_APBULLETS, Set
+													"18": { "Value": 1050 }, // TURRET_FR, Set
+													"19": { "Value": 1050 }, // TURRET_FR_APBULLETS, Set
+													"24": { "Value": 250 }, // ANTI-AIR, Add
+													"25": { "Value": 250 } // MAIN_MISSILES, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1250m",
+								"StatusEffectsToApply": {
+									"Range_3_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1250 }, // TURRET_BR, Set
+													"1": { "Value": 1250 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 1250 }, // TURRET_BL, Set
+													"7": { "Value": 1250 }, // TURRET_BL_APBULLETS, Set
+													"12": { "Value": 1250 }, // TURRET_FL, Set
+													"13": { "Value": 1250 }, // TURRET_FL_APBULLETS, Set
+													"18": { "Value": 1250 }, // TURRET_FR, Set
+													"19": { "Value": 1250 }, // TURRET_FR_APBULLETS, Set
+													"24": { "Value": 450 }, // ANTI-AIR, Add
+													"25": { "Value": 450 }, // MAIN_MISSILES, Add
+													"26": { "Value": 550 }, // ContactRadius, Add
+													"27": { "Value": 550 } // SensorRadius, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1450m",
+								"StatusEffectsToApply": {
+									"Range_4_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1450 }, // TURRET_BR, Set
+													"1": { "Value": 1450 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 1450 }, // TURRET_FL, Set
+													"7": { "Value": 1450 }, // TURRET_FL_APBULLETS, Set
+													"12": { "Value": 1450 }, // TURRET_FR, Set
+													"13": { "Value": 1450 }, // TURRET_FR_APBULLETS, Set
+													"18": { "Value": 1450 }, // TURRET_BR, Set
+													"19": { "Value": 1450 }, // TURRET_BR_APBULLETS, Set
+													"24": { "Value": 650 }, // ANTI-AIR, Add
+													"25": { "Value": 650 }, // MAIN_MISSILES, Add
+													"26": { "Value": 800 }, // ContactRadius, Add
+													"27": { "Value": 800 } // SensorRadius, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1650m",
+								"StatusEffectsToApply": {
+									"Range_5_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1650 }, // TURRET_FL, Set
+													"1": { "Value": 1650 }, // TURRET_FL_APBULLETS, Set
+													"6": { "Value": 1650 }, // TURRET_FR, Set
+													"7": { "Value": 1650 }, // TURRET_FR_APBULLETS, Set
+													"12": { "Value": 1650 }, // TURRET_BL, Set
+													"13": { "Value": 1650 }, // TURRET_BL_APBULLETS, Set
+													"18": { "Value": 1650 }, // TURRET_BR, Set
+													"19": { "Value": 1650 }, // TURRET_BR_APBULLETS, Set
+													"24": { "Value": 850 }, // ANTI-AIR, Add
+													"25": { "Value": 850 }, // MAIN_MISSILES, Add
+													"26": { "Value": 1050 }, // ContactRadius, Add
+													"27": { "Value": 1050 } // SensorRadius, Add
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					}
+
+				}
+			}
+		},
+		"C_Sob_Carrier_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
+				"MaxHealth": 8400,
+				"Armour": 15,
+				"PriorityAsTarget": -15
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 37,
+					"MaxSpeedTurnRadius": 105,
+					"BrakingTime": 0.9,
+					"AccelerationTime": 0.9,
+					"MaxEaseIntoTurnTime": 0.25
+				}
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_Sob_ProduceSupportCruiser_MP": {
+					"ProduceUnit": { "UnitTypeToProduce": "C_SupportCruiser_MP" } // Use unit which properly changes its visuals to S variant
+				},
+				"Ability_C_Sob_DeployPopCapCarrier_MP": {
+					"Resource1Cost": 270
+				},
+				"Ability_C_Sob_SobanNuke_MP": {
+					"CooldownTimeSecs": 150,
+					"Resource1Cost": 400,
+					"ChainCasting": {
+						"QueuedAbilityDelay": 1.5
+					}
+				},
+				"Ability_C_LaunchInterceptor_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_C_LaunchGunShip_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
+					"BaseDamagePerRound": 180,
+					"ExcludeFromHeightAdvantage": true
+				},
+				"C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 180,
+					"ExcludeFromHeightAdvantage": true,
+					"BurstPeriodMaxTimeMS": 250,
+					"BurstPeriodMinTimeMS": 250,
+					"NumberOfBursts": 2,
+					"WindUpTimeMS": 1000,
+					"WindDownTimeMS": 500,
+
+					"ReloadTimeMS": 13000,
+					"CooldownTimeMS": 9000,
+
+					"RangeAttributesShort": {
+						"Distance": 300,
+						"Accuracy": 40
+					},
+					"RangeAttributesMedium": {
+						"Distance": 550,
+						"Accuracy": 100
+					},
+					"RangeAttributesLong": {
+						"Distance": 1000,
+						"Accuracy": 65
+					},
+					"Modifiers": {
+						"1": {
+							//"TargetClass": "Small",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						},
+						"6": {
+							"Remove": true
+						},
+						"11": {
+							"Remove": true
+						}
+					},
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				},
+				"C_Sob_CarrierMissiles_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 175,
+					"WindUpTimeMS": 500,
+					"RangeAttributesLong": { "Distance": 700 }
+				},
+				"C_Sob_Carrier_Weapon_Nuke_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesLong": {
+						"Distance": 4500
+					}
+				}
+			},
+			"PowerShuntAttributes": {
+				"ReservePowerPool": {
+					"HasUnlimitedCapacity": true
+				},
+				"PowerSystems": {
+
+					"0": { // Defensive Logistics
+						"PowerLevels": {
+							"1": {
+								"StatusEffectsToApply": {
+									"ScannerShunt_1_StatusEffect": {
+										"UnitTypeBuffsToApply": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1000 }, // Sensor Radius
+													"1": { "Value": 1150 }, // Contact Radius
+													"5": { "Value": 6500 } // Reload time
+												}
+											}
+										}
+									}
+								}
+							},
+							"2": {
+								"StatusEffectsToApply": {
+									"ScannerShunt_2_StatusEffect": {
+										"UnitTypeBuffsToApply": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1100 },
+													"1": { "Value": 1250 },
+													"5": { "Value": 5500 }
+												}
+											},
+											"1": {
+												"BuffSet": { "0": { "Value": 800 } } // Deployment range
+											}
+										}
+									}
+								}
+							},
+							"3": {
+								"StatusEffectsToApply": {
+									"ScannerShunt_3_StatusEffect": {
+										"UnitTypeBuffsToApply": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1200 },
+													"1": { "Value": 1350 },
+													"5": { "Value": 4500 }
+												}
+											},
+											"1": {
+												"BuffSet": { "0": { "Value": 1000 } }
+											}
+										}
+									}
+								}
+							},
+							"4": {
+								"StatusEffectsToApply": {
+									"ScannerShunt_4_StatusEffect": {
+										"UnitTypeBuffsToApply": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1300 },
+													"1": { "Value": 1450 },
+													"5": { "Value": 3500 },
+													"6": { "Value": 30 } // Damage bonus
+												}
+											},
+											"1": {
+												"BuffSet": { "0": { "Value": 1200 } }
+											}
+										}
+									}
+								}
+							},
+							"5": {
+								"StatusEffectsToApply": {
+									"ScannerShunt_5_StatusEffect": {
+										"UnitTypeBuffsToApply": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1500 },
+													"1": { "Value": 1650 },
+													"5": { "Value": 2500 },
+													"6": { "Value": 50 }
+												}
+											},
+											"1": {
+												"BuffSet": { "0": { "Value": 1500 } }
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"1": { // Turret Network
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Missiles Disabled. 13s Reload, 9s Cooldown"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Missiles Enabled. 35% Reload and Cooldown Reduction, 15% Accuracy Bonus",
+								"StatusEffectsToApply": {
+									"C_Sob_Weapons_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // Sets damage on the dummy weapon
+													"2": { "Remove": true }, // Sets damage on TURRET_BR weapon
+
+													// TURRET_BR
+													"3": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
+													"4": { "Mode": "AddPercent", "Value": -35 }, // Reload
+													"5": { "Value": 15 }, // Accuracy Short
+													"6": { "Value": 15 }, // Accuracy Medium
+													"7": { "Value": 15 }, // Accuracy Long
+
+													// TURRET_BL
+													"8": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
+													"9": { "Mode": "AddPercent", "Value": -35, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"10": { "Value": 15 }, // Accuracy Short
+													"11": { "Value": 15 }, // Accuracy Medium
+													"12": { "Value": 15 }, // Accuracy Long
+
+													// TURRET_FL
+													"13": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
+													"14": { "Mode": "AddPercent", "Value": -35, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"15": { "Value": 15 }, // Accuracy Short
+													"16": { "Value": 15 }, // Accuracy Medium
+													"17": { "Value": 15 }, // Accuracy Long
+
+													// TURRET_FR
+													"18": { "Mode": "AddPercent", "Value": -35 }, // Cooldown
+													"19": { "Mode": "AddPercent", "Value": -35 }, // Reload
+													"20": { "Value": 15 }, // Accuracy Short
+													"21": { "Value": 15 }, // Accuracy Medium
+													"22": { "Value": 15 } // Accuracy Long
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "50% Reload and Cooldown Reduction, 25% Accuracy Bonus",
+								"StatusEffectsToApply": {
+									"C_Sob_Weapons_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // Sets damage on the dummy weapon
+
+													// TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": -50 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -50 }, // Reload
+													"4": { "Value": 25 }, // Accuracy Short
+													"5": { "Value": 25 }, // Accuracy Medium
+													"6": { "Value": 25 }, // Accuracy Long
+
+													// TURRET_BL
+													"7": { "Mode": "AddPercent", "Value": -50 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -50 }, // Reload
+													"9": { "Value": 25 }, // Accuracy Short
+													"10": { "Value": 25 }, // Accuracy Medium
+													"11": { "Value": 25 }, // Accuracy Long
+
+													// TURRET_FL
+													"12": { "Mode": "AddPercent", "Value": -50 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -50 }, // Reload
+													"14": { "Value": 25 }, // Accuracy Short
+													"15": { "Value": 25 }, // Accuracy Medium
+													"16": { "Value": 25 }, // Accuracy Long
+
+													// TURRET_FR
+													"17": { "Mode": "AddPercent", "Value": -50 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -50, "Attribute": "UnitWeapon_ReloadTime" }, // Reload
+													"19": { "Value": 25 }, // Accuracy Short
+													"20": { "Value": 25 }, // Accuracy Medium
+													"21": { "Value": 25 } // Accuracy Long
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "65% Reload and Cooldown Reduction, 35% Accuracy Bonus",
+								"StatusEffectsToApply": {
+									"C_Sob_Weapons_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // Sets damage on the dummy weapon
+													"2": { "Remove": true }, // Duplicate cooldown buff for TURRET_BR weapon
+
+													// TURRET_BR
+													"3": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
+													"4": { "Mode": "AddPercent", "Value": -65 }, // Reload
+													"5": { "Value": 35 }, // Accuracy Short
+													"6": { "Value": 35 }, // Accuracy Medium
+													"7": { "Value": 35 }, // Accuracy Long
+
+													// TURRET_BL
+													"8": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
+													"9": { "Mode": "AddPercent", "Value": -65 }, // Reload
+													"10": { "Value": 35 }, // Accuracy Short
+													"11": { "Value": 35 }, // Accuracy Medium
+													"12": { "Value": 35 }, // Accuracy Long
+
+													// TURRET_FL
+													"13": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
+													"14": { "Mode": "AddPercent", "Value": -65 }, // Reload
+													"15": { "Value": 35 }, // Accuracy Short
+													"16": { "Value": 35 }, // Accuracy Medium
+													"17": { "Value": 35 }, // Accuracy Long
+
+													// TURRET_FR
+													"18": { "Mode": "AddPercent", "Value": -65 }, // Cooldown
+													"19": { "Mode": "AddPercent", "Value": -65 }, // Reload
+													"20": { "Value": 35 }, // Accuracy Short
+													"21": { "Value": 35 }, // Accuracy Medium
+													"22": { "Value": 35 } // Accuracy Long
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "75% Reload and Cooldown Reduction, 45% Accuracy Bonus",
+								"StatusEffectsToApply": {
+									"C_Sob_Weapons_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // Sets damage on the dummy weapon
+
+													// TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": -75 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -75 }, // Reload
+													"4": { "Value": 45 }, // Accuracy Short
+													"5": { "Value": 45 }, // Accuracy Medium
+													"6": { "Value": 45 }, // Accuracy Long
+
+													// TURRET_BL
+													"7": { "Mode": "AddPercent", "Value": -75 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -75 }, // Reload
+													"9": { "Value": 45 }, // Accuracy Short
+													"10": { "Value": 45 }, // Accuracy Medium
+													"11": { "Value": 45 }, // Accuracy Long
+
+													// TURRET_FL
+													"12": { "Mode": "AddPercent", "Value": -75 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -75 }, // Reload
+													"14": { "Value": 45 }, // Accuracy Short
+													"15": { "Value": 45 }, // Accuracy Medium
+													"16": { "Value": 45 }, // Accuracy Long
+
+													// TURRET_FR
+													"17": { "Mode": "AddPercent", "Value": -75 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -75 }, // Reload
+													"19": { "Value": 45 }, // Accuracy Short
+													"20": { "Value": 45 }, // Accuracy Medium
+													"21": { "Value": 45 } // Accuracy Long
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "85% Reload and Cooldown Reduction, 55% Accuracy Bonus",
+								"StatusEffectsToApply": {
+									"C_Sob_Weapons_5_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // Sets damage on the dummy weapon
+
+													// TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"3": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"4": { "Value": 55 }, // Accuracy Short
+													"5": { "Value": 55 }, // Accuracy Medium
+													"6": { "Value": 55 }, // Accuracy Long
+
+													// TURRET_BL
+													"7": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"8": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"9": { "Value": 55 }, // Accuracy Short
+													"10": { "Value": 55 }, // Accuracy Medium
+													"11": { "Value": 55 }, // Accuracy Long
+
+													// TURRET_FL
+													"12": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"13": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"14": { "Value": 55 }, // Accuracy Short
+													"15": { "Value": 55 }, // Accuracy Medium
+													"16": { "Value": 55 }, // Accuracy Long
+
+													// TURRET_FR
+													"17": { "Mode": "AddPercent", "Value": -85 }, // Cooldown
+													"18": { "Mode": "AddPercent", "Value": -85 }, // Reload
+													"19": { "Value": 55 }, // Accuracy Short
+													"20": { "Value": 55 }, // Accuracy Medium
+													"21": { "Value": 55 } // Accuracy Long
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					},
+
+					"2": { // Reactive Armour
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Armor: 15"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Armor: 20",
+								"StatusEffectsToApply": {
+									"Armour_2_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 5 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "Armor: 25",
+								"StatusEffectsToApply": {
+									"Armour_3_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 10 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Armor: 30",
+								"StatusEffectsToApply": {
+									"Armour_4_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 15 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "Armor: 45",
+								"StatusEffectsToApply": {
+									"Armour_5_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 30 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"StatusEffectsToApply": {
+									"Armour_6_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 30 }
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					},
+
+					"3": { // Range Systems
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1000m"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1150m",
+								"StatusEffectsToApply": {
+									"Range_1_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_FL
+													"0": { "Value": 1150 }, // long range
+													"1": { "Value": 1150 }, // APBULLETS long range
+													"2": { "Value": 750 }, // medium range
+													"3": { "Value": 750 }, // APBULLETS medium range
+													"4": { "Value": 450 }, // short range
+													"5": { "Value": 450 }, // APBULLETS short range
+
+													// TURRET_FR
+													"6": { "Value": 1150 }, // long range
+													"7": { "Value": 1150 }, // APBULLETS long range
+													"8": { "Value": 750 }, // medium range
+													"9": { "Value": 750 }, // APBULLETS medium range
+													"10": { "Value": 450 }, // short range
+													"11": { "Value": 450 }, // APBULLETS short range
+
+													// TURRET_BR
+													"12": { "Value": 1150 }, // long range
+													"13": { "Value": 1150 }, // APBULLETS long range
+													"14": { "Value": 750 }, // medium range
+													"15": { "Value": 750 }, // APBULLETS medium range
+													"16": { "Value": 450 }, // short range
+													"17": { "Value": 450 }, // APBULLETS short range
+
+													// TURRET_BL
+													"18": { "Value": 1150 }, // long range
+													"19": { "Value": 1150 }, // APBULLETS long range
+													"20": { "Value": 750 }, // medium range
+													"21": { "Value": 750 }, // APBULLETS medium range
+													"22": { "Value": 450 }, // short range
+													"23": { "Value": 450 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1350m",
+								"StatusEffectsToApply": {
+									"Range_2_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_BL
+													"0": { "Value": 1350 }, // long range
+													"1": { "Value": 1350 }, // APBULLETS long range
+													"2": { "Value": 1100 }, // medium range
+													"3": { "Value": 1100 }, // APBULLETS medium range
+													"4": { "Value": 700 }, // short range
+													"5": { "Value": 700 }, // APBULLETS short range
+
+													// TURRET_BR
+													"6": { "Value": 1350 }, // long range
+													"7": { "Value": 1350 }, // APBULLETS long range
+													"8": { "Value": 1100 }, // medium range
+													"9": { "Value": 1100 }, // APBULLETS medium range
+													"10": { "Value": 700 }, // short range
+													"11": { "Value": 700 }, // APBULLETS short range
+
+													// TURRET_FL
+													"12": { "Value": 1350 }, // long range
+													"13": { "Value": 1350 }, // APBULLETS long range
+													"14": { "Value": 1100 }, // medium range
+													"15": { "Value": 1100 }, // APBULLETS medium range
+													"16": { "Value": 700 }, // short range
+													"17": { "Value": 700 }, // APBULLETS short range
+
+													// TURRET_FR
+													"18": { "Value": 1350 }, // long range
+													"19": { "Value": 1350 }, // APBULLETS long range
+													"20": { "Value": 1100 }, // medium range
+													"21": { "Value": 1100 }, // APBULLETS medium range
+													"22": { "Value": 700 }, // short range
+													"23": { "Value": 700 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1500m",
+								"StatusEffectsToApply": {
+									"Range_3_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_BR
+													"0": { "Value": 1500 }, // long range
+													"1": { "Value": 1500 }, // APBULLETS long range
+													"2": { "Value": 1300 }, // medium range
+													"3": { "Value": 1300 }, // APBULLETS medium range
+													"4": { "Value": 900 }, // short range
+													"5": { "Value": 900 }, // APBULLETS short range
+
+													// TURRET_BR
+													"6": { "Value": 1500 }, // long range
+													"7": { "Value": 1500 }, // APBULLETS long range
+													"8": { "Value": 1300 }, // medium range
+													"9": { "Value": 1300 }, // APBULLETS medium range
+													"10": { "Value": 900 }, // short range
+													"11": { "Value": 900 }, // APBULLETS short range
+
+													// TURRET_FL
+													"12": { "Value": 1500 }, // long range
+													"13": { "Value": 1500 }, // APBULLETS long range
+													"14": { "Value": 1300 }, // medium range
+													"15": { "Value": 1300 }, // APBULLETS medium range
+													"16": { "Value": 900 }, // short range
+													"17": { "Value": 900 }, // APBULLETS short range
+
+													// TURRET_FR
+													"18": { "Value": 1500 }, // long range
+													"19": { "Value": 1500 }, // APBULLETS long range
+													"20": { "Value": 1300 }, // medium range
+													"21": { "Value": 1300 }, // APBULLETS medium range
+													"22": { "Value": 900 }, // short range
+													"23": { "Value": 900 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1650m",
+								"StatusEffectsToApply": {
+									"Range_4_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_BL
+													"0": { "Value": 1650 }, // long range
+													"1": { "Value": 1650 }, // APBULLETS long range
+													"2": { "Value": 1400 }, // medium range
+													"3": { "Value": 1400 }, // APBULLETS medium range
+													"4": { "Value": 1100 }, // short range
+													"5": { "Value": 1100 }, // APBULLETS short range
+
+													// TURRET_FL
+													"6": { "Value": 1650 }, // long range
+													"7": { "Value": 1650 }, // APBULLETS long range
+													"8": { "Value": 1400 }, // medium range
+													"9": { "Value": 1400 }, // APBULLETS medium range
+													"10": { "Value": 1100 }, // short range
+													"11": { "Value": 1100 }, // APBULLETS short range
+
+													// TURRET_FR
+													"12": { "Value": 1650 }, // long range
+													"13": { "Value": 1650 }, // APBULLETS long range
+													"14": { "Value": 1400 }, // medium range
+													"15": { "Value": 1400, "Name": "TURRET_FR_APBULLETS" }, // APBULLETS medium range, had wrong weapon id
+													"16": { "Value": 1100, "Name": "TURRET_FR" }, // short range, had wrong weapon id
+													"17": { "Value": 1100 }, // APBULLETS short range
+
+													// TURRET_BR
+													"18": { "Value": 1650 }, // long range
+													"19": { "Value": 1650 }, // APBULLETS long range
+													"20": { "Value": 1400 }, // medium range
+													"21": { "Value": 1400 }, // APBULLETS medium range
+													"22": { "Value": 1100 }, // short range
+													"23": { "Value": 1100 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1900m",
+								"StatusEffectsToApply": {
+									"Range_5_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													// TURRET_FL
+													"0": { "Value": 1900 }, // long range
+													"1": { "Value": 1900 }, // APBULLETS long range
+													"2": { "Value": 1700 }, // medium range
+													"3": { "Value": 1700 }, // APBULLETS medium range
+													"4": { "Value": 1300 }, // short range
+													"5": { "Value": 1300 }, // APBULLETS short range
+
+													// TURRET_FR
+													"6": { "Value": 1900 }, // long range
+													"7": { "Value": 1900 }, // APBULLETS long range
+													"8": { "Value": 1700 }, // medium range
+													"9": { "Value": 1700 }, // APBULLETS medium range
+													"10": { "Value": 1300 }, // short range
+													"11": { "Value": 1300 }, // APBULLETS short range
+
+													// TURRET_BL
+													"12": { "Value": 1900 }, // long range
+													"13": { "Value": 1900 }, // APBULLETS long range
+													"14": { "Value": 1700 }, // medium range
+													"15": { "Value": 1700 }, // APBULLETS medium range
+													"16": { "Value": 1300 }, // short range
+													"17": { "Value": 1300 }, // APBULLETS short range
+
+													// TURRET_BR
+													"18": { "Value": 1900 }, // long range
+													"19": { "Value": 1900 }, // APBULLETS long range
+													"20": { "Value": 1700 }, // medium range
+													"21": { "Value": 1700 }, // APBULLETS medium range
+													"22": { "Value": 1300 }, // short range
+													"23": { "Value": 1300 } // APBULLETS short range
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					}
+
+				}
+			}
+		},
+		"G_Carrier_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
+				"MaxHealth": 8300,
+				"Armour": 20,
+				"PriorityAsTarget": -15
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 35 }
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12,
+						"UndockAnimationSeconds": 2.66
+					},
+					"Bomber": {
+						"UndockTotalSeconds": 5
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_G_MissileBarrage": {
+					"CooldownTimeSecs": 160
+				},
+				"Ability_G_LaunchInterceptor_Upgraded_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_G_LaunchBomber_MP": {
+					"AirSortie": { "LoiterLength": 40 }
+				}
+			},
+			"WeaponAttributes": {
+				"G_Carrier_Weapon_G2All_MP": {
+					"BaseDamagePerRound": 30,
+					"ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 5,
+					"TargetStyle": "Flak",
+					"RangeAttributesShort": { "Accuracy": 50 },
+					"RangeAttributesMedium": { "Accuracy": 45 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 800 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyShortPercent",
+							"Amount": 130
+						},
+						"2": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyMediumPercent",
+							"Amount": 130
+						},
+						"3": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyLongPercent",
+							"Amount": 130
+						}
+					}
+				},
+				"G_Carrier_Weapon_G2All_Dummy_MP": {
+					"BaseDamagePerRound": 30
+				},
+				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
+					"BaseDamagePerRound": 75,
+					"ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 5,
+					"TargetStyle": "Flak",
+					"RangeAttributesShort": { "Accuracy": 50 },
+					"RangeAttributesMedium": { "Accuracy": 45 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 800 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyShortPercent",
+							"Amount": 130
+						},
+						"2": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyMediumPercent",
+							"Amount": 130
+						},
+						"3": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyLongPercent",
+							"Amount": 130
+						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
+						"7": { "Remove": true },
+						"8": { "Remove": true },
+						"9": { "Remove": true },
+						"10": { "Remove": true },
+						"11": { "Remove": true },
+						"12": { "Remove": true }
+					}
+				},
+				"G_Carrier_Weapon_DefaultMissile_MP": {
+					"BaseDamagePerRound": 175,
+					"WindUpTimeMS": 500,
+					"RangeAttributesLong": { "Distance": 700 },
+					"ExcludeFromHeightAdvantage": true
+				},
+				"G_Carrier_Weapon_BarrageMissile_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 260,
+					"AreaOfEffectRadius": 245,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"NumberOfBursts": 8,
+					"Modifiers": {
+						"1": {
+							"Remove": true
+						}
+					},
+					"RangeAttributesLong": {
+						"Distance": 4500
+					}
+				}
+			},
+			"PowerShuntAttributes": {
+				"ReservePowerPool": {
+					"HasUnlimitedCapacity": true
+				},
+				"PowerSystems": {
+
+					"0": { // Speed Power Systems
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Movement: 35 km/h"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Movement: +10 km/h",
+								"StatusEffectsToApply": {
+									"Movement_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 10 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "Movement: +25 km/h",
+								"StatusEffectsToApply": {
+									"Movement_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 25 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Movement: +40 km/h",
+								"StatusEffectsToApply": {
+									"Movement_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 40 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "Movement: +55 km/h",
+								"StatusEffectsToApply": {
+									"Movement_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 55 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Movement: +70 km/h",
+								"StatusEffectsToApply": {
+									"Movement_5_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 70 }
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					},
+
+					"1": { // Weapon Systems
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 3"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Missiles Enabled. 20% PD ROF Bonus",
+								"StatusEffectsToApply": {
+									"G_Weapons_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 20 }, // TURRET_BR
+													"1": { "Mode": "AddPercent", "Value": 20 }, // TURRET_BL
+													"2": { "Mode": "AddPercent", "Value": 20 }, // TURRET_FL
+													"3": { "Mode": "AddPercent", "Value": 20 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "35% PD ROF Bonus, 2 Missiles",
+								"StatusEffectsToApply": {
+									"G_Weapons_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 35 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 35 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 35 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 35 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "50% PD ROF Bonus, 3 Missiles",
+								"StatusEffectsToApply": {
+									"G_Weapons_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 50 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 50 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "70% PD ROF Bonus, 4 Missiles",
+								"StatusEffectsToApply": {
+									"G_Weapons_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 70 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 70 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 70 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 70 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Armor Piercing Rounds: 250% Damage, 4 Missiles",
+								"StatusEffectsToApply": {
+									"G_Weapons_5_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Remove": true }, // TURRET_FL_APBULLETS
+													"2": { "Remove": true }, // TURRET_FR_APBULLETS
+													"3": { "Remove": true }, // TURRET_BR_APBULLETS
+													"4": { "Remove": true }, // TURRET_BL_APBULLETS
+													"5": { "Value": 1 } // Fire rate display
+												}
+											}
+										}
+									},
+									"G_Weapons_MoreDamage_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 150 }
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					},
+
+					"2": { // Re-establish Systems
+						"PowerLevels": {
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 40",
+								"StatusEffectsToApply": {
+									"Regen_2_StatusEffect_MP": {
+										"Modifiers": {
+											"0": {
+												"HealthOverTimeAttributes": {
+													"Amount": 40
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 50",
+								"StatusEffectsToApply": {
+									"Regen_3_StatusEffect_MP": {
+										"Modifiers": {
+											"0": {
+												"HealthOverTimeAttributes": {
+													"Amount": 50
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 65",
+								"StatusEffectsToApply": {
+									"Regen_4_StatusEffect_MP": {
+										"Modifiers": {
+											"0": {
+												"HealthOverTimeAttributes": {
+													"Amount": 65
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 80",
+								"StatusEffectsToApply": {
+									"Regen_5_StatusEffect_MP": {
+										"Modifiers": {
+											"0": {
+												"HealthOverTimeAttributes": {
+													"Amount": 80
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					},
+
+					"3": { // Range Systems
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 800m"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 900m",
+								"StatusEffectsToApply": {
+									"Range_1_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 900 }, // TURRET_BR, Set
+													"1": { "Value": 900 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 900 }, // TURRET_BL, Set
+													"7": { "Value": 900 }, // TURRET_BL_APBULLETS, Set
+													"12": { "Value": 900 }, // TURRET_FL, Set
+													"13": { "Value": 900 }, // TURRET_FL_APBULLETS, Set
+													"18": { "Value": 900 }, // TURRET_FR, Set
+													"19": { "Value": 900 }, // TURRET_FR_APBULLETS, Set
+													"24": { "Value": 100 }, // ANTI-AIR, Add
+													"25": { "Value": 100 } // MAIN_MISSILES, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1050m",
+								"StatusEffectsToApply": {
+									"Range_2_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1050 }, // TURRET_BR, Set
+													"1": { "Value": 1050 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 1050 }, // TURRET_BL, Set
+													"7": { "Value": 1050 }, // TURRET_BL_APBULLETS, Set
+													"12": { "Value": 1050 }, // TURRET_FL, Set
+													"13": { "Value": 1050 }, // TURRET_FL_APBULLETS, Set
+													"18": { "Value": 1050 }, // TURRET_FR, Set
+													"19": { "Value": 1050 }, // TURRET_FR_APBULLETS, Set
+													"24": { "Value": 250 }, // ANTI-AIR, Add
+													"25": { "Value": 250 } // MAIN_MISSILES, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1250m",
+								"StatusEffectsToApply": {
+									"Range_3_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1250 }, // TURRET_BR, Set
+													"1": { "Value": 1250 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 1250 }, // TURRET_BL, Set
+													"7": { "Value": 1250 }, // TURRET_BL_APBULLETS, Set
+													"12": { "Value": 1250 }, // TURRET_FL, Set
+													"13": { "Value": 1250 }, // TURRET_FL_APBULLETS, Set
+													"18": { "Value": 1250 }, // TURRET_FR, Set
+													"19": { "Value": 1250 }, // TURRET_FR_APBULLETS, Set
+													"24": { "Value": 450 }, // ANTI-AIR, Add
+													"25": { "Value": 450 }, // MAIN_MISSILES, Add
+													"26": { "Value": 550 }, // ContactRadius
+													"27": { "Value": 550 } // SensorRadius
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1450m",
+								"StatusEffectsToApply": {
+									"Range_4_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1450 }, // TURRET_BR, Set
+													"1": { "Value": 1450 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 1450 }, // TURRET_FL, Set
+													"7": { "Value": 1450 }, // TURRET_FL_APBULLETS, Set
+													"12": { "Value": 1450 }, // TURRET_FR, Set
+													"13": { "Value": 1450 }, // TURRET_FR_APBULLETS, Set
+													"18": { "Value": 1450 }, // TURRET_BR, Set
+													"19": { "Value": 1450 }, // TURRET_BR_APBULLETS, Set
+													"24": { "Value": 650 }, // ANTI-AIR, Add
+													"25": { "Value": 650 }, // MAIN_MISSILES, Add
+													"26": { "Value": 800 }, // ContactRadius, Add
+													"27": { "Value": 800 } // SensorRadius, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1650m",
+								"StatusEffectsToApply": {
+									"Range_5_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1650 }, // TURRET_FL, Set
+													"1": { "Value": 1650 }, // TURRET_FL_APBULLETS, Set
+													"6": { "Value": 1650 }, // TURRET_FR, Set
+													"7": { "Value": 1650 }, // TURRET_FR_APBULLETS, Set
+													"12": { "Value": 1650 }, // TURRET_BL, Set
+													"13": { "Value": 1650 }, // TURRET_BL_APBULLETS, Set
+													"18": { "Value": 1650 }, // TURRET_BR, Set
+													"19": { "Value": 1650 }, // TURRET_BR_APBULLETS, Set
+													"24": { "Value": 850 }, // ANTI-AIR, Add
+													"25": { "Value": 850 }, // MAIN_MISSILES, Add
+													"26": { "Value": 1050 }, // ContactRadius, Add
+													"27": { "Value": 1050 } // SensorRadius, Add
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					}
+
+				}
+			}
+		},
+		"K_Carrier_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 0,
+				"Resource2Cost": 0,
+				"MaxHealth": 9100,
+				"SensorRadius": 1200,
+				"ContactRadius": 1350,
+				"Armour": 18,
+				"PriorityAsTarget": -15
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 38 }
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitHangarAttributes": {
+				"HangarBays": {
+					"Interceptor": {
+						"MaxCount": 12,
+						"UndockAnimationSeconds": 2.66
+					},
+					"Bomber": {
+						"UndockAnimationSeconds": 2.75
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_Launch_K_Interceptor": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_Launch_K_Interceptor_Upgraded": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_Launch_K_Bomber": {
+					"AirSortie": { "LoiterLength": 40 }
+				},
+				"Ability_K_GrantShuntingBombToCarrier": {
+					"WarmupTimeSecs": 9
+				}
+			},
+			"WeaponAttributes": {
+				"G_Carrier_Weapon_G2All_Dummy_MP": {
+					"BaseDamagePerRound": 30
+				},
+				"K_Carrier_Weapon_G2All_MP": {
+					"BaseDamagePerRound": 30,
+					"ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 5,
+					"TargetStyle": "Flak",
+					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
+					"RangeAttributesMedium": { "Accuracy": 45, "Distance": 650 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 950 },
+					"Turret": { "FieldOfFire": 200 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyShortPercent",
+							"Amount": 130
+						},
+						"2": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyMediumPercent",
+							"Amount": 130
+						},
+						"3": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyLongPercent",
+							"Amount": 130
+						}
+					}
+				},
+				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
+					"BaseDamagePerRound": 75,
+					"ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 5,
+					"TargetStyle": "Flak",
+					"RangeAttributesShort": { "Accuracy": 50, "Distance": 350 },
+					"RangeAttributesMedium": { "Accuracy": 45, "Distance": 650 },
+					"RangeAttributesLong": { "Accuracy": 35, "Distance": 950 },
+					"Turret": { "FieldOfFire": 200 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyShortPercent",
+							"Amount": 130
+						},
+						"2": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyMediumPercent",
+							"Amount": 130
+						},
+						"3": {
+							"TargetClass": "Large, Carrier, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "AccuracyLongPercent",
+							"Amount": 130
+						},
+						"4": { "Remove": true },
+						"5": { "Remove": true },
+						"6": { "Remove": true },
+						"7": { "Remove": true },
+						"8": { "Remove": true },
+						"9": { "Remove": true },
+						"10": { "Remove": true },
+						"11": { "Remove": true },
+						"12": { "Remove": true }
+					}
+				},
+				"K_Carrier_Weapon_DefaultMissile_MP": {
+					"BaseDamagePerRound": 175,
+					"WindUpTimeMS": 500,
+					"ExcludeFromHeightAdvantage": true,
+					"RangeAttributesLong": { "Distance": 950 }
+				},
+				"K_Carrier_Weapon_BarrageMissile_MP": {
+					"BaseDamagePerRound": 700,
+					"DamagePacketsPerShot": 5,
+					"AreaOfEffectRadius": 150,
+					"ExcludeFromHeightAdvantage": true,
+					"Modifiers": {
+						"1": {
+							"Amount": 75
+						}
+					}
+				},
+				"K_Carrier_WeaponMovementBuff_G2G_MP": {
+                    "ProjectileEntityTypeToSpawn": "K_MovementBuff_CruiserShell_ProjectileAssetContainer_MP"
+                }
+			},
+			"PowerShuntAttributes": {
+				"PowerLevelChargeTimeSeconds": 3,
+				"ReservePowerPool": {
+					"HasUnlimitedCapacity": true
+				},
+				"PowerSystems": {
+
+					"0": { // Speed Boost. Changed buffs affect radius
+						"View": {
+							"LocalizedTitleStringID": "MOBILITY AND SENSORS SUPPORT",
+							"LocalizedLongDescriptionStringID": "Boost sensors capability of your medium and large units. Boost the speed of units near the Carrier and Production Cruisers. Effect is doubled for the carrier. Shunting power increases additional sensors range, speed bonus and speed bonus area of effect."
+						},
+						"PowerLevels": {
+							"1": {
+								"LocalizedShortDescriptionStringID": "Mobility: 600 radius, 8% speed. Sensors: +150",
+								"StatusEffectsToApply": {
+									"K_MovementShuntCarrier_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"UnitType": "",
+												"UseAsPrefix": true,
+												"BuffSet": {
+													"0": {
+														"Attribute": "Unit_SensorRadius",
+														"Mode": "Add",
+														"Value": 150
+													},
+													"1": {
+														"Attribute": "Unit_ContactRadius",
+														"Mode": "Add",
+														"Value": 150
+													},
+													"2": {
+														"Attribute": "UnitDynamics_MaxSpeed",
+														"Mode": "AddPercent",
+														"Value": 8
+													}
+												}
+											}
+										},
+										"UnitTypeBuffsToApply": {
+											"2": {
+												"UnitType": "",
+												"UseAsPrefix": true,
+												"UnitClass": "Medium, Large, XLarge",
+												"ClassOperator": "Or",
+												"BuffSet": {
+													"0": {
+														"Attribute": "Unit_SensorRadius",
+														"Mode": "Add",
+														"Value": 150
+													},
+													"1": {
+														"Attribute": "Unit_ContactRadius",
+														"Mode": "Add",
+														"Value": 150
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							"2": {
+								"LocalizedShortDescriptionStringID": "Mobility: 600 radius, 12% speed. Sensors: +220",
+								"StatusEffectsToApply": {
+									"K_MovementShuntCarrier_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"UnitType": "",
+												"UseAsPrefix": true,
+												"BuffSet": {
+													"0": {
+														"Attribute": "Unit_SensorRadius",
+														"Mode": "Add",
+														"Value": 220
+													},
+													"1": {
+														"Attribute": "Unit_ContactRadius",
+														"Mode": "Add",
+														"Value": 220
+													},
+													"2": {
+														"Attribute": "UnitDynamics_MaxSpeed",
+														"Mode": "AddPercent",
+														"Value": 12
+													}
+												}
+											}
+										},
+										"UnitTypeBuffsToApply": {
+											"2": {
+												"UnitType": "",
+												"UseAsPrefix": true,
+												"UnitClass": "Medium, Large, XLarge",
+												"ClassOperator": "Or",
+												"BuffSet": {
+													"0": {
+														"Attribute": "Unit_SensorRadius",
+														"Mode": "Add",
+														"Value": 220
+													},
+													"1": {
+														"Attribute": "Unit_ContactRadius",
+														"Mode": "Add",
+														"Value": 220
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							"3": {
+								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, 16% speed. Sensors: +300",
+								"StatusEffectsToApply": {
+									"K_MovementShuntCarrier_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"UnitType": "",
+												"UseAsPrefix": true,
+												"BuffSet": {
+													"0": {
+														"Attribute": "Unit_SensorRadius",
+														"Mode": "Add",
+														"Value": 300
+													},
+													"1": {
+														"Attribute": "Unit_ContactRadius",
+														"Mode": "Add",
+														"Value": 300
+													},
+													"2": {
+														"Attribute": "UnitDynamics_MaxSpeed",
+														"Mode": "AddPercent",
+														"Value": 16
+													}
+												}
+											}
+										},
+										"UnitTypeBuffsToApply": {
+											"0": { "BuffSet": { "1": { "Value": 750 } } },
+											"1": { "BuffSet": { "1": { "Value": 750 } } },
+											"2": {
+												"UnitType": "",
+												"UseAsPrefix": true,
+												"UnitClass": "Medium, Large, XLarge",
+												"ClassOperator": "Or",
+												"BuffSet": {
+													"0": {
+														"Attribute": "Unit_SensorRadius",
+														"Mode": "Add",
+														"Value": 300
+													},
+													"1": {
+														"Attribute": "Unit_ContactRadius",
+														"Mode": "Add",
+														"Value": 300
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							"4": {
+								"LocalizedShortDescriptionStringID": "Mobility: 750 radius, 20% speed. Sensors: +400",
+								"StatusEffectsToApply": {
+									"K_MovementShuntCarrier_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"UnitType": "",
+												"UseAsPrefix": true,
+												"BuffSet": {
+													"0": {
+														"Attribute": "Unit_SensorRadius",
+														"Mode": "Add",
+														"Value": 400
+													},
+													"1": {
+														"Attribute": "Unit_ContactRadius",
+														"Mode": "Add",
+														"Value": 400
+													},
+													"2": {
+														"Attribute": "UnitDynamics_MaxSpeed",
+														"Mode": "AddPercent",
+														"Value": 20
+													}
+												}
+											}
+										},
+										"UnitTypeBuffsToApply": {
+											"0": { "BuffSet": { "1": { "Value": 750 } } },
+											"1": { "BuffSet": { "1": { "Value": 750 } } },
+											"2": {
+												"UnitType": "",
+												"UseAsPrefix": true,
+												"UnitClass": "Medium, Large, XLarge",
+												"ClassOperator": "Or",
+												"BuffSet": {
+													"0": {
+														"Attribute": "Unit_SensorRadius",
+														"Mode": "Add",
+														"Value": 400
+													},
+													"1": {
+														"Attribute": "Unit_ContactRadius",
+														"Mode": "Add",
+														"Value": 400
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							"5": {
+								"LocalizedShortDescriptionStringID": "Mobility: 900 radius, 25% speed. Sensors: +500",
+								"StatusEffectsToApply": {
+									"K_MovementShuntCarrier_5_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"UnitType": "",
+												"UseAsPrefix": true,
+												"BuffSet": {
+													"0": {
+														"Attribute": "Unit_SensorRadius",
+														"Mode": "Add",
+														"Value": 500
+													},
+													"1": {
+														"Attribute": "Unit_ContactRadius",
+														"Mode": "Add",
+														"Value": 500
+													},
+													"2": {
+														"Attribute": "UnitDynamics_MaxSpeed",
+														"Mode": "AddPercent",
+														"Value": 25
+													}
+												}
+											}
+										},
+										"UnitTypeBuffsToApply": {
+											"0": { "BuffSet": { "1": { "Value": 900 } } },
+											"1": { "BuffSet": { "1": { "Value": 900 } } },
+											"2": {
+												"UnitType": "",
+												"UseAsPrefix": true,
+												"UnitClass": "Medium, Large, XLarge",
+												"ClassOperator": "Or",
+												"BuffSet": {
+													"0": {
+														"Attribute": "Unit_SensorRadius",
+														"Mode": "Add",
+														"Value": 500
+													},
+													"1": {
+														"Attribute": "Unit_ContactRadius",
+														"Mode": "Add",
+														"Value": 500
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"1": { // Missile Systems
+						"View": {
+							"LocalizedLongDescriptionStringID": "Increase power to unlock and improve targeted missile weapon. Shunting power increases maximum ammo, range and reload speed."
+						},
+						"PowerLevels": {
+							"1": {
+								"LocalizedShortDescriptionStringID": "Max Ammo: 1 Reload: 8s Range: 2200"
+							},
+							"2": {
+								"LocalizedShortDescriptionStringID": "Max Ammo: 2 Reload: 7s Range: 2300",
+								"StatusEffectsToApply": {
+									"K_Missiles_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": { "BuffSet": {
+												"2": {
+													"Name": "SHUNTINGBOMB",
+													"Attribute": "WeaponRange_DistanceLong",
+													"Mode": "Add",
+													"Value": 100
+												}
+											} }
+										}
+									}
+								}
+							},
+							"3": {
+								"LocalizedShortDescriptionStringID": "Max Ammo: 3 Reload: 6s Range: 2400",
+								"StatusEffectsToApply": {
+									"K_Missiles_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": { "BuffSet": {
+												"2": {
+													"Name": "SHUNTINGBOMB",
+													"Attribute": "WeaponRange_DistanceLong",
+													"Mode": "Add",
+													"Value": 200
+												}
+											} }
+										}
+									}
+								}
+							},
+							"4": {
+								"LocalizedShortDescriptionStringID": "Max Ammo: 4 Reload: 5s Range: 2550",
+								"StatusEffectsToApply": {
+									"K_Missiles_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": { "BuffSet": {
+												"2": {
+													"Name": "SHUNTINGBOMB",
+													"Attribute": "WeaponRange_DistanceLong",
+													"Mode": "Add",
+													"Value": 350
+												}
+											} }
+										}
+									}
+								}
+							},
+							"5": {
+								"LocalizedShortDescriptionStringID": "Max Ammo: 5 Reload: 4s Range: 2700",
+								"StatusEffectsToApply": {
+									"K_Missiles_5_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": { "BuffSet": {
+												"2": {
+													"Mode": "Add",
+													"Value": 500
+												}
+											} }
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"2": { // Re-establish Systems
+						"PowerLevels": {
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 40",
+								"StatusEffectsToApply": {
+									"Regen_2_StatusEffect_MP": {
+										"Modifiers": {
+											"0": {
+												"HealthOverTimeAttributes": {
+													"Amount": 40
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 50",
+								"StatusEffectsToApply": {
+									"Regen_3_StatusEffect_MP": {
+										"Modifiers": {
+											"0": {
+												"HealthOverTimeAttributes": {
+													"Amount": 50
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 65",
+								"StatusEffectsToApply": {
+									"Regen_4_StatusEffect_MP": {
+										"Modifiers": {
+											"0": {
+												"HealthOverTimeAttributes": {
+													"Amount": 65
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Carrier regeneration: 80",
+								"StatusEffectsToApply": {
+									"Regen_5_StatusEffect_MP": {
+										"Modifiers": {
+											"0": {
+												"HealthOverTimeAttributes": {
+													"Amount": 80
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					},
+
+					"3": { // Weapon Systems. Changed buffs affect PD rate of fire
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 3"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Missiles Enabled. 25% PD ROF Bonus",
+								"StatusEffectsToApply": {
+									"K_Weapons_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 25 }, // TURRET_BR
+													"1": { "Mode": "AddPercent", "Value": 25 }, // TURRET_BL
+													"2": { "Mode": "AddPercent", "Value": 25 }, // TURRET_FL
+													"3": { "Mode": "AddPercent", "Value": 25 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "40% PD ROF Bonus, 2 Missiles",
+								"StatusEffectsToApply": {
+									"K_Weapons_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 40 }, // TURRET_BR
+													"1": { "Mode": "AddPercent", "Value": 40 }, // TURRET_BL
+													"2": { "Mode": "AddPercent", "Value": 40 }, // TURRET_FL
+													"3": { "Mode": "AddPercent", "Value": 40 }, // TURRET_FR
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 2 } // Missiles ROF
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "65% PD ROF Bonus, 3 Missiles",
+								"StatusEffectsToApply": {
+									"K_Weapons_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 65 }, // TURRET_BR
+													"1": { "Mode": "AddPercent", "Value": 65 }, // TURRET_BL
+													"2": { "Mode": "AddPercent", "Value": 65 }, // TURRET_FL
+													"3": { "Mode": "AddPercent", "Value": 65 }, // TURRET_FR
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 3 } // Missiles ROF
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "100% PD ROF Bonus, 4 Missiles",
+								"StatusEffectsToApply": {
+									"K_Weapons_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 100 }, // TURRET_BR
+													"1": { "Mode": "AddPercent", "Value": 100 }, // TURRET_BL
+													"2": { "Mode": "AddPercent", "Value": 100 }, // TURRET_FL
+													"3": { "Mode": "AddPercent", "Value": 100 }, // TURRET_FR
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 4 } // Missiles ROF
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Armor Piercing Rounds: 250% Damage, 50% PD ROF Bonus, 4 Missiles",
+								"StatusEffectsToApply": {
+									"K_Weapons_5_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Mode": "AddPercent", "Value": 50 }, // TURRET_FL_APBULLETS
+													"1": { "Mode": "AddPercent", "Value": 50 }, // TURRET_FR_APBULLETS
+													"2": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BR_APBULLETS
+													"3": { "Mode": "AddPercent", "Value": 50 }, // TURRET_BL_APBULLETS
+													"4": { "Value": 2 }, // Fire rate display
+													"5": { "Attribute": "UnitWeapon_RateOfFire", "Mode": "Set", "Value": 4 }, // Missiles ROF
+													"6": { "Remove": true },
+													"7": { "Remove": true },
+													"8": { "Remove": true }
+												}
+											}
+										}
+									},
+									"G_Weapons_MoreDamage_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 150 }
+												}
+											}
+										}
+									}
+								}
+							}
+
+						}
+					}
+
+				}
+			}
+		},
+
+		"K_MovementBuff_StatusEffect_01": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 8
+							}
+						}
+					}
+				}
+			}
+		},
+		"K_MovementBuff_StatusEffect_02": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 12
+							}
+						}
+					}
+				}
+			}
+		},
+		"K_MovementBuff_StatusEffect_03": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 16
+							}
+						}
+					}
+				}
+			}
+		},
+		"K_MovementBuff_StatusEffect_04": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 20
+							}
+						}
+					}
+				}
+			}
+		},
+		"K_MovementBuff_StatusEffect_05": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"C_Sob_NukeEmitter_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 1500, // this affects the duration, current duration is 30s, duration is MaxHealth divided by half of BaseDamagePerRound of C_Sob_NukeEmitter_Weapon_G2G weapon
+				"PopCapCost": 0,
+				"ContactRadius": 0,
+				"SensorRadius": 0
+			},
+			"WeaponAttributes": {
+				"C_Sob_NukeEmitter_Weapon_G2G": {
+					"BurstPeriodMinTimeMS": 250,
+					"BurstPeriodMaxTimeMS": 250,
+					"CooldownTimeMS": 0,
+					"BaseDamagePerRound": 100,
+					"DamagePacketsPerShot": 0,
+					"StatusEffectsExcludeTargetType": "All",
+					"FriendlyFireDamageScalar": 0.5,
+					"WeaponOwnerFriendlyFireDamageScalar": 1,
+					"Modifiers": {
+						"0": {
+							"TargetClass": "Strikecraft, Small, Harvester",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"1": {
+							"TargetClass": "Carrier, Large, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 120
+						}
+					}
+				},
+				"C_Sob_NukeEmitter_Weapon_Self": {
+					"BaseDamagePerRound": 0
+				}
+			}
+		},
+
+		"N_CruiseMissile_Sight": {
+			"UnitAttributes": {
+				"MaxHealth": 99999,
+				"PopCapCost": 0,
+				"ContactRadius": 0,
+				"SensorRadius": 0,
+				"DamageReceivedMultiplier": 0,
+				"AccuracyReceivedMultiplier": 0
+			}
+		},
+		"N_MissileBarrage_Sight": {
+			"UnitAttributes": {
+				"MaxHealth": 99999,
+				"PopCapCost": 0,
+				"ContactRadius": 0,
+				"SensorRadius": 0,
+				"DamageReceivedMultiplier": 0,
+				"AccuracyReceivedMultiplier": 0
+			}
+		},
+		"C_Sob_NukeSight_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 99999,
+				"PopCapCost": 0,
+				"ContactRadius": 0,
+				"SensorRadius": 0,
+				"DamageReceivedMultiplier": 0,
+				"AccuracyReceivedMultiplier": 0
+			},
+			"AbilityAttributes": {
+				"Ability_C_CruiseSightSelfDestruct": {
+					"SelfDestruct": {
+						"DurationSeconds": 39
+					}
+				}
+			}
+		},
+
+		"C_PopcapScanner": {
+			"UnitAttributes": {
+				"ExcludeFromUnitStats": false,
+				"Resource1Cost": 270,
+				"MaxHealth": 1100,
+				"Armour": 3,
+				"SensorRadius": 1400,
+				"ContactRadius": 1550,
+				"PriorityAsTarget": -15
+			}
+		},
+		"C_Sob_PopcapScanner": {
+			"UnitAttributes": {
+				"ExcludeFromUnitStats": false,
+				"Resource1Cost": 270,
+				"Armour": 3,
+				"ContactRadius": 1000,
+				"WorldHeightOffset": 15,
+				"AggroRange": 900,
+				"PriorityAsTarget": -15
+			},
+			"WeaponAttributes": {
+				"C_Sob_PopCapScanner_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 130,
+					"DamagePacketsPerShot": 3,
+					"AreaOfEffectRadius": 78,
+					"TargetPrioritizationAttributes": {
+						"AngleWeight": 10,
+						"DistanceWeight": 0.1
+					},
+					"RangeAttributesMedium": { "Accuracy": 100 },
+					"RangeAttributesLong": { "Accuracy": 100 }
+				}
+			}
+		},
+		"Scanner_Stun_StatusEffect": {
+			"StatusEffectAttributes": {
+				"Duration": 0.85
+			}
+		},
+		"N_Gun_Turret_MP": {
+			"UnitAttributes": {
+				"ExcludeFromUnitStats": false,
+				"Resource1Cost": 300,
+				"MaxHealth": 850,
+				"Armour": 1,
+				"SensorRadius": 1000,
+				"PriorityAsTarget": 12,
+				"WorldHeightOffset": 15
+			},
+			"WeaponAttributes": {
+				"N_Gun_Turret_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 57,
+					"DamagePacketsPerShot": 2,
+					"NumberOfBursts": 16,
+					"CooldownTimeMS": 0,
+					"BurstPeriodMaxTimeMS": 320,
+					"BurstPeriodMinTimeMS": 320,
+					"WindDownTimeMS": 50,
+					"RateOfFire": 4,
+					"ReloadTimeMS": 1400,
+					"AreaOfEffectRadius": 80,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesShort": { "Accuracy": 100 },
+					"RangeAttributesMedium": { "Accuracy": 95 },
+					"RangeAttributesLong": { "Accuracy": 60, "Distance": 1400 },
+					"Turret": { "RotationSpeed": 150 }
+				}
+			}
+		},
+		"N_Missle_Turret_MP": {
+			"UnitAttributes": {
+				"ExcludeFromUnitStats": false,
+				"MaxHealth": 900,
+				"Resource1Cost": 300,
+				"PriorityAsTarget": -50
+			},
+			"WeaponAttributes": {
+				"N_Missle_Turret_Weapon_G2A_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		"N_ECMField_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 700,
+				"Armour": 2,
+				"PopCapCost": 0,
+				"ContactRadius": 400,
+				"SensorRadius": 270,
+				"PriorityAsTarget": -1500
+			},
+			"DetectableAttributes": {
+				"MinimumStateAfterDetection": "Hidden"
+			}
+		},
+		"ECMField_StatusEffect": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"4": { "Value": -35 }, // MaxSpeed
+							"5": { "Value": -25 }, // MaxSpeedTurnRadius
+							"6": {
+								"Attribute": "UnitDynamics_AccelerationTime",
+								"Mode": "AddPercent",
+								"Value": 25
+							},
+							"7": {
+								"Attribute": "UnitCombatBehaviour_MinDesiredCombatRange",
+								"Mode": "Set",
+								"Value": 400
+							}
+						}
+					}
+				}
+			}
+		},
+		"C_Probe_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 120,
+				"SensorRadius": 1250,
+				"ContactRadius": 1550
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 200
+				}
+			}
+		},
+		"G_Scanner_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 250,
+				"SensorRadius": 1300
+			}
+		},
+		"K_ExplodingSkimmer_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 100,
+				"MaxHealth": 500,
+				"Armour": 0,
+				"ProductionTime": 60,
+				"PriorityAsTarget": 6,
+				"PopCapCost": 2
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 200,
+					"BrakingTime": 0.1
+				}
+			},
+			"WeaponAttributes": {
+				"K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 620,
+					"DamagePacketsPerShot": 15,
+					"AreaOfEffectRadius": 260,
+					"AreaOfEffectFalloffType": "Linear",
+					"WeaponOwnerFriendlyFireDamageScalar": 2 // Ensure BD kills itself on detonate
+				},
+				"K_ExplodingSkimmer_Weapon_G2G_MP": { // Fixes display issues
+					"BaseDamagePerRound": 620,
+					"DamagePacketsPerShot": 15
+				}
+			}
+		},
+
+		"C_Harvester_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 150,
+				"MaxHealth": 950,
+				"PopCapCost": 2,
+				"Armour": 2,
+				"PriorityAsTarget": -25
+			},
+			"AbilityAttributes": {
+				"Ability_Common_DemoChargeLay_MP": {
+					"Resource1Cost": 100
+				}
+			},
+			"HarvesterAttributes": {
+				"SalvageCycles": {
+					"0": {
+						"ResourcesLoadedPerCycle": 5,
+						"ResourcesExtractedPerCycle": 4,
+						"CycleDuration": 1.25
+					}
+				}
+			},
+			"StorageAttributes": {
+				"C_Harvester_StorageAttributesAsset_MP": {
+					"InventoryLoadout": {
+						"Resource2": { "Capacity": 20 }
+					}
+				}
+			}
+		},
+		"G_Harvester_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 170,
+				"MaxHealth": 950,
+				"PopCapCost": 2,
+				"Armour": 4,
+				"PriorityAsTarget": -25
+			},
+			"AbilityAttributes": {
+				"Ability_Common_DemoChargeLay_MP": {
+					"Resource1Cost": 100
+				}
+			},
+			"HarvesterAttributes": {
+				"SalvageCycles": {
+					"0": {
+						"ResourcesLoadedPerCycle": 5,
+						"ResourcesExtractedPerCycle": 4,
+						"CycleDuration": 1.25
+					}
+				}
+			},
+			"StorageAttributes": {
+				"G_Harvester_StorageAttributesAsset_MP": {
+					"InventoryLoadout": {
+						"Resource2": { "Capacity": 20 }
+					}
+				}
+			}
+		},
+		"K_Harvester_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 170,
+				"MaxHealth": 950,
+				"PopCapCost": 2,
+				"Armour": 4,
+				"PriorityAsTarget": -25
+			},
+			"AbilityAttributes": {
+				"Ability_Common_DemoChargeLay_MP": {
+					"Resource1Cost": 100
+				}
+			},
+			"HarvesterAttributes": {
+				"SalvageCycles": {
+					"0": {
+						"ResourcesLoadedPerCycle": 5,
+						"ResourcesExtractedPerCycle": 4,
+						"CycleDuration": 1.25
+					}
+				}
+			},
+			"StorageAttributes": {
+				"G_Harvester_StorageAttributesAsset_MP": {
+					"InventoryLoadout": {
+						"Resource2": { "Capacity": 20 }
+					}
+				}
+			}
+		},
+
+		"N_DemoCharge_MP": {
+			"WeaponAttributes": {
+				"N_DemoCharge_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 200,
+					"DamagePacketsPerShot": 2
+				}
+			}
+		},
+
+		"Research_Buff_Fleet_Popcap_1": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"ResearchTime": 5
+			}
+		},
+		"Research_Buff_Fleet_Popcap_2": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 250,
+				"ResearchTime": 7
+			}
+		},
+		"Research_Buff_Fleet_Popcap_3": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 350
+			}
+		},
+		"Research_Buff_Fleet_Popcap_4": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500
+			}
+		},
+		"Research_Buff_Fleet_Popcap_5": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 700
+			}
+		},
+
+		"G_BaseRunner_HealAura_HealOT_StatusEffect_MP": {
+			"CloneFrom": "Regen_BaseRunnerPassive_StatusEffect",
+
+			"StatusEffectAttributes": {
+				"Lifetime": "Finite",
+				"Duration": 0.105,
+				"MaxStacks": 1,
+				"StackingBehaviour": "Replace",
+				"Modifiers": {
+					"0": {
+						"ModifierType": "HealthOverTime",
+						"HealthOverTimeAttributes": {
+							"ID": "G_BaseRunner_HealAura_HealOT_StatusEffect_MP",
+							"Amount": 2,
+							"MSTickDuration": 50,
+							"DamageType": "Heal"
+						}
+					}
+				}
+			}
+		},
+
+		"C_Baserunner_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 30,
+				"MaxHealth": 1700,
+				"PriorityAsTarget": -550
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 70,
+					"MaxEaseIntoTurnTime": 0.6
+				}
+			},
+			"WeaponAttributes": {
+				"C_Baserunner_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 16,
+					"RateOfFire": 10,
+					"DamagePacketsPerShot": 1,
+					"RangeAttributesShort": {
+						"Accuracy": 90,
+						"Distance": 700
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 82,
+						"Distance": 1280
+					},
+					"RangeAttributesLong": {
+						"Remove": true
+					},
+					"Turret": {
+						"RotationSpeed": 200
+					},
+					"Modifiers": {
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
+					}
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_DeployTurret_MP": {
+					"CooldownTimeSecs": 120
+				},
+				"Ability_C_DeployTurret_BeginCooldown_MP": {
+					"CooldownTimeSecs": 120
+				},
+				"Ability_C_LaunchProbe_MP": {
+					"Resource1Cost": 150
+				}
+			}
+		},
+		"C_Sob_Baserunner_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 30,
+				"MaxHealth": 1500,
+				"PriorityAsTarget": -550
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 70,
+					"MaxEaseIntoTurnTime": 0.6
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_Baserunner_ECMField": {
+					"CooldownTimeSecs": 80,
+					"Resource1Cost": 0
+				},
+				"Ability_C_DeployTurret_BeginCooldown_MP": {
+					"CooldownTimeSecs": 60
+				},
+				"Ability_C_LaunchProbe_MP": {
+					"Resource1Cost": 150
+				}
+			},
+			"WeaponAttributes": {
+				"C_Sob_Baserunner_Weapon_ECM": {
+					"ProjectileEntityTypeToSpawn": "G_Scanner_ProjectileEntity_MP",
+					"AreaOfEffectRadius": 240,
+					"RangeAttributesShort": {
+						"Distance": 1100
+					}
+				},
+				"C_Sob_Baserunner_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 16,
+					"RateOfFire": 10,
+					"DamagePacketsPerShot": 1,
+					"RangeAttributesShort": {
+						"Accuracy": 90,
+						"Distance": 700
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 82,
+						"Distance": 1280
+					},
+					"RangeAttributesLong": {
+						"Remove": true
+					},
+					"Turret": {
+						"RotationSpeed": 200
+					},
+					"Modifiers": {
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
+					}
+				}
+			}
+		},
+		"G_Baserunner_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 30,
+				"MaxHealth": 1600,
+				"PriorityAsTarget": -550
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 75
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_G_DeployScanner_MP": {
+					"CooldownTimeSecs": 140
+				},
+				"Ability_G_BaseRunnerPassiveRegen": {
+					"CooldownTimeSecs": 65,
+					"ApplyStatusEffect": {
+						"Regen_BaseRunnerPassive_StatusEffect": {
+							"Lifetime": "Finite",
+							"Duration": 9.005,
+							"MaxStacks": 1,
+							"StackingBehaviour": "Replace",
+							"BuffsToApplyToTarget": {
+								"0": {
+									"UnitType": "G_Baserunner_MP",
+									"BuffSet": {
+										"0": {
+											"Attribute": "UnitDynamics_MaxSpeed",
+											"Mode": "AddPercent",
+											"Value": -20
+										},
+										"1": {
+											"Attribute": "UnitDynamics_AccelerationTime",
+											"Mode": "AddPercent",
+											"Value": 20
+										},
+										"2": {
+											"Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+											"Mode": "AddPercent",
+											"Value": 20
+										}
+									}
+								}
+							},
+							"Modifiers": {
+								"0": {
+									"ModifierType": "HealthOverTime",
+									"HealthOverTimeAttributes": {
+										"ID": "G_BaseRunner_HealAura_HealOT_StatusEffect_MP",
+										"Amount": 3,
+										"MSTickDuration": 50,
+										"DamageType": "Heal"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Baserunner_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 16,
+					"RateOfFire": 10,
+					"DamagePacketsPerShot": 1,
+					"RangeAttributesShort": {
+						"Accuracy": 90,
+						"Distance": 700
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 82,
+						"Distance": 1280
+					},
+					"RangeAttributesLong": {
+						"Remove": true
+					},
+					"Turret": {
+						"RotationSpeed": 200
+					},
+					"Modifiers": {
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
+					}
+				},
+				"G_Baserunner_Weapon_HealingAura_MP": {
+					"RateOfFire": 10,
+					"BaseDamagePerRound": 2,
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1000,
+					"CooldownTimeMS": 0,
+					"FriendlyFireDamageScalar": 1,
+					"WeaponOwnerFriendlyFireDamageScalar": 1,
+					"AreaOfEffectRadius": 500,
+					"StatusEffectsTargetAlignment": "Friend",
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": ["G_BaseRunner_HealAura_HealOT_StatusEffect_MP"] }
+					},
+					"Modifiers": {
+						"0": {
+							"TargetClass": "Air",
+							"Modifier": "CanNotTarget"
+						}
+					}
+				},
+				"G_Baserunner_Weapon_PopCapAbility_MP": {
+					"RangeAttributesShort": {
+						"Distance": 2550
+					}
+				}
+			}
+		},
+		"K_Baserunner_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 30,
+				"MaxHealth": 1500,
+				"PriorityAsTarget": -520
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 84
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_K_BaseRunnerSmoke": {
+					"CooldownTimeSecs": 40
+				},
+				"Ability_G_BaseRunnerPassiveRegen": {
+					"CooldownTimeSecs": 0,
+					"TargetAlignment": "Self",
+					"TargetingType": "Self, Passive",
+					"AbilityMapTargetLayers": "Ground",
+					"ApplyStatusEffect": {
+						"Regen_BaseRunnerPassive_StatusEffect": {
+							"Lifetime": "Indefinite",
+							"Duration": 0,
+							"Modifiers": { "0": { "ModifierType": "HealthOverTime", "HealthOverTimeAttributes": {
+								"MSTickDuration": 1000,
+								"Amount": 20,
+								"DamageType": "Heal"
+							} } }
+						}
+					},
+					"ActivationDependencies": {
+						"TakeNoDamageForMS": 10000
+					},
+					"AutoToggleOffConditions": {
+						"TakeDamage": true
+					},
+					"ChainCasting": {
+						"QueuedAbility": ""
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Baserunner_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 16,
+					"RateOfFire": 10,
+					"DamagePacketsPerShot": 1,
+					"RangeAttributesShort": {
+						"Accuracy": 90,
+						"Distance": 700
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 82,
+						"Distance": 1280
+					},
+					"RangeAttributesLong": {
+						"Remove": true
+					},
+					"Turret": {
+						"RotationSpeed": 200
+					},
+					"Modifiers": {
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 50 },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
+					}
+				},
+				"K_Baserunner_Weapon_Ballistic_Smoke_MP": {
+					"NumberOfBursts": 3
+				}
+			}
+		},
+
+		"Research_Buff_Support_T1_ProductionBoost": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 50,
+				"ResearchTime": 60,
+				"Dependencies": []
+			}
+		},
+		"Research_Buff_Support_T2_ProductionBoost": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 80,
+				"ResearchTime": 60,
+				"Dependencies": ["Research_Buff_Support_T1_ProductionBoost"]
+			}
+		},
+		"Research_Buff_S_Support_T1_ProductionBoost": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 50,
+				"ResearchTime": 60,
+				"Dependencies": []
+			}
+		},
+		"Research_Buff_S_Support_T2_ProductionBoost": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 600,
+				"Resource2Cost": 80,
+				"ResearchTime": 60,
+				"Dependencies": ["Research_Buff_S_Support_T1_ProductionBoost"]
+			}
+		},
+
+		"C_SupportCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 480,
+				"Resource2Cost": 50,
+				"ProductionTime": 40,
+				"MaxHealth": 2900,
+				"Armour": 5,
+				"PopCapCost": 5,
+				"PriorityAsTarget": -10
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxEaseIntoTurnTime": 0.25,
+					"MaxSpeedTurnRadius": 75,
+					"AccelerationTime": 0.9
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_SupportCruiser_AA": {
+					"RequiredResearch": [] // Always active
+				}
+			},
+			"WeaponAttributes": {
+				"C_SupportCruiser_Weapon_Repair_Small_MP": {
+					"RateOfFire": 6,
+					"RangeAttributesShort": {
+						"Distance": 600
+					}
+				},
+				"C_SupportCruiser_Weapon_G2A_MP": {
+					"BaseDamagePerRound": 70,
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"CooldownTimeMS": 0,
+					"WindUpTimeMS": 50,
+					"RateOfFire": 0, // Rate of fire is changed by the upgrade
+					"ReloadTimeMS": 5000,
+					"AreaOfEffectRadius": 60,
+					"RangeAttributesLong": {
+						"Distance": 1200
+					}
+				},
+				"C_SupportCruiser_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak",
+					"TracerSpeed": 1300,
+					"BaseDamagePerRound": 16,
+					"RateOfFire": 6,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 830,
+					"CooldownTimeMS": 500,
+					"ReloadTimeMS": 2000,
+					"RangeAttributesShort": { "Distance": 400, "Accuracy": 45 },
+					"RangeAttributesLong": { "Distance": 950, "Accuracy": 35 },
+					"Turret": {
+						"FieldOfView": 360,
+						"FieldOfFire": 360,
+						"RotationSpeed": 160
+					},
+					"Modifiers": {
+						"0": {
+							"Remove": true
+						},
+						"1": {
+							"Modifier": "AccuracyShortPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						},
+						"2": {
+							"Modifier": "AccuracyMediumPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						},
+						"3": {
+							"Modifier": "AccuracyLongPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						}
+					}
+				}
+			}
+		},
+		"C_Sob_SupportCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 480,
+				"Resource2Cost": 50,
+				"ProductionTime": 40,
+				"MaxHealth": 2900,
+				"Armour": 5,
+				"PopCapCost": 5,
+				"PriorityAsTarget": -10
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxEaseIntoTurnTime": 0.25,
+					"MaxSpeedTurnRadius": 75,
+					"AccelerationTime": 0.9
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_SupportCruiser_AA": {
+					"RequiredResearch": [] // Always active
+				}
+			},
+			"WeaponAttributes": {
+				"C_SupportCruiser_Weapon_Repair_Small_MP": {
+					"RateOfFire": 6,
+					"RangeAttributesShort": {
+						"Distance": 600
+					}
+				},
+				"C_SupportCruiser_Weapon_G2A_MP": {
+					"BaseDamagePerRound": 70,
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"CooldownTimeMS": 0,
+					"WindUpTimeMS": 50,
+					"RateOfFire": 0, // Rate of fire is changed by the upgrade
+					"ReloadTimeMS": 5000,
+					"AreaOfEffectRadius": 60,
+					"RangeAttributesLong": {
+						"Distance": 1200
+					}
+				},
+				"C_SupportCruiser_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"TargetStyle": "Flak",
+					"TracerSpeed": 1300,
+					"BaseDamagePerRound": 16,
+					"RateOfFire": 6,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 830,
+					"CooldownTimeMS": 500,
+					"ReloadTimeMS": 2000,
+					"RangeAttributesShort": { "Distance": 400, "Accuracy": 45 },
+					"RangeAttributesLong": { "Distance": 950, "Accuracy": 35 },
+					"Turret": {
+						"FieldOfView": 360,
+						"FieldOfFire": 360,
+						"RotationSpeed": 160
+					},
+					"Modifiers": {
+						"0": {
+							"Remove": true
+						},
+						"1": {
+							"Modifier": "AccuracyShortPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						},
+						"2": {
+							"Modifier": "AccuracyMediumPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						},
+						"3": {
+							"Modifier": "AccuracyLongPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_SupportCruiser_AA": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 450,
+				"Resource2Cost": 250,
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": -1,
+						"UseAsPrefix": false,
+						"UnitType": "C_SupportCruiser_MP",
+						"BuffSet": {
+							"0": {
+								"Name": "ANTI-AIR",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_S_SupportCruiser_AA": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 450,
+				"Resource2Cost": 250,
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": -1,
+						"UseAsPrefix": false,
+						"UnitType": "C_SupportCruiser_MP",
+						"BuffSet": {
+							"0": {
+								"Name": "ANTI-AIR",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"G_SupportCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 560,
+				"Resource2Cost": 50,
+				"PopCapCost": 4,
+				"MaxHealth": 3500,
+				"Armour": 6,
+				"ProductionTime": 50,
+				"SensorRadius": 1450,
+				"ContactRadius": 1600
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"3": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_SupportCruiser_Weapon_Front_MP": { // dummy weapon
+					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": false
+				},
+				"G_SupportCruiser_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 10,
+					"RangeAttributesShort": {
+						"Accuracy": 50,
+						"Distance": 900
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 40,
+						"Distance": 1200
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 25,
+						"Distance": 1380
+					},
+					"Modifiers": {
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 35 },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
+					}
+				}
+			}
+		},
+		"K_SupportCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 560,
+				"Resource2Cost": 50,
+				"PopCapCost": 4,
+				"MaxHealth": 3500,
+				"Armour": 6,
+				"SensorRadius": 1450,
+				"ContactRadius": 1600
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"3": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_SupportCruiser_Weapon_Front_MP": { // dummy weapon
+					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": false
+				},
+				"G_SupportCruiser_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"RateOfFire": 10,
+					"RangeAttributesShort": {
+						"Accuracy": 50,
+						"Distance": 900
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 40,
+						"Distance": 1200
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 25,
+						"Distance": 1380
+					},
+					"Modifiers": {
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 35 },
+						"2": { "Remove": true },
+						"3": { "Remove": true },
+						"4": { "Remove": true }
+					}
+				},
+				"K_SupportCruiser_WeaponBuff_G2G_MP": {
+					"AreaOfEffectRadius": 300
+				}
+			}
+		},
+		"Research_Buff_G_ProductionCruiserResourcer": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 60
+			}
+		},
+		"Research_Buff_K_ProductionCruiserResourcer": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 60
+			}
+		},
+
+		"C_HAC_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 270,
+				"Resource2Cost": 20,
+				"MaxHealth": 970,
+				"SensorRadius": 1100,
+				"ProductionTime": 17,
+				"Armour": 7,
+				"PopCapCost": 2
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 83
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_SmokeGrenade_MP": {
+					"CooldownTimeSecs": 80
+				}
+			},
+			"WeaponAttributes": {
+				"C_HAC_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 17,
+					"BurstPeriodMinTimeMS": 500,
+					"BurstPeriodMaxTimeMS": 540,
+					"RateOfFire": 12,
+					"AreaOfEffectRadius": 42,
+					"CooldownTimeMS": 450,
+					"ReloadTimeMS": 1650,
+					"AreaOfEffectFalloffType": "Linear",
+					"RangeAttributesShort": { "Accuracy": 80 },
+					"RangeAttributesMedium": { "Accuracy": 70 },
+					"RangeAttributesLong": { "Accuracy": 61, "Distance": 975 },
+					"Turret": { "RotationSpeed": 190 },
+					"TargetPrioritizationAttributes": {
+						"TargetPriorityWeight": 50
+					}
+				}
+			}
+		},
+		"Suppress_StatusEffect": {
+			"StatusEffectAttributes": {
+				"Duration": 2.65,
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": { "Value": -33 }
+						}
+					}
+				}
+			}
+		},
+		"Ability_C_SlowDebuff": {
+			"AbilityViewAttributes": {
+				"LocalizedLongDescriptionStringID": "When firing, enemy STRIKE ground target is slowed by 33% for 2.65 seconds."
+			}
+		},
+		"Tier_2_C_ArmouredAssault": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 270,
+				"Resource2Cost": 75,
+				"ResearchTime": 65
+			}
+		},
+		"Tier_2_S_ArmouredAssault": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 270,
+				"Resource2Cost": 75,
+				"ResearchTime": 65
+			}
+		},
+
+		"Research_Buff_C_TrackedUnits_Armor01": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 on Armored Assault, Railgun and Missile Battery",
+				"Resource1Cost": 200,
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
+				}
+			}
+		},
+		"Research_Buff_C_TrackedUnits_Armor02": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"Resource1Cost": 250,
+				"Resource2Cost": 175,
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
+				}
+			}
+		},
+		"Research_Buff_C_TrackedUnits_Armor03": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"Resource1Cost": 300,
+				"Resource2Cost": 250,
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"2": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"3": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_S_TrackedUnits_Armor01": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 on Armored Assault, Railgun and Missile Battery",
+				"Resource1Cost": 200,
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
+				}
+			}
+		},
+		"Research_Buff_S_TrackedUnits_Armor02": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"Resource1Cost": 250,
+				"Resource2Cost": 175,
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
+				}
+			}
+		},
+		"Research_Buff_S_TrackedUnits_Armor03": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves armor chassis of all Heavy Vehicles.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Armored Assault, Railgun and Missile Battery",
+				"Resource1Cost": 300,
+				"Resource2Cost": 250,
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"2": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"3": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} }
+				}
+			}
+		},
+
+		"G_Catamaran_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 30,
+				"ProductionTime": 18,
+				"SensorRadius": 1100,
+				"ContactRadius": 1250,
+				"Armour": 7,
+				"MaxHealth": 850
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 76 }
+			},
+			"AbilityAttributes": {
+				"Ability_G_AssaultShipRegen": {
+					"ApplyStatusEffect": {
+						"Regen_AssaultShip_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 12 } } } }
+					},
+					"ActivationDependencies": {
+						"TakeNoDamageForMS": 15000
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 28,
+					"BurstPeriodMinTimeMS": 750,
+					"BurstPeriodMaxTimeMS": 850,
+					"RateOfFire": 4,
+					"AreaOfEffectRadius": 118,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesShort":  { "Distance": 450 },
+					"RangeAttributesMedium": { "Distance": 600 },
+					"RangeAttributesLong":   { "Distance": 920 },
+					"TargetPrioritizationAttributes": {
+						"TargetPriorityWeight": 50
+					}
+				}
+			}
+		},
+		"K_AssaultShip_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 30,
+				"ProductionTime": 18,
+				"SensorRadius": 1100,
+				"ContactRadius": 1250,
+				"Armour": 7,
+				"MaxHealth": 850
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 76 }
+			},
+			"AbilityAttributes": {
+				"Ability_G_AssaultShipRegen": {
+					"ApplyStatusEffect": {
+						"Regen_AssaultShip_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 12 } } } }
+					},
+					"ActivationDependencies": {
+						"TakeNoDamageForMS": 15000
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 28,
+					"BurstPeriodMinTimeMS": 750,
+					"BurstPeriodMaxTimeMS": 850,
+					"RateOfFire": 4,
+					"AreaOfEffectRadius": 118,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesShort":  { "Distance": 450 },
+					"RangeAttributesMedium": { "Distance": 600 },
+					"RangeAttributesLong":   { "Distance": 920 },
+					"TargetPrioritizationAttributes": {
+						"TargetPriorityWeight": 50
+					}
+				}
+			}
+		},
+		"Tier_1_G_Catamaran": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 450,
+				"Resource2Cost": 80,
+				"ResearchTime": 60
+			}
+		},
+		"Research_Buff_G_ShipUnits_Armor1": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 on Assault Ship and Missile Ship",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
+				}
+			}
+		},
+		"Research_Buff_G_ShipUnits_Armor2": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Ship and Missile Ship",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } },
+					"1": { "BuffSet": { "0": { "Value": 1 } } },
+					"2": { "BuffSet": { "0": { "Value": 1 } } },
+					"3": { "BuffSet": { "0": { "Value": 1 } } }
+				}
+			}
+		},
+		"Research_Buff_G_ShipUnits_Armor3": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 250,
+				"Resource2Cost": 250,
+				"ResearchTime": 25,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all armored class units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 200 on Assault Ship and Missile Ship"
+			}
+		},
+
+		"C_Escort_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 470,
+				"PopCapCost": 2,
+				"Armour": 2,
+				"ProductionTime": 12,
+				"PriorityAsTarget": 4
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 120,
+					"MaxSpeedTurnRadius": 60,
+					"BrakingTime": 0.7,
+					"AccelerationTime": 0.7
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_Nitrous_MP": {
+					"CooldownTimeSecs": 45,
+					"ApplyStatusEffect": {
+						"Nitrous_StatusEffect": {
+							"BuffsToApplyToTarget": {
+								"0": {
+									"BuffSet": {
+										"0": { "Value": 45 },
+										"2": { "Value": 35 }
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"C_Escort_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 14,
+					"RateOfFire": 5,
+					"CooldownTimeMS": 400,
+					"NumberOfBursts": 2,
+					"BurstPeriodMinTimeMS": 950,
+					"BurstPeriodMaxTimeMS": 1050,
+					"RangeAttributesShort": { "Accuracy": 85 },
+					"RangeAttributesMedium": { "Accuracy": 79 },
+					"RangeAttributesLong": {
+						"Distance": 870,
+						"Accuracy": 55
+					},
+					"Turret": { "RotationSpeed": 390 },
+					"Modifiers": {
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 60 },
+						"2": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 115 },
+						"3": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 115 },
+						"4": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 115 },
+						"5": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 130 },
+						"6": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 130 },
+						"7": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 },
+						"8": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 }
+					},
+					"TargetPrioritizationAttributes": {
+						"TargetPriorityWeight": 150
+					}
+				}
+			}
+		},
+		"C_Sob_Escort_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 470,
+				"PopCapCost": 2,
+				"Armour": 2,
+				"ProductionTime": 12,
+				"PriorityAsTarget": 4
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 120,
+					"MaxSpeedTurnRadius": 60,
+					"BrakingTime": 0.7,
+					"AccelerationTime": 0.7
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_S_Nitrous_MP": {
+					"CooldownTimeSecs": 45,
+					"ApplyStatusEffect": {
+						"Nitrous_StatusEffect": {
+							"BuffsToApplyToTarget": {
+								"0": {
+									"BuffSet": {
+										"0": { "Value": 45 },
+										"2": { "Value": 35 }
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"C_Escort_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 14,
+					"RateOfFire": 5,
+					"CooldownTimeMS": 400,
+					"NumberOfBursts": 2,
+					"BurstPeriodMinTimeMS": 950,
+					"BurstPeriodMaxTimeMS": 1050,
+					"RangeAttributesShort": { "Accuracy": 85 },
+					"RangeAttributesMedium": { "Accuracy": 79 },
+					"RangeAttributesLong": {
+						"Distance": 870,
+						"Accuracy": 55
+					},
+					"Turret": { "RotationSpeed": 390 },
+					"Modifiers": {
+						"1": { "TargetClass": "Air, Small, Support", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 60 },
+						"2": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 115 },
+						"3": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 115 },
+						"4": { "TargetClass": "Medium", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 115 },
+						"5": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyShortPercent", "Amount": 130 },
+						"6": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyMediumPercent", "Amount": 130 },
+						"7": { "TargetClass": "Large, XLarge", "ClassOperator": "Or", "Modifier": "AccuracyLongPercent", "Amount": 130 },
+						"8": { "TargetClass": "Air", "ClassOperator": "And", "Modifier": "DamagePercent", "Amount": 80 }
+					},
+					"TargetPrioritizationAttributes": {
+						"TargetPriorityWeight": 150
+					}
+				}
+			}
+		},
+		"Tier_1_C_Escorts": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 350,
+				"ResearchTime": 37
+			}
+		},
+		"Tier_1_S_Escorts": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 350,
+				"ResearchTime": 37
+			}
+		},
+
+		"G_SandSkimmer_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 500,
+				"PopCapCost": 2,
+				"SensorRadius": 1200,
+				"ContactRadius": 1300,
+				"ProductionTime": 11,
+				"PriorityAsTarget": 3
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 140 },
+				"Hover": { "TurnAcceleration": 130 }
+			},
+			"AbilityAttributes": {
+				"Ability_G_SandSkimmersRegen": {
+					"ApplyStatusEffect": {
+						"Regen_Sand_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 12 } } } }
+					},
+					"ActivationDependencies": {
+						"TakeNoDamageForMS": 15000
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_SandSkimmer_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 11,
+					"RateOfFire": 7,
+					"BurstPeriodMinTimeMS": 780,
+					"BurstPeriodMaxTimeMS": 840,
+					"CooldownTimeMS": 350,
+					"ReloadTimeMS": 600,
+					"RangeAttributesShort": { "Accuracy": 85 },
+					"RangeAttributesLong": { "Accuracy": 80, "Distance": 640 },
+					"TargetPrioritizationAttributes": {
+						"TargetPriorityWeight": 150
+					}
+				}
+			}
+		},
+		"K_Sandskimmer_MP": {
+			"UnitAttributes": {
+				"MaxHealth": 500,
+				"PopCapCost": 2,
+				"SensorRadius": 1200,
+				"ContactRadius": 1300,
+				"ProductionTime": 11,
+				"PriorityAsTarget": 3
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 140 },
+				"Hover": { "TurnAcceleration": 130 }
+			},
+			"AbilityAttributes": {
+				"Ability_G_SandSkimmersRegen": {
+					"ApplyStatusEffect": {
+						"Regen_Sand_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 12 } } } }
+					},
+					"ActivationDependencies": {
+						"TakeNoDamageForMS": 15000
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_SandSkimmer_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 11,
+					"RateOfFire": 7,
+					"BurstPeriodMinTimeMS": 780,
+					"BurstPeriodMaxTimeMS": 840,
+					"CooldownTimeMS": 350,
+					"ReloadTimeMS": 600,
+					"RangeAttributesShort": { "Accuracy": 85 },
+					"RangeAttributesLong": { "Accuracy": 80, "Distance": 640 },
+					"TargetPrioritizationAttributes": {
+						"TargetPriorityWeight": 150
+					}
+				}
+			}
+		},
+		"Tier_1_G_Sandskimmers": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 350,
+				"ResearchTime": 30
+			}
+		},
+
+		"Research_Buff_C_Escort": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 100
+			}
+		},
+		"Research_Buff_S_Escort": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 100
+			}
+		},
+		"Research_Buff_C_Escort_Damage01": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 25,
+				"ResearchTime": 15,
+				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"0": { "Value": 1 },
+							"1": { "Value": 1 }
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_C_Escort_Damage02": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 75,
+				"ResearchTime": 15,
+				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"0": { "Value": 1 },
+							"1": { "Value": 1 }
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_S_Escort_Damage01": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 25,
+				"ResearchTime": 15,
+				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"0": { "Value": 1 },
+							"1": { "Value": 1 }
+						}
+					},
+					"1": {
+						"BuffSet": {
+							"0": { "Value": 1 },
+							"1": { "Value": 1 }
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_S_Escort_Damage02": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 75,
+				"ResearchTime": 15,
+				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"0": { "Value": 1 },
+							"1": { "Value": 1 }
+						}
+					},
+					"1": {
+						"BuffSet": {
+							"0": { "Value": 1 },
+							"1": { "Value": 1 }
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_G_SandSkimmers_Speed": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 100,
+				"ResearchTime": 40
+			}
+		},
+		"Research_Buff_G_SandSkimmers_Damage01": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 25,
+				"ResearchTime": 15,
+				"LocalizedLongDescriptionStringID": "Improves the SandSkimmer's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"0": { "Value": 1 },
+							"1": { "Value": 1 }
+						}
+					},
+					"1": {
+						"BuffSet": {
+							"0": { "Value": 1 },
+							"1": { "Value": 1 }
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_G_SandSkimmers_Damage02": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 75,
+				"ResearchTime": 15,
+				"LocalizedLongDescriptionStringID": "Improves the SandSkimmer's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"0": { "Value": 1 },
+							"1": { "Value": 1 }
+						}
+					},
+					"1": {
+						"BuffSet": {
+							"0": { "Value": 1 },
+							"1": { "Value": 1 }
+						}
+					}
+				}
+			}
+		},
+
+		"Research_Buff_C_Escort_VehicleArmor01": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 100,
+				"ResearchTime": 15,
+				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_C_Escort_VehicleArmor02": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 175,
+				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_S_Escort_VehicleArmor01": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 100,
+				"LocalizedLongDescriptionStringID": "Increase LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_S_Escort_VehicleArmor02": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 175,
+				"LocalizedLongDescriptionStringID": "Additional upgrade to LAVs defensive capabilities.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_G_SandSkimmer_VehicleArmor01": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 100,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_G_SandSkimmer_VehicleArmor02": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 175,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of Sandskimmers.\n\n[84a1e8]Increases armor by 1 and hull integrity by 30.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} },
+					"1": { "BuffSet": {
+						"0": { "Value": 1 },
+						"1": { "Attribute": "Unit_MaxHealth", "Mode": "Add", "Value": 30 }
+					} }
+				}
+			}
+		},
+
+		"Ability_C_ArmorDebuff": {
+			"AbilityViewAttributes": {
+				"LocalizedLongDescriptionStringID": "Armor is fractured by the high velocity round. Target armor is reduced by 7 for 20 seconds."
+			}
+		},
+
+		"C_Railgun_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 80,
+				"MaxHealth": 820,
+				"Armour": 1,
+				"ExperienceValue": 450,
+				"ProductionTime": 22,
+				"PriorityAsTarget": 12,
+				"AggroRange": 1900
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 75 },
+				"Combat": { "MaxDesiredCombatRange": 1830 }
+			},
+
+			"WeaponAttributes": {
+				"C_Railgun_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 180,
+					"WindUpTimeMS": 1200,
+					"ReloadTimeMS": 1800,
+					"StatusEffectsExcludeTargetType": "None",
+					"RangeAttributesShort": {
+						"Accuracy": 40
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 100
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 65,
+						"Distance": 1900
+					},
+					"Turret": {
+						"RotationSpeed": 250
+					},
+					"Modifiers": {
+						"1": {
+							//"TargetClass": "Small",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": {
+							"Remove": true
+						},
+						"7": {
+							"Remove": true
+						},
+						"8": {
+							"Remove": true
+						},
+						"13": {
+							"Remove": true
+						},
+						"14": {
+							"Remove": true
+						}
+					},
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 1500,
+						"TargetPriorityWeight": 150,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"C_Sob_Railgun_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 320,
+				"Resource2Cost": 80,
+				"MaxHealth": 820,
+				"Armour": 1,
+				"ExperienceValue": 470,
+				"ProductionTime": 22,
+				"PriorityAsTarget": 12,
+				"AggroRange": 1900
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 75 },
+				"Combat": { "MaxDesiredCombatRange": 1830 }
+			},
+			"WeaponAttributes": {
+				"C_Sob_Railgun_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 180,
+					"WindUpTimeMS": 1200,
+					"CooldownTimeMS": 1500,
+					"ReloadTimeMS": 4550,
+					"StatusEffectsExcludeTargetType": "None",
+					"RangeAttributesShort": {
+						"Accuracy": 40
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 100
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 65,
+						"Distance": 1900
+					},
+					"Modifiers": {
+						"1": {
+							//"TargetClass": "Small",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"6": {
+							"Remove": true
+						},
+						"11": {
+							"Remove": true
+						}
+					},
+					"Turret": {
+						"RotationSpeed": 250
+					},
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 1500,
+						"TargetPriorityWeight": 150,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				}
+			}
+		},
+		"Tier_2_C_RailGun": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 100,
+				"ResearchTime": 45
+			}
+		},
+		"Tier_2_S_RailGun": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 100,
+				"ResearchTime": 45
+			}
+		},
+		"Research_Buff_C_Railgun": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 250,
+				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 20.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 20 } } },
+					"1": { "BuffSet": { "0": { "Value": 20 } } }
+				}
+			}
+		},
+		"Research_Buff_S_Railgun": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 250,
+				"LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 20.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 20 } } },
+					"1": { "BuffSet": { "0": { "Value": 20 } } }
+				}
+			}
+		},
+
+		"G_StarHullTank_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 350,
+				"Resource2Cost": 100,
+				"MaxHealth": 820,
+				"Armour": 2,
+				"ProductionTime": 20,
+				"PopCapCost": 4,
+				"ExperienceValue": 550,
+				"PriorityAsTarget": 15,
+				"AggroRange": 1700
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 64,
+					"MaxSpeedTurnRadius": 40
+				},
+				"Combat": { "MaxDesiredCombatRange": 1620 },
+				"Hover": { "TurnAcceleration": 90 }
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"AbilityAttributes": {
+				"Ability_G_HeavyRailgunEMP_MP": {
+					"CooldownTimeSecs": 75
+				},
+				"Ability_G_RailGun_Scope_MP": {
+					"CooldownTimeSecs": 0
+				}
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 180,
+					"WindUpTimeMS": 900,
+					"ReloadTimeMS": 1100,
+					"StatusEffectsExcludeTargetType": "None",
+					"RangeAttributesShort": {
+						"Accuracy": 40
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 100
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 65,
+						"Distance": 1770
+					},
+					"Modifiers": {
+						"1": {
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": { "Remove": true },
+						"7": { "Remove": true },
+						"8": { "Remove": true },
+						"13": { "Remove": true },
+						"14": { "Remove": true }
+					},
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 1500,
+						"TargetPriorityWeight": 150,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				},
+				"G_StarHull_Weapon_G2GEMP_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 110,
+					"AreaOfEffectRadius": 135,
+					"WindUpTimeMS": 750,
+					"RangeAttributesLong": { "Distance": 1420 },
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": ["MiniStun_StatusEffect"] }
+					}
+				}
+			}
+		},
+		"K_HeavyRailgun_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 350,
+				"Resource2Cost": 100,
+				"MaxHealth": 820,
+				"Armour": 2,
+				"ProductionTime": 20,
+				"PopCapCost": 4,
+				"ExperienceValue": 550,
+				"PriorityAsTarget": 15,
+				"AggroRange": 1700
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 64,
+					"MaxSpeedTurnRadius": 40
+				},
+				"Combat": { "MaxDesiredCombatRange": 1620 },
+				"Hover": { "TurnAcceleration": 90 }
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"AbilityAttributes": {
+				"Ability_G_HeavyRailgunEMP_MP": {
+					"CooldownTimeSecs": 75
+				},
+				"Ability_G_RailGun_Scope_MP": {
+					"CooldownTimeSecs": 0
+				}
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 180,
+					"WindUpTimeMS": 900,
+					"ReloadTimeMS": 1100,
+					"StatusEffectsExcludeTargetType": "None",
+					"RangeAttributesShort": {
+						"Accuracy": 40
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 100
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 65,
+						"Distance": 1770
+					},
+					"Modifiers": {
+						"1": {
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": { "Remove": true },
+						"7": { "Remove": true },
+						"8": { "Remove": true },
+						"13": { "Remove": true },
+						"14": { "Remove": true }
+					},
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 1500,
+						"TargetPriorityWeight": 150,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					}
+				},
+				"G_StarHull_Weapon_G2GEMP_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 110,
+					"AreaOfEffectRadius": 135,
+					"WindUpTimeMS": 750,
+					"RangeAttributesLong": { "Distance": 1420 },
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": ["MiniStun_StatusEffect"] }
+					}
+				}
+			}
+		},
+		"Tier_2_G_Railgun_U1": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 350,
+				"Resource2Cost": 200,
+				"ResearchTime": 35
+			}
+		},
+		"MiniStun_StatusEffect": {
+			"StatusEffectAttributes": {
+				"Duration": 2.8,
+				"Modifiers": {
+					"1": {
+						"ModifierType": "DisableAbilities"
+					},
+					"2": {
+						"ModifierType": "DisableAllWeapons"
+					}
+				}
+			}
+		},
+
+		"ArmorDebuff_StatusEffect": {
+			"StatusEffectAttributes": {
+				"Duration": 20,
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Value": -7
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"Research_Buff_G_RailGunScope": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 100,
+				"ResearchTime": 50,
+				"LocalizedLongDescriptionStringID": "Heavy Railguns gain the RANGED CALIBRATION ability - Increasing range at the cost of mobility.\n\n[84a1e8]Weapon and sight range increased by 300.\nMovement speed reduced by 66%."
+			}
+		},
+		"Research_Buff_G_RailGunStun": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 400,
+				"Resource2Cost": 150,
+				"ResearchTime": 35
+			}
+		},
+
+		"G_StarHull_Upgrade01_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 250,
+				"Resource2Cost": 55,
+				"MaxHealth": 650,
+				"ExperienceValue": 350,
+				"ProductionTime": 17,
+				"SensorRadius": 1250,
+				"ContactRadius": 1350,
+				"Armour": 5,
+				"PriorityAsTarget": 10,
+				"AggroRange": 1050
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 91,
+					"AccelerationTime": 1.5,
+					"BrakingTime": 1.2
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_G_AssaultRailgunRegen": {
+					"ApplyStatusEffect": {
+						"Regen_AssaultRailguns_StatusEffect": {
+							"Modifiers": {
+								"0": {
+									"HealthOverTimeAttributes": {
+										"Amount": 7
+									}
+								}
+							}
+						}
+					}
+				},
+				"Ability_G_RailGun_Dash_Move_To_MP": {
+					"CooldownTimeSecs": 50
+				},
+				"Ability_G_RailGun_Dash_MP": {
+					"ApplyStatusEffect": {
+						"RailGun_Dash_StatusEffect": {
+							"Duration": 2.7
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 48,
+					"BurstPeriodMinTimeMS": 90,
+					"BurstPeriodMaxTimeMS": 90,
+					"NumberOfBursts": 5,
+					"WindUpTimeMS": 600,
+					"WindDownTimeMS": 250,
+					"ReloadTimeMS": 3000,
+					"RangeAttributesShort":  { "Accuracy": 20 },
+					"RangeAttributesMedium": { "Accuracy": 16 },
+					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1050 }
+				}
+			}
+		},
+		"K_AssaultRailgun_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 250,
+				"Resource2Cost": 55,
+				"MaxHealth": 650,
+				"ExperienceValue": 350,
+				"ProductionTime": 17,
+				"SensorRadius": 1250,
+				"ContactRadius": 1350,
+				"Armour": 5,
+				"PriorityAsTarget": 10,
+				"AggroRange": 1050
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 91,
+					"AccelerationTime": 1.5,
+					"BrakingTime": 1.2
+				}
+			},
+			"AbilityAttributes": {
+				"Ability_G_AssaultRailgunRegen": {
+					"ApplyStatusEffect": {
+						"Regen_AssaultRailguns_StatusEffect": {
+							"Modifiers": {
+								"0": {
+									"HealthOverTimeAttributes": {
+										"Amount": 7
+									}
+								}
+							}
+						}
+					}
+				},
+				"Ability_G_RailGun_Dash_Move_To_MP": {
+					"CooldownTimeSecs": 50
+				},
+				"Ability_G_RailGun_Dash_MP": {
+					"ApplyStatusEffect": {
+						"RailGun_Dash_StatusEffect": {
+							"Duration": 2.7
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 48,
+					"BurstPeriodMinTimeMS": 90,
+					"BurstPeriodMaxTimeMS": 90,
+					"NumberOfBursts": 5,
+					"WindUpTimeMS": 600,
+					"WindDownTimeMS": 250,
+					"ReloadTimeMS": 3000,
+					"RangeAttributesShort":  { "Accuracy": 20 },
+					"RangeAttributesMedium": { "Accuracy": 16 },
+					"RangeAttributesLong":   { "Accuracy": 14, "Distance": 1050 }
+				}
+			}
+		},
+		"Research_Buff_G_RailGun_Ability": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"Resource2Cost": 80,
+				"ResearchTime": 20
+			}
+		},
+
+		"Research_Buff_G_RailGunUnits_Armor1": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 on Assault Railgun and Heavy Railgun.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { "0": { "Value": 1 } } }, // G_StarHull_Upgrade01_MP
+					"1": { "BuffSet": { "0": { "Value": 1 } } }, // G_StarHullTank_MP
+					"2": { "BuffSet": { "0": { "Value": 1 } } }, // K_AssaultRailgun
+					"3": { "BuffSet": { "0": { "Value": 1 } } } // K_HeavyRailgun
+				}
+			}
+		},
+		"Research_Buff_G_RailGunUnits_Armor2": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Heavy Railgun, armor by 1 and hull integrity by 50 on Assault Railgun.",
+				"Resource1Cost": 200,
+				"Resource2Cost": 150,
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { // G_StarHull_Upgrade01_MP
+						"0": { "Value": 1 },
+						"1": { "Value": 50 }
+					} },
+					"1": { "BuffSet": { // G_StarHullTank_MP
+						"0": { "Value": 1 }
+					} },
+					"2": { "BuffSet": { // K_AssaultRailgun
+						"0": { "Value": 1 },
+						"1": { "Value": 50 }
+					} },
+					"3": { "BuffSet": { // K_HeavyRailgun
+						"0": { "Value": 1 }
+					} }
+				}
+			}
+		},
+		"Research_Buff_G_RailGunUnits_Armor3": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 250,
+				"Resource2Cost": 250,
+				"LocalizedLongDescriptionStringID": "Improves defensive capabilities of all railgun units.\n\n[84a1e8]Increases armor by 1 and hull integrity by 100 on Assault Railgun and Heavy Railgun.",
+				"UnitTypeBuffs": {
+					"0": { "BuffSet": { // G_StarHull_Upgrade01_MP
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"1": { "BuffSet": { // G_StarHullTank_MP
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"2": { "BuffSet": { // K_AssaultRailgun
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} },
+					"3": { "BuffSet": { // K_HeavyRailgun
+						"0": { "Value": 1 },
+						"1": { "Value": 100 }
+					} }
+				}
+			}
+		},
+
+		"C_HAC_Upgrade01_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 75,
+				"ProductionTime": 20,
+				"MaxHealth": 1400,
+				"SensorRadius": 1600,
+				"ContactRadius": 1800,
+				"Armour": 4,
+				"PriorityAsTarget": -10
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 60
+				}
+			},
+			"WeaponAttributes": {
+				"C_HAC_Upgrade01_Weapon_G2A_MP": {
+					"ReloadTimeMS": 2300
+				},
+				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
+					"BaseDamagePerRound": 660,
+					"AreaOfEffectRadius": 220,
+					"DamagePacketsPerShot": 35,
+					"AreaOfEffectFalloffType": "Linear",
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		"Tier_2_C_HAC_AA": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 30
+			}
+		},
+
+		"G_Catamaran_Upgrade01_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 350,
+				"Resource2Cost": 75,
+				"ProductionTime": 22,
+				"MaxHealth": 1400,
+				"SensorRadius": 1600,
+				"ContactRadius": 1800,
+				"Armour": 5,
+				"PriorityAsTarget": -10
+			},
+			"AbilityAttributes": {
+				"Ability_G_MissileCraft_CrowdControl_MP": {
+					"CooldownTimeSecs": 80
+				}
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"4": {
+						"BuffTooltipLocID": "Guardian: -50% weapon cooldown",
+						"Buff": {
+							"0": {
+								"Name": "ANTI-AIR",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							},
+							"1": {
+								"Name": "ANTI-AIR-RADIO",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
+					"ReloadTimeMS": 2300,
+					"Turret": {
+						"RotationSpeed": 160,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1330
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
+					"ReloadTimeMS": 2300,
+					"Turret": {
+						"RotationSpeed": 240,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1500
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 150,
+					"AreaOfEffectRadius": 155,
+					"AreaOfEffectFalloffType": "Linear",
+					"Modifiers": {
+						"2": {
+							"TargetClass": "Air",
+							"Modifier": "CanNotTarget"
+						}
+					}
+				}
+			}
+		},
+		"K_MissileShip_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 350,
+				"Resource2Cost": 75,
+				"ProductionTime": 22,
+				"MaxHealth": 1400,
+				"SensorRadius": 1600,
+				"ContactRadius": 1800,
+				"Armour": 5,
+				"PriorityAsTarget": -10
+			},
+			"AbilityAttributes": {
+				"Ability_G_MissileCraft_CrowdControl_MP": {
+					"CooldownTimeSecs": 80
+				}
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"4": {
+						"BuffTooltipLocID": "Guardian: -50% weapon cooldown",
+						"Buff": {
+							"0": {
+								"Name": "ANTI-AIR",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							},
+							"1": {
+								"Name": "ANTI-AIR-RADIO",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "Add",
+								"Value": -1000
+							}
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
+					"ReloadTimeMS": 2300,
+					"Turret": {
+						"RotationSpeed": 160,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1330
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
+					"ReloadTimeMS": 2300,
+					"Turret": {
+						"RotationSpeed": 240,
+						"FieldOfFire": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1500
+					}
+				},
+				"G_Catamaran_Upgrade01_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"BaseDamagePerRound": 150,
+					"AreaOfEffectRadius": 155,
+					"AreaOfEffectFalloffType": "Linear",
+					"Modifiers": {
+						"2": {
+							"TargetClass": "Air",
+							"Modifier": "CanNotTarget"
+						}
+					}
+				}
+			}
+		},
+		"Tier_2_G_Catamaran_AA": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 35
+			}
+		},
+		"Research_Buff_G_CatamaranAA_GlobalMissiles": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 50,
+				"Resource2Cost": 50,
+				"ResearchTime": 15
+			}
+		},
+		"Research_Buff_G_CatamaranAA_AOE": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 20
+			}
+		},
+
+		"C_Interceptor_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 270,
+				"Resource2Cost": 75,
+				"MaxHealth": 490,
+				"Armour": 0,
+				"ProductionTime": 26,
+				"SensorRadius": 2200,
+				"ContactRadius": 2400
+			},
+			"StorageAttributes": {
+				"C_Interceptor_StorageAttributesAsset_MP": {
+					"InventoryLoadout": {
+						"MISSILES": {
+							"Capacity": 6,
+							"StartingAmount": 6
+						}
+					}
+				}
+			},
+			"WeaponAttributes": {
+				"C_Interceptor_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 110,
+					"DamagePacketsPerShot": 2,
+					"BurstPeriodMinTimeMS": 667,
+					"BurstPeriodMaxTimeMS": 667,
+					"ReloadTimeMS": 3332,
+					"RateOfFire": 3,
+					"Turret": {
+						"FieldOfView": 55,
+						"FieldOfFire": 55
+					}
+				}
+			}
+		},
+		"Tier_3_C_Interceptor_Bomber": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 200
+			}
+		},
+
+		"G_Interceptor_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 250,
+				"Resource2Cost": 80,
+				"Armour": 2,
+				"ProductionTime": 11,
+				"SensorRadius": 2300,
+				"ContactRadius": 2600
+			},
+			"WeaponAttributes": {
+				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
+					"BaseDamagePerRound": 70,
+					"DamagePacketsPerShot": 2,
+					"AreaOfEffectRadius": 60,
+					"RateOfFire": 6,
+					"ReloadTimeMS": 4000,
+					"LeadsTarget": "LeadTarget",
+					"Modifiers": {
+						"13": {
+							"TargetClass": "Small",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				}
+			}
+		},
+		"K_Interceptor_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 250,
+				"Resource2Cost": 80,
+				"Armour": 2,
+				"ProductionTime": 11,
+				"SensorRadius": 2300,
+				"ContactRadius": 2600
+			},
+			"WeaponAttributes": {
+				"G_Interceptor_Weapon_A2GA_Upgraded_MP": {
+					"BaseDamagePerRound": 70,
+					"DamagePacketsPerShot": 2,
+					"AreaOfEffectRadius": 60,
+					"RateOfFire": 6,
+					"ReloadTimeMS": 4000,
+					"LeadsTarget": "LeadTarget",
+					"Modifiers": {
+						"13": {
+							"TargetClass": "Small",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				}
+			}
+		},
+		"Tier_2_G_Interceptor": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 450,
+				"ResearchTime": 65
+			}
+		},
+		"Research_Buff_G_Interceptor_Speed": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"Resource2Cost": 150,
+				"ResearchTime": 40,
+				"LocalizedLongDescriptionStringID": "Interceptor employs afterburner jets, greatly increasing maximum speed.\n\n[84a1e8]Maximum speed increased by 40%",
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"0": { "Value": 40 },
+							"1": { "Value": -40 }
+						}
+					},
+					"1": {
+						"BuffSet": {
+							"0": { "Value": 40 },
+							"1": { "Value": -40 }
+						}
+					}
+				}
+			}
+		},
+
+		"C_Bomber_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 450,
+				"Resource2Cost": 160,
+				"MaxHealth": 1250,
+				"Armour": 6,
+				"ProductionTime": 37,
+				"PopCapCost": 4
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 390,
+					"MaxSpeedTurnRadius": 250
+				}
+			},
+			"WeaponAttributes": {
+				"C_Bomber_Weapon_A2G_MP": {
+					"WindUpTimeMS": 0,
+					"BaseDamagePerRound": 1600,
+					"AreaOfEffectRadius": 190,
+					"AreaOfEffectFalloffType": "Linear",
+					"Modifiers": {
+						"1": {
+							//"TargetClass": "Carrier",
+							"Amount": 60
+						},
+						"2": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				}
+			}
+		},
+		"Tier_3_C_GunShip_Bomber": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 150,
+				"ResearchTime": 55
+			}
+		},
+
+		"G_Bomber_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 340,
+				"Resource2Cost": 140,
+				"MaxHealth": 1050,
+				"Armour": 12,
+				"PopCapCost": 3,
+				"ProductionTime": 22
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 450,
+					"MaxSpeedTurnRadius": 300
+				}
+			},
+			"WeaponAttributes": {
+				"G_Bomber_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 760,
+					"ReloadTimeMS": 3500,
+					"AreaOfEffectRadius": 140,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"Modifiers": {
+						"2": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				}
+			}
+		},
+		"K_Bomber_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 340,
+				"Resource2Cost": 140,
+				"MaxHealth": 1050,
+				"Armour": 12,
+				"PopCapCost": 3,
+				"ProductionTime": 22
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 450,
+					"MaxSpeedTurnRadius": 300
+				}
+			},
+			"WeaponAttributes": {
+				"G_Bomber_Weapon_A2G_MP": {
+					"BaseDamagePerRound": 760,
+					"ReloadTimeMS": 3500,
+					"AreaOfEffectRadius": 140,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"Modifiers": {
+						"2": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				}
+			}
+		},
+		"Tier_3_G_Bomber": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 250,
+				"Resource2Cost": 100,
+				"ResearchTime": 40
+			}
+		},
+		"Research_Buff_G_AirCraft_Repair": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 200,
+				"ResearchTime": 20
+			}
+		},
+		"Research_Buff_G_Bomber_Hold": {
+			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Precision Bomber carries more bombs per sortie.\n\n[84a1e8]Increases bomb count from 2 to 3.",
+				"Resource1Cost": 400,
+				"Resource2Cost": 150,
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"0": {
+								"Value": 3
+							},
+							"1": {
+								"Value": 3
+							}
+						}
+					},
+					"1": {
+						"BuffSet": {
+							"0": {
+								"Value": 3
+							},
+							"1": {
+								"Value": 3
+							}
+						}
+					}
+				}
+			}
+		},
+
+		"C_GunShip_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 400,
+				"Resource2Cost": 120,
+				"MaxHealth": 1250,
+				"Armour": 8,
+				"PopCapCost": 4,
+				"ProductionTime": 26
+			},
+			"WeaponAttributes": {
+				"C_GunShip_Weapon_DefaultFire_MP": {
+					"DamagePacketsPerShot": 1,
+					"BaseDamagePerRound": 50,
+					"AreaOfEffectRadius": 130,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesLong": {
+						"Distance": 1050
+					}
+				}
+			}
+		},
+
+		"G_BattleCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 240,
+				"MaxHealth": 2800,
+				"ProductionTime": 57,
+				"Armour": 12,
+				"PopCapCost": 6
+			},
+			"WeaponAttributes": {
+				"G_Battlecruiser_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 55,
+					"AreaOfEffectRadius": 79,
+					"BurstPeriodMinTimeMS": 700,
+					"BurstPeriodMaxTimeMS": 700,
+					"RateOfFire": 3,
+					"NumberOfBursts": 3,
+					"WindUpTimeMS": 250,
+					"ReloadTimeMS": 3800,
+					"TargetPrioritizationAttributes": {
+						"TargetPriorityWeight": 50
+					}
+				},
+				"G_BattleCruiser_Weapon_Missile_MP": {
+					"BaseDamagePerRound": 160,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"AreaOfEffectRadius": 160,
+					"ExcludeFromHeightAdvantage": true,
+					"RangeAttributesLong": { "Distance": 1000 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				}
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 65 }
+			},
+			"AbilityAttributes": {
+				"Ability_G_BattleCruiser_ArmorBonus_MP": {
+					"CooldownTimeSecs": 40,
+					"ApplyStatusEffect": {
+						"ArmorBonus_StatusEffect": {
+							"BuffsToApplyToTarget": {
+								"0": {
+									"BuffSet": {
+										"0": { "Value": 50 } // % Armor bonus
+									}
+								}
+							}
+						}
+					}
+				},
+				"Ability_G_BattleCruiser_Missile_MP": {
+					"Resource1Cost": 0,
+					"CooldownTimeSecs": 40
+				},
+				"Ability_G_BattleCruiserActiveRegen": {
+					"CooldownTimeSecs": 40
+				}
+			}
+		},
+		"C_Sob_AssaultCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 240,
+				"MaxHealth": 2800,
+				"ProductionTime": 57,
+				"Armour": 12,
+				"PopCapCost": 6
+			},
+			"WeaponAttributes": {
+				"G_Battlecruiser_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 55,
+					"AreaOfEffectRadius": 79,
+					"BurstPeriodMinTimeMS": 700,
+					"BurstPeriodMaxTimeMS": 700,
+					"RateOfFire": 3,
+					"NumberOfBursts": 3,
+					"WindUpTimeMS": 250,
+					"ReloadTimeMS": 3800,
+					"TargetPrioritizationAttributes": {
+						"TargetPriorityWeight": 50
+					}
+				},
+				"G_BattleCruiser_Weapon_Missile_MP": {
+					"BaseDamagePerRound": 160,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"AreaOfEffectRadius": 160,
+					"ExcludeFromHeightAdvantage": true,
+					"RangeAttributesLong": { "Distance": 1000 },
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				}
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": { "MaxSpeed": 65 }
+			},
+			"AbilityAttributes": {
+				"Ability_G_BattleCruiser_ArmorBonus_MP": {
+					"CooldownTimeSecs": 40,
+					"ApplyStatusEffect": {
+						"ArmorBonus_StatusEffect": {
+							"BuffsToApplyToTarget": {
+								"0": {
+									"BuffSet": {
+										"0": { "Value": 50 } // % Armor bonus
+									}
+								}
+							}
+						}
+					}
+				},
+				"Ability_G_BattleCruiser_Missile_MP": {
+					"Resource1Cost": 0,
+					"CooldownTimeSecs": 40
+				},
+				"Ability_G_BattleCruiserActiveRegen": {
+					"CooldownTimeSecs": 40
+				}
+			}
+		},
+		"Tier_3_C_AssaultCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 450,
+				"Resource2Cost": 200
+			}
+		},
+		"Tier_3_S_AssaultCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 450,
+				"Resource2Cost": 200
+			}
+		},
+		"Research_Buff_G_BattleCruiser_AntiAir": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 150,
+				"ResearchTime": 45
+			}
+		},
+		"Research_Buff_S_AssaultCruiser_AntiAir": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 150,
+				"ResearchTime": 45
+			}
+		},
+
+		"G_HonorGuard_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 250,
+				"MaxHealth": 2400,
+				"PopCapCost": 6,
+				"ProductionTime": 50
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "Add",
+								"Value": 100
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"2": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "Add",
+								"Value": 100
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+
+					}
+				}
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 55,
+					"MaxSpeedTurnRadius": 90
+				},
+				"Combat": { "MaxDesiredCombatRange": 1980 },
+				"Hover": { "TurnAcceleration": 5 }
+			},
+			"WeaponAttributes": {
+				"G_HonorGuardRailgun_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 570,
+					"DamagePacketsPerShot": 4,
+					"ReloadTimeMS": 4850,
+					"WindUpTimeMS": 1700,
+					"AreaOfEffectFalloffType": "Linear",
+					"AreaOfEffectRadius": 180,
+					"WindDownTimeMS": 250,
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 30,
+						"TargetPriorityWeight": 150,
+						"AngleWeight": 20,
+						"AutoTargetStickyBias": 200,
+						"DistanceWeight": 0.05
+					},
+					"RangeAttributesLong": {
+						"Distance": 2000
+					}
+				},
+				"G_HonorGuard_Weapon_G2A_MP": {
+					"WindUpTimeMS": 1500,
+					"ReloadTimeMS": 2700
+				}
+			}
+		},
+		"K_HonorGuard_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 250,
+				"MaxHealth": 2400,
+				"PopCapCost": 6,
+				"ProductionTime": 50
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "Add",
+								"Value": 100
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"2": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "Add",
+								"Value": 100
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+
+					}
+				}
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 55,
+					"MaxSpeedTurnRadius": 90
+				},
+				"Combat": { "MaxDesiredCombatRange": 1980 },
+				"Hover": { "TurnAcceleration": 5 }
+			},
+			"WeaponAttributes": {
+				"G_HonorGuardRailgun_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 570,
+					"DamagePacketsPerShot": 4,
+					"ReloadTimeMS": 4850,
+					"WindUpTimeMS": 1700,
+					"AreaOfEffectFalloffType": "Linear",
+					"AreaOfEffectRadius": 180,
+					"WindDownTimeMS": 250,
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 30,
+						"TargetPriorityWeight": 150,
+						"AngleWeight": 20,
+						"AutoTargetStickyBias": 200,
+						"DistanceWeight": 0.05
+					},
+					"RangeAttributesLong": {
+						"Distance": 2000
+					}
+				},
+				"G_HonorGuard_Weapon_G2A_MP": {
+					"WindUpTimeMS": 1500,
+					"ReloadTimeMS": 2700
+				}
+			}
+		},
+		"Tier_3_G_HonorCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 200,
+				"ResearchTime": 60
+			}
+		},
+		"Research_Buff_G_HonorCruiser_Defenses": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 200,
+				"ResearchTime": 45
+			}
+		},
+
+		"Ability_C_SmokeGrenade_BattleCruiser": {
+			"AbilityViewAttributes": {
+				"LocalizedTitleStringID": "Field repairs",
+				"LocalizedLongDescriptionStringID": "Use defensive smoke and perform field repairs on the battlecruiser"
+			}
+		},
+
+		"C_Battlecruiser_MP": {
+			"AbilityAttributes": {
+				"Ability_C_SmokeGrenade_BattleCruiser": {
+					"CooldownTimeSecs": 65
+				}
+			},
+			"UnitAttributes": {
+				"Resource1Cost": 850,
+				"Resource2Cost": 350,
+				"MaxHealth": 3800,
+				"PopCapCost": 8,
+				"ProductionTime": 65,
+				"Armour": 20
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 59,
+					"MaxSpeedTurnRadius": 100,
+					"AccelerationTime": 0.9,
+					"BrakingTime": 0.9
+				}
+			},
+			"WeaponAttributes": {
+				"C_Battlecruiser_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 500,
+						"AutoTargetStickyBias": 50,
+						"TargetPriorityWeight": 150,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					},
+					"BaseDamagePerRound": 160,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"AreaOfEffectRadius": 60,
+					"ReloadTimeMS": 3800,
+					"RangeAttributesLong": {
+						"Distance": 1150
+					}
+				},
+				"C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+					"StatusEffectsTargetAlignment": "Friend",
+					"AreaOfEffectRadius": 1,
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": ["Regen_BattleCruiser_StatusEffect"] }
+					},
+					"StatusEffectsExcludeTargetType": "Air"
+				}
+			}
+		},
+		"C_Sob_Battlecruiser_MP": {
+			"AbilityAttributes": {
+				"Ability_C_SmokeGrenade_BattleCruiser": {
+					"CooldownTimeSecs": 65
+				}
+			},
+			"UnitAttributes": {
+				"Resource1Cost": 850,
+				"Resource2Cost": 350,
+				"MaxHealth": 3800,
+				"PopCapCost": 8,
+				"ProductionTime": 65,
+				"Armour": 19
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 59,
+					"MaxSpeedTurnRadius": 100,
+					"AccelerationTime": 1.2,
+					"BrakingTime": 0.9
+				}
+			},
+			"DetectableAttributes": {
+				"TimeVisibleAfterFiring": 4500
+			},
+			"WeaponAttributes": {
+				"C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
+					"TargetPrioritizationAttributes": {
+						"WeaponEffectivenessWeight": 800,
+						"TargetPriorityWeight": 250,
+						"AutoTargetStickyBias": 50,
+						"AngleWeight": 25,
+						"DistanceWeight": 0.05
+					},
+					"BaseDamagePerRound": 300,
+					"WindUpTimeMS": 1600,
+					"CooldownTimeMS": 1200,
+					"ReloadTimeMS": 6800,
+					"Modifiers": {
+						"1": {
+							//"TargetClass": "Small",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"6": {
+							"Remove": true
+						},
+						"11": {
+							"Remove": true
+						}
+					},
+					"RangeAttributesShort": {
+						"Accuracy": 40
+					},
+					"RangeAttributesMedium": {
+						"Accuracy": 100
+					},
+					"RangeAttributesLong": {
+						"Accuracy": 65,
+						"Distance": 1650
+					}
+				},
+				"C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+					"StatusEffectsTargetAlignment": "Friend",
+					"AreaOfEffectRadius": 1,
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": ["Regen_BattleCruiser_StatusEffect"] }
+					},
+					"StatusEffectsExcludeTargetType": "Air"
+				}
+			}
+		},
+		"Tier_3_C_BattleCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"ResearchTime": 100
+			}
+		},
+		"Tier_3_S_BattleCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"ResearchTime": 100
+			}
+		},
+
+		"Regen_BattleCruiser_StatusEffect": {
+			"StatusEffectAttributes": {
+				"Lifetime": "Finite",
+				"Duration": 9.95,
+				"MaxStacks": 1,
+				"StackingBehaviour": "Replace",
+				"Modifiers": {
+					"0": {
+						"ModifierType": "Immobilize"
+					},
+					"1": {
+						"ModifierType": "HealthOverTime",
+						"HealthOverTimeAttributes": {
+							"ID": "SmokeGrenade_BattleCruiser",
+							"Amount": 30,
+							"MSTickDuration": 200,
+							"DamageType": "Heal"
+						}
+					}
+				}
+			}
+		},
+
+		"C_ArtilleryCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 160,
+				"MaxHealth": 1600,
+				"Armour": 2,
+				"ProductionTime": 60,
+				"PopCapCost": 5
+			},
+			"AbilityAttributes": {
+				"Ability_C_ArtilleryBarrage": {
+					"CooldownTimeSecs": 70
+				},
+				"Ability_C_ArtilleryBarrage_Precise": {
+					"Resource1Cost": 0,
+					"CooldownTimeSecs": 70
+				}
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeedTurnRadius": 90,
+					"MaxSpeed": 56,
+					"AccelerationTime": 1.2,
+					"BrakingTime": 0.9
+				}
+			},
+			"WeaponAttributes": {
+				"C_ArtilleryCruiser_Weapon_Barrage_MP": {
+					"BaseDamagePerRound": 220,
+					"AreaOfEffectRadius": 98,
+					"NumberOfBursts": 6,
+					"RateOfFire": 3,
+					"CooldownTimeMS": 900,
+					"BurstPeriodMinTimeMS": 1700,
+					"BurstPeriodMaxTimeMS": 1700,
+					"RangeAttributesLong": {
+						"Distance": 2750
+					},
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				},
+				"C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
+					"BaseDamagePerRound": 180,
+					"ExcludeFromHeightAdvantage": true,
+					"RangeAttributesLong": {
+						"Distance": 2750
+					},
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				},
+				"C_ArtilleryCruiser_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 80,
+					"ReloadTimeMS": 7500,
+					"DamagePacketsPerShot": 1,
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						}
+					}
+				}
+			}
+		},
+		"Tier_3_C_Artillery": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"ResearchTime": 65,
+				"Dependencies": ["Tier_2_C_ArmouredAssault"]
+			}
+		},
+		"Tier_3_S_Artillery": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 500,
+				"Resource2Cost": 250,
+				"ResearchTime": 65,
+				"Dependencies": ["Tier_2_S_ArmouredAssault"]
+			}
+		},
+
+		"G_ArtilleryCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 550,
+				"Resource2Cost": 180,
+				"MaxHealth": 1700,
+				"Armour": 3,
+				"ProductionTime": 45,
+				"PopCapCost": 5,
+				"SensorRadius": 1400,
+				"ContactRadius": 1550
+			},
+			"AbilityAttributes": {
+				"Ability_G_ArtilleryBarrage_01_MP": {
+					"CooldownTimeSecs": 45
+				},
+				"Ability_G_Artillery_EMP_MP": {
+					"CooldownTimeSecs": 75
+				},
+				"Ability_G_ArtilleryCruiserRegen": {
+					"ApplyStatusEffect": {
+						"Regen_ArtilleryCruiser_StatusEffect": { "Modifiers": { "0": { "HealthOverTimeAttributes": { "Amount": 20 } } } }
+					},
+					"ActivationDependencies": {
+						"TakeNoDamageForMS": 15000
+					}
+				}
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 64,
+					"AccelerationTime": 3,
+					"BrakingTime": 1.25
+				}
+			},
+			"WeaponAttributes": {
+				"G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
+					"BaseDamagePerRound": 220,
+					"DamagePacketsPerShot": 3,
+					"AreaOfEffectRadius": 90,
+					"NumberOfBursts": 2,
+					"RateOfFire": 5,
+					"CooldownTimeMS": 2500,
+					"BurstPeriodMinTimeMS": 1350,
+					"BurstPeriodMaxTimeMS": 1350,
+					"RangeAttributesShort": {
+						"Distance": 800,
+						"MinDistance": 450
+					},
+					"RangeAttributesMedium": {
+						"Distance": 1200,
+						"MinDistance": 450
+					},
+					"RangeAttributesLong": {
+						"Distance": 1750,
+						"MinDistance": 450
+					},
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 25
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						}
+					}
+				},
+				"G_ArtilleryCruiser_Weapon_G2G_MP": {
+					"BaseDamagePerRound": 150,
+					"DamagePacketsPerShot": 2,
+					"ReloadTimeMS": 9000,
+					"NumberOfBursts": 2,
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 50
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 60
+						},
+						"3": {
+							"Remove": true
+						}
+					}
+				},
+				"G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
+					"BaseDamagePerRound": 350,
+					"ExcludeFromHeightAdvantage": true
+				},
+				"G_ArtilleryCruiser_Weapon_PD_MP": {
+					"BaseDamagePerRound": 14
+				}
+			}
+		},
+		"K_ArtilleryCruiser_MP": {
+			"UnitAttributes": {
+				"Resource1Cost": 700,
+				"Resource2Cost": 280,
+				"MaxHealth": 2800,
+				"PopCapCost": 6,
+				"SensorRadius": 1100,
+				"ContactRadius": 1200,
+				"ProductionTime": 45,
+				"Armour": 12
+			},
+			"AbilityAttributes": {
+				"Ability_K_ArtilleryBarrage_01_MP": {
+					"CooldownTimeSecs": 100
+				},
+				"Ability_K_Artillery_EMP_MP": {
+					"CooldownTimeSecs": 75
+				}
+			},
+			"WeaponAttributes": {
+				"K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
+					"AreaOfEffectRadius": 230,
+					"BaseDamagePerRound": 120,
+					"ReloadTimeMS": 4500,
+					"NumberOfBursts": 3,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesLong": {
+						"Distance": 1150
+					}
+				},
+				"K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
+					"ExcludeFromHeightAdvantage": true,
+					"NumberOfBursts": 4,
+					"CooldownTimeMS": 2500,
+					"BaseDamagePerRound": 240,
+					"DamagePacketsPerShot": 2,
+					"AreaOfEffectRadius": 230,
+					"AreaOfEffectFalloffType": "Quadratic",
+					"RangeAttributesLong": {
+						"Distance": 2000
+					},
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Small",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 65
+						},
+						"2": {
+							"TargetClass": "Carrier",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 80
+						}
+					}
+				},
+				"G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
+					"ExcludeFromHeightAdvantage": true
+				}
+			}
+		},
+		"Tier_3_G_Artillery_BattleCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 400,
+				"Resource2Cost": 150,
+				"ResearchTime": 55
+			}
+		},
+		"Tier_3_K_ArtilleryCruiser": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 600,
+				"ResearchTime": 95
+			}
+		},
+		"Research_Buff_G_Artillery_Barrage": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 70,
+				"UnitTypeBuffs": {
+					"0": {
+						"BuffSet": {
+							"2": { "Value": 800 },
+							"3": { "Value": 800 },
+							"6": { "Value": 1300 },
+							"7": { "Value": 1300 },
+							"10": { "Value": 2000 },
+							"11": { "Value": 2000 }
+						}
+					}
+				}
+			}
+		},
+		"Research_Buff_K_Artillery_Barrage": {
+			"ResearchItemAttributes": {
+				"ResearchTime": 70
+			}
+		},
+		"Research_Buff_G_Artillery_EMP_Barrage": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 100,
+				"ResearchTime": 35
+			}
+		},
+		"Research_Buff_K_Artillery_EMP_Barrage": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 300,
+				"Resource2Cost": 100,
+				"ResearchTime": 35
+			}
+		}
+	}
+}
