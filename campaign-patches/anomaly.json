@@ -1,6 +1,6 @@
 {
     "Global": {
-         /*,
+         
 
         "UnitAttributes": {
             "Resource1Cost": 0,
@@ -19,7 +19,7 @@
 				"Resource2Cost": 0
 				//"CooldownTimeSecsMult": 0.01
 			}
-		}*/
+		}
     },
     "Entities": { /*
         "Faction_Campaign_Gaalsi": {
@@ -734,7 +734,7 @@
             "UnitAttributes": {
                 "Class": "Hover, Carrier",
                 "MaxHealth": 66666,
-                "Armour": 20,
+                "Armour": 66,
                 "AggroRange": 110000,
                 "LeashRange": 110000
             },
@@ -747,13 +747,39 @@
                     "MaxEaseIntoTurnTime": 0.25
                 },
                 "Combat": {
-                    "PassiveCombatApproachMode": "Flyby",
-                    "ActiveCombatApproachMode": "Flyby",
-                    "MinDesiredCombatRange": 1500,
-                    "MaxDesiredCombatRange": 2500
+                    "PassiveCombatApproachMode": "Circle",
+                    "ActiveCombatApproachMode": "Circle",
+                    "MinDesiredCombatRange": 1400,
+                    "MaxDesiredCombatRange": 1500
                 }
             },
             "AbilityAttributes": {
+                /*
+                "Ability_G_LaunchBomber": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    }
+                },
+                "Ability_G_LaunchInterceptor": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    }
+                },
+                "Ability_Produce_G_Bomber": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    }
+                },
+                "Ability_Produce_G_Interceptor": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    }
+                },
+                */
                 "Ability_G_MissileBarrage_Fathership": {
                     "CooldownTimeSecs": 10,
                     "ChainCasting": { "QueuedAbilityDelay": 10 }
@@ -772,7 +798,7 @@
                         }
                     },
                     "ActivationDependencies": {
-                        "TakeNoDamageForMS": 10000
+                        "TakeNoDamageForMS": 0
                     }
                 }
 
@@ -809,9 +835,18 @@
                     }
                 },
                 "G_Fathership_Weapon_Artillery": {
+                    "TargetPrioritizationAttributes": {
+                        "DistanceWeight": 100000,
+                        "AutoTargetStickyBias": 1000
+                    },
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
                     "FriendlyFireDamageScalar": 1,
+                    "NumberOfBursts": 4,
                     "BaseDamagePerRound": 350,
+                    "ReloadTimeMS": 9550,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
+                    "CooldownTimeMS": 3000,
                     "RateOfFire": 4,
                     "AreaOfEffectRadius": 280,
                     "LeadsTarget": "DirectAtTarget",
@@ -822,7 +857,8 @@
                         "Accuracy": 0
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 0
+                        "Accuracy": 0,
+                        "Distance": 8800
                     },
                     "Turret": {
                         "FieldOfView": 360,
@@ -831,6 +867,12 @@
                     }
                 },
                 "G_Fathership_Weapon_Cannon": {
+                    "TargetPrioritizationAttributes": {
+                        "DistanceWeight": 100,
+                        "WeaponEffectivenessWeight": 150,
+                        "AutoTargetStickyBias": 100,
+                        "TargetSameCommanderBias": 0.0001
+                    },
                     "RateOfFire": 10,
                     "StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
@@ -838,29 +880,29 @@
                     },
                     "StatusEffectsExcludeTargetType": "None",
                     "NumberOfBursts": 2,
-                    "ReloadTimeMS": 1550,
+                    "ReloadTimeMS": 1050,
                     "BurstPeriodMinTimeMS": 200,
-                    "BurstPeriodMaxTimeMS": 299,
-                    "CooldownTimeMS": 450,
+                    "BurstPeriodMaxTimeMS": 200,
+                    "CooldownTimeMS": 350,
                     "DamagePacketsPerShot": 1,
                     "BaseDamagePerRound": 200,
-                    "AreaOfEffectRadius": 450,
+                    "AreaOfEffectRadius": 350,
                     "ProjectileEntityTypeToSpawn": "G_BattleCruiserDefault_ProjectileAssetContainer",
                     "IsTracer": false,
                     "TracerSpeed": 0,
                     "TracerLength": 5,
                     "TargetStyle": "Flak",
                     "RangeAttributesShort": {
-                        "Distance": 600,
+                        "Distance": 1000,
                         "Accuracy": 100
                     },
                     "RangeAttributesMedium": {
-                        "Distance": 1000,
+                        "Distance": 1600,
                         "Accuracy": 80
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 70,
-                        "Distance": 1400
+                        "Distance": 1800
                     },
                     "Modifiers": {
                         "0": {
@@ -6453,25 +6495,25 @@
                 }
             },
             */
-            "UnitMovementAttributes": {
-                "Dynamics": {
-                    "MaxSpeed": 75
-                }
-            },
-            "WeaponAttributes": {
-                "C_Harvester_Weapon_DemoCharge": {
-                    "RangeAttributesShort": {
-                        "Accuracy": 100,
-                        "Distance": 500
-                    },
-                    "RangeAttributesMedium": {
-                        "Remove": true
-                    },
-                    "RangeAttributesLong": {
-                        "Remove": true
+                "UnitMovementAttributes": {
+                    "Dynamics": {
+                        "MaxSpeed": 75
                     }
-                }
-            } /*,
+                },
+                "WeaponAttributes": {
+                    "C_Harvester_Weapon_DemoCharge": {
+                        "RangeAttributesShort": {
+                            "Accuracy": 100,
+                            "Distance": 500
+                        },
+                        "RangeAttributesMedium": {
+                            "Remove": true
+                        },
+                        "RangeAttributesLong": {
+                            "Remove": true
+                        }
+                    }
+                } /*,
             "StorageAttributes": {
                 "C_Harvester_StorageAttributesAsset_MP": {
                     "InventoryLoadout": {
@@ -6479,7 +6521,7 @@
                     }
                 }
             }*/
-        },
+            },
 
         // GAALSIEN SALVAGER
         "G_Harvester": {
@@ -9704,6 +9746,8 @@
                 "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 1100,
                 "Armour": 5,
+                "Resource1Cost": 0,
+                "Resource2Cost": 0,
                 "FireRateDisplay": 4
             },
             "UnitMovementAttributes": {
@@ -10075,6 +10119,8 @@
                 }
             },
             "UnitAttributes": {
+                "Resource1Cost": 0,
+                "Resource2Cost": 0,
                 "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 2500,
                 "Armour": 15,
