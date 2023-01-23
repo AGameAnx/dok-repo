@@ -1,6 +1,7 @@
-{
+{/*
     "Global": {
-         /*
+         
+
         "UnitAttributes": {
             "Resource1Cost": 0,
             "Resource2Cost": 0,
@@ -128,7 +129,7 @@
         "Upgrade_Rachel_2": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "ANIME PROTAGONIST - WEAPON UPGRADE",
-                "LocalizedLongDescriptionStringID": "Increases Range and weapon rate of fire ",
+                "LocalizedLongDescriptionStringID": "Increases Range and 'weapon' rate of fire ",
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
@@ -731,6 +732,7 @@
         },
         "G_Fathership": {
             "UnitAttributes": {
+                "FireRateDisplay": 6,
                 "Class": "Hover, Carrier",
                 "MaxHealth": 66666,
                 "Armour": 66,
@@ -750,6 +752,9 @@
                     "ActiveCombatApproachMode": "Circle",
                     "MinDesiredCombatRange": 1400,
                     "MaxDesiredCombatRange": 1500
+                },
+                "Maneuvers": {
+                    "CanReverse": true
                 }
             },
             "AbilityAttributes": {
@@ -1013,20 +1018,18 @@
                 },
                 "C_Carrier_Weapon_G2All_PenetrationShots": {
                     "ExcludeFromHeightAdvantage": true,
-                    "ProjectileEntityTypeToSpawn": "C_GunShip_DefaultBombs_ProjectileAssetContainer_MP",
-                    "IsTracer": false,
-                    "TracerSpeed": 0,
-                    "TracerLength": 5,
                     "AreaOfEffectFalloffType": "None",
-                    "RateOfFire": 2,
+                    "RateOfFire": 200,
+                    "TargetStyle": "Flak",
                     "AreaOfEffectRadius": 450,
-                    "BaseDamagePerRound": 50,
+                    "BaseDamagePerRound": 1,
+                    "CooldownTimeMS": 750,
                     "LineOfSightRequired": false,
                     "ReloadTimeMS": 4500,
-                    "BurstPeriodMinTimeMS": 2000,
-                    "BurstPeriodMaxTimeMS": 2250,
+                    "BurstPeriodMinTimeMS": 250,
+                    "BurstPeriodMaxTimeMS": 250,
                     "DamagePacketsPerShot": 1,
-                    "NumberOfBursts": 1,
+                    "NumberOfBursts": 4,
                     "Modifiers": {
                         "0": {
                             "Modifier": "CanTarget",
@@ -1056,10 +1059,10 @@
                     },
                     "RangeAttributesMedium": {
                         "Distance": 1200,
-                        "Accuracy": 50
+                        "Accuracy": 0
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 50,
+                        "Accuracy": 0,
                         "Distance": 1600
                     }
                 },
@@ -3936,20 +3939,18 @@
                 },
                 "C_Carrier_Weapon_G2All_PenetrationShots": {
                     "ExcludeFromHeightAdvantage": true,
-                    "ProjectileEntityTypeToSpawn": "C_GunShip_DefaultBombs_ProjectileAssetContainer_MP",
-                    "IsTracer": false,
-                    "TracerSpeed": 0,
-                    "TracerLength": 5,
                     "AreaOfEffectFalloffType": "None",
-                    "RateOfFire": 2,
+                    "RateOfFire": 200,
+                    "TargetStyle": "Flak",
                     "AreaOfEffectRadius": 450,
-                    "BaseDamagePerRound": 50,
+                    "BaseDamagePerRound": 1,
+                    "CooldownTimeMS": 750,
                     "LineOfSightRequired": false,
                     "ReloadTimeMS": 4500,
-                    "BurstPeriodMinTimeMS": 2000,
-                    "BurstPeriodMaxTimeMS": 2250,
+                    "BurstPeriodMinTimeMS": 250,
+                    "BurstPeriodMaxTimeMS": 250,
                     "DamagePacketsPerShot": 1,
-                    "NumberOfBursts": 1,
+                    "NumberOfBursts": 4,
                     "Modifiers": {
                         "0": {
                             "Modifier": "CanTarget",
@@ -3979,10 +3980,10 @@
                     },
                     "RangeAttributesMedium": {
                         "Distance": 1200,
-                        "Accuracy": 50
+                        "Accuracy": 0
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 50,
+                        "Accuracy": 0,
                         "Distance": 1600
                     }
                 },
@@ -5447,11 +5448,27 @@
                 }
             },
             "AbilityAttributes": {
+                "Ability_Produce_G_Bomber": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    }
+                },
+                "Ability_Produce_G_Interceptor": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    }
+                },
                 "Ability_G_MissileBarrage": {
                     "CooldownTimeSecs": 160,
                     "ChainCasting": { "QueuedAbility": "Ability_G_MissileBarrage_Sight" }
                 },
                 "Ability_G_LaunchInterceptor_Upgraded": {
+                    "ChainCasting": {
+                        "QueuedAbility": "Ability_G_LaunchBomber",
+                        "QueuedAbilityDelay": 0
+                    },
                     "AirSortie": {
                         "LoiterLength": 90,
                         "SetAttackTargetsWithinRadius": 2100,
@@ -5459,6 +5476,10 @@
                     }
                 },
                 "Ability_G_LaunchBomber": {
+                    "ChainCasting": {
+                        "QueuedAbility": "Ability_G_LaunchInterceptor_Upgraded",
+                        "QueuedAbilityDelay": 0
+                    },
                     "AirSortie": {
                         "LoiterLength": 120,
                         "SetAttackTargetsWithinRadius": 2000
@@ -5665,7 +5686,7 @@
                 "G_Carrier_Weapon_BarrageMissile": {
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
-                    "WindUpTimeMS": 0,
+                    "WindUpTimeMS": 2000,
                     "WindDownTimeMS": 0,
                     "NumberOfBursts": 1,
                     "RateOfFire": 1,
@@ -7607,7 +7628,7 @@
         // GAALSIEN ASSAULT SHIP
         "G_Catamaran": {
             "UnitAttributes": {
-                "ProductionTime": 8,
+                "ProductionTime": 4,
                 "SensorRadius": 1100,
                 "ContactRadius": 1250,
                 "Armour": 9,
@@ -7615,7 +7636,14 @@
                 "FireRateDisplay": 5
             },
             "UnitMovementAttributes": {
-                "Dynamics": { "MaxSpeed": 140 }
+                "Dynamics": {
+                    "MaxSpeed": 140
+                },
+                "Combat": {
+                    "MinDesiredCombatRange": 800,
+                    "MaxDesiredCombatRange": 900,
+                    "ActiveCombatApproachMode": "Circle"
+                }
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -7727,7 +7755,7 @@
             },
             "UnitMovementAttributes": {
                 "Combat": {
-                    "MinDesiredCombatRange": 1000,
+                    "MinDesiredCombatRange": 1100,
                     "MaxDesiredCombatRange": 1500,
                     "PassiveCombatApproachMode": "Snipe",
                     "ActiveCombatApproachMode": "Snipe"
@@ -7776,7 +7804,7 @@
                     }
                 },
                 "Ability_C_Nitrous_Advanced": {
-                    "CooldownTimeSecs": 30,
+                    "CooldownTimeSecs": 15,
                     "ApplyStatusEffect": {
                         "Nitrous_Enhanced_StatusEffect": {
                             "BuffsToApplyToTarget": {
@@ -7820,7 +7848,7 @@
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 70,
-                        "Distance": 1300
+                        "Distance": 1500
                     },
                     "Turret": { "RotationSpeed": 390 },
                     "Modifiers": {
@@ -8318,7 +8346,11 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": { "MaxSpeed": 95 },
-                "Combat": { "MaxDesiredCombatRange": 780 }
+                "Combat": {
+                    "MaxDesiredCombatRange": 780,
+                    "ActiveCombatApproachMode": "Snipe",
+                    "PassiveCombatApproachMode": "Snipe"
+                }
             },
             "WeaponAttributes": {
                 "C_Railgun_Weapon_G2G": {
@@ -9745,6 +9777,8 @@
                 "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 1100,
                 "Armour": 5,
+                "PopCapCost": 0,
+                "ProductionTime": 3,
                 "Resource1Cost": 0,
                 "Resource2Cost": 0,
                 "FireRateDisplay": 4
@@ -10123,6 +10157,7 @@
                 "AccuracyReceivedMultiplier": 2.0,
                 "MaxHealth": 2500,
                 "Armour": 15,
+                "PopCapCost": 0,
                 "ProductionTime": 10,
                 "FireRateDisplay": 4,
                 "SensorRadius": 2000,
@@ -10741,7 +10776,7 @@
                         }
                     },
                     "ActivationDependencies": {
-                        "TakeNoDamageForMS": 15000
+                        "TakeNoDamageForMS": 0
                     }
                 }
             },
@@ -10798,6 +10833,12 @@
                     }
                 },
                 "G_HonorGuard_Weapon_G2A_Campaign": {
+                    "TargetPrioritizationAttributes": {
+                        "DistanceWeight": 100,
+                        "TargetThreatWeight": 100,
+                        "AutoTargetStickyBias": 1,
+                        "TargetSameCommanderBias": 0.0001
+                    },
                     "WindUpTimeMS": 500,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1499,
@@ -10847,6 +10888,12 @@
                         "FieldOfView": 360,
                         "FieldOfFire": 30
                     },
+                    "TargetPrioritizationAttributes": {
+                        "DistanceWeight": 100,
+                        "TargetThreatWeight": 250,
+                        "AutoTargetStickyBias": 1,
+                        "TargetSameCommanderBias": 0.0001
+                    },
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
@@ -10888,7 +10935,7 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Novice EMPer: : +10 speed",
+                        "BuffTooltipLocID": "Zap: : +10 speed",
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -10898,7 +10945,7 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Acolyte EMPer: +30% sensor range",
+                        "BuffTooltipLocID": "Concusion: +30% sensor range",
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_SensorRadius",
@@ -10913,7 +10960,7 @@
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Sentinel EMPer: +50% to area of effect radius of weapons",
+                        "BuffTooltipLocID": "Shock: +50% to area of effect radius of weapons",
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_AreaOfEffect",
@@ -10923,7 +10970,7 @@
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Guardian: +25 speed",
+                        "BuffTooltipLocID": "Coma: +25 speed",
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -10934,7 +10981,7 @@
 
                     },
                     "5": {
-                        "BuffTooltipLocID": "Elder EMPer: +1 fire rate to every weapon...",
+                        "BuffTooltipLocID": "Permastun: +1 fire rate to every weapon...",
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_RateOfFire",
@@ -10961,7 +11008,7 @@
                     "MaxSpeed": 65,
                     "MaxSpeedTurnRadius": 90
                 },
-                "Combat": { "MaxDesiredCombatRange": 1500 },
+                "Combat": { "MaxDesiredCombatRange": 2500 },
                 "Hover": { "TurnAcceleration": 5 }
             },
             "AbilityAttributes": {
@@ -10989,7 +11036,7 @@
                         }
                     },
                     "ActivationDependencies": {
-                        "TakeNoDamageForMS": 15000
+                        "TakeNoDamageForMS": 0
                     }
                 }
             },
@@ -11046,6 +11093,12 @@
                     }
                 },
                 "G_HonorGuard_Weapon_G2A": {
+                    "TargetPrioritizationAttributes": {
+                        "DistanceWeight": 200,
+                        "TargetThreatWeight": 100,
+                        "AutoTargetStickyBias": 1,
+                        "TargetSameCommanderBias": 0.0001
+                    },
                     "WindUpTimeMS": 500,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1499,
@@ -11058,10 +11111,10 @@
                     },
                     "StatusEffectsExcludeTargetType": "None",
                     "CooldownTimeMS": 300,
-                    "NumberOfBursts": 1,
+                    "NumberOfBursts": 2,
                     "AreaOfEffectRadius": 250,
-                    "ReloadTimeMS": 8000,
-                    "ProjectileEntityTypeToSpawn": "G_ArtilleryEMP_ProjectileAssetContainer_MP",
+                    "ReloadTimeMS": 6000,
+                    "ProjectileEntityTypeToSpawn": "Rachel_HACK_ProjectileAssetContainer",
                     "RangeAttributesShort": {
                         "Remove": true
                     },
@@ -11101,18 +11154,24 @@
                         "FieldOfView": 360,
                         "FieldOfFire": 180
                     },
+                    "TargetPrioritizationAttributes": {
+                        "DistanceWeight": 100,
+                        "TargetThreatWeight": 250,
+                        "AutoTargetStickyBias": 1,
+                        "TargetSameCommanderBias": 0.0001
+                    },
                     "StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "MiniStun_StatusEffect" ] }
                     },
                     "StatusEffectsExcludeTargetType": "None",
-                    "ProjectileEntityTypeToSpawn": "Rachel_HACK_ProjectileAssetContainer",
+                    "ProjectileEntityTypeToSpawn": "G_StarhullEMP_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
                     "TracerLength": 5,
-                    "BaseDamagePerRound": 150,
+                    "BaseDamagePerRound": 100,
                     "DamagePacketsPerShot": 1,
-                    "ReloadTimeMS": 1500,
+                    "ReloadTimeMS": 2500,
                     "CooldownTimeMS": 500,
                     "NumberOfBursts": 1,
                     "Modifiers": {
@@ -11964,7 +12023,7 @@
                                 "0": {
                                     "HealthOverTimeAttributes": {
                                         "Amount": 1,
-                                        "MSTickDuration": 32
+                                        "MSTickDuration": 12
                                     }
                                 }
                             }
@@ -12037,15 +12096,14 @@
                 },
                 "Ability_G_ArtilleryBarrage_01": {
                     "CooldownTimeSecs": 80
-                    //"RequiredResearch": [ "Research_Buff_G_Artillery_Barrage" ] // works but botton still shows up as active so fuck it
 
                 }
             },
             "UnitMovementAttributes": {
                 "Combat": {
-                    "MinDesiredCombatRange": 100,
+                    "MinDesiredCombatRange": 1000,
                     "MaxDesiredCombatRange": 1100,
-                    "ActiveCombatApproachMode": "Snipe"
+                    "ActiveCombatApproachMode": "Circle"
                 },
                 "Dynamics": {
                     "MaxSpeed": 64,
@@ -12149,7 +12207,7 @@
                     },
                     "RangeAttributesLong": {
                         "MinDistance": 0,
-                        "Distance": 1400
+                        "Distance": 1200
                     },
                     "Modifiers": {
                         "1": {
@@ -12199,7 +12257,7 @@
                     "RangeAttributesLong": {
                         "MinDistance": 0,
                         "Accuracy": 100,
-                        "Distance": 1200
+                        "Distance": 1400
                     }
                 }
             }
