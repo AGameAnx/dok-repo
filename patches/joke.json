@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.40",
-        "LastUpdate": "2022-11-02",
+        "Version": "1.06.41",
+        "LastUpdate": "2023-01-24",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
     },
     /*"Global": {
@@ -2081,15 +2081,46 @@
                 "PriorityAsTarget": -15
             },
             "UnitMovementAttributes": {
+                "DriveType": "Hover",
                 "Combat": {
                     "MaxDesiredCombatRange": 2200
                 },
+                "Maneuvers": {
+                    "MustReachMinSpeedBeforeTurn": false,
+                    "CanGetOutOfDrift": true,
+                    "CanReverse": true,
+                    "CanStop": true,
+                    "CanDoSlowTurns": true,
+                    "CanDoFastTurns": true,
+                    "SlowAwayTurn": "Controlled",
+                    "SlowDirectTurn": "Controlled",
+                    "FastAwayTurn": "Controlled",
+                    "FastDirectTurn": "Controlled",
+                    // "ThreePointTurn": {
+                    //     "Use": false
+                    //  },
+                    "RearFacingArrive": {
+                        "Use": false
+                    }
+                },
+                "Hover": {
+                    "TurnAcceleration": 0.1,
+                    "TurnMaxLookAheadTime": 10,
+                    "NoTurnDistance": 1000,
+                    "FaceTargetOnlyInCombat": false
+
+                },
                 "Dynamics": {
+                    "ReverseDriftMultiplier": 1,
+                    "ReverseFactor": 1,
+                    "DeathDriftTime": 15,
+                    "DriveType": "Hover",
+                    "DriftType": 0,
                     "MaxSpeed": 30,
-                    "MaxSpeedTurnRadius": 105,
+                    "MaxSpeedTurnRadius": 100,
                     "BrakingTime": 0.9,
-                    "AccelerationTime": 0.9,
-                    "MaxEaseIntoTurnTime": 0.25
+                    "AccelerationTime": 1.3,
+                    "MaxEaseIntoTurnTime": 10
                 }
             },
             "DetectableAttributes": {
@@ -6528,7 +6559,7 @@
                 "Resource1Cost": 0,
                 "Controllable": false,
                 "Selectable": false,
-                "Class": "Hover",
+                "Class": "Ground",
                 "AccuracyReceivedMultiplier": 1.0,
                 "MaxHealth": 900,
                 "Armour": 0
@@ -10404,7 +10435,7 @@
                     //  }
                     //},
                     "ExcludeFromHeightAdvantage": true,
-                    "ProjectileEntityTypeToSpawn": "G_Artillery_Default_ProjectileAssetContainer_MP",
+                    "ProjectileEntityTypeToSpawn": "G_Artillery_Shell_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
                     "TracerLength": 5,
@@ -10572,7 +10603,6 @@
         // COALITION LAV ASSAULT PACK
         "Research_Buff_C_Escort": {
             "ResearchItemAttributes": {
-                "LocalizedResearchTitleStringID": "LAV - INSULT PACK",
                 "Resource1Cost": 200,
                 "Resource2Cost": 100
 
@@ -10582,7 +10612,6 @@
         ///SOBAN LAV ASSAULT PACK
         "Research_Buff_S_Escort": {
             "ResearchItemAttributes": {
-                "LocalizedResearchTitleStringID": "LAV - INSULT PACK",
                 "Resource1Cost": 200,
                 "Resource2Cost": 100
             }
