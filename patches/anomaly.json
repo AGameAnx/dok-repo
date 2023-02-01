@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.41",
-        "LastUpdate": "2023-01-24",
+        "Version": "1.06.42",
+        "LastUpdate": "2023-02-01",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
@@ -481,7 +481,7 @@
                 "ResearchTime": 15,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 1",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 1 extra power to the carrier reserves and 5 max speed, but removes 150 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 1 extra power to the carrier reserves, but removes 150 hull integrity",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": "Carrier",
@@ -492,11 +492,6 @@
                                 "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
                                 "Value": -150
-                            },
-                            "1": {
-                                "Attribute": "UnitDynamics_MaxSpeed",
-                                "Mode": "Add",
-                                "Value": 5
                             }
                         }
                     }
@@ -534,7 +529,7 @@
                 "Resource2Cost": 200,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 2",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 3 extra power to the carrier reserves and 5 max speed, but removes 300 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 3 extra power to the carrier reserves, but removes 300 hull integrity",
                 "Dependencies": [ "Research_S_Buff_Power_1" ],
                 "UnitTypeBuffs": {
                     "0": {
@@ -546,11 +541,6 @@
                                 "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
                                 "Value": -300
-                            },
-                            "1": {
-                                "Attribute": "UnitDynamics_MaxSpeed",
-                                "Mode": "Add",
-                                "Value": 5
                             }
 
                         }
@@ -564,7 +554,7 @@
                 "Resource2Cost": 400,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 3",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 4 extra power to the carrier reserves and 5 max speed, but removes 550 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 4 extra power to the carrier reserves, but removes 550 hull integrity",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": "Carrier",
@@ -575,11 +565,6 @@
                                 "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
                                 "Value": -550
-                            },
-                            "1": {
-                                "Attribute": "UnitDynamics_MaxSpeed",
-                                "Mode": "Add",
-                                "Value": 5
                             }
                         }
                     }
@@ -592,7 +577,7 @@
                 "Resource2Cost": 550,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 5 extra power to the carrier reserves and 5 max speed, but removes 750 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 5 extra power to the carrier reserves, but removes 750 hull integrity",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": "Carrier",
@@ -603,11 +588,6 @@
                                 "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
                                 "Value": -750
-                            },
-                            "1": {
-                                "Attribute": "UnitDynamics_MaxSpeed",
-                                "Mode": "Add",
-                                "Value": 5
                             }
                         }
                     }
@@ -620,7 +600,7 @@
                 "Resource2Cost": 700,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 6 extra power to the carrier reserves, 2 heat capacity, 5 max speed, but removes 1250 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 6 extra power to the carrier reserves, 2 heat capacity, but removes 1250 hull integrity",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": "Carrier",
@@ -636,11 +616,6 @@
                                 "Attribute": "PowerShunt_HeatThreshold",
                                 "Mode": "Add",
                                 "Value": 2
-                            },
-                            "2": {
-                                "Attribute": "UnitDynamics_MaxSpeed",
-                                "Mode": "Add",
-                                "Value": 5
                             }
                         }
                     }
@@ -653,7 +628,7 @@
                 "Resource2Cost": 850,
                 "LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
                 "LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-                "LocalizedLongDescriptionStringID": "Adds 7 extra power to the carrier reserves, 8 more heat capacity, 5 max speed, but removes 2000 hull integrity",
+                "LocalizedLongDescriptionStringID": "Adds 7 extra power to the carrier reserves, 8 more heat capacity, but removes 2000 hull integrity",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": "Carrier",
@@ -669,11 +644,6 @@
                                 "Attribute": "PowerShunt_HeatThreshold",
                                 "Mode": "Add",
                                 "Value": 8
-                            },
-                            "2": {
-                                "Attribute": "UnitDynamics_MaxSpeed",
-                                "Mode": "Add",
-                                "Value": 5
                             }
                         }
                     }
@@ -2079,7 +2049,7 @@
                 "MaxHealth": 10000,
                 "Armour": 1,
                 "PriorityAsTarget": -15
-            },
+            }, /* give me my sliding soban carrier back, why you took all the lube for yourself bozo
             "UnitMovementAttributes": {
                 "DriveType": "Hover",
                 "Combat": {
@@ -2122,9 +2092,21 @@
                     "AccelerationTime": 1.3,
                     "MaxEaseIntoTurnTime": 10
                 }
-            },
+            },*/
             "DetectableAttributes": {
                 "TimeVisibleAfterFiring": 4500
+            },
+            "UnitMovementAttributes": {
+                "Combat": {
+                    "MaxDesiredCombatRange": 2200
+                },
+                "Dynamics": {
+                    "MaxSpeed": 30,
+                    "MaxSpeedTurnRadius": 105,
+                    "BrakingTime": 0.9,
+                    "AccelerationTime": 0.9,
+                    "MaxEaseIntoTurnTime": 0.25
+                }
             },
             "UnitHangarAttributes": {
                 "HangarBays": {
@@ -2813,13 +2795,18 @@
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Armor: 3",
+                                "LocalizedShortDescriptionStringID": "Armor: 3, Extra 1000 hp",
                                 "StatusEffectsToApply": {
                                     "Armour_2_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 2 }
+                                                    "0": { "Value": 2 },
+                                                    "1": {
+                                                        "Value": 1000,
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Add"
+                                                    }
                                                 }
                                             }
                                         }
@@ -2828,13 +2815,18 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Armor: 9",
+                                "LocalizedShortDescriptionStringID": "Armor: 9, Extra 2000 hp",
                                 "StatusEffectsToApply": {
                                     "Armour_3_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 8 }
+                                                    "0": { "Value": 8 },
+                                                    "1": {
+                                                        "Value": 2000,
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Add"
+                                                    }
                                                 }
                                             }
                                         }
@@ -2843,13 +2835,18 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Armor: 27",
+                                "LocalizedShortDescriptionStringID": "Armor: 27 Extra 3000 hp",
                                 "StatusEffectsToApply": {
                                     "Armour_4_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 26 }
+                                                    "0": { "Value": 26 },
+                                                    "1": {
+                                                        "Value": 3000,
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Add"
+                                                    }
                                                 }
                                             }
                                         }
@@ -2858,13 +2855,18 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Armor: 81",
+                                "LocalizedShortDescriptionStringID": "Armor: 81, Extra 4000 hp",
                                 "StatusEffectsToApply": {
                                     "Armour_5_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 80 }
+                                                    "0": { "Value": 80 },
+                                                    "1": {
+                                                        "Value": 4000,
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Add"
+                                                    }
                                                 }
                                             }
                                         }
@@ -2873,13 +2875,18 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Armor: 243, Self Heal Online",
+                                "LocalizedShortDescriptionStringID": "Armor: 243, Self Heal Online, Extra 5000 hp",
                                 "StatusEffectsToApply": {
                                     "Armour_6_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 242 }
+                                                    "0": { "Value": 242 },
+                                                    "1": {
+                                                        "Value": 5000,
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Add"
+                                                    }
                                                 }
                                             }
                                         },
