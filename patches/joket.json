@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.42",
-        "LastUpdate": "2023-02-01",
+        "Version": "1.06.50",
+        "LastUpdate": "2023-02-10",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joket.json"
     },
     "Global": {
@@ -1621,13 +1621,18 @@
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Armor: 3",
+                                "LocalizedShortDescriptionStringID": "Armor: 3, Extra 1000 hp",
                                 "StatusEffectsToApply": {
                                     "Armour_2_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 2 }
+                                                    "0": { "Value": 2 },
+                                                    "1": {
+                                                        "Value": 1000,
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Add"
+                                                    }
                                                 }
                                             }
                                         }
@@ -1636,13 +1641,18 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Armor: 9",
+                                "LocalizedShortDescriptionStringID": "Armor: 9, Extra 2000 hp",
                                 "StatusEffectsToApply": {
                                     "Armour_3_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 8 }
+                                                    "0": { "Value": 8 },
+                                                    "1": {
+                                                        "Value": 2000,
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Add"
+                                                    }
                                                 }
                                             }
                                         }
@@ -1651,13 +1661,18 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Armor: 27",
+                                "LocalizedShortDescriptionStringID": "Armor: 27 Extra 3000 hp",
                                 "StatusEffectsToApply": {
                                     "Armour_4_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 26 }
+                                                    "0": { "Value": 26 },
+                                                    "1": {
+                                                        "Value": 3000,
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Add"
+                                                    }
                                                 }
                                             }
                                         }
@@ -1666,13 +1681,18 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Armor: 81",
+                                "LocalizedShortDescriptionStringID": "Armor: 81, Extra 4000 hp",
                                 "StatusEffectsToApply": {
                                     "Armour_5_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 80 }
+                                                    "0": { "Value": 80 },
+                                                    "1": {
+                                                        "Value": 4000,
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Add"
+                                                    }
                                                 }
                                             }
                                         }
@@ -1681,13 +1701,18 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Armor: 243, Self Heal Online",
+                                "LocalizedShortDescriptionStringID": "Armor: 243, Self Heal Online, Extra 5000 hp",
                                 "StatusEffectsToApply": {
                                     "Armour_6_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 242 }
+                                                    "0": { "Value": 242 },
+                                                    "1": {
+                                                        "Value": 5000,
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Add"
+                                                    }
                                                 }
                                             }
                                         },
@@ -1697,7 +1722,6 @@
                                                     "Amount": 1,
                                                     "MSTickDuration": 20
                                                 }
-
                                             }
                                         }
                                     }
@@ -2126,7 +2150,7 @@
                     "Resource1Cost": 270
                 },
                 "Ability_C_Sob_SobanNuke_MP": {
-                    "CooldownTimeSecs": 360,
+                    "CooldownTimeSecs": 169,
                     "Resource1Cost": 400,
                     "ChainCasting": {
                         "QueuedAbilityDelay": 1.5
@@ -2297,16 +2321,16 @@
                     "0": { // Defensive Logistics
                         "PowerLevels": {
                             "0": {
-                                "LocalizedShortDescriptionStringID": "Common module deploy and vison range."
+                                "LocalizedShortDescriptionStringID": "Common module deploy and contact range."
                             },
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Uncommon deploy and vison range. Weapons enabled",
+                                "LocalizedShortDescriptionStringID": "Uncommon deploy and contact range. Weapons enabled",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_1_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 500 }, // Sensor Radius
+                                                    "0": { "Value": 100 }, // Sensor Radius
                                                     "1": { "Value": 600 }, // Contact Radius
                                                     "5": { "Value": 3000 } // Reload time
                                                 }
@@ -2316,13 +2340,13 @@
                                 }
                             },
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Rare deploy, vison, weapon range and damage buff.",
+                                "LocalizedShortDescriptionStringID": "Rare deploy, contact, weapon range and damage buff.",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_2_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 1000 },
+                                                    "0": { "Value": 100 },
                                                     "1": { "Value": 1100 },
                                                     "5": { "Value": 3000 },
                                                     "7": {
@@ -2345,13 +2369,13 @@
                                 }
                             },
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Very Rare deploy, vison, weapon range and damage buff.",
+                                "LocalizedShortDescriptionStringID": "Very Rare deploy, contact, weapon range and damage buff.",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_3_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 1500 },
+                                                    "0": { "Value": 150 },
                                                     "1": { "Value": 1600 },
                                                     "5": { "Value": 3000 },
                                                     "7": {
@@ -2374,13 +2398,13 @@
                                 }
                             },
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Legendary deploy, vison, weapon range and damage buff.",
+                                "LocalizedShortDescriptionStringID": "Legendary deploy, contact, weapon range and damage buff.",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_4_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 2000 },
+                                                    "0": { "Value": 200 },
                                                     "1": { "Value": 2100 },
                                                     "5": { "Value": 3000 },
                                                     "6": { "Value": 40 }, // Damage bonus
@@ -2399,13 +2423,13 @@
                                 }
                             },
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Artifact tier deploy, vison, weapon range and damage buff.",
+                                "LocalizedShortDescriptionStringID": "Artifact tier deploy, contact, weapon range and damage buff.",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_5_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 5000 },
+                                                    "0": { "Value": 300 },
                                                     "1": { "Value": 5100 },
                                                     "5": { "Value": 3000 },
                                                     "6": { "Value": 10 },
@@ -6468,24 +6492,31 @@
         // SOBAN NUKE
         "C_Sob_NukeEmitter_MP": {
             "UnitAttributes": {
-                "MaxHealth": 300000000, // takes friendly fire; use to determine duration
+                "MaxHealth": 4000000, // takes friendly fire; use to determine duration
                 "PopCapCost": 0,
                 "ContactRadius": 0,
                 "SensorRadius": 0
             },
             "WeaponAttributes": {
                 "C_Sob_NukeEmitter_Weapon_G2G": {
-                    "BurstPeriodMinTimeMS": 250,
-                    "BurstPeriodMaxTimeMS": 250,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
                     "CooldownTimeMS": 0,
                     "ActiveStatusEffectsIndex": 1,
-                    "BaseDamagePerRound": 1000,
-                    "ReloadTimeMS": 10000,
+                    "NumberOfBursts": 5,
+                    "BaseDamagePerRound": 1,
+                    "ReloadTimeMS": 5000,
                     "DamagePacketsPerShot": 0,
                     "StatusEffectsExcludeTargetType": 0,
                     "FriendlyFireDamageScalar": 0,
                     "EntityTypesToSpawnOnImpact": {
                         "0": {
+                            "EntityTypeToSpawn": "G_Interceptor"
+                        },
+                        "1": {
+                            "EntityTypeToSpawn": "G_Interceptor"
+                        },
+                        "2": {
                             "EntityTypeToSpawn": "G_Interceptor"
                         }
                     },
@@ -6495,7 +6526,7 @@
 
                         }
                     },
-                    "WeaponOwnerFriendlyFireDamageScalar": 20000, // time = health / 1e6
+                    "WeaponOwnerFriendlyFireDamageScalar": 1000000, // time = health / 1e6
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Strikecraft, Small, Harvester",
@@ -6589,6 +6620,87 @@
                         "MISSILES": {
                             "Capacity": 200,
                             "StartingAmount": 200
+                        }
+                    }
+                }
+            },
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Drone unit: unable to rank up",
+                        "RequiredExperience": 1000110,
+                        "Buff": {
+                            "0": {
+                                "Remove": true
+                            },
+                            "1": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "2": {
+                        "RequiredExperience": 1000110,
+                        "BuffTooltipLocID": "", // ye 10 was a bit op 
+                        "Buff": {
+                            "0": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "3": {
+                        "RequiredExperience": 1000110,
+                        "BuffTooltipLocID": "",
+                        "Buff": {
+                            "0": {
+                                "Remove": true
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            }
+                        }
+                    },
+                    "4": {
+                        "RequiredExperience": 1000110,
+                        "BuffTooltipLocID": "",
+                        "Buff": {
+                            "0": {
+                                "Remove": true
+                            }
+
+                        }
+                    },
+                    "5": {
+                        "RequiredExperience": 1000110,
+                        "BuffTooltipLocID": "",
+                        "Buff": {
+                            "0": {
+                                "Remove": true
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
+                            },
+                            "5": {
+                                "Remove": true
+                            },
+                            "6": {
+                                "Remove": true
+                            }
                         }
                     }
                 }
@@ -7100,7 +7212,8 @@
             "UnitMovementAttributes": {
                 "Dynamics": {
                     "MaxSpeed": 25,
-                    "MaxSpeedTurnRadius": 5
+                    "MaxSpeedTurnRadius": 5,
+                    "MinCruiseSpeed": 25
                 }
             }
         },
@@ -15821,7 +15934,7 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Lieutenant: -25% reload time on grenades",
+                        "BuffTooltipLocID": "Lieutenant: -25% reload time on sandbang grenades",
                         "RequiredExperience": 1100,
                         "Buff": {
                             "0": {
@@ -15881,7 +15994,7 @@
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Commander: +100 damage to grenades",
+                        "BuffTooltipLocID": "Commander: +100 damage to sandbang grenades",
                         "RequiredExperience": 2950,
                         "Buff": {
                             "0": {
@@ -16021,13 +16134,18 @@
             },
             "WeaponAttributes": {
                 "C_ArtilleryCruiser_Weapon_Barrage_MP": {
+                    "Turret": {
+                        "FieldOfView": 360,
+                        "FieldOfFire": 360,
+                        "RotationSpeed": 1
+                    },
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
                     "FriendlyFireDamageScalar": 1,
                     "BaseDamagePerRound": 1000,
                     "AreaOfEffectRadius": 100,
                     "NumberOfBursts": 3,
                     "RateOfFire": 1,
-                    "CooldownTimeMS": 10,
+                    "CooldownTimeMS": 250,
                     "BurstPeriodMinTimeMS": 100,
                     "BurstPeriodMaxTimeMS": 100,
                     "RangeAttributesShort": {
@@ -16080,6 +16198,11 @@
                 },
                 "C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
                     "FriendlyFireDamageScalar": 1,
+                    "Turret": {
+                        "FieldOfView": 360,
+                        "FieldOfFire": 360,
+                        "RotationSpeed": 1
+                    },
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
                     "BaseDamagePerRound": 1200,
                     "DamagePacketsPerShot": 1,
@@ -16099,6 +16222,13 @@
                 },
                 "C_ArtilleryCruiser_Weapon_G2G_MP": {
                     "FriendlyFireDamageScalar": 1,
+                    "NumberOfBursts": 4,
+                    "RateOfFire": 1,
+                    "TargetPrioritizationAttributes": {
+                        "AutoTargetStickyBias": 0.0001,
+                        "TargetSameCommanderBias": 0.0001
+                    },
+                    "CooldownTimeMS": 250,
                     "StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "MortarSuppress_StatusEffect" ] }
@@ -17110,8 +17240,8 @@
         },
         "Ability_K_ProduceBaserunner": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD BLAST DRONE FACTORY" } },
         "Ability_K_ProduceExplodingSkimmer_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD EXPLODING SKIMMER" } },
-        "Ability_C_Sob_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Strong against air targets and carriers." } },
-        "Ability_C_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Strong against air targets and carriers." } },
+        "Ability_C_Sob_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Armed with special weapon and sensor disrupting sandbang grenades, AA PDCs and stolen Gaalsien supersonic missiles. Strong against air targets, carriers, humongos groups of units." } },
+        "Ability_C_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Armed with special weapon and sensor disrupting sandbang grenades, AA PDCs and stolen Gaalsien supersonic missiles. Strong against air targets, carriers, humongos groups of units." } },
         "Ability_C_ProduceBattlecruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "God-Emperor level heavy, unaramored undirect fire artillery weapons platform. Effective at PURGING HERETICS from long range with pellets of faith in our God-Emperor of Mainkind." } },
         "Ability_C_Sob_ProduceBattlecruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "God-Emperor level heavy, unaramored direct fire artillery platform. Effective at PURGING HERETICS from long range with supersonic slag of faith in our God-Emperor of Mainkind from holy railguns." } },
         "Ability_G_ProduceArtilleryCruiser_MP": {
@@ -17189,13 +17319,13 @@
         "Research_Buff_C_Sob_CruiseMissileUnlock": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "CARRIER - BEEHIVE WITH A MICROWAVE",
-                "LocalizedLongDescriptionStringID": "Upgrade Carrier throwing arm; launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 30 ANGRY BEES"
+                "LocalizedLongDescriptionStringID": "Upgrade Carrier throwing arm; launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 15 ANGRY BEES"
             }
         },
         "Ability_C_Sob_SobanNuke_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "THROW A BEEHIVE WITH A MICROWAVE",
-                "LocalizedLongDescriptionStringID": "Launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 30 ANGRY BEES."
+                "LocalizedLongDescriptionStringID": "Launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 15 ANGRY BEES."
             }
         },
         "Ability_C_ToggleAutoFire": {
@@ -17220,8 +17350,8 @@
         },
         "C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
             "AbilityViewAttributes": {
-                "LocalizedTitleStringID": "THROW A SAND GRENADE",
-                "LocalizedLongDescriptionStringID": "I hate sand, its rough and gets everywhere, especialy in foe targeting systems for 5 seconds."
+                "LocalizedTitleStringID": "THROW A SANDBANG GRENADE",
+                "LocalizedLongDescriptionStringID": "I hate sand, its rough and gets everywhere, especialy in foe targeting systems for 5 seconds.\nReduces accuracy vison and sensor range to 0 on affected units."
             }
         }
     }
