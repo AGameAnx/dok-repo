@@ -461,6 +461,11 @@
                     }
                 },
                 "C_Rachel_Weapon_Superweapon_Broad_Dud": {
+                    "Turret": {
+                        "FieldOfView": 360,
+                        "FieldOfFire": 360,
+                        "RotationSpeed": 1
+                    },
                     "RateOfFire": 4,
                     "NumberOfBursts": 12,
                     "ReloadTimeMS": 1550,
@@ -538,6 +543,11 @@
                     }
                 },
                 "C_Rachel_Weapon_Superweapon_Broad_New": {
+                    "Turret": {
+                        "FieldOfView": 360,
+                        "FieldOfFire": 360,
+                        "RotationSpeed": 1
+                    },
                     "RateOfFire": 4,
                     "NumberOfBursts": 12,
                     "ReloadTimeMS": 1550,
@@ -636,6 +646,11 @@
 
                 },
                 "C_Rachel_Weapon_Superweapon_Narrow": {
+                    "Turret": {
+                        "FieldOfView": 360,
+                        "FieldOfFire": 360,
+                        "RotationSpeed": 1
+                    },
                     "RateOfFire": 4,
                     "NumberOfBursts": 12,
                     "ReloadTimeMS": 1550,
@@ -741,7 +756,6 @@
         "G_Fathership": {
             "UnitAttributes": {
                 "FireRateDisplay": 6,
-                "Class": "Hover, Carrier",
                 "MaxHealth": 66666,
                 "Armour": 66,
                 "AggroRange": 110000,
@@ -883,7 +897,7 @@
                         "DistanceWeight": 100,
                         "WeaponEffectivenessWeight": 150,
                         "AutoTargetStickyBias": 100,
-                        "TargetSameCommanderBias": 0.0001
+                        "TargetSameCommanderBias": -10000
                     },
                     "RateOfFire": 10,
                     "StatusEffectsTargetAlignment": "None",
@@ -1179,7 +1193,7 @@
                         }
                     },
                     "ExcludeFromHeightAdvantage": true
-                }, 
+                },
                 "C_Carrier_Weapon_CruiseMissile": {
                     "StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
@@ -1775,7 +1789,7 @@
                             "5": {
                                 "LocalizedShortDescriptionStringID": "Armor: 243, Self Heal Online, Extra 5000 hp",
                                 "StatusEffectsToApply": {
-                                    "Armour_6_StatusEffect": {
+                                    "Armour_6_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
@@ -4739,7 +4753,7 @@
                             "5": {
                                 "LocalizedShortDescriptionStringID": "Armor: 243, Self Heal Online, Extra 15000 hp",
                                 "StatusEffectsToApply": {
-                                    "Armour_6_StatusEffect": {
+                                    "Armour_6_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
@@ -5267,6 +5281,218 @@
             }
         },
 
+        "G_Baserunner": {
+            "UnitAttributes": {
+                "Resource1Cost": 0,
+                "Resource2Cost": 0,
+                "ProductionTime": 1,
+                "PopCapCost": 0,
+                "MaxHealth": 1600,
+                "PriorityAsTarget": -250,
+                "Armour": 1,
+                "FireRateDisplay": 5,
+                "AggroRange": 2000,
+                "LeashRange":0
+            },
+            "UnitMovementAttributes": {
+                "Dynamics": {
+                    "MaxSpeed": 135
+                }
+            },
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Novice: +3 damage",
+                        "RequiredExperience": 400,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 262148,
+                                "Mode": "Add",
+                                "Value": 3
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Acolyte: +15 speed",
+                        "RequiredExperience": 550,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 15
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Sentinel: +5 armor",
+                        "RequiredExperience": 650,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Guardian: +300 hull",
+                        "RequiredExperience": 800,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 300
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Elder: -50% cooldown on ability",
+                        "RequiredExperience": 1200,
+                        "Buff": {
+                            "0": {
+                                "Name": "Ability_G_DeployScanner",
+                                "Attribute": 16777216,
+                                "Mode": "AddPercent",
+                                "Value": -50
+
+                            },
+                            "1": {
+                                "Name": "Ability_G_BaseRunnerPassiveRegen",
+                                "Attribute": 16777216,
+                                "Mode": "AddPercent",
+                                "Value": -50
+
+                            }
+                        }
+                    }
+                }
+            },
+            "AbilityAttributes": {
+                "Ability_G_DeployScanner": {
+                    "CooldownTimeSecs": 180
+
+                },
+                "Ability_G_BaseRunnerPassiveRegen": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
+                    "CooldownTimeSecs": 65,
+                    "ApplyStatusEffect": {
+                        "Regen_BaseRunnerPassive_StatusEffect": {
+                            "Lifetime": "Finite",
+                            "Duration": 15.00,
+                            "MaxStacks": 1,
+                            "StackingBehaviour": "Replace",
+                            "BuffsToApplyToTarget": {
+                                "0": {
+                                    "UnitType": "G_Baserunner_MP",
+                                    "BuffSet": {
+                                        "0": {
+                                            "Attribute": "UnitDynamics_MaxSpeed",
+                                            "Mode": "AddPercent",
+                                            "Value": 20
+                                        },
+                                        "1": {
+                                            "Attribute": "UnitDynamics_AccelerationTime",
+                                            "Mode": "AddPercent",
+                                            "Value": 20
+                                        },
+                                        "2": {
+                                            "Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+                                            "Mode": "AddPercent",
+                                            "Value": 20
+                                        }
+                                    }
+                                }
+                            },
+                            "Modifiers": {
+                                "0": {
+                                    "ModifierType": "HealthOverTime",
+                                    "HealthOverTimeAttributes": {
+                                        "ID": "G_BaseRunner_HealAura_HealOT_StatusEffect_MP",
+                                        "Amount": 1,
+                                        "MSTickDuration": 25,
+                                        "DamageType": "Heal"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "WeaponAttributes": {
+                "G_Baserunner_Weapon_G2G": {
+                    "ExcludeFromHeightAdvantage": true,
+                    "LineOfSightRequired": false,
+                    "BaseDamagePerRound": 3,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "TargetStyle": "Flak",
+                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectFalloffType": "None",
+                    "BurstPeriodMaxTimeMS": 1000,
+                    "CooldownTimeMS": 250,
+                    "TracerSpeed": 2500,
+                    "ReloadTimeMS": 5000,
+                    "RateOfFire": 50,
+                    "DamagePacketsPerShot": 0,
+                    "RangeAttributesShort": {
+                        "Accuracy": 0,
+                        "Distance": 700
+                    },
+                    "RangeAttributesMedium": {
+                        "Accuracy": 0,
+                        "Distance": 800
+                    },
+                    "RangeAttributesLong": {
+                        "Accuracy": 0,
+                        "Distance": 2000
+                    },
+                    "Turret": {
+                        "FieldOfView": 360,
+                        "FieldOfFire": 10,
+                        "RotationSpeed": 200
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or"
+                        },
+                        "1": { "Remove": true },
+                        "2": { "Remove": true },
+                        "3": { "Remove": true },
+                        "4": { "Remove": true }
+                    }
+                },
+                "G_Baserunner_Weapon_HealingAura": {
+                    "RangeAttributesShort": {
+                        "Accuracy":0
+                    },
+                    "RangeAttributesMedium": {
+                        "Accuracy": 0
+                    },
+                    "RangeAttributesLong": {
+                        "Accuracy": 0
+                    },
+                    "DamagePacketsPerShot": 0,
+                    "RateOfFire": 25,
+                    "BaseDamagePerRound": 4,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
+                    "CooldownTimeMS": 0,
+                    "ReloadTimeMS": 0,
+                    "FriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 0,
+                    "AreaOfEffectRadius": 1000,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                      "0": { "StatusEffects": [ "G_BaseRunner_HealAura_HealOT_StatusEffect_MP" ] }
+                    }
+                }
+            }
+        },
+
         "G_Baserunner_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 200,
@@ -5468,8 +5694,8 @@
         "G_Carrier": {
             "UnitAttributes": {
                 "MaxHealth": 30000,
-                "Class": "Hover, Carrier",
-                "FireRateDisplay": 1
+                "FireRateDisplay": 1,
+                "PriorityAsTarget": -15
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -5510,29 +5736,45 @@
                         "AutocastEnabledOnSpawn": true
                     }
                 },
+                "Ability_G_ProduceSupportCruiser": {
+                    "CooldownTimeSecs": 31,
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
+                    "ChainCasting": {
+                        "QueuedAbility": "Ability_Produce_G_Baserunner",
+                        "QueuedAbilityDelay": 0
+                    }
+                },
                 "Ability_G_MissileBarrage": {
                     "CooldownTimeSecs": 160,
-                    "ChainCasting": { "QueuedAbility": "Ability_G_MissileBarrage_Sight" }
+                    "ChainCasting": {
+                        "QueuedAbility": "Ability_G_MissileBarrage_Sight"
+                    }
                 },
-                "Ability_G_LaunchInterceptor_Upgraded": {
+                "Ability_G_LaunchInterceptor": {
                     "ChainCasting": {
                         "QueuedAbility": "Ability_G_LaunchBomber",
-                        "QueuedAbilityDelay": 0
+                        "QueuedAbilityDelay": 0,
+                        "RetryQueueIfAbilityFails": true
                     },
                     "AirSortie": {
                         "LoiterLength": 90,
                         "SetAttackTargetsWithinRadius": 2100,
-                        "SortieSquadSize": 1
+                        "SortieSquadSize": 15
                     }
                 },
                 "Ability_G_LaunchBomber": {
                     "ChainCasting": {
-                        "QueuedAbility": "Ability_G_LaunchInterceptor_Upgraded",
-                        "QueuedAbilityDelay": 0
+                        "QueuedAbility": "Ability_G_LaunchInterceptor",
+                        "QueuedAbilityDelay": 0,
+                        "RetryQueueIfAbilityFails": true
                     },
                     "AirSortie": {
                         "LoiterLength": 120,
-                        "SetAttackTargetsWithinRadius": 2000
+                        "SetAttackTargetsWithinRadius": 2000,
+                        "SortieSquadSize": 5
                     }
                 }
             },
@@ -6565,25 +6807,25 @@
                 }
             },
             */
-                "UnitMovementAttributes": {
-                    "Dynamics": {
-                        "MaxSpeed": 75
+            "UnitMovementAttributes": {
+                "Dynamics": {
+                    "MaxSpeed": 75
+                }
+            },
+            "WeaponAttributes": {
+                "C_Harvester_Weapon_DemoCharge": {
+                    "RangeAttributesShort": {
+                        "Accuracy": 100,
+                        "Distance": 500
+                    },
+                    "RangeAttributesMedium": {
+                        "Remove": true
+                    },
+                    "RangeAttributesLong": {
+                        "Remove": true
                     }
-                },
-                "WeaponAttributes": {
-                    "C_Harvester_Weapon_DemoCharge": {
-                        "RangeAttributesShort": {
-                            "Accuracy": 100,
-                            "Distance": 500
-                        },
-                        "RangeAttributesMedium": {
-                            "Remove": true
-                        },
-                        "RangeAttributesLong": {
-                            "Remove": true
-                        }
-                    }
-                } /*,
+                }
+            } /*,
             "StorageAttributes": {
                 "C_Harvester_StorageAttributesAsset_MP": {
                     "InventoryLoadout": {
@@ -6591,7 +6833,7 @@
                     }
                 }
             }*/
-            },
+        },
 
         // GAALSIEN SALVAGER
         "G_Harvester": {
@@ -7252,7 +7494,6 @@
                     "BaseDamagePerRound": 20,
                     "ExcludeFromHeightAdvantage": true,
                     "TracerSpeed": 1500,
-
                     "RateOfFire": 10,
                     "LineOfSightRequired": true,
                     "Turret": {
@@ -7266,18 +7507,20 @@
         // GAALSIEN PRODUCTION CRUISER
         "G_SupportCruiser": {
             "UnitAttributes": {
-                "Resource1Cost": 560,
-                "Resource2Cost": 50,
+                "Resource1Cost": 0,
+                "Resource2Cost": 0,
+                "ProductionTime": 30,
+                "PopCapCost": 0,
                 "MaxHealth": 4000,
+                "LeashRange": 0,
                 "Armour": 6,
-                "ProductionTime": 10,
                 "SensorRadius": 1450,
                 "ContactRadius": 1600,
                 "FireRateDisplay": 3
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 70
+                    "MaxSpeed": 135
                 }
             },
             "ExperienceAttributes": {
@@ -7296,7 +7539,7 @@
                     },
                     "2": {
                         "RequiredExperience": 1000110,
-                        "BuffTooltipLocID": "", 
+                        "BuffTooltipLocID": "",
                         "Buff": {
                             "0": {
                                 "Remove": true
@@ -7376,29 +7619,29 @@
                         }
                     },
                     "ActivationDependencies": {
-                        "TakeNoDamageForMS": 15000
+                        "TakeNoDamageForMS": 0
                     }
                 }
             },
             "WeaponAttributes": {
                 "G_SupportCruiser_Weapon_Front": {
-                    "TargetStyle": "Flak",
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
-                    "BaseDamagePerRound": 10,
-                    "TracerSpeed": 1500,
-                    "RateOfFire": 10,
+                    "BaseDamagePerRound": 5,
+                    "TracerSpeed": 500,
+                    "RateOfFire": 20,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 50,
                     "WindDownTimeMS": 500,
                     "BurstPeriodMinTimeMS": 800,
                     "BurstPeriodMaxTimeMS": 1000,
                     "NumberOfBursts": 6,
+                    "DamageType": "Heal",
                     "CooldownTimeMS": 500,
                     "Turret": {
                         "FieldOfView": 360,
-                        "FieldOfFire": 2,
-                        "RotationSpeed": 85
+                        "FieldOfFire": 5,
+                        "RotationSpeed": 360
                     },
                     "ReloadTimeMS": 1000,
                     "RangeAttributesShort": {
@@ -7425,16 +7668,15 @@
                     }
                 },
                 "G_SupportCruiser_Weapon_G2G": {
-                    "TargetStyle": "Flak",
                     "DamageType": "Heal",
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
-                    "BaseDamagePerRound": 10,
-                    "RateOfFire": 10,
+                    "BaseDamagePerRound": 5,
+                    "RateOfFire": 20,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 50,
                     "WindDownTimeMS": 500,
-                    "TracerSpeed": 1500,
+                    "TracerSpeed": 500,
                     "BurstPeriodMinTimeMS": 800,
                     "BurstPeriodMaxTimeMS": 1000,
                     "NumberOfBursts": 6,
@@ -7442,19 +7684,19 @@
                     "ReloadTimeMS": 1000,
                     "Turret": {
                         "FieldOfView": 360,
-                        "FieldOfFire": 2,
-                        "RotationSpeed": 85
+                        "FieldOfFire": 5,
+                        "RotationSpeed": 360
                     },
                     "RangeAttributesShort": {
                         "Accuracy": 100,
                         "Distance": 300
                     },
                     "RangeAttributesMedium": {
-                        "Accuracy": 80,
+                        "Accuracy": 100,
                         "Distance": 500
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 50,
+                        "Accuracy": 100,
                         "Distance": 1000
                     },
                     "Modifiers": {
@@ -7473,7 +7715,7 @@
         // COALITION/SOBAN AAV
         "C_HAC": {
             "UnitAttributes": {
-                "MaxHealth": 970,
+                "MaxHealth": 1970,
                 "SensorRadius": 1100,
                 "Armour": 7,
                 "AggroRange": 1100
@@ -7518,13 +7760,13 @@
                                 "Name": "C_HAC_Weapon_G2G_MP",
                                 "Attribute": "WeaponRange_AccuracyMedium",
                                 "Mode": "Set",
-                                "Value": 20
+                                "Value": 30
                             },
                             "1": {
                                 "Name": "C_HAC_Weapon_G2G_MP",
                                 "Attribute": "WeaponRange_AccuracyLong",
                                 "Mode": "Set",
-                                "Value": 20
+                                "Value": 30
                             }
                         }
                     },
@@ -7579,15 +7821,15 @@
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "RangeAttributesShort": {
                         "Distance": 800,
-                        "Accuracy": 20
+                        "Accuracy": 30
                     },
                     "RangeAttributesMedium": {
                         "Distance": 950,
-                        "Accuracy": 15
+                        "Accuracy": 25
                     },
                     "RangeAttributesLong": {
                         "Distance": 1300,
-                        "Accuracy": 10
+                        "Accuracy": 20
                     },
                     "OutputDPS": true,
                     "Modifiers": {
@@ -7596,12 +7838,6 @@
                             "ClassOperator": "Or",
                             "Modifier": "DamagePercent",
                             "Amount": 15
-                        },
-                        "1": {
-                            "TargetClass": "Air",
-                            "ClassOperator": "Or",
-                            "Modifier": "DamagePercent",
-                            "Amount": 50
                         }
                     }
                 },
@@ -9402,7 +9638,7 @@
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesShort": {
                         "MinDistance": 1500,
-                        "Accuracy": 25,
+                        "Accuracy": 50,
                         "Distance": 3000
                     },
                     "RangeAttributesMedium": {
@@ -10872,7 +11108,7 @@
                         }
                     },
                     "RangeAttributesLong": {
-                        "Distance": 4500,
+                        "Distance": 6500,
                         "Accuracy": 50
                     },
                     "RangeAttributesShort": {
@@ -11132,7 +11368,7 @@
                         }
                     },
                     "RangeAttributesLong": {
-                        "Distance": 4500,
+                        "Distance": 6500,
                         "Accuracy": 50
                     },
                     "RangeAttributesShort": {
@@ -11769,15 +12005,15 @@
                     "WindDownTimeMS": 0,
                     "ReloadTimeMS": 2500,
                     "RangeAttributesShort": {
-                        "Accuracy": 10,
+                        "Accuracy": 15,
                         "Distance": 1400
                     },
                     "RangeAttributesMedium": {
-                        "Accuracy": 5,
+                        "Accuracy": 10,
                         "Distance": 1800
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 3,
+                        "Accuracy": 7,
                         "Distance": 2650
                     },
                     "Modifiers": {
@@ -11819,8 +12055,8 @@
                         "0": { "StatusEffects": [ "MortarSuppress_StatusEffect" ] }
                     },
                     "TargetPrioritizationAttributes": {
-                        "AutoTargetStickyBias": 0.0001,
-                        "TargetSameCommanderBias": 0.0001
+                        "AutoTargetStickyBias": -99999,
+                        "TargetSameCommanderBias": -99999
                     },
                     "StatusEffectsExcludeTargetType": "Carrier",
                     "FriendlyFireDamageScalar": 1,
@@ -12069,7 +12305,6 @@
                 "FireRateDisplay": 4
             },
             "AbilityAttributes": {
-
                 "Ability_G_ArtilleryCruiserRegen": {
                     "ApplyStatusEffect": {
                         "Regen_ArtilleryCruiser_StatusEffect": {
@@ -12139,6 +12374,12 @@
                             "Modifiers": {
                                 "0": {
                                     "ModifierType": "Immobilize"
+                                },
+                                "1": {
+                                    "HealthOverTimeAttributes": {
+                                        "Amount": 1,
+                                        "MSTickDuration": 12
+                                    }
                                 }
                             }
 
@@ -12408,7 +12649,7 @@
                 "InvertFillCooldown": true,
                 "LocalizedTitleStringID": "LAUNCH THE ANGRY SAND TORNADO",
                 "IconName": "Icon-Command-SmokeGround",
-                "LocalizedLongDescriptionStringID": "Throws a can with a sand tornado inside of it. Tornado deals 2500 damage over 10 seconds."
+                "LocalizedLongDescriptionStringID": "Throws a can with a sand tornado inside of it. Tornado deals 2500 damage over 10 seconds. Does not stack."
             }
         },
         "Ability_G_BattleCruiser_Missile": {
@@ -12474,8 +12715,8 @@
         },
         "Ability_G_BaseRunnerPassiveRegen": {
             "AbilityViewAttributes": {
-                "LocalizedTitleStringID": "RELEASE ANGRY NANITES",
-                "LocalizedLongDescriptionStringID": "Baserunner spews out nanits that feed on any surounding unit hull to restore baserunner health. Capable of repairing even without units around it using sand power.\n\n[999da0]Nanomachines son."
+                "LocalizedTitleStringID": "RELEASE CHEERFULL NANITES",
+                "LocalizedLongDescriptionStringID": "Baserunner spews out nanits that heal any surounding unit hull. Capable of repairing everything around it using sand power.\n\n[999da0]Nanomachines son."
             }
         },
         "Ability_Produce_G_StarHull_U1": {
@@ -12516,7 +12757,7 @@
             "AbilityViewAttributes": {
                 "IconName": "Icon-Command-EMP",
                 "LocalizedTitleStringID": "SACRAFICIAL EMP",
-                "LocalizedLongDescriptionStringID": "[84a1e8]Orders missile ship to emp itself on the targeted spot. Deals 3750 damage to missiel ship itself and 250 to anything around it\n\n[ff0000]My name is Jafar\nI came from a far\nThere is an EMP in my car\nTake evasive action"
+                "LocalizedLongDescriptionStringID": "[84a1e8]Orders missile ship to emp itself on the targeted spot. Deals 3750 damage to missile ship itself and 250 to anything around it\n\n[ff0000]My name is Jafar\nI came from a far\nThere is an EMP in my car\nTake evasive action"
 
             }
         },
@@ -12543,7 +12784,7 @@
         },
         "Ability_C_SmokeGrenade": {
             "AbilityViewAttributes": {
-                "LocalizedLongDescriptionStringID": "Provide c-c-cough cough... cover by lying down a smoke screen for 10 seconds.\n\nSmoking is bad for unit health and will deal damamage over time besides impact damage.\nInitial impact damage is 190. Poision deals 500 damage over 10 seconds."
+                "LocalizedLongDescriptionStringID": "Provide c-c-cough cough... cover by lying down a smoke screen for 10 seconds.\n\nSmoking is bad for unit health and will deal damamage over time besides impact damage.\nInitial impact damage is 190. Poision deals 500 damage over 10 seconds. Does not stack."
             }
         },
         "Ability_K_ProduceBaserunner": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD BLAST DRONE FACTORY" } },
@@ -12636,7 +12877,7 @@
                 "LocalizedToggledLongDescriptionStringID": "Continue normal cruiser operations."
             }
         },
-        "C_HAC_Upgrade01_Weapon_Ballistic_Grenade": {
+        "Ability_C_Grenade_Campaign": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "THROW A SAND GRENADE",
                 "LocalizedLongDescriptionStringID": "I hate sand, its rough and gets everywhere, especialy in foe targeting systems for 5 seconds.\nReduces accuracy vison and sensor range to 0 on affected units."
@@ -12646,6 +12887,11 @@
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "ANTI-GROUND CAPABILITIES",
                 "LocalizedLongDescriptionStringID": "Support cruiser anti-ground missile system online."
+            }
+        },
+        "Ability_G_ProduceHarvester": {
+            "AbilityViewAttributes": {
+                "LocalizedLongDescriptionStringID": "Gaalsien resource extarction unit. Mines CUs at 166% efficency and RUs at 200%, but has rather small cargo hold and uneffective at long distance mining. Has no crew, a drone."
             }
         },
         "Upgrade_SupportCruiser_AA_Campaign": {
