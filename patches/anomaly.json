@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.50",
-        "LastUpdate": "2023-02-10",
+        "Version": "1.06.60",
+        "LastUpdate": "2023-02-13",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
@@ -10092,10 +10092,18 @@
             },
             "WeaponAttributes": {
                 "C_Escort_Weapon_G2G_MP": {
-                    "BaseDamagePerRound": 14,
-                    "RateOfFire": 5,
-                    "CooldownTimeMS": 400,
-                    "NumberOfBursts": 2,
+                    "OutputDPS": true,
+                    "BaseDamagePerRound": 50,
+                    "DamagePacketsPerShot": 4,
+                    "ProjectileEntityTypeToSpawn": "C_GunShip_DefaultBombs_ProjectileAssetContainer_MP",
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "LeadsTarget": 1,
+                    "TracerLength": 5,
+                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectFalloffType": "None",
+                    "RateOfFire": 1,
+                    "NumberOfBursts": 1,
                     "BurstPeriodMinTimeMS": 950,
                     "BurstPeriodMaxTimeMS": 1050,
                     "RangeAttributesShort": {
@@ -10117,40 +10125,22 @@
                             "Modifier": "CanNotTarget"
                         },
                         "1": {
-                            "TargetClass": "Medium",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyShortPercent",
-                            "Amount": 100
+                            "Remove": true
                         },
                         "2": {
-                            "TargetClass": "Medium",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyMediumPercent",
-                            "Amount": 100
+                            "Remove": true
                         },
                         "3": {
-                            "TargetClass": "Medium",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyLongPercent",
-                            "Amount": 100
+                            "Remove": true
                         },
                         "4": {
-                            "TargetClass": "Large, XLarge",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyShortPercent",
-                            "Amount": 100
+                            "Remove": true
                         },
                         "5": {
-                            "TargetClass": "Large, XLarge",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyMediumPercent",
-                            "Amount": 100
+                            "Remove": true
                         },
                         "6": {
-                            "TargetClass": "Large, XLarge",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyLongPercent",
-                            "Amount": 100
+                            "Remove": true
                         }
                     },
                     "TargetPrioritizationAttributes": {
@@ -10161,13 +10151,13 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: +4 damage",
+                        "BuffTooltipLocID": "Officer: +8 damage",
                         "RequiredExperience": 100,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
                                 "Mode": "Add",
-                                "Value": 4
+                                "Value": 8
                             },
                             "1": {
                                 "Remove": true
@@ -10287,10 +10277,18 @@
             },
             "WeaponAttributes": {
                 "C_Escort_Weapon_G2G_MP": {
-                    "BaseDamagePerRound": 14,
-                    "RateOfFire": 5,
-                    "CooldownTimeMS": 400,
-                    "NumberOfBursts": 2,
+                    "OutputDPS": true,
+                    "BaseDamagePerRound": 50,
+                    "DamagePacketsPerShot": 4,
+                    "ProjectileEntityTypeToSpawn": "C_GunShip_DefaultBombs_ProjectileAssetContainer_MP",
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "LeadsTarget": 1,
+                    "TracerLength": 5,
+                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectFalloffType": "None",
+                    "RateOfFire": 1,
+                    "NumberOfBursts": 1,
                     "BurstPeriodMinTimeMS": 950,
                     "BurstPeriodMaxTimeMS": 1050,
                     "RangeAttributesShort": {
@@ -10312,40 +10310,22 @@
                             "Modifier": "CanNotTarget"
                         },
                         "1": {
-                            "TargetClass": "Medium",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyShortPercent",
-                            "Amount": 100
+                            "Remove": true
                         },
                         "2": {
-                            "TargetClass": "Medium",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyMediumPercent",
-                            "Amount": 100
+                            "Remove": true
                         },
                         "3": {
-                            "TargetClass": "Medium",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyLongPercent",
-                            "Amount": 100
+                            "Remove": true
                         },
                         "4": {
-                            "TargetClass": "Large, XLarge",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyShortPercent",
-                            "Amount": 100
+                            "Remove": true
                         },
                         "5": {
-                            "TargetClass": "Large, XLarge",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyMediumPercent",
-                            "Amount": 100
+                            "Remove": true
                         },
                         "6": {
-                            "TargetClass": "Large, XLarge",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyLongPercent",
-                            "Amount": 100
+                            "Remove": true
                         }
                     },
                     "TargetPrioritizationAttributes": {
@@ -10356,13 +10336,13 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: +4 damage",
+                        "BuffTooltipLocID": "Officer: +8 damage",
                         "RequiredExperience": 100,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
                                 "Mode": "Add",
-                                "Value": 4
+                                "Value": 8
                             },
                             "1": {
                                 "Remove": true
@@ -10370,13 +10350,13 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Lieutenant: +4 damage",
+                        "BuffTooltipLocID": "Lieutenant: +8 damage",
                         "RequiredExperience": 600,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
                                 "Mode": "Add",
-                                "Value": 4
+                                "Value": 8
                             }
                         }
                     },
@@ -10723,6 +10703,7 @@
         // COALITION LAV ASSAULT PACK
         "Research_Buff_C_Escort": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "LAV INSULT PACK",
                 "Resource1Cost": 200,
                 "Resource2Cost": 100
 
@@ -10732,6 +10713,7 @@
         ///SOBAN LAV ASSAULT PACK
         "Research_Buff_S_Escort": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "LAV INSULT PACK",
                 "Resource1Cost": 200,
                 "Resource2Cost": 100
             }
@@ -10743,12 +10725,12 @@
                 "Resource1Cost": 150,
                 "Resource2Cost": 25,
                 "ResearchTime": 15,
-                "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+                "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 4.",
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
-                            "0": { "Value": 1 },
-                            "1": { "Value": 1 }
+                            "0": { "Value": 4 },
+                            "1": { "Value": 4 }
                         }
                     }
                 }
@@ -10759,12 +10741,12 @@
                 "Resource1Cost": 200,
                 "Resource2Cost": 75,
                 "ResearchTime": 15,
-                "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+                "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 4.",
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
-                            "0": { "Value": 1 },
-                            "1": { "Value": 1 }
+                            "0": { "Value": 4 },
+                            "1": { "Value": 4 }
                         }
                     }
                 }
@@ -10777,18 +10759,18 @@
                 "Resource1Cost": 150,
                 "Resource2Cost": 25,
                 "ResearchTime": 15,
-                "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+                "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 4.",
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
-                            "0": { "Value": 1 },
-                            "1": { "Value": 1 }
+                            "0": { "Value": 4 },
+                            "1": { "Value": 4 }
                         }
                     },
                     "1": {
                         "BuffSet": {
-                            "0": { "Value": 1 },
-                            "1": { "Value": 1 }
+                            "0": { "Value": 4 },
+                            "1": { "Value": 4 }
                         }
                     }
                 }
@@ -10799,18 +10781,18 @@
                 "Resource1Cost": 200,
                 "Resource2Cost": 75,
                 "ResearchTime": 15,
-                "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 1.",
+                "LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 4.",
                 "UnitTypeBuffs": {
                     "0": {
                         "BuffSet": {
-                            "0": { "Value": 1 },
-                            "1": { "Value": 1 }
+                            "0": { "Value": 4 },
+                            "1": { "Value": 4 }
                         }
                     },
                     "1": {
                         "BuffSet": {
-                            "0": { "Value": 1 },
-                            "1": { "Value": 1 }
+                            "0": { "Value": 4 },
+                            "1": { "Value": 4 }
                         }
                     }
                 }
