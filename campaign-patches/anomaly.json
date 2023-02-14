@@ -3938,10 +3938,25 @@
                     "Interceptor": {
                         "UndockSpeed": 550
                     },
+                    "Bomber": {
+                        "MaxCount": 5
+                    },
                     "Ground": { "UndockSpeed": 150 }
                 }
             },
             "AbilityAttributes": {
+                "Ability_C_ProduceInterceptor": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    }
+                },
+                "Ability_C_ProduceBomber": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    }
+                },
                 "Ability_C_CruiseMissile": {
                     "CooldownTimeSecs": 300
                 },
@@ -3953,7 +3968,10 @@
                     }
                 },
                 "Ability_C_LaunchBomber": {
-                    "AirSortie": { "LoiterLength": 40 }
+                    "AirSortie": {
+                        "LoiterLength": 40,
+                        "SortieSquadSize": 5
+                    }
                 },
                 "Ability_C_LaunchGunShip": {
                     "AirSortie": { "LoiterLength": 40 }
@@ -4667,7 +4685,252 @@
                         "PowerLevels": {
 
                             "0": {
-                                "LocalizedShortDescriptionStringID": "Armor: 1"
+                                "LocalizedShortDescriptionStringID": "Armor: 1",
+                                "StatusEffectsToApply": {
+                                    "Armour_0_StatusEffect": {
+                                        "UnitTypeBuffsToApply": {
+                                            "0": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_Battlecruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    }
+                                                }
+                                            },
+                                            "1": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_ArtilleryCruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "3": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "4": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "5": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "7": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "9": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "10": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "11": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "12": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "13": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "14": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "15": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    }
+                                                }
+                                            },
+                                            "2": {
+                                                "UnitClass": "Medium",
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 1500
+
+                                                    }
+                                                }
+                                            },
+                                            "3": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "2": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "SMOKE"
+                                                    }
+                                                }
+                                            },
+                                            "4": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC_Upgrade01",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "DEFALT"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "DEFALT"
+                                                    }
+                                                }
+                                            },
+                                            "5": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Interceptor",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 1011,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "3": {
+                                                        "Value": 3,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
+                                                    }
+                                                }
+                                            },
+                                            "6": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Bomber",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 10,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
+                                                    }
+                                                }
+                                            },
+                                            "7": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "N_Tornado",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Attribute": "Unit_MaxHealth",
+                                                        "Mode": "Set",
+                                                        "Value": 2500
+
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             },
 
                             "1": {
@@ -4682,6 +4945,233 @@
                                                         "Value": 3000,
                                                         "Attribute": "Unit_MaxHealth",
                                                         "Mode": "Add"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "UnitTypeBuffsToApply": {
+                                            "0": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_Battlecruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    }
+                                                }
+                                            },
+                                            "1": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_ArtilleryCruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "3": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "4": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "5": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "7": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "9": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "10": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "11": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "12": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "13": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "14": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "15": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    }
+                                                }
+                                            },
+                                            "2": {
+                                                "UnitClass": "Medium",
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 1500
+
+                                                    }
+                                                }
+                                            },
+                                            "3": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "2": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "SMOKE"
+                                                    }
+                                                }
+                                            },
+                                            "4": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC_Upgrade01",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "DEFALT"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "DEFALT"
+                                                    }
+                                                }
+                                            },
+                                            "5": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Interceptor",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 1011,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "3": {
+                                                        "Value": 3,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
+                                                    }
+                                                }
+                                            },
+                                            "6": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Bomber",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 10,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
                                                     }
                                                 }
                                             }
@@ -4705,6 +5195,233 @@
                                                     }
                                                 }
                                             }
+                                        },
+                                        "UnitTypeBuffsToApply": {
+                                            "0": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_Battlecruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    }
+                                                }
+                                            },
+                                            "1": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_ArtilleryCruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "3": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "4": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "5": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "7": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "9": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "10": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "11": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "12": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "13": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "14": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "15": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    }
+                                                }
+                                            },
+                                            "2": {
+                                                "UnitClass": "Medium",
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 1500
+
+                                                    }
+                                                }
+                                            },
+                                            "3": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "2": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "SMOKE"
+                                                    }
+                                                }
+                                            },
+                                            "4": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC_Upgrade01",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "DEFALT"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "DEFALT"
+                                                    }
+                                                }
+                                            },
+                                            "5": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Interceptor",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 1011,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "3": {
+                                                        "Value": 3,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
+                                                    }
+                                                }
+                                            },
+                                            "6": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Bomber",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 10,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -4722,6 +5439,233 @@
                                                         "Value": 9000,
                                                         "Attribute": "Unit_MaxHealth",
                                                         "Mode": "Add"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "UnitTypeBuffsToApply": {
+                                            "0": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_Battlecruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    }
+                                                }
+                                            },
+                                            "1": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_ArtilleryCruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "3": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "4": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "5": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "7": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "9": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "10": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "11": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "12": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "13": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "14": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "15": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    }
+                                                }
+                                            },
+                                            "2": {
+                                                "UnitClass": "Medium",
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 1500
+
+                                                    }
+                                                }
+                                            },
+                                            "3": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "2": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "SMOKE"
+                                                    }
+                                                }
+                                            },
+                                            "4": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC_Upgrade01",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "DEFALT"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "DEFALT"
+                                                    }
+                                                }
+                                            },
+                                            "5": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Interceptor",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 1011,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "3": {
+                                                        "Value": 3,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
+                                                    }
+                                                }
+                                            },
+                                            "6": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Bomber",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 10,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
                                                     }
                                                 }
                                             }
@@ -4745,6 +5689,233 @@
                                                     }
                                                 }
                                             }
+                                        },
+                                        "UnitTypeBuffsToApply": {
+                                            "0": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_Battlecruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    }
+                                                }
+                                            },
+                                            "1": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_ArtilleryCruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "3": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "4": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "5": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "7": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "9": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "10": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "11": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "12": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "13": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "14": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "15": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    }
+                                                }
+                                            },
+                                            "2": {
+                                                "UnitClass": "Medium",
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 1500
+
+                                                    }
+                                                }
+                                            },
+                                            "3": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "2": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "SMOKE"
+                                                    }
+                                                }
+                                            },
+                                            "4": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC_Upgrade01",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "DEFALT"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "DEFALT"
+                                                    }
+                                                }
+                                            },
+                                            "5": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Interceptor",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 1011,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "3": {
+                                                        "Value": 3,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
+                                                    }
+                                                }
+                                            },
+                                            "6": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Bomber",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 10,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -4765,6 +5936,234 @@
                                                     }
                                                 }
                                             }
+                                        },
+                                        "UnitTypeBuffsToApply": {
+                                            "0": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_Battlecruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    }
+                                                }
+                                            },
+                                            "1": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "C_ArtilleryCruiser",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 20,
+                                                        "Mode": "Add",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "3": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "4": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "5": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "7": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "9": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "10": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    },
+                                                    "11": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ArtilleryEMP"
+                                                    },
+                                                    "12": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BF"
+                                                    },
+                                                    "13": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_BR"
+                                                    },
+                                                    "14": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FR"
+                                                    },
+                                                    "15": {
+                                                        "Value": 30000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "ARTILLERY_BARRAGE_FL"
+                                                    }
+                                                }
+                                            },
+                                            "2": {
+                                                "UnitClass": "Medium",
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 1500
+
+                                                    }
+                                                }
+                                            },
+                                            "3": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "SMOKE"
+                                                    },
+                                                    "2": {
+                                                        "Value": 50000,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Name": "SMOKE"
+                                                    }
+                                                }
+                                            },
+                                            "4": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_HAC_Upgrade01",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": "DEFALT"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": "DEFALT"
+                                                    }
+                                                }
+                                            },
+                                            "5": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Interceptor",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 1011,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "3": {
+                                                        "Value": 3,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
+                                                    }
+                                                }
+                                            },
+                                            "6": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Bomber",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource1Cost"
+                                                    },
+                                                    "1": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_Resource2Cost"
+                                                    },
+                                                    "2": {
+                                                        "Value": 10,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_ProductionTime"
+                                                    }
+                                                }
+                                            }
+                                            
                                         },
                                         "Modifiers": {
                                             "0": {
@@ -5292,11 +6691,13 @@
                 "Armour": 1,
                 "FireRateDisplay": 5,
                 "AggroRange": 2000,
-                "LeashRange":0
+                "LeashRange": 0
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 135
+                    "MaxSpeed": 55,
+                    "AccelerationTime": 0.5,
+                    "BrakingTime": 0.5
                 }
             },
             "ExperienceAttributes": {
@@ -5368,57 +6769,43 @@
                 }
             },
             "AbilityAttributes": {
-                "Ability_G_DeployScanner": {
-                    "CooldownTimeSecs": 180
-
-                },
                 "Ability_G_BaseRunnerPassiveRegen": {
                     "Autocast": {
                         "IsAutocastable": true,
                         "AutocastEnabledOnSpawn": true
                     },
-                    "CooldownTimeSecs": 65,
                     "ApplyStatusEffect": {
                         "Regen_BaseRunnerPassive_StatusEffect": {
-                            "Lifetime": "Finite",
-                            "Duration": 15.00,
-                            "MaxStacks": 1,
-                            "StackingBehaviour": "Replace",
                             "BuffsToApplyToTarget": {
                                 "0": {
                                     "UnitType": "G_Baserunner_MP",
                                     "BuffSet": {
                                         "0": {
-                                            "Attribute": "UnitDynamics_MaxSpeed",
-                                            "Mode": "AddPercent",
-                                            "Value": 20
+                                            "Remove": true
                                         },
                                         "1": {
-                                            "Attribute": "UnitDynamics_AccelerationTime",
-                                            "Mode": "AddPercent",
-                                            "Value": 20
+                                            "Remove": true
                                         },
                                         "2": {
-                                            "Attribute": "UnitDynamics_MaxSpeedTurnRadius",
-                                            "Mode": "AddPercent",
-                                            "Value": 20
+                                            "Remove": true
                                         }
                                     }
                                 }
                             },
                             "Modifiers": {
                                 "0": {
-                                    "ModifierType": "HealthOverTime",
-                                    "HealthOverTimeAttributes": {
-                                        "ID": "G_BaseRunner_HealAura_HealOT_StatusEffect_MP",
-                                        "Amount": 1,
-                                        "MSTickDuration": 25,
-                                        "DamageType": "Heal"
-                                    }
+                                    "Remove": true
+                                },
+                                "1": {
+                                    "Remove": true
+                                },
+                                "2": {
+                                    "Remove": true
                                 }
                             }
                         }
-                    }
+                    },
+                    "CooldownTimeSecs": 0
                 }
             },
             "WeaponAttributes": {
@@ -5466,7 +6853,7 @@
                 },
                 "G_Baserunner_Weapon_HealingAura": {
                     "RangeAttributesShort": {
-                        "Accuracy":0
+                        "Accuracy": 0
                     },
                     "RangeAttributesMedium": {
                         "Accuracy": 0
@@ -5475,24 +6862,88 @@
                         "Accuracy": 0
                     },
                     "DamagePacketsPerShot": 0,
-                    "RateOfFire": 25,
-                    "BaseDamagePerRound": 4,
+                    "RateOfFire": 1,
+                    "DamageType": "Damage",
+                    "ActiveStatusEffectsIndex": 0,
+                    "BaseDamagePerRound": 0,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
                     "CooldownTimeMS": 0,
-                    "ReloadTimeMS": 0,
+                    "ReloadTimeMS": 8900,
+                    "StatusEffectsExcludeTargetType": "Carrier, Air",
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 0,
-                    "AreaOfEffectRadius": 1000,
+                    "AreaOfEffectRadius": 1500,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "StatusEffectsTargetAlignment": "None",
+                    //"StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
-                      "0": { "StatusEffects": [ "G_BaseRunner_HealAura_HealOT_StatusEffect_MP" ] }
+                        "0": { "StatusEffects": [] },
+                        "1": { "StatusEffects": [ "C_Mine_StatusEffect" ] },
+                        "2": { "StatusEffects": [ "Regen_BaseRunnerPassive_StatusEffect" ] }
                     }
                 }
             }
         },
-
+        "C_Mine_StatusEffect": {
+            "StatusEffectAttributes": {
+                "Duration": 11,
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": -1,
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Value": 95,
+                                "Mode": "Set",
+                                "Attribute": "UnitDynamics_MaxSpeed"
+                            }
+                        }
+                    }
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "Remove": true
+                    },
+                    "2": {
+                        "Remove": true
+                    }
+                }
+            }
+        },
+        "Regen_BaseRunnerPassive_StatusEffect": {
+            "StatusEffectAttributes": {
+                "Duration": 2,
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": -1,
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Value": 135,
+                                "Mode": "Set",
+                                "Attribute": "UnitDynamics_MaxSpeed"
+                            }
+                        }
+                    }
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "Remove": true
+                    },
+                    "2": {
+                        "Remove": true
+                    }
+                }
+            }
+        },
         "G_Baserunner_MP": {
             "UnitAttributes": {
                 "Resource1Cost": 200,
@@ -5736,14 +7187,14 @@
                         "AutocastEnabledOnSpawn": true
                     }
                 },
-                "Ability_G_ProduceSupportCruiser": {
-                    "CooldownTimeSecs": 31,
+                "Ability_Produce_G_Baserunner": {
+                    "CooldownTimeSecs": 61,
                     "Autocast": {
                         "IsAutocastable": true,
                         "AutocastEnabledOnSpawn": true
                     },
                     "ChainCasting": {
-                        "QueuedAbility": "Ability_Produce_G_Baserunner",
+                        "QueuedAbility": "Ability_G_ProduceSupportCruiser",
                         "QueuedAbilityDelay": 0
                     }
                 },
@@ -6055,6 +7506,26 @@
                                                     }
                                                 }
                                             }
+                                        },
+                                        "UnitTypeBuffsToApply": {
+                                            "0": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "G_Baserunner",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 1,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
+                                                        "Name": ""
+                                                    },
+                                                    "1": {
+                                                        "Value": 95,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -6075,6 +7546,26 @@
                                                     }
                                                 }
                                             }
+                                        },
+                                        "UnitTypeBuffsToApply": {
+                                            "0": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "G_Baserunner",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 2,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
+                                                        "Name": ""
+                                                    },
+                                                    "1": {
+                                                        "Value": 135,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -6092,6 +7583,26 @@
                                                         "Value": 375,
                                                         "Mode": "Add",
                                                         "Attribute": "Unit_SensorRadius"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "UnitTypeBuffsToApply": {
+                                            "0": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "UnitType": "G_Baserunner",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Value": 2,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
+                                                        "Name": ""
+                                                    },
+                                                    "1": {
+                                                        "Value": 135,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
                                             }
@@ -6146,7 +7657,6 @@
                     "1": { // Weapon Systems
                         "PowerLevels": {
                             "1": {
-                                //"LocalizedShortDescriptionStringID": " Anti-air online, PD and AA Rate of Fire: 5",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_2_StatusEffect_ENABLE_MISSILES": {
 
@@ -6175,7 +7685,6 @@
                             },
 
                             "2": {
-                                //"LocalizedShortDescriptionStringID": "PD and AA Rate of Fire: 7",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_2_StatusEffect_ENABLE_MISSILES_LEFT": {
                                         "Modifiers": {
@@ -6221,7 +7730,6 @@
                             },
 
                             "3": {
-                                //"LocalizedShortDescriptionStringID": "PD and AA Rate of Fire: 12",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_2_StatusEffect_ENABLE_MISSILES": {
                                         "BuffsToApplyToTarget": {
@@ -7520,7 +9028,9 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 135
+                    "MaxSpeed": 55,
+                    "AccelerationTime": 0.5,
+                    "BrakingTime": 0.5
                 }
             },
             "ExperienceAttributes": {
@@ -7757,13 +9267,13 @@
                         "BuffTooltipLocID": "Commander: Scope added, accuracy is now consistant for AA weapon",
                         "Buff": {
                             "0": {
-                                "Name": "C_HAC_Weapon_G2G_MP",
+                                "Name": "DEFALT",
                                 "Attribute": "WeaponRange_AccuracyMedium",
                                 "Mode": "Set",
                                 "Value": 30
                             },
                             "1": {
-                                "Name": "C_HAC_Weapon_G2G_MP",
+                                "Name": "DEFALT",
                                 "Attribute": "WeaponRange_AccuracyLong",
                                 "Mode": "Set",
                                 "Value": 30
@@ -7780,7 +9290,7 @@
                                 "Value": -75
                             },
                             "1": {
-                                "Name": "C_HAC_Weapon_Ballistic_Smoke_MP",
+                                "Name": "SMOKE",
                                 "Attribute": "UnitWeapon_ReloadTime",
                                 "Mode": "AddPercent",
                                 "Value": -75
@@ -7838,6 +9348,12 @@
                             "ClassOperator": "Or",
                             "Modifier": "DamagePercent",
                             "Amount": 15
+                        },
+                        "1": {
+                            "TargetClass": "Air",
+                            "ClassOperator": "Or",
+                            "Modifier": "DamagePercent",
+                            "Amount": 50
                         }
                     }
                 },
@@ -7849,6 +9365,7 @@
                     "BurstPeriodMaxTimeMS": 1000,
                     "BaseDamagePerRound": 190,
                     "AreaOfEffectRadius": 160,
+                    "ReloadTimeMS": 2000,
                     "DamagePacketsPerShot": 1,
                     "StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
@@ -9361,6 +10878,7 @@
                 },
                 "C_HAC_Upgrade01_Weapon_Ballistic_Grenade": {
                     "BaseDamagePerRound": 660,
+                    "ReloadTimeMS": 20000,
                     "FriendlyFireDamageScalar": 1,
                     "AreaOfEffectRadius": 260,
                     "StatusEffectsExcludeTargetType": "Carrier",
@@ -9852,7 +11370,7 @@
                     "BurstPeriodMaxTimeMS": 667,
                     "ReloadTimeMS": 3000,
                     "RateOfFire": 1,
-                    "AreaOfEffectRadius": 200,
+                    "AreaOfEffectRadius": 100,
                     "Turret": {
                         "FieldOfView": 360, // is this needed?
                         "FieldOfFire": 360
@@ -9920,7 +11438,7 @@
                     "BurstPeriodMaxTimeMS": 667,
                     "ReloadTimeMS": 3000,
                     "RateOfFire": 1,
-                    "AreaOfEffectRadius": 200,
+                    "AreaOfEffectRadius": 100,
                     "Turret": {
                         "FieldOfView": 360, // is this needed?
                         "FieldOfFire": 360
@@ -10474,15 +11992,15 @@
             "WeaponAttributes": {
                 "G_Bomber_Weapon_A2G": {
                     "Turret": {
-                        "FieldOfFire": 30,
-                        "RotationSpeed": 360,
-                        "FieldOfView": 360
+                        "FieldOfView": 360,
+                        "FieldOfFire": 360,
+                        "RotationSpeed": 1
                     },
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "NumberOfBursts": 1,
-                    "BaseDamagePerRound": 385,
+                    "BaseDamagePerRound": 285,
                     "DamagePacketsPerShot": 1,
                     "ExcludeFromAutoFire": false,
                     "ExcludeFromAutoTargetAcquisition": false,
@@ -10690,33 +12208,12 @@
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Lt. Commander: +1000 hull, -50% cooldown on ability",
+                        "BuffTooltipLocID": "Lt. Commander: +1000 hull",
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
                                 "Mode": "Add",
                                 "Value": 1000
-                            },
-                            "1": {
-                                "Name": "Ability_G_BattleCruiser_ArmorBonus_MP",
-                                "Attribute": 16777216,
-                                "Mode": "AddPercent",
-                                "Value": -50
-
-                            },
-                            "2": {
-                                "Name": "Ability_G_BattleCruiserActiveRegen",
-                                "Attribute": 16777216,
-                                "Mode": "AddPercent",
-                                "Value": -50
-
-                            },
-                            "3": {
-                                "Name": "Ability_G_BattleCruiser_Missile_MP",
-                                "Attribute": 16777216,
-                                "Mode": "AddPercent",
-                                "Value": -50
-
                             }
                         }
                     },
@@ -10731,7 +12228,7 @@
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Captain: +2000 hull, +5 armor",
+                        "BuffTooltipLocID": "Captain: +2000 hull, +5 armor, reduced cooldown of abilitis",
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -10742,6 +12239,27 @@
                                 "Attribute": "Unit_Armour",
                                 "Mode": "Add",
                                 "Value": 5
+                            },
+                            "4": {
+                                "Name": "Ability_G_BattleCruiser_ArmorBonus_MP",
+                                "Attribute": 16777216,
+                                "Mode": "Set",
+                                "Value": 15
+
+                            },
+                            "2": {
+                                "Name": "Ability_G_BattleCruiserActiveRegen",
+                                "Attribute": 16777216,
+                                "Mode": "Set",
+                                "Value": 15
+
+                            },
+                            "3": {
+                                "Name": "Ability_G_BattleCruiser_Missile_MP",
+                                "Attribute": 16777216,
+                                "Mode": "AddPercent",
+                                "Value": -50
+
                             }
                         }
                     }
@@ -10873,12 +12391,15 @@
                     }
                 },
                 "Ability_G_BattleCruiser_ArmorBonus": {
+                    "Autocast": {
+                        "IsAutocastable": true
+                    },
                     "SharedCooldownChannel": 0,
                     "CooldownTimeSecs": 50,
                     "ApplyStatusEffect": {
                         "ArmorBonus_StatusEffect": {
                             "Lifetime": "Finite",
-                            "Duration": 10.00,
+                            "Duration": 15.00,
                             "MaxStacks": 1,
                             "StackingBehaviour": "Replace",
                             "BuffsToApplyToTarget": {
@@ -10918,19 +12439,12 @@
                     "CooldownTimeSecs": 50
                 },
                 "Ability_G_BattleCruiserActiveRegen": {
+                    "Autocast": {
+                        "IsAutocastable": true
+                    },
                     "ApplyStatusEffect": {
                         "Regen_BattleCruiser_StatusEffect_Campaign": {
-                            //"BuffsToApplyToTarget": { this crap doesn't work
-                            //  "0": {
-                            //    "UnitType": "G_BattleCruiser_MP",
-                            //    "BuffSet": {
-                            //      "0": { 
-                            //        "Attribute": "UnitDynamics_MaxSpeed",
-                            //        "Value": -20
-                            //      }
-                            //    }
-                            //  }
-                            //},
+                            "Duration": 15.00,
                             "Modifiers": {
                                 "0": {
                                     "HealthOverTimeAttributes": {
@@ -11706,7 +13220,7 @@
                     "ReloadTimeMS": 10000,
                     "RangeAttributesLong": {
                         "Distance": 3000,
-                        "MinDistance": 350,
+                        "MinDistance": 550,
                         "Accuracy": 0
                     },
                     "RangeAttributesMedium": {
@@ -12715,8 +14229,10 @@
         },
         "Ability_G_BaseRunnerPassiveRegen": {
             "AbilityViewAttributes": {
-                "LocalizedTitleStringID": "RELEASE CHEERFULL NANITES",
-                "LocalizedLongDescriptionStringID": "Baserunner spews out nanits that heal any surounding unit hull. Capable of repairing everything around it using sand power.\n\n[999da0]Nanomachines son."
+                "ForcePassiveVisuals": true,
+                "IconName": "Shunt_Move_off",
+                "LocalizedTitleStringID": "MOBILYTY SUPPORT",
+                "LocalizedLongDescriptionStringID": "Baserunner spews out nanits that speed up any surounding unit up to current carrier speed.\n\n[999da0]Nanomachines son."
             }
         },
         "Ability_Produce_G_StarHull_U1": {
