@@ -7,7 +7,9 @@ INSTALATION INSTRUCTIONS
 3: Rename anomaly.json file into patch.json
 
 4: Place patch.json file into this folder:
+
 For Windows: Steam/steamapps/common/Deserts of Kharak/Data
+
 For Mac: Steam/steamapps/common/Deserts of Kharak/DesertsofKharak.app/Contents/Resources/Data
 
 5: the patch of Anomaly DOK for Campaign is applyed and the campaign can be played
