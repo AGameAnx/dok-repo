@@ -1,4 +1,4 @@
-INSTALATION INSTRUCTIONS
+INSTALATION INSTRUCTIONS 
 1: Make sure you have GE1.3 instaled
 2:Download anomaly.json file
 3: Rename anomaly.json file into patch.json
