@@ -4,7 +4,7 @@
 
 Download the patch you want
 
-Rename i tto *patch.json*
+Rename it to *patch.json*
 
 Move patch.json to the required folder
 
