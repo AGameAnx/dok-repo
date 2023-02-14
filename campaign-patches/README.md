@@ -6,7 +6,7 @@ Download the patch you want
 
 Rename it to *patch.json*
 
-Move patch.json to the required folder
+Move *patch.json* to the required folder
 
 - Windows: *Steam/steamapps/common/Deserts of Kharak/Data*
 
