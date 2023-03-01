@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.60",
-        "LastUpdate": "2023-02-13",
+        "Version": "1.06.51",
+        "LastUpdate": "2023-03-01",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
@@ -5120,7 +5120,7 @@
             "UnitAttributes": {
                 "MaxHealth": 10000,
                 "SensorRadius": 1250,
-                "ContactRadius": 1450,
+                "ContactRadius": 2150,
                 "Armour": 20,
                 "PriorityAsTarget": -15
             },
@@ -5455,11 +5455,6 @@
                                                         "Value": -50
                                                     },
                                                     "1": {
-                                                        "Attribute": "Unit_ContactRadius",
-                                                        "Mode": "AddPercent",
-                                                        "Value": -50
-                                                    },
-                                                    "2": {
                                                         "Attribute": "UnitDynamics_MaxSpeed",
                                                         "Mode": "AddPercent",
                                                         "Value": -25
@@ -5521,11 +5516,6 @@
                                                         "Value": -25
                                                     },
                                                     "1": {
-                                                        "Attribute": "Unit_ContactRadius",
-                                                        "Mode": "AddPercent",
-                                                        "Value": -25
-                                                    },
-                                                    "2": {
                                                         "Attribute": "UnitDynamics_MaxSpeed",
                                                         "Mode": "AddPercent",
                                                         "Value": -13
@@ -6597,9 +6587,9 @@
                 "Resource1Cost": 0,
                 "Controllable": false,
                 "Selectable": false,
-                "Class": "Ground",
+                "Class": "Hover",
                 "AccuracyReceivedMultiplier": 1.0,
-                "MaxHealth": 900,
+                "MaxHealth": 550,
                 "Armour": 0
             },
             "UnitMovementAttributes": {
@@ -6640,7 +6630,7 @@
                     },
                     "2": {
                         "RequiredExperience": 1000110,
-                        "BuffTooltipLocID": "", // ye 10 was a bit op 
+                        "BuffTooltipLocID": "",
                         "Buff": {
                             "0": {
                                 "Remove": true
@@ -6969,7 +6959,7 @@
             "AbilityAttributes": {
                 "Ability_C_CruiseSightSelfDestruct": {
                     "SelfDestruct": {
-                        "DurationSeconds": 20
+                        "DurationSeconds": 15
                     }
                 }
             }
@@ -8981,7 +8971,7 @@
                 "Armour": 7,
                 "ProductionTime": 50,
                 "SensorRadius": 1450,
-                "ContactRadius": 1600,
+                "ContactRadius": 2000,
                 "FireRateDisplay": 3
             },
             "ExperienceAttributes": {
@@ -12965,6 +12955,18 @@
                     "RangeAttributesLong": {
                         "Distance": 1330,
                         "Accuracy": 50
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanNotTarget"
+                        },
+                        "1": {
+                            "TargetClass": "Hover",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanTarget"
+                        }
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
@@ -12977,6 +12979,18 @@
                     "RangeAttributesLong": {
                         "Distance": 1500,
                         "Accuracy": 50
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanNotTarget"
+                        },
+                        "1": {
+                            "TargetClass": "Hover",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanTarget"
+                        }
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
@@ -13031,7 +13045,7 @@
                 "ContactRadius": 1800
             },
             "AbilityAttributes": {
-                "Ability_G_MissileCraft_GlobalAA_MP": {
+                /*"Ability_G_MissileCraft_GlobalAA_MP": {
                     "ApplyStatusEffect": {
                         "Upgraded_AARadio_StatusEffect": {
                             "Modifiers": {
@@ -13046,7 +13060,7 @@
                             }
                         }
                     }
-                },
+                },*/
                 "Ability_G_MissileShipRegen": {
                     "ApplyStatusEffect": {
                         "Regen_MissileShip_StatusEffect": {
@@ -13163,6 +13177,18 @@
                     "RangeAttributesLong": {
                         "Distance": 1330,
                         "Accuracy": 50
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanNotTarget"
+                        },
+                        "1": {
+                            "TargetClass": "Hover",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanTarget"
+                        }
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
@@ -13175,6 +13201,18 @@
                     "RangeAttributesLong": {
                         "Distance": 1500,
                         "Accuracy": 50
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanNotTarget"
+                        },
+                        "1": {
+                            "TargetClass": "Hover",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanTarget"
+                        }
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2G_MP": {
