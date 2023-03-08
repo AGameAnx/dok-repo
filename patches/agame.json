@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "15.1.1",
-		"LastUpdate": "2022-07-13",
+		"Version": "17.0.0",
+		"LastUpdate": "2023-03-08",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	/*"Global": {
@@ -1153,6 +1153,7 @@
 				"Ability_C_Sob_ProduceSupportCruiser_MP": {
 					"ProduceUnit": { "UnitTypeToProduce": "C_SupportCruiser_MP" } // Use unit which properly changes its visuals to S variant
 				},
+				"Ability_C_Sob_ProduceAssaultCruiser_MP": { "ProduceUnit": { "UnitTypeToProduce": "G_BattleCruiser_MP" } },
 				"Ability_C_Sob_DeployPopCapCarrier_MP": {
 					"Resource1Cost": 270
 				},
@@ -3927,8 +3928,10 @@
 					"BurstPeriodMinTimeMS": 300,
 					"BurstPeriodMaxTimeMS": 300,
 					"CooldownTimeMS": 0,
+					"ExcludeFromAutoTargetAcquisition": true, // turned on with an upgrade, done this way to prevent sc aa revealing sc by shooting 0 missiles
+					"ExcludeFromAutoFire": true,
 					"WindUpTimeMS": 50,
-					"RateOfFire": 0, // Rate of fire is changed by the upgrade
+					"RateOfFire": 1, 
 					"ReloadTimeMS": 5000,
 					"AreaOfEffectRadius": 60,
 					"RangeAttributesLong": {
@@ -4076,9 +4079,15 @@
 						"BuffSet": {
 							"0": {
 								"Name": "ANTI-AIR",
-								"Attribute": "UnitWeapon_RateOfFire",
+								"Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
 								"Mode": "Add",
-								"Value": 1
+								"Value": -1
+							},
+							"1": {
+								"Name": "ANTI-AIR",
+								"Attribute": "UnitWeapon_ExcludeFromAutoFire",
+								"Mode": "Add",
+								"Value": -1
 							}
 						}
 					}
@@ -4097,9 +4106,15 @@
 						"BuffSet": {
 							"0": {
 								"Name": "ANTI-AIR",
-								"Attribute": "UnitWeapon_RateOfFire",
+								"Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
 								"Mode": "Add",
-								"Value": 1
+								"Value": -1
+							},
+							"1": {
+								"Name": "ANTI-AIR",
+								"Attribute": "UnitWeapon_ExcludeFromAutoFire",
+								"Mode": "Add",
+								"Value": -1
 							}
 						}
 					}
@@ -5195,7 +5210,7 @@
 					"MaxSpeed": 64,
 					"MaxSpeedTurnRadius": 40
 				},
-				"Combat": { "MaxDesiredCombatRange": 1620 },
+				"Combat": { "MaxDesiredCombatRange": 1730 },
 				"Hover": { "TurnAcceleration": 90 }
 			},
 			"DetectableAttributes": {
@@ -5273,7 +5288,7 @@
 					"MaxSpeed": 64,
 					"MaxSpeedTurnRadius": 40
 				},
-				"Combat": { "MaxDesiredCombatRange": 1620 },
+				"Combat": { "MaxDesiredCombatRange": 1730 },
 				"Hover": { "TurnAcceleration": 90 }
 			},
 			"DetectableAttributes": {
@@ -6080,6 +6095,10 @@
 				"PopCapCost": 6
 			},
 			"WeaponAttributes": {
+				"G_Battlecruiser_Weapon_G2A_MP": {
+					"ExcludeFromAutoTargetAcquisition": true, // turned on with an upgrade, done this way to prevent sc aa revealing ac by shooting 0 missiles
+					"ExcludeFromAutoFire": true
+				},
 				"G_Battlecruiser_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 55,
 					"AreaOfEffectRadius": 79,
@@ -6113,6 +6132,9 @@
 				"Dynamics": { "MaxSpeed": 65 }
 			},
 			"AbilityAttributes": {
+				"Ability_G_BattleCruiser_EnableAir_MP": {
+					"RequiredResearch": []
+				},
 				"Ability_G_BattleCruiser_ArmorBonus_MP": {
 					"CooldownTimeSecs": 40,
 					"ApplyStatusEffect": {
@@ -6218,14 +6240,58 @@
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
 				"Resource2Cost": 150,
-				"ResearchTime": 45
+				"ResearchTime": 45,
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": -1,
+						"UseAsPrefix": false,
+						"ClassOperator": "Or",
+						"UnitType": "G_Battlecruiser_MP",
+						"BuffSet": {
+							"0": {
+								"Name": "AA_RIGHT",
+								"Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+								"Mode": "Add",
+								"Value": -1
+							},
+							"1": {
+								"Name": "AA_RIGHT",
+								"Attribute": "UnitWeapon_ExcludeFromAutoFire",
+								"Mode": "Add",
+								"Value": -1
+							}
+						}
+					}
+				}
 			}
 		},
 		"Research_Buff_S_AssaultCruiser_AntiAir": {
 			"ResearchItemAttributes": {
 				"Resource1Cost": 300,
 				"Resource2Cost": 150,
-				"ResearchTime": 45
+				"ResearchTime": 45,
+				"UnitTypeBuffs": {
+					"0": {
+						"UnitClass": -1,
+						"UseAsPrefix": false,
+						"ClassOperator": "Or",
+						"UnitType": "G_Battlecruiser_MP",
+						"BuffSet": {
+							"0": {
+								"Name": "AA_RIGHT",
+								"Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+								"Mode": "Add",
+								"Value": -1
+							},
+							"1": {
+								"Name": "AA_RIGHT",
+								"Attribute": "UnitWeapon_ExcludeFromAutoFire",
+								"Mode": "Add",
+								"Value": -1
+							}
+						}
+					}
+				}
 			}
 		},
 
@@ -6537,7 +6603,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 65,
-						"Distance": 1650
+						"Distance": 1630
 					}
 				},
 				"C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
