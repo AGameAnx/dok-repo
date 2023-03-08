@@ -103,9 +103,10 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-05-22 14.1](#2022-05-22-141)
 	- [2022-05-24 14.2](#2022-05-24-142)
 	- [2022-05-25 14.3](#2022-05-25-143)
-	- [2022-05-29 14.4](#2022-05-29-144)
+	- [2022-05-29 14.4 (Jaraci Cup #15)](#2022-05-29-144-jaraci-cup-15)
 	- [2022-07-08 15.0](#2022-07-08-150)
 	- [2022-07-13 15.1](#2022-07-13-151)
+	- [2023-03-08 16.0 (Jaraci Cup #16)](#2023-03-08-160-jaraci-cup-16)
 
 # Changes
 
@@ -2765,7 +2766,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Khaaneph:
 	* Fixed an issue where salvager armor wasn't updated as intended: `5 => 4`
 
-## 2022-05-29 14.4
+## 2022-05-29 14.4 (Jaraci Cup #15)
 *Not yet reflected in the main changelog.*
 * Gaalsien:
 	* Carrier hangar bay parameters:
@@ -2946,3 +2947,10 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Interceptor:
 		* AOE: `69 => 60`
 		* Damage against small: `100% => 60%`
+
+## 2023-03-08 16.0 (Jaraci Cup #16)
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Minor housekeeping changes to Support Cruiser AA to unify functionality between factions (thanks Just_Carrier).
+* Soban:
+	* Assault cruiser now has a soban-specific appearance (thanks Just_Carrier)
