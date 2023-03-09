@@ -2967,4 +2967,4 @@ Full combined changelog can be found [HERE](jaraci.md)
 ## 2023-03-09 17.1
 *Not yet reflected in the main changelog.*
 * Coalition:
-	* Fixed incorrect penetrating shots damage display (UI visual only) (Thanks Just_Carrier)
+	* Fixed incorrect carrier penetrating shots damage display (UI visual only): `75 => 70` (Thanks Just_Carrier)
