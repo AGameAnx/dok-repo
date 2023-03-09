@@ -108,6 +108,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-07-13 15.1](#2022-07-13-151)
 	- [2023-01-09 16.0 (Jaraci Cup #16)](#2023-01-09-160-jaraci-cup-16)
 	- [2023-03-08 17.0](#2023-03-08-170)
+	- [2023-03-09 17.1](#2023-03-09-171)
 
 # Changes
 
@@ -2952,7 +2953,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 ## 2023-01-09 16.0 (Jaraci Cup #16)
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
-	* Minor housekeeping changes to Support Cruiser AA to unify functionality between factions (thanks Just_Carrier).
+	* Minor housekeeping changes to Support Cruiser AA to unify functionality between factions (thanks Just_Carrier)
 * Soban:
 	* Assault cruiser now has a soban-specific appearance (thanks Just_Carrier)
 
@@ -2962,3 +2963,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Battlecruiser range: `1650 => 1630`
 * Gaalsien/Khaaneph:
 	* Heavy Railgun max desired combat range: `1620 => 1730` (These are targeted changes to prevent heavy railguns from driving into range of soban battlecruisers on their own)
+
+## 2023-03-09 17.1
+*Not yet reflected in the main changelog.*
+* Coalition:
+	* Fixed incorrect penetrating shots damage display (UI visual only) (Thanks Just_Carrier)
