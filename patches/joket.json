@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.52",
-        "LastUpdate": "2023-03-07",
+        "Version": "1.06.60",
+        "LastUpdate": "2023-03-14",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joket.json"
     },
     "Global": {
@@ -11177,8 +11177,8 @@
                     "DamagePacketsPerShot": 0,
                     "WindDownTimeMS": 50,
                     "WindUpTimeMS": 1050,
-                    "CooldownTimeMS": 2000,
-                    "ReloadTimeMS": 1400,
+                    "CooldownTimeMS": 0,
+                    "ReloadTimeMS": 3400,
                     "BurstPeriodMinTimeMS": 60,
                     "BurstPeriodMaxTimeMS": 140,
                     "AreaOfEffectFalloffType": "Linear",
@@ -11566,13 +11566,13 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Novice: +125m area of effect radius",
+                        "BuffTooltipLocID": "Novice: +100 to max hull",
                         "RequiredExperience": 450,
                         "Buff": {
                             "0": {
-                                "Attribute": 262152,
+                                "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
-                                "Value": 125
+                                "Value": 100
                             }
                         }
                     },
@@ -11625,7 +11625,7 @@
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Elder: +50 damage, +75m area of effect radius",
+                        "BuffTooltipLocID": "Elder: +50 damage, +25% area of effect radius of shotgun",
                         "RequiredExperience": 2500,
                         "Buff": {
                             "0": {
@@ -11635,8 +11635,8 @@
                             },
                             "1": {
                                 "Attribute": 262152,
-                                "Mode": "Add",
-                                "Value": 75
+                                "Mode": "AddPercent",
+                                "Value": 25
                             }
                         }
                     }
@@ -11662,21 +11662,25 @@
                                 "0": {
                                     "BuffSet": {
                                         "0": {
+                                            "Name": "",
                                             "Attribute": 33554434,
                                             "Mode": "Set",
                                             "Value": 700
                                         },
                                         "1": {
+                                            "Name": "",
                                             "Attribute": 33554433,
                                             "Mode": "Set",
                                             "Value": 700
                                         },
                                         "2": {
+                                            "Name": "",
                                             "Attribute": 33554432,
                                             "Mode": "Set",
                                             "Value": 700
                                         },
                                         "3": {
+                                            "Name": "",
                                             "Attribute": 262151,
                                             "Mode": "Set",
                                             "Value": 1
@@ -11692,9 +11696,10 @@
                                             "Value": 10 // more luuuuuuuuuuuube
                                         },
                                         "6": {
+                                            "Name": "",
                                             "Attribute": 262149,
-                                            "Mode": "Set",
-                                            "Value": 2
+                                            "Mode": "AddPercent",
+                                            "Value": 100
                                         },
                                         "7": {
                                             "Attribute": "Unit_FireRateDisplay",
@@ -11729,7 +11734,7 @@
 
                 },
                 "Ability_G_HeavyRailgunEMP_MP": {
-                    "CooldownTimeSecs": 75
+                    "CooldownTimeSecs": 35
                 }
             },
             "WeaponAttributes": {
@@ -11783,14 +11788,24 @@
                     }
                 },
                 "G_StarHull_Weapon_G2GEMP_MP": {
-                    "StatusEffectsExcludeTargetType": "Air",
+                    "StatusEffectsExcludeTargetType": "All",
                     "ExcludeFromHeightAdvantage": true,
-                    "BaseDamagePerRound": 110,
-                    "AreaOfEffectRadius": 135,
+                    "BaseDamagePerRound": 75,
+                    "RateOfFire": 16,
+                    "BurstPeriodMinTimeMS": 250,
+                    "BurstPeriodMaxTimeMS": 250,
+                    "AreaOfEffectRadius": 200,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
                     "WindUpTimeMS": 750,
-                    "RangeAttributesLong": { "Distance": 1200 },
-                    "StatusEffectsSets": {
-                        "0": { "StatusEffects": [ "MiniStun_StatusEffect" ] }
+                    "RangeAttributesShort": {
+                        "Accuracy": 0
+                    },
+                    "RangeAttributesMedium": {
+                        "Accuracy": 0
+                    },
+                    "RangeAttributesLong": {
+                        "Distance": 1300,
+                        "Accuracy": 0
                     }
                 }
             }
@@ -11813,13 +11828,13 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Novice: +125m area of effect radius",
+                        "BuffTooltipLocID": "Novice: +100 to max hull",
                         "RequiredExperience": 450,
                         "Buff": {
                             "0": {
-                                "Attribute": 262152,
+                                "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
-                                "Value": 125
+                                "Value": 100
                             }
                         }
                     },
@@ -11872,7 +11887,7 @@
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Elder: +50 damage, +75m area of effect radius",
+                        "BuffTooltipLocID": "Elder: +50 damage, +25% area of effect radius of shotgun",
                         "RequiredExperience": 2500,
                         "Buff": {
                             "0": {
@@ -11882,8 +11897,8 @@
                             },
                             "1": {
                                 "Attribute": 262152,
-                                "Mode": "Add",
-                                "Value": 75
+                                "Mode": "AddPercent",
+                                "Value": 25
                             }
                         }
                     }
@@ -11909,21 +11924,25 @@
                                 "0": {
                                     "BuffSet": {
                                         "0": {
+                                            "Name": "",
                                             "Attribute": 33554434,
                                             "Mode": "Set",
                                             "Value": 700
                                         },
                                         "1": {
+                                            "Name": "",
                                             "Attribute": 33554433,
                                             "Mode": "Set",
                                             "Value": 700
                                         },
                                         "2": {
+                                            "Name": "",
                                             "Attribute": 33554432,
                                             "Mode": "Set",
                                             "Value": 700
                                         },
                                         "3": {
+                                            "Name": "",
                                             "Attribute": 262151,
                                             "Mode": "Set",
                                             "Value": 1
@@ -11939,9 +11958,10 @@
                                             "Value": 10 // more luuuuuuuuuuuube
                                         },
                                         "6": {
+                                            "Name": "",
                                             "Attribute": 262149,
-                                            "Mode": "Set",
-                                            "Value": 2
+                                            "Mode": "AddPercent",
+                                            "Value": 100
                                         },
                                         "7": {
                                             "Attribute": "Unit_FireRateDisplay",
@@ -11974,7 +11994,7 @@
 
                 },
                 "Ability_G_HeavyRailgunEMP_MP": {
-                    "CooldownTimeSecs": 75
+                    "CooldownTimeSecs": 30
                 }
             },
             "WeaponAttributes": {
@@ -12025,14 +12045,24 @@
                     }
                 },
                 "G_StarHull_Weapon_G2GEMP_MP": {
-                    "StatusEffectsExcludeTargetType": "Air",
+                    "StatusEffectsExcludeTargetType": "All",
                     "ExcludeFromHeightAdvantage": true,
-                    "BaseDamagePerRound": 110,
-                    "AreaOfEffectRadius": 135,
+                    "BaseDamagePerRound": 75,
+                    "RateOfFire": 16,
+                    "BurstPeriodMinTimeMS": 250,
+                    "BurstPeriodMaxTimeMS": 250,
+                    "AreaOfEffectRadius": 200,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
                     "WindUpTimeMS": 750,
-                    "RangeAttributesLong": { "Distance": 1200 },
-                    "StatusEffectsSets": {
-                        "0": { "StatusEffects": [ "MiniStun_StatusEffect" ] }
+                    "RangeAttributesShort": {
+                        "Accuracy": 0
+                    },
+                    "RangeAttributesMedium": {
+                        "Accuracy": 0
+                    },
+                    "RangeAttributesLong": {
+                        "Distance": 1300,
+                        "Accuracy": 0
                     }
                 }
             }
@@ -12063,11 +12093,11 @@
         },
 
         // GAALSIEN/KHAANEPH RANGED CALIBRATION
-        "Scope_StatusEffect": { // fuk you
+        /*"Scope_StatusEffect": { // fuk you
             "StatusEffectAttributes": {
 
             }
-        },
+        },*/
 
         // GAALSIEN/KHAANEPH RANGED CALIBRATION UPGRADE
         "Research_Buff_G_RailGunScope": {
@@ -12084,7 +12114,9 @@
             "ResearchItemAttributes": {
                 "Resource1Cost": 400,
                 "Resource2Cost": 150,
-                "ResearchTime": 35
+                "ResearchTime": 35,
+                "LocalizedResearchTitleStringID": "HEAVY RAILGUN - SHOTGUN",
+                "LocalizedLongDescriptionStringID": "Enables secondary weapon of heavy railgun, the shotgun acts as strike craft crowd control."
             }
         },
 
@@ -14163,9 +14195,9 @@
             "WeaponAttributes": {
                 "G_Bomber_Weapon_A2G_MP": {
                     "Turret": {
-                        "FieldOfFire": 30,
-                        "RotationSpeed": 360,
-                        "FieldOfView": 360
+                        "FieldOfView": 360,
+                        "FieldOfFire": 360,
+                        "RotationSpeed": 1
                     },
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
                     "FriendlyFireDamageScalar": 1,
@@ -17164,6 +17196,14 @@
                 "LocalizedLongDescriptionStringID": "Automaticly steal, appropriate, nab, scrump, heist a coalition cruise missile."
             }
         },
+        "Ability_G_HeavyRailgunEMP_MP": {
+            "AbilityViewAttributes": {
+                "InvertFillCooldown": true,
+                "IconName": "Icon-Command-Stance",
+                "LocalizedTitleStringID": "SHOTGUN BLAST",
+                "LocalizedLongDescriptionStringID": "Fire 4 shotgun shots at the target area, dealing 300 total damage."
+            }
+        },
         "Ability_G_DeployScanner_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
         "Ability_G_HonorSwitchMode": {
             "AbilityViewAttributes": {
@@ -17239,7 +17279,7 @@
             }
         },
         "Ability_K_ProduceBaserunner": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD BLAST DRONE FACTORY" } },
-        "Ability_K_ProduceExplodingSkimmer_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD CLAYMORE ROOMBA" } },
+        "Ability_K_ProduceExplodingSkimmer_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD EXPLODING SKIMMER" } },
         "Ability_C_Sob_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Armed with special weapon and sensor disrupting sandbang grenades, AA PDCs and stolen Gaalsien supersonic missiles. Strong against air targets, carriers, humongos groups of units." } },
         "Ability_C_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Armed with special weapon and sensor disrupting sandbang grenades, AA PDCs and stolen Gaalsien supersonic missiles. Strong against air targets, carriers, humongos groups of units." } },
         "Ability_C_ProduceBattlecruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "God-Emperor level heavy, unaramored undirect fire artillery weapons platform. Effective at PURGING HERETICS from long range with pellets of faith in our God-Emperor of Mainkind." } },
