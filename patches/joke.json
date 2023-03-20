@@ -10,7 +10,7 @@
         "Author": "Bozocow, Just_Carrier",
         "Version": "1.06.61",
         "LastUpdate": "2023-03-14",
-        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joket.json"
+        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
     },
     /*"Global": {
         "UnitAttributes": {
@@ -808,14 +808,22 @@
             },
             "WeaponAttributes": {
                 "C_Carrier_Weapon_G2All_MP": {
-                    "LineOfSightRequired": true,
-                    "BaseDamagePerRound": 30,
-                    "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 15,
-                    "ReloadTimeMS": 2350,
-                    "CooldownTimeMS": 1550,
-                    "BurstPeriodMinTimeMS": 200,
-                    "BurstPeriodMaxTimeMS": 300,
+                    "BaseDamagePerRound": 225,
+                    "FriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 1,
+                    "ReloadTimeMS": 7500,
+                    "CooldownTimeMS": 0,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "NumberOfBursts": 1,
+                    "AreaOfEffectRadius": 150,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "LeadsTarget": 1,
+                    "RateOfFire": 1,
+                    "TracerLength": 5,
                     "TargetStyle": "Flak",
                     "RangeAttributesShort": {
 
@@ -823,10 +831,10 @@
                     },
                     "RangeAttributesMedium": {
                         "Distance": 600,
-                        "Accuracy": 35
+                        "Accuracy": 100
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 20,
+                        "Accuracy": 50,
                         "Distance": 800
                     },
                     "Modifiers": {
@@ -864,7 +872,7 @@
                     }
                 },
                 "C_Carrier_Weapon_G2All_Dummy_MP": {
-                    "BaseDamagePerRound": 30
+                    "BaseDamagePerRound": 225
                 },
                 "C_Carrier_Weapon_G2All_PenetrationShots_MP": { // Are these even used at all?? //yes, and you did it wrong dumbass
                     "LineOfSightRequired": false,
@@ -1122,11 +1130,11 @@
                         "PowerLevels": {
 
                             "0": {
-                                "LocalizedShortDescriptionStringID": " PD Rate of Fire: 3, anti-air disabled"
+                                "LocalizedShortDescriptionStringID": " PDC Rate of Fire: 1, reload time 8 seconds, anti-air disabled"
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Anti-air online, AA and PD Rate of Fire: 5",
+                                "LocalizedShortDescriptionStringID": "Anti-air online, PDC reload time: 6 seconds, AA Rate of Fire: 5",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_1_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1138,19 +1146,23 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 5500
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 5500
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 5500
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 5500
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -1220,7 +1232,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "AA and PD Rate of Fire: 7",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 4 seconds, AA Rate of Fire: 7",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_2_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1232,19 +1244,23 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 3500
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 3500
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 3500
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 3500
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -1314,7 +1330,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "AA and PD Rate of Fire: 12",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 3 seconds, AA Rate of Fire: 12",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_3_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1326,19 +1342,23 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 2500
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 2500
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 2500
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 2500
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -1408,7 +1428,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "AA and PD Rate of Fire: 20",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 2 seconds, AA Rate of Fire: 20",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_4_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1420,19 +1440,23 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 1500
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 1500
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 1500
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 1500
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -1502,7 +1526,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Missiles Enabled...",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 2 seconds, AA Rate of Fire: 20. Missiles Enabled...",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_5_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
@@ -1531,27 +1555,27 @@
                                                     "5": { "Value": 20 }, // Fire rate display
                                                     "6": {
                                                         "Name": "TURRET_FR",
-                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 1500
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL",
-                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 1500
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR",
-                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 1500
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL",
-                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 1500
                                                     }
                                                 }
                                             }
@@ -2184,6 +2208,7 @@
                 },
                 "C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
                     "BaseDamagePerRound": 195,
+                    "DamagePacketsPerShot": 0,
                     "ExcludeFromHeightAdvantage": true
                 },
                 "C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
@@ -2196,19 +2221,19 @@
                     "RateOfFire": 1,
                     "WindUpTimeMS": 100,
                     "WindDownTimeMS": 100,
-                    "ReloadTimeMS": 32000,
+                    "ReloadTimeMS": 16000,
                     "CooldownTimeMS": 0,
                     "RangeAttributesShort": {
                         "Distance": 1500,
-                        "Accuracy": 7.5
+                        "Accuracy": 25
                     },
                     "RangeAttributesMedium": {
                         "Distance": 1900,
-                        "Accuracy": 6.25
+                        "Accuracy": 36.5
                     },
                     "RangeAttributesLong": {
                         "Distance": 2300,
-                        "Accuracy": 5
+                        "Accuracy": 50
                     },
                     "Modifiers": {
                         "1": {
@@ -2286,7 +2311,7 @@
                         "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "MinDistance": 350, // don't gib urself
+                        "MinDistance": 350, // don't gib urself// still gib yourself XD
                         "Distance": 700
                     },
                     "ExcludeFromHeightAdvantage": true
@@ -2454,11 +2479,11 @@
                         "PowerLevels": {
 
                             "0": {
-                                "LocalizedShortDescriptionStringID": "32s reload"
+                                "LocalizedShortDescriptionStringID": "16s reload"
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "16s reload",
+                                "LocalizedShortDescriptionStringID": "8s reload",
                                 "StatusEffectsToApply": {
                                     "C_Sob_Weapons_1_StatusEffect": {
                                         "Modifiers": {
@@ -2489,7 +2514,7 @@
                                                     }, // Cooldown
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 16000
+                                                        "Value": 8000
                                                     }, // Reload
                                                     "5": { "Remove": true }, // Accuracy Short
                                                     "6": { "Remove": true }, // Accuracy Medium
@@ -2501,7 +2526,7 @@
                                                     }, // Cooldown
                                                     "9": {
                                                         "Mode": "Set",
-                                                        "Value": 16000,
+                                                        "Value": 8000,
                                                         "Attribute": "UnitWeapon_ReloadTime"
                                                     }, // Reload
                                                     "10": { "Remove": true }, // Accuracy Short
@@ -2514,7 +2539,7 @@
                                                     }, // Cooldown
                                                     "14": {
                                                         "Mode": "Set",
-                                                        "Value": 16000,
+                                                        "Value": 8000,
                                                         "Attribute": "UnitWeapon_ReloadTime"
                                                     }, // Reload
                                                     "15": { "Remove": true }, // Accuracy Short
@@ -2527,7 +2552,7 @@
                                                     }, // Cooldown
                                                     "19": {
                                                         "Mode": "Set",
-                                                        "Value": 16000,
+                                                        "Value": 8000,
                                                         "Attribute": "UnitWeapon_ReloadTime"
                                                     }, // Reload
                                                     "20": { "Remove": true }, // Accuracy Short
@@ -2541,7 +2566,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "8s reload",
+                                "LocalizedShortDescriptionStringID": "4s reload",
                                 "StatusEffectsToApply": {
                                     "C_Sob_Weapons_2_StatusEffect": {
                                         "Modifiers": {
@@ -2560,7 +2585,7 @@
                                                     }, // Cooldown
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 8000
+                                                        "Value": 4000
                                                     }, // Reload
                                                     "4": { "Remove": true }, // Accuracy Short
                                                     "5": { "Remove": true }, // Accuracy Medium
@@ -2572,7 +2597,7 @@
                                                     }, // Cooldown
                                                     "8": {
                                                         "Mode": "Set",
-                                                        "Value": 8000
+                                                        "Value": 4000
                                                     }, // Reload
                                                     "9": { "Remove": true }, // Accuracy Short
                                                     "10": { "Remove": true }, // Accuracy Medium
@@ -2584,7 +2609,7 @@
                                                     }, // Cooldown
                                                     "13": {
                                                         "Mode": "Set",
-                                                        "Value": 8000
+                                                        "Value": 4000
                                                     }, // Reload
                                                     "14": { "Remove": true }, // Accuracy Short
                                                     "15": { "Remove": true }, // Accuracy Medium
@@ -2596,7 +2621,7 @@
                                                     }, // Cooldown
                                                     "18": {
                                                         "Mode": "Set",
-                                                        "Value": 8000
+                                                        "Value": 4000
                                                     }, // Reload
                                                     "19": { "Remove": true }, // Accuracy Short
                                                     "20": { "Remove": true }, // Accuracy Medium
@@ -2609,7 +2634,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "4s reload",
+                                "LocalizedShortDescriptionStringID": "3s reload",
                                 "StatusEffectsToApply": {
                                     "C_Sob_Weapons_3_StatusEffect": {
                                         "Modifiers": {
@@ -2629,7 +2654,7 @@
                                                     }, // Cooldown
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 3000
                                                     }, // Reload
                                                     "5": { "Remove": true }, // Accuracy Short
                                                     "6": { "Remove": true }, // Accuracy Medium
@@ -2641,7 +2666,7 @@
                                                     }, // Cooldown
                                                     "9": {
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 3000
                                                     }, // Reload
                                                     "10": { "Remove": true }, // Accuracy Short
                                                     "11": { "Remove": true }, // Accuracy Medium
@@ -2653,7 +2678,7 @@
                                                     }, // Cooldown
                                                     "14": {
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 3000
                                                     }, // Reload
                                                     "15": { "Remove": true }, // Accuracy Short
                                                     "16": { "Remove": true }, // Accuracy Medium
@@ -2665,7 +2690,7 @@
                                                     }, // Cooldown
                                                     "19": {
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 3000
                                                     }, // Reload
                                                     "20": { "Remove": true }, // Accuracy Short
                                                     "21": { "Remove": true }, // Accuracy Medium
@@ -2947,7 +2972,7 @@
                             // ========================================= //
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 15%, Missile Range: 900m",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 60%, Missile Range: 900m",
                                 "StatusEffectsToApply": {
                                     "Range_1_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -2957,128 +2982,128 @@
                                                     "0": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 10
+                                                        "Value": 60
                                                     },
                                                     "1": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 10
+                                                        "Value": 60
                                                     },
                                                     "2": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 13
+                                                        "Value": 50
                                                     },
                                                     "3": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 13
+                                                        "Value": 50
                                                     },
                                                     "4": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 15
+                                                        "Value": 33
                                                     },
                                                     "5": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 15
+                                                        "Value": 33
                                                     },
 
                                                     // TURRET_FR
                                                     "6": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 10
+                                                        "Value": 60
                                                     },
                                                     "7": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 10
+                                                        "Value": 60
                                                     },
                                                     "8": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 13
+                                                        "Value": 50
                                                     },
                                                     "9": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 13
+                                                        "Value": 50
                                                     },
                                                     "10": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 15
+                                                        "Value": 33
                                                     },
                                                     "11": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 15
+                                                        "Value": 33
                                                     },
 
                                                     // TURRET_BR
                                                     "12": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 10
+                                                        "Value": 60
                                                     },
                                                     "13": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 10
+                                                        "Value": 60
                                                     },
                                                     "14": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 13
+                                                        "Value": 50
                                                     },
                                                     "15": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 13
+                                                        "Value": 50
                                                     },
                                                     "16": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 15
+                                                        "Value": 33
                                                     },
                                                     "17": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 15
+                                                        "Value": 33
                                                     },
 
                                                     // TURRET_BL
                                                     "18": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 10
+                                                        "Value": 60
                                                     },
                                                     "19": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 10
+                                                        "Value": 60
                                                     },
                                                     "20": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 13
+                                                        "Value": 50
                                                     },
                                                     "21": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 13
+                                                        "Value": 50
                                                     },
                                                     "22": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 15
+                                                        "Value": 33
                                                     },
                                                     "23": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 15
+                                                        "Value": 33
                                                     },
 
                                                     // range of missile, probably... who knows tf this does??
@@ -3106,7 +3131,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 25%, Missile Range: 1100m",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 70%, Missile Range: 1100m",
                                 "StatusEffectsToApply": {
                                     "Range_2_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -3116,128 +3141,128 @@
                                                     "0": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 70
                                                     },
                                                     "1": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 70
                                                     },
                                                     "2": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 23
+                                                        "Value": 63
                                                     },
                                                     "3": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 23
+                                                        "Value": 63
                                                     },
                                                     "4": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Value": 50
                                                     },
                                                     "5": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Value": 50
                                                     },
 
                                                     // TURRET_BR
                                                     "6": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 70
                                                     },
                                                     "7": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 70
                                                     },
                                                     "8": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 23
+                                                        "Value": 63
                                                     },
                                                     "9": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 23
+                                                        "Value": 63
                                                     },
                                                     "10": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Value": 50
                                                     },
                                                     "11": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Value": 50
                                                     },
 
                                                     // TURRET_FL
                                                     "12": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 70
                                                     },
                                                     "13": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 70
                                                     },
                                                     "14": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 23
+                                                        "Value": 63
                                                     },
                                                     "15": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 23
+                                                        "Value": 63
                                                     },
                                                     "16": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Value": 50
                                                     },
                                                     "17": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Value": 50
                                                     },
 
                                                     // TURRET_FR
                                                     "18": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 70
                                                     },
                                                     "19": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 20
+                                                        "Value": 70
                                                     },
                                                     "20": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 23
+                                                        "Value": 63
                                                     },
                                                     "21": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 23
+                                                        "Value": 63
                                                     },
                                                     "22": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Value": 50
                                                     },
                                                     "23": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Value": 50
                                                     },
 
                                                     "24": {
@@ -3262,7 +3287,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 40%, Missile Range: 1400m",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 80%, Missile Range: 1400m",
                                 "StatusEffectsToApply": {
                                     "Range_3_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -3272,128 +3297,128 @@
                                                     "0": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 80
                                                     },
                                                     "1": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 80
                                                     },
                                                     "2": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 38
+                                                        "Value": 75
                                                     },
                                                     "3": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 38
+                                                        "Value": 75
                                                     },
                                                     "4": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 40
+                                                        "Value": 63
                                                     },
                                                     "5": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 40
+                                                        "Value": 63
                                                     },
 
                                                     // TURRET_BR
                                                     "6": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 80
                                                     },
                                                     "7": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 80
                                                     },
                                                     "8": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 38
+                                                        "Value": 75
                                                     },
                                                     "9": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 38
+                                                        "Value": 75
                                                     },
                                                     "10": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 40
+                                                        "Value": 63
                                                     },
                                                     "11": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 40
+                                                        "Value": 63
                                                     },
 
                                                     // TURRET_FL
                                                     "12": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 80
                                                     },
                                                     "13": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 80
                                                     },
                                                     "14": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 38
+                                                        "Value": 75
                                                     },
                                                     "15": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 38
+                                                        "Value": 75
                                                     },
                                                     "16": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 40
+                                                        "Value": 63
                                                     },
                                                     "17": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 40
+                                                        "Value": 63
                                                     },
 
                                                     // TURRET_FR
                                                     "18": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 80
                                                     },
                                                     "19": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 80
                                                     },
                                                     "20": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 38
+                                                        "Value": 75
                                                     },
                                                     "21": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 38
+                                                        "Value": 75
                                                     },
                                                     "22": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 40
+                                                        "Value": 63
                                                     },
                                                     "23": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 40
+                                                        "Value": 63
                                                     },
 
                                                     "24": {
@@ -3418,7 +3443,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 60%, Missile Range: 1800m",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 90%, Missile Range: 1800m",
                                 "StatusEffectsToApply": {
                                     "Range_4_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -3428,128 +3453,128 @@
                                                     "0": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 50
+                                                        "Value": 90
                                                     },
                                                     "1": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 50
+                                                        "Value": 90
                                                     },
                                                     "2": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 55
+                                                        "Value": 80
                                                     },
                                                     "3": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 55
+                                                        "Value": 80
                                                     },
                                                     "4": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 69
                                                     },
                                                     "5": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 69
                                                     },
 
                                                     // TURRET_BR
                                                     "6": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 50
+                                                        "Value": 90
                                                     },
                                                     "7": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 50
+                                                        "Value": 90
                                                     },
                                                     "8": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 55
+                                                        "Value": 80
                                                     },
                                                     "9": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 55
+                                                        "Value": 80
                                                     },
                                                     "10": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 69
                                                     },
                                                     "11": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 69
                                                     },
 
                                                     // TURRET_FL
                                                     "12": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 50
+                                                        "Value": 90
                                                     },
                                                     "13": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 50
+                                                        "Value": 90
                                                     },
                                                     "14": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 55
+                                                        "Value": 80
                                                     },
                                                     "15": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 55
+                                                        "Value": 80
                                                     },
                                                     "16": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 69
                                                     },
                                                     "17": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 69
                                                     },
 
                                                     // TURRET_FR
                                                     "18": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 50
+                                                        "Value": 90
                                                     },
                                                     "19": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 50
+                                                        "Value": 90
                                                     },
                                                     "20": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 55
+                                                        "Value": 80
                                                     },
                                                     "21": {
                                                         "Attribute": 33554436,
                                                         "Mode": "Set",
-                                                        "Value": 55
+                                                        "Value": 80
                                                     },
                                                     "22": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 69
                                                     },
                                                     "23": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 69
                                                     },
 
                                                     "24": {
@@ -3584,12 +3609,12 @@
                                                     "0": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 100
                                                     },
                                                     "1": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 100
                                                     },
                                                     "2": {
                                                         "Attribute": 33554436,
@@ -3604,24 +3629,24 @@
                                                     "4": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 75
                                                     },
                                                     "5": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 75
                                                     },
 
                                                     // TURRET_BR
                                                     "6": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 100
                                                     },
                                                     "7": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 100
                                                     },
                                                     "8": {
                                                         "Attribute": 33554436,
@@ -3636,24 +3661,24 @@
                                                     "10": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 75
                                                     },
                                                     "11": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 75
                                                     },
 
                                                     // TURRET_FL
                                                     "12": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 100
                                                     },
                                                     "13": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 100
                                                     },
                                                     "14": {
                                                         "Attribute": 33554436,
@@ -3668,24 +3693,24 @@
                                                     "16": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 75
                                                     },
                                                     "17": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 75
                                                     },
 
                                                     // TURRET_FR
                                                     "18": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 100
                                                     },
                                                     "19": {
                                                         "Attribute": 33554437,
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 100
                                                     },
                                                     "20": {
                                                         "Attribute": 33554436,
@@ -3700,12 +3725,12 @@
                                                     "22": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 75
                                                     },
                                                     "23": {
                                                         "Attribute": 33554435,
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 75
                                                     },
 
                                                     "24": {
@@ -3821,24 +3846,34 @@
                     }
                 },
                 "G_Carrier_Weapon_G2All_MP": {
-                    "BaseDamagePerRound": 30,
-                    "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 15,
+                    "BaseDamagePerRound": 75,
                     "TargetStyle": "Flak",
-                    "ReloadTimeMS": 2350,
-                    "CooldownTimeMS": 1550,
-                    "BurstPeriodMinTimeMS": 200,
-                    "BurstPeriodMaxTimeMS": 300,
+                    "ReloadTimeMS": 5500,
+                    "CooldownTimeMS": 0,
+                    "FriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 1,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
+                    "ProjectileEntityTypeToSpawn": "G_BattleCruiserDefault_ProjectileAssetContainer",
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "NumberOfBursts": 1,
+                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "LeadsTarget": 1,
+                    "RateOfFire": 2,
+                    "TracerLength": 5,
+                    "ExcludeFromHeightAdvantage": true,
                     "RangeAttributesShort": {
                         "Distance": 400,
-                        "Accuracy": 50
+                        "Accuracy": 100
                     },
                     "RangeAttributesMedium": {
                         "Distance": 600,
-                        "Accuracy": 35
+                        "Accuracy": 70
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 20,
+                        "Accuracy": 40,
                         "Distance": 800
                     },
                     "Modifiers": {
@@ -3876,7 +3911,7 @@
                     }
                 },
                 "G_Carrier_Weapon_G2All_Dummy_MP": {
-                    "BaseDamagePerRound": 30
+                    "BaseDamagePerRound": 75
                 },
                 "G_Carrier_Weapon_G2All_APBULLETS_MP": {
                     "BaseDamagePerRound": 30,
@@ -4128,10 +4163,10 @@
                     "1": { // Weapon Systems
                         "PowerLevels": {
                             "0": {
-                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 3, anti-air offline"
+                                "LocalizedShortDescriptionStringID": "PDC Rate of Fire: 2, reload time 6 seconds, anti-air offline"
                             },
                             "1": {
-                                "LocalizedShortDescriptionStringID": " Anti-air online, PD and AA Rate of Fire: 5",
+                                "LocalizedShortDescriptionStringID": " Anti-air online, PDC reload time: 4 seconds, AA Rate of Fire: 5",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_1_StatusEffect": {
                                         "Modifiers": {
@@ -4177,23 +4212,27 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 3500
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 3500
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 3500
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 3500
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
                                                         "Value": 25
                                                     },
@@ -4228,7 +4267,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "PD and AA Rate of Fire: 7",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 3 seconds, AA Rate of Fire: 7",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_2_StatusEffect": {
                                         "Modifiers": {
@@ -4274,19 +4313,23 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 2500
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 2500
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 2500
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 2500
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -4325,7 +4368,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "PD and AA Rate of Fire: 12",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 2 seconds, AA Rate of Fire: 12",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_3_StatusEffect": {
                                         "Modifiers": {
@@ -4371,19 +4414,23 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 1500
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 1500
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 1500
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 1500
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -4422,7 +4469,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "PD and AA Rate of Fire: 20",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 1 second, AA Rate of Fire: 20",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_4_StatusEffect": {
                                         "Modifiers": {
@@ -4468,19 +4515,23 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 500
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 500
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 500
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Value": 500
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -4519,7 +4570,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Missiles Enabled...",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 1 second, AA Rate of Fire: 20. Missiles Enabled...",
                                 "StatusEffectsToApply": {
 
                                     "G_Weapons_MoreDamage_StatusEffect": {
@@ -4587,23 +4638,27 @@
                                                     },
                                                     "1": {
                                                         "Name": "TURRET_FR",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 500
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Name": "TURRET_FL",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 500
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Name": "TURRET_BR",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 500
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Name": "TURRET_BL",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 500
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -5218,19 +5273,29 @@
                 //    }
                 //}, // no touchy!
                 "G_Carrier_Weapon_G2All_Dummy_MP": {
-                    "BaseDamagePerRound": 30
+                    "BaseDamagePerRound": 125
                 },
                 "K_Carrier_WeaponMovementBuff_G2G_MP": {
                     "ProjectileEntityTypeToSpawn": "K_MovementBuff_CruiserShell_ProjectileAssetContainer_MP"
                 },
                 "K_Carrier_Weapon_G2All_MP": {
-                    "BaseDamagePerRound": 30,
-                    "ReloadTimeMS": 2350,
-                    "CooldownTimeMS": 1550,
-                    "BurstPeriodMinTimeMS": 200,
-                    "BurstPeriodMaxTimeMS": 300,
+                    "BaseDamagePerRound": 125,
+                    "ReloadTimeMS": 6500,
+                    "FriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 1,
+                    "CooldownTimeMS": 6500,
+                    "BurstPeriodMinTimeMS": 1500,
+                    "BurstPeriodMaxTimeMS": 1500,
+                    "ProjectileEntityTypeToSpawn": "K_DirectFire_Shell_ProjectileAssetContainer_MP",
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "NumberOfBursts": 2,
+                    "AreaOfEffectRadius": 230,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "LeadsTarget": 0,
+                    "TracerLength": 5,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 15,
+                    "RateOfFire": 1,
                     "TargetStyle": "Flak",
                     "RangeAttributesShort": {
                         "Distance": 600,
@@ -5242,12 +5307,12 @@
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 20,
-                        "Distance": 1000
+                        "Distance": 1150
                     },
                     "Turret": {
                         "FieldOfView": 200,
                         "FieldOfFire": 2,
-                        "RotationSpeed": 85
+                        "RotationSpeed": 45
                     },
                     "Modifiers": {
                         "0": {
@@ -5930,11 +5995,11 @@
                         "PowerLevels": {
 
                             "0": {
-                                "LocalizedShortDescriptionStringID": "Point Defence Rate of Fire: 3, Anti-Air offline."
+                                "LocalizedShortDescriptionStringID": "Point Defence Rate of Fire: 1, Anti-Air offline."
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Anti-Air online, PD and AA Rate of Fire: 5",
+                                "LocalizedShortDescriptionStringID": "Anti-Air online, PD Rate of Fire: 2, AA Rate of Fire: 5",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_1_StatusEffect": {
                                         "Modifiers": {
@@ -5976,19 +6041,23 @@
                                                 "BuffSet": {
                                                     "0": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Value": 0
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Value": 0
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Value": 0
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 25
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Value": 0
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
@@ -6026,7 +6095,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": " PD and AA Rate of Fire: 7",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 3, AA Rate of Fire: 7",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_2_StatusEffect": {
                                         "Modifiers": {
@@ -6068,19 +6137,19 @@
                                                 "BuffSet": {
                                                     "0": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 2
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 2
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 2
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 35
+                                                        "Value": 2
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
@@ -6118,7 +6187,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": " PD and AA Rate of Fire: 12",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 4, of Fire: 12",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_3_StatusEffect": {
 
@@ -6161,19 +6230,19 @@
                                                 "BuffSet": {
                                                     "0": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 3
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 3
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 3
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 3
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
@@ -6211,7 +6280,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": " PD and AA Rate of Fire: 20",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 6, AA Rate of Fire: 20",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_4_StatusEffect": {
 
@@ -6254,19 +6323,19 @@
                                                 "BuffSet": {
                                                     "0": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
@@ -6295,6 +6364,30 @@
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 100
+                                                    },
+                                                    "10": {
+                                                        "Name": "TURRET_FR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "11": {
+                                                        "Name": "TURRET_FL",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "12": {
+                                                        "Name": "TURRET_BR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "13": {
+                                                        "Name": "TURRET_BL",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
                                                     }
                                                 }
                                             }
@@ -6304,7 +6397,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Missiles Enabled...",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 6, AA Rate of Fire: 20. Missiles Enabled...",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_5_StatusEffect": {
                                         "Modifiers": {
@@ -6352,25 +6445,25 @@
                                                         "Name": "TURRET_FR",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Name": "TURRET_FL",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Name": "TURRET_BR",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Name": "TURRET_BL",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
@@ -6399,6 +6492,30 @@
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 100
+                                                    },
+                                                    "10": {
+                                                        "Name": "TURRET_FR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "11": {
+                                                        "Name": "TURRET_FL",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "12": {
+                                                        "Name": "TURRET_BR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "13": {
+                                                        "Name": "TURRET_BL",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
                                                     }
                                                 }
                                             }
@@ -8403,6 +8520,7 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
+                    "MaxSpeed": 55,
                     "MaxEaseIntoTurnTime": 0.25,
                     "MaxSpeedTurnRadius": 75,
                     "AccelerationTime": 0.9
@@ -8411,11 +8529,63 @@
             "AbilityAttributes": {
                 "Ability_C_SupportCruiser_AA": {
                     "RequiredResearch": []
+                },
+                "Ability_Common_DisableResourceController": {
+                    "CooldownTimeSecs": 2,
+                    "ApplyStatusEffect": {
+                        "DisableResourceController_StatusEffect": {
+                            "BuffsToApplyToTarget": {
+                                "0": {
+                                    "UnitClass": -1,
+                                    "UseAsPrefix": true,
+                                    "UnitType": "C_SupportCruiser_MP",
+                                    "BuffSet": {
+                                        "0": {
+                                            "Attribute": "WeaponRange_DistanceLong",
+                                            "Mode": "Add",
+                                            "Value": 400
+                                        },
+                                        "1": {
+                                            "Attribute": "UnitDynamics_MaxSpeed",
+                                            "Mode": "Add",
+                                            "Value": 15
+                                        },
+                                        "2": {
+                                            "Name": "REPAIR",
+                                            "Attribute": "UnitWeapon_RateOfFire",
+                                            "Mode": "Add",
+                                            "Value": -2
+                                        },
+                                        "3": {
+                                            "Name": "REPAIR_FL",
+                                            "Attribute": "UnitWeapon_RateOfFire",
+                                            "Mode": "Add",
+                                            "Value": -2
+                                        },
+                                        "4": {
+                                            "Name": "REPAIR_BR",
+                                            "Attribute": "UnitWeapon_RateOfFire",
+                                            "Mode": "Set",
+                                            "Value": -2
+                                        },
+                                        "5": {
+                                            "Name": "REPAIR_BL",
+                                            "Attribute": "UnitWeapon_RateOfFire",
+                                            "Mode": "Add",
+                                            "Value": -2
+                                        }
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
                 }
             },
             "WeaponAttributes": {
                 "C_SupportCruiser_Weapon_Repair_Small_MP": {
-                    "RateOfFire": 6,
+                    "RateOfFire": 8,
                     "OutputDPS": true,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesShort": {
@@ -8438,11 +8608,11 @@
                         "Accuracy": 100
                     },
                     "RangeAttributesMedium": {
-                        "Distance": 750,
+                        "Distance": 600,
                         "Accuracy": 100
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1000,
+                        "Distance": 600,
                         "Accuracy": 100
                     },
                     "Modifiers": {
@@ -8751,7 +8921,7 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 70
+                    "MaxSpeed": 55
                 }
             },
             "ExperienceAttributes": {
@@ -8866,6 +9036,44 @@
                 }
             },
             "AbilityAttributes": {
+                "Ability_Common_DisableResourceController_Gaalsi": {
+                    "CooldownTimeSecs": 2,
+                    "ApplyStatusEffect": {
+                        "DisableResourceController_StatusEffect": {
+                            "BuffsToApplyToTarget": {
+                                "0": {
+                                    "UnitClass": -1,
+                                    "UseAsPrefix": true,
+                                    "UnitType": "G_SupportCruiser_MP",
+                                    "BuffSet": {
+                                        "0": {
+                                            "Attribute": "WeaponRange_DistanceLong",
+                                            "Mode": "Add",
+                                            "Value": 700
+                                        },
+                                        "1": {
+                                            "Attribute": "UnitDynamics_MaxSpeed",
+                                            "Mode": "Add",
+                                            "Value": 15
+                                        },
+                                        "2": {
+                                            "Attribute": 33554432,
+                                            "Mode": "Add",
+                                            "Value": 300
+                                        },
+                                        "3": {
+                                            "Attribute": 33554433,
+                                            "Mode": "Add",
+                                            "Value": 400
+                                        }
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                },
                 "Ability_G_SupportCruiserRegen": {
                     "ApplyStatusEffect": {
                         "Regen_SupportCruiserRegen_StatusEffect": {
@@ -9074,6 +9282,39 @@
                 }
             },
             "AbilityAttributes": {
+                "Ability_Common_DisableResourceController_Khaaneph": {
+                    "CooldownTimeSecs": 2,
+                    "ApplyStatusEffect": {
+                        "DisableResourceController_StatusEffect": {
+                            "BuffsToApplyToTarget": {
+                                "0": {
+                                    "UnitClass": -1,
+                                    "UseAsPrefix": true,
+                                    "UnitType": "K_SupportCruiser_MP",
+                                    "BuffSet": {
+                                        "0": {
+                                            "Attribute": "WeaponRange_DistanceLong",
+                                            "Mode": "Add",
+                                            "Value": 700
+                                        },
+                                        "1": {
+                                            "Attribute": "Unit_FireRateDisplay",
+                                            "Mode": "Add",
+                                            "Value": 1
+                                        },
+                                        "2": {
+                                            "Attribute": 33554433,
+                                            "Mode": "Add",
+                                            "Value": 200
+                                        }
+
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                },
                 "Ability_G_SupportCruiserRegen": {
                     "ApplyStatusEffect": {
                         "Regen_SupportCruiserRegen_StatusEffect": {
@@ -9112,7 +9353,7 @@
                         "Distance": 100
                     },
                     "RangeAttributesMedium": {
-                        "Accuracy": 80,
+                        "Accuracy": 100,
                         "Distance": 200
                     },
                     "RangeAttributesLong": {
@@ -9146,7 +9387,7 @@
                     "ReloadTimeMS": 1000,
                     "RangeAttributesShort": {
                         "Accuracy": 100,
-                        "Distance": 100
+                        "Distance": 200
                     },
                     "RangeAttributesMedium": {
                         "Accuracy": 80,
@@ -9177,30 +9418,7 @@
         "Research_Buff_G_ProductionCruiserResourcer": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "PRODUCTION CRUISER - SUPPORT MODE",
-                "LocalizedLongDescriptionStringID": "\n\n[84a1e8]Enable all Production Cruisers act as resource drop-off points. Also improves Production Cruiser weapon range.",
-                "UnitTypeBuffs": {
-                    "0": {
-                        "UnitClass": -1, // how tf this worked?
-                        "ClassOperator": "Or",
-                        "BuffSet": {
-                            "0": {
-                                "Attribute": 33554432,
-                                "Mode": "Add",
-                                "Value": 300
-                            },
-                            "1": {
-                                "Attribute": 33554433,
-                                "Mode": "Add",
-                                "Value": 400
-                            },
-                            "2": {
-                                "Attribute": 33554434,
-                                "Mode": "Add",
-                                "Value": 700
-                            }
-                        }
-                    }
-                },
+                "LocalizedLongDescriptionStringID": "[84a1e8]Enable all Production Cruisers act as resource drop-off points. Or switch to combat mode improving their speed and weapon range.",
                 "Resource1Cost": 550,
                 "Resource2Cost": 60
             }
@@ -9210,37 +9428,35 @@
         "Research_Buff_K_ProductionCruiserResourcer": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "PRODUCTION CRUISER - SUPPORT MODE",
-                "LocalizedLongDescriptionStringID": "\n\n[84a1e8]Enable all Production Cruisers act as resource drop-off points. Also improves Production Cruiser weapon range.",
-                "UnitTypeBuffs": {
-                    "0": {
-                        "UnitClass": -1, // how tf this worked?
-                        "ClassOperator": "Or",
-                        "BuffSet": {
-
-                            "0": {
-                                "Attribute": 33554433,
-                                "Mode": "Add",
-                                "Value": 300
-                            },
-                            "1": {
-                                "Attribute": 33554433,
-                                "Mode": "Add",
-                                "Value": 400
-                            },
-                            "2": {
-                                "Attribute": 33554434,
-                                "Mode": "Add",
-                                "Value": 700
-                            }
-
-                        }
-                    }
-                },
+                "LocalizedLongDescriptionStringID": "[84a1e8]Enable all Production Cruisers act as resource drop-off points. Or switch to combat mode improving their speed and weapon range.",
                 "Resource1Cost": 550,
                 "Resource2Cost": 60
             }
         },
-
+        "Ability_Common_DisableResourceController": {
+            "AbilityViewAttributes": {
+                "IconName": "Icon-Command-AutoTarget_Off",
+                "LocalizedTitleStringID": "COMBAT-SUPPORT MODE",
+                "LocalizedLongDescriptionStringID": "Disable mobile refinery systems and reroute power into weapons range.",
+                "LocalizedToggledLongDescriptionStringID": "Reroute power from weapons range system into mobile refinery and repair systems."
+            }
+        },
+        "Ability_Common_DisableResourceController_Gaalsi": {
+            "AbilityViewAttributes": {
+                "IconName": "Icon-Command-AutoTarget_Off",
+                "LocalizedTitleStringID": "COMBAT-SUPPORT MODE",
+                "LocalizedLongDescriptionStringID": "Disable mobile refinery systems and reroute power into weapons range.",
+                "LocalizedToggledLongDescriptionStringID": "Reroute power from weapons range system into mobile refinery and repair systems."
+            }
+        },
+        "Ability_Common_DisableResourceController_Khaaneph": {
+            "AbilityViewAttributes": {
+                "IconName": "Icon-Command-AutoTarget_Off",
+                "LocalizedTitleStringID": "COMBAT-SUPPORT MODE",
+                "LocalizedLongDescriptionStringID": "Disable mobile refinery systems and reroute power into weapons range.",
+                "LocalizedToggledLongDescriptionStringID": "Reroute power from weapons range system into mobile refinery and repair systems."
+            }
+        },
         // COALITION/SOBAN AAV
         "C_HAC_MP": {
             "UnitAttributes": {
