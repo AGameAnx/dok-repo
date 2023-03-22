@@ -8,9 +8,9 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.06.61",
-        "LastUpdate": "2023-03-14",
-        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
+        "Version": "1.07.00",
+        "LastUpdate": "2023-03-22",
+        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joket.json"
     },
     /*"Global": {
         "UnitAttributes": {
@@ -890,10 +890,10 @@
                     },
                     "RangeAttributesMedium": {
                         "Distance": 600,
-                        "Accuracy": 35
+                        "Accuracy": 20
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 20,
+                        "Accuracy": 10,
                         "Distance": 800
                     },
                     "Modifiers": {
@@ -902,22 +902,13 @@
                             "Modifier": "CanNotTarget"
                         },
                         "1": {
-                            "TargetClass": "Air",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyShortValue",
-                            "Amount": 50
+                            "Remove": true
                         },
                         "2": {
-                            "TargetClass": "Air",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyMediumValue",
-                            "Amount": 45
+                            "Remove": true
                         },
                         "3": {
-                            "TargetClass": "Air",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyLongValue",
-                            "Amount": 35
+                            "Remove": true
                         },
                         "4": { "Remove": true },
                         "5": { "Remove": true },
@@ -952,7 +943,7 @@
                         "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "MinDistance": 350, // don't gib urself
+                        "MinDistance": 350, // don't gib urself // still gib yourself
                         "Distance": 700
                     },
                     "ExcludeFromHeightAdvantage": true
@@ -960,7 +951,6 @@
                 "C_Carrier_Weapon_CruiseMissile_MP": {
                     "TracerSpeed": 50, // did not work :( // its not a tracer you dumbass
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
-                    //"C_HAC_Smoke_ProjectileAssetContainer",
                     "BaseWreckDamagePerRound": 100,
                     "StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
@@ -971,14 +961,6 @@
                     "AreaOfEffectRadius": 1000,
                     "DamagePacketsPerShot": 10,
                     "AreaOfEffectFalloffType": "Linear",
-                    /*"ActiveStatusEffectsIndex": 1,
-                    "StatusEffectsTargetAlignment": "Foe",
-                    "StatusEffectsExcludeTargetType": 0,
-                    "StatusEffectsSets": {
-                        "0": {
-                            "StatusEffects": [ "Buffset_C_EMP_Rachel_StatusEffect" ]
-                        }
-                    },*/
                     "ExcludeFromHeightAdvantage": true,
                     "Modifiers": {
                         "0": {
@@ -991,7 +973,7 @@
                             "TargetClass": "Carrier",
                             "ClassOperator": "Or",
                             "Modifier": "DamagePercent",
-                            "Amount": 75
+                            "Amount": 50
                         }
                     },
                     "RangeAttributesLong": {
@@ -2196,6 +2178,69 @@
                 }
             },
             "WeaponAttributes": {
+                /*"C_Carrier_Weapon_Repair_MP": {
+                    "ExcludeFromHeightAdvantage": true,
+                    "LineOfSightRequired": false,
+                    "TracerSpeed": 100000, // why do repair beams take time to reach their target... wtf???
+                    "RangeAttributesShort": {
+                        "Distance": 800
+                    },
+                    "RateOfFire": 15,
+                    "ExcludeFromAutoTargetAcquisition": false,//those 2 have to be activated like with coal carrier
+                    "ExcludeFromAutoFire": false,
+                    "Modifiers": {
+                        "0": {
+                            "Remove": true
+                        }
+                    }
+                },
+                "C_Carrier_Weapon_G2All_PenetrationShots_MP": { // Are these even used at all?? //yes
+                    "LineOfSightRequired": false,
+                    "TracerLength": 5,
+                    "ReloadTimeMS": 2350,
+                    "CooldownTimeMS": 1550,
+                    "BurstPeriodMinTimeMS": 200,
+                    "BurstPeriodMaxTimeMS": 300,
+                    "BaseDamagePerRound": 30,
+                    "ExcludeFromHeightAdvantage": true,
+                    "RateOfFire": 15,
+                    "TargetStyle": "Flak",
+                    "RangeAttributesShort": {
+                        "Remove": true
+                    },
+                    "RangeAttributesMedium": {
+                        "Distance": 600,
+                        "Accuracy": 20
+                    },
+                    "RangeAttributesLong": {
+                        "Accuracy": 10,
+                        "Distance": 800
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Ground",
+                            "Modifier": "CanNotTarget"
+                        },
+                        "1": {
+                            "Remove": true
+                        },
+                        "2": {
+                            "Remove": true
+                        },
+                        "3": {
+                            "Remove": true
+                        },
+                        "4": { "Remove": true },
+                        "5": { "Remove": true },
+                        "6": { "Remove": true },
+                        "7": { "Remove": true },
+                        "8": { "Remove": true },
+                        "9": { "Remove": true },
+                        "10": { "Remove": true },
+                        "11": { "Remove": true },
+                        "12": { "Remove": true }
+                    }
+                },*/
                 "C_Sob_Carrier_Weapon_PopCap_MP": {
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
@@ -2561,7 +2606,51 @@
                                                 }
                                             }
                                         }
-                                    }
+                                    }/*,
+                                    "C_Sob_Weapons_1_StatusEffect_ENABLE_WEAPONS": { //you will have to use this to activate 2ndry pd
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR"
+                                            },
+                                            "2": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FL"
+                                            },
+                                            "3": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FR"
+                                            },
+                                            "4": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FR_APBULLETS"
+                                            },
+                                            "5": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FL_APBULLETS"
+                                            },
+                                            "6": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR_APBULLETS"
+                                            },
+                                            "7": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
+                                            },
+                                            "8": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR5_HEAL"
+                                            },
+                                            "9": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL5_HEAL"
+                                            }
+                                        }
+                                    }*/
                                 }
                             },
 
@@ -3925,14 +4014,14 @@
                     "CooldownTimeMS": 1550,
                     "RangeAttributesShort": {
                         "Distance": 400,
-                        "Accuracy": 50
+                        "Accuracy": 20
                     },
                     "RangeAttributesMedium": {
                         "Distance": 600,
-                        "Accuracy": 35
+                        "Accuracy": 20
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 20,
+                        "Accuracy": 10,
                         "Distance": 800
                     },
                     "Modifiers": {
@@ -3941,22 +4030,13 @@
                             "Modifier": "CanNotTarget"
                         },
                         "1": {
-                            "TargetClass": "Air",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyShortValue",
-                            "Amount": 50
+                            "Remove": true
                         },
                         "2": {
-                            "TargetClass": "Air",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyMediumValue",
-                            "Amount": 45
+                            "Remove": true
                         },
                         "3": {
-                            "TargetClass": "Air",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyLongValue",
-                            "Amount": 35
+                            "Remove": true
                         },
                         "4": { "Remove": true },
                         "5": { "Remove": true },
@@ -5360,14 +5440,14 @@
                     "BurstPeriodMaxTimeMS": 300,
                     "RangeAttributesShort": {
                         "Distance": 350,
-                        "Accuracy": 50
+                        "Accuracy": 20
                     },
                     "RangeAttributesMedium": {
                         "Distance": 650,
-                        "Accuracy": 35
+                        "Accuracy": 20
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 20,
+                        "Accuracy": 10,
                         "Distance": 950
                     },
                     "Turret": {
@@ -5381,22 +5461,13 @@
                             "Modifier": "CanNotTarget"
                         },
                         "1": {
-                            "TargetClass": "Air",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyShortValue",
-                            "Amount": 50
+                            "Remove": true
                         },
                         "2": {
-                            "TargetClass": "Air",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyMediumValue",
-                            "Amount": 45
+                            "Remove": true
                         },
                         "3": {
-                            "TargetClass": "Air",
-                            "ClassOperator": "Or",
-                            "Modifier": "AccuracyLongValue",
-                            "Amount": 35
+                            "Remove": true
                         },
                         "4": { "Remove": true },
                         "5": { "Remove": true },
@@ -5485,7 +5556,7 @@
                             // Ground, Hover, Large, Support - BR class
                             // HOW DOES ANY OF THIS WORK!?!?!?!?!?!?
                             "0": {
-                                "LocalizedShortDescriptionStringID": "All units are slowed by 25% and have -50% sensor radius (except Baserunners).",
+                                "LocalizedShortDescriptionStringID": "All units are slowed by 25% (except Baserunners) and have -50% sensor radius.",
                                 "StatusEffectsToApply": {
                                     "K_MovementShuntCarrier_0_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
@@ -5546,7 +5617,7 @@
                                 }
                             },
                             "1": {
-                                "LocalizedShortDescriptionStringID": "All units are slowed by 13% and have -25% sensor radius (except Baserunners).",
+                                "LocalizedShortDescriptionStringID": "All units are slowed by 13% (except Baserunners) and have -25% sensor radius.",
                                 "StatusEffectsToApply": {
                                     "K_MovementShuntCarrier_1_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
