@@ -8,9 +8,9 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.07.00",
-        "LastUpdate": "2023-03-22",
-        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joket.json"
+        "Version": "1.08.00",
+        "LastUpdate": "2023-03-23",
+        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
     },
     /*"Global": {
         "UnitAttributes": {
@@ -2071,6 +2071,321 @@
             }
         },
 
+        "C_Mine_StatusEffect": { //bonk 1
+            "StatusEffectAttributes": {
+                "Duration": 3,
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": "Ground",
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceShort",
+                                "Mode": "AddPercent",
+                                "Value": -10
+                            },
+                            "1": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceMedium",
+                                "Mode": "AddPercent",
+                                "Value": -10
+                            },
+                            "2": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceLong",
+                                "Mode": "AddPercent",
+                                "Value": -10
+                            },
+                            "3": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "AddPercent",
+                                "Value": 10
+                            },
+                            "4": {
+                                "Attribute": "UnitDynamics_AccelerationTime",
+                                "Mode": "AddPercent",
+                                "Value": -10
+                            },
+                            "5": {
+                                "Attribute": "UnitDynamics_BrakingTime",
+                                "Mode": "AddPercent",
+                                "Value": -10
+                            },
+                            "6": {
+                                "Attribute": "UnitCombatBehaviour_MaxDesiredCombatRange",
+                                "Mode": "AddPercent",
+                                "Value": -10
+                            }
+                        }
+                    }
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "Remove": true
+                    },
+                    "2": {
+                        "Remove": true
+                    }
+                }
+            }
+        },
+        "Hack_Immobilize_StatusEffect": { //bonk 2
+            "StatusEffectAttributes": {
+                "Duration": 3,
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": "Ground",
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceShort",
+                                "Mode": "AddPercent",
+                                "Value": -20
+                            },
+                            "1": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceMedium",
+                                "Mode": "AddPercent",
+                                "Value": -20
+                            },
+                            "2": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceLong",
+                                "Mode": "AddPercent",
+                                "Value": -20
+                            },
+                            "3": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "AddPercent",
+                                "Value": 20
+                            },
+                            "4": {
+                                "Attribute": "UnitDynamics_AccelerationTime",
+                                "Mode": "AddPercent",
+                                "Value": -20
+                            },
+                            "5": {
+                                "Attribute": "UnitDynamics_BrakingTime",
+                                "Mode": "AddPercent",
+                                "Value": -20
+                            },
+                            "6": {
+                                "Attribute": "UnitCombatBehaviour_MaxDesiredCombatRange",
+                                "Mode": "AddPercent",
+                                "Value": -20
+                            }
+                        }
+                    }
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "Remove": true
+                    },
+                    "2": {
+                        "Remove": true
+                    }
+                }
+            }
+        },
+        "C_ControlTowerBuff_StatusEffect": { //bonk 3
+            "StatusEffectAttributes": {
+                "Duration": 3,
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": "Ground",
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceShort",
+                                "Mode": "AddPercent",
+                                "Value": -30
+                            },
+                            "1": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceMedium",
+                                "Mode": "AddPercent",
+                                "Value": -30
+                            },
+                            "2": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceLong",
+                                "Mode": "AddPercent",
+                                "Value": -30
+                            },
+                            "3": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "AddPercent",
+                                "Value": 30
+                            },
+                            "4": {
+                                "Attribute": "UnitDynamics_AccelerationTime",
+                                "Mode": "AddPercent",
+                                "Value": -30
+                            },
+                            "5": {
+                                "Attribute": "UnitDynamics_BrakingTime",
+                                "Mode": "AddPercent",
+                                "Value": -30
+                            },
+                            "6": {
+                                "Attribute": "UnitCombatBehaviour_MaxDesiredCombatRange",
+                                "Mode": "AddPercent",
+                                "Value": -30
+                            }
+                        }
+                    }
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "Remove": true
+                    },
+                    "2": {
+                        "Remove": true
+                    }
+                }
+            }
+        },
+        "DPSBoost_StatusEffect": { // bonk 4
+            "StatusEffectAttributes": {
+                "Duration": 3,
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": "Ground",
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceShort",
+                                "Mode": "AddPercent",
+                                "Value": -40
+                            },
+                            "1": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceMedium",
+                                "Mode": "AddPercent",
+                                "Value": -40
+                            },
+                            "2": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceLong",
+                                "Mode": "AddPercent",
+                                "Value": -40
+                            },
+                            "3": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "AddPercent",
+                                "Value": 40
+                            },
+                            "4": {
+                                "Attribute": "UnitDynamics_AccelerationTime",
+                                "Mode": "AddPercent",
+                                "Value": -40
+                            },
+                            "5": {
+                                "Attribute": "UnitDynamics_BrakingTime",
+                                "Mode": "AddPercent",
+                                "Value": -40
+                            },
+                            "6": {
+                                "Attribute": "UnitCombatBehaviour_MaxDesiredCombatRange",
+                                "Mode": "AddPercent",
+                                "Value": -40
+                            }
+                        }
+                    }
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "Remove": true
+                    },
+                    "2": {
+                        "Remove": true
+                    }
+                }
+            }
+        },
+        "ExplosiveShot_StatusEffect": { //bonk 5
+            "StatusEffectAttributes": {
+                "Duration": 3,
+                "BuffsToApplyToTarget": {
+                    "0": {
+                        "UnitClass": "Ground",
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceShort",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            },
+                            "1": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceMedium",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            },
+                            "2": {
+                                "Name": "",
+                                "Attribute": "WeaponRange_DistanceLong",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            },
+                            "3": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "AddPercent",
+                                "Value": 50
+                            },
+                            "4": {
+                                "Attribute": "UnitDynamics_AccelerationTime",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            },
+                            "5": {
+                                "Attribute": "UnitDynamics_BrakingTime",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            },
+                            "6": {
+                                "Attribute": "UnitCombatBehaviour_MaxDesiredCombatRange",
+                                "Mode": "AddPercent",
+                                "Value": -50
+                            }
+                        }
+                    }
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "Remove": true
+                    },
+                    "2": {
+                        "Remove": true
+                    }
+                }
+            }
+        },
         // SOBAN CARRIER
         "C_Sob_Carrier_MP": {
             "UnitAttributes": {
@@ -2178,16 +2493,13 @@
                 }
             },
             "WeaponAttributes": {
-                /*"C_Carrier_Weapon_Repair_MP": {
+                "C_Carrier_Weapon_Repair_MP": {
                     "ExcludeFromHeightAdvantage": true,
                     "LineOfSightRequired": false,
                     "TracerSpeed": 100000, // why do repair beams take time to reach their target... wtf???
                     "RangeAttributesShort": {
-                        "Distance": 800
+                        "Distance": 1000
                     },
-                    "RateOfFire": 15,
-                    "ExcludeFromAutoTargetAcquisition": false,//those 2 have to be activated like with coal carrier
-                    "ExcludeFromAutoFire": false,
                     "Modifiers": {
                         "0": {
                             "Remove": true
@@ -2197,28 +2509,38 @@
                 "C_Carrier_Weapon_G2All_PenetrationShots_MP": { // Are these even used at all?? //yes
                     "LineOfSightRequired": false,
                     "TracerLength": 5,
-                    "ReloadTimeMS": 2350,
-                    "CooldownTimeMS": 1550,
-                    "BurstPeriodMinTimeMS": 200,
-                    "BurstPeriodMaxTimeMS": 300,
-                    "BaseDamagePerRound": 30,
+                    "ReloadTimeMS": 1000,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "StatusEffectsExcludeTargetType": "Carrier, Air",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "C_Mine_StatusEffect" ] },
+                        "1": { "StatusEffects": [ "Hack_Immobilize_StatusEffect" ] },
+                        "2": { "StatusEffects": [ "C_ControlTowerBuff_StatusEffect" ] },
+                        "3": { "StatusEffects": [ "DPSBoost_StatusEffect" ] },
+                        "4": { "StatusEffects": [ "ExplosiveShot_StatusEffect" ] }
+                    },
+                    "BurstPeriodMaxTimeMS": 1000,
+                    "NumberOfBursts": 1,
+                    "ProjectileEntityTypeToSpawn": "Rachel_HACK_ProjectileAssetContainer",
+                    "BaseDamagePerRound": 50,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 15,
+                    "RateOfFire": 1,
                     "TargetStyle": "Flak",
                     "RangeAttributesShort": {
                         "Remove": true
                     },
                     "RangeAttributesMedium": {
-                        "Distance": 600,
-                        "Accuracy": 20
+                        "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 10,
-                        "Distance": 800
+                        "Accuracy": 100,
+                        "Distance": 900
                     },
                     "Modifiers": {
                         "0": {
-                            "TargetClass": "Ground",
+                            "TargetClass": "Air",
                             "Modifier": "CanNotTarget"
                         },
                         "1": {
@@ -2240,7 +2562,7 @@
                         "11": { "Remove": true },
                         "12": { "Remove": true }
                     }
-                },*/
+                },
                 "C_Sob_Carrier_Weapon_PopCap_MP": {
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
@@ -2339,15 +2661,20 @@
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "LineOfSightRequired": false,
                     "DamagePacketsPerShot": 1,
-                    "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
-                    "BaseDamagePerRound": 1250,
+                    "ProjectileEntityTypeToSpawn": "S_Carrier_Microwave_ProjectileAssetContainer_MP",
+                    "BaseDamagePerRound": 50,
                     "AreaOfEffectRadius": 500,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "BurstPeriodMinTimeMS": 50,
                     "BurstPeriodMaxTimeMS": 50,
                     "NumberOfBursts": 1,
                     "WindDownTimeMS": 0,
-                    "ReloadTimeMS": 10000,
+                    "ReloadTimeMS": 20000,
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "EntityTypeToSpawn": "C_Sob_NukeEmitter_MP"
+                        }
+                    },
                     "CooldownTimeMS": 0,
                     "RangeAttributesShort": {
                         "Remove": true
@@ -2363,13 +2690,28 @@
                 },
                 "C_Sob_Carrier_Weapon_Nuke_MP": {
                     "BaseDamagePerRound": 50,
+                    "FriendlyFireDamageScalar": 0,
+                    "BurstPeriodMinTimeMS": 5000,
+                    "BurstPeriodMaxTimeMS": 5000,
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "EntityTypeToSpawn": "G_Interceptor"
+                        },
+                        "1": {
+                            "EntityTypeToSpawn": "G_Interceptor"
+                        },
+                        "2": {
+                            "EntityTypeToSpawn": "G_Interceptor"
+                        }
+                    },
                     "AreaOfEffectRadius": 500,
-                    "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "BaseWreckDamagePerRound": 100,
                     "ExcludeFromHeightAdvantage": true,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesLong": {
+                        "Accuracy": 100,
                         "Distance": 4500
                     }
                 }
@@ -2394,7 +2736,7 @@
                                 "LocalizedShortDescriptionStringID": "Common module deploy and contact range."
                             },
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Uncommon deploy and contact range. Weapons enabled",
+                                "LocalizedShortDescriptionStringID": "Uncommon deploy and contact range. Weapons enabled. Carrier repair systems enabled.",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_1_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
@@ -2404,13 +2746,51 @@
                                                     "1": { "Value": 600 }, // Contact Radius
                                                     "5": { "Value": 3000 } // Reload time
                                                 }
+                                            },
+                                            "1": {
+                                                "BuffSet": {
+                                                    "1": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition"
+                                                    },
+                                                    "2": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire"
+                                                    },
+                                                    "3": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition"
+                                                    },
+                                                    "4": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR5_HEAL"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL5_HEAL"
                                             }
                                         }
                                     }
                                 }
                             },
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Rare deploy, contact, weapon range and damage buff.",
+                                "LocalizedShortDescriptionStringID": "Rare deploy, contact, weapon range and damage buff. Rare carrier repair systems buff.",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_2_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
@@ -2432,14 +2812,62 @@
                                                 }
                                             },
                                             "1": {
-                                                "BuffSet": { "0": { "Value": 800 } } // Deployment range
+                                                "BuffSet": {
+                                                    "0": { "Value": 800 },
+                                                    "1": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition"
+                                                    },
+                                                    "2": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire"
+                                                    },
+                                                    "3": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition"
+                                                    },
+                                                    "4": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire"
+                                                    },
+                                                    "5": {
+                                                        "Mode": "AddPercent",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": 50,
+                                                        "Attribute": "UnitWeapon_RateOfFire"
+                                                    },
+                                                    "6": {
+                                                        "Mode": "AddPercent",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": 50,
+                                                        "Attribute": "UnitWeapon_RateOfFire"
+                                                    }
+                                                } // Deployment range
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR5_HEAL"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL5_HEAL"
                                             }
                                         }
                                     }
                                 }
                             },
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Very Rare deploy, contact, weapon range and damage buff.",
+                                "LocalizedShortDescriptionStringID": "Very Rare deploy, contact, weapon range and damage buff. Very Rare carrier repair systems buff.",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_3_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
@@ -2461,14 +2889,62 @@
                                                 }
                                             },
                                             "1": {
-                                                "BuffSet": { "0": { "Value": 1000 } }
+                                                "BuffSet": {
+                                                    "0": { "Value": 1000 },
+                                                    "1": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition"
+                                                    },
+                                                    "2": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire"
+                                                    },
+                                                    "3": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition"
+                                                    },
+                                                    "4": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire"
+                                                    },
+                                                    "5": {
+                                                        "Mode": "AddPercent",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": 100,
+                                                        "Attribute": "UnitWeapon_RateOfFire"
+                                                    },
+                                                    "6": {
+                                                        "Mode": "AddPercent",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": 100,
+                                                        "Attribute": "UnitWeapon_RateOfFire"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR5_HEAL"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL5_HEAL"
                                             }
                                         }
                                     }
                                 }
                             },
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Legendary deploy, contact, weapon range and damage buff.",
+                                "LocalizedShortDescriptionStringID": "Legendary deploy, contact, weapon range and damage buff. Legendary carrier repair systems buff.",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_4_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
@@ -2486,14 +2962,62 @@
                                                 }
                                             },
                                             "1": {
-                                                "BuffSet": { "0": { "Value": 1100 } }
+                                                "BuffSet": {
+                                                    "0": { "Value": 1100 },
+                                                    "1": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition"
+                                                    },
+                                                    "2": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire"
+                                                    },
+                                                    "3": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition"
+                                                    },
+                                                    "4": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire"
+                                                    },
+                                                    "5": {
+                                                        "Mode": "AddPercent",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": 150,
+                                                        "Attribute": "UnitWeapon_RateOfFire"
+                                                    },
+                                                    "6": {
+                                                        "Mode": "AddPercent",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": 150,
+                                                        "Attribute": "UnitWeapon_RateOfFire"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR5_HEAL"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL5_HEAL"
                                             }
                                         }
                                     }
                                 }
                             },
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Artifact tier deploy, contact, weapon range and damage buff.",
+                                "LocalizedShortDescriptionStringID": "Artifact tier deploy, contact, weapon range and damage buff. Artifact tier repair systems buff.",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_5_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
@@ -2511,7 +3035,55 @@
                                                 }
                                             },
                                             "1": {
-                                                "BuffSet": { "0": { "Value": 10000 } }
+                                                "BuffSet": {
+                                                    "0": { "Value": 10000 },
+                                                    "1": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition"
+                                                    },
+                                                    "2": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire"
+                                                    },
+                                                    "3": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition"
+                                                    },
+                                                    "4": {
+                                                        "Mode": "Add",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": -1,
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire"
+                                                    },
+                                                    "5": {
+                                                        "Mode": "AddPercent",
+                                                        "Name": "TURRET_BL5_HEAL",
+                                                        "Value": 200,
+                                                        "Attribute": "UnitWeapon_RateOfFire"
+                                                    },
+                                                    "6": {
+                                                        "Mode": "AddPercent",
+                                                        "Name": "TURRET_BR5_HEAL",
+                                                        "Value": 200,
+                                                        "Attribute": "UnitWeapon_RateOfFire"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR5_HEAL"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL5_HEAL"
                                             }
                                         }
                                     }
@@ -2606,38 +3178,22 @@
                                                 }
                                             }
                                         }
-                                    }/*,
+                                    } /*,
                                     "C_Sob_Weapons_1_StatusEffect_ENABLE_WEAPONS": { //you will have to use this to activate 2ndry pd
-                                        "Modifiers": {
+                                        "Modifiers": {                                            
                                             "0": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "TURRET_BL"
-                                            },
-                                            "1": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "TURRET_BR"
-                                            },
-                                            "2": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "TURRET_FL"
-                                            },
-                                            "3": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "TURRET_FR"
-                                            },
-                                            "4": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_FR_APBULLETS"
                                             },
-                                            "5": {
+                                            "1": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_FL_APBULLETS"
                                             },
-                                            "6": {
+                                            "2": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_BR_APBULLETS"
                                             },
-                                            "7": {
+                                            "3": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
                                             },
@@ -3044,7 +3600,7 @@
                     },
 
                     "3": { // Range Systems
-                        "View": { "LocalizedLongDescriptionStringID": "Increase power to maximise accuracy of build-in railguns via removing alchohol from gunners posts" },
+                        "View": { "LocalizedLongDescriptionStringID": "Increase power to maximise accuracy of build-in railguns via rerouting alchohol from gunners posts into alchohol throwers." },
                         "PowerLevels": {
 
                             "0": {
@@ -3061,7 +3617,7 @@
                             // ========================================= //
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 60%, Missile Range: 900m",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 60%, Missile and Alchohol throwers Range: 900m. Alchohol throwers Debuff - 10% Weapons range and +10% speed.",
                                 "StatusEffectsToApply": {
                                     "Range_1_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -3074,9 +3630,9 @@
                                                         "Value": 60
                                                     },
                                                     "1": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 900
                                                     },
                                                     "2": {
                                                         "Attribute": 33554436,
@@ -3084,9 +3640,7 @@
                                                         "Value": 50
                                                     },
                                                     "3": {
-                                                        "Attribute": 33554436,
-                                                        "Mode": "Set",
-                                                        "Value": 50
+                                                        "Remove": true
                                                     },
                                                     "4": {
                                                         "Attribute": 33554435,
@@ -3094,9 +3648,7 @@
                                                         "Value": 33
                                                     },
                                                     "5": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 33
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_FR
@@ -3106,9 +3658,9 @@
                                                         "Value": 60
                                                     },
                                                     "7": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 900
                                                     },
                                                     "8": {
                                                         "Attribute": 33554436,
@@ -3116,9 +3668,7 @@
                                                         "Value": 50
                                                     },
                                                     "9": {
-                                                        "Attribute": 33554436,
-                                                        "Mode": "Set",
-                                                        "Value": 50
+                                                        "Remove": true
                                                     },
                                                     "10": {
                                                         "Attribute": 33554435,
@@ -3126,9 +3676,7 @@
                                                         "Value": 33
                                                     },
                                                     "11": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 33
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_BR
@@ -3138,9 +3686,9 @@
                                                         "Value": 60
                                                     },
                                                     "13": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 900
                                                     },
                                                     "14": {
                                                         "Attribute": 33554436,
@@ -3148,9 +3696,7 @@
                                                         "Value": 50
                                                     },
                                                     "15": {
-                                                        "Attribute": 33554436,
-                                                        "Mode": "Set",
-                                                        "Value": 50
+                                                        "Remove": true
                                                     },
                                                     "16": {
                                                         "Attribute": 33554435,
@@ -3158,9 +3704,7 @@
                                                         "Value": 33
                                                     },
                                                     "17": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 33
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_BL
@@ -3170,9 +3714,9 @@
                                                         "Value": 60
                                                     },
                                                     "19": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 60
+                                                        "Value": 900
                                                     },
                                                     "20": {
                                                         "Attribute": 33554436,
@@ -3180,9 +3724,7 @@
                                                         "Value": 50
                                                     },
                                                     "21": {
-                                                        "Attribute": 33554436,
-                                                        "Mode": "Set",
-                                                        "Value": 50
+                                                        "Remove": true
                                                     },
                                                     "22": {
                                                         "Attribute": 33554435,
@@ -3190,9 +3732,7 @@
                                                         "Value": 33
                                                     },
                                                     "23": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 33
+                                                        "Remove": true
                                                     },
 
                                                     // range of missile, probably... who knows tf this does??
@@ -3214,13 +3754,31 @@
 
                                                 }
                                             }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FR_APBULLETS"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FL_APBULLETS"
+                                            },
+                                            "2": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR_APBULLETS"
+                                            },
+                                            "3": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
+                                            }
                                         }
                                     }
                                 }
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 70%, Missile Range: 1100m",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 70%, Missile and Alchohol throwers Range: 1100m. Alchohol throwers Debuff -20% Weapons range and +20% speed.",
                                 "StatusEffectsToApply": {
                                     "Range_2_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -3233,9 +3791,9 @@
                                                         "Value": 70
                                                     },
                                                     "1": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 70
+                                                        "Value": 1100
                                                     },
                                                     "2": {
                                                         "Attribute": 33554436,
@@ -3243,9 +3801,9 @@
                                                         "Value": 63
                                                     },
                                                     "3": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 63
+                                                        "Value": 1
                                                     },
                                                     "4": {
                                                         "Attribute": 33554435,
@@ -3253,9 +3811,7 @@
                                                         "Value": 50
                                                     },
                                                     "5": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 50
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_BR
@@ -3265,9 +3821,9 @@
                                                         "Value": 70
                                                     },
                                                     "7": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 70
+                                                        "Value": 1100
                                                     },
                                                     "8": {
                                                         "Attribute": 33554436,
@@ -3275,9 +3831,9 @@
                                                         "Value": 63
                                                     },
                                                     "9": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 63
+                                                        "Value": 1
                                                     },
                                                     "10": {
                                                         "Attribute": 33554435,
@@ -3285,9 +3841,7 @@
                                                         "Value": 50
                                                     },
                                                     "11": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 50
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_FL
@@ -3297,9 +3851,9 @@
                                                         "Value": 70
                                                     },
                                                     "13": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 70
+                                                        "Value": 1100
                                                     },
                                                     "14": {
                                                         "Attribute": 33554436,
@@ -3307,9 +3861,9 @@
                                                         "Value": 63
                                                     },
                                                     "15": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 63
+                                                        "Value": 1
                                                     },
                                                     "16": {
                                                         "Attribute": 33554435,
@@ -3317,9 +3871,7 @@
                                                         "Value": 50
                                                     },
                                                     "17": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 50
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_FR
@@ -3329,9 +3881,9 @@
                                                         "Value": 70
                                                     },
                                                     "19": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 70
+                                                        "Value": 1100
                                                     },
                                                     "20": {
                                                         "Attribute": 33554436,
@@ -3339,9 +3891,9 @@
                                                         "Value": 63
                                                     },
                                                     "21": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 63
+                                                        "Value": 1
                                                     },
                                                     "22": {
                                                         "Attribute": 33554435,
@@ -3349,9 +3901,7 @@
                                                         "Value": 50
                                                     },
                                                     "23": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 50
+                                                        "Remove": true
                                                     },
 
                                                     "24": {
@@ -3370,13 +3920,31 @@
                                                     }
                                                 }
                                             }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FR_APBULLETS"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FL_APBULLETS"
+                                            },
+                                            "2": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR_APBULLETS"
+                                            },
+                                            "3": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
+                                            }
                                         }
                                     }
                                 }
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 80%, Missile Range: 1400m",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 80%, Missile and Alchohol throwers Range: 1400m. Alchohol throwers Debuff -30% Weapons range and +30% speed.",
                                 "StatusEffectsToApply": {
                                     "Range_3_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -3389,9 +3957,9 @@
                                                         "Value": 80
                                                     },
                                                     "1": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 80
+                                                        "Value": 1400
                                                     },
                                                     "2": {
                                                         "Attribute": 33554436,
@@ -3399,9 +3967,9 @@
                                                         "Value": 75
                                                     },
                                                     "3": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 2
                                                     },
                                                     "4": {
                                                         "Attribute": 33554435,
@@ -3409,9 +3977,7 @@
                                                         "Value": 63
                                                     },
                                                     "5": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 63
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_BR
@@ -3421,9 +3987,9 @@
                                                         "Value": 80
                                                     },
                                                     "7": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 80
+                                                        "Value": 1400
                                                     },
                                                     "8": {
                                                         "Attribute": 33554436,
@@ -3431,9 +3997,9 @@
                                                         "Value": 75
                                                     },
                                                     "9": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 2
                                                     },
                                                     "10": {
                                                         "Attribute": 33554435,
@@ -3441,9 +4007,7 @@
                                                         "Value": 63
                                                     },
                                                     "11": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 63
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_FL
@@ -3453,9 +4017,9 @@
                                                         "Value": 80
                                                     },
                                                     "13": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 80
+                                                        "Value": 1400
                                                     },
                                                     "14": {
                                                         "Attribute": 33554436,
@@ -3463,9 +4027,9 @@
                                                         "Value": 75
                                                     },
                                                     "15": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 2
                                                     },
                                                     "16": {
                                                         "Attribute": 33554435,
@@ -3473,9 +4037,7 @@
                                                         "Value": 63
                                                     },
                                                     "17": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 63
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_FR
@@ -3485,9 +4047,9 @@
                                                         "Value": 80
                                                     },
                                                     "19": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 80
+                                                        "Value": 1400
                                                     },
                                                     "20": {
                                                         "Attribute": 33554436,
@@ -3495,9 +4057,9 @@
                                                         "Value": 75
                                                     },
                                                     "21": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 75
+                                                        "Value": 2
                                                     },
                                                     "22": {
                                                         "Attribute": 33554435,
@@ -3505,9 +4067,7 @@
                                                         "Value": 63
                                                     },
                                                     "23": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 63
+                                                        "Remove": true
                                                     },
 
                                                     "24": {
@@ -3526,13 +4086,31 @@
                                                     }
                                                 }
                                             }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FR_APBULLETS"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FL_APBULLETS"
+                                            },
+                                            "2": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR_APBULLETS"
+                                            },
+                                            "3": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
+                                            }
                                         }
                                     }
                                 }
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 90%, Missile Range: 1800m",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 90%, Missile and Alchohol throwers Range: 1800m. Alchohol throwers Debuff -40% Weapons range and +40% speed.",
                                 "StatusEffectsToApply": {
                                     "Range_4_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -3545,9 +4123,9 @@
                                                         "Value": 90
                                                     },
                                                     "1": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 90
+                                                        "Value": 1800
                                                     },
                                                     "2": {
                                                         "Attribute": 33554436,
@@ -3555,9 +4133,9 @@
                                                         "Value": 80
                                                     },
                                                     "3": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 80
+                                                        "Value": 3
                                                     },
                                                     "4": {
                                                         "Attribute": 33554435,
@@ -3565,9 +4143,7 @@
                                                         "Value": 69
                                                     },
                                                     "5": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 69
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_BR
@@ -3577,9 +4153,9 @@
                                                         "Value": 90
                                                     },
                                                     "7": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 90
+                                                        "Value": 1800
                                                     },
                                                     "8": {
                                                         "Attribute": 33554436,
@@ -3587,9 +4163,9 @@
                                                         "Value": 80
                                                     },
                                                     "9": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 80
+                                                        "Value": 3
                                                     },
                                                     "10": {
                                                         "Attribute": 33554435,
@@ -3597,9 +4173,7 @@
                                                         "Value": 69
                                                     },
                                                     "11": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 69
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_FL
@@ -3609,9 +4183,9 @@
                                                         "Value": 90
                                                     },
                                                     "13": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 90
+                                                        "Value": 1800
                                                     },
                                                     "14": {
                                                         "Attribute": 33554436,
@@ -3619,9 +4193,9 @@
                                                         "Value": 80
                                                     },
                                                     "15": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 80
+                                                        "Value": 3
                                                     },
                                                     "16": {
                                                         "Attribute": 33554435,
@@ -3629,9 +4203,7 @@
                                                         "Value": 69
                                                     },
                                                     "17": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 69
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_FR
@@ -3641,9 +4213,9 @@
                                                         "Value": 90
                                                     },
                                                     "19": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 90
+                                                        "Value": 1800
                                                     },
                                                     "20": {
                                                         "Attribute": 33554436,
@@ -3651,9 +4223,9 @@
                                                         "Value": 80
                                                     },
                                                     "21": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 80
+                                                        "Value": 3
                                                     },
                                                     "22": {
                                                         "Attribute": 33554435,
@@ -3661,9 +4233,7 @@
                                                         "Value": 69
                                                     },
                                                     "23": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 69
+                                                        "Remove": true
                                                     },
 
                                                     "24": {
@@ -3682,13 +4252,31 @@
                                                     }
                                                 }
                                             }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FR_APBULLETS"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FL_APBULLETS"
+                                            },
+                                            "2": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR_APBULLETS"
+                                            },
+                                            "3": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
+                                            }
                                         }
                                     }
                                 }
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Sniper is a good job mate, Missile Range: 2300m",
+                                "LocalizedShortDescriptionStringID": "Sniper is a good job mate, Missile and Alchohol throwers Range: 2300m. Alchohol throwers Debuff -50% Weapons range and +50% speed.",
                                 "StatusEffectsToApply": {
                                     "Range_5_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -3701,9 +4289,9 @@
                                                         "Value": 100
                                                     },
                                                     "1": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2300
                                                     },
                                                     "2": {
                                                         "Attribute": 33554436,
@@ -3711,9 +4299,9 @@
                                                         "Value": 88
                                                     },
                                                     "3": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 88
+                                                        "Value": 4
                                                     },
                                                     "4": {
                                                         "Attribute": 33554435,
@@ -3721,9 +4309,7 @@
                                                         "Value": 75
                                                     },
                                                     "5": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 75
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_BR
@@ -3733,9 +4319,9 @@
                                                         "Value": 100
                                                     },
                                                     "7": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2300
                                                     },
                                                     "8": {
                                                         "Attribute": 33554436,
@@ -3743,9 +4329,9 @@
                                                         "Value": 88
                                                     },
                                                     "9": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 88
+                                                        "Value": 4
                                                     },
                                                     "10": {
                                                         "Attribute": 33554435,
@@ -3753,9 +4339,7 @@
                                                         "Value": 75
                                                     },
                                                     "11": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 75
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_FL
@@ -3765,9 +4349,9 @@
                                                         "Value": 100
                                                     },
                                                     "13": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2300
                                                     },
                                                     "14": {
                                                         "Attribute": 33554436,
@@ -3775,9 +4359,9 @@
                                                         "Value": 88
                                                     },
                                                     "15": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 88
+                                                        "Value": 4
                                                     },
                                                     "16": {
                                                         "Attribute": 33554435,
@@ -3785,9 +4369,7 @@
                                                         "Value": 75
                                                     },
                                                     "17": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 75
+                                                        "Remove": true
                                                     },
 
                                                     // TURRET_FR
@@ -3797,9 +4379,9 @@
                                                         "Value": 100
                                                     },
                                                     "19": {
-                                                        "Attribute": 33554437,
+                                                        "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
-                                                        "Value": 100
+                                                        "Value": 2300
                                                     },
                                                     "20": {
                                                         "Attribute": 33554436,
@@ -3807,9 +4389,9 @@
                                                         "Value": 88
                                                     },
                                                     "21": {
-                                                        "Attribute": 33554436,
+                                                        "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
                                                         "Mode": "Set",
-                                                        "Value": 88
+                                                        "Value": 4
                                                     },
                                                     "22": {
                                                         "Attribute": 33554435,
@@ -3817,9 +4399,7 @@
                                                         "Value": 75
                                                     },
                                                     "23": {
-                                                        "Attribute": 33554435,
-                                                        "Mode": "Set",
-                                                        "Value": 75
+                                                        "Remove": true
                                                     },
 
                                                     "24": {
@@ -3837,6 +4417,24 @@
                                                         "Remove": true
                                                     }
                                                 }
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FR_APBULLETS"
+                                            },
+                                            "1": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_FL_APBULLETS"
+                                            },
+                                            "2": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BR_APBULLETS"
+                                            },
+                                            "3": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
                                             }
                                         }
                                     }
@@ -6670,7 +7268,7 @@
         // SOBAN NUKE
         "C_Sob_NukeEmitter_MP": {
             "UnitAttributes": {
-                "MaxHealth": 4000000, // takes friendly fire; use to determine duration
+                "MaxHealth": 3000000, // takes friendly fire; use to determine duration
                 "PopCapCost": 0,
                 "ContactRadius": 0,
                 "SensorRadius": 0
@@ -6681,30 +7279,19 @@
                     "BurstPeriodMaxTimeMS": 1000,
                     "CooldownTimeMS": 0,
                     "ActiveStatusEffectsIndex": 1,
-                    "NumberOfBursts": 5,
-                    "BaseDamagePerRound": 1,
-                    "ReloadTimeMS": 5000,
+                    "NumberOfBursts": 1,
+                    "BaseDamagePerRound": 400,
+                    "ReloadTimeMS": 0,
                     "DamagePacketsPerShot": 0,
                     "StatusEffectsExcludeTargetType": 0,
-                    "FriendlyFireDamageScalar": 0,
-                    "EntityTypesToSpawnOnImpact": {
-                        "0": {
-                            "EntityTypeToSpawn": "G_Interceptor"
-                        },
-                        "1": {
-                            "EntityTypeToSpawn": "G_Interceptor"
-                        },
-                        "2": {
-                            "EntityTypeToSpawn": "G_Interceptor"
-                        }
-                    },
+                    "FriendlyFireDamageScalar": 1,
                     "StatusEffectsSets": {
                         "0": {
                             "StatusEffects": [ "EmitterDeath_StatusEffect" ] // i need that no touchy!
 
                         }
                     },
-                    "WeaponOwnerFriendlyFireDamageScalar": 1000000, // time = health / 1e6
+                    "WeaponOwnerFriendlyFireDamageScalar": 1000, // time = health / 1e6
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Strikecraft, Small, Harvester",
@@ -6727,7 +7314,7 @@
                     "RateOfFire": 1,
                     "NumberOfBursts": 1,
                     "ActiveStatusEffectsIndex": 1,
-                    "ReloadTimeMS": 1000,
+                    "ReloadTimeMS": 0,
                     "CooldownTimeMS": 0,
                     "AreaOfEffectRadius": 42000,
                     "FriendlyFireDamageScalar": 1,
@@ -6891,6 +7478,7 @@
                     },
                     "ProjectileEntityTypeToSpawn": "G_Bomber_Bomb_ProjectileAssetContainer_MP",
                     "NumberOfBursts": 1,
+                    "FriendlyFireDamageScalar": 1,
                     "ExcludeFromAutoTargetAcquisition": false,
                     "ExcludeFromAutoFire": false,
                     "BaseDamagePerRound": 130,
@@ -6966,6 +7554,7 @@
                     },
                     "ProjectileEntityTypeToSpawn": "G_Bomber_Bomb_ProjectileAssetContainer_MP",
                     "NumberOfBursts": 1,
+                    "FriendlyFireDamageScalar": 1,
                     "ExcludeFromAutoTargetAcquisition": false,
                     "ExcludeFromAutoFire": false,
                     "BaseDamagePerRound": 130,
@@ -7184,7 +7773,7 @@
             "WeaponAttributes": {
                 "C_Sob_PopCapScanner_Weapon_G2G_MP": {
                     "TracerSpeed": 1500,
-                    "StatusEffectsExcludeTargetType": 0, // none
+                    "StatusEffectsExcludeTargetType": "Air", // none
                     "LineOfSightRequired": false,
                     "ExcludeFromHeightAdvantage": true,
                     "BaseDamagePerRound": 20,
@@ -7235,6 +7824,7 @@
                     "BaseDamagePerRound": 100,
                     "DamagePacketsPerShot": 1,
                     "NumberOfBursts": 6,
+                    "FriendlyFireDamageScalar": 1,
                     "WindUpTimeMS": 250,
                     "CooldownTimeMS": 1,
                     "BurstPeriodMinTimeMS": 264,
@@ -7274,6 +7864,7 @@
             },
             "WeaponAttributes": {
                 "N_Missle_Turret_Weapon_G2A_MP": {
+                    "FriendlyFireDamageScalar": 1,
                     "ExcludeFromHeightAdvantage": true,
                     "ProjectileEntityTypeToSpawn": "Carrier_ShuntWeapon_ProjectileAssetContainer_MP 1",
                     "Modifiers": {
@@ -7482,6 +8073,7 @@
                 "K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
                     "BaseDamagePerRound": 1000,
                     "DamagePacketsPerShot": 1,
+                    "FriendlyFireDamageScalar": 1,
                     "AreaOfEffectRadius": 500,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "WindUpTimeMS": 250,
@@ -7683,6 +8275,7 @@
         "N_DemoCharge_MP": {
             "WeaponAttributes": {
                 "N_DemoCharge_Weapon_G2G_MP": {
+                    "FriendlyFireDamageScalar": 1,
                     "ExcludeFromHeightAdvantage": true,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "AreaOfEffectRadius": 300,
@@ -8669,6 +9262,7 @@
                     "NumberOfBursts": 4,
                     "BurstPeriodMinTimeMS": 300,
                     "BurstPeriodMaxTimeMS": 300,
+                    "FriendlyFireDamageScalar": 1,
                     "CooldownTimeMS": 0,
                     "WindUpTimeMS": 50,
                     "RateOfFire": 0,
@@ -8872,6 +9466,7 @@
                     "BaseDamagePerRound": 70,
                     "NumberOfBursts": 4,
                     "BurstPeriodMinTimeMS": 300,
+                    "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMaxTimeMS": 300,
                     "CooldownTimeMS": 0,
                     "WindUpTimeMS": 50,
@@ -10069,6 +10664,7 @@
             "WeaponAttributes": {
                 "G_Catamaran_Weapon_G2G_MP": {
                     "BaseDamagePerRound": 20,
+                    "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMinTimeMS": 100,
                     "BurstPeriodMaxTimeMS": 100,
                     "RateOfFire": 1,
@@ -10195,6 +10791,7 @@
             "WeaponAttributes": {
                 "G_Catamaran_Weapon_G2G_MP": {
                     "BaseDamagePerRound": 20,
+                    "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMinTimeMS": 100,
                     "BurstPeriodMaxTimeMS": 100,
                     "RateOfFire": 1,
@@ -10381,6 +10978,7 @@
                     "AreaOfEffectFalloffType": "None",
                     "RateOfFire": 1,
                     "NumberOfBursts": 1,
+                    "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMinTimeMS": 950,
                     "BurstPeriodMaxTimeMS": 1050,
                     "RangeAttributesShort": {
@@ -10566,6 +11164,7 @@
                     "AreaOfEffectFalloffType": "None",
                     "RateOfFire": 1,
                     "NumberOfBursts": 1,
+                    "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMinTimeMS": 950,
                     "BurstPeriodMaxTimeMS": 1050,
                     "RangeAttributesShort": {
@@ -11459,6 +12058,7 @@
                 "C_Railgun_Weapon_G2G_MP": {
                     "NumberOfBursts": 1,
                     "TracerSpeed": 2500,
+                    "FriendlyFireDamageScalar": 1,
                     "RateOfFire": 100,
                     "BaseDamagePerRound": 25,
                     "DamagePacketsPerShot": 0,
@@ -12080,6 +12680,7 @@
                     "BaseDamagePerRound": 75,
                     "RateOfFire": 16,
                     "BurstPeriodMinTimeMS": 250,
+                    "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMaxTimeMS": 250,
                     "AreaOfEffectRadius": 200,
                     "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
@@ -12336,6 +12937,7 @@
                     "ExcludeFromHeightAdvantage": true,
                     "BaseDamagePerRound": 75,
                     "RateOfFire": 16,
+                    "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMinTimeMS": 250,
                     "BurstPeriodMaxTimeMS": 250,
                     "AreaOfEffectRadius": 200,
@@ -13267,6 +13869,7 @@
             "WeaponAttributes": {
                 "G_Catamaran_Upgrade01_Weapon_G2A_MP": {
                     "ReloadTimeMS": 2300,
+                    "FriendlyFireDamageScalar": 1,
                     "Turret": {
                         "RotationSpeed": 160,
                         "FieldOfFire": 40
@@ -13286,6 +13889,7 @@
                 "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
                     "ProjectileEntityTypeToSpawn": "SupportCruiser_AA_ProjectileAssetContainer_MP",
                     "ReloadTimeMS": 2300,
+                    "FriendlyFireDamageScalar": 1,
                     "Turret": {
                         "RotationSpeed": 240,
                         "FieldOfFire": 40
@@ -13479,6 +14083,7 @@
             "WeaponAttributes": {
                 "G_Catamaran_Upgrade01_Weapon_G2A_MP": {
                     "ReloadTimeMS": 2300,
+                    "FriendlyFireDamageScalar": 1,
                     "Turret": {
                         "RotationSpeed": 160,
                         "FieldOfFire": 40
@@ -13498,6 +14103,7 @@
                 "G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
                     "ProjectileEntityTypeToSpawn": "SupportCruiser_AA_ProjectileAssetContainer_MP",
                     "ReloadTimeMS": 2300,
+                    "FriendlyFireDamageScalar": 1,
                     "Turret": {
                         "RotationSpeed": 240,
                         "FieldOfFire": 40
@@ -13701,6 +14307,7 @@
                     "ProjectileEntityTypeToSpawn": "G_Bomber_Bomb_ProjectileAssetContainer_MP",
                     "BaseDamagePerRound": 375,
                     "BurstPeriodMinTimeMS": 667,
+                    "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMaxTimeMS": 667,
                     "ReloadTimeMS": 3000,
                     "RateOfFire": 1,
@@ -13935,6 +14542,7 @@
                     "NumberOfBursts": 1,
                     "BaseDamagePerRound": 170,
                     "DamagePacketsPerShot": 1,
+                    "FriendlyFireDamageScalar": 1,
                     "AreaOfEffectRadius": 160,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RateOfFire": 1,
@@ -14126,6 +14734,7 @@
                     },
                     "StatusEffectsExcludeTargetType": "None",
                     "BaseDamagePerRound": 170,
+                    "FriendlyFireDamageScalar": 1,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 160,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -14343,6 +14952,7 @@
             },
             "WeaponAttributes": {
                 "C_Bomber_Weapon_A2G_MP": {
+                    "FriendlyFireDamageScalar": 1,
                     "ProjectileEntityTypeToSpawn": "SuperWeapon_Broad_New_ProjectileAssetContainer",
                     "WindUpTimeMS": 0,
                     "BaseDamagePerRound": 2500,
@@ -14903,6 +15513,7 @@
             },
             "WeaponAttributes": {
                 "C_GunShip_Weapon_DefaultFire_MP": {
+                    "FriendlyFireDamageScalar": 1,
                     "ProjectileEntityTypeToSpawn": "Cat_G2G_ProjectileAssetContainer_MP",
                     "BaseDamagePerRound": 155,
                     "IsTracer": false,
@@ -15032,6 +15643,7 @@
                     "AreaOfEffectRadius": 75,
                     "BurstPeriodMinTimeMS": 700,
                     "BurstPeriodMaxTimeMS": 700,
+                    "FriendlyFireDamageScalar": 1,
                     "RateOfFire": 3,
                     "NumberOfBursts": 4,
                     "WindUpTimeMS": 250,
@@ -15039,8 +15651,9 @@
                     "OutputDPS": true
                 },
                 "G_Battlecruiser_Weapon_G2A_MP": {
-                    "RangeAttributesLong": { "Distance": 1250 },
+                    "RangeAttributesLong": { "Distance": 1000 },
                     "RateOfFire": 0,
+                    "FriendlyFireDamageScalar": 1,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "Modifiers": {
                         "0": {
@@ -15050,9 +15663,10 @@
                 },
                 "G_BattleCruiser_Weapon_Missile_MP": {
                     "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Arc_ProjectileAssetContainer_MP",
-                    "BaseDamagePerRound": 150,
+                    "BaseDamagePerRound": 125,
                     "AreaOfEffectRadius": 150,
-                    "NumberOfBursts": 4,
+                    "FriendlyFireDamageScalar": 1,
+                    "NumberOfBursts": 3,
                     "RateOfFire": 5,
                     "CooldownTimeMS": 500,
                     "BurstPeriodMinTimeMS": 800,
@@ -15609,6 +16223,7 @@
                 },
                 "G_HonorGuard_Weapon_G2A_MP": {
                     "WindUpTimeMS": 500,
+                    "FriendlyFireDamageScalar": 1,
                     "BaseDamagePerRound": 125,
                     "ReloadTimeMS": 4000,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
@@ -15636,6 +16251,7 @@
                     "ProjectileEntityTypeToSpawn": "G_Artillery_Shell_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
+                    "FriendlyFireDamageScalar": 1,
                     "TracerLength": 5,
                     "BaseDamagePerRound": 150,
                     "DamagePacketsPerShot": 2,
@@ -15779,6 +16395,7 @@
                     },
                     "ProjectileEntityTypeToSpawn": "K_Artillery_Shell_ProjectileAssetContainer_MP",
                     "IsTracer": false,
+                    "FriendlyFireDamageScalar": 1,
                     "TracerSpeed": 0,
                     "TracerLength": 5,
                     "BaseDamagePerRound": 150,
@@ -15846,6 +16463,7 @@
                 },
                 "G_HonorGuard_Weapon_G2A_MP": {
                     "WindUpTimeMS": 500,
+                    "FriendlyFireDamageScalar": 1,
                     "ReloadTimeMS": 4000,
                     "BaseDamagePerRound": 125,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
@@ -16021,6 +16639,7 @@
                     "BaseDamagePerRound": 100,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "AreaOfEffectRadius": 125,
+                    "FriendlyFireDamageScalar": 1,
                     "NumberOfBursts": 1,
                     "RateOfFire": 2,
                     "ReloadTimeMS": 10000,
@@ -17222,6 +17841,7 @@
                     },
                     "OutputDPS": true,
                     "AreaOfEffectRadius": 180,
+                    "FriendlyFireDamageScalar": 1,
                     "BaseDamagePerRound": 350,
                     "ReloadTimeMS": 4500,
                     "NumberOfBursts": 3,
@@ -17645,14 +18265,14 @@
         },
         "Research_Buff_C_Sob_CruiseMissileUnlock": {
             "ResearchItemAttributes": {
-                "LocalizedResearchTitleStringID": "CARRIER - BEEHIVE WITH A MICROWAVE",
-                "LocalizedLongDescriptionStringID": "Upgrade Carrier throwing arm; launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 15 ANGRY BEES"
+                "LocalizedResearchTitleStringID": "CARRIER - BEEHIVE",
+                "LocalizedLongDescriptionStringID": "Upgrade Carrier throwing arm; launch a beehive full of very angry bees.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 15 ANGRY BEES"
             }
         },
         "Ability_C_Sob_SobanNuke_MP": {
             "AbilityViewAttributes": {
-                "LocalizedTitleStringID": "THROW A BEEHIVE WITH A MICROWAVE",
-                "LocalizedLongDescriptionStringID": "Launch a beehive full of very angry bees with homemade microwave to cook anyone who wants to come in.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 15 ANGRY BEES."
+                "LocalizedTitleStringID": "THROW A BEEHIVE",
+                "LocalizedLongDescriptionStringID": "Launch a beehive full of very angry bees.\n\n[ff0000]REGULAR BEEHIVE POPULATION IS ABOUT 15 ANGRY BEES."
             }
         },
         "Ability_C_ToggleAutoFire": {
