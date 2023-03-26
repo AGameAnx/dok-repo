@@ -200,6 +200,7 @@
         "Upgrade_Rachel_G1": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "ANIME PROTAGONIST - SEDUCTION UPGRADE",
+                "LocalizedLongDescriptionStringID": "Allows Rachel to steal Cruisers, turrets, turret control towers, interceptors, bombers.",
                 "UnitTypeBuffs": {
                     "0": {
                         "UnitClass": -1,
@@ -473,7 +474,7 @@
                     "DamagePacketsPerShot": 1,
                     "BaseDamagePerRound": 700,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
-                    "AreaOfEffectRadius": 250,
+                    "AreaOfEffectRadius": 1550,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
                     "Modifiers": {
@@ -811,6 +812,22 @@
                     "CooldownTimeSecs": 10,
                     "ChainCasting": { "QueuedAbilityDelay": 10 }
                 },
+                "Ability_Produce_G_SandSkimmer": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
+                    "CooldownTimeSecs": 20,
+                    "ProduceUnit": { "UnitTypeToProduce": "C_Battlecruiser_MP" }
+                },
+                "Ability_Produce_G_Baserunner": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
+                    "CooldownTimeSecs": 60,
+                    "ProduceUnit": { "UnitTypeToProduce": "G_BattleCruiser_MP" }
+                },
                 "Ability_G_FatherShipRegen": {
                     "ApplyStatusEffect": {
                         "Regen_FatherShip_StatusEffect": {
@@ -842,7 +859,7 @@
                 "G_Fathership_Weapon_Breath": {
                     "ProjectileEntityTypeToSpawn": "MineProjectile_Projectile",
                     "FriendlyFireDamageScalar": 1,
-                    "ReloadTimeMS": 1550,
+                    "ReloadTimeMS": 2550,
                     "BaseDamagePerRound": 30,
                     "EntityTypesToSpawnOnImpact": {
                         "0": {
@@ -868,7 +885,7 @@
                     },
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
                     "FriendlyFireDamageScalar": 1,
-                    "NumberOfBursts": 4,
+                    "NumberOfBursts": 1,
                     "BaseDamagePerRound": 350,
                     "ReloadTimeMS": 9550,
                     "BurstPeriodMinTimeMS": 1000,
@@ -889,8 +906,8 @@
                     },
                     "Turret": {
                         "FieldOfView": 360,
-                        "FieldOfFire": 30,
-                        "RotationSpeed": 10
+                        "FieldOfFire": 360,
+                        "RotationSpeed": 1
                     }
                 },
                 "G_Fathership_Weapon_Cannon": {
@@ -912,7 +929,7 @@
                     "BurstPeriodMaxTimeMS": 200,
                     "CooldownTimeMS": 350,
                     "DamagePacketsPerShot": 1,
-                    "BaseDamagePerRound": 200,
+                    "BaseDamagePerRound": 100,
                     "AreaOfEffectRadius": 350,
                     "ProjectileEntityTypeToSpawn": "G_BattleCruiserDefault_ProjectileAssetContainer",
                     "IsTracer": false,
@@ -961,6 +978,495 @@
                         "FieldOfFire": 30,
                         "RotationSpeed": 85
                     }
+                }
+            }
+        },
+        //FATHERSHIP'S SUPERCRUISERS
+        "G_BattleCruiser_MP": {
+            "UnitAttributes": {
+                "HackableProperties": "NonHackable",
+                "Resource1Cost": 0,
+                "Resource2Cost": 0,
+                "MaxHealth": 5650,
+                "LeashRange": 4000,
+                "SensorRadius": 3000,
+                "AggroRange": 4000,
+                "PopCapCost": 0,
+                "ProductionTime": 5,
+                "Armour": 5
+            },
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Officer: +500 hull",
+                        "RequiredExperience": 750,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 500
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Lieutenant: +5 speed",
+                        "RequiredExperience": 1500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +500 hull",
+                        "RequiredExperience": 3000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 500
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Commander: +10 speed",
+                        "RequiredExperience": 4500,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 10
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Captain: +1000 hull, +10 armor",
+                        "RequiredExperience": 6000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 1000
+                            },
+                            "1": {
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 25
+                            }
+                        }
+                    }
+                }
+            },
+            "WeaponAttributes": {
+                /*"G_BattleCruiser_Weapon_MovemenBonus_MP": { // i need this weapon id
+                    "StatusEffectsTargetAlignment": "Friend",
+                    "DamageType": "Heal",
+                    "BaseDamagePerRound": 75,
+                    "AreaOfEffectRadius": 500,
+                    "ProjectileEntityTypeToSpawn": "C_HAC_Smoke_SceneEntity_MP",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "ArmorBonus_StatusEffect" ] }
+                    },
+                    "ReloadTimeMS": 3500,
+                    "StatusEffectsExcludeTargetType": "Air"
+                },*/
+                "G_Battlecruiser_Weapon_G2G_MP": {
+                    "RateOfFire": 10,
+                    "NumberOfBursts": 2,
+                    "TargetPrioritizationAttributes": {
+                        "AutoTargetStickyBias": -99999
+                    },
+                    "Turret": {
+                        "RotationSpeed": 480
+                    },
+                    "ReloadTimeMS": 2050,
+                    "LeadsTarget": 1,
+                    "BurstPeriodMinTimeMS": 200,
+                    "BurstPeriodMaxTimeMS": 200,
+                    "CooldownTimeMS": 550,
+                    "DamagePacketsPerShot": 1,
+                    "BaseDamagePerRound": 50,
+                    "AreaOfEffectRadius": 90,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer",
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "TracerLength": 5,
+                    "TargetStyle": "Flak",
+                    "RangeAttributesShort": {
+                        "Distance": 1000,
+                        "Accuracy": 100
+                    },
+                    "RangeAttributesMedium": {
+                        "Distance": 1400,
+                        "Accuracy": 80
+                    },
+                    "RangeAttributesLong": {
+                        "Accuracy": 70,
+                        "Distance": 1600
+                    }
+                },
+                "G_Battlecruiser_Weapon_G2A_MP": {
+                    "RangeAttributesLong": { "Distance": 1000 },
+                    "RateOfFire": 4,
+                    "FriendlyFireDamageScalar": 1,
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Air"
+                        }
+                    }
+                },
+                "G_BattleCruiser_Weapon_Missile_MP": {
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Arc_ProjectileAssetContainer_MP",
+                    "BaseDamagePerRound": 75,
+                    "ExcludeFromAutoTargetAcquisition": false,
+                    "ExcludeFromAutoFire": false,
+                    "AreaOfEffectRadius": 150,
+                    "ReloadTimeMS": 9500,
+                    "FriendlyFireDamageScalar": 1,
+                    "NumberOfBursts": 2,
+                    "RateOfFire": 5,
+                    "CooldownTimeMS": 500,
+                    "BurstPeriodMinTimeMS": 800,
+                    "BurstPeriodMaxTimeMS": 800,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "RangeAttributesLong": {
+                        "Distance": 1550
+                    },
+
+                    "ExcludeFromHeightAdvantage": true,
+                    "RangeAttributesShort": {
+                        "Distance": 600
+                    },
+                    "RangeAttributesMedium": {
+                        "Distance": 750
+                    }
+
+                }
+            },
+            "UnitMovementAttributes": {
+                "Combat": {
+                    "MinDesiredCombatRange": 0,
+                    "MaxDesiredCombatRange": 1500,
+                    "ActiveCombatApproachMode": "Snipe",
+                    "PassiveCombatApproachMode": "Snipe"
+                },
+                "Dynamics": { "MaxSpeed": 40 }
+            },
+            "AbilityAttributes": {
+                "Ability_G_BattleCruiser_EnableAir_MP": {
+                    "RequiredResearch": []
+                },
+                "Ability_G_BattleCruiser_ArmorBonus_MP": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
+                    "SharedCooldownChannel": 0,
+                    "CooldownTimeSecs": 10,
+                    "ApplyStatusEffect": {
+                        "ArmorBonus_StatusEffect": {
+                            "Lifetime": "Finite",
+                            "Duration": 10.00,
+                            "MaxStacks": 1,
+                            "StackingBehaviour": "Replace",
+                            "BuffsToApplyToTarget": {
+                                "0": {
+                                    "BuffSet": {
+                                        "0": {
+                                            "Attribute": "Unit_Armour",
+                                            "Mode": "AddPercent",
+                                            "Value": 400
+                                        },
+                                        "1": {
+                                            "Attribute": "UnitDynamics_MaxSpeed",
+                                            "Mode": "AddPercent",
+                                            "Value": 50
+                                        },
+                                        "2": {
+                                            "Attribute": "UnitDynamics_AccelerationTime",
+                                            "Mode": "AddPercent",
+                                            "Value": 50
+                                        },
+                                        "3": {
+                                            "Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+                                            "Mode": "AddPercent",
+                                            "Value": 50
+                                        }
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                },
+                "Ability_G_BattleCruiser_Missile_MP": {
+                    "SharedCooldownChannel": 0,
+                    "Resource1Cost": 0,
+                    "CooldownTimeSecs": 50
+                },
+                "Ability_G_BattleCruiserActiveRegen": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
+                    "ApplyStatusEffect": {
+                        "Regen_BattleCruiser_StatusEffect_Campaign": {
+                            "Duration": 10.00,
+                            //"BuffsToApplyToTarget": { this crap doesn't work
+                            //  "0": {
+                            //    "UnitType": "G_BattleCruiser_MP",
+                            //    "BuffSet": {
+                            //      "0": { 
+                            //        "Attribute": "UnitDynamics_MaxSpeed",
+                            //        "Value": -20
+                            //      }
+                            //    }
+                            //  }
+                            //},
+                            "Modifiers": {
+                                "0": {
+                                    "HealthOverTimeAttributes": {
+                                        "Amount": 1,
+                                        "MSTickDuration": 14
+                                    }
+                                },
+                                "1": { // disable weapon
+                                    "Remove": true
+                                },
+                                "2": { // disable ability
+                                    "Remove": true
+                                },
+                                "3": { // immobilize
+                                    "Remove": true
+                                }
+
+                            }
+                        }
+                    },
+                    "SharedCooldownChannel": 0,
+                    "CooldownTimeSecs": 10
+                }
+            }
+
+        },
+        "C_Battlecruiser_MP": {
+            "UnitAttributes": {
+                "HackableProperties": "NonHackable",
+                "Resource1Cost": 0,
+                "Resource2Cost": 0,
+                "MaxHealth": 2350,
+                "PopCapCost": 0,
+                "LeashRange": 4000,
+                "SensorRadius": 3000,
+                "AggroRange": 4000,
+                "ProductionTime": 5,
+                "Armour": 7,
+                "FireRateDisplay": 3
+            },
+            "UnitMovementAttributes": {
+                "Combat": {
+                    "MinDesiredCombatRange": 1500,
+                    "MaxDesiredCombatRange": 1900,
+                    "ActiveCombatApproachMode": "Circle",
+                    "PassiveCombatApproachMode": "Circle"
+                },
+                "Dynamics": {
+                    "MaxSpeed": 95,
+                    "MaxSpeedTurnRadius": 200,
+                    "AccelerationTime": 0.9,
+                    "BrakingTime": 0.9
+                }
+            },
+            "ExperienceAttributes": {
+                "Levels": {
+                    "1": {
+                        "BuffTooltipLocID": "Officer: +3 armor, +5 speed",
+                        "RequiredExperience": 1000,
+                        "Buff": {
+                            "0": {
+                                "Mode": "Add",
+                                "Value": 3
+                            },
+                            "1": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    },
+                    "2": {
+                        "BuffTooltipLocID": "Lieutenant: +9 armor, +5 speed",
+                        "RequiredExperience": 3000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 9
+
+                            },
+                            "1": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +27 armor, +5 speed",
+                        "RequiredExperience": 6000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 27
+                            },
+
+                            "1": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    },
+                    "4": {
+                        "BuffTooltipLocID": "Commander: +81 armor, +5 speed",
+                        "RequiredExperience": 8000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 81
+                            },
+                            "1": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    },
+                    "5": {
+                        "BuffTooltipLocID": "Captain: +243 armor, +5 speed",
+                        "RequiredExperience": 10000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65540,
+                                "Mode": "Add",
+                                "Value": 243
+                            },
+                            "1": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": 5
+                            }
+                        }
+                    }
+                }
+            },
+            "AbilityAttributes": {
+                "Ability_C_SmokeGrenade_BattleCruiser": {
+                    "AbilityType": "UseWeapon",
+                    "TargetingType": "Self"
+                }
+            },
+            "WeaponAttributes": {
+                "C_Battlecruiser_Weapon_G2G_MP": {
+                    "ExcludeFromHeightAdvantage": true,
+                    "LineOfSightRequired": true,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_AA_ProjectileAssetContainer",
+                    "BaseDamagePerRound": 100,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "AreaOfEffectRadius": 125,
+                    "FriendlyFireDamageScalar": 1,
+                    "NumberOfBursts": 6,
+                    "WindUpTimeMS": 0,
+                    "CooldownTimeMS": 0,
+                    "BurstPeriodMinTimeMS": 500,
+                    "BurstPeriodMaxTimeMS": 500,
+                    "RateOfFire": 2,
+                    "Turret": {
+                        "RotationSpeed": 380,
+                        "FieldOfFire": 60
+                    },
+                    "ReloadTimeMS": 6500,
+                    "RangeAttributesLong": {
+                        "Distance": 2000,
+                        "MinDistance": 50,
+                        "Accuracy": 50
+                    },
+                    "RangeAttributesMedium": {
+                        "Remove": true
+                    },
+                    "RangeAttributesShort": {
+                        "Remove": true
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Air",
+                            "Modifier": "CanTarget"
+                        },
+                        "1": {
+                            "Remove": true
+                        },
+                        "2": {
+                            "Remove": true
+                        },
+                        "3": {
+                            "Remove": true
+                        },
+                        "4": { "Remove": true },
+                        "5": { "Remove": true },
+                        "6": { "Remove": true },
+                        "7": { "Remove": true },
+                        "8": { "Remove": true },
+                        "9": { "Remove": true },
+                        "10": { "Remove": true },
+                        "11": { "Remove": true },
+                        "12": { "Remove": true },
+                        "13": { "Remove": true },
+                        "14": { "Remove": true },
+                        "15": { "Remove": true },
+                        "16": { "Remove": true }
+                    }
+                },
+                "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "Remove": true
+                        }
+                    },
+                    "RangeAttributesLong": {
+                        "Remove": true
+                    },
+                    "RangeAttributesMedium": {
+                        "Remove": true
+                    },
+                    "RangeAttributesShort": {
+                        "Distance": 1000,
+                        "MinDistance": 0,
+                        "Accuracy": 100
+                    },
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Carrier",
+                            "Modifier": "CanNotTarget"
+                        }
+                    },
+                    "DamageType": "Heal",
+                    "NumberOfBursts": 1,
+                    "ReloadTimeMS": 9550,
+                    "CooldownTimeMS": 0,
+                    "DamagePacketsPerShot": 1,
+                    "AreaOfEffectRadius": 50,
+                    "BaseDamagePerRound": 500,
+                    "ExcludeFromHeightAdvantage": true,
+                    "ExcludeFromAutoTargetAcquisition": false,
+                    "ExcludeFromAutoFire": false,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_TacticalMissile_ProjectileAssetContainer_MP",
+                    "LineOfSightRequired": false
                 }
             }
         },
@@ -1014,6 +1520,7 @@
             "WeaponAttributes": {
                 "C_Carrier_Weapon_G2All": {
                     "LineOfSightRequired": true,
+                    "TracerLength": 1,
                     "BaseDamagePerRound": 10,
                     "WindDownTimeMS": 0,
                     "WindUpTimeMS": 0,
@@ -3983,6 +4490,7 @@
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
                     "WindDownTimeMS": 0,
+                    "TracerLength": 1,
                     "WindUpTimeMS": 0,
                     "ExcludeFromHeightAdvantage": true,
                     "RateOfFire": 15,
@@ -4805,7 +5313,7 @@
                                                 }
                                             },
                                             "2": {
-                                                "UnitClass": "Medium",
+                                                "UnitClass": -1,
                                                 "UseAsPrefix": false,
                                                 "ClassOperator": "Or",
                                                 "UnitType": "",
@@ -4854,13 +5362,13 @@
                                                         "Value": 0,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
-                                                        "Name": "DEFALT"
+                                                        "Name": ""
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ExcludeFromAutoFire",
-                                                        "Name": "DEFALT"
+                                                        "Name": ""
                                                     }
                                                 }
                                             },
@@ -4893,19 +5401,24 @@
                                                     "4": {
                                                         "Attribute": "Inventory_Capacity",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "5": {
                                                         "Attribute": "Inventory_StartingAmount",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "6": {
                                                         "Value": 6,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_RateOfFire"
+                                                    },
+                                                    "7": {
+                                                        "Value": 1100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
                                             },
@@ -4941,6 +5454,30 @@
                                                         "Mode": "Add",
                                                         "Value": 6
 
+                                                    },
+                                                    "5": {
+                                                        "Value": 4100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
+                                                    }
+                                                }
+                                            },
+                                            "7": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Baserunner",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Name": "",
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Ability_CooldownTimeSecs"
+                                                    },
+                                                    "1": {
+                                                        "Value": 333,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
                                             }
@@ -5081,7 +5618,7 @@
                                                 }
                                             },
                                             "2": {
-                                                "UnitClass": "Medium",
+                                                "UnitClass": -1,
                                                 "UseAsPrefix": false,
                                                 "ClassOperator": "Or",
                                                 "UnitType": "",
@@ -5103,13 +5640,13 @@
                                                     "0": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
                                                         "Name": "SMOKE"
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
                                                         "Name": "SMOKE"
                                                     },
                                                     "2": {
@@ -5129,14 +5666,14 @@
                                                     "0": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
-                                                        "Name": "DEFALT"
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": ""
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
-                                                        "Name": "DEFALT"
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": ""
                                                     }
                                                 }
                                             },
@@ -5169,19 +5706,24 @@
                                                     "4": {
                                                         "Attribute": "Inventory_Capacity",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "5": {
                                                         "Attribute": "Inventory_StartingAmount",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "6": {
                                                         "Value": 6,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_RateOfFire"
+                                                    },
+                                                    "7": {
+                                                        "Value": 1100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
                                             },
@@ -5217,6 +5759,30 @@
                                                         "Mode": "Add",
                                                         "Value": 6
 
+                                                    },
+                                                    "5": {
+                                                        "Value": 4100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
+                                                    }
+                                                }
+                                            },
+                                            "7": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Baserunner",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Name": "",
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Ability_CooldownTimeSecs"
+                                                    },
+                                                    "1": {
+                                                        "Value": 333,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
                                             }
@@ -5357,7 +5923,7 @@
                                                 }
                                             },
                                             "2": {
-                                                "UnitClass": "Medium",
+                                                "UnitClass": -1,
                                                 "UseAsPrefix": false,
                                                 "ClassOperator": "Or",
                                                 "UnitType": "",
@@ -5379,13 +5945,13 @@
                                                     "0": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
                                                         "Name": "SMOKE"
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
                                                         "Name": "SMOKE"
                                                     },
                                                     "2": {
@@ -5405,14 +5971,14 @@
                                                     "0": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
-                                                        "Name": "DEFALT"
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": ""
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
-                                                        "Name": "DEFALT"
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": ""
                                                     }
                                                 }
                                             },
@@ -5445,19 +6011,24 @@
                                                     "4": {
                                                         "Attribute": "Inventory_Capacity",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "5": {
                                                         "Attribute": "Inventory_StartingAmount",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "6": {
                                                         "Value": 6,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_RateOfFire"
+                                                    },
+                                                    "7": {
+                                                        "Value": 1100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
                                             },
@@ -5493,6 +6064,30 @@
                                                         "Mode": "Add",
                                                         "Value": 6
 
+                                                    },
+                                                    "5": {
+                                                        "Value": 4100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
+                                                    }
+                                                }
+                                            },
+                                            "7": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Baserunner",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Name": "",
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Ability_CooldownTimeSecs"
+                                                    },
+                                                    "1": {
+                                                        "Value": 333,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
                                             }
@@ -5633,7 +6228,7 @@
                                                 }
                                             },
                                             "2": {
-                                                "UnitClass": "Medium",
+                                                "UnitClass": -1,
                                                 "UseAsPrefix": false,
                                                 "ClassOperator": "Or",
                                                 "UnitType": "",
@@ -5655,13 +6250,13 @@
                                                     "0": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
                                                         "Name": "SMOKE"
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
                                                         "Name": "SMOKE"
                                                     },
                                                     "2": {
@@ -5681,14 +6276,14 @@
                                                     "0": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
-                                                        "Name": "DEFALT"
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": ""
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
-                                                        "Name": "DEFALT"
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": ""
                                                     }
                                                 }
                                             },
@@ -5721,19 +6316,24 @@
                                                     "4": {
                                                         "Attribute": "Inventory_Capacity",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "5": {
                                                         "Attribute": "Inventory_StartingAmount",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "6": {
                                                         "Value": 6,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_RateOfFire"
+                                                    },
+                                                    "7": {
+                                                        "Value": 1100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
                                             },
@@ -5769,6 +6369,30 @@
                                                         "Mode": "Add",
                                                         "Value": 6
 
+                                                    },
+                                                    "5": {
+                                                        "Value": 4100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
+                                                    }
+                                                }
+                                            },
+                                            "7": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Baserunner",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Name": "",
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Ability_CooldownTimeSecs"
+                                                    },
+                                                    "1": {
+                                                        "Value": 333,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
                                             }
@@ -5909,7 +6533,7 @@
                                                 }
                                             },
                                             "2": {
-                                                "UnitClass": "Medium",
+                                                "UnitClass": -1,
                                                 "UseAsPrefix": false,
                                                 "ClassOperator": "Or",
                                                 "UnitType": "",
@@ -5931,13 +6555,13 @@
                                                     "0": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
                                                         "Name": "SMOKE"
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
                                                         "Name": "SMOKE"
                                                     },
                                                     "2": {
@@ -5957,14 +6581,14 @@
                                                     "0": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
-                                                        "Name": "DEFALT"
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": ""
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
-                                                        "Name": "DEFALT"
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": ""
                                                     }
                                                 }
                                             },
@@ -5997,19 +6621,24 @@
                                                     "4": {
                                                         "Attribute": "Inventory_Capacity",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "5": {
                                                         "Attribute": "Inventory_StartingAmount",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "6": {
                                                         "Value": 6,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_RateOfFire"
+                                                    },
+                                                    "7": {
+                                                        "Value": 1100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
                                             },
@@ -6045,6 +6674,30 @@
                                                         "Mode": "Add",
                                                         "Value": 6
 
+                                                    },
+                                                    "5": {
+                                                        "Value": 4100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
+                                                    }
+                                                }
+                                            },
+                                            "7": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Baserunner",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Name": "",
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Ability_CooldownTimeSecs"
+                                                    },
+                                                    "1": {
+                                                        "Value": 333,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
                                             }
@@ -6185,7 +6838,7 @@
                                                 }
                                             },
                                             "2": {
-                                                "UnitClass": "Medium",
+                                                "UnitClass": -1,
                                                 "UseAsPrefix": false,
                                                 "ClassOperator": "Or",
                                                 "UnitType": "",
@@ -6207,13 +6860,13 @@
                                                     "0": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
                                                         "Name": "SMOKE"
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
                                                         "Name": "SMOKE"
                                                     },
                                                     "2": {
@@ -6233,14 +6886,14 @@
                                                     "0": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
-                                                        "Name": "DEFALT"
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
+                                                        "Name": ""
                                                     },
                                                     "1": {
                                                         "Value": 0,
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
-                                                        "Name": "DEFALT"
+                                                        "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                                                        "Name": ""
                                                     }
                                                 }
                                             },
@@ -6266,26 +6919,31 @@
                                                         "Attribute": "Unit_Resource2Cost"
                                                     },
                                                     "3": {
-                                                        "Value": 6,
+                                                        "Value": 3,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_ProductionTime"
                                                     },
                                                     "4": {
                                                         "Attribute": "Inventory_Capacity",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "5": {
                                                         "Attribute": "Inventory_StartingAmount",
                                                         "Mode": "Add",
-                                                        "Value": 6
+                                                        "Value": 12
 
                                                     },
                                                     "6": {
-                                                        "Value": 3,
+                                                        "Value": 6,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_RateOfFire"
+                                                    },
+                                                    "7": {
+                                                        "Value": 1100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
                                             },
@@ -6321,6 +6979,30 @@
                                                         "Mode": "Add",
                                                         "Value": 6
 
+                                                    },
+                                                    "5": {
+                                                        "Value": 4100,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_MaxHealth"
+                                                    }
+                                                }
+                                            },
+                                            "7": {
+                                                "UnitClass": -1,
+                                                "UseAsPrefix": false,
+                                                "ClassOperator": "Or",
+                                                "UnitType": "C_Baserunner",
+                                                "BuffSet": {
+                                                    "0": {
+                                                        "Name": "",
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Ability_CooldownTimeSecs"
+                                                    },
+                                                    "1": {
+                                                        "Value": 333,
+                                                        "Mode": "Set",
+                                                        "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
                                             }
@@ -6865,7 +7547,6 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Novice: +3 damage",
-                        "RequiredExperience": 400,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -6876,7 +7557,6 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +15 speed",
-                        "RequiredExperience": 550,
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -6887,7 +7567,6 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +5 armor",
-                        "RequiredExperience": 650,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -6898,7 +7577,6 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +300 hull",
-                        "RequiredExperience": 800,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -6908,21 +7586,13 @@
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Elder: -50% cooldown on ability",
-                        "RequiredExperience": 1200,
+                        "BuffTooltipLocID": "Elder: Carrierless mobility support",
                         "Buff": {
                             "0": {
-                                "Name": "Ability_G_DeployScanner",
-                                "Attribute": 16777216,
-                                "Mode": "AddPercent",
-                                "Value": -50
-
-                            },
-                            "1": {
-                                "Name": "Ability_G_BaseRunnerPassiveRegen",
-                                "Attribute": 16777216,
-                                "Mode": "AddPercent",
-                                "Value": -50
+                                "Name": "",
+                                "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
+                                "Mode": "Set",
+                                "Value": 1
 
                             }
                         }
@@ -10382,7 +11052,7 @@
                 "C_Railgun_Weapon_G2G": {
                     "NumberOfBursts": 1,
                     "TracerSpeed": 2500,
-                    "RateOfFire": 200,
+                    "RateOfFire": 100,
                     "BaseDamagePerRound": 35,
                     "DamagePacketsPerShot": 0,
                     "WindDownTimeMS": 50,
@@ -10390,8 +11060,8 @@
                     "TargetStyle": "Flak",
                     "CooldownTimeMS": 2000,
                     "ReloadTimeMS": 2400,
-                    "BurstPeriodMinTimeMS": 30,
-                    "BurstPeriodMaxTimeMS": 70,
+                    "BurstPeriodMinTimeMS": 60,
+                    "BurstPeriodMaxTimeMS": 140,
                     "AreaOfEffectFalloffType": "Linear",
                     "AreaOfEffectRadius": 100,
                     "RangeAttributesShort": {
@@ -10814,7 +11484,7 @@
                     "ActiveCombatApproachMode": "Snipe"
                 },
                 "Dynamics": {
-                    "MaxSpeed": 60,
+                    "MaxSpeed": 69,
                     "AccelerationTime": 1.5,
                     "BrakingTime": 1.2
                 }
@@ -10862,6 +11532,7 @@
                     "TracerSpeed": 10000,
                     "BaseDamagePerRound": 10,
                     "RateOfFire": 20,
+                    "FiringRecoil": 0,
                     "DamagePacketsPerShot": 0,
                     "BurstPeriodMinTimeMS": 100,
                     "BurstPeriodMaxTimeMS": 110,
@@ -11220,19 +11891,13 @@
                         "BuffTooltipLocID": "Sentinel: +1 weapon rate of fire",
                         "Buff": {
                             "0": {
-                                "Name": "ANTI-AIR",
+                                "Name": "",
                                 "Attribute": "UnitWeapon_RateOfFire",
                                 "Mode": "Add",
                                 "Value": 1
                             },
                             "1": {
                                 "Attribute": "Unit_FireRateDisplay",
-                                "Mode": "Add",
-                                "Value": 1
-                            },
-                            "2": {
-                                "Name": "ANTI-AIR-RADIO",
-                                "Attribute": "UnitWeapon_RateOfFire",
                                 "Mode": "Add",
                                 "Value": 1
                             }
@@ -11242,13 +11907,7 @@
                         "BuffTooltipLocID": "Guardian: -50% weapon cooldown",
                         "Buff": {
                             "0": {
-                                "Name": "ANTI-AIR",
-                                "Attribute": "UnitWeapon_ReloadTime",
-                                "Mode": "AddPercent",
-                                "Value": -50
-                            },
-                            "1": {
-                                "Name": "ANTI-AIR-RADIO",
+                                "Name": "",
                                 "Attribute": "UnitWeapon_ReloadTime",
                                 "Mode": "AddPercent",
                                 "Value": -50
@@ -11277,7 +11936,7 @@
                 "G_Catamaran_Upgrade01_Weapon_G2A": {
                     "ReloadTimeMS": 2300,
                     "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1050,
+                    "BurstPeriodMaxTimeMS": 1450,
                     "BaseDamagePerRound": 250,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 0,
@@ -11293,25 +11952,93 @@
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2A_Dummy": {
-                    "ReloadTimeMS": 2300,
+                    "ExcludeFromHeightAdvantage": true,
                     "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1050,
-                    "BaseDamagePerRound": 250,
-                    "DamagePacketsPerShot": 1,
-                    "WindUpTimeMS": 0,
-                    "RateOfFire": 2,
-                    "ProjectileEntityTypeToSpawn": "SupportCruiser_AA_ProjectileAssetContainer_MP",
+                    "BurstPeriodMaxTimeMS": 1499,
+                    "ExcludeFromAutoTargetAcquisition": false,
+                    "ExcludeFromAutoFire": false,
+                    "ReloadTimeMS": 15000,
+                    "BaseDamagePerRound": 25,
+                    "WindUpTimeMS": 1500,
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "MiniStun_StatusEffect", "MortarSuppress_StatusEffect", "Suppress_StatusEffect" ] }
+                    },
                     "Turret": {
-                        "RotationSpeed": 160,
-                        "FieldOfFire": 40
+                        "FieldOfView": 360,
+                        "FieldOfFire": 360,
+                        "RotationSpeed": 85
+                    },
+                    "NumberOfBursts": 1,
+                    "ProjectileEntityTypeToSpawn": "Rachel_HACK_ProjectileAssetContainer",
+                    "RateOfFire": 1,
+                    "AreaOfEffectRadius": 50,
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Air",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanTarget"
+                        },
+                        "1": {
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or",
+                            "Modifier": "CanNotTarget"
+                        },
+                        "2": {
+                            "Remove": true
+                        },
+                        "3": {
+                            "Remove": true
+                        },
+                        "4": {
+                            "Remove": true
+                        },
+                        "5": {
+                            "Remove": true
+                        },
+                        "6": {
+                            "Remove": true
+                        },
+                        "7": {
+                            "Remove": true
+                        },
+                        "8": {
+                            "Remove": true
+                        },
+                        "9": {
+                            "Remove": true
+                        },
+                        "10": {
+                            "Remove": true
+                        },
+                        "11": {
+                            "Remove": true
+                        },
+                        "12": {
+                            "Remove": true
+                        },
+                        "13": {
+                            "Remove": true
+                        }
+                    },
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "RangeAttributesShort": {
+                        "MinDistance": 100,
+                        "Accuracy": 50,
+                        "Distance": 3000
+                    },
+                    "RangeAttributesMedium": {
+                        "Distance": 6500,
+                        "MinDistance": 3000,
+                        "Accuracy": 50
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1530,
-                        "Accuracy": 50
+                        "Remove": true
                     }
                 },
                 "G_Catamaran_Upgrade01_Weapon_G2A_Radar": {
                     "ReloadTimeMS": 10300,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1499,
                     "BaseDamagePerRound": 250,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 0,
@@ -11330,6 +12057,8 @@
                     "ExcludeFromAutoTargetAcquisition": false,
                     "ExcludeFromAutoFire": false,
                     "ReloadTimeMS": 10000,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1499,
                     "BaseDamagePerRound": 250,
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "" ] }
@@ -11433,7 +12162,7 @@
                         "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "Distance": 30,
+                        "Distance": 70,
                         "MinDistance": 0,
                         "Accuracy": 100
                     }
@@ -11559,14 +12288,14 @@
                         "Buff": {
                             "0": {
                                 "Attribute": "Inventory_Capacity",
-                                "Mode": "AddPercent",
-                                "Value": 200
+                                "Mode": "Add",
+                                "Value": 3
 
                             },
                             "1": {
                                 "Attribute": "Inventory_StartingAmount",
-                                "Mode": "AddPercent",
-                                "Value": 200
+                                "Mode": "Add",
+                                "Value": 3
 
                             }
                         }
@@ -12624,6 +13353,10 @@
                     "ActivationDependencies": {
                         "TakeNoDamageForMS": 0,
                         "CommanderHasUnitWithTargetables": "Targetable"
+                    },
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
                     }
                 },
                 "Ability_G_BattleCruiser_ArmorBonus": {
@@ -12914,24 +13647,20 @@
                     }
                 },
                 "G_HonorGuard_Weapon_G2G_CAT_Campaign": {
-                    "Turret": {
-                        "FieldOfView": 360,
-                        "FieldOfFire": 30
-                    },
                     "TargetPrioritizationAttributes": {
                         "DistanceWeight": 100,
                         "TargetThreatWeight": 250,
                         "AutoTargetStickyBias": 1,
                         "TargetSameCommanderBias": 0.0001
                     },
-                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
+                    "ProjectileEntityTypeToSpawn": "Cat_G2G_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
                     "TracerLength": 5,
-                    "BaseDamagePerRound": 150,
+                    "BaseDamagePerRound": 220,
                     "DamagePacketsPerShot": 1,
-                    "ReloadTimeMS": 2500,
-                    "CooldownTimeMS": 500,
+                    "ReloadTimeMS": 3500,
+                    "CooldownTimeMS": 1000,
                     "NumberOfBursts": 2,
                     "Modifiers": {
                         "1": {
@@ -14224,6 +14953,7 @@
                     "ProjectileEntityTypeToSpawn": "Cat_G2G_ProjectileAssetContainer_MP",
                     "FriendlyFireDamageScalar": 1,
                     "LineOfSightRequired": false,
+                    "FiringRecoil": 0,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "ExcludeFromHeightAdvantage": true,
                     "RateOfFire": 5,
@@ -14264,6 +14994,7 @@
 
                     },
                     "AreaOfEffectRadius": 100,
+                    "FiringRecoil": 0,
                     "OutputDPS": true,
                     "ProjectileEntityTypeToSpawn": "G_BattleCruiserDefault_ProjectileAssetContainer",
                     "BaseDamagePerRound": 75,
@@ -14865,6 +15596,19 @@
                 "IconName": "Icon-Command-Production-G_Interceptor",
                 "LocalizedTitleStringID": "DEPLY ANTI-AIR DRONE INTERCEPTOR",
                 "LocalizedLongDescriptionStringID": "Fragalie air unit. Effective at intercepting air units, more effective in packs."
+            }
+        },
+        "Ability_C_SmokeGrenade_BattleCruiser": {
+            "AbilityViewAttributes": {
+                "IconName": "Icon-Command-GroundTargetAA",
+                "LocalizedTitleStringID": "TARGET GROUND",
+                "ForcePassiveVisuals": true,
+                "LocalizedLongDescriptionStringID": "Aleph-null type cruiser targets main weapons on ground units."
+            }
+        },
+        "Ability_C_Hack_Advanced": {
+            "AbilityViewAttributes": {
+                "LocalizedLongDescriptionStringID": "Hack a cruiser or regular unit, or turret, or air unit, or your ex."
             }
         }
     }
