@@ -8,9 +8,9 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.08.00",
-        "LastUpdate": "2023-03-23",
-        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joket.json"
+        "Version": "1.08.10",
+        "LastUpdate": "2023-03-26",
+        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joet.json"
     },
     "Global": {
         "UnitAttributes": {
@@ -808,22 +808,23 @@
             },
             "WeaponAttributes": {
                 "C_Carrier_Weapon_G2All_MP": {
-                    "BaseDamagePerRound": 225,
+                    "BaseDamagePerRound": 155,
+                    "ReloadTimeMS": 6500,
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
-                    "ReloadTimeMS": 7500,
-                    "CooldownTimeMS": 0,
-                    "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
-                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
+                    "CooldownTimeMS": 6500,
+                    "BurstPeriodMinTimeMS": 1500,
+                    "BurstPeriodMaxTimeMS": 1500,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_AA_ProjectileAssetContainer",
                     "IsTracer": false,
                     "TracerSpeed": 0,
-                    "NumberOfBursts": 1,
-                    "AreaOfEffectRadius": 150,
+                    "NumberOfBursts": 2,
+                    "AreaOfEffectRadius": 100,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "LeadsTarget": 1,
-                    "RateOfFire": 1,
+                    "LeadsTarget": 0,
                     "TracerLength": 5,
+                    "ExcludeFromHeightAdvantage": true,
+                    "RateOfFire": 1,
                     "TargetStyle": "Flak",
                     "RangeAttributesShort": {
 
@@ -834,7 +835,7 @@
                         "Accuracy": 100
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 50,
+                        "Accuracy": 75,
                         "Distance": 800
                     },
                     "Modifiers": {
@@ -872,7 +873,7 @@
                     }
                 },
                 "C_Carrier_Weapon_G2All_Dummy_MP": {
-                    "BaseDamagePerRound": 225
+                    "BaseDamagePerRound": 155
                 },
                 "C_Carrier_Weapon_G2All_PenetrationShots_MP": { // Are these even used at all?? //yes, and you did it wrong dumbass
                     "LineOfSightRequired": false,
@@ -1112,11 +1113,11 @@
                         "PowerLevels": {
 
                             "0": {
-                                "LocalizedShortDescriptionStringID": " PDC Rate of Fire: 1, reload time 8 seconds, anti-air disabled"
+                                "LocalizedShortDescriptionStringID": " PDC Rate of Fire: 1, reload time 6 seconds, anti-air disabled"
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Anti-air online, PDC reload time: 6 seconds, AA Rate of Fire: 5",
+                                "LocalizedShortDescriptionStringID": "Anti-air online, PDC Rate of Fire: 2, AA Rate of Fire: 5",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_1_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1128,23 +1129,23 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 5500
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Value": 0
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 5500
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Value": 0
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 5500
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Value": 0
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 5500
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Value": 0
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -1214,7 +1215,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "PDC reload time: 4 seconds, AA Rate of Fire: 7",
+                                "LocalizedShortDescriptionStringID": "PDC Rate of Fire: 3, AA Rate of Fire: 7",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_2_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1226,23 +1227,19 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3500
+                                                        "Value": 2
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3500
+                                                        "Value": 2
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3500
+                                                        "Value": 2
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3500
+                                                        "Value": 2
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -1312,7 +1309,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "PDC reload time: 3 seconds, AA Rate of Fire: 12",
+                                "LocalizedShortDescriptionStringID": "PDC Rate of Fire: 4, AA Rate of Fire: 12",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_3_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1324,23 +1321,19 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2500
+                                                        "Value": 3
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2500
+                                                        "Value": 3
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2500
+                                                        "Value": 3
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2500
+                                                        "Value": 3
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -1410,7 +1403,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "PDC reload time: 2 seconds, AA Rate of Fire: 20",
+                                "LocalizedShortDescriptionStringID": "PDC Rate of Fire: 6, AA Rate of Fire: 20",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_4_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1422,23 +1415,19 @@
                                                     },
                                                     "1": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1500
+                                                        "Value": 2
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1500
+                                                        "Value": 2
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1500
+                                                        "Value": 2
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1500
+                                                        "Value": 2
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -1463,6 +1452,30 @@
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 100
+                                                    },
+                                                    "10": {
+                                                        "Name": "TURRET_FR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "11": {
+                                                        "Name": "TURRET_FL",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "12": {
+                                                        "Name": "TURRET_BR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "13": {
+                                                        "Name": "TURRET_BL",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
                                                     }
                                                 }
                                             }
@@ -1508,7 +1521,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "PDC reload time: 2 seconds, AA Rate of Fire: 20. Missiles Enabled...",
+                                "LocalizedShortDescriptionStringID": "PDC Rate of Fire: 6, AA Rate of Fire: 20. Missiles Enabled...",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_5_StatusEffect_MP": {
                                         "BuffsToApplyToTarget": {
@@ -1537,27 +1550,51 @@
                                                     "5": { "Value": 20 }, // Fire rate display
                                                     "6": {
                                                         "Name": "TURRET_FR",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1500
+                                                        "Value": 2
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1500
+                                                        "Value": 2
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1500
+                                                        "Value": 2
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1500
+                                                        "Value": 2
+                                                    },
+                                                    "10": {
+                                                        "Name": "TURRET_FR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "11": {
+                                                        "Name": "TURRET_FL",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "12": {
+                                                        "Name": "TURRET_BR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "13": {
+                                                        "Name": "TURRET_BL",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
                                                     }
                                                 }
                                             }
@@ -1608,7 +1645,7 @@
                                                     "0": {
                                                         "Mode": "Set",
 
-                                                        "Value": 30
+                                                        "Value": 1250
                                                     }
                                                 }
                                             }
@@ -1620,6 +1657,10 @@
                     },
 
                     "2": { // Reactive Armor
+                        "View": {
+                            "LocalizedTitleStringID": "PLOT ARMOUR",
+                            "LocalizedLongDescriptionStringID": "Increase power to maximise carrier's tankiness."
+                        },
                         "PowerLevels": {
 
                             "0": {
@@ -2731,12 +2772,17 @@
                 "PowerSystems": {
 
                     "0": { // Defensive Logistics
+                        "View": {
+                            "LocalizedTitleStringID": "BASECAMPING SYSTEMS",
+                            "LocalizedShortDescriptionStringID": "[00FF00]BASE SUPPORT",
+                            "LocalizedLongDescriptionStringID": "Improve AA-Logistics modules deploy, contact, weapon range and damage. Increase power of carrier's repair system."
+                        },
                         "PowerLevels": {
                             "0": {
                                 "LocalizedShortDescriptionStringID": "Common module deploy and contact range."
                             },
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Uncommon deploy and contact range. Weapons enabled. Carrier repair systems enabled.",
+                                "LocalizedShortDescriptionStringID": "Uncommon deploy and contact range. Weapons enabled. [8bca84]Carrier repair systems enabled[ffffff].",
                                 "StatusEffectsToApply": {
                                     "ScannerShunt_1_StatusEffect": {
                                         "UnitTypeBuffsToApply": {
@@ -3096,11 +3142,11 @@
                         "PowerLevels": {
 
                             "0": {
-                                "LocalizedShortDescriptionStringID": "16s reload"
+                                "LocalizedShortDescriptionStringID": "16s reload of railguns"
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "8s reload",
+                                "LocalizedShortDescriptionStringID": "8s reload of railguns",
                                 "StatusEffectsToApply": {
                                     "C_Sob_Weapons_1_StatusEffect": {
                                         "Modifiers": {
@@ -3211,7 +3257,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "4s reload",
+                                "LocalizedShortDescriptionStringID": "4s reload of railguns",
                                 "StatusEffectsToApply": {
                                     "C_Sob_Weapons_2_StatusEffect": {
                                         "Modifiers": {
@@ -3279,7 +3325,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "3s reload",
+                                "LocalizedShortDescriptionStringID": "3s reload of railguns",
                                 "StatusEffectsToApply": {
                                     "C_Sob_Weapons_3_StatusEffect": {
                                         "Modifiers": {
@@ -3348,7 +3394,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "2s reload",
+                                "LocalizedShortDescriptionStringID": "2s reload of railguns",
                                 "StatusEffectsToApply": {
                                     "C_Sob_Weapons_4_StatusEffect": {
                                         "Modifiers": {
@@ -3416,7 +3462,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "1s reload, missiles enabled...",
+                                "LocalizedShortDescriptionStringID": "1s reload of railguns, missiles enabled...",
                                 "StatusEffectsToApply": {
                                     "C_Sob_Weapons_5_StatusEffect": {
 
@@ -3482,6 +3528,10 @@
                     },
 
                     "2": { // Reactive Armor
+                        "View": {
+                            "LocalizedTitleStringID": "PLOT ARMOUR",
+                            "LocalizedLongDescriptionStringID": "Increase power to maximise carrier's tankiness."
+                        },
                         "PowerLevels": {
 
                             "0": {
@@ -3600,11 +3650,15 @@
                     },
 
                     "3": { // Range Systems
-                        "View": { "LocalizedLongDescriptionStringID": "Increase power to maximise accuracy of build-in railguns via rerouting alchohol from gunners posts into alchohol throwers." },
+                        "View": {
+                            "LocalizedTitleStringID": "ACCURACY SYSTEMS",
+                            "LocalizedShortDescriptionStringID": "[00FF00]ACCURACY",
+                            "LocalizedLongDescriptionStringID": "Increase power to maximise accuracy of build-in railguns via rerouting alchohol from gunners posts into alchohol throwers."
+                        },
                         "PowerLevels": {
 
                             "0": {
-                                "LocalizedShortDescriptionStringID": "Whara yall, im gona hit YA! hey ya dont move eh? "
+                                "LocalizedShortDescriptionStringID": "Whara yall, im gona hit YA! hey ya dont move eh? Wadya mean by gimme your bottle you cant have it, its mine!"
                             },
 
                             // ========================================= //
@@ -3617,7 +3671,7 @@
                             // ========================================= //
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 60%, Missile and Alchohol throwers Range: 900m. Alchohol throwers Debuff - 10% Weapons range and +10% speed.",
+                                "LocalizedShortDescriptionStringID": "Alchohol throwers online. Accuracy of railguns up to 60%, Missile and Alchohol throwers Range: 900m. Alchohol throwers Debuff - 10% Weapons range and +10% speed.",
                                 "StatusEffectsToApply": {
                                     "Range_1_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -3778,7 +3832,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 70%, Missile and Alchohol throwers Range: 1100m. Alchohol throwers Debuff -20% Weapons range and +20% speed.",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 70%, Missile and Alchohol throwers Range: 1100m. Debuff -20% / +20% .",
                                 "StatusEffectsToApply": {
                                     "Range_2_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -3944,7 +3998,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 80%, Missile and Alchohol throwers Range: 1400m. Alchohol throwers Debuff -30% Weapons range and +30% speed.",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 80%, Missile and Alchohol throwers Range: 1400m Debuff -30% / +30%.",
                                 "StatusEffectsToApply": {
                                     "Range_3_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -4110,7 +4164,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 90%, Missile and Alchohol throwers Range: 1800m. Alchohol throwers Debuff -40% Weapons range and +40% speed.",
+                                "LocalizedShortDescriptionStringID": "Accuracy of railguns up to 90%, Missile and Alchohol throwers Range: 1800m, Debuff -40% / +40%.",
                                 "StatusEffectsToApply": {
                                     "Range_4_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -4276,7 +4330,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Sniper is a good job mate, Missile and Alchohol throwers Range: 2300m. Alchohol throwers Debuff -50% Weapons range and +50% speed.",
+                                "LocalizedShortDescriptionStringID": "Sniper is a good job mate, Missile and Alchohol throwers Range: 2300m, Debuff -50% / +50%.",
                                 "StatusEffectsToApply": {
                                     "Range_5_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -5294,7 +5348,7 @@
                                             "0": {
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 30,
+                                                        "Value": 1250,
                                                         "Mode": "Set"
                                                     },
                                                     "1": {
@@ -7194,7 +7248,10 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 0 }
+                                                    "0": {
+                                                        "Mode": "Set",
+                                                        "Value": 1250
+                                                    }
                                                 }
                                             }
                                         }
@@ -11425,7 +11482,7 @@
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 100,
-                        "Distance": 1000
+                        "Distance": 700
                     },
                     "LeadsTarget": 1,
                     "AreaOfEffectRadius": 25.0,
@@ -11549,7 +11606,7 @@
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 100,
-                        "Distance": 1000
+                        "Distance": 700
                     },
                     "LeadsTarget": 1,
                     "AreaOfEffectRadius": 25.0,
