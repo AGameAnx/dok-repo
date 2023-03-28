@@ -1,5 +1,5 @@
-{/*
-    "Global": {
+{
+    /*"Global": {
          
 
         "UnitAttributes": {
@@ -556,7 +556,7 @@
                     "DamagePacketsPerShot": 1,
                     "BaseDamagePerRound": 700,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
-                    "AreaOfEffectRadius": 150,
+                    "AreaOfEffectRadius": 250,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
                     "Modifiers": {
@@ -659,7 +659,7 @@
                     "DamagePacketsPerShot": 1,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
                     "AreaOfEffectRadius": 150,
-                    "BaseDamagePerRound": 300,
+                    "BaseDamagePerRound": 550,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
                     "Modifiers": {
@@ -817,7 +817,7 @@
                         "IsAutocastable": true,
                         "AutocastEnabledOnSpawn": true
                     },
-                    "CooldownTimeSecs": 20,
+                    "CooldownTimeSecs": 60,
                     "ProduceUnit": { "UnitTypeToProduce": "C_Battlecruiser_MP" }
                 },
                 "Ability_Produce_G_Baserunner": {
@@ -825,7 +825,7 @@
                         "IsAutocastable": true,
                         "AutocastEnabledOnSpawn": true
                     },
-                    "CooldownTimeSecs": 60,
+                    "CooldownTimeSecs": 120,
                     "ProduceUnit": { "UnitTypeToProduce": "G_BattleCruiser_MP" }
                 },
                 "Ability_G_FatherShipRegen": {
@@ -987,13 +987,13 @@
                 "HackableProperties": "NonHackable",
                 "Resource1Cost": 0,
                 "Resource2Cost": 0,
-                "MaxHealth": 5650,
-                "LeashRange": 4000,
+                "MaxHealth": 7650,
+                "LeashRange": 5000,
                 "SensorRadius": 3000,
-                "AggroRange": 4000,
+                "AggroRange": 5000,
                 "PopCapCost": 0,
                 "ProductionTime": 5,
-                "Armour": 5
+                "Armour": 9
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -1075,21 +1075,24 @@
                 "G_Battlecruiser_Weapon_G2G_MP": {
                     "RateOfFire": 10,
                     "NumberOfBursts": 2,
-                    "TargetPrioritizationAttributes": {
-                        "AutoTargetStickyBias": -99999
-                    },
                     "Turret": {
                         "RotationSpeed": 480
                     },
-                    "ReloadTimeMS": 2050,
+                    "ReloadTimeMS": 2550,
+                    "TargetPrioritizationAttributes": {
+                        "DistanceWeight": 100,
+                        "WeaponEffectivenessWeight": 150,
+                        "AutoTargetStickyBias": 100,
+                        "TargetSameCommanderBias": -10000
+                    },
                     "LeadsTarget": 1,
-                    "BurstPeriodMinTimeMS": 200,
-                    "BurstPeriodMaxTimeMS": 200,
-                    "CooldownTimeMS": 550,
+                    "ProjectileEntityTypeToSpawn": "G_Interceptor_A2GA_ProjectileAssetContainer_MP",
+                    "BurstPeriodMinTimeMS": 100,
+                    "BurstPeriodMaxTimeMS": 100,
+                    "CooldownTimeMS": 950,
                     "DamagePacketsPerShot": 1,
-                    "BaseDamagePerRound": 50,
+                    "BaseDamagePerRound": 150,
                     "AreaOfEffectRadius": 90,
-                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer",
                     "IsTracer": false,
                     "TracerSpeed": 0,
                     "TracerLength": 5,
@@ -1100,18 +1103,33 @@
                     },
                     "RangeAttributesMedium": {
                         "Distance": 1400,
-                        "Accuracy": 80
+                        "Accuracy": 100
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 70,
-                        "Distance": 1600
+                        "Accuracy": 100,
+                        "Distance": 1900
                     }
                 },
                 "G_Battlecruiser_Weapon_G2A_MP": {
-                    "RangeAttributesLong": { "Distance": 1000 },
-                    "RateOfFire": 4,
+                    "RangeAttributesLong": {
+                        "Distance": 3000,
+                        "Accuracy": 0
+                    },
+                    "RangeAttributesShort": {
+                        "Accuracy": 0
+                    },
+                    "RangeAttributesMedium": {
+                        "Accuracy": 0
+                    },
+                    "RateOfFire": 8,
+                    "ReloadTimeMS": 7500,
+                    "AreaOfEffectRadius": 150,
+                    "TargetPrioritizationAttributes": {
+                        "AutoTargetStickyBias": 100,
+                        "TargetSameCommanderBias": -10000
+                    },
                     "FriendlyFireDamageScalar": 1,
-                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
+                    "ProjectileEntityTypeToSpawn": "G_FatherShipArtillery_Shell_ProjectileAssetContainer",
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Air"
@@ -1121,10 +1139,14 @@
                 "G_BattleCruiser_Weapon_Missile_MP": {
                     "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Arc_ProjectileAssetContainer_MP",
                     "BaseDamagePerRound": 75,
+                    "TargetPrioritizationAttributes": {
+                        "AutoTargetStickyBias": 100,
+                        "TargetSameCommanderBias": -10000
+                    },
                     "ExcludeFromAutoTargetAcquisition": false,
                     "ExcludeFromAutoFire": false,
                     "AreaOfEffectRadius": 150,
-                    "ReloadTimeMS": 9500,
+                    "ReloadTimeMS": 5500,
                     "FriendlyFireDamageScalar": 1,
                     "NumberOfBursts": 2,
                     "RateOfFire": 5,
@@ -1149,11 +1171,11 @@
             "UnitMovementAttributes": {
                 "Combat": {
                     "MinDesiredCombatRange": 0,
-                    "MaxDesiredCombatRange": 1500,
+                    "MaxDesiredCombatRange": 1850,
                     "ActiveCombatApproachMode": "Snipe",
                     "PassiveCombatApproachMode": "Snipe"
                 },
-                "Dynamics": { "MaxSpeed": 40 }
+                "Dynamics": { "MaxSpeed": 45 }
             },
             "AbilityAttributes": {
                 "Ability_G_BattleCruiser_EnableAir_MP": {
@@ -1260,22 +1282,22 @@
                 "Resource2Cost": 0,
                 "MaxHealth": 2350,
                 "PopCapCost": 0,
-                "LeashRange": 4000,
+                "LeashRange": 5000,
                 "SensorRadius": 3000,
-                "AggroRange": 4000,
+                "AggroRange": 5000,
                 "ProductionTime": 5,
                 "Armour": 7,
                 "FireRateDisplay": 3
             },
             "UnitMovementAttributes": {
                 "Combat": {
-                    "MinDesiredCombatRange": 1500,
-                    "MaxDesiredCombatRange": 1900,
+                    "MinDesiredCombatRange": 1900,
+                    "MaxDesiredCombatRange": 2300,
                     "ActiveCombatApproachMode": "Circle",
                     "PassiveCombatApproachMode": "Circle"
                 },
                 "Dynamics": {
-                    "MaxSpeed": 95,
+                    "MaxSpeed": 105,
                     "MaxSpeedTurnRadius": 200,
                     "AccelerationTime": 0.9,
                     "BrakingTime": 0.9
@@ -1393,9 +1415,9 @@
                     },
                     "ReloadTimeMS": 6500,
                     "RangeAttributesLong": {
-                        "Distance": 2000,
+                        "Distance": 2400,
                         "MinDistance": 50,
-                        "Accuracy": 50
+                        "Accuracy": 100
                     },
                     "RangeAttributesMedium": {
                         "Remove": true
@@ -2208,16 +2230,14 @@
                         }
                     },
                     "2": { // Reactive Armor
-			"View": {
+                        "View": {
                             "LocalizedTitleStringID": "PLOT ARMOUR",
                             "LocalizedLongDescriptionStringID": "Increase power to maximise carrier's tankiness."
                         },
                         "PowerLevels": {
-
                             "0": {
                                 "LocalizedShortDescriptionStringID": "Armor: 1"
                             },
-
                             "1": {
                                 "LocalizedShortDescriptionStringID": "Armor: 3, Extra 1000 hp",
                                 "StatusEffectsToApply": {
