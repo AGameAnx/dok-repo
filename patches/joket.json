@@ -8,9 +8,9 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.08.10",
-        "LastUpdate": "2023-03-26",
-        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joet.json"
+        "Version": "1.08.11",
+        "LastUpdate": "2023-04-03",
+        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     "Global": {
         "UnitAttributes": {
@@ -2714,6 +2714,9 @@
                     "EntityTypesToSpawnOnImpact": {
                         "0": {
                             "EntityTypeToSpawn": "C_Sob_NukeEmitter_MP"
+                        },
+                        "1": {
+                            "EntityTypeToSpawn": "C_Sob_NukeSight_MP"
                         }
                     },
                     "CooldownTimeMS": 0,
@@ -7332,12 +7335,13 @@
             },
             "WeaponAttributes": {
                 "C_Sob_NukeEmitter_Weapon_G2G": {
-                    "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
+                    "BurstPeriodMinTimeMS": 16000,
+                    "BurstPeriodMaxTimeMS": 16000,
                     "CooldownTimeMS": 0,
                     "ActiveStatusEffectsIndex": 1,
+                    "RateOfFire": 4,
                     "NumberOfBursts": 1,
-                    "BaseDamagePerRound": 400,
+                    "BaseDamagePerRound": 100,
                     "ReloadTimeMS": 0,
                     "DamagePacketsPerShot": 0,
                     "StatusEffectsExcludeTargetType": 0,
@@ -7360,7 +7364,7 @@
                             "TargetClass": "Carrier, Large, XLarge",
                             "ClassOperator": "Or",
                             "Modifier": "DamagePercent",
-                            "Amount": 120
+                            "Amount": 100
                         }
                     }
                 },

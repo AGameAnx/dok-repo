@@ -2703,7 +2703,7 @@
                     "LineOfSightRequired": false,
                     "DamagePacketsPerShot": 1,
                     "ProjectileEntityTypeToSpawn": "S_Carrier_Microwave_ProjectileAssetContainer_MP",
-                    "BaseDamagePerRound": 5,
+                    "BaseDamagePerRound": 50,
                     "AreaOfEffectRadius": 500,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "BurstPeriodMinTimeMS": 50,
@@ -7335,12 +7335,13 @@
             },
             "WeaponAttributes": {
                 "C_Sob_NukeEmitter_Weapon_G2G": {
-                    "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
+                    "BurstPeriodMinTimeMS": 16000,
+                    "BurstPeriodMaxTimeMS": 16000,
                     "CooldownTimeMS": 0,
                     "ActiveStatusEffectsIndex": 1,
+                    "RateOfFire": 4,
                     "NumberOfBursts": 1,
-                    "BaseDamagePerRound": 400,
+                    "BaseDamagePerRound": 100,
                     "ReloadTimeMS": 0,
                     "DamagePacketsPerShot": 0,
                     "StatusEffectsExcludeTargetType": 0,
@@ -7363,7 +7364,7 @@
                             "TargetClass": "Carrier, Large, XLarge",
                             "ClassOperator": "Or",
                             "Modifier": "DamagePercent",
-                            "Amount": 120
+                            "Amount": 100
                         }
                     }
                 },
