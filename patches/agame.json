@@ -3163,14 +3163,20 @@
 		},
 
 		"C_Sob_NukeEmitter_MP": {
+			// Current duration: 30s
+			// Duration of MWE is MaxHealth divided by dps of C_Sob_NukeEmitter_Weapon_G2G weapon.
+			// ROF on the weapon is 1, therefore it fires one instance of damage per second (despite the short burst period).
+			// Take note of modifiers, currently there's a 50% damage modifier against Small, which affects the emitter.
 			"UnitAttributes": {
-				"MaxHealth": 1500, // this affects the duration, current duration is 30s, duration is MaxHealth divided by half of BaseDamagePerRound of C_Sob_NukeEmitter_Weapon_G2G weapon
+				//Unitclass: "Ground, Small"
+				"MaxHealth": 1500,
 				"PopCapCost": 0,
 				"ContactRadius": 0,
 				"SensorRadius": 0
 			},
 			"WeaponAttributes": {
 				"C_Sob_NukeEmitter_Weapon_G2G": {
+					//"RateOfFire": 1,
 					"BurstPeriodMinTimeMS": 250,
 					"BurstPeriodMaxTimeMS": 250,
 					"CooldownTimeMS": 0,
