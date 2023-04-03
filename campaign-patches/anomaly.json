@@ -324,6 +324,10 @@
                 "Ability_C_OrbitalWeapon_Narrow": {
                     "Resource1Cost": 0,
                     "CooldownTimeSecs": 60
+                },
+                "Ability_C_Hack_Advanced": {
+                    "Resource1Cost": 0,
+                    "CooldownTimeSecs": 90
                 }
             },
             "UnitMovementAttributes": {
@@ -435,7 +439,10 @@
                             "Modifier": "AccuracyLongValue",
                             "Amount": 1000000
                         },
-                        "4": { "Remove": true },
+                        "4": {
+                            "TargetClass": "Carrier",
+                            "Modifier": "CanNotTarget"
+                        },
                         "5": { "Remove": true },
                         "6": { "Remove": true },
                         "7": { "Remove": true },
@@ -1503,7 +1510,7 @@
                     "MaxSpeedTurnRadius": 105,
                     "BrakingTime": 0.9,
                     "AccelerationTime": 0.9,
-                    "MaxEaseIntoTurnTime": 0.25
+                    "MaxEaseIntoTurnTime": 1
                 }
             },
             "DetectableAttributes": {
@@ -1567,19 +1574,25 @@
                     "BaseDamagePerRound": 10
                 },
                 "C_Carrier_Weapon_G2All_PenetrationShots": {
-                    "ExcludeFromHeightAdvantage": true,
-                    "AreaOfEffectFalloffType": "None",
-                    "RateOfFire": 200,
-                    "TargetStyle": "Flak",
-                    "AreaOfEffectRadius": 450,
-                    "BaseDamagePerRound": 1,
-                    "CooldownTimeMS": 750,
+                    "BaseDamagePerRound": 125,
+                    "ReloadTimeMS": 8500,
+                    "FriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 1,
+                    "CooldownTimeMS": 8500,
+                    "BurstPeriodMinTimeMS": 1500,
+                    "BurstPeriodMaxTimeMS": 1500,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_AA_ProjectileAssetContainer",
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
                     "LineOfSightRequired": false,
-                    "ReloadTimeMS": 4500,
-                    "BurstPeriodMinTimeMS": 250,
-                    "BurstPeriodMaxTimeMS": 250,
-                    "DamagePacketsPerShot": 1,
-                    "NumberOfBursts": 4,
+                    "NumberOfBursts": 2,
+                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "LeadsTarget": 0,
+                    "TracerLength": 5,
+                    "ExcludeFromHeightAdvantage": true,
+                    "RateOfFire": 1,
+                    "TargetStyle": "Flak",
                     "Modifiers": {
                         "0": {
                             "Modifier": "CanTarget",
@@ -1587,15 +1600,21 @@
                             "ClassOperator": "Or"
                         },
                         "1": {
-                            "Modifier": "CanNotTarget",
+                            "Modifier": "CanTarget",
                             "TargetClass": "Ground",
                             "ClassOperator": "Or"
                         },
                         "2": {
-                            "Remove": true
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyMediumValue",
+                            "Amount": 50
                         },
                         "3": {
-                            "Remove": true
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyLongValue",
+                            "Amount": 25
                         },
                         "4": {
                             "Remove": true
@@ -1609,11 +1628,11 @@
                     },
                     "RangeAttributesMedium": {
                         "Distance": 1200,
-                        "Accuracy": 0
+                        "Accuracy": 100
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 0,
-                        "Distance": 1600
+                        "Accuracy": 100,
+                        "Distance": 1400
                     }
                 },
                 "C_Carrier_Weapon_AA": {
@@ -1686,7 +1705,7 @@
                     "ReloadTimeMS": 12000,
                     "CooldownTimeMS": 0,
                     "RangeAttributesShort": {
-                        "Distance": 1500
+                        "Distance": 1600
                     },
                     "RangeAttributesMedium": {
                         "Remove": true
@@ -1900,11 +1919,11 @@
 
                     "1": { // Weapon Systems
                         "View": {
-                            "LocalizedLongDescriptionStringID": "Increase power to maximize machineguns, falk perfomance, also boost reloade time of 2 gaalsien interceptors tied up in missile bay."
+                            "LocalizedLongDescriptionStringID": "Increase power to maximize machineguns, missile pods perfomance, also boost reloade time of 2 gaalsien interceptors tied up in missile bay."
                         },
                         "PowerLevels": {
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Uncommon PD, Flak, Interceptor's missiles fire rate bonus",
+                                "LocalizedShortDescriptionStringID": "Uncommon PD, Pods, Interceptor's missiles fire rate bonus",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_1_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1933,27 +1952,27 @@
                                                     },
                                                     "10": {
                                                         "Name": "TURRET_FR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 0
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 0
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 0
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 0
                                                     }
 
                                                 }
@@ -1963,7 +1982,7 @@
                                 }
                             },
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Rare PD, Flak, Interceptor's missiles fire rate bonus",
+                                "LocalizedShortDescriptionStringID": "Rare PD, Pods, Interceptor's missiles fire rate bonus",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_2_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -1992,27 +2011,27 @@
                                                     },
                                                     "10": {
                                                         "Name": "TURRET_FR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3000
+                                                        "Value": 2
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3000
+                                                        "Value": 2
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3000
+                                                        "Value": 2
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3000
+                                                        "Value": 2
                                                     }
                                                 }
                                             }
@@ -2022,7 +2041,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Very Rare PD, Flak, Interceptor's missiles fire rate bonus",
+                                "LocalizedShortDescriptionStringID": "Very Rare PD, Pods, Interceptor's missiles fire rate bonus",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_3_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -2051,27 +2070,27 @@
                                                     },
                                                     "10": {
                                                         "Name": "TURRET_FR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2000
+                                                        "Value": 3
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2000
+                                                        "Value": 3
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2000
+                                                        "Value": 3
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2000
+                                                        "Value": 3
                                                     }
                                                 }
                                             }
@@ -2081,7 +2100,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Legendary PD, Flak, Interceptor's missiles fire rate bonus",
+                                "LocalizedShortDescriptionStringID": "Legendary PD, Pods, Interceptor's missiles fire rate bonus",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_4_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -2110,27 +2129,51 @@
                                                     },
                                                     "10": {
                                                         "Name": "TURRET_FR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 2
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 2
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 2
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 2
+                                                    },
+                                                    "11": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "12": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "13": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "14": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
                                                     }
 
                                                 }
@@ -2152,7 +2195,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Artifact tier PD, Flak, Interceptor's missiles fire rate bonus.",
+                                "LocalizedShortDescriptionStringID": "Artifact tier PD, Pods, Interceptor's missiles fire rate bonus.",
                                 "StatusEffectsToApply": {
                                     "C_Weapons_5_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -2205,6 +2248,30 @@
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "11": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "12": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "13": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "14": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
                                                         "Value": 0
                                                     }
@@ -2364,7 +2431,7 @@
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Turret Range: 1100, Flak / Missile Range: 1700m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1100, Pods / Missile Range: 1700m",
                                 "StatusEffectsToApply": {
                                     "Range_1_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -2431,7 +2498,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Turret Range: 1400, Flak / Missile Range: 1800m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1400, Pods / Missile Range: 1800m",
                                 "StatusEffectsToApply": {
                                     "Range_2_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -2490,7 +2557,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Turret Range: 1450, Flak / Missile Range: 1900m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1450, Pods / Missile Range: 1900m",
                                 "StatusEffectsToApply": {
                                     "Range_3_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -2549,7 +2616,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Turret Range: 1550, Flak / Missile Range: 2000m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1550, Pods / Missile Range: 2000m",
                                 "StatusEffectsToApply": {
                                     "Range_4_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -2608,7 +2675,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Turret Range: 1825, Flak / Missile Range: 2300m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1825, Pods / Missile Range: 2300m",
                                 "StatusEffectsToApply": {
                                     "Range_5_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -4454,10 +4521,9 @@
                     "MaxDesiredCombatRange": 700
                 },
                 "Dynamics": {
-                    "MaxSpeedTurnRadius": 105,
                     "BrakingTime": 0.9,
                     "AccelerationTime": 0.9,
-                    "MaxEaseIntoTurnTime": 0.25
+                    "MaxEaseIntoTurnTime": 1
                 }
             },
             "DetectableAttributes": {
@@ -4488,7 +4554,7 @@
                     }
                 },
                 "Ability_C_CruiseMissile": {
-                    "CooldownTimeSecs": 300
+                    "CooldownTimeSecs": 150
                 },
                 "Ability_C_LaunchInterceptor": {
                     "AirSortie": {
@@ -4537,19 +4603,25 @@
                     "BaseDamagePerRound": 10
                 },
                 "C_Carrier_Weapon_G2All_PenetrationShots": {
-                    "ExcludeFromHeightAdvantage": true,
-                    "AreaOfEffectFalloffType": "None",
-                    "RateOfFire": 200,
-                    "TargetStyle": "Flak",
-                    "AreaOfEffectRadius": 450,
-                    "BaseDamagePerRound": 1,
-                    "CooldownTimeMS": 750,
+                    "BaseDamagePerRound": 155,
+                    "ReloadTimeMS": 8500,
                     "LineOfSightRequired": false,
-                    "ReloadTimeMS": 4500,
-                    "BurstPeriodMinTimeMS": 250,
-                    "BurstPeriodMaxTimeMS": 250,
-                    "DamagePacketsPerShot": 1,
-                    "NumberOfBursts": 4,
+                    "FriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 1,
+                    "CooldownTimeMS": 8500,
+                    "BurstPeriodMinTimeMS": 1500,
+                    "BurstPeriodMaxTimeMS": 1500,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_AA_ProjectileAssetContainer",
+                    "IsTracer": false,
+                    "TracerSpeed": 0,
+                    "NumberOfBursts": 2,
+                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "LeadsTarget": 0,
+                    "TracerLength": 5,
+                    "ExcludeFromHeightAdvantage": true,
+                    "RateOfFire": 1,
+                    "TargetStyle": "Flak",
                     "Modifiers": {
                         "0": {
                             "Modifier": "CanTarget",
@@ -4557,15 +4629,21 @@
                             "ClassOperator": "Or"
                         },
                         "1": {
-                            "Modifier": "CanNotTarget",
+                            "Modifier": "CanTarget",
                             "TargetClass": "Ground",
                             "ClassOperator": "Or"
                         },
                         "2": {
-                            "Remove": true
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyMediumValue",
+                            "Amount": 50
                         },
                         "3": {
-                            "Remove": true
+                            "TargetClass": "Ground",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyLongValue",
+                            "Amount": 25
                         },
                         "4": {
                             "Remove": true
@@ -4579,11 +4657,11 @@
                     },
                     "RangeAttributesMedium": {
                         "Distance": 1200,
-                        "Accuracy": 0
+                        "Accuracy": 100
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 0,
-                        "Distance": 1600
+                        "Accuracy": 100,
+                        "Distance": 1400
                     }
                 },
                 "C_Carrier_Weapon_AA": {
@@ -4603,7 +4681,7 @@
                     "ReloadTimeMS": 6000,
                     "CooldownTimeMS": 0,
                     "RangeAttributesShort": {
-                        "Distance": 1500
+                        "Distance": 1600
                     },
                     "RangeAttributesMedium": {
                         "Remove": true
@@ -4910,27 +4988,27 @@
                                                     },
                                                     "10": {
                                                         "Name": "TURRET_FR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 0
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 0
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 0
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 4000
+                                                        "Value": 0
                                                     }
 
                                                 }
@@ -4971,27 +5049,27 @@
                                                     },
                                                     "10": {
                                                         "Name": "TURRET_FR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3000
+                                                        "Value": 2
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3000
+                                                        "Value": 2
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3000
+                                                        "Value": 2
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3000
+                                                        "Value": 2
                                                     }
                                                 }
                                             }
@@ -5032,27 +5110,27 @@
                                                     },
                                                     "10": {
                                                         "Name": "TURRET_FR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2000
+                                                        "Value": 3
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2000
+                                                        "Value": 3
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2000
+                                                        "Value": 3
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2000
+                                                        "Value": 3
                                                     }
                                                 }
                                             }
@@ -5093,27 +5171,51 @@
                                                     },
                                                     "10": {
                                                         "Name": "TURRET_FR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 2
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_FL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 2
                                                     },
                                                     "8": {
                                                         "Name": "TURRET_BR_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 2
                                                     },
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
-                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 2
+                                                    },
+                                                    "11": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "12": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "13": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "14": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
                                                     }
 
                                                 }
@@ -5190,6 +5292,30 @@
                                                     "9": {
                                                         "Name": "TURRET_BL_APBULLETS",
                                                         "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "11": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "12": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "13": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 0
+                                                    },
+                                                    "14": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
                                                         "Value": 0
                                                     }
