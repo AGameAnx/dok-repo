@@ -108,7 +108,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2022-07-13 15.1](#2022-07-13-151)
 	- [2023-01-09 16.0 (Jaraci Cup #16)](#2023-01-09-160-jaraci-cup-16)
 	- [2023-03-08 17.0](#2023-03-08-170)
-	- [2023-03-09 17.1](#2023-03-09-171)
+	- [2023-03-09 17.1 (Jaraci Cup #17)](#2023-03-09-171-jaraci-cup-17)
+	- [2023-04-06 18.0 (/p agame only)](#2023-04-06-180-p-agame-only)
 
 # Changes
 
@@ -2731,7 +2732,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Gaalsien/Khaaneph:
 	* Sandskimmer raiding upgrade cost: `200CU 125RU => 200CU 100RU`
 	* Assault railgun max speed: `89 => 91`
-	* Railgun EMP ability no longer applies sunder (Thanks Just_Carrier)
+	* Railgun EMP ability no longer applies sunder (Thanks Just_carrier)
 	* Ranged calibration:
 		* Range bonus: `300 => 500`
 		* Movement speed penalty: `66% => 40%`
@@ -2747,7 +2748,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 				* Level 3: `200 => 300`
 				* Level 4: `250 => 400`
 				* Level 5: `300 => 500`
-		* PD field of fire: `130 => 200` (Now matches other carriers. Thanks Just_Carrier)
+		* PD field of fire: `130 => 200` (Now matches other carriers. Thanks Just_carrier)
 
 ## 2022-05-24 14.2
 *Not yet reflected in the main changelog.*
@@ -2902,7 +2903,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Contact radius: `2500 => 2600`
 		* Rate of fire: `4 => 6` (Volleys of rockets: `3 => 2`)
 		* Damage packets: `3 => 2`
-		* Damage: `100 => 70` (Per volley: `400 => 420`, Total damage: `1200 => 840`, Total damage against SC: `1020 => 720`, Ints needed to kill SC: `3 (if lucky) => 5`)
+		* Damage: `100 => 70` (Per volley: `400 => 420`, Total damage: `1200 => 840`, Total damage against SC: `1020 => 720`, Interceptors needed to kill SC: `3 (if lucky) => 5`)
 		* Reload: `4.5s => 4s`
 		* Damage against carriers: `60% => 100%` (modifier removed)
 		* Afterburner upgrade cost: `200CU 120RU => 200CU 150RU`
@@ -2944,7 +2945,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Soban:
 	* Support cruiser:
 		* Fixed an issue where repair rate wasn't modified as intended: `7 => 6`
-		* Introduced slightly changed soban-specific visuals (thanks Just_Carrier)
+		* Introduced slightly changed soban-specific visuals (Thanks Just_carrier)
 * Gaalsien/Khaaneph:
 	* Interceptor:
 		* AOE: `69 => 60`
@@ -2953,9 +2954,9 @@ Full combined changelog can be found [HERE](jaraci.md)
 ## 2023-01-09 16.0 (Jaraci Cup #16)
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
-	* Minor housekeeping changes to Support Cruiser AA to unify functionality between factions (thanks Just_Carrier)
+	* Minor housekeeping changes to Support Cruiser AA to unify functionality between factions (Thanks Just_carrier)
 * Soban:
-	* Assault cruiser now has a soban-specific appearance (thanks Just_Carrier)
+	* Assault cruiser now has a soban-specific appearance (Thanks Just_carrier)
 
 ## 2023-03-08 17.0
 *Not yet reflected in the main changelog.*
@@ -2964,7 +2965,24 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Gaalsien/Khaaneph:
 	* Heavy Railgun max desired combat range: `1620 => 1730` (These are targeted changes to prevent heavy railguns from driving into range of soban battlecruisers on their own)
 
-## 2023-03-09 17.1
+## 2023-03-09 17.1 (Jaraci Cup #17)
 *Not yet reflected in the main changelog.*
 * Coalition:
-	* Fixed incorrect carrier penetrating shots damage display (UI visual only): `75 => 70` (Thanks Just_Carrier)
+	* Fixed incorrect carrier penetrating shots damage display (UI visual only): `75 => 70` (Thanks Just_carrier)
+
+## 2023-04-06 18.0 (/p agame only)
+*Not yet reflected in the main changelog.*
+* Coalition/Soban:
+	* Artillery cruiser (QOL, allows choosing autofire targets and using a-move without closing in):
+		* Active combat approach mode: `Snipe => Hold`
+		* Max desired combat range: `750 => 2300`
+* Coalition:
+	* Battlecruiser:
+		* Max desired combat range: `1200 => 1110` (Fixes incorrect attack order behavior. Thanks Just_carrier)
+		* Turret: (Fixes behavior on the move and against fast moving units. New values match Soban. Thanks Just_carrier)
+			* Rotation rate: `80 => 180`
+			* Field of fire: `2 => 10`
+* Soban:
+	* Battlecruiser max desired combat range: `1200 => 1580` (Fixes incorrect attack order behavior)
+* Gaalsien:
+	* Siege cruiser active combat approach mode: `Snipe => Hold` (QOL, allows choosing autofire targets and using a-move without closing in)
