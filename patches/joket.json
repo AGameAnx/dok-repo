@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.08.12",
-        "LastUpdate": "2023-04-07",
+        "Version": "1.08.20",
+        "LastUpdate": "2023-04-11",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     "Global": {
@@ -8922,6 +8922,7 @@
                 },
                 "G_Baserunner_Weapon_HealingAura_MP": {
                     "DamagePacketsPerShot": 0,
+                    "BaseWreckDamagePerRound": 1,
                     "RateOfFire": 25,
                     "DamageType": "Damage",
                     "BaseDamagePerRound": 4,
@@ -16580,8 +16581,9 @@
         // BATTLECRUISER FIELD REPAIR TOOLTIP
         "Ability_C_SmokeGrenade_BattleCruiser": {
             "AbilityViewAttributes": {
-                "LocalizedTitleStringID": "INTENSE SMOKING",
-                "LocalizedLongDescriptionStringID": "Temporary allow smoking on battlecruiser bridge, direct effect is damage to health, secondary effect nobody can directly shoot it."
+                "IconName": "Icon-Command-OrbitalWeapon_Broad",
+                "LocalizedTitleStringID": "PURGE!",
+                "LocalizedLongDescriptionStringID": "Call down an EXTERMINATUS on BattleCruiser location. 'YES! FIRE DIRECTLY ON OUR LOCATION! MUHAHAHAHAH'"
             }
         },
 
@@ -16726,12 +16728,19 @@
                     }
                 },
                 "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
-                    "StatusEffectsTargetAlignment": "Friend",
-                    "AreaOfEffectRadius": 1,
-                    "StatusEffectsSets": {
-                        "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "Remove": true
+                        }
                     },
-                    "StatusEffectsExcludeTargetType": "Air"
+                    "FriendlyFireDamageScalar": 1,
+                    "ProjectileEntityTypeToSpawn": "SuperWeapon_Broad_New_ProjectileAssetContainer",
+                    "WindUpTimeMS": 0,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "BaseDamagePerRound": 2500,
+                    "AreaOfEffectRadius": 800,
+                    "BaseWreckDamagePerRound": 100,
+                    "DamagePacketsPerShot": 0
                 }
             }
         },
@@ -16871,12 +16880,19 @@
                     "OutputDPS": true
                 },
                 "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
-                    "StatusEffectsTargetAlignment": "Friend",
-                    "AreaOfEffectRadius": 1,
-                    "StatusEffectsSets": {
-                        "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "Remove": true
+                        }
                     },
-                    "StatusEffectsExcludeTargetType": "Air"
+                    "FriendlyFireDamageScalar": 1,
+                    "ProjectileEntityTypeToSpawn": "SuperWeapon_Broad_New_ProjectileAssetContainer",
+                    "WindUpTimeMS": 0,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "BaseDamagePerRound": 2500,
+                    "AreaOfEffectRadius": 800,
+                    "BaseWreckDamagePerRound": 100,
+                    "DamagePacketsPerShot": 0
                 }
             }
         },
@@ -18186,7 +18202,7 @@
             "AbilityViewAttributes": {
                 "InvertFillCooldown": true,
                 "LocalizedTitleStringID": "ENABLE DEFENCE SYSTEMS",
-                "LocalizedLongDescriptionStringID": "For 25 seconds power from main weapon rerouted to anti-ground missile defences from main weapon.."
+                "LocalizedLongDescriptionStringID": "For 25 seconds power from main weapon rerouted to anti-ground missile defences."
             }
         },
         "Ability_G_ArtilleryBarrage_01_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
@@ -18200,7 +18216,7 @@
         "Ability_G_BaseRunnerPassiveRegen": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "RELEASE ANGRY NANITES",
-                "LocalizedLongDescriptionStringID": "Baserunner spews out nanits that feed on any surounding unit hull to restore baserunner health. Capable of repairing even without units around it using sand power.\n\n[999da0]Nanomachines son."
+                "LocalizedLongDescriptionStringID": "Baserunner spews out nanits that feed on any surounding unit hull to restore baserunner health. Capable of repairing even without units around it using sand power. Opens wrecks as byproduct.\n\n[999da0]Nanomachines son."
             }
         },
         "Ability_Produce_G_StarHull_U1_MP": {
