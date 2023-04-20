@@ -119,6 +119,12 @@
                 "LocalizedLongDescriptionStringID": "[84a1e8]WHAT DO YOU MEAN WE MISSING ONE RU???."
             }
         },
+        "Upgrade_Carrier_1": {
+            "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "DUMB NUKE FACTION - DUMB NUKE",
+                "LocalizedLongDescriptionStringID": "Upgrade Kapisi weapon systems; enable matter-antimatter... dosent matter...\nBIG, SLOW MOVING BALL OF DEATH, WITH EMP EFFECT."
+            }
+        },
         "Upgrade_Rachel_1": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "ANIME PROTAGONIST - REPAIR SPEED"
@@ -759,6 +765,11 @@
                 "LocalizedLongDescriptionStringID": "HUMMMMMM What if i smash one FIRE ZE MISSILES botton instead of all?."
             }
         },
+        "Ability_C_Hack": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "SEDUCE IT"
+            }
+        },
         "G_Fathership": {
             "UnitAttributes": {
                 "FireRateDisplay": 6,
@@ -822,7 +833,7 @@
                         "IsAutocastable": true,
                         "AutocastEnabledOnSpawn": true
                     },
-                    "CooldownTimeSecs": 45,
+                    "CooldownTimeSecs": 35,
                     "ProduceUnit": { "UnitTypeToProduce": "C_Battlecruiser_MP" }
                 },
                 "Ability_Produce_G_Baserunner": {
@@ -888,16 +899,43 @@
                         "DistanceWeight": 100000,
                         "AutoTargetStickyBias": 1000
                     },
-                    "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
+                    "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
                     "FriendlyFireDamageScalar": 1,
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Air",
+                            "Modifier": "CanTarget"
+                        },
+                        "1": {
+                            "TargetClass": "Ground",
+                            "Modifier": "CanTarget"
+                        },
+                        "2": {
+                            "TargetClass": "Air",
+                            "Modifier": "AccuracyLongPercent",
+                            "Amount": 10000
+                        },
+                        "3": {
+                            "Remove": true
+                        },
+                        "4": { "Remove": true },
+                        "5": { "Remove": true },
+                        "6": { "Remove": true },
+                        "7": { "Remove": true },
+                        "8": { "Remove": true },
+                        "9": { "Remove": true },
+                        "10": { "Remove": true },
+                        "11": { "Remove": true },
+                        "12": { "Remove": true }
+                    },
                     "NumberOfBursts": 1,
-                    "BaseDamagePerRound": 350,
+                    "BaseDamagePerRound": 550,
                     "ReloadTimeMS": 9550,
-                    "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
+                    "BurstPeriodMinTimeMS": 1,
+                    "BurstPeriodMaxTimeMS": 1999,
                     "CooldownTimeMS": 3000,
-                    "RateOfFire": 4,
-                    "AreaOfEffectRadius": 280,
+                    "RateOfFire": 1,
+                    "AreaOfEffectRadius": 880,
                     "LeadsTarget": "DirectAtTarget",
                     "RangeAttributesShort": {
                         "Accuracy": 0
@@ -906,7 +944,7 @@
                         "Accuracy": 0
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 0,
+                        "Accuracy": 1,
                         "Distance": 8800
                     },
                     "Turret": {
@@ -956,7 +994,7 @@
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Air",
-                            "Modifier": "CanTarget"
+                            "Modifier": "CanNotTarget"
                         },
                         "1": {
                             "TargetClass": "Ground",
@@ -5567,6 +5605,11 @@
                                                         "Value": 1100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
                                                     }
                                                 }
                                             },
@@ -5607,6 +5650,17 @@
                                                         "Value": 4100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
+                                                    },
+                                                    "7": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 15000
+
                                                     }
                                                 }
                                             },
@@ -5872,6 +5926,11 @@
                                                         "Value": 1100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
                                                     }
                                                 }
                                             },
@@ -5912,6 +5971,17 @@
                                                         "Value": 4100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
+                                                    },
+                                                    "7": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 15000
+
                                                     }
                                                 }
                                             },
@@ -6177,6 +6247,11 @@
                                                         "Value": 1100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
                                                     }
                                                 }
                                             },
@@ -6217,6 +6292,17 @@
                                                         "Value": 4100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
+                                                    },
+                                                    "7": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 15000
+
                                                     }
                                                 }
                                             },
@@ -6482,6 +6568,11 @@
                                                         "Value": 1100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
                                                     }
                                                 }
                                             },
@@ -6522,6 +6613,17 @@
                                                         "Value": 4100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
+                                                    },
+                                                    "7": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 15000
+
                                                     }
                                                 }
                                             },
@@ -6787,6 +6889,11 @@
                                                         "Value": 1100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
                                                     }
                                                 }
                                             },
@@ -6827,6 +6934,17 @@
                                                         "Value": 4100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
+                                                    },
+                                                    "7": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 15000
+
                                                     }
                                                 }
                                             },
@@ -7092,6 +7210,11 @@
                                                         "Value": 1100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "8": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
                                                     }
                                                 }
                                             },
@@ -7132,6 +7255,17 @@
                                                         "Value": 4100,
                                                         "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
+                                                    },
+                                                    "6": {
+                                                        "Value": 0,
+                                                        "Mode": "Set",
+                                                        "Attribute": "Unit_PopCapCost"
+                                                    },
+                                                    "7": {
+                                                        "Attribute": "Unit_LeashRange",
+                                                        "Mode": "Add",
+                                                        "Value": 15000
+
                                                     }
                                                 }
                                             },
@@ -7639,7 +7773,7 @@
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 50,
-                        "Distance": 1000
+                        "Distance": 1600
                     },
                     "Turret": {
                         "RotationSpeed": 200
@@ -9541,7 +9675,7 @@
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 50,
-                        "Distance": 1500
+                        "Distance": 1600
                     },
                     "Turret": {
                         "RotationSpeed": 200
@@ -11427,21 +11561,16 @@
                                             "Value": 1
                                         },
                                         "4": {
-                                            "Attribute": 131073,
-                                            "Mode": "Set",
-                                            "Value": 5 //luuuuuuuuuube
+                                            "Attribute": 131072,
+                                            "Mode": "AddPercent",
+                                            "Value": -40
                                         },
                                         "5": {
-                                            "Attribute": 131076,
-                                            "Mode": "Set",
-                                            "Value": 10 // more luuuuuuuuuuuube
-                                        },
-                                        "6": {
                                             "Attribute": 262149,
                                             "Mode": "Set",
                                             "Value": 4
                                         },
-                                        "7": {
+                                        "6": {
                                             "Attribute": "Unit_FireRateDisplay",
                                             "Mode": "Set",
                                             "Value": 5
@@ -11638,7 +11767,6 @@
                 }
             },
             "AbilityAttributes": {
-
                 "Ability_G_AssaultRailgunRegen": {
                     "ApplyStatusEffect": {
                         "Regen_AssaultRailguns_StatusEffect": {
@@ -11704,7 +11832,6 @@
                 }
             }
         },
-
         "Ability_G_RailGun_Dash_Move_To": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "YEEET MANUEVER"
@@ -12106,6 +12233,8 @@
                     "ExcludeFromAutoTargetAcquisition": false,
                     "ExcludeFromAutoFire": false,
                     "ReloadTimeMS": 15000,
+                    "StatusEffectsExcludeTargetType": "Carrier",
+                    "StatusEffectsTargetAlignment": "Foe",
                     "BaseDamagePerRound": 25,
                     "WindUpTimeMS": 1500,
                     "StatusEffectsSets": {
@@ -14326,7 +14455,7 @@
                     "AreaOfEffectRadius": 125,
                     "NumberOfBursts": 1,
                     "RateOfFire": 2,
-                    "ReloadTimeMS": 10000,
+                    "ReloadTimeMS": 3000,
                     "RangeAttributesLong": {
                         "Distance": 3000,
                         "MinDistance": 550,
@@ -15758,6 +15887,7 @@
         },
         "Ability_C_Hack_Advanced": {
             "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "SEDUCE IT HARDER",
                 "LocalizedLongDescriptionStringID": "Hack a cruiser or regular unit, or turret, or air unit, or your ex."
             }
         }
