@@ -125,6 +125,18 @@
                 "LocalizedLongDescriptionStringID": "Upgrade Kapisi weapon systems; enable matter-antimatter... dosent matter...\nBIG, SLOW MOVING BALL OF DEATH, WITH EMP EFFECT."
             }
         },
+        "Upgrade_Carrier_G1": {
+            "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "DUMB NUKE FACTION - NUKE DAMAGE",
+                "LocalizedLongDescriptionStringID": "Upgrade Kapisi nuke damage by 25%."
+            }
+        },
+        "Upgrade_Carrier_G2": {
+            "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "DUMB NUKE FACTION - NUKE AOE",
+                "LocalizedLongDescriptionStringID": "Upgrade Kapisi nuke area of effect by 25%."
+            }
+        },
         "Upgrade_Rachel_1": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "ANIME PROTAGONIST - REPAIR SPEED"
@@ -1612,7 +1624,7 @@
                     "BaseDamagePerRound": 10
                 },
                 "C_Carrier_Weapon_G2All_PenetrationShots": {
-                    "BaseDamagePerRound": 125,
+                    "BaseDamagePerRound": 155,
                     "ReloadTimeMS": 8500,
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
@@ -1780,15 +1792,17 @@
                     "ExcludeFromHeightAdvantage": true
                 },
                 "C_Carrier_Weapon_CruiseMissile": {
+                    "FriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "C_Rachel_EMP_StatusEffect" ] }
                     },
-                    "StatusEffectsExcludeTargetType": "None",
+                    "StatusEffectsExcludeTargetType": "Carrier",
                     "TracerSpeed": 50, // did not work :( // its not a tracer you dumbass
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     //"C_HAC_Smoke_ProjectileAssetContainer",
-                    "BaseWreckDamagePerRound": 100,
+                    "BaseWreckDamagePerRound": 1000,
                     "BaseDamagePerRound": 20000,
                     "AreaOfEffectRadius": 1000,
                     "DamagePacketsPerShot": 10,
@@ -1805,7 +1819,7 @@
                             "TargetClass": "Carrier",
                             "ClassOperator": "Or",
                             "Modifier": "DamagePercent",
-                            "Amount": 50
+                            "Amount": 100
                         }
                     },
                     "RangeAttributesLong": {
@@ -1818,7 +1832,7 @@
                     "LineOfSightRequired": false,
                     "TracerSpeed": 100000, // why do repair beams take time to reach their target... wtf???
                     "RangeAttributesShort": {
-                        "Distance": 80
+                        "Distance": 200
                     },
                     "RangeAttributesMedium": {
                         "Remove": true
@@ -1860,13 +1874,13 @@
                                                         "Name": "TURRET_BL5_HEAL",
                                                         "Attribute": 33554432,
                                                         "Mode": "Set",
-                                                        "Value": 200
+                                                        "Value": 500
                                                     },
                                                     "7": {
                                                         "Name": "TURRET_BR5_HEAL",
                                                         "Attribute": 33554432,
                                                         "Mode": "Set",
-                                                        "Value": 200
+                                                        "Value": 500
                                                     }
                                                 }
                                             }
@@ -4809,15 +4823,17 @@
                     "ExcludeFromHeightAdvantage": true
                 },
                 "C_Carrier_Weapon_CruiseMissile": {
+                    "FriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "TracerSpeed": 50, // did not work :( // its not a tracer you dumbass
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     //"C_HAC_Smoke_ProjectileAssetContainer",
-                    "BaseWreckDamagePerRound": 100,
+                    "BaseWreckDamagePerRound": 1000,
                     "StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "C_Rachel_EMP_StatusEffect" ] }
                     },
-                    "StatusEffectsExcludeTargetType": "None",
+                    "StatusEffectsExcludeTargetType": "Carrier",
                     "BaseDamagePerRound": 20000,
                     "AreaOfEffectRadius": 1000,
                     "DamagePacketsPerShot": 10,
@@ -4847,7 +4863,7 @@
                     "LineOfSightRequired": false,
                     "TracerSpeed": 100000, // why do repair beams take time to reach their target... wtf???
                     "RangeAttributesShort": {
-                        "Distance": 80
+                        "Distance": 800
                     },
                     "RangeAttributesMedium": {
                         "Remove": true
@@ -10171,6 +10187,7 @@
                     "TracerLength": 5,
                     "RateOfFire": 1,
                     "ActiveStatusEffectsIndex": 0,
+                    "StatusEffectsTargetAlignment": "Foe",
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "MiniStun_StatusEffect" ] }
                     },
@@ -12425,11 +12442,19 @@
                     "NumberOfBursts": 1,
                     "RateOfFire": 1,
                     "BaseDamagePerRound": 250,
+                    "Modifiers": {
+                        "0": {
+                            "TargetClass": "Carrier",
+                            "ClassOperator": "Or",
+                            "Modifier": "DamagePercent",
+                            "Amount": 2000
+                        }
+                    },
                     "StatusEffectsTargetAlignment": "None",
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "C_Rachel_EMP_StatusEffect" ] }
                     },
-                    "StatusEffectsExcludeTargetType": "None",
+                    "StatusEffectsExcludeTargetType": "Carrier",
                     "AreaOfEffectRadius": 750,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     "RangeAttributesShort": {
@@ -13532,6 +13557,7 @@
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
                     "Modifiers": {
                         "0": {
+                            "TargetClass": "Ground",
                             "Modifier": "CanTarget",
                             "ClassOperator": "Or"
                         },
@@ -14143,7 +14169,7 @@
                     "BaseDamagePerRound": 50,
                     "RateOfFire": 1,
                     "DamagePacketsPerShot": 1,
-                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsTargetAlignment": "Foe",
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "MiniStun_StatusEffect" ] }
                     },
@@ -14198,7 +14224,7 @@
                         "AutoTargetStickyBias": 1,
                         "TargetSameCommanderBias": 0.0001
                     },
-                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsTargetAlignment": "Foe",
                     "StatusEffectsSets": {
                         "0": { "StatusEffects": [ "MiniStun_StatusEffect" ] }
                     },
@@ -14694,6 +14720,9 @@
                     "ChainCasting": { "QueuedAbility": "Ability_C_ArtilleryBarrage_4" }
                 },
                 "Ability_C_ArtilleryCruiserEMP": {
+                    "TargetingType": "Ground",
+                    "TargetAlignment": "None",
+                    "AbilityMapTargetLayers": "Ground",
                     "Resource1Cost": 0,
                     "CooldownTimeSecs": 90
                 }
@@ -15128,7 +15157,9 @@
                                     "ModifierType": "Immobilize"
                                 },
                                 "1": {
+                                    "ModifierType": "HealthOverTime",
                                     "HealthOverTimeAttributes": {
+                                        "DamageType": "Heal",
                                         "Amount": 1,
                                         "MSTickDuration": 12
                                     }
