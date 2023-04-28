@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.08.11",
-        "LastUpdate": "2023-04-03",
+        "Version": "1.08.21",
+        "LastUpdate": "2023-04-28",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
@@ -808,6 +808,7 @@
             },
             "WeaponAttributes": {
                 "C_Carrier_Weapon_G2All_MP": {
+                    "OutputDPS": true,
                     "BaseDamagePerRound": 155,
                     "ReloadTimeMS": 6500,
                     "FriendlyFireDamageScalar": 1,
@@ -944,7 +945,8 @@
                         "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "MinDistance": 350, // don't gib urself // still gib yourself
+                        "Accuracy": 0,
+                        "MinDistance": 350,
                         "Distance": 700
                     },
                     "ExcludeFromHeightAdvantage": true
@@ -2512,10 +2514,10 @@
                     "Resource1Cost": 270
                 },
                 "Ability_C_Sob_SobanNuke_MP": {
-                    "CooldownTimeSecs": 169,
+                    "CooldownTimeSecs": 228,
                     "Resource1Cost": 400,
                     "ChainCasting": {
-                        "QueuedAbilityDelay": 1.5
+                        "QueuedAbilityDelay": 0
                     }
                 },
                 "Ability_C_Sob_ProduceSupportCruiser_MP": { "ProduceUnit": { "UnitTypeToProduce": "C_SupportCruiser_MP" } },
@@ -2549,6 +2551,7 @@
                 },
                 "C_Carrier_Weapon_G2All_PenetrationShots_MP": { // Are these even used at all?? //yes
                     "LineOfSightRequired": false,
+                    "OutputDPS": true,
                     "TracerLength": 5,
                     "ReloadTimeMS": 1000,
                     "BurstPeriodMinTimeMS": 1000,
@@ -2620,6 +2623,7 @@
                     "ExcludeFromHeightAdvantage": true
                 },
                 "C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
+                    "OutputDPS": true,
                     "BaseDamagePerRound": 195,
                     "DamagePacketsPerShot": 0,
                     "ExcludeFromHeightAdvantage": true,
@@ -2727,7 +2731,8 @@
                         "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "MinDistance": 350, // don't gib urself// still gib yourself XD
+                        "Accuracy": 0,
+                        "MinDistance": 350,
                         "Distance": 700
                     },
                     "ExcludeFromHeightAdvantage": true
@@ -4590,9 +4595,10 @@
                     }
                 },
                 "G_Carrier_Weapon_G2All_MP": {
+                    "OutputDPS": true,
                     "BaseDamagePerRound": 75,
                     "TargetStyle": "Flak",
-                    "ReloadTimeMS": 5500,
+                    "ReloadTimeMS": 5000,
                     "CooldownTimeMS": 0,
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
@@ -4602,7 +4608,7 @@
                     "IsTracer": false,
                     "TracerSpeed": 0,
                     "NumberOfBursts": 1,
-                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectRadius": 75,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "LeadsTarget": 1,
                     "RateOfFire": 2,
@@ -4614,10 +4620,10 @@
                     },
                     "RangeAttributesMedium": {
                         "Distance": 600,
-                        "Accuracy": 70
+                        "Accuracy": 75
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 40,
+                        "Accuracy": 60,
                         "Distance": 800
                     },
                     "Modifiers": {
@@ -4658,6 +4664,7 @@
                     "BaseDamagePerRound": 75
                 },
                 "G_Carrier_Weapon_G2All_APBULLETS_MP": {
+                    "OutputDPS": true,
                     "BaseDamagePerRound": 30,
                     "LineOfSightRequired": false,
                     "ExcludeFromHeightAdvantage": true,
@@ -4706,6 +4713,7 @@
                 },
                 "G_Carrier_Weapon_DefaultMissile_MP": {
                     "FriendlyFireDamageScalar": 1,
+                    "OutputDPS": true,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "LineOfSightRequired": false,
                     "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
@@ -4725,7 +4733,8 @@
                         "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "MinDistance": 350, // don't gib urself
+                        "Accuracy": 0,
+                        "MinDistance": 350,
                         "Distance": 700
                     }
                 },
@@ -4948,22 +4957,22 @@
                                                     "1": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3500
+                                                        "Value": 3000
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3500
+                                                        "Value": 3000
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3500
+                                                        "Value": 3000
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3500
+                                                        "Value": 3000
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -5049,22 +5058,22 @@
                                                     "1": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2500
+                                                        "Value": 2000
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2500
+                                                        "Value": 2000
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2500
+                                                        "Value": 2000
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2500
+                                                        "Value": 2000
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -5150,22 +5159,22 @@
                                                     "1": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1500
+                                                        "Value": 1000
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1500
+                                                        "Value": 1000
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1500
+                                                        "Value": 1000
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1500
+                                                        "Value": 1000
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -5251,22 +5260,22 @@
                                                     "1": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 500
+                                                        "Value": 0
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 500
+                                                        "Value": 0
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 500
+                                                        "Value": 0
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 500
+                                                        "Value": 0
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -5375,25 +5384,25 @@
                                                         "Name": "TURRET_FR",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 500
+                                                        "Value": 0
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Name": "TURRET_FL",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 500
+                                                        "Value": 0
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Name": "TURRET_BR",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 500
+                                                        "Value": 0
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Name": "TURRET_BL",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 500
+                                                        "Value": 0
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -6024,6 +6033,7 @@
                     "ProjectileEntityTypeToSpawn": "K_DirectFire_Shell_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
+                    "OutputDPS": true,
                     "NumberOfBursts": 2,
                     "AreaOfEffectRadius": 230,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -6157,7 +6167,8 @@
                         "Remove": true
                     },
                     "RangeAttributesLong": {
-                        "MinDistance": 350, // don't gib urself, still gib urself
+                        "Accuracy": 0,
+                        "MinDistance": 350,
                         "Distance": 1650
                     },
                     "ExcludeFromHeightAdvantage": true
@@ -6208,8 +6219,6 @@
                             "LocalizedLongDescriptionStringID": "Boost sensors capability of your medium and large units. Boost the speed of units near the Carrier and Production Cruisers. Effect is doubled for the carrier. Shunting power increases additional sensors range, speed bonus and speed bonus area of effect."
                         },
                         "PowerLevels": {
-                            // Ground, Hover, Large, Support - BR class
-                            // HOW DOES ANY OF THIS WORK!?!?!?!?!?!?
                             "0": {
                                 "LocalizedShortDescriptionStringID": "All units are slowed by 25% (except Baserunners) and have -50% sensor radius.",
                                 "StatusEffectsToApply": {
@@ -6368,7 +6377,7 @@
                                             "2": {
                                                 "UnitType": "",
                                                 "UseAsPrefix": true,
-                                                "UnitClass": "Medium, Large, XLarge",
+                                                "UnitClass": "Medium, Large, XLarge, Carrier",
                                                 "ClassOperator": "Or",
                                                 "BuffSet": {
                                                     "0": {
@@ -6406,7 +6415,7 @@
                                             "2": {
                                                 "UnitType": "",
                                                 "UseAsPrefix": true,
-                                                "UnitClass": "Medium, Large, XLarge",
+                                                "UnitClass": "Medium, Large, XLarge, Carrier",
                                                 "ClassOperator": "Or",
                                                 "BuffSet": {
                                                     "0": {
@@ -6444,7 +6453,7 @@
                                             "2": {
                                                 "UnitType": "",
                                                 "UseAsPrefix": true,
-                                                "UnitClass": "Medium, Large, XLarge",
+                                                "UnitClass": "Medium, Large, XLarge, Carrier",
                                                 "ClassOperator": "Or",
                                                 "BuffSet": {
                                                     "0": {
@@ -8913,6 +8922,7 @@
                 },
                 "G_Baserunner_Weapon_HealingAura_MP": {
                     "DamagePacketsPerShot": 0,
+                    "BaseWreckDamagePerRound": 1,
                     "RateOfFire": 25,
                     "DamageType": "Damage",
                     "BaseDamagePerRound": 4,
@@ -11360,7 +11370,7 @@
                 "LocalizedResearchTitleStringID": "LONG-RANGE ASSAULT VEHICLE FABRICATION",
                 "LocalizedLongDescriptionStringID": "Fast-moving Strike vehicle. Effective at pew pewing targets from long range. More accurate if target is far from it.\n\n[ff0000]Imma pew pew pew you from that dune.",
                 "Resource1Cost": 350,
-                "ResearchTime": 35
+                "ResearchTime": 37
             }
         },
 
@@ -15562,7 +15572,7 @@
                 "MaxHealth": 1250,
                 "Armour": 9,
                 "PopCapCost": 4,
-                "ProductionTime": 48,
+                "ProductionTime": 26,
                 "SensorRadius": 300,
                 "ContactRadius": 450
             },
@@ -16571,8 +16581,9 @@
         // BATTLECRUISER FIELD REPAIR TOOLTIP
         "Ability_C_SmokeGrenade_BattleCruiser": {
             "AbilityViewAttributes": {
-                "LocalizedTitleStringID": "INTENSE SMOKING",
-                "LocalizedLongDescriptionStringID": "Temporary allow smoking on battlecruiser bridge, direct effect is damage to health, secondary effect nobody can directly shoot it."
+                "IconName": "Icon-Command-OrbitalWeapon_Broad",
+                "LocalizedTitleStringID": "PURGE!",
+                "LocalizedLongDescriptionStringID": "Call down an EXTERMINATUS on BattleCruiser location. 'YES! FIRE DIRECTLY ON OUR LOCATION! MUHAHAHAHAH'"
             }
         },
 
@@ -16717,12 +16728,19 @@
                     }
                 },
                 "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
-                    "StatusEffectsTargetAlignment": "Friend",
-                    "AreaOfEffectRadius": 1,
-                    "StatusEffectsSets": {
-                        "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "Remove": true
+                        }
                     },
-                    "StatusEffectsExcludeTargetType": "Air"
+                    "FriendlyFireDamageScalar": 1,
+                    "ProjectileEntityTypeToSpawn": "SuperWeapon_Broad_New_ProjectileAssetContainer",
+                    "WindUpTimeMS": 0,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "BaseDamagePerRound": 1500,
+                    "AreaOfEffectRadius": 600,
+                    "BaseWreckDamagePerRound": 100,
+                    "DamagePacketsPerShot": 0
                 }
             }
         },
@@ -16862,12 +16880,19 @@
                     "OutputDPS": true
                 },
                 "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
-                    "StatusEffectsTargetAlignment": "Friend",
-                    "AreaOfEffectRadius": 1,
-                    "StatusEffectsSets": {
-                        "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "Remove": true
+                        }
                     },
-                    "StatusEffectsExcludeTargetType": "Air"
+                    "FriendlyFireDamageScalar": 1,
+                    "ProjectileEntityTypeToSpawn": "SuperWeapon_Broad_New_ProjectileAssetContainer",
+                    "WindUpTimeMS": 0,
+                    "AreaOfEffectFalloffType": "Quadratic",
+                    "BaseDamagePerRound": 1500,
+                    "AreaOfEffectRadius": 600,
+                    "BaseWreckDamagePerRound": 100,
+                    "DamagePacketsPerShot": 0
                 }
             }
         },
@@ -17516,7 +17541,7 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 64, // 64,
+                    "MaxSpeed": 64, 
                     "AccelerationTime": 1.5,
                     "BrakingTime": 1.25
                 }
@@ -18177,7 +18202,7 @@
             "AbilityViewAttributes": {
                 "InvertFillCooldown": true,
                 "LocalizedTitleStringID": "ENABLE DEFENCE SYSTEMS",
-                "LocalizedLongDescriptionStringID": "For 25 seconds power from main weapon rerouted to anti-ground missile defences from main weapon.."
+                "LocalizedLongDescriptionStringID": "For 25 seconds power from main weapon rerouted to anti-ground missile defences."
             }
         },
         "Ability_G_ArtilleryBarrage_01_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
@@ -18191,7 +18216,7 @@
         "Ability_G_BaseRunnerPassiveRegen": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "RELEASE ANGRY NANITES",
-                "LocalizedLongDescriptionStringID": "Baserunner spews out nanits that feed on any surounding unit hull to restore baserunner health. Capable of repairing even without units around it using sand power.\n\n[999da0]Nanomachines son."
+                "LocalizedLongDescriptionStringID": "Baserunner spews out nanits that feed on any surounding unit hull to restore baserunner health. Capable of repairing even without units around it using sand power. Opens wrecks as byproduct.\n\n[999da0]Nanomachines son."
             }
         },
         "Ability_Produce_G_StarHull_U1_MP": {
@@ -18255,13 +18280,13 @@
         "Ability_G_ProduceArtilleryCruiser_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD ARTILLERY CRUISER",
-                "LocalizedLongDescriptionStringID": "Heavely armored siegebraking platform. Strong against all ground targets."
+                "LocalizedLongDescriptionStringID": "Heavely armored medium range siegebraking platform. Strong against all ground targets."
             }
         },
         "Ability_K_ProduceArtilleryCruiser": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD ARTILLERY CRUISER",
-                "LocalizedLongDescriptionStringID": "Heavely armored siegebraking platform. Strong against all ground targets."
+                "LocalizedLongDescriptionStringID": "Heavely armored short range siegebraking platform. Strong against all ground targets."
             }
         },
         "Ability_Produce_G_Bomber_MP": {
@@ -18290,7 +18315,7 @@
         },
         "Ability_Common_DemoChargeLay_MP": {
             "AbilityViewAttributes": {
-                "LocalizedLongDescriptionStringID": "Dploy timed charge designed to blow-open wreck builkheads. [ff0000]CAUTION WILL DEAL HEAVY DAMAGE TO ANYTHING THAT IN CLOSE PROXIMITY!"
+                "LocalizedLongDescriptionStringID": "Deploy timed charge designed to blow-open wreck builkheads. [ff0000]CAUTION WILL DEAL HEAVY DAMAGE TO ANYTHING THAT IN CLOSE PROXIMITY!"
             }
         },
         "Ability_G_ProduceHonorCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Ultimate Gaalsien anti-air cruiser. Armed with Huge AA burst-fiered raingun and strong undirect fire weapons." } },
@@ -18306,7 +18331,7 @@
             }
         },
         "Ability_C_DeployTurret_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Deploy immobile weapons platform. Strong against armored targets.\n\n[ff0000]Do not make sure its combat ready, who needs that." } },
-        "Ability_C_Sob_DeployPopCapCarrier_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Beams anti-air logistics module from orbit. Adds 15 fleet capacity up to 125 limit. Deals small amout of damage and opens wreck builkheads in its impact area. Shunting enables and improves AA weapon range, vison range, deploy range." } },
+        "Ability_C_Sob_DeployPopCapCarrier_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Beams anti-air logistics module from orbit. Adds 15 fleet capacity up to 125 limit. Deals small amout of damage and opens wreck builkheads in its impact area. Shunting enables and improves AA weapon range, sensor range, deploy range." } },
         "Ability_C_SupportCruiser_AA": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "ANTI-GROUND CAPABILITIES",
