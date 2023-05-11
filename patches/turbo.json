@@ -4045,7 +4045,7 @@
 				"Resource2Cost": 50,
 				"ResearchTime": 10,
 				"LocalizedResearchTitleStringID": "UNIT SUBSYSTEMS UPGRADE 1",
-				"LocalizedLongDescriptionStringID": "Upgrades Gaalsien or stolen Gaalsien unit's internal module perfomance.\n\n[84a1e8]Increases sensor range by 5% for stolen rusty gaalsien, Increases speed of Gaalsien units by 5%.",
+				"LocalizedLongDescriptionStringID": "Upgrades Gaalsien or Khaaneph unit's internal module perfomance.\n\n[84a1e8]Increases sensor range by 5% for Khaaneph, Increases speed of Gaalsien units by 5%.",
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "All",
@@ -4398,7 +4398,7 @@
 				"Resource2Cost": 100,
 				"ResearchTime": 20,
 				"LocalizedResearchTitleStringID": "UNIT SUBSYSTEMS UPGRADE 2",
-				"LocalizedLongDescriptionStringID": "Upgrades Gaalsien or stolen Gaalsien unit's internal module perfomance.\n\n[84a1e8]Increases sensor range by 5% for stolen rusty gaalsien, Increases speed of Gaalsien units by 5%.",
+				"LocalizedLongDescriptionStringID": "Upgrades Gaalsien or Khaaneph unit's internal module perfomance.\n\n[84a1e8]Increases sensor range by 5% for Khaaneph, Increases speed of Gaalsien units by 5%.",
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "All",
@@ -4749,7 +4749,7 @@
 				"Resource2Cost": 150,
 				"ResearchTime": 30,
 				"LocalizedResearchTitleStringID": "UNIT SUBSYSTEMS UPGRADE 3",
-				"LocalizedLongDescriptionStringID": "Upgrades Gaalsien or stolen Gaalsien unit's internal module perfomance.\n\n[84a1e8]Increases sensor range by 5% for stolen rusty gaalsien, Increases speed of Gaalsien units by 5%.",
+				"LocalizedLongDescriptionStringID": "Upgrades Gaalsien or Khaaneph unit's internal module perfomance.\n\n[84a1e8]Increases sensor range by 5% for Khaaneph, Increases speed of Gaalsien units by 5%.",
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "All",
@@ -5100,7 +5100,7 @@
 				"Resource2Cost": 200,
 				"ResearchTime": 40,
 				"LocalizedResearchTitleStringID": "UNIT SUBSYSTEMS UPGRADE 4",
-				"LocalizedLongDescriptionStringID": "Upgrades Gaalsien or stolen Gaalsien unit's internal module perfomance.\n\n[84a1e8]Increases sensor range by 5% for stolen rusty gaalsien, Increases speed of Gaalsien units by 5%.",
+				"LocalizedLongDescriptionStringID": "Upgrades Gaalsien or Khaaneph unit's internal module perfomance.\n\n[84a1e8]Increases sensor range by 5% for Khaaneph, Increases speed of Gaalsien units by 5%.",
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "All",
@@ -5596,7 +5596,6 @@
 					"CooldownTimeSecs": 85,
 					"Resource1Cost": 200,
 					"GroundAutoTargetAlignment": "None"
-
 				},
 				"Ability_C_LaunchInterceptor_MP": {
 					"AirSortie": { "LoiterLength": 40 }
@@ -7805,7 +7804,7 @@
 					"RangeAttributesMedium": { "Accuracy": 2 },
 					"RangeAttributesLong": {
 						"Accuracy": 2,
-						"Distance": 1600
+						"Distance": 1200
 					},
 					"Modifiers": {
 						"0": {
@@ -7855,7 +7854,7 @@
 				"K_Carrier_Weapon_BarrageMissile_MP": {
 					"BaseDamagePerRound": 2000,
 					"DamagePacketsPerShot": 5,
-					"AreaOfEffectRadius": 180,
+					"AreaOfEffectRadius": 200,
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
 						"1": {
@@ -8221,8 +8220,6 @@
 														"Value": 50
 													},
 													"5": {
-														"Attribute": "UnitWeapon_RateOfFire",
-														"Mode": "Set",
 														"Value": 4
 													}
 												}
@@ -9281,13 +9278,13 @@
 						"UnitType": "C_SupportCruiser_MP",
 						"BuffSet": {
 							"0": {
-								"Name": "ANTI-AIR",
+								"Name": "AA_RIGHT",
 								"Attribute": "UnitWeapon_ExcludeFromAutoTargetAcquisition",
 								"Mode": "Add",
 								"Value": -1
 							},
 							"1": {
-								"Name": "ANTI-AIR",
+								"Name": "AA_RIGHT",
 								"Attribute": "UnitWeapon_ExcludeFromAutoFire",
 								"Mode": "Add",
 								"Value": -1
@@ -10076,7 +10073,7 @@
 				"Resource1Cost": 300,
 				"Resource2Cost": 150,
 				"LocalizedResearchTitleStringID": "MULTIPHASIC RAILGUNS",
-				"LocalizedLongDescriptionStringID": "Improves railgun armed combat capabilities.\n\n[84a1e8]Railgun weapons burst number doubled.",
+				"LocalizedLongDescriptionStringID": "Improves railgun armed units combat capabilities.\n\n[84a1e8]Railgun, battlecruiser, carrier railguns burst number increased from 1 to 2.",
 				"UnitTypeBuffs": {
 					"0": {
 						"UseAsPrefix": true,
@@ -11483,7 +11480,7 @@
 						"DistanceWeight": 0.05
 					},
 					"WindUpTimeMS": 200,
-					"BaseDamagePerRound": 1150,
+					"BaseDamagePerRound": 1290,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 100,
 					"ReloadTimeMS": 4800,
