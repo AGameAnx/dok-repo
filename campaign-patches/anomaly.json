@@ -2277,7 +2277,7 @@
                                                         "Name": "MAIN_MISSILES",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 2000
+                                                        "Value": 1000
                                                     },
                                                     "10": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -2326,6 +2326,30 @@
                                                         "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
                                                         "Value": 0
+                                                    },
+                                                    "15": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                                        "Mode": "Add",
+                                                        "Value": 100
+                                                    },
+                                                    "16": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                                        "Mode": "Add",
+                                                        "Value": 100
+                                                    },
+                                                    "17": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                                        "Mode": "Add",
+                                                        "Value": 100
+                                                    },
+                                                    "18": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                                        "Mode": "Add",
+                                                        "Value": 100
                                                     }
                                                 }
                                             }
@@ -4824,6 +4848,7 @@
                 },
                 "C_Carrier_Weapon_CruiseMissile": {
                     "FriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "TracerSpeed": 50, // did not work :( // its not a tracer you dumbass
                     "ProjectileEntityTypeToSpawn": "G_Carrier_EMP_ProjectileAssetContainer_MP",
                     //"C_HAC_Smoke_ProjectileAssetContainer",
@@ -8275,6 +8300,7 @@
             "UnitAttributes": {
                 "MaxHealth": 20000,
                 "FireRateDisplay": 1,
+                "AggroRange": 900,
                 "PriorityAsTarget": -15
             },
             "UnitMovementAttributes": {
@@ -8399,7 +8425,7 @@
                     },
                     "WindDownTimeMS": 0,
                     "WindUpTimeMS": 0,
-                    "BurstPeriodMinTimeMS": 1900,
+                    "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1900,
                     "RangeAttributesShort": {
                         "Distance": 400,
@@ -9663,6 +9689,10 @@
                 "Dynamics": {
                     "MaxSpeed": 75,
                     "MaxEaseIntoTurnTime": 0.6
+                },
+                "Maneuvers": {
+                    "FormationSpacingDistance": 100,
+                    "ColumnCount": 8
                 }
             },
             "WeaponAttributes": {
@@ -9720,10 +9750,6 @@
                     "CooldownTimeSecs": 60,
                     "Resource1Cost": 125,
                     "Resource2Cost": 10
-                },
-                "Ability_C_DeployTurret": {
-                    "CooldownTimeSecs": 120
-                    //"ProduceUnit": { "UnitTypeToProduce": "C_Escort_Dummy" } // testing yaknow
                 }
 
             }
@@ -14875,6 +14901,10 @@
                 "Armour": 0
             },
             "UnitMovementAttributes": {
+                "Dynamics": {
+                    "Length": 10,
+                    "Width":10
+                },
                 "Combat": {
                     "MinDesiredCombatRange": 0,
                     "MaxDesiredCombatRange": 0
