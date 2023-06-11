@@ -4596,10 +4596,42 @@
                 "Combat": {
                     "MaxDesiredCombatRange": 700
                 },
+                "Maneuvers": {
+                    "MustReachMinSpeedBeforeTurn": false,
+                    "CanGetOutOfDrift": true,
+                    "CanReverse": true,
+                    "CanStop": true,
+                    "CanDoSlowTurns": true,
+                    "CanDoFastTurns": true,
+                    "SlowAwayTurn": "Controlled",
+                    "SlowDirectTurn": "Controlled",
+                    "FastAwayTurn": "Controlled",
+                    "FastDirectTurn": "Controlled",
+                    // "ThreePointTurn": {
+                    //     "Use": false
+                    //  },
+                    "RearFacingArrive": {
+                        "Use": false
+                    }
+                },
+                "Hover": {
+                    "TurnAcceleration": 0.1,
+                    "TurnMaxLookAheadTime": 10,
+                    "NoTurnDistance": 2000,
+                    "FaceTargetOnlyInCombat": false
+
+                },
                 "Dynamics": {
+                    "MaxSpeed": 69,
                     "BrakingTime": 0.9,
                     "AccelerationTime": 0.9,
-                    "MaxEaseIntoTurnTime": 1
+                    "MaxEaseIntoTurnTime": 1,
+                    "ReverseDriftMultiplier": 1,
+                    "ReverseFactor": 1,
+                    "DeathDriftTime": 15,
+                    "DriveType": "Hover",
+                    "DriftType": 0,
+                    "MaxSpeedTurnRadius": 100
                 }
             },
             "DetectableAttributes": {
@@ -10656,7 +10688,12 @@
                 "FireRateDisplay": 5
             },
             "UnitMovementAttributes": {
+                "Hover": {
+                    "TurnAcceleration": 10,
+                    "TurnMaxLookAheadTime": 1
+                },
                 "Dynamics": {
+                    "MaxSpeedTurnRadius": 19,
                     "MaxSpeed": 140
                 },
                 "Combat": {
@@ -11907,11 +11944,17 @@
                                 "Attribute": "WeaponRange_DistanceMedium",
                                 "Mode": "AddPercent",
                                 "Value": 25
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
                             }
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Lieutenant: +50m damage",
+                        "BuffTooltipLocID": "Lieutenant: +50 damage",
                         "RequiredExperience": 900,
                         "Buff": {
                             "0": {
@@ -11925,6 +11968,15 @@
                                 "Attribute": "UnitWeapon_BaseDamagePerRound",
                                 "Mode": "Add",
                                 "Value": 50
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
                             }
                         }
                     },
@@ -11935,6 +11987,18 @@
                                 "Attribute": 131072,
                                 "Mode": "Add",
                                 "Value": 10
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
                             }
                         }
                     },
@@ -11945,6 +12009,18 @@
                                 "Attribute": "UnitWeapon_AreaOfEffect",
                                 "Mode": "Add",
                                 "Value": 100
+                            },
+                            "1": {
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
                             }
                         }
                     },
