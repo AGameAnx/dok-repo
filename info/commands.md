@@ -11,6 +11,12 @@ Use commands in a multiplayer lobby once everyone has joined the lobby (calling 
 | **/p &lt;name&gt;**        | alias for **/patch &lt;name&gt;**
 | **/patchpb &lt;name&gt;**  | load a specific subsystem patch from `https://pastebin.com/raw/<name>`
 | **/ppb &lt;name&gt;**      | alias for **/patchpb &lt;name&gt;**
+| **/patchmeta**             | display patch metadata if it's provided
+| **/pm**                    | alias for **/patchmeta**
+| **/patchversion**          | display patch version info if it's provided
+| **/pv**                    | alias for **/patchversion**
+| **/patchnotes**            | display patchnotes for applied patch if available
+| **/pn**                    | alias for **/patchnotes**
 | **/bundle &lt;name&gt;**   | alias for **/l &lt;name&gt; /p &lt;name&gt;**
 | **/b &lt;name&gt;**        | alias for **/bundle &lt;name&gt;**
 | **/clear**                 | clear both the layout and patch data
@@ -24,3 +30,7 @@ Use commands in a multiplayer lobby once everyone has joined the lobby (calling 
 | **/patches**               | show the list of exiting patches
 | **/ps**                    | alias for **/patches**
 | **/help**                  | show the help page
+| **/revealrandom**          | set random factions to be visible during match load screen
+| **/rr**                    | alias for **/revealrandom**
+| **/unrevealrandom**        | set random factions to be hidden during match load screen
+| **/urr**                   | alias for **/unrevealrandom**

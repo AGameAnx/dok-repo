@@ -1,22 +1,8 @@
 # Homeworld: Deserts of Kharak - GE Mod Repository
 
-## Installation Instructions
+This is a repository of community patches, layouts and other contributions related to Gameplay Extensions mod.
 
-Download: https://github.com/AGameAnx/dok-ge-mod/releases
-
-Extract the downloaded file to:
-
-- Windows: Steam/steamapps/common/Deserts of Kharak/Data/Managed 
-- Mac: Steam/steamapps/common/Deserts of Kharak/DesertsofKharak.app/Contents/Resources/Data/Managed
-You may need to right click the apps and choose Show package contents to get to this directory.
-- Linux: home/$username/.local/share/Steam/steamapps/common
-Use the files from Mac folder. Easiest way to get to the directory is to browse to local files using Steam.
-
-Extracting the archive should prompt to replace all files within.
-
-In case of issues, verify the integrity of your DoK installation, this will revert all the mod changes.
-
-If installation is successful, you will see [ GE mod *Version* ] alongside game version in the bottom left corner of the screen in the main menu as well as a message when joining a multiplayer lobby.
+Download the mod: https://github.com/AGameAnx/dok-ge-mod/releases
 
 ***Copy and paste the command line into the multiplayer chat window.***
 
