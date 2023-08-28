@@ -109,7 +109,8 @@ Full combined changelog can be found [HERE](jaraci.md)
 	- [2023-01-09 16.0 (Jaraci Cup #16)](#2023-01-09-160-jaraci-cup-16)
 	- [2023-03-08 17.0](#2023-03-08-170)
 	- [2023-03-09 17.1 (Jaraci Cup #17)](#2023-03-09-171-jaraci-cup-17)
-	- [2023-04-06 18.0 (/p agame only)](#2023-04-06-180-p-agame-only)
+	- [2023-04-06 18.0](#2023-04-06-180)
+	- [2023-08-29 18.1](#2023-08-29-181)
 
 # Changes
 
@@ -2970,7 +2971,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 * Coalition:
 	* Fixed incorrect carrier penetrating shots damage display (UI visual only): `75 => 70` (Thanks Just_carrier)
 
-## 2023-04-06 18.0 (/p agame only)
+## 2023-04-06 18.0
 *Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Artillery cruiser (QOL, allows choosing autofire targets and using a-move without closing in):
@@ -2986,3 +2987,12 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Battlecruiser max desired combat range: `1200 => 1580` (Fixes incorrect attack order behavior)
 * Gaalsien:
 	* Siege cruiser active combat approach mode: `Snipe => Hold` (QOL, allows choosing autofire targets and using a-move without closing in)
+
+## 2023-08-29 18.1
+*Not yet reflected in the main changelog.*
+* General:
+	* Railgun damage modifier against small: `50% => 35%`
+* Coalition/Soban:
+	* LAV accuracy: `85%/79%/55% => 87%/81%/52%`
+* Soban:
+	* Carrier PD target style: `RandomSpray => Flak` (Visual-only)

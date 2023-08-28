@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Balance Mod",
 		"Author": "AGameAnx",
-		"Version": "18.1.0",
-		"LastUpdate": "2023-08-29",
+		"Version": "17.1.0",
+		"LastUpdate": "2023-03-09",
 		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/jaraci/jaraci.md"
 	},
 	/*"Global": {
@@ -1190,8 +1190,6 @@
 
 					"ReloadTimeMS": 13000,
 					"CooldownTimeMS": 9000,
-
-					"TargetStyle": "Flak",
 
 					"RangeAttributesShort": {
 						"Distance": 300,
@@ -3165,20 +3163,14 @@
 		},
 
 		"C_Sob_NukeEmitter_MP": {
-			// Current duration: 30s
-			// Duration of MWE is MaxHealth divided by dps of C_Sob_NukeEmitter_Weapon_G2G weapon.
-			// ROF on the weapon is 1, therefore it fires one instance of damage per second (despite the short burst period).
-			// Take note of modifiers, currently there's a 50% damage modifier against Small, which affects the emitter.
 			"UnitAttributes": {
-				//Unitclass: "Ground, Small"
-				"MaxHealth": 1500,
+				"MaxHealth": 1500, // this affects the duration, current duration is 30s, duration is MaxHealth divided by half of BaseDamagePerRound of C_Sob_NukeEmitter_Weapon_G2G weapon
 				"PopCapCost": 0,
 				"ContactRadius": 0,
 				"SensorRadius": 0
 			},
 			"WeaponAttributes": {
 				"C_Sob_NukeEmitter_Weapon_G2G": {
-					//"RateOfFire": 1,
 					"BurstPeriodMinTimeMS": 250,
 					"BurstPeriodMaxTimeMS": 250,
 					"CooldownTimeMS": 0,
@@ -4606,11 +4598,11 @@
 					"NumberOfBursts": 2,
 					"BurstPeriodMinTimeMS": 950,
 					"BurstPeriodMaxTimeMS": 1050,
-					"RangeAttributesShort": { "Accuracy": 87 },
-					"RangeAttributesMedium": { "Accuracy": 81 },
+					"RangeAttributesShort": { "Accuracy": 85 },
+					"RangeAttributesMedium": { "Accuracy": 79 },
 					"RangeAttributesLong": {
 						"Distance": 870,
-						"Accuracy": 52
+						"Accuracy": 55
 					},
 					"Turret": { "RotationSpeed": 390 },
 					"Modifiers": {
@@ -4670,11 +4662,11 @@
 					"NumberOfBursts": 2,
 					"BurstPeriodMinTimeMS": 950,
 					"BurstPeriodMaxTimeMS": 1050,
-					"RangeAttributesShort": { "Accuracy": 87 },
-					"RangeAttributesMedium": { "Accuracy": 81 },
+					"RangeAttributesShort": { "Accuracy": 85 },
+					"RangeAttributesMedium": { "Accuracy": 79 },
 					"RangeAttributesLong": {
 						"Distance": 870,
-						"Accuracy": 52
+						"Accuracy": 55
 					},
 					"Turret": { "RotationSpeed": 390 },
 					"Modifiers": {
@@ -5075,7 +5067,7 @@
 						"1": {
 							//"TargetClass": "Small",
 							"Modifier": "DamagePercent",
-							"Amount": 35
+							"Amount": 50
 						},
 						"2": {
 							"Remove": true
@@ -5142,7 +5134,7 @@
 						"1": {
 							//"TargetClass": "Small",
 							"Modifier": "DamagePercent",
-							"Amount": 35
+							"Amount": 50
 						},
 						"6": {
 							"Remove": true
@@ -5251,7 +5243,7 @@
 					"Modifiers": {
 						"1": {
 							"Modifier": "DamagePercent",
-							"Amount": 35
+							"Amount": 50
 						},
 						"2": { "Remove": true },
 						"7": { "Remove": true },
@@ -5329,7 +5321,7 @@
 					"Modifiers": {
 						"1": {
 							"Modifier": "DamagePercent",
-							"Amount": 35
+							"Amount": 50
 						},
 						"2": { "Remove": true },
 						"7": { "Remove": true },
@@ -6518,7 +6510,6 @@
 				"Armour": 20
 			},
 			"UnitMovementAttributes": {
-				"Combat": { "MaxDesiredCombatRange": 1110 },
 				"Dynamics": {
 					"MaxSpeed": 59,
 					"MaxSpeedTurnRadius": 100,
@@ -6539,10 +6530,6 @@
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 60,
 					"ReloadTimeMS": 3800,
-					"Turret": {
-						"RotationSpeed": 180,
-						"FieldOfFire": 10
-					},
 					"RangeAttributesLong": {
 						"Distance": 1150
 					}
@@ -6572,7 +6559,6 @@
 				"Armour": 19
 			},
 			"UnitMovementAttributes": {
-				"Combat": { "MaxDesiredCombatRange": 1580 },
 				"Dynamics": {
 					"MaxSpeed": 59,
 					"MaxSpeedTurnRadius": 100,
@@ -6687,10 +6673,6 @@
 				}
 			},
 			"UnitMovementAttributes": {
-				"Combat": {
-					"ActiveCombatApproachMode": "Hold",
-					"MaxDesiredCombatRange": 2300
-				},
 				"Dynamics": {
 					"MaxSpeedTurnRadius": 90,
 					"MaxSpeed": 56,
@@ -6812,9 +6794,6 @@
 				}
 			},
 			"UnitMovementAttributes": {
-				"Combat": {
-					"ActiveCombatApproachMode": "Hold"
-				},
 				"Dynamics": {
 					"MaxSpeed": 64,
 					"AccelerationTime": 3,
