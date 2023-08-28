@@ -2529,6 +2529,185 @@ C_SupportCruiser_MP:
       leadsTarget: DirectAtTarget
       windUp: 50
       windDown: 500
+      rof: 1
+      burstMin: 300
+      burstMax: 300
+      numBursts: 4
+      cooldown: 0
+      reload: 5000
+      aoe: 60
+      falloff: Linear
+      ranges:
+        Long:
+          distance: 1200
+          accuracy: 100
+      turret:
+        fieldOfView: 360
+        fieldOfFire: 20
+        rotationSpeed: 180
+      modifiers:
+        0:
+          targetClass: Ground
+          classOperator: Or
+          modifierType: CanNotTarget
+          amount: 0
+      dpsInfo:
+        avgShots: 1
+        trueROF: 3.33333333333333
+        sequenceDuration: 6.25
+        dpsBeforeAccuracy: 44.8
+        accuracyDps:
+          Long: 44.8
+C_Sob_SupportCruiser_MP:
+  readableName: S Support Cruiser
+  cu: 480
+  ru: 50
+  time: 40
+  pop: 5
+  hp: 2900
+  armor: 5
+  sensor: 1000
+  contact: 1250
+  xp: 300
+  priorityAsTarget: -10
+  movement:
+    driveType: Tracked
+    dynamics:
+      permanentlyImmobile: False
+      minCruiseSpeed: 15
+      maxEaseIntoTurnTime: 0.25
+      maxSpeedTurnRadius: 75
+      brakingTime: 1
+      accelerationTime: 0.899999999906868
+      reverseFactor: 0.699999988079071
+      maxSpeed: 70
+      width: 70
+      length: 120
+      hover:
+        turnAcceleration: 2
+      combat:
+        minDesiredCombatRange: 0
+        maxDesiredCombatRange: 270
+      avoidance:
+        avoidsCarriers: True
+        avoidsWrecks: True
+        avoidanceDistance: 50
+  weapons:
+    C_SupportCruiser_Weapon_G2G_MP:
+      damageType: Damage
+      dmg: 16
+      packets: 1
+      excludeFromHighGround: True
+      lineOfSightRequired: True
+      friendlyFireDamageScalar: 0
+      leadsTarget: LeadTarget
+      windUp: 500
+      windDown: 500
+      rof: 6
+      burstMin: 800
+      burstMax: 830
+      numBursts: 2
+      cooldown: 500
+      reload: 2000
+      aoe: 0
+      falloff: Linear
+      ranges:
+        Short:
+          distance: 400
+          accuracy: 45
+        Medium:
+          distance: 600
+          accuracy: 55
+        Medium:
+          distance: 900
+          accuracy: 35
+        Long:
+          distance: 950
+          accuracy: 35
+      turret:
+        fieldOfView: 360
+        fieldOfFire: 360
+        rotationSpeed: 160
+      modifiers:
+        0:
+          targetClass: Medium, Large, XLarge
+          classOperator: Or
+          modifierType: AccuracyShortPercent
+          amount: 150
+        1:
+          targetClass: Medium, Large, XLarge
+          classOperator: Or
+          modifierType: AccuracyMediumPercent
+          amount: 150
+        2:
+          targetClass: Medium, Large, XLarge
+          classOperator: Or
+          modifierType: AccuracyLongPercent
+          amount: 150
+      dpsInfo:
+        avgShots: 4.03333333333333
+        trueROF: 4.94887525562372
+        sequenceDuration: 4.63
+        dpsBeforeAccuracy: 27.8761699064075
+        accuracyDps:
+          Short: 12.5442764578834
+          Medium: 9.75665946724262
+          Medium: 9.75665946724262
+          Long: 9.75665946724262
+    C_SupportCruiser_Weapon_Repair_Small_MP:
+      damageType: Heal
+      dmg: 1
+      packets: 1
+      excludeFromHighGround: True
+      lineOfSightRequired: False
+      friendlyFireDamageScalar: 0
+      leadsTarget: LeadTarget
+      windUp: 0
+      windDown: 500
+      rof: 6
+      burstMin: 10000
+      burstMax: 10000
+      numBursts: 1
+      cooldown: 0
+      reload: 0
+      aoe: 0
+      falloff: Linear
+      ranges:
+        Short:
+          distance: 600
+          accuracy: 100
+      turret:
+        fieldOfView: 360
+        fieldOfFire: 180
+        rotationSpeed: 180
+      modifiers:
+        0:
+          targetClass: Air
+          classOperator: And
+          modifierType: CanNotTarget
+          amount: 0
+        1:
+          targetClass: 16
+          classOperator: And
+          modifierType: CanNotTarget
+          amount: 0
+      dpsInfo:
+        avgShots: 60
+        trueROF: 6
+        sequenceDuration: 10
+        dpsBeforeAccuracy: 6
+        accuracyDps:
+          Short: 6
+    C_SupportCruiser_Weapon_G2A_MP:
+      damageType: Damage
+      dmg: 70
+      packets: 1
+      excludeFromHighGround: True
+      lineOfSightRequired: False
+      friendlyFireDamageScalar: 0
+      leadsTarget: DirectAtTarget
+      windUp: 50
+      windDown: 500
       rof: 0
       burstMin: 300
       burstMax: 300
@@ -2558,171 +2737,6 @@ C_SupportCruiser_MP:
         dpsBeforeAccuracy: 44.8
         accuracyDps:
           Long: 44.8
-C_Sob_SupportCruiser_MP:
-  readableName: S Support Cruiser
-  cu: 600
-  ru: 0
-  time: 45
-  pop: 6
-  hp: 4100
-  armor: 2
-  sensor: 1000
-  contact: 1250
-  xp: 300
-  priorityAsTarget: -1
-  movement:
-    driveType: Tracked
-    dynamics:
-      permanentlyImmobile: False
-      minCruiseSpeed: 15
-      maxEaseIntoTurnTime: 3
-      maxSpeedTurnRadius: 100
-      brakingTime: 1
-      accelerationTime: 1.5
-      reverseFactor: 0.699999988079071
-      maxSpeed: 70
-      width: 70
-      length: 120
-      hover:
-        turnAcceleration: 2
-      combat:
-        minDesiredCombatRange: 0
-        maxDesiredCombatRange: 270
-      avoidance:
-        avoidsCarriers: True
-        avoidsWrecks: True
-        avoidanceDistance: 50
-  weapons:
-    C_SupportCruiser_Weapon_G2G_MP:
-      damageType: Damage
-      dmg: 3
-      packets: 1
-      excludeFromHighGround: False
-      lineOfSightRequired: True
-      friendlyFireDamageScalar: 0
-      leadsTarget: LeadTarget
-      windUp: 500
-      windDown: 500
-      rof: 12
-      burstMin: 400
-      burstMax: 800
-      numBursts: 2
-      cooldown: 2000
-      reload: 4000
-      aoe: 0
-      falloff: Linear
-      ranges:
-        Short:
-          distance: 300
-          accuracy: 75
-        Medium:
-          distance: 600
-          accuracy: 55
-        Medium:
-          distance: 900
-          accuracy: 35
-      turret:
-        fieldOfView: 140
-        fieldOfFire: 8
-        rotationSpeed: 75
-      modifiers:
-        0:
-          targetClass: Air
-          classOperator: And
-          modifierType: CanNotTarget
-          amount: 0
-      dpsInfo:
-        avgShots: 6.335
-        trueROF: 10.5583333333333
-        sequenceDuration: 7.7
-        dpsBeforeAccuracy: 4.93636363636364
-        accuracyDps:
-          Short: 3.70227272727273
-          Medium: 1.72772727272727
-          Medium: 1.72772727272727
-    C_SupportCruiser_Weapon_Repair_Small_MP:
-      damageType: Heal
-      dmg: 1
-      packets: 1
-      excludeFromHighGround: True
-      lineOfSightRequired: False
-      friendlyFireDamageScalar: 0
-      leadsTarget: LeadTarget
-      windUp: 0
-      windDown: 500
-      rof: 10
-      burstMin: 10000
-      burstMax: 10000
-      numBursts: 1
-      cooldown: 0
-      reload: 0
-      aoe: 0
-      falloff: Linear
-      ranges:
-        Short:
-          distance: 400
-          accuracy: 100
-      turret:
-        fieldOfView: 360
-        fieldOfFire: 180
-        rotationSpeed: 180
-      modifiers:
-        0:
-          targetClass: Air
-          classOperator: And
-          modifierType: CanNotTarget
-          amount: 0
-        1:
-          targetClass: 16
-          classOperator: And
-          modifierType: CanNotTarget
-          amount: 0
-      dpsInfo:
-        avgShots: 100
-        trueROF: 10
-        sequenceDuration: 10
-        dpsBeforeAccuracy: 10
-        accuracyDps:
-          Short: 10
-    C_SupportCruiser_Weapon_G2A_MP:
-      damageType: Damage
-      dmg: 250
-      packets: 1
-      excludeFromHighGround: True
-      lineOfSightRequired: False
-      friendlyFireDamageScalar: 0
-      leadsTarget: DirectAtTarget
-      windUp: 0
-      windDown: 500
-      rof: 2
-      burstMin: 1000
-      burstMax: 1000
-      numBursts: 1
-      cooldown: 700
-      reload: 4000
-      aoe: 40
-      falloff: Linear
-      ranges:
-        Long:
-          distance: 1550
-          accuracy: 100
-      turret:
-        fieldOfView: 360
-        fieldOfFire: 20
-        rotationSpeed: 180
-      modifiers:
-        0:
-          targetClass: Ground
-          classOperator: Or
-          modifierType: CanNotTarget
-          amount: 0
-      dpsInfo:
-        avgShots: 2
-        trueROF: 2
-        sequenceDuration: 5
-        dpsBeforeAccuracy: 100
-        accuracyDps:
-          Long: 100
 G_SupportCruiser_MP:
   readableName: G Production Cruiser
   cu: 560
@@ -3214,13 +3228,13 @@ C_Escort_MP:
       ranges:
         Short:
           distance: 300
-          accuracy: 85
+          accuracy: 87
         Medium:
           distance: 600
-          accuracy: 79
+          accuracy: 81
         Long:
           distance: 870
-          accuracy: 55
+          accuracy: 52
       turret:
         fieldOfView: 360
         fieldOfFire: 25
@@ -3277,9 +3291,9 @@ C_Escort_MP:
         sequenceDuration: 3.45
         dpsBeforeAccuracy: 36.6028985507246
         accuracyDps:
-          Short: 31.1124637681159
-          Medium: 28.9162898550725
-          Long: 20.1315942028986
+          Short: 31.8445217391304
+          Medium: 29.648347826087
+          Long: 19.0335072463768
 C_Sob_Escort_MP:
   readableName: S LAV
   cu: 100
@@ -3336,13 +3350,13 @@ C_Sob_Escort_MP:
       ranges:
         Short:
           distance: 300
-          accuracy: 85
+          accuracy: 87
         Medium:
           distance: 600
-          accuracy: 79
+          accuracy: 81
         Long:
           distance: 870
-          accuracy: 55
+          accuracy: 52
       turret:
         fieldOfView: 360
         fieldOfFire: 25
@@ -3399,9 +3413,9 @@ C_Sob_Escort_MP:
         sequenceDuration: 3.45
         dpsBeforeAccuracy: 36.6028985507246
         accuracyDps:
-          Short: 31.1124637681159
-          Medium: 28.9162898550725
-          Long: 20.1315942028986
+          Short: 31.8445217391304
+          Medium: 29.648347826087
+          Long: 19.0335072463768
 G_SandSkimmer_MP:
   readableName: G Sandskimmer
   cu: 100
@@ -3645,7 +3659,7 @@ C_Railgun_MP:
           targetClass: Small
           classOperator: And
           modifierType: DamagePercent
-          amount: 50
+          amount: 35
         2:
           targetClass: Medium
           classOperator: And
@@ -3815,7 +3829,7 @@ C_Sob_Railgun_MP:
           targetClass: Small
           classOperator: And
           modifierType: DamagePercent
-          amount: 50
+          amount: 35
         2:
           targetClass: Medium
           classOperator: And
@@ -3937,7 +3951,7 @@ G_StarHullTank_MP:
         turnAcceleration: 90
       combat:
         minDesiredCombatRange: 0
-        maxDesiredCombatRange: 1620
+        maxDesiredCombatRange: 1730
       avoidance:
         avoidsCarriers: True
         avoidsWrecks: True
@@ -3985,7 +3999,7 @@ G_StarHullTank_MP:
           targetClass: Small
           classOperator: And
           modifierType: DamagePercent
-          amount: 50
+          amount: 35
         2:
           targetClass: Medium
           classOperator: And
@@ -4265,7 +4279,7 @@ K_HeavyRailgun_MP:
         turnAcceleration: 90
       combat:
         minDesiredCombatRange: 0
-        maxDesiredCombatRange: 1620
+        maxDesiredCombatRange: 1730
       avoidance:
         avoidsCarriers: True
         avoidsWrecks: True
@@ -4313,7 +4327,7 @@ K_HeavyRailgun_MP:
           targetClass: Small
           classOperator: And
           modifierType: DamagePercent
-          amount: 50
+          amount: 35
         2:
           targetClass: Medium
           classOperator: And
@@ -7452,7 +7466,7 @@ C_Battlecruiser_MP:
         turnAcceleration: 2.5
       combat:
         minDesiredCombatRange: 0
-        maxDesiredCombatRange: 1200
+        maxDesiredCombatRange: 1110
       avoidance:
         avoidsCarriers: True
         avoidsWrecks: True
@@ -7488,8 +7502,8 @@ C_Battlecruiser_MP:
           accuracy: 4.5
       turret:
         fieldOfView: 360
-        fieldOfFire: 2
-        rotationSpeed: 80
+        fieldOfFire: 10
+        rotationSpeed: 180
       modifiers:
         0:
           targetClass: Air
@@ -7614,7 +7628,7 @@ C_Sob_Battlecruiser_MP:
         turnAcceleration: 2.5
       combat:
         minDesiredCombatRange: 0
-        maxDesiredCombatRange: 1200
+        maxDesiredCombatRange: 1580
       avoidance:
         avoidsCarriers: True
         avoidsWrecks: True
@@ -7646,7 +7660,7 @@ C_Sob_Battlecruiser_MP:
           distance: 1000
           accuracy: 100
         Long:
-          distance: 1650
+          distance: 1630
           accuracy: 65
       turret:
         fieldOfView: 360
@@ -7784,7 +7798,7 @@ C_ArtilleryCruiser_MP:
         turnAcceleration: 2.5
       combat:
         minDesiredCombatRange: 0
-        maxDesiredCombatRange: 750
+        maxDesiredCombatRange: 2300
       avoidance:
         avoidsCarriers: True
         avoidsWrecks: True

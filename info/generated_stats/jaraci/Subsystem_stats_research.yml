@@ -1030,12 +1030,19 @@ upgradeResearch:
           useAsPrefix: False
           buffSet:
             -
-              attribute: UnitWeapon_RateOfFire
-              attributeID: 5
+              attribute: UnitWeapon_ExcludeFromAutoTargetAcquisition
+              attributeID: 9
               category: UnitWeapon
               name: ANTI-AIR
               mode: Add
-              value: 1
+              value: -1
+            -
+              attribute: UnitWeapon_ExcludeFromAutoFire
+              attributeID: 10
+              category: UnitWeapon
+              name: ANTI-AIR
+              mode: Add
+              value: -1
     Research_Buff_C_Escort:
       cu: 200
       ru: 100
@@ -1422,6 +1429,27 @@ upgradeResearch:
       time: 45
       type: Upgrade
       dependencies: [Tier_3_C_AssaultCruiser]
+      unitTypeBuffs:
+        -
+          classOperator: Or
+          unitClass: All
+          unitType: G_Battlecruiser_MP
+          useAsPrefix: False
+          buffSet:
+            -
+              attribute: UnitWeapon_ExcludeFromAutoTargetAcquisition
+              attributeID: 9
+              category: UnitWeapon
+              name: AA_RIGHT
+              mode: Add
+              value: -1
+            -
+              attribute: UnitWeapon_ExcludeFromAutoFire
+              attributeID: 10
+              category: UnitWeapon
+              name: AA_RIGHT
+              mode: Add
+              value: -1
   Gaalsi_MP:
     Research_Buff_Fleet_Popcap_1:
       cu: 150
@@ -4313,12 +4341,19 @@ upgradeResearch:
           useAsPrefix: False
           buffSet:
             -
-              attribute: UnitWeapon_RateOfFire
-              attributeID: 5
+              attribute: UnitWeapon_ExcludeFromAutoTargetAcquisition
+              attributeID: 9
               category: UnitWeapon
               name: ANTI-AIR
               mode: Add
-              value: 1
+              value: -1
+            -
+              attribute: UnitWeapon_ExcludeFromAutoFire
+              attributeID: 10
+              category: UnitWeapon
+              name: ANTI-AIR
+              mode: Add
+              value: -1
     Research_Buff_S_Escort:
       cu: 200
       ru: 100
@@ -4785,3 +4820,24 @@ upgradeResearch:
       time: 45
       type: Upgrade
       dependencies: [Tier_3_S_AssaultCruiser]
+      unitTypeBuffs:
+        -
+          classOperator: Or
+          unitClass: All
+          unitType: G_Battlecruiser_MP
+          useAsPrefix: False
+          buffSet:
+            -
+              attribute: UnitWeapon_ExcludeFromAutoTargetAcquisition
+              attributeID: 9
+              category: UnitWeapon
+              name: AA_RIGHT
+              mode: Add
+              value: -1
+            -
+              attribute: UnitWeapon_ExcludeFromAutoFire
+              attributeID: 10
+              category: UnitWeapon
+              name: AA_RIGHT
+              mode: Add
+              value: -1
