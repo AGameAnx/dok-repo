@@ -923,7 +923,7 @@
         },
         "N_DemoCharge_MP": {
             "UnitAttributes": {
-                "MaxHealth": 69,
+                "MaxHealth": 6900,
                 "Controllable": false,
                 "Targetable": false,
                 "NonAutoTargetable": true
@@ -942,7 +942,7 @@
                     "FriendlyFireDamageScalar": 0,
                     "IsTracer": false,
                     "TracerSpeed": 0,
-                    "WeaponOwnerFriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 100,
                     "WindUpTimeMS": 0,
                     "WindDownTimeMS": 0,
                     "NumberOfBursts": 1,
@@ -1086,9 +1086,6 @@
                     "EntityTypesToSpawnOnImpact": {
                         "0": {
                             "EntityTypeToSpawn": "N_DemoCharge_MP"
-                        },
-                        "1": {
-                            "EntityTypeToSpawn": "N_MissileBarrage_Sight"
                         }
                     },
                     "RangeAttributesShort": {
@@ -1828,7 +1825,7 @@
                 "Ability_C_CruiseMissile": {
                     "CooldownTimeSecs": 300,
                     "ChainCasting": {
-                        "QueuedAbilityDelay": 1.5
+                        "QueuedAbility": ""
                     }
                 },
                 "Ability_C_LaunchInterceptor": {
@@ -2362,6 +2359,30 @@
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 2
+                                                    },
+                                                    "11": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8500
+                                                    },
+                                                    "12": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8500
+                                                    },
+                                                    "13": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8500
+                                                    },
+                                                    "14": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8500
                                                     }
                                                 }
                                             }
@@ -2421,6 +2442,30 @@
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
                                                         "Value": 3
+                                                    },
+                                                    "11": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8500
+                                                    },
+                                                    "12": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8500
+                                                    },
+                                                    "13": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8500
+                                                    },
+                                                    "14": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8500
                                                     }
                                                 }
                                             }
@@ -2683,11 +2728,14 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 2 },
+                                                    "0": {
+                                                        "Value": 3,
+                                                        "Mode": "Set"
+                                                    },
                                                     "1": {
-                                                        "Value": 1000,
+                                                        "Value": 16000,
                                                         "Attribute": "Unit_MaxHealth",
-                                                        "Mode": "Add"
+                                                        "Mode": "Set"
                                                     }
                                                 }
                                             }
@@ -2718,11 +2766,14 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 8 },
+                                                    "0": {
+                                                        "Value": 9,
+                                                        "Mode": "Set"
+                                                    },
                                                     "1": {
-                                                        "Value": 2000,
+                                                        "Value": 17000,
                                                         "Attribute": "Unit_MaxHealth",
-                                                        "Mode": "Add"
+                                                        "Mode": "Set"
                                                     }
                                                 }
                                             }
@@ -2753,11 +2804,14 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 26 },
+                                                    "0": {
+                                                        "Value": 27,
+                                                        "Mode": "Set"
+                                                    },
                                                     "1": {
-                                                        "Value": 3000,
+                                                        "Value": 18000,
                                                         "Attribute": "Unit_MaxHealth",
-                                                        "Mode": "Add"
+                                                        "Mode": "Set"
                                                     }
                                                 }
                                             }
@@ -2788,11 +2842,14 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 80 },
+                                                    "0": {
+                                                        "Value": 81,
+                                                        "Mode": "Set"
+                                                    },
                                                     "1": {
-                                                        "Value": 4000,
+                                                        "Value": 19000,
                                                         "Attribute": "Unit_MaxHealth",
-                                                        "Mode": "Add"
+                                                        "Mode": "Set"
                                                     }
                                                 }
                                             }
@@ -2823,11 +2880,14 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 242 },
+                                                    "0": {
+                                                        "Value": 243,
+                                                        "Mode": "Set"
+                                                    },
                                                     "1": {
-                                                        "Value": 5000,
+                                                        "Value": 20000,
                                                         "Attribute": "Unit_MaxHealth",
-                                                        "Mode": "Add"
+                                                        "Mode": "Set"
                                                     }
                                                 }
                                             }
@@ -2851,7 +2911,7 @@
                                             "0": {
                                                 "HealthOverTimeAttributes": {
                                                     "Amount": 1,
-                                                    "MSTickDuration": 20
+                                                     "MSTickDuration": 20
                                                 }
                                             }
                                         }
@@ -5029,7 +5089,7 @@
                         "UndockSpeed": 1100,
                         "MaxCount": 8
                     },
-                    "Ground": { "UndockSpeed": 1100 }
+                    "Ground": { "UndockSpeed": 550 }
                 }
             },
             "AbilityAttributes": {
@@ -5046,7 +5106,10 @@
                     }
                 },
                 "Ability_C_CruiseMissile": {
-                    "CooldownTimeSecs": 150
+                    "CooldownTimeSecs": 150,
+                    "ChainCasting": {
+                        "QueuedAbility": ""
+                    }
                 },
                 "Ability_C_LaunchInterceptor": {
                     "AirSortie": {
@@ -5859,7 +5922,7 @@
                             }
                         }
                     },
-                    "2": { // Reactive Armor
+                    "2": { // Reactive Armor attention!!!! C U R S E D
                         "PowerLevels": {
 
                             "0": {
@@ -5881,13 +5944,13 @@
                                                 "UnitType": "C_Battlecruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 54,
-                                                        "Mode": "Add",
+                                                        "Value": 79,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
-                                                        "Value": 20000,
-                                                        "Mode": "Add",
+                                                        "Value": 60000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "2": {
@@ -5922,8 +5985,8 @@
                                                 "UnitType": "C_ArtilleryCruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 20,
-                                                        "Mode": "Add",
+                                                        "Value": 76,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
@@ -6017,8 +6080,8 @@
                                                         "Name": "ARTILLERY_BARRAGE_FL"
                                                     },
                                                     "16": {
-                                                        "Value": 50,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "17": {
@@ -6097,14 +6160,14 @@
                                                         "Name": "SMOKE"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4950,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "4": {
                                                         "Name": "DEFAULT",
                                                         "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Value": 1
 
                                                     }
@@ -6129,24 +6192,24 @@
                                                         "Name": ""
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 3500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2500,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2250,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceShort",
                                                         "Name": ""
                                                     },
                                                     "5": {
-                                                        "Value": 100,
+                                                        "Value": 200,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_BaseDamagePerRound",
                                                         "Name": "ANTI-AIR"
@@ -6164,7 +6227,7 @@
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "8": {
-                                                        "Value": 500,
+                                                        "Value": 1000,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Name": "DEFAULT"
@@ -6337,8 +6400,8 @@
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 17000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -6386,8 +6449,8 @@
                                                         "Value": 12000
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 7250,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
@@ -6410,8 +6473,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 5625,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -6441,17 +6504,17 @@
                                                     },
                                                     "1": {
                                                         "Value": 6,
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 1200,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 270,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
@@ -6466,15 +6529,15 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     },
                                                     "1": {
-                                                        "Value": 1,
-                                                        "Mode": "Add",
+                                                        "Value": 11,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
+                                                        "Value": 2100,
                                                         "Mode": "AddPercent",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
@@ -6488,7 +6551,7 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     }
                                                 }
                                             },
@@ -6510,8 +6573,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 19500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -6599,13 +6662,13 @@
                                                 "UnitType": "C_Battlecruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 54,
-                                                        "Mode": "Add",
+                                                        "Value": 79,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
-                                                        "Value": 20000,
-                                                        "Mode": "Add",
+                                                        "Value": 60000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "2": {
@@ -6640,8 +6703,8 @@
                                                 "UnitType": "C_ArtilleryCruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 20,
-                                                        "Mode": "Add",
+                                                        "Value": 76,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
@@ -6735,8 +6798,8 @@
                                                         "Name": "ARTILLERY_BARRAGE_FL"
                                                     },
                                                     "16": {
-                                                        "Value": 50,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "17": {
@@ -6815,14 +6878,14 @@
                                                         "Name": "SMOKE"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4950,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "4": {
                                                         "Name": "DEFAULT",
                                                         "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Value": 1
 
                                                     }
@@ -6847,24 +6910,24 @@
                                                         "Name": ""
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 3500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2500,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2250,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceShort",
                                                         "Name": ""
                                                     },
                                                     "5": {
-                                                        "Value": 100,
+                                                        "Value": 200,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_BaseDamagePerRound",
                                                         "Name": "ANTI-AIR"
@@ -6882,7 +6945,7 @@
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "8": {
-                                                        "Value": 500,
+                                                        "Value": 1000,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Name": "DEFAULT"
@@ -7055,8 +7118,8 @@
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 17000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -7104,8 +7167,8 @@
                                                         "Value": 12000
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 7250,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
@@ -7128,8 +7191,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 5625,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -7159,17 +7222,17 @@
                                                     },
                                                     "1": {
                                                         "Value": 6,
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 1200,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 270,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
@@ -7184,15 +7247,15 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     },
                                                     "1": {
-                                                        "Value": 1,
-                                                        "Mode": "Add",
+                                                        "Value": 11,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
+                                                        "Value": 2100,
                                                         "Mode": "AddPercent",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
@@ -7206,7 +7269,7 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     }
                                                 }
                                             },
@@ -7228,8 +7291,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 19500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -7317,13 +7380,13 @@
                                                 "UnitType": "C_Battlecruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 54,
-                                                        "Mode": "Add",
+                                                        "Value": 79,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
-                                                        "Value": 20000,
-                                                        "Mode": "Add",
+                                                        "Value": 60000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "2": {
@@ -7358,8 +7421,8 @@
                                                 "UnitType": "C_ArtilleryCruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 20,
-                                                        "Mode": "Add",
+                                                        "Value": 76,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
@@ -7453,8 +7516,8 @@
                                                         "Name": "ARTILLERY_BARRAGE_FL"
                                                     },
                                                     "16": {
-                                                        "Value": 50,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "17": {
@@ -7533,14 +7596,14 @@
                                                         "Name": "SMOKE"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4950,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "4": {
                                                         "Name": "DEFAULT",
                                                         "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Value": 1
 
                                                     }
@@ -7565,24 +7628,24 @@
                                                         "Name": ""
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 3500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2500,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2250,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceShort",
                                                         "Name": ""
                                                     },
                                                     "5": {
-                                                        "Value": 100,
+                                                        "Value": 200,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_BaseDamagePerRound",
                                                         "Name": "ANTI-AIR"
@@ -7600,10 +7663,10 @@
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "8": {
-                                                        "Value": 500,
+                                                        "Value": 1000,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Name": "DEFALT"
+                                                        "Name": "DEFAULT"
                                                     }
                                                 }
                                             },
@@ -7773,8 +7836,8 @@
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 17000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -7822,8 +7885,8 @@
                                                         "Value": 12000
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 7250,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
@@ -7846,8 +7909,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 5625,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -7877,17 +7940,17 @@
                                                     },
                                                     "1": {
                                                         "Value": 6,
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 1200,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 270,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
@@ -7902,15 +7965,15 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     },
                                                     "1": {
-                                                        "Value": 1,
-                                                        "Mode": "Add",
+                                                        "Value": 11,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
+                                                        "Value": 2100,
                                                         "Mode": "AddPercent",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
@@ -7924,7 +7987,7 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     }
                                                 }
                                             },
@@ -7946,8 +8009,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 19500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -8035,13 +8098,13 @@
                                                 "UnitType": "C_Battlecruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 54,
-                                                        "Mode": "Add",
+                                                        "Value": 79,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
-                                                        "Value": 20000,
-                                                        "Mode": "Add",
+                                                        "Value": 60000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "2": {
@@ -8076,8 +8139,8 @@
                                                 "UnitType": "C_ArtilleryCruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 20,
-                                                        "Mode": "Add",
+                                                        "Value": 76,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
@@ -8171,8 +8234,8 @@
                                                         "Name": "ARTILLERY_BARRAGE_FL"
                                                     },
                                                     "16": {
-                                                        "Value": 50,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "17": {
@@ -8251,14 +8314,14 @@
                                                         "Name": "SMOKE"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4950,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "4": {
                                                         "Name": "DEFAULT",
                                                         "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Value": 1
 
                                                     }
@@ -8283,24 +8346,24 @@
                                                         "Name": ""
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 3500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2500,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2250,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceShort",
                                                         "Name": ""
                                                     },
                                                     "5": {
-                                                        "Value": 100,
+                                                        "Value": 200,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_BaseDamagePerRound",
                                                         "Name": "ANTI-AIR"
@@ -8318,10 +8381,10 @@
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "8": {
-                                                        "Value": 500,
+                                                        "Value": 1000,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Name": "DEFALT"
+                                                        "Name": "DEFAULT"
                                                     }
                                                 }
                                             },
@@ -8491,8 +8554,8 @@
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 17000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -8540,8 +8603,8 @@
                                                         "Value": 12000
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 7250,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
@@ -8564,8 +8627,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 5625,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -8595,17 +8658,17 @@
                                                     },
                                                     "1": {
                                                         "Value": 6,
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 1200,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 270,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
@@ -8620,15 +8683,15 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     },
                                                     "1": {
-                                                        "Value": 1,
-                                                        "Mode": "Add",
+                                                        "Value": 11,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
+                                                        "Value": 2100,
                                                         "Mode": "AddPercent",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
@@ -8642,7 +8705,7 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     }
                                                 }
                                             },
@@ -8664,8 +8727,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 19500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -8753,13 +8816,13 @@
                                                 "UnitType": "C_Battlecruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 54,
-                                                        "Mode": "Add",
+                                                        "Value": 79,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
-                                                        "Value": 20000,
-                                                        "Mode": "Add",
+                                                        "Value": 60000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "2": {
@@ -8794,8 +8857,8 @@
                                                 "UnitType": "C_ArtilleryCruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 20,
-                                                        "Mode": "Add",
+                                                        "Value": 76,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
@@ -8889,8 +8952,8 @@
                                                         "Name": "ARTILLERY_BARRAGE_FL"
                                                     },
                                                     "16": {
-                                                        "Value": 50,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "17": {
@@ -8969,14 +9032,14 @@
                                                         "Name": "SMOKE"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4950,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "4": {
                                                         "Name": "DEFAULT",
                                                         "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Value": 1
 
                                                     }
@@ -9001,24 +9064,24 @@
                                                         "Name": ""
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 3500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2500,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2250,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceShort",
                                                         "Name": ""
                                                     },
                                                     "5": {
-                                                        "Value": 100,
+                                                        "Value": 200,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_BaseDamagePerRound",
                                                         "Name": "ANTI-AIR"
@@ -9036,7 +9099,7 @@
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "8": {
-                                                        "Value": 500,
+                                                        "Value": 1000,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Name": "DEFAULT"
@@ -9209,8 +9272,8 @@
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 17000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -9258,8 +9321,8 @@
                                                         "Value": 12000
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 7250,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
@@ -9282,8 +9345,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 5625,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -9313,17 +9376,17 @@
                                                     },
                                                     "1": {
                                                         "Value": 6,
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 1200,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 270,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
@@ -9338,15 +9401,15 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     },
                                                     "1": {
-                                                        "Value": 1,
-                                                        "Mode": "Add",
+                                                        "Value": 11,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
+                                                        "Value": 2100,
                                                         "Mode": "AddPercent",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
@@ -9360,7 +9423,7 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     }
                                                 }
                                             },
@@ -9382,8 +9445,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 19500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -9463,13 +9526,13 @@
                                                 "UnitType": "C_Battlecruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 54,
-                                                        "Mode": "Add",
+                                                        "Value": 79,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
-                                                        "Value": 20000,
-                                                        "Mode": "Add",
+                                                        "Value": 60000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "2": {
@@ -9504,8 +9567,8 @@
                                                 "UnitType": "C_ArtilleryCruiser",
                                                 "BuffSet": {
                                                     "0": {
-                                                        "Value": 20,
-                                                        "Mode": "Add",
+                                                        "Value": 76,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "1": {
@@ -9599,8 +9662,8 @@
                                                         "Name": "ARTILLERY_BARRAGE_FL"
                                                     },
                                                     "16": {
-                                                        "Value": 50,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "17": {
@@ -9679,14 +9742,14 @@
                                                         "Name": "SMOKE"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 4950,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "4": {
                                                         "Name": "DEFAULT",
                                                         "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Value": 1
 
                                                     }
@@ -9711,24 +9774,24 @@
                                                         "Name": ""
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 3500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2500,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 2250,
+                                                        "Mode": "Set",
                                                         "Attribute": "WeaponRange_DistanceShort",
                                                         "Name": ""
                                                     },
                                                     "5": {
-                                                        "Value": 100,
+                                                        "Value": 200,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_BaseDamagePerRound",
                                                         "Name": "ANTI-AIR"
@@ -9746,7 +9809,7 @@
                                                         "Name": "ANTI-AIR"
                                                     },
                                                     "8": {
-                                                        "Value": 500,
+                                                        "Value": 1000,
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Name": "DEFAULT"
@@ -9919,8 +9982,8 @@
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 17000,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -9968,8 +10031,8 @@
                                                         "Value": 12000
                                                     },
                                                     "4": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 7250,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     }
                                                 }
@@ -9992,8 +10055,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 150,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 5625,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -10023,17 +10086,17 @@
                                                     },
                                                     "1": {
                                                         "Value": 6,
-                                                        "Mode": "Add",
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 1200,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
-                                                        "Value": 200,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 270,
+                                                        "Mode": "Set",
                                                         "Attribute": "UnitDynamics_MaxSpeed"
                                                     }
                                                 }
@@ -10048,15 +10111,15 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     },
                                                     "1": {
-                                                        "Value": 1,
-                                                        "Mode": "Add",
+                                                        "Value": 11,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
+                                                        "Value": 2100,
                                                         "Mode": "AddPercent",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
@@ -10070,7 +10133,7 @@
                                                         "Name": "",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 1000
+                                                        "Value": 250
                                                     }
                                                 }
                                             },
@@ -10092,8 +10155,8 @@
                                                         "Attribute": "Unit_Armour"
                                                     },
                                                     "2": {
-                                                        "Value": 900,
-                                                        "Mode": "AddPercent",
+                                                        "Value": 19500,
+                                                        "Mode": "Set",
                                                         "Attribute": "Unit_MaxHealth"
                                                     },
                                                     "3": {
@@ -10145,7 +10208,6 @@
                                                     }
                                                 }
                                             }
-
                                         },
                                         "Modifiers": {
                                             "0": {
@@ -11153,7 +11215,7 @@
         },
         "N_DemoCharge_AI": {
             "UnitAttributes": {
-                "MaxHealth": 69,
+                "MaxHealth": 690000,
                 "Controllable": false,
                 "Targetable": false,
                 "NonAutoTargetable": true
@@ -11172,15 +11234,10 @@
                     "FriendlyFireDamageScalar": 0,
                     "IsTracer": false,
                     "TracerSpeed": 0,
-                    "WeaponOwnerFriendlyFireDamageScalar": 1,
+                    "WeaponOwnerFriendlyFireDamageScalar": 100,
                     "WindUpTimeMS": 0,
                     "WindDownTimeMS": 0,
                     "NumberOfBursts": 1,
-                    "EntityTypesToSpawnOnImpact": {
-                        "0": {
-                            "EntityTypeToSpawn": "N_MissileBarrage_Sight"
-                        }
-                    },
                     "ProjectileEntityTypeToSpawn": "SuperWeapon_Narrow_ProjectileAssetContainer",
                     "RateOfFire": 1,
                     "BurstPeriodMinTimeMS": 1,
