@@ -2,6 +2,8 @@
 
 ## Installation Instructions
 
+**Mske sure you have last version of GE mod installed**
+
 Download the patch you want
 
 Rename it to *patch.json*
