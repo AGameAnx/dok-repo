@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Campaign Balance Mod",
 		"Author": "AGameAnx - original, Just_carrier - campaign adaptation",
-		"Version": "1.0.2",
-		"LastUpdate": "2023-09-14"
+		"Version": "1.0.3",
+		"LastUpdate": "2023-09-16"
 	},
 	/*"Global": {
 		"UnitAttributes": {
@@ -599,6 +599,7 @@
 			"WeaponAttributes": {
 				"C_Carrier_Weapon_G2All": {
 					"BaseDamagePerRound": 30,
+					"DamagePacketsPerShot": 1,
 					"ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 4,
 					"TargetStyle": "Flak",
@@ -646,6 +647,7 @@
 					"ExcludeFromHeightAdvantage": true,
 					"RateOfFire": 4,
 					"TargetStyle": "Flak",
+					"DamagePacketsPerShot": 1,
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
 					"RangeAttributesLong": {
@@ -730,7 +732,7 @@
 				},
 				"C_Carrier_Weapon_Repair": {
 					"RangeAttributesShort": {
-						"Distance": 800
+						"Distance": 400
 					}
 				}
 			},
@@ -740,6 +742,109 @@
 					"HasUnlimitedCapacity": true
 				},
 				"PowerSystems": {
+					"0": {
+						"PowerLevels": {
+							"2": {
+								"StatusEffectsToApply": {
+									"RepairShunt_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"6": {
+														"Name": "TURRET_BL5_HEAL",
+														"Attribute": 33554432,
+														"Mode": "Set",
+														"Value": 400
+													},
+													"7": {
+														"Name": "TURRET_BR5_HEAL",
+														"Attribute": 33554432,
+														"Mode": "Set",
+														"Value": 400
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"StatusEffectsToApply": {
+									"RepairShunt_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"6": {
+														"Name": "TURRET_BL5_HEAL",
+														"Attribute": 33554432,
+														"Mode": "Set",
+														"Value": 800
+													},
+													"7": {
+														"Name": "TURRET_BR5_HEAL",
+														"Attribute": 33554432,
+														"Mode": "Set",
+														"Value": 800
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"StatusEffectsToApply": {
+									"RepairShunt_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"6": {
+														"Name": "TURRET_BL5_HEAL",
+														"Attribute": 33554432,
+														"Mode": "Set",
+														"Value": 800
+													},
+													"7": {
+														"Name": "TURRET_BR5_HEAL",
+														"Attribute": 33554432,
+														"Mode": "Set",
+														"Value": 800
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"StatusEffectsToApply": {
+									"RepairShunt_5_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"6": {
+														"Name": "TURRET_BL5_HEAL",
+														"Attribute": 33554432,
+														"Mode": "Set",
+														"Value": 800
+													},
+													"7": {
+														"Name": "TURRET_BR5_HEAL",
+														"Attribute": 33554432,
+														"Mode": "Set",
+														"Value": 800
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
 					"1": { // Weapon Systems
 
 						"PowerLevels": {
@@ -5730,7 +5835,7 @@
 				"C_SupportCruiser_Weapon_G2G": { // what do you mean it has sob scanner stun? cant have that
 					"ExcludeFromHeightAdvantage": true,
 					"StatusEffectsSets": {
-						"1": { "StatusEffects": [ "Suppress_StatusEffect" ] } // have suppression instead
+						"1": { "StatusEffects": [ "Suppress_StatusEffect" ] } // have supression instead
 					},
 					"StatusEffectsExcludeTargetType": "Large, Carrier, XLarge",
 					"StatusEffectsTargetAlignment": "Foe",
@@ -5745,6 +5850,9 @@
 					"RangeAttributesShort": {
 						"Distance": 400,
 						"Accuracy": 45
+					},
+					"RangeAttributesMedium": {
+						"Remove": true
 					},
 					"RangeAttributesLong": {
 						"Distance": 950,
@@ -5792,7 +5900,7 @@
 		"Upgrade_SupportCruiser_G1": {
 			"ResearchItemAttributes": {
 				"LocalizedResearchTitleStringID": "SUPPORT CRUISER - SUPPRESSION FIRE",
-				"LocalizedLongDescriptionStringID": "Recalebrates support cruiser PDCs to suppression fire. Reduces affected unit movement speed by 33%."
+				"LocalizedLongDescriptionStringID": "Recalebrates support cruiser PDCs for suppression fire. Reduces affected unit movement speed by 33%."
 			}
 		},
 		"G_SupportCruiser": {
@@ -6725,7 +6833,7 @@
 			},
 			"UnitAttributes": {
 				"MaxHealth": 800,
-				"Class": "Ground, Hover, Medium, Ranged",
+				"Class": "Ground, Hover, Medium, Ranged",// R E A L L Y?????
 				"ExperienceValue": 350,
 				"SensorRadius": 1250,
 				"ContactRadius": 1350,
@@ -8338,7 +8446,7 @@
 						"AngleWeight": 25,
 						"DistanceWeight": 0.05
 					},
-					"BaseDamagePerRound": 220,
+					"BaseDamagePerRound": 110,
 					"RateOfFire": 10,
 					"LineOfSightRequired": true,
 					"BurstPeriodMinTimeMS": 201,
@@ -8347,7 +8455,7 @@
 					"DamagePacketsPerShot": 10,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 160,
-					"ReloadTimeMS": 4800,
+					"ReloadTimeMS": 3000,
 					"RangeAttributesMedium": {
 						"Remove": true
 					},
@@ -8371,7 +8479,7 @@
 				"ToggledIconName": "Icon-Command-Harvest-CU",
 				"LocalizedTitleStringID": "LOAD HE",
 				"LocalizedShortDescriptionStringID": "TOGGLE",
-				"LocalizedLongDescriptionStringID": "Switches Battlecruiser cannons ammo from AP to HE. Increasing effectiveness at engaging groups of lightly armored targets.\n+ Damage per shot 160>220\n+ Area of effect radius 60>160\n+ Cooldown time between bursts 2 seconds > 0.65 second\n- Weapons range 1150m>950m\n- Effectiveness vs armor 1 : 1 > 10 : 1\n- Weapon reload time 3.8 seconds > 4.8 seconds.",
+				"LocalizedLongDescriptionStringID": "Switches Battlecruiser cannons ammo from AP to HE. Increasing effectiveness at engaging groups of lightly armored targets.\n+ Damage per shot 160>110\n+ Area of effect radius 60>160\n+ Cooldown time between bursts 2 seconds > 0.65 second\n- Weapons range 1150m>950m\n- Effectiveness vs armor 1 : 1 > 10 : 1(armor is 10x more effective)\n- Weapon reload time 3.8 seconds > 3.0 seconds.",
 				"LocalizedToggledTitleStringID": "LOAD AP",
 				"LocalizedToggledShortDescriptionStringID": "TOGGLE",
 				"LocalizedToggledLongDescriptionStringID": "Switches Battlecruiser cannons ammo back to AP from HE. Increasing effectiveness vs armored targets."
