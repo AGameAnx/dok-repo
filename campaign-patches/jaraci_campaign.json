@@ -2,8 +2,8 @@
 	"Meta": {
 		"Name": "Jaraci Campaign Balance Mod",
 		"Author": "AGameAnx - original, Just_carrier - campaign adaptation",
-		"Version": "1.0.4",
-		"LastUpdate": "2023-09-17"
+		"Version": "1.0.5",
+		"LastUpdate": "2023-09-19"
 	},
 	/*"Global": {
 		"UnitAttributes": {
@@ -703,7 +703,7 @@
 				"C_Carrier_Weapon_G2All_PenetrationShots": {
 					"BaseDamagePerRound": 70,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 4,
+					"RateOfFire": 0,
 					"TargetStyle": "Flak",
 					"DamagePacketsPerShot": 1,
 					"RangeAttributesShort": { "Accuracy": 50 },
@@ -1050,20 +1050,20 @@
 											"0": {
 												"BuffSet": {
 													"1": {
-														"Mode": "AddPercent",
-														"Value": 25
+														"Mode": "Set",
+														"Value": 5
 													}, // TURRET_BR_APBULLETS
 													"2": {
-														"Mode": "AddPercent",
-														"Value": 25
+														"Mode": "Set",
+														"Value": 5
 													}, // TURRET_BL_APBULLETS
 													"3": {
-														"Mode": "AddPercent",
-														"Value": 25
+														"Mode": "Set",
+														"Value": 5
 													}, // TURRET_FL_APBULLETS
 													"4": {
-														"Mode": "AddPercent",
-														"Value": 25
+														"Mode": "Set",
+														"Value": 5
 													}, // TURRET_FR_APBULLETS
 													"5": { "Value": 2 } // Fire rate display
 												}
@@ -8589,7 +8589,7 @@
 					"BurstPeriodMinTimeMS": 201,
 					"BurstPeriodMaxTimeMS": 201,
 					"CooldownTimeMS": 650,
-					"DamagePacketsPerShot": 10,
+					"DamagePacketsPerShot": 5,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 160,
 					"ReloadTimeMS": 3000,
@@ -8610,13 +8610,19 @@
 				}
 			}
 		},
+		"C_Scanner": {
+			"DetectableAttributes": {
+				"AlwaysVisible": false,
+				"MinimumStateAfterDetection": "Hidden"
+			}
+		},
 		"Ability_C_PiercingShot_Campaign": {
 			"AbilityViewAttributes": {
 				"IconName": "Shunt_Weapons_on",
 				"ToggledIconName": "Icon-Command-Harvest-CU",
 				"LocalizedTitleStringID": "LOAD HE",
 				"LocalizedShortDescriptionStringID": "TOGGLE",
-				"LocalizedLongDescriptionStringID": "Switches Battlecruiser cannons ammo from AP to HE. Increasing effectiveness at engaging groups of lightly armored targets.\n+ Damage per shot 160>110\n+ Area of effect radius 60>160\n+ Cooldown time between bursts 2 seconds > 0.65 second\n- Weapons range 1150m>950m\n- Effectiveness vs armor 1 : 1 > 10 : 1(armor is 10x more effective)\n- Weapon reload time 3.8 seconds > 3.0 seconds.",
+				"LocalizedLongDescriptionStringID": "Switches Battlecruiser cannons ammo from AP to HE. Increasing effectiveness at engaging groups of lightly armored targets.\n+ Damage per shot 160>110\n+ Area of effect radius 60>160\n+ Cooldown time between bursts 2 seconds > 0.65 second\n- Weapons range 1150m>950m\n- Effectiveness vs armor 1 : 1 > 5 : 1(armor is 5x more effective)\n- Weapon reload time 3.8 seconds > 3.0 seconds.",
 				"LocalizedToggledTitleStringID": "LOAD AP",
 				"LocalizedToggledShortDescriptionStringID": "TOGGLE",
 				"LocalizedToggledLongDescriptionStringID": "Switches Battlecruiser cannons ammo back to AP from HE. Increasing effectiveness vs armored targets."
