@@ -8,9 +8,9 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.08.22",
-        "LastUpdate": "2023-07-04",
-        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
+        "Version": "1.08.30",
+        "LastUpdate": "2023-09-20",
+        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
         "UnitAttributes": {
@@ -771,6 +771,7 @@
                         "MaxCount": 12,
                         "UndockSpeed": 550
                     },
+                    "Gunship": { "UndockSpeed": 0 },
                     "Ground": { "UndockSpeed": 150 }
                 }
             },
@@ -2498,6 +2499,7 @@
             },
             "UnitHangarAttributes": {
                 "HangarBays": {
+                    "Gunship": { "UndockSpeed": 0 },
                     "Interceptor": {
                         "MaxCount": 12,
                         "UndockSpeed": 550
@@ -15577,9 +15579,50 @@
                 "ContactRadius": 450
             },
             "UnitMovementAttributes": {
+                "Combat": {
+                    "PassiveCombatApproachMode": "Strafe",
+                    "ActiveCombatApproachMode": "Strafe",
+                    "HoverStrafeCycleDuration": 10,
+                    "HoverStrafeLateralDisplacement": 500,
+                    "MinDesiredCombatRange": 700,
+                    "MaxDesiredCombatRange": 900
+                },
+                "Maneuvers": {
+                    "MustReachMinSpeedBeforeTurn": false,
+                    "CanGetOutOfDrift": true,
+                    "CanReverse": true,
+                    "CanStop": true,
+                    "CanDoSlowTurns": true,
+                    "CanDoFastTurns": true,
+                    "SlowAwayTurn": "Controlled",
+                    "SlowDirectTurn": "Controlled",
+                    "FastAwayTurn": "Controlled",
+                    "FastDirectTurn": "Controlled",
+                    // "ThreePointTurn": {
+                    //     "Use": false
+                    //  },
+                    "RearFacingArrive": {
+                        "Use": false
+                    }
+                },
+                "Hover": {
+                    "TurnAcceleration": 0.9,
+                    "TurnMaxLookAheadTime": 10,
+                    "NoTurnDistance": 0,
+                    "FaceTargetOnlyInCombat": false
+
+                },
                 "Dynamics": {
                     "MaxSpeed": 150,
-                    "MaxSpeedTurnRadius": 300
+                    "BrakingTime": 1.9,
+                    "AccelerationTime": 2.9,
+                    "MaxEaseIntoTurnTime": 1,
+                    "ReverseDriftMultiplier": 1,
+                    "ReverseFactor": 1,
+                    "DeathDriftTime": 15,
+                    "DriveType": "Hover",
+                    "DriftType": 0,
+                    "MaxSpeedTurnRadius": 50
                 }
             },
             "WeaponAttributes": {
@@ -15588,6 +15631,7 @@
                     "ProjectileEntityTypeToSpawn": "Cat_G2G_ProjectileAssetContainer_MP",
                     "BaseDamagePerRound": 155,
                     "IsTracer": false,
+                    "RateOfFire": 2,
                     "TracerSpeed": 0,
                     "TracerLength": 5,
                     "DamagePacketsPerShot": 1,
