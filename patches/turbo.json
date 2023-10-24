@@ -1,4 +1,5 @@
-{ /*"Global": {
+{ 
+	/*"Global": {
         "UnitAttributes": {
             "Resource1Cost": 0,
             "Resource2Cost": 0,
@@ -5653,6 +5654,20 @@
 						"12": { "Remove": true }
 					}
 				},
+				"C_Carrier_Weapon_Repair_MP": {
+					"RateOfFire": 25,
+					"ExcludeFromHeightAdvantage": true,
+					"LineOfSightRequired": false,
+					"TracerSpeed": 100000, // why do repair beams take time to reach their target... wtf???
+					"RangeAttributesShort": {
+						"Distance": 800
+					},
+					"Modifiers": {
+						"0": {
+							"Remove": true
+						}
+					}
+				},
 				"C_Carrier_Weapon_G2All_Dummy_MP": {
 					"BaseDamagePerRound": 50,
 					"ExcludeFromHeightAdvantage": false
@@ -8573,6 +8588,7 @@
 				"Resource1Cost": 50,
 				"PopCapCost": 1,
 				"MaxHealth": 2800,
+				"ProductionTime": 8,
 				"Armour": 10,
 				"PriorityAsTarget": 2
 			},
@@ -9060,7 +9076,7 @@
 				"ProductionTime": 23,
 				"MaxHealth": 8200,
 				"SensorRadius": 1800,
-				"Armour": 30,
+				"Armour": 25,
 				"PopCapCost": 4
 
 			},
@@ -9079,7 +9095,8 @@
 			"WeaponAttributes": {
 				"C_SupportCruiser_Weapon_Repair_Small_MP": {
 					"LineOfSightRequired": false,
-					"RateOfFire": 15,
+					"RateOfFire": 14,
+					"TracerSpeed": 150000,
 					"RangeAttributesShort": {
 						"MinDistance": 0,
 						"Distance": 6000
@@ -9115,7 +9132,7 @@
 					"TracerSpeed": 1500,
 					"LineOfSightRequired": true,
 					"TargetStyle": "Flak",
-					"BaseDamagePerRound": 40,
+					"BaseDamagePerRound": 50,
 					"RateOfFire": 15,
 					"BurstPeriodMinTimeMS": 800,
 					"BurstPeriodMaxTimeMS": 900,
@@ -9126,8 +9143,8 @@
 						"Accuracy": 45
 					},
 					"RangeAttributesLong": {
-						"Distance": 1150,
-						"Accuracy": 35
+						"Distance": 1350,
+						"Accuracy": 15
 					},
 					"Turret": {
 						"FieldOfView": 360,
@@ -9227,8 +9244,8 @@
 						"Accuracy": 45
 					},
 					"RangeAttributesLong": {
-						"Distance": 1150,
-						"Accuracy": 35
+						"Distance": 1250,
+						"Accuracy": 15
 					},
 					"Turret": {
 						"FieldOfView": 360,
@@ -9325,7 +9342,7 @@
 		"G_SupportCruiser_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 8100,
-				"Armour": 30,
+				"Armour": 25,
 				"Resource1Cost": 300,
 				"Resource2Cost": 0,
 				"SensorRadius": 1450,
@@ -9338,18 +9355,19 @@
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"RateOfFire": 15,
-					"BaseDamagePerRound": 40,
+					"BaseDamagePerRound": 50,
+					"TargetStyle": "Flak",
 					"RangeAttributesShort": {
-						"Accuracy": 55,
-						"Distance": 800
+						"Accuracy": 65,
+						"Distance": 400
 					},
 					"RangeAttributesMedium": {
 						"Accuracy": 45,
 						"Distance": 900
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 25,
-						"Distance": 1100
+						"Accuracy": 15,
+						"Distance": 1300
 					},
 					"Modifiers": {
 						"0": {
@@ -9371,18 +9389,19 @@
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"RateOfFire": 15,
-					"BaseDamagePerRound": 40,
+					"BaseDamagePerRound": 50,
+					"TargetStyle": "Flak",
 					"RangeAttributesShort": {
-						"Accuracy": 55,
-						"Distance": 800
+						"Accuracy": 65,
+						"Distance": 400
 					},
 					"RangeAttributesMedium": {
 						"Accuracy": 45,
 						"Distance": 900
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 25,
-						"Distance": 1100
+						"Accuracy": 15,
+						"Distance": 1300
 					},
 					"Modifiers": {
 						"0": {
@@ -9405,7 +9424,7 @@
 		"K_SupportCruiser_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 8100,
-				"Armour": 30,
+				"Armour": 25,
 				"Resource1Cost": 300,
 				"Resource2Cost": 0,
 				"SensorRadius": 1450,
@@ -9418,18 +9437,19 @@
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"RateOfFire": 15,
-					"BaseDamagePerRound": 40,
+					"BaseDamagePerRound": 50,
+					"TargetStyle": "Flak",
 					"RangeAttributesShort": {
-						"Accuracy": 55,
-						"Distance": 800
+						"Accuracy": 65,
+						"Distance": 400
 					},
 					"RangeAttributesMedium": {
 						"Accuracy": 45,
 						"Distance": 900
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 25,
-						"Distance": 1100
+						"Accuracy": 15,
+						"Distance": 1300
 					},
 					"Modifiers": {
 						"0": {
@@ -9451,18 +9471,19 @@
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"RateOfFire": 15,
-					"BaseDamagePerRound": 40,
+					"TargetStyle": "Flak",
+					"BaseDamagePerRound": 50,
 					"RangeAttributesShort": {
-						"Accuracy": 55,
-						"Distance": 800
+						"Accuracy": 65,
+						"Distance": 400
 					},
 					"RangeAttributesMedium": {
 						"Accuracy": 45,
 						"Distance": 900
 					},
 					"RangeAttributesLong": {
-						"Accuracy": 25,
-						"Distance": 1100
+						"Accuracy": 15,
+						"Distance": 1300
 					},
 					"Modifiers": {
 						"0": {
@@ -9508,10 +9529,10 @@
 			"WeaponAttributes": {
 				"C_HAC_Weapon_G2G_MP": {
 					"StatusEffectsExcludeTargetType": "Air",
-					"BaseDamagePerRound": 55,
+					"BaseDamagePerRound": 75,
 					"BurstPeriodMinTimeMS": 500,
 					"BurstPeriodMaxTimeMS": 550,
-					"RateOfFire": 15,
+					"RateOfFire": 12,
 					"Turret": {
 						"RotationSpeed": 190
 					},
@@ -9562,7 +9583,7 @@
 				"ProductionTime": 14,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
-				"Armour": 15,
+				"Armour": 20,
 				"MaxHealth": 3800,
 				"PopCapCost": 2
 			},
@@ -9586,7 +9607,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 55,
+					"BaseDamagePerRound": 65,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 8,
@@ -9605,7 +9626,7 @@
 				"ProductionTime": 14,
 				"SensorRadius": 1100,
 				"ContactRadius": 1250,
-				"Armour": 15,
+				"Armour": 20,
 				"MaxHealth": 3800,
 				"PopCapCost": 2
 			},
@@ -9629,7 +9650,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 55,
+					"BaseDamagePerRound": 65,
 					"BurstPeriodMinTimeMS": 750,
 					"BurstPeriodMaxTimeMS": 850,
 					"RateOfFire": 8,
@@ -9691,9 +9712,9 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 45,
-					"RateOfFire": 8,
-					"CooldownTimeMS": 400,
+					"BaseDamagePerRound": 65,
+					"RateOfFire": 6,
+					"CooldownTimeMS": 600,
 					"NumberOfBursts": 2,
 					"BurstPeriodMinTimeMS": 950,
 					"BurstPeriodMaxTimeMS": 1150,
@@ -9773,9 +9794,9 @@
 			},
 			"WeaponAttributes": {
 				"C_Escort_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 45,
-					"RateOfFire": 8,
-					"CooldownTimeMS": 400,
+					"BaseDamagePerRound": 65,
+					"RateOfFire": 6,
+					"CooldownTimeMS": 600,
 					"NumberOfBursts": 2,
 					"BurstPeriodMinTimeMS": 950,
 					"BurstPeriodMaxTimeMS": 1150,
@@ -9850,8 +9871,8 @@
 			},
 			"WeaponAttributes": {
 				"G_SandSkimmer_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 45,
-					"RateOfFire": 7,
+					"BaseDamagePerRound": 60,
+					"RateOfFire": 5,
 					"BurstPeriodMinTimeMS": 780,
 					"BurstPeriodMaxTimeMS": 840,
 					"CooldownTimeMS": 350,
@@ -9887,8 +9908,8 @@
 			},
 			"WeaponAttributes": {
 				"G_SandSkimmer_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 45,
-					"RateOfFire": 7,
+					"BaseDamagePerRound": 60,
+					"RateOfFire": 5,
 					"BurstPeriodMinTimeMS": 780,
 					"BurstPeriodMaxTimeMS": 840,
 					"CooldownTimeMS": 350,
@@ -10193,8 +10214,6 @@
 				}
 			}
 		},
-
-
 		"G_StarHullTank_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 1240,
@@ -10384,19 +10403,18 @@
 		},
 		"Ability_C_ArmorDebuff": {
 			"AbilityViewAttributes": {
-				"LocalizedLongDescriptionStringID": "Armor is fractured by the high velocity round. Target armor is reduced by 20 for 10 seconds."
+				"LocalizedLongDescriptionStringID": "Armor is fractured by the high velocity round. Target armor is reduced by 20 for 15 seconds."
 			}
 		},
-
 		// TSUNDERER
 		"ArmorDebuff_StatusEffect": {
 			"StatusEffectAttributes": {
-				"Duration": 10,
+				"Duration": 15,
 				"BuffsToApplyToTarget": {
 					"0": {
 						"BuffSet": {
 							"0": {
-								"Value": -20
+								"Value": -30
 							}
 						}
 					}
@@ -10890,7 +10908,6 @@
 				}
 			}
 		},
-
 		"C_Bomber_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 225,
@@ -10932,7 +10949,6 @@
 				"ResearchTime": 37
 			}
 		},
-
 		"G_Bomber_MP": {
 			"UnitAttributes": {
 				"MaxHealth": 5500,
@@ -11038,7 +11054,6 @@
 				}
 			}
 		},
-
 		"C_GunShip_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 170,
@@ -11060,14 +11075,13 @@
 				}
 			}
 		},
-
 		"G_BattleCruiser_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 125,
 				"MaxHealth": 9400,
 				"ProductionTime": 64,
-				"Armour": 55,
+				"Armour": 45,
 				"PopCapCost": 6
 			},
 			"WeaponAttributes": {
@@ -11237,7 +11251,7 @@
 		},
 		"Research_Buff_G_BattleCruiser_AntiAir": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Unlock Assault Cruiser anti-air missiles. And improve overhul perfomance.\n\n[84a1e8]Enables anti-air capabilities. Increases hull by 2000 armor by 15 and speed by 15.",
+				"LocalizedLongDescriptionStringID": "Unlock Assault Cruiser anti-air missiles. And improve cruiser perfomance.\n\n[84a1e8]Enables anti-air capabilities. Increases hull by 2000 armor by 15 and speed by 15.",
 				"Resource1Cost": 350,
 				"Resource2Cost": 255,
 				"ResearchTime": 40,
@@ -11276,7 +11290,7 @@
 		},
 		"Research_Buff_S_AssaultCruiser_AntiAir": {
 			"ResearchItemAttributes": {
-				"LocalizedLongDescriptionStringID": "Unlock Assault Cruiser anti-air missiles. And improve overhul perfomance.\n\n[84a1e8]Enables anti-air capabilities. Increases hull by 2000 armor by 15 and speed by 15.",
+				"LocalizedLongDescriptionStringID": "Unlock Assault Cruiser anti-air missiles. And improve cruiser perfomance.\n\n[84a1e8]Enables anti-air capabilities. Increases hull by 2000 armor by 15 and speed by 15.",
 				"Resource1Cost": 350,
 				"Resource2Cost": 255,
 				"ResearchTime": 40,
@@ -11313,14 +11327,13 @@
 				}
 			}
 		},
-
 		"G_HonorGuard_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 120,
 				"MaxHealth": 15200,
 				"PopCapCost": 6,
-				"Armour": 65,
+				"Armour": 45,
 				"ProductionTime": 90
 			},
 			"DetectableAttributes": {
@@ -11351,14 +11364,15 @@
 				},
 				"G_HonorGuard_Weapon_G2G_CAT_MP": {
 					"OutputDPS": true,
+					"TargetStyle": "Flak",
 					"BaseDamagePerRound": 60,
 					"TracerSpeed": 1500,
 					"RateOfFire": 20,
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
 					"RangeAttributesLong": {
-						"Accuracy": 35,
-						"Distance": 1100
+						"Accuracy": 15,
+						"Distance": 1300
 					}
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
@@ -11374,7 +11388,7 @@
 				"Resource2Cost": 120,
 				"MaxHealth": 15200,
 				"PopCapCost": 6,
-				"Armour": 65,
+				"Armour": 45,
 				"ProductionTime": 90
 			},
 			"DetectableAttributes": {
@@ -11407,13 +11421,14 @@
 			"WeaponAttributes": {
 				"G_HonorGuard_Weapon_G2G_CAT_MP": {
 					"BaseDamagePerRound": 60,
+					"TargetStyle": "Flak",
 					"TracerSpeed": 1500,
 					"RateOfFire": 20,
 					"RangeAttributesShort": { "Accuracy": 50 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
 					"RangeAttributesLong": {
-						"Accuracy": 35,
-						"Distance": 1100
+						"Accuracy": 15,
+						"Distance": 1300
 					}
 				},
 				"G_HonorGuardRailgun_Weapon_G2G_MP": {
@@ -11547,12 +11562,11 @@
 		},
 
 		"C_ArtilleryCruiser_MP": {
-
 			"UnitAttributes": {
 				"Resource1Cost": 425,
 				"Resource2Cost": 125,
 				"MaxHealth": 14000,
-				"Armour": 65,
+				"Armour": 35,
 				"ProductionTime": 65,
 				"PopCapCost": 5
 			},
@@ -11624,7 +11638,19 @@
 					"Turret": {
 						"FieldOfView": 360.0
 					},
-					"TargetStyle": "TurretImpactRun",
+					"TargetStyle": "Flak",
+					"RangeAttributesShort": {
+						"Distance": 550,
+						"Accuracy": 65
+					},
+					"RangeAttributesMedium": {
+						"Distance": 800,
+						"Accuracy": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1350,
+						"Accuracy": 10
+					},
 					"TracerSpeed": 1500,
 					"ExcludeFromHeightAdvantage": true,
 					"BaseDamagePerRound": 30,
@@ -11672,7 +11698,7 @@
 				"Resource1Cost": 450,
 				"Resource2Cost": 100,
 				"MaxHealth": 12000,
-				"Armour": 45,
+				"Armour": 20	,
 				"ProductionTime": 65,
 				"PopCapCost": 5,
 				"SensorRadius": 1400,
@@ -11765,6 +11791,19 @@
 					}
 				},
 				"G_ArtilleryCruiser_Weapon_PD_MP": {
+					"TargetStyle": "Flak",
+					"RangeAttributesShort": {
+						"Distance": 550,
+						"Accuracy": 65
+					},
+					"RangeAttributesMedium": {
+						"Distance": 800,
+						"Accuracy": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1350,
+						"Accuracy": 10
+					},
 					"BaseDamagePerRound": 40,
 					"TracerSpeed": 1500,
 					"Turret": {
@@ -11783,7 +11822,7 @@
 				"SensorRadius": 1100,
 				"ContactRadius": 1200,
 				"ProductionTime": 85,
-				"Armour": 45
+				"Armour": 30
 			},
 			"AbilityAttributes": {
 				"Ability_K_ArtilleryBarrage_01_MP": {
@@ -11850,6 +11889,19 @@
 				"G_ArtilleryCruiser_Weapon_PD_MP": {
 					"Turret": {
 						"FieldOfView": 360.0
+					},
+					"TargetStyle": "Flak",
+					"RangeAttributesShort": {
+						"Distance": 550,
+						"Accuracy": 65
+					},
+					"RangeAttributesMedium": {
+						"Distance": 800,
+						"Accuracy": 40
+					},
+					"RangeAttributesLong": {
+						"Distance": 1350,
+						"Accuracy": 10
 					},
 					"LineOfSightRequired": true,
 					"TracerSpeed": 1500,
