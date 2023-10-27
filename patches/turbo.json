@@ -5610,7 +5610,7 @@
 			},
 			"WeaponAttributes": {
 				"C_Carrier_Weapon_G2All_MP": {
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 65,
 					"ExcludeFromHeightAdvantage": false,
 					"RateOfFire": 10,
 					"TargetStyle": "Flak",
@@ -5669,7 +5669,7 @@
 					}
 				},
 				"C_Carrier_Weapon_G2All_Dummy_MP": {
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 65,
 					"ExcludeFromHeightAdvantage": false
 				},
 				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
@@ -5725,8 +5725,9 @@
 					}
 				},
 				"C_CarrierMissiles_Weapon_A2G_MP": {
-					"BaseDamagePerRound": 400,
-					"WindUpTimeMS": 100,
+					"BaseDamagePerRound": 600,
+					"ReloadTimeMS": 4500,
+					"WindUpTimeMS": 0,
 					"RangeAttributesLong": { "Distance": 1400 },
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
@@ -5880,7 +5881,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Litaraly Armor Piercing Rounds, Rate of Fire: 100, Rapid Missiles",
+								"LocalizedShortDescriptionStringID": "Litarally Armor Piercing Rounds, Rate of Fire: 100, Rapid fire Missiles",
 								"StatusEffectsToApply": {
 									"C_Weapons_5_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
@@ -5945,7 +5946,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": -79 }
+													"0": { "Value": -85 }
 												}
 											}
 										}
@@ -5963,39 +5964,9 @@
 							},
 
 							"1": {
-								"LocalizedShortDescriptionStringID": "Armor: 60",
-								"StatusEffectsToApply": {
-									"Armour_2_StatusEffect_MP": {
-										"BuffsToApplyToTarget": {
-											"0": {
-												"BuffSet": {
-													"0": { "Value": 10 }
-												}
-											}
-										}
-									}
-								}
-							},
-
-							"2": {
-								"LocalizedShortDescriptionStringID": "Armor: 65",
-								"StatusEffectsToApply": {
-									"Armour_3_StatusEffect_MP": {
-										"BuffsToApplyToTarget": {
-											"0": {
-												"BuffSet": {
-													"0": { "Value": 15 }
-												}
-											}
-										}
-									}
-								}
-							},
-
-							"3": {
 								"LocalizedShortDescriptionStringID": "Armor: 70",
 								"StatusEffectsToApply": {
-									"Armour_4_StatusEffect_MP": {
+									"Armour_2_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
@@ -6007,14 +5978,14 @@
 								}
 							},
 
-							"4": {
-								"LocalizedShortDescriptionStringID": "Armor: 85",
+							"2": {
+								"LocalizedShortDescriptionStringID": "Armor: 80",
 								"StatusEffectsToApply": {
-									"Armour_5_StatusEffect_MP": {
+									"Armour_3_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 35 }
+													"0": { "Value": 30 }
 												}
 											}
 										}
@@ -6022,13 +5993,49 @@
 								}
 							},
 
+							"3": {
+								"LocalizedShortDescriptionStringID": "Armor: 90",
+								"StatusEffectsToApply": {
+									"Armour_4_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 40 }
+												}
+											}
+										}
+									}
+								}
+							},
+							"4": {
+								"LocalizedShortDescriptionStringID": "Armor: 120",
+								"StatusEffectsToApply": {
+									"Armour_5_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 70 }
+												}
+											}
+										}
+									}
+								}
+							},
 							"5": {
 								"StatusEffectsToApply": {
 									"Armour_6_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 55 }
+													"0": { "Value": 70 }
+												}
+											}
+										},
+										"Modifiers": {
+											"0": {
+												"HealthOverTimeAttributes": {
+													"Amount": 1,
+													"MSTickDuration": 5
 												}
 											}
 										}
@@ -6240,7 +6247,6 @@
 					"NumberOfBursts": 2,
 					"WindUpTimeMS": 200,
 					"WindDownTimeMS": 500,
-
 					"ReloadTimeMS": 10000,
 					"CooldownTimeMS": 10000,
 
@@ -6278,8 +6284,9 @@
 					}
 				},
 				"C_Sob_CarrierMissiles_Weapon_A2G_MP": {
-					"BaseDamagePerRound": 400,
-					"WindUpTimeMS": 100,
+					"ReloadTimeMS": 4500,
+					"BaseDamagePerRound": 600,
+					"WindUpTimeMS": 0,
 					"RangeAttributesLong": { "Distance": 1400 },
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
@@ -6410,10 +6417,13 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Remove": true },
+													"1": {
+														"Name": "MAIN_MISSILES",
+														"Mode": "Set",
+														"Value": 1,
+														"Attribute": "UnitWeapon_RateOfFire"
+													},
 													"2": { "Remove": true },
-
-
 													"3": {
 														"Mode": "AddPercent",
 														"Value": -35
@@ -6474,15 +6484,18 @@
 							},
 
 							"2": {
-								"LocalizedShortDescriptionStringID": "55% Reload and Cooldown Reduction, 25% Accuracy Bonus",
+								"LocalizedShortDescriptionStringID": "2 Missiles. 55% Reload and Cooldown Reduction, 25% Accuracy Bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_2_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Remove": true },
-
-
+													"1": {
+														"Name": "MAIN_MISSILES",
+														"Mode": "Set",
+														"Value": 2,
+														"Attribute": "UnitWeapon_RateOfFire"
+													},
 													"2": {
 														"Mode": "AddPercent",
 														"Value": -55
@@ -6542,16 +6555,19 @@
 							},
 
 							"3": {
-								"LocalizedShortDescriptionStringID": "70% Reload and Cooldown Reduction, 35% Accuracy Bonus",
+								"LocalizedShortDescriptionStringID": "3 Missiles. 70% Reload and Cooldown Reduction, 35% Accuracy Bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_3_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Remove": true },
+													"1": {
+														"Name": "MAIN_MISSILES",
+														"Mode": "Set",
+														"Value": 3,
+														"Attribute": "UnitWeapon_RateOfFire"
+													},
 													"2": { "Remove": true },
-
-
 													"3": {
 														"Mode": "AddPercent",
 														"Value": -70
@@ -6576,8 +6592,6 @@
 													"10": { "Value": 35 },
 													"11": { "Value": 35 },
 													"12": { "Value": 35 },
-
-
 													"13": {
 														"Mode": "AddPercent",
 														"Value": -70
@@ -6608,17 +6622,19 @@
 									}
 								}
 							},
-
 							"4": {
-								"LocalizedShortDescriptionStringID": "85% Reload and Cooldown Reduction, 45% Accuracy Bonus",
+								"LocalizedShortDescriptionStringID": "4 Missiels. 85% Reload and Cooldown Reduction, 45% Accuracy Bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_4_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Remove": true },
-
-
+													"1": {
+														"Name": "MAIN_MISSILES",
+														"Mode": "Set",
+														"Value": 4,
+														"Attribute": "UnitWeapon_RateOfFire"
+													},
 													"2": {
 														"Mode": "AddPercent",
 														"Value": -85
@@ -6630,8 +6646,6 @@
 													"4": { "Value": 45 },
 													"5": { "Value": 45 },
 													"6": { "Value": 45 },
-
-
 													"7": {
 														"Mode": "AddPercent",
 														"Value": -85
@@ -6675,17 +6689,19 @@
 									}
 								}
 							},
-
 							"5": {
-								"LocalizedShortDescriptionStringID": "95% Reload and Cooldown Reduction, 55% Accuracy Bonus",
+								"LocalizedShortDescriptionStringID": "5 Missiles. 95% Reload and Cooldown Reduction, 55% Accuracy Bonus",
 								"StatusEffectsToApply": {
 									"C_Sob_Weapons_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"1": { "Remove": true },
-
-
+													"1": {
+														"Name": "MAIN_MISSILES",
+														"Mode": "Set",
+														"Value": 5,
+														"Attribute": "UnitWeapon_RateOfFire"
+													},
 													"2": {
 														"Mode": "AddPercent",
 														"Value": -95
@@ -6697,8 +6713,6 @@
 													"4": { "Value": 55 },
 													"5": { "Value": 55 },
 													"6": { "Value": 55 },
-
-
 													"7": {
 														"Mode": "AddPercent",
 														"Value": -95
@@ -6754,39 +6768,9 @@
 							},
 
 							"1": {
-								"LocalizedShortDescriptionStringID": "Armor: 60",
-								"StatusEffectsToApply": {
-									"Armour_2_StatusEffect_MP": {
-										"BuffsToApplyToTarget": {
-											"0": {
-												"BuffSet": {
-													"0": { "Value": 10 }
-												}
-											}
-										}
-									}
-								}
-							},
-
-							"2": {
-								"LocalizedShortDescriptionStringID": "Armor: 65",
-								"StatusEffectsToApply": {
-									"Armour_3_StatusEffect_MP": {
-										"BuffsToApplyToTarget": {
-											"0": {
-												"BuffSet": {
-													"0": { "Value": 15 }
-												}
-											}
-										}
-									}
-								}
-							},
-
-							"3": {
 								"LocalizedShortDescriptionStringID": "Armor: 70",
 								"StatusEffectsToApply": {
-									"Armour_4_StatusEffect_MP": {
+									"Armour_2_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
@@ -6798,14 +6782,44 @@
 								}
 							},
 
+							"2": {
+								"LocalizedShortDescriptionStringID": "Armor: 80",
+								"StatusEffectsToApply": {
+									"Armour_3_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 30 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Armor: 90",
+								"StatusEffectsToApply": {
+									"Armour_4_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 40 }
+												}
+											}
+										}
+									}
+								}
+							},
+
 							"4": {
-								"LocalizedShortDescriptionStringID": "Armor: 85",
+								"LocalizedShortDescriptionStringID": "Armor: 120",
 								"StatusEffectsToApply": {
 									"Armour_5_StatusEffect_MP": {
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 35 }
+													"0": { "Value": 70 }
 												}
 											}
 										}
@@ -6819,7 +6833,15 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": 55 }
+													"0": { "Value": 70 }
+												}
+											}
+										},
+										"Modifiers": {
+											"0": {
+												"HealthOverTimeAttributes": {
+													"Amount": 1,
+													"MSTickDuration": 5
 												}
 											}
 										}
@@ -7110,7 +7132,7 @@
 			},
 			"WeaponAttributes": {
 				"G_Carrier_Weapon_G2All_MP": {
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 65,
 					"ExcludeFromHeightAdvantage": false,
 					"RateOfFire": 10,
 					"TargetStyle": "Flak",
@@ -7146,7 +7168,7 @@
 					}
 				},
 				"G_Carrier_Weapon_G2All_Dummy_MP": {
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 65,
 					"ExcludeFromHeightAdvantage": false
 				},
 				"G_Carrier_Weapon_G2All_APBULLETS_MP": {
@@ -7202,8 +7224,9 @@
 					}
 				},
 				"G_Carrier_Weapon_DefaultMissile_MP": {
-					"BaseDamagePerRound": 400,
-					"WindUpTimeMS": 100,
+					"BaseDamagePerRound": 600,
+					"WindUpTimeMS": 0,
+					"ReloadTimeMS": 4500,
 					"RangeAttributesLong": { "Distance": 1400 },
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
@@ -7445,7 +7468,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Litaraly Armor Piercing Rounds, Rate of Fire: 100, Rapid Missiles",
+								"LocalizedShortDescriptionStringID": "Litarally Armor Piercing Rounds, Rate of Fire: 100, Rapid fire Missiles",
 								"StatusEffectsToApply": {
 									"G_Weapons_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -7486,7 +7509,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": -79 }
+													"0": { "Value": -85 }
 												}
 											}
 										}
@@ -7755,11 +7778,11 @@
 			},
 			"WeaponAttributes": {
 				"G_Carrier_Weapon_G2All_Dummy_MP": {
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 65,
 					"ExcludeFromHeightAdvantage": false
 				},
 				"K_Carrier_Weapon_G2All_MP": {
-					"BaseDamagePerRound": 50,
+					"BaseDamagePerRound": 65,
 					"Turret": { "FieldOfFire": 200 },
 					"ExcludeFromHeightAdvantage": false,
 					"RateOfFire": 10,
@@ -7774,7 +7797,7 @@
 					},
 					"RangeAttributesLong": {
 						"Accuracy": 35,
-						"Distance": 950
+						"Distance": 1200
 					},
 					"Modifiers": {
 						"0": {
@@ -7855,8 +7878,9 @@
 					}
 				},
 				"K_Carrier_Weapon_DefaultMissile_MP": {
-					"BaseDamagePerRound": 400,
-					"WindUpTimeMS": 100,
+					"BaseDamagePerRound": 600,
+					"WindUpTimeMS": 0,
+					"ReloadTimeMS": 4500,
 					"RangeAttributesLong": { "Distance": 1400 },
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
@@ -8244,7 +8268,7 @@
 								}
 							},
 							"5": {
-								"LocalizedShortDescriptionStringID": "Litaraly Armor Piercing Rounds, Rate of Fire: 100, Rapid Missiles",
+								"LocalizedShortDescriptionStringID": "Litarally Armor Piercing Rounds, Rate of Fire: 100, Rapid fire Missiles",
 								"StatusEffectsToApply": {
 									"K_Weapons_5_StatusEffect": {
 										"BuffsToApplyToTarget": {
@@ -8295,7 +8319,7 @@
 										"BuffsToApplyToTarget": {
 											"0": {
 												"BuffSet": {
-													"0": { "Value": -79 }
+													"0": { "Value": -85 }
 												}
 											}
 										}
@@ -8309,7 +8333,6 @@
 				}
 			}
 		},
-
 		"K_MovementBuff_StatusEffect_01": {
 			"StatusEffectAttributes": {
 				"BuffsToApplyToTarget": {
@@ -8430,7 +8453,7 @@
 
 		"C_Sob_PopcapScanner": {
 			"UnitAttributes": {
-				"MaxHealth": 5000,
+				"MaxHealth": 10000,
 				"Armour": 10,
 				"WorldHeightOffset": 15,
 				"Resource1Cost": 50, //thats not how it works
@@ -8441,15 +8464,21 @@
 					"BaseDamagePerRound": 250,
 					"BurstPeriodMinTimeMS": 1000,
 					"BurstPeriodMaxTimeMS": 1000,
-					"TracerSpeed": 1500,
-					"DamagePacketsPerShot": 3,
-					"AreaOfEffectRadius": 86,
+					"TargetStyle": "Flak",
+					"WindUpTimeMS": 750,
+					"WindDownTimeMS": 1000,
+					"TracerSpeed": 2000,
+					"DamagePacketsPerShot": 1,
+					"AreaOfEffectRadius": 0,
 					"TargetPrioritizationAttributes": {
 						"AngleWeight": 10,
 						"DistanceWeight": 0.1
 					},
 					"RangeAttributesMedium": { "Accuracy": 100 },
-					"RangeAttributesLong": { "Accuracy": 100 }
+					"RangeAttributesLong": {
+						"Accuracy": 75,
+						"Distance": 1400
+					}
 				}
 			}
 		},
@@ -8540,7 +8569,7 @@
 		},
 		"C_Probe_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 200,
+				"MaxHealth": 2000,
 				"SensorRadius": 1000,
 				"ContactRadius": 2100
 			},
@@ -8701,6 +8730,53 @@
 				"PriorityAsTarget": -250,
 				"ProductionTime": 16
 			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +25% to baserunner armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: -50% cooldown on ability",
+						"Buff": {
+							"0": {
+								"Name": "Ability_C_DeployTurret_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							},
+							"1": {
+								"Name": "Ability_C_DeployTurret_AA_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							},
+							"2": {
+								"Name": "Ability_C_ProduceProbe_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							},
+							"3": {
+								"Name": "Ability_C_LaunchProbe_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							}
+						}
+					}
+				}
+			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
 					"MaxSpeed": 100
@@ -8757,6 +8833,32 @@
 			}
 		},
 		"C_Sob_Baserunner_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +25% to baserunner armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: +100% range to deploying targeting jammer",
+						"Buff": {
+							"0": {
+								"Name": "ECM",
+								"Attribute": "WeaponRange_DistanceShort",
+								"Mode": "AddPercent",
+								"Value": 100
+
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 325,
 				"Resource2Cost": 20,
@@ -8841,6 +8943,46 @@
 					"MaxSpeed": 100
 				}
 			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: +25% to baserunner armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Guardian: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% to healing rate",
+						"Buff": {
+							"0": {
+								"Name": "RegenAbility",// what a werid name huh
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "AddPercent",
+								"Value": 100
+
+							},
+							"1": {
+								"Remove": true
+
+							}
+						}
+					}
+				}
+			},
 			"AbilityAttributes": {
 				"Ability_G_DeployScanner_MP": {
 					"CooldownTimeSecs": 67,
@@ -8854,6 +8996,28 @@
 							"Duration": 10.005,
 							"MaxStacks": 2,
 							"StackingBehaviour": "Replace",
+							"BuffsToApplyToTarget": {
+								"0": {
+									"UnitType": "G_Baserunner_MP",
+									"BuffSet": {
+										"0": {
+											"Attribute": "UnitDynamics_MaxSpeed",
+											"Mode": "AddPercent",
+											"Value": -20
+										},
+										"1": {
+											"Attribute": "UnitDynamics_AccelerationTime",
+											"Mode": "AddPercent",
+											"Value": 20
+										},
+										"2": {
+											"Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+											"Mode": "AddPercent",
+											"Value": 20
+										}
+									}
+								}
+							},
 							"Modifiers": {
 								"0": {
 									"ModifierType": "HealthOverTime",
@@ -8907,8 +9071,8 @@
 					}
 				},
 				"G_Baserunner_Weapon_HealingAura_MP": {
-					"RateOfFire": 1,
-					"BaseDamagePerRound": 250,
+					"RateOfFire": 2,
+					"BaseDamagePerRound": 125,
 					"BurstPeriodMinTimeMS": 1000,
 					"BurstPeriodMaxTimeMS": 1000,
 					"CooldownTimeMS": 0,
@@ -8933,6 +9097,45 @@
 			}
 		},
 		"K_Baserunner_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: +25% to baserunner armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Guardian: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +400% to blast drone production",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_NumProductionQueues",
+								"Mode": "Add",
+								"Value": 4
+
+							},
+							"1": {
+								"Remove": true
+
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"PopCapCost": 3,
 				"Resource1Cost": 325,
@@ -9031,7 +9234,7 @@
 					}
 				},
 				"K_Baserunner_Weapon_Ballistic_Smoke_MP": {
-					"NumberOfBursts": 12
+					"NumberOfBursts": 6
 				}
 			}
 		},
@@ -9079,6 +9282,59 @@
 				"Armour": 25,
 				"PopCapCost": 4
 
+			},
+			"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Commander: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: +100% to repair speed", 
+						"Buff": {
+							"0": {
+								"Name": "REPAIR",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "AddPercent",
+								"Value": 100
+							},
+							"1": {
+								"Name": "REPAIR_FL",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "AddPercent",
+								"Value": 100
+							},
+							"2": {
+								"Name": "REPAIR_BL",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "AddPercent",
+								"Value": 100
+							},
+							"3": {
+								"Name": "REPAIR_BR",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
 			},
 			"AbilityAttributes": {
 				"Ability_C_SupportCruiser_AA": {
@@ -9338,8 +9594,61 @@
 				}
 			}
 		},
-
 		"G_SupportCruiser_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: +10% to cruiser hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +25% to cruiser armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"3": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% to cruiser speeeeeeeeeeeeeeeeeeeeeeeeeeed",
+						"Buff": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"MaxHealth": 8100,
 				"Armour": 25,
@@ -9422,6 +9731,60 @@
 			}
 		},
 		"K_SupportCruiser_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: +10% to cruiser hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +25% to cruiser armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"3": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% to cruiser speeeeeeeeeeeeeeeeeeeeeeeeeeed",
+						"Buff": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"MaxHealth": 8100,
 				"Armour": 25,
@@ -9515,8 +9878,42 @@
 				"Resource2Cost": 0
 			}
 		},
-
 		"C_HAC_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"3": {
+						"BuffTooltipLocID": "Lt. Commander: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Commander: +20% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: +100% to weapon damage",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 120,
 				"Resource2Cost": 15,
@@ -9575,8 +9972,63 @@
 				"ResearchTime": 25
 			}
 		},
-
 		"G_Catamaran_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: +20% to armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 20
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": 65536,
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Sentinel: +20% to armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 20
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Guardian: +20% to rate of fire",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "AddPercent",
+								"Value": 20
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% weapon damage",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 120,
 				"Resource2Cost": 20,
@@ -9620,6 +10072,62 @@
 			}
 		},
 		"K_AssaultShip_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: +20% to armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 20
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": 65536,
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Sentinel: +20% to armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 20
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Guardian: +20% to rate of fire",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "AddPercent",
+								"Value": 20
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% weapon damage",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 120,
 				"Resource2Cost": 20,
@@ -9669,8 +10177,43 @@
 				"ResearchTime": 65
 			}
 		},
-
 		"C_Escort_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +10% to armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+
+					},
+					"4": {
+						"BuffTooltipLocID": "Commander: +25% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: +150% wEaPoN dAmAdE",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 150
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"MaxHealth": 2200,
 				"Armour": 10,
@@ -9753,6 +10296,42 @@
 			}
 		},
 		"C_Sob_Escort_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +10% to armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+
+					},
+					"4": {
+						"BuffTooltipLocID": "Commander: +25% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: +150% wEaPoN dAmAdE",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 150
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"MaxHealth": 2200,
 				"Armour": 10,
@@ -9845,8 +10424,42 @@
 				"ResearchTime": 17
 			}
 		},
-
 		"G_SandSkimmer_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +25% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Sentinel: +10% to armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +150% wEaPoN dAmAdE",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 150
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"MaxHealth": 2300,
 				"SensorRadius": 1150,
@@ -9884,6 +10497,41 @@
 			}
 		},
 		"K_Sandskimmer_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +25% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Sentinel: +10% to armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +150% wEaPoN dAmAdE",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 150
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"MaxHealth": 2300,
 				"SensorRadius": 1150,
@@ -9926,6 +10574,40 @@
 			}
 		},
 		"C_Railgun_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Officer: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Commander: +15% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 15
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: +100% range",
+						"Buff": {
+							"0": {
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 220,
 				"Resource2Cost": 30,
@@ -9995,6 +10677,40 @@
 			}
 		},
 		"C_Sob_Railgun_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Officer: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Commander: +15% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 15
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: +100% range",
+						"Buff": {
+							"0": {
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 220,
 				"Resource2Cost": 30,
@@ -10215,6 +10931,31 @@
 			}
 		},
 		"G_StarHullTank_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"4": {
+						"BuffTooltipLocID": "Guardian: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"MaxHealth": 1240,
 				"Armour": 10,
@@ -10300,6 +11041,31 @@
 			}
 		},
 		"K_HeavyRailgun_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"4": {
+						"BuffTooltipLocID": "Guardian: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"MaxHealth": 1240,
 				"Armour": 10,
@@ -10459,6 +11225,31 @@
 		},
 
 		"G_StarHull_Upgrade01_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"4": {
+						"BuffTooltipLocID": "Guardian: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 170,
 				"Resource2Cost": 17,
@@ -10521,6 +11312,31 @@
 			}
 		},
 		"K_AssaultRailgun_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"4": {
+						"BuffTooltipLocID": "Guardian: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 170,
 				"Resource2Cost": 17,
@@ -10592,6 +11408,41 @@
 
 
 		"C_HAC_Upgrade01_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"3": {
+						"BuffTooltipLocID": "Lt. Commander: +10% hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Commander: +20% hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: +100% range.",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 225,
 				"Resource2Cost": 40,
@@ -10619,7 +11470,6 @@
 				}
 			}
 		},
-
 		"G_Catamaran_Upgrade01_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 225,
@@ -10636,13 +11486,72 @@
 			},
 			"ExperienceAttributes": {
 				"Levels": {
-					"4": {
+					"1": {
+						"BuffTooltipLocID": "Novice: +3 armor",
 						"Buff": {
 							"0": {
-								"Name": "",
-								"Attribute": "UnitWeapon_ReloadTime",
+								"Attribute": "Unit_Armour",
 								"Mode": "Add",
-								"Value": -1000
+								"Value": 3
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Sentinel: +3 armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "Add",
+								"Value": 3
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Guardian: -50% weapon cooldown",
+						"Buff": {
+							"0": {
+								"Name": "ANTI-AIR",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -50
+							},
+							"1": {
+								"Name": "ANTI-AIR-RADIO",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -50
+							},
+							"2": {
+								"Attribute": "Unit_FireRateDisplay",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% range.",
+						"Buff": {
+							"0": {
+								"Name": "ANTI-AIR",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
+							},
+							"1": {
+								"Name": "ANTI-AIR-RADIO",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
 							}
 						}
 					}
@@ -10712,13 +11621,72 @@
 			},
 			"ExperienceAttributes": {
 				"Levels": {
-					"4": {
+					"1": {
+						"BuffTooltipLocID": "Novice: +3 armor",
 						"Buff": {
 							"0": {
-								"Name": "",
-								"Attribute": "UnitWeapon_ReloadTime",
+								"Attribute": "Unit_Armour",
 								"Mode": "Add",
-								"Value": -1000
+								"Value": 3
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +10% to hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Sentinel: +3 armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "Add",
+								"Value": 3
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Guardian: -50% weapon cooldown",
+						"Buff": {
+							"0": {
+								"Name": "ANTI-AIR",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -50
+							},
+							"1": {
+								"Name": "ANTI-AIR-RADIO",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -50
+							},
+							"2": {
+								"Attribute": "Unit_FireRateDisplay",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% range.",
+						"Buff": {
+							"0": {
+								"Name": "ANTI-AIR",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
+							},
+							"1": {
+								"Name": "ANTI-AIR-RADIO",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 100
 							}
 						}
 					}
@@ -10772,8 +11740,64 @@
 				"ResearchTime": 20
 			}
 		},
-
 		"C_Interceptor_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +25% to aircraft hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Lt. Commander: +4 to aircraft armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "Add",
+								"Value": 4
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: Double the rate of fire",
+						"Buff": {
+							"0": {
+								"Attribute": "Inventory_Capacity",
+								"Mode": "Add",
+								"Value": 10
+							},
+							"1": {
+								"Attribute": "Inventory_StartingAmount",
+								"Mode": "Add",
+								"Value": 10
+							},
+							"2": {
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "Add",
+								"Value": 3
+
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 175,
 				"Resource2Cost": 10,
@@ -10826,6 +11850,63 @@
 		},
 
 		"G_Interceptor_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +25% to aircraft hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Sentinel: +4 to aircraft armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "Add",
+								"Value": 4
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: Double the rate of fire",
+						"Buff": {
+							"0": {
+								"Attribute": "Inventory_Capacity",
+								"Mode": "Add",
+								"Value": 10
+							},
+							"1": {
+								"Attribute": "Inventory_StartingAmount",
+								"Mode": "Add",
+								"Value": 10
+							},
+							"2": {
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "Add",
+								"Value": 4
+
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"MaxHealth": 4780,
 				"Resource1Cost": 175,
@@ -10853,6 +11934,63 @@
 			}
 		},
 		"K_Interceptor_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +25% to aircraft hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Sentinel: +4 to aircraft armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "Add",
+								"Value": 4
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: Double the rate of fire",
+						"Buff": {
+							"0": {
+								"Attribute": "Inventory_Capacity",
+								"Mode": "Add",
+								"Value": 10
+							},
+							"1": {
+								"Attribute": "Inventory_StartingAmount",
+								"Mode": "Add",
+								"Value": 10
+							},
+							"2": {
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "Add",
+								"Value": 4
+
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"MaxHealth": 4780,
 				"Resource2Cost": 10,
@@ -10909,10 +12047,78 @@
 			}
 		},
 		"C_Bomber_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Officer: +25% to aircraft hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Commander: +8 to aircraft armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "Add",
+								"Value": 8
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Lt. Commander: Turboburner +30% to aircraft speed",
+						"Buff": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "AddPercent",
+								"Value": 30
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MinCruiseSpeed",
+								"Mode": "AddPercent",
+								"Value": 30
+							},
+							"2": {
+								"Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+								"Mode": "AddPercent",
+								"Value": -30
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: Double the ammo capacity",
+						"Buff": {
+							"0": {
+								"Attribute": "Inventory_Capacity",
+								"Mode": "Add",
+								"Value": 1
+							},
+							"1": {
+								"Attribute": "Inventory_StartingAmount",
+								"Mode": "Add",
+								"Value": 1
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 225,
-				"Resource2Cost": 25,
-				"MaxHealth": 6100,
+				"Resource2Cost": 125,
+				"MaxHealth": 9100,
 				"Armour": 22,
 				"PopCapCost": 2,
 				"ProductionTime": 14
@@ -10920,17 +12126,18 @@
 			"UnitMovementAttributes": {
 				"Dynamics": {
 					"MaxSpeed": 390,
+					"MinCruiseSpeed": 390,
 					"MaxSpeedTurnRadius": 250
 				}
 			},
 			"WeaponAttributes": {
 				"C_Bomber_Weapon_A2G_MP": {
 					"WindUpTimeMS": 0,
+					"ReloadTimeMS": 2500,
 					"BaseDamagePerRound": 5000,
 					"AreaOfEffectRadius": 500,
 					"Modifiers": {
 						"1": {
-
 							"Amount": 60
 						},
 						"2": {
@@ -10950,9 +12157,77 @@
 			}
 		},
 		"G_Bomber_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: +25% to aircraft hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +8 to aircraft armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "Add",
+								"Value": 8
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Sentinel: Turboburner +30% to aircraft speed",
+						"Buff": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "AddPercent",
+								"Value": 30
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MinCruiseSpeed",
+								"Mode": "AddPercent",
+								"Value": 30
+							},
+							"2": {
+								"Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+								"Mode": "AddPercent",
+								"Value": -30
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: Double the ammo capacity",
+						"Buff": {
+							"0": {
+								"Attribute": "Inventory_Capacity",
+								"Mode": "Add",
+								"Value": 4
+							},
+							"1": {
+								"Attribute": "Inventory_StartingAmount",
+								"Mode": "Add",
+								"Value": 4
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
-				"MaxHealth": 5500,
-				"Resource2Cost": 25,
+				"MaxHealth": 8500,
+				"Resource2Cost": 100,
 				"PopCapCost": 2,
 				"ProductionTime": 14,
 				"Armour": 18,
@@ -10982,13 +12257,81 @@
 			}
 		},
 		"K_Bomber_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: +25% to aircraft hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: +8 to aircraft armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "Add",
+								"Value": 8
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Sentinel: Turboburner +30% to aircraft speed",
+						"Buff": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "AddPercent",
+								"Value": 30
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MinCruiseSpeed",
+								"Mode": "AddPercent",
+								"Value": 30
+							},
+							"2": {
+								"Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+								"Mode": "AddPercent",
+								"Value": -30
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: Double the ammo capacity",
+						"Buff": {
+							"0": {
+								"Attribute": "Inventory_Capacity",
+								"Mode": "Add",
+								"Value": 4
+							},
+							"1": {
+								"Attribute": "Inventory_StartingAmount",
+								"Mode": "Add",
+								"Value": 4
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
-				"MaxHealth": 5500,
+				"MaxHealth": 8500,
 				"Resource1Cost": 225,
 				"PopCapCost": 2,
 				"ProductionTime": 14,
 				"Armour": 18,
-				"Resource2Cost": 25
+				"Resource2Cost": 100
 			},
 			"UnitMovementAttributes": {
 				"Dynamics": {
@@ -11055,10 +12398,84 @@
 			}
 		},
 		"C_GunShip_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Officer: +25% to aircraft hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 25
+							},
+							"1": {
+								"Remove": true
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Commander: +8 to aircraft armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "Add",
+								"Value": 8
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							}
+						}
+					},
+					"3": {
+						"BuffTooltipLocID": "Lt. Commander: Turboburner +30% to aircraft speed",
+						"Buff": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "AddPercent",
+								"Value": 30
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MinCruiseSpeed",
+								"Mode": "AddPercent",
+								"Value": 30
+							},
+							"2": {
+								"Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+								"Mode": "AddPercent",
+								"Value": -30
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: Double the rate of fire",
+						"Buff": {
+							"0": {
+								"Attribute": "Inventory_Capacity",
+								"Mode": "Add",
+								"Value": 40
+							},
+							"1": {
+								"Attribute": "Inventory_StartingAmount",
+								"Mode": "Add",
+								"Value": 40
+							},
+							"2": {
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "Add",
+								"Value": 4
+
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 170,
-				"Resource2Cost": 20,
-				"MaxHealth": 4800,
+				"Resource2Cost": 50,
+				"MaxHealth": 6800,
 				"Armour": 40,
 				"PopCapCost": 1,
 				"ProductionTime": 27
@@ -11076,6 +12493,56 @@
 			}
 		},
 		"G_BattleCruiser_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Officer: +10% to cruiser armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +10% to cruiser hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: -50% cooldown of abilities",
+						"Buff": {
+							"0": {
+								"Name": "Ability_G_BattleCruiser_ArmorBonus_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							},
+							"1": {
+								"Name": "Ability_G_BattleCruiserActiveRegen",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							},
+							"2": {
+								"Name": "Ability_G_BattleCruiser_Missile_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 125,
@@ -11328,6 +12795,66 @@
 			}
 		},
 		"G_HonorGuard_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: : +10% weapons range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"1": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceShort",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: -15% weapons reload time",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Guardian: +10% weapons range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"1": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceShort",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% weapon damage",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 120,
@@ -11383,6 +12910,66 @@
 			}
 		},
 		"K_HonorGuard_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: : +10% weapons range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"1": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceShort",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: -15% weapons reload time",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Guardian: +10% weapons range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"1": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceShort",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% weapon damage",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 120,
@@ -11470,6 +13057,54 @@
 		},
 
 		"C_Battlecruiser_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Officer: +10% armor",
+						"RequiredExperience": 1500,
+						"Buff": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +10% to cruiser hull",
+						"RequiredExperience": 3200,
+						"Buff": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 10
+
+							}
+						}
+					},
+					"3": {
+						"RequiredExperience": 6080
+					},
+					"4": {
+						"RequiredExperience": 11552
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: +100% weapon AOE, +50% speed",
+						"RequiredExperience": 21949,
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_AreaOfEffect",
+								"Mode": "AddPercent",
+								"Value": 100
+							},
+							"1": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "AddPercent",
+								"Value": 50
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 580,
 				"Resource2Cost": 112,
@@ -11506,6 +13141,49 @@
 			}
 		},
 		"C_Sob_Battlecruiser_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Officer: +10% armor",
+						"RequiredExperience": 1500,
+						"Buff": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +10% to cruiser hull",
+						"RequiredExperience": 3200,
+						"Buff": {
+							"0": {
+								"Mode": "AddPercent",
+								"Value": 10
+
+							}
+						}
+					},
+					"3": {
+						"RequiredExperience": 6080
+					},
+					"4": {
+						"RequiredExperience": 11552
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: -80% weapon reload time",
+						"RequiredExperience": 21949,
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -80
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 570,
 				"Resource2Cost": 110,
@@ -11562,6 +13240,131 @@
 		},
 
 		"C_ArtilleryCruiser_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Officer: +10% to cruiser armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +10% to cruiser hull",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_MaxHealth",
+								"Mode": "AddPercent",
+								"Value": 10
+							}
+						}
+					},
+					"3": {
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							},
+							"3": {
+								"Remove": true
+							},
+							"4": {
+								"Remove": true
+							},
+							"5": {
+								"Remove": true
+							},
+							"6": {
+								"Remove": true
+							},
+							"7": {
+								"Remove": true
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Commander: +2 to weapons rate of fire",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_RateOfFire",
+								"Mode": "Add",
+								"Value": 2
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							},
+							"3": {
+								"Remove": true
+							},
+							"4": {
+								"Remove": true
+							},
+							"5": {
+								"Remove": true
+							},
+							"6": {
+								"Remove": true
+							},
+							"7": {
+								"Remove": true
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: +100% weapon damage",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 100
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							},
+							"3": {
+								"Remove": true
+							},
+							"4": {
+								"Remove": true
+							},
+							"5": {
+								"Remove": true
+							},
+							"6": {
+								"Remove": true
+							},
+							"7": {
+								"Remove": true
+							},
+							"8": {
+								"Remove": true
+							},
+							"9": {
+								"Remove": true
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 425,
 				"Resource2Cost": 125,
@@ -11694,11 +13497,146 @@
 		},
 
 		"G_ArtilleryCruiser_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: : +10% weapons range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"1": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceShort",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"2": {
+								"Remove": true
+							},
+							"3": {
+								"Remove": true
+							},
+							"4": {
+								"Remove": true
+							},
+							"5": {
+								"Remove": true
+							},
+							"6": {
+								"Remove": true
+							},
+							"7": {
+								"Remove": true
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: -15% weapons reload time",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							},
+							"1": {
+								"Remove": true
+							},
+							"2": {
+								"Remove": true
+							},
+							"3": {
+								"Remove": true
+							},
+							"4": {
+								"Remove": true
+							},
+							"5": {
+								"Remove": true
+							},
+							"6": {
+								"Remove": true
+							},
+							"7": {
+								"Remove": true
+							},
+							"8": {
+								"Remove": true
+							},
+							"9": {
+								"Remove": true
+							},
+							"10": {
+								"Remove": true
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Guardian: +10% weapons range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"1": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceShort",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"2": {
+								"Remove": true
+							},
+							"3": {
+								"Remove": true
+							},
+							"4": {
+								"Remove": true
+							},
+							"5": {
+								"Remove": true
+							},
+							"6": {
+								"Remove": true
+							},
+							"7": {
+								"Remove": true
+							},
+							"8": {
+								"Remove": true
+							},
+							"9": {
+								"Remove": true
+							},
+							"10": {
+								"Remove": true
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% weapon damage",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 450,
 				"Resource2Cost": 100,
 				"MaxHealth": 12000,
-				"Armour": 20	,
+				"Armour": 20,
 				"ProductionTime": 65,
 				"PopCapCost": 5,
 				"SensorRadius": 1400,
@@ -11814,6 +13752,147 @@
 			}
 		},
 		"K_ArtilleryCruiser_MP": {
+			"ExperienceAttributes": {
+				"Levels": {
+					"1": {
+						"BuffTooltipLocID": "Novice: : +10% weapons range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"1": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceShort",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"2": {
+								"Remove": true
+							},
+							"3": {
+								"Remove": true
+							},
+							"4": {
+								"Remove": true
+							},
+							"5": {
+								"Remove": true
+							},
+							"6": {
+								"Remove": true
+							},
+							"7": {
+								"Remove": true
+							}
+						}
+					},
+					"2": {
+						"BuffTooltipLocID": "Acolyte: -15% weapons reload time",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_ReloadTime",
+								"Mode": "AddPercent",
+								"Value": -15
+							},
+							"1": {
+								"Name": "Ability_K_ArtilleryBarrage_01_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -15
+							},
+							"2": {
+								"Name": "Ability_K_Artillery_EMP_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -15
+							},
+							"3": {
+								"Remove": true
+							},
+							"4": {
+								"Remove": true
+							},
+							"5": {
+								"Remove": true
+							},
+							"6": {
+								"Remove": true
+							},
+							"7": {
+								"Remove": true
+							},
+							"8": {
+								"Remove": true
+							},
+							"9": {
+								"Remove": true
+							},
+							"10": {
+								"Remove": true
+							}
+						}
+					},
+					"4": {
+						"BuffTooltipLocID": "Guardian: +10% weapons range",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceLong",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"1": {
+								"Name": "",
+								"Attribute": "WeaponRange_DistanceShort",
+								"Mode": "AddPercent",
+								"Value": 10
+							},
+							"2": {
+								"Remove": true
+							},
+							"3": {
+								"Remove": true
+							},
+							"4": {
+								"Remove": true
+							},
+							"5": {
+								"Remove": true
+							},
+							"6": {
+								"Remove": true
+							},
+							"7": {
+								"Remove": true
+							},
+							"8": {
+								"Remove": true
+							},
+							"9": {
+								"Remove": true
+							},
+							"10": {
+								"Remove": true
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Elder: +100% weapon damage",
+						"Buff": {
+							"0": {
+								"Name": "",
+								"Attribute": "UnitWeapon_BaseDamagePerRound",
+								"Mode": "AddPercent",
+								"Value": 100
+							}
+						}
+					}
+				}
+			},
 			"UnitAttributes": {
 				"Resource1Cost": 425,
 				"Resource2Cost": 100,
