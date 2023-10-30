@@ -5448,8 +5448,27 @@
 		},
 		//chaingun weapon upgrades, canceled for time, cant find weapon mounts names for shit ...fuck when this suffering will end
 
+		"Tier_1_C_Escorts": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"ResearchTime": 17
+			}
+		},
+		"Tier_1_S_Escorts": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"ResearchTime": 17
+			}
+		},
+		"Tier_1_G_Sandskimmers": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 150,
+				"ResearchTime": 17
+			}
+		},
 		"Research_Buff_C_Escort_Damage01": {
 			"ResearchItemAttributes": {
+				"Dependencies": [ "Tier_1_C_Escorts" ],
 				"Resource1Cost": 300,
 				"ResearchTime": 25,
 				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 5.",
@@ -5480,6 +5499,7 @@
 		},
 		"Research_Buff_S_Escort_Damage01": {
 			"ResearchItemAttributes": {
+				"Dependencies": [ "Tier_1_S_Escorts" ],
 				"Resource1Cost": 300,
 				"ResearchTime": 25,
 				"LocalizedLongDescriptionStringID": "Improves the LAV's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 5.",
@@ -5522,6 +5542,7 @@
 		},
 		"Research_Buff_G_SandSkimmers_Damage01": {
 			"ResearchItemAttributes": {
+				"Dependencies": [ "Tier_1_G_Sandskimmers" ],
 				"Resource1Cost": 300,
 				"ResearchTime": 25,
 				"UnitTypeBuffs": {
@@ -8984,7 +9005,7 @@
 						"BuffTooltipLocID": "Elder: +100% to healing rate",
 						"Buff": {
 							"0": {
-								"Name": "RegenAbility",// what a werid name huh
+								"Name": "RegenAbility", // what a werid name huh
 								"Attribute": "UnitWeapon_RateOfFire",
 								"Mode": "AddPercent",
 								"Value": 100
@@ -9321,7 +9342,7 @@
 						}
 					},
 					"5": {
-						"BuffTooltipLocID": "Captain: +100% to repair speed", 
+						"BuffTooltipLocID": "Captain: +100% to repair speed",
 						"Buff": {
 							"0": {
 								"Name": "REPAIR",
@@ -10442,18 +10463,6 @@
 				}
 			}
 		},
-		"Tier_1_C_Escorts": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 150,
-				"ResearchTime": 17
-			}
-		},
-		"Tier_1_S_Escorts": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 150,
-				"ResearchTime": 17
-			}
-		},
 		"G_SandSkimmer_MP": {
 			"ExperienceAttributes": {
 				"Levels": {
@@ -10595,12 +10604,6 @@
 					"RangeAttributesShort": { "Accuracy": 85 },
 					"RangeAttributesLong": { "Accuracy": 80 }
 				}
-			}
-		},
-		"Tier_1_G_Sandskimmers": {
-			"ResearchItemAttributes": {
-				"Resource1Cost": 150,
-				"ResearchTime": 17
 			}
 		},
 		"C_Railgun_MP": {
@@ -11199,7 +11202,7 @@
 		},
 		"Ability_C_ArmorDebuff": {
 			"AbilityViewAttributes": {
-				"LocalizedLongDescriptionStringID": "Armor is fractured by the high velocity round. Target armor is reduced by 20 for 15 seconds."
+				"LocalizedLongDescriptionStringID": "Armor is fractured by the high velocity round. Target armor is reduced by 30 for 15 seconds."
 			}
 		},
 		// TSUNDERER
