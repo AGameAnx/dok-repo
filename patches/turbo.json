@@ -1,5 +1,5 @@
 {
-	/*"Global": {
+	"Global": {
         "UnitAttributes": {
             "Resource1Cost": 0,
             "Resource2Cost": 0,
@@ -18,7 +18,7 @@
 				//"CooldownTimeSecsMult": 0.01
 			}
 		}
-	},*/
+	},
 
 	"Entities": {
 		/*"Resource_Wreck_MP": {
@@ -6306,6 +6306,17 @@
 					"ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
 					"ExcludeFromHeightAdvantage": true,
 					"AreaOfEffectFalloffType": "Quadratic",
+					"FriendlyFireDamageScalar": 1,
+					"BaseDamagePerRound": 6,
+					"StatusEffectsTargetAlignment": "None",
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": [ "EMP_CoalitionArtillery_StatusEffect" ] }
+					},
+					"ReloadTimeMS": 1000,
+					"AreaOfEffectRadius": 4900,
+					"CooldownTimeMS": 0,
+					"DamagePacketsPerShot": 0,
+					"StatusEffectsExcludeTargetType": "Air",
 					"RangeAttributesLong": {
 						"Distance": 15000
 					}
@@ -8450,18 +8461,22 @@
 		},
 		"C_Sob_NukeEmitter_MP": {
 			"UnitAttributes": {
-				"MaxHealth": 2000
+				"MaxHealth": 80000
 			},
 			"WeaponAttributes": {
 				"C_Sob_NukeEmitter_Weapon_G2G": {
+					"StatusEffectsTargetAlignment": "None",
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": [ "C_Rachel_EMP_StatusEffect" ] }
+					},
 					"BurstPeriodMinTimeMS": 250,
 					"BurstPeriodMaxTimeMS": 250,
 					"CooldownTimeMS": 0,
-					"BaseDamagePerRound": 510,
+					"BaseDamagePerRound": 760,
 					"DamagePacketsPerShot": 0,
-					"StatusEffectsExcludeTargetType": "All",
+					"StatusEffectsExcludeTargetType": "Air",
 					"FriendlyFireDamageScalar": 0.5,
-					"WeaponOwnerFriendlyFireDamageScalar": 1,
+					"WeaponOwnerFriendlyFireDamageScalar": 10,
 					"Modifiers": {
 						"0": {
 							"TargetClass": "Strikecraft, Small, Harvester",
@@ -8479,6 +8494,76 @@
 				},
 				"C_Sob_NukeEmitter_Weapon_Self": {
 					"BaseDamagePerRound": 0
+				}
+			}
+		},
+		"C_Rachel_EMP_StatusEffect": {//inside MWE overheat status 
+			"StatusEffectAttributes": {
+				"Duration": 10,
+				"Modifiers": {
+					"0": {
+						"Remove": true
+					},
+					"1": {
+						"Remove": true
+					},
+					"2": {
+						"Remove": true
+					}
+				},
+				"BuffsToApplyToTarget": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "PowerShunt_PowerLevelChargeTimeSeconds",
+								"Mode": "AddPercent",
+								"Value": 100
+							},
+							"1": {
+								"Attribute": "PowerShunt_HeatThreshold",
+								"Mode": "Add",
+								"Value": -400
+							}
+						}
+					}
+				}
+			}
+		},
+		"EMP_CoalitionArtillery_StatusEffect": { //large area MWE heat
+			"StatusEffectAttributes": {
+				"Duration": 45,
+				"BuffsToApplyToTarget": {
+					"0": {
+						"UnitClass": "Carrier",
+						"UseAsPrefix": true,
+						"UnitType": "",
+						"BuffSet": {
+							"0": {
+								"Attribute": "PowerShunt_PowerLevelChargeTimeSeconds",
+								"Mode": "AddPercent",
+								"Value": 100
+							},
+							"1": {
+								"Attribute": "PowerShunt_HeatThreshold",
+								"Mode": "Add",
+								"Value": -40
+							}
+						}
+					}
+				},
+				"Modifiers": {
+					"0": {
+						"Remove": true
+					},
+					"1": {
+						"Remove": true
+					},
+					"2": {
+						"Remove": true
+					}
 				}
 			}
 		},
@@ -8530,6 +8615,11 @@
 			},
 			"WeaponAttributes": {
 				"N_Gun_Turret_Weapon_G2G_MP": {
+					"StatusEffectsTargetAlignment": "None",
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": [ "Suppress_StatusEffect" ] }
+					},
+					"StatusEffectsExcludeTargetType": "Air",
 					"BaseDamagePerRound": 105,
 					"DamagePacketsPerShot": 1,
 					"NumberOfBursts": 1,
@@ -10643,7 +10733,7 @@
 				}
 			},
 			"UnitAttributes": {
-				"Resource1Cost": 220,
+				"Resource1Cost": 190,
 				"Resource2Cost": 30,
 				"MaxHealth": 1340,
 				"Armour": 10,
@@ -10746,7 +10836,7 @@
 				}
 			},
 			"UnitAttributes": {
-				"Resource1Cost": 220,
+				"Resource1Cost": 200,
 				"Resource2Cost": 30,
 				"MaxHealth": 1360,
 				"Armour": 10,
@@ -10993,8 +11083,8 @@
 			"UnitAttributes": {
 				"MaxHealth": 1240,
 				"Armour": 10,
-				"Resource1Cost": 220,
-				"Resource2Cost": 30,
+				"Resource1Cost": 200,
+				"Resource2Cost": 40,
 				"PopCapCost": 2,
 				"ExperienceValue": 550,
 				"PriorityAsTarget": 10,
@@ -11103,8 +11193,8 @@
 			"UnitAttributes": {
 				"MaxHealth": 1240,
 				"Armour": 10,
-				"Resource1Cost": 220,
-				"Resource2Cost": 30,
+				"Resource1Cost": 200,
+				"Resource2Cost": 40,
 				"PopCapCost": 2,
 				"ExperienceValue": 550,
 				"PriorityAsTarget": 10,
