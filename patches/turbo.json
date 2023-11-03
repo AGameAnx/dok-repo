@@ -5632,6 +5632,8 @@
 			},
 			"WeaponAttributes": {
 				"C_Carrier_Weapon_G2All_MP": {
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1400,
 					"StatusEffectsTargetAlignment": "None",
 					"StatusEffectsSets": {
 						"0": { "StatusEffects": [ "Suppress_StatusEffect" ] }
@@ -6246,7 +6248,7 @@
 				"Ability_C_Sob_ProduceSupportCruiser_MP": { "ProduceUnit": { "UnitTypeToProduce": "C_SupportCruiser_MP" } },
 				"Ability_C_Sob_ProduceAssaultCruiser_MP": { "ProduceUnit": { "UnitTypeToProduce": "G_BattleCruiser_MP" } },
 				"Ability_C_Sob_SobanNuke_MP": {
-					"CooldownTimeSecs": 75,
+					"CooldownTimeSecs": 85,
 					"Resource1Cost": 167
 				},
 				"Ability_C_LaunchInterceptor_MP": {
@@ -7170,6 +7172,8 @@
 			},
 			"WeaponAttributes": {
 				"G_Carrier_Weapon_G2All_MP": {
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1400,
 					"BaseDamagePerRound": 65,
 					"StatusEffectsTargetAlignment": "None",
 					"StatusEffectsSets": {
@@ -7825,6 +7829,8 @@
 					"ExcludeFromHeightAdvantage": false
 				},
 				"K_Carrier_Weapon_G2All_MP": {
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1400,
 					"StatusEffectsTargetAlignment": "None",
 					"StatusEffectsSets": {
 						"0": { "StatusEffects": [ "Suppress_StatusEffect" ] }
@@ -8488,7 +8494,7 @@
 							"TargetClass": "Large, XLarge",
 							"ClassOperator": "Or",
 							"Modifier": "DamagePercent",
-							"Amount": 230
+							"Amount": 130
 						}
 					}
 				},
@@ -8497,7 +8503,7 @@
 				}
 			}
 		},
-		"C_Rachel_EMP_StatusEffect": {//inside MWE overheat status 
+		"C_Rachel_EMP_StatusEffect": { //inside MWE overheat status 
 			"StatusEffectAttributes": {
 				"Duration": 10,
 				"Modifiers": {
@@ -8534,7 +8540,7 @@
 		},
 		"EMP_CoalitionArtillery_StatusEffect": { //large area MWE heat
 			"StatusEffectAttributes": {
-				"Duration": 45,
+				"Duration": 35,
 				"BuffsToApplyToTarget": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -11377,7 +11383,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 170,
 				"Resource2Cost": 17,
-				"MaxHealth": 1100,
+				"MaxHealth": 2100,
 				"ExperienceValue": 350,
 				"ProductionTime": 12,
 				"SensorRadius": 1250,
@@ -11420,8 +11426,10 @@
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 320,
-					"BurstPeriodMinTimeMS": 90,
-					"BurstPeriodMaxTimeMS": 90,
+					"RateOfFire": 3,
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1000,
+					"CooldownTimeMS": 1000,
 					"NumberOfBursts": 4,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
@@ -11430,7 +11438,7 @@
 					"RangeAttributesMedium": { "Accuracy": 16 },
 					"RangeAttributesLong": {
 						"Accuracy": 14,
-						"Distance": 1100
+						"Distance": 1400
 					}
 				}
 			}
@@ -11464,7 +11472,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 170,
 				"Resource2Cost": 17,
-				"MaxHealth": 1100,
+				"MaxHealth": 2100,
 				"ExperienceValue": 350,
 				"ProductionTime": 12,
 				"SensorRadius": 1250,
@@ -11507,8 +11515,10 @@
 			"WeaponAttributes": {
 				"G_StarHull_Upgrade01_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 320,
-					"BurstPeriodMinTimeMS": 90,
-					"BurstPeriodMaxTimeMS": 90,
+					"RateOfFire": 3,
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1000,
+					"CooldownTimeMS": 1000,
 					"NumberOfBursts": 4,
 					"WindUpTimeMS": 600,
 					"WindDownTimeMS": 250,
@@ -11517,7 +11527,7 @@
 					"RangeAttributesMedium": { "Accuracy": 16 },
 					"RangeAttributesLong": {
 						"Accuracy": 14,
-						"Distance": 1100
+						"Distance": 1400
 					}
 				}
 			}
@@ -11973,6 +11983,12 @@
 			}
 		},
 
+		"Tier_3_S_Interceptor_Bomber": {
+			"ResearchItemAttributes": {
+				"Resource1Cost": 250,
+				"Resource2Cost": 100
+			}
+		},
 		"G_Interceptor_MP": {
 			"ExperienceAttributes": {
 				"Levels": {
@@ -12606,6 +12622,11 @@
 			},
 			"WeaponAttributes": {
 				"C_GunShip_Weapon_DefaultFire_MP": {
+					"StatusEffectsTargetAlignment": "None",
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": [ "Suppress_StatusEffect" ] }
+					},
+					"StatusEffectsExcludeTargetType": "Air",
 					"DamagePacketsPerShot": 1,
 					"BaseDamagePerRound": 275,
 					"AreaOfEffectRadius": 160,
