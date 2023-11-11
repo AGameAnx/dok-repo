@@ -5543,6 +5543,7 @@
 		},
 		"Research_Buff_G_SandSkimmers_Damage01": {
 			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves the SandSkimmer's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 5.",
 				"Dependencies": [ "Tier_1_G_Sandskimmers" ],
 				"Resource1Cost": 300,
 				"ResearchTime": 25,
@@ -5564,6 +5565,7 @@
 		},
 		"Research_Buff_G_SandSkimmers_Damage02": {
 			"ResearchItemAttributes": {
+				"LocalizedLongDescriptionStringID": "Improves the SandSkimmer's offensive capabilities.\n\n[84a1e8]Increases weapon damage by 10.",
 				"Resource1Cost": 300,
 				"ResearchTime": 45,
 				"UnitTypeBuffs": {
@@ -8612,8 +8614,8 @@
 		},
 		"N_Gun_Turret_MP": {
 			"UnitAttributes": {
-				"Resource1Cost": 50,
-				"MaxHealth": 4200,
+				"Resource1Cost": 100,
+				"MaxHealth": 8200,
 				"Armour": 1,
 				"SensorRadius": 1000,
 				"PriorityAsTarget": 12,
@@ -9501,19 +9503,20 @@
 				},
 				"C_SupportCruiser_Weapon_G2A_MP": {
 					"LineOfSightRequired": false,
-					"BaseDamagePerRound": 505,
-					"NumberOfBursts": 6,
+					"BaseDamagePerRound": 755,
+					"NumberOfBursts": 4,
 					"BurstPeriodMinTimeMS": 300,
 					"BurstPeriodMaxTimeMS": 300,
-					"CooldownTimeMS": 0,
+					"CooldownTimeMS": 700,
 					"ExcludeFromAutoTargetAcquisition": true,
 					"ExcludeFromAutoFire": true,
-					"WindUpTimeMS": 50,
-					"RateOfFire": 4, //4
-					"ReloadTimeMS": 5000,
+					"WindUpTimeMS": 0,
+					"ProjectileEntityTypeToSpawn": "C_Battlecruiser_AA_ProjectileAssetContainer",
+					"RateOfFire": 1, //4
+					"ReloadTimeMS": 4400,
 					"AreaOfEffectRadius": 60,
 					"RangeAttributesLong": {
-						"Distance": 1100
+						"Distance": 1600
 					}
 				},
 				"C_SupportCruiser_Weapon_G2G_MP": {
@@ -10067,7 +10070,7 @@
 				"Resource2Cost": 15,
 				"MaxHealth": 3800,
 				"SensorRadius": 1100,
-				"ProductionTime": 7,
+				"ProductionTime": 8,
 				"Armour": 15,
 				"PopCapCost": 2
 			},
@@ -10365,7 +10368,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 2200,
 				"Armour": 10,
-				"ProductionTime": 10,
+				"ProductionTime": 8,
 				"PriorityAsTarget": 10,
 				"PopCapCost": 1,
 				"Resource1Cost": 50
@@ -10483,7 +10486,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 2200,
 				"Armour": 10,
-				"ProductionTime": 10,
+				"ProductionTime": 8,
 				"PriorityAsTarget": 10,
 				"Resource1Cost": 50,
 				"PopCapCost": 1
@@ -10599,7 +10602,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 2300,
 				"SensorRadius": 1150,
-				"ProductionTime": 10,
+				"ProductionTime": 6,
 				"PriorityAsTarget": 5,
 				"Resource1Cost": 50,
 				"Armour": 10,
@@ -10671,7 +10674,7 @@
 			"UnitAttributes": {
 				"MaxHealth": 2300,
 				"SensorRadius": 1150,
-				"ProductionTime": 10,
+				"ProductionTime": 6,
 				"PriorityAsTarget": 5,
 				"Resource1Cost": 50,
 				"Armour": 10,
@@ -13325,6 +13328,12 @@
 					"RangeAttributesLong": {
 						"Distance": 1400
 					}
+				},
+				"C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 1000,
+					"BurstPeriodMaxTimeMS": 1000,
+					"CooldownTimeMS": 1500
 				}
 			}
 		},
@@ -13408,6 +13417,12 @@
 					"RangeAttributesMedium": { "Accuracy": 6 },
 					"RangeAttributesLong": { "Distance": 1800 },
 					"OutputDPS": true
+				},
+				"C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+					"NumberOfBursts": 1,
+					"BurstPeriodMinTimeMS": 4000,
+					"BurstPeriodMaxTimeMS": 4000,
+					"CooldownTimeMS": 1700
 				}
 			}
 		},
