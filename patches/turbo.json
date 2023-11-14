@@ -4388,6 +4388,23 @@
 								"Value": 5
 							}
 						}
+					},
+					"20": {
+						"UnitClass": "All",
+						"UseAsPrefix": true,
+						"UnitType": "G_SandSkimmer",
+						"BuffSet": {
+							"0": {
+								"Attribute": "UnitDynamics_MaxSpeed",
+								"Mode": "AddPercent",
+								"Value": 5
+							},
+							"1": {
+								"Attribute": "UnitDynamics_AccelerationTime",
+								"Mode": "AddPercent",
+								"Value": -5
+							}
+						}
 					}
 				}
 
@@ -10070,7 +10087,7 @@
 				"Resource2Cost": 15,
 				"MaxHealth": 3800,
 				"SensorRadius": 1100,
-				"ProductionTime": 8,
+				"ProductionTime": 11,
 				"Armour": 15,
 				"PopCapCost": 2
 			},
@@ -10157,13 +10174,13 @@
 						}
 					},
 					"4": {
-						"BuffTooltipLocID": "Guardian: +20% to rate of fire",
+						"BuffTooltipLocID": "Guardian: -20% to weapon reload time",
 						"Buff": {
 							"0": {
 								"Name": "",
-								"Attribute": "UnitWeapon_RateOfFire",
+								"Attribute": "UnitWeapon_ReloadTime",
 								"Mode": "AddPercent",
-								"Value": 20
+								"Value": -20
 							}
 						}
 					},
@@ -10210,11 +10227,16 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 65,
-					"BurstPeriodMinTimeMS": 750,
-					"BurstPeriodMaxTimeMS": 850,
-					"RateOfFire": 8,
-					"AreaOfEffectRadius": 120,
+					"OutputDPS": true,
+					"CooldownTimeMS": 500,
+					"NumberOfBursts": 2,
+					"ReloadTimeMS": 1500,
+					"BaseDamagePerRound": 150,
+					"BurstPeriodMinTimeMS": 200,
+					"BurstPeriodMaxTimeMS": 290,
+					"RateOfFire": 10,
+					"DamagePacketsPerShot": 2,
+					"AreaOfEffectRadius": 160,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesShort": { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
@@ -10256,13 +10278,13 @@
 						}
 					},
 					"4": {
-						"BuffTooltipLocID": "Guardian: +20% to rate of fire",
+						"BuffTooltipLocID": "Guardian: -20% to weapon reload time",
 						"Buff": {
 							"0": {
 								"Name": "",
-								"Attribute": "UnitWeapon_RateOfFire",
+								"Attribute": "UnitWeapon_ReloadTime",
 								"Mode": "AddPercent",
-								"Value": 20
+								"Value": -20
 							}
 						}
 					},
@@ -10309,11 +10331,16 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 65,
-					"BurstPeriodMinTimeMS": 750,
-					"BurstPeriodMaxTimeMS": 850,
-					"RateOfFire": 8,
-					"AreaOfEffectRadius": 120,
+					"OutputDPS": true,
+					"CooldownTimeMS": 500,
+					"NumberOfBursts": 2,
+					"ReloadTimeMS": 1500,
+					"BaseDamagePerRound": 150,
+					"BurstPeriodMinTimeMS": 200,
+					"BurstPeriodMaxTimeMS": 290,
+					"DamagePacketsPerShot": 2,
+					"RateOfFire": 10,
+					"AreaOfEffectRadius": 160,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"RangeAttributesShort": { "Distance": 450 },
 					"RangeAttributesMedium": { "Distance": 600 },
@@ -13622,6 +13649,7 @@
 				"C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
 					"ExcludeFromHeightAdvantage": false,
 					"BaseDamagePerRound": 450,
+					"NumberOfBursts": 8,
 					"RangeAttributesLong": {
 						"Distance": 4650
 					},
