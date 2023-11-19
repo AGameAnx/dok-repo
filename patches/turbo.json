@@ -7965,7 +7965,7 @@
 				},
 				"K_Carrier_Weapon_BarrageMissile_MP": {
 					"BaseDamagePerRound": 2000,
-					"DamagePacketsPerShot": 5,
+					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 200,
 					"ExcludeFromHeightAdvantage": true,
 					"Modifiers": {
@@ -7986,7 +7986,7 @@
 
 						"PowerLevels": {
 							"1": {
-								"LocalizedShortDescriptionStringID": "Mobility: 600 radius +18% speed. "
+								"LocalizedShortDescriptionStringID": "Mobility: 600 radius +10% speed. "
 							},
 							"2": {
 								"LocalizedShortDescriptionStringID": "Mobility: 600 radius +20% speed."
@@ -8413,7 +8413,7 @@
 						"BuffSet": {
 							"0": {
 								"Mode": "AddPercent",
-								"Value": 16
+								"Value": 10
 							}
 						}
 					}
@@ -8647,6 +8647,7 @@
 					"StatusEffectsExcludeTargetType": "Air",
 					"BaseDamagePerRound": 105,
 					"DamagePacketsPerShot": 1,
+					"TracerSpeed": 1500,
 					"NumberOfBursts": 1,
 					"CooldownTimeMS": 0,
 					"BurstPeriodMinTimeMS": 4200,
@@ -8757,13 +8758,12 @@
 				},
 				"K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
 					"BaseDamagePerRound": 1550,
-					"DamagePacketsPerShot": 20,
+					"DamagePacketsPerShot": 1,
 					"AreaOfEffectRadius": 600,
 					"AreaOfEffectFalloffType": "Quadratic"
 				}
 			}
 		},
-
 		"C_Harvester_MP": {
 			"UnitAttributes": {
 				"Resource1Cost": 50,
@@ -10227,6 +10227,9 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
+					"Turret": {
+						"FieldOfFire": 50
+					},
 					"OutputDPS": true,
 					"CooldownTimeMS": 500,
 					"NumberOfBursts": 2,
@@ -10331,6 +10334,9 @@
 			},
 			"WeaponAttributes": {
 				"G_Catamaran_Weapon_G2G_MP": {
+					"Turret": {
+						"FieldOfFire": 50
+					},
 					"OutputDPS": true,
 					"CooldownTimeMS": 500,
 					"NumberOfBursts": 2,
@@ -10350,9 +10356,9 @@
 		},
 		"Tier_1_G_Catamaran": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 450,
+				"Resource1Cost": 350,
 				"Resource2Cost": 80,
-				"ResearchTime": 65
+				"ResearchTime": 45
 			}
 		},
 		"C_Escort_MP": {
@@ -11349,9 +11355,9 @@
 		},
 		"Tier_2_G_Railgun_U1": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 350,
-				"Resource2Cost": 250,
-				"ResearchTime": 45
+				"Resource1Cost": 250,
+				"Resource2Cost": 150,
+				"ResearchTime": 35
 			}
 		},
 		"MiniStun_StatusEffect": {
@@ -11623,7 +11629,7 @@
 			"WeaponAttributes": {
 				"C_HAC_Upgrade01_Weapon_G2A_MP": {
 					"BaseDamagePerRound": 1560,
-					"ReloadTimeMS": 2500
+					"ReloadTimeMS": 2000
 				},
 				"C_HAC_Upgrade01_Weapon_Ballistic_Grenade_MP": {
 					"BaseDamagePerRound": 560,
@@ -11724,7 +11730,7 @@
 			"WeaponAttributes": {
 				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
 					"BaseDamagePerRound": 1560,
-					"ReloadTimeMS": 2500,
+					"ReloadTimeMS": 2000,
 					"Turret": {
 						"RotationSpeed": 160,
 						"FieldOfFire": 40
@@ -11734,7 +11740,8 @@
 					}
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
-					"ReloadTimeMS": 2500,
+					"ReloadTimeMS": 2000,
+					"ProjectileEntityTypeToSpawn": "SupportCruiser_AA_ProjectileAssetContainer_MP",
 					"BaseDamagePerRound": 1560,
 					"Turret": {
 						"RotationSpeed": 240,
@@ -11859,7 +11866,7 @@
 			"WeaponAttributes": {
 				"G_Catamaran_Upgrade01_Weapon_G2A_MP": {
 					"BaseDamagePerRound": 1560,
-					"ReloadTimeMS": 2500,
+					"ReloadTimeMS": 2000,
 					"Turret": {
 						"RotationSpeed": 160,
 						"FieldOfFire": 40
@@ -11869,7 +11876,8 @@
 					}
 				},
 				"G_Catamaran_Upgrade01_Weapon_G2A_Radar_MP": {
-					"ReloadTimeMS": 2500,
+					"ReloadTimeMS": 2000,
+					"ProjectileEntityTypeToSpawn": "SupportCruiser_AA_ProjectileAssetContainer_MP",
 					"BaseDamagePerRound": 1560,
 					"Turret": {
 						"RotationSpeed": 240,
@@ -11965,7 +11973,7 @@
 			"UnitAttributes": {
 				"Resource1Cost": 175,
 				"Resource2Cost": 10,
-				"MaxHealth": 4780,
+				"MaxHealth": 4080,
 				"Armour": 17,
 				"ProductionTime": 12,
 				"PopCapCost": 1
@@ -12082,7 +12090,7 @@
 				"Resource1Cost": 175,
 				"Resource2Cost": 10,
 				"Armour": 10,
-				"ProductionTime": 12,
+				"ProductionTime": 7,
 				"PopCapCost": 1
 			},
 			"WeaponAttributes": {
@@ -12189,7 +12197,8 @@
 		},
 		"Tier_2_G_Interceptor": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 450,
+				"Resource1Cost": 350,
+				"Resource2Cost": 125,
 				"ResearchTime": 27
 			}
 		},
@@ -13088,7 +13097,7 @@
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
 					"WindUpTimeMS": 500,
-					"BaseDamagePerRound": 1250,
+					"BaseDamagePerRound": 750,
 					"ReloadTimeMS": 3000
 				}
 			}
@@ -13230,7 +13239,7 @@
 				},
 				"G_HonorGuard_Weapon_G2A_MP": {
 					"WindUpTimeMS": 500,
-					"BaseDamagePerRound": 1250,
+					"BaseDamagePerRound": 750,
 					"ReloadTimeMS": 3000
 				}
 			}
@@ -13348,7 +13357,7 @@
 						"RotationSpeed": 180,
 						"FieldOfFire": 10
 					},
-					"BaseDamagePerRound": 1290,
+					"BaseDamagePerRound": 1100,
 					"AreaOfEffectFalloffType": "Quadratic",
 					"AreaOfEffectRadius": 100,
 					"ReloadTimeMS": 4800,
@@ -13436,7 +13445,7 @@
 						"DistanceWeight": 0.05
 					},
 					"TracerSpeed": 7000,
-					"BaseDamagePerRound": 1790,
+					"BaseDamagePerRound": 1590,
 					"WindUpTimeMS": 1200,
 					"CooldownTimeMS": 7500,
 					"ReloadTimeMS": 7500,
