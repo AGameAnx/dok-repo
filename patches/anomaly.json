@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.08.31",
-        "LastUpdate": "2023-11-11",
+        "Version": "1.08.40",
+        "LastUpdate": "2023-11-22",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
@@ -2868,7 +2868,7 @@
                                         "UnitTypeBuffsToApply": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 100 }, // Sensor Radius
+                                                    "0": { "Value": 1000 }, // Sensor Radius
                                                     "1": { "Value": 600 }, // Contact Radius
                                                     "5": { "Value": 3000 } // Reload time
                                                 }
@@ -2922,16 +2922,16 @@
                                         "UnitTypeBuffsToApply": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 100 },
+                                                    "0": { "Value": 800 },
                                                     "1": { "Value": 1100 },
                                                     "5": { "Value": 3000 },
                                                     "7": {
-                                                        "Value": 30,
+                                                        "Value": 10,
                                                         "Attribute": 262148,
                                                         "Mode": 0
                                                     },
                                                     "8": {
-                                                        "Value": 500,
+                                                        "Value": 1100,
                                                         "Attribute": 33554434,
                                                         "Mode": 0
                                                     }
@@ -2999,7 +2999,7 @@
                                         "UnitTypeBuffsToApply": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 150 },
+                                                    "0": { "Value": 450 },
                                                     "1": { "Value": 1600 },
                                                     "5": { "Value": 3000 },
                                                     "7": {
@@ -3008,7 +3008,7 @@
                                                         "Mode": 0
                                                     },
                                                     "8": {
-                                                        "Value": 1000,
+                                                        "Value": 1200,
                                                         "Attribute": 33554434,
                                                         "Mode": 0
                                                     }
@@ -3079,7 +3079,7 @@
                                                     "0": { "Value": 200 },
                                                     "1": { "Value": 2100 },
                                                     "5": { "Value": 3000 },
-                                                    "6": { "Value": 40 }, // Damage bonus
+                                                    "6": { "Value": 0 }, // Damage bonus
                                                     "7": {
                                                         "Value": 1500,
                                                         "Attribute": 33554434,
@@ -3149,10 +3149,10 @@
                                         "UnitTypeBuffsToApply": {
                                             "0": {
                                                 "BuffSet": {
-                                                    "0": { "Value": 300 },
+                                                    "0": { "Value": 100 },
                                                     "1": { "Value": 5100 },
                                                     "5": { "Value": 3000 },
-                                                    "6": { "Value": 10 },
+                                                    "6": { "Value": -60 },
                                                     "7": {
                                                         "Value": 4500,
                                                         "Attribute": 33554434,
@@ -5999,7 +5999,7 @@
                 "Combat": {
                     "MaxDesiredCombatRange": 850
                 },
-                "Dynamics": { "MaxSpeed": 40 }
+                "Dynamics": { "MaxSpeed": 50 }
             },
             "DetectableAttributes": {
                 "TimeVisibleAfterFiring": 4500
@@ -6221,27 +6221,48 @@
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "LineOfSightRequired": false,
-                    "DamagePacketsPerShot": 1,
-                    "ProjectileEntityTypeToSpawn": "Carrier_CruiseMissile_ProjectileAssetContainer_MP",
-                    "BaseDamagePerRound": 1250,
-                    "AreaOfEffectRadius": 500,
+                    "DamagePacketsPerShot": 2,
+                    "ProjectileEntityTypeToSpawn": "K_Artillery_Shell_ProjectileAssetContainer_MP",
+                    "BaseDamagePerRound": 240,
+                    "AreaOfEffectRadius": 230,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "BurstPeriodMinTimeMS": 50,
-                    "BurstPeriodMaxTimeMS": 50,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
                     "NumberOfBursts": 1,
                     "WindDownTimeMS": 0,
-                    "ReloadTimeMS": 10000,
+                    "TargetPrioritizationAttributes": {
+                        "TargetSameCommanderBias": -1
+                    },
+                    "ReloadTimeMS": 6500,
+                    "Modifiers": {
+                        "1": {
+                            "TargetClass": "Small",
+                            "ClassOperator": "Or",
+                            "Modifier": "DamagePercent",
+                            "Amount": 65
+                        },
+                        "2": {
+                            "TargetClass": "Carrier",
+                            "ClassOperator": "Or",
+                            "Modifier": "DamagePercent",
+                            "Amount": 80
+                        }
+                    },
                     "CooldownTimeMS": 0,
                     "RangeAttributesShort": {
-                        "Remove": true
+                        "Accuracy": 0,
+                        "MinDistance": 1050,
+                        "Distance": 2000
                     },
                     "RangeAttributesMedium": {
-                        "Remove": true
+                        "Accuracy": 0,
+                        "MinDistance": 1050,
+                        "Distance": 2000
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 0,
-                        "MinDistance": 350,
-                        "Distance": 1650
+                        "MinDistance": 1050,
+                        "Distance": 2000
                     },
                     "ExcludeFromHeightAdvantage": true
                 },
@@ -6678,7 +6699,7 @@
                                 }
                             },
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Reload: 50s, Range: 4269",
+                                "LocalizedShortDescriptionStringID": "Reload: 50s, Range: 4269m",
                                 "StatusEffectsToApply": {
                                     "K_Missiles_5_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -6802,11 +6823,11 @@
                         "PowerLevels": {
 
                             "0": {
-                                "LocalizedShortDescriptionStringID": "Point Defence Rate of Fire: 1, Anti-Air offline."
+                                "LocalizedShortDescriptionStringID": "Point Defence Rate of Fire: 1, Artillery pod offline, Anti-Air offline."
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Anti-Air online, PD Rate of Fire: 2, AA Rate of Fire: 5",
+                                "LocalizedShortDescriptionStringID": "Anti-Air online, PD Rate of Fire: 2, Artillery pod Rate of Fire: 3, AA Rate of Fire: 5",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_1_StatusEffect": {
                                         "Modifiers": {
@@ -6841,6 +6862,10 @@
                                             "7": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
+                                            },
+                                            "8": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         },
                                         "BuffsToApplyToTarget": {
@@ -6868,7 +6893,7 @@
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
-                                                        "Value": 0
+                                                        "Value": 3
                                                     },
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -6902,7 +6927,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 3, AA Rate of Fire: 7",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 3, Artillery pod Rate of Fire: 4, AA Rate of Fire: 7",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_2_StatusEffect": {
                                         "Modifiers": {
@@ -6937,6 +6962,10 @@
                                             "7": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
+                                            },
+                                            "8": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         },
                                         "BuffsToApplyToTarget": {
@@ -6960,7 +6989,7 @@
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
-                                                        "Value": 0
+                                                        "Value": 4
                                                     },
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -6994,7 +7023,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 4, of Fire: 12",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 4, Artillery pod Rate of Fire: 5, of Fire: 12",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_3_StatusEffect": {
 
@@ -7030,6 +7059,10 @@
                                             "7": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
+                                            },
+                                            "8": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         },
                                         "BuffsToApplyToTarget": {
@@ -7053,7 +7086,7 @@
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
-                                                        "Value": 0
+                                                        "Value": 5
                                                     },
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -7087,7 +7120,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 6, AA Rate of Fire: 20",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 6, Artillery pod Rate of Fire: 7, AA Rate of Fire: 20",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_4_StatusEffect": {
 
@@ -7123,6 +7156,10 @@
                                             "7": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
+                                            },
+                                            "8": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         },
                                         "BuffsToApplyToTarget": {
@@ -7146,7 +7183,7 @@
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Mode": "Set",
-                                                        "Value": 0
+                                                        "Value": 7
                                                     },
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -7204,7 +7241,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 6, AA Rate of Fire: 20. Missiles Enabled...",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 8, Artillery pod Rate of Fire: 9, AA Rate of Fire: 20.",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_5_StatusEffect": {
                                         "Modifiers": {
@@ -7252,29 +7289,31 @@
                                                         "Name": "TURRET_FR",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2
+                                                        "Value": 3
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Name": "TURRET_FL",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2
+                                                        "Value": 3
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Name": "TURRET_BR",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2
+                                                        "Value": 3
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Name": "TURRET_BL",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 2
+                                                        "Value": 3
                                                     }, // TURRET_FR
                                                     "5": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 1
+                                                        "Value": 9
                                                     },
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -7323,6 +7362,11 @@
                                                         "Attribute": "UnitWeapon_CooldownTime",
                                                         "Mode": "Set",
                                                         "Value": 0
+                                                    },
+                                                    "14": {
+                                                        "Attribute": "Unit_FireRateDisplay",
+                                                        "Mode": "Set",
+                                                        "Value": 5
                                                     }
                                                 }
                                             }
@@ -7334,7 +7378,7 @@
                                                 "BuffSet": {
                                                     "0": {
                                                         "Mode": "Set",
-                                                        "Value": 1250
+                                                        "Value": 125
                                                     }
                                                 }
                                             }
@@ -7409,7 +7453,7 @@
         // SOBAN NUKE
         "C_Sob_NukeEmitter_MP": {
             "UnitAttributes": {
-                "MaxHealth": 3000000, // takes friendly fire; use to determine duration
+                "MaxHealth": 1500000, // takes friendly fire; use to determine duration
                 "PopCapCost": 0,
                 "ContactRadius": 0,
                 "SensorRadius": 0
@@ -7422,7 +7466,7 @@
                     "ActiveStatusEffectsIndex": 1,
                     "RateOfFire": 4,
                     "NumberOfBursts": 1,
-                    "BaseDamagePerRound": 100,
+                    "BaseDamagePerRound": 50,
                     "ReloadTimeMS": 0,
                     "DamagePacketsPerShot": 0,
                     "StatusEffectsExcludeTargetType": 0,
@@ -7918,7 +7962,7 @@
                     "StatusEffectsExcludeTargetType": "Air", // none
                     "LineOfSightRequired": false,
                     "ExcludeFromHeightAdvantage": true,
-                    "BaseDamagePerRound": 20,
+                    "BaseDamagePerRound": 100,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 0,
                     "TargetPrioritizationAttributes": {
@@ -9433,24 +9477,36 @@
                     "OutputDPS": true
                 },
                 "C_SupportCruiser_Weapon_G2G_MP": {
-                    "BaseDamagePerRound": 20,
+                    "ProjectileEntityTypeToSpawn": "G_StarhullEMP_ProjectileAssetContainer_MP",
+                    "IsTracer": false,
+                    "NumberOfBursts": 1,
+                    "TracerSpeed": 0,
+                    "ReloadTimeMS": 15000,
+                    "TracerLength": 5,
+                    "BaseDamagePerRound": 100,
                     "ExcludeFromHeightAdvantage": true,
-                    "TracerSpeed": 1500,
-
-                    "RateOfFire": 10,
+                    "RateOfFire": 1,
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "MiniStun_StatusEffect" ] }
+                    },
+                    "StatusEffectsTargetAlignment": "Foe",
+                    "StatusEffectsExcludeTargetType": "None",
                     "LineOfSightRequired": false,
-                    //"RangeAttributesShort": { // work with it its ok
-                    //  "Accuracy": 50,
-                    //  "Distance": 900
-                    //},
+                    "RangeAttributesShort": { // work with it its ok
+                        "Accuracy": 100,
+                        "Distance": 900
+                    },
                     //RangeAttributesMedium": { // dont touch it! itll halfblow the world, its cursed, no you cant even remove that
                     //  "Accuracy": 40,
                     //  "Distance": 1200
                     //},
-                    //"RangeAttributesLong": { // works too 
-                    //  "Accuracy": 25,
-                    //  "Distance": 1380
-                    //},
+                    "RangeAttributesLong": { // works too 
+                        "Accuracy": 100,
+                        "Distance": 1380
+                    },
+                    "TargetPrioritizationAttributes": {
+                        "TargetSameCommanderBias": -1
+                    },
                     "Turret": {
                         "FieldOfView": 360,
                         "FieldOfFire": 360,
@@ -9459,6 +9515,11 @@
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Ground"
+                        },
+                        "1": {
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyMediumPercent",
+                            "Amount": 100000000
                         }
                     }
                 }
@@ -9752,13 +9813,13 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Acolyte: +5 damage", // ye 10 was a bit op 
+                        "BuffTooltipLocID": "Acolyte: +2 damage", // ye 10 was a bit op // okay even 5 melts stuff
                         "RequiredExperience": 1250,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
                                 "Mode": "Add",
-                                "Value": 5
+                                "Value": 2
                             }
                         }
                     },
@@ -9807,7 +9868,7 @@
                             "0": {
                                 "Attribute": 262148,
                                 "Mode": "AddPercent",
-                                "Value": -50
+                                "Value": -20
                             },
                             "1": {
                                 "Attribute": 262149,
@@ -10010,13 +10071,13 @@
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Acolyte: +5 damage",
+                        "BuffTooltipLocID": "Acolyte: +2 damage",
                         "RequiredExperience": 1250,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
                                 "Mode": "AddPercent",
-                                "Value": 50
+                                "Value": 20
                             }
                         }
                     },
@@ -10054,7 +10115,7 @@
                             "0": {
                                 "Attribute": 262148,
                                 "Mode": "AddPercent", //fraking work already you annoying werid thing 
-                                "Value": -50 //that suppose to add -5 to 15... eeeeh??? maybe it adds -7.5 who fraking knows but it defenetly dose less damage
+                                "Value": -20 //that suppose to add -5 to 15... eeeeh??? maybe it adds -7.5 who fraking knows but it defenetly dose less damage
                             },
                             "1": {
                                 "Attribute": 262149,
@@ -11400,7 +11461,7 @@
                         "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
-                                "Attribute": 65536,
+                                "Attribute": "WeaponRange_DistanceLong",
                                 "Mode": "Add",
                                 "Value": 400
                             }
@@ -15214,8 +15275,8 @@
                     "MaxSpeedTurnRadius": 150
                 },
                 "Combat": {
-                    "MinDesiredCombatRange": 1000,
-                    "MaxDesiredCombatRange": 1400,
+                    "MinDesiredCombatRange": 900,
+                    "MaxDesiredCombatRange": 1100,
                     "PassiveCombatApproachMode": "Circle",
                     "ActiveCombatApproachMode": "Circle"
                 }
@@ -15255,7 +15316,7 @@
                     "CooldownTimeMS": 0,
                     "ReloadTimeMS": 3000,
                     "RangeAttributesShort": {
-                        "Distance": 1500,
+                        "Distance": 1250,
                         "Accuracy": 10
                     },
                     "RangeAttributesMedium": {
@@ -15401,8 +15462,8 @@
                     "MaxSpeedTurnRadius": 150
                 },
                 "Combat": {
-                    "MinDesiredCombatRange": 1000,
-                    "MaxDesiredCombatRange": 1400,
+                    "MinDesiredCombatRange": 900,
+                    "MaxDesiredCombatRange": 1100,
                     "PassiveCombatApproachMode": "Circle",
                     "ActiveCombatApproachMode": "Circle"
                 }
@@ -15440,7 +15501,7 @@
                     "CooldownTimeMS": 0,
                     "ReloadTimeMS": 3000,
                     "RangeAttributesShort": {
-                        "Distance": 1500,
+                        "Distance": 1250,
                         "Accuracy": 5
                     },
                     "RangeAttributesMedium": {
