@@ -8,9 +8,9 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.08.40",
-        "LastUpdate": "2023-11-22",
-        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/joke.json"
+        "Version": "1.08.41",
+        "LastUpdate": "2023-11-29",
+        "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
         "UnitAttributes": {
@@ -4649,7 +4649,7 @@
                     "AirSortie": {
                         "LoiterLength": 90,
                         "SetAttackTargetsWithinRadius": 1100,
-                        "SortieSquadSize": 1
+                        "SortieSquadSize": 3
                     }
                 },
                 "Ability_G_LaunchBomber_MP": {
@@ -6032,14 +6032,14 @@
                     "AirSortie": {
                         "LoiterLength": 90,
                         "SetAttackTargetsWithinRadius": 1100,
-                        "SortieSquadSize": 1
+                        "SortieSquadSize": 3
                     }
                 },
                 "Ability_Launch_K_Interceptor_Upgraded": {
                     "AirSortie": {
                         "LoiterLength": 90,
                         "SetAttackTargetsWithinRadius": 1100,
-                        "SortieSquadSize": 1
+                        "SortieSquadSize": 3
                     }
                 },
                 "Ability_Launch_K_Bomber": {
@@ -6219,6 +6219,9 @@
                 },
                 "K_Carrier_Weapon_DefaultMissile_MP": {
                     "FriendlyFireDamageScalar": 1,
+                    "BurstPeriodMinTimeMS": 1500,
+                    "RateOfFire": 0,
+                    "BurstPeriodMaxTimeMS": 1500,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "LineOfSightRequired": false,
                     "DamagePacketsPerShot": 2,
@@ -6226,14 +6229,14 @@
                     "BaseDamagePerRound": 240,
                     "AreaOfEffectRadius": 230,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
-                    "NumberOfBursts": 1,
+                    "NumberOfBursts": 2,
                     "WindDownTimeMS": 0,
                     "TargetPrioritizationAttributes": {
+                        "AutoTargetStickyBias": -1,
                         "TargetSameCommanderBias": -1
                     },
-                    "ReloadTimeMS": 6500,
+                    "ReloadTimeMS": 8500,
+                    "CooldownTimeMS": 8500,
                     "Modifiers": {
                         "1": {
                             "TargetClass": "Small",
@@ -6248,7 +6251,6 @@
                             "Amount": 80
                         }
                     },
-                    "CooldownTimeMS": 0,
                     "RangeAttributesShort": {
                         "Accuracy": 0,
                         "MinDistance": 1050,
@@ -6570,12 +6572,12 @@
 
                     "1": { // Missile Systems
                         "View": {
-                            "LocalizedLongDescriptionStringID": "Increase power to unlock and improve targeted missile weapon. Shunting power increases maximum ammo, range and reload speed."
+                            "LocalizedLongDescriptionStringID": "Increase power to unlock and improve targeted missile weapon and Automatic artillery bombardment. Shunting power increases range and reload speed."
                         },
                         "PowerLevels": {
 
                             "0": {
-                                "LocalizedShortDescriptionStringID": "Reload: 100s; missiles cannot fire",
+                                "LocalizedShortDescriptionStringID": "Reload: 100s; missiles cannot fire, Artillery bombardment disabled.",
                                 "StatusEffectsToApply": {
                                     "K_Missiles_0_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -6591,7 +6593,7 @@
                                 }
                             },
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Reload: 90s, Range: 1500m",
+                                "LocalizedShortDescriptionStringID": "Reload: 90s missile - 8.5s Artillery, Range: 1500m missile - 2000m Artillery",
                                 "StatusEffectsToApply": {
                                     "K_Missiles_1_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -6611,15 +6613,45 @@
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
                                                         "Value": 1500
+                                                    },
+                                                    "3": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Mode": "Set",
+                                                        "Value": 2
+                                                    },
+                                                    "4": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "WeaponRange_DistanceLong",
+                                                        "Mode": "Set",
+                                                        "Value": 2000
+                                                    },
+                                                    "5": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8500
+                                                    },
+                                                    "6": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 8500
                                                     }
                                                 }
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         }
                                     }
                                 }
                             },
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Reload: 80s, Range: 1750m",
+                                "LocalizedShortDescriptionStringID": "Reload: 80s - 7s, Range: 1750m - 2100m",
                                 "StatusEffectsToApply": {
                                     "K_Missiles_2_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -6637,15 +6669,45 @@
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
                                                         "Value": 1750
+                                                    },
+                                                    "3": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Mode": "Set",
+                                                        "Value": 2
+                                                    },
+                                                    "4": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "WeaponRange_DistanceLong",
+                                                        "Mode": "Set",
+                                                        "Value": 2100
+                                                    },
+                                                    "5": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 7000
+                                                    },
+                                                    "6": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 7000
                                                     }
                                                 }
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         }
                                     }
                                 }
                             },
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Reload: 70s, Range: 2500m",
+                                "LocalizedShortDescriptionStringID": "Reload: 70s - 6s, Range: 2500m - 2200m",
                                 "StatusEffectsToApply": {
                                     "K_Missiles_3_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -6655,7 +6717,6 @@
                                                         "Value": 1
                                                     },
                                                     "1": {
-
                                                         "Mode": "Set",
                                                         "Value": 70
                                                     },
@@ -6664,15 +6725,45 @@
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
                                                         "Value": 2500
+                                                    },
+                                                    "3": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Mode": "Set",
+                                                        "Value": 2
+                                                    },
+                                                    "4": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "WeaponRange_DistanceLong",
+                                                        "Mode": "Set",
+                                                        "Value": 2200
+                                                    },
+                                                    "5": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 6000
+                                                    },
+                                                    "6": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 6000
                                                     }
                                                 }
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         }
                                     }
                                 }
                             },
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Reload: 60s, Range: 3500m",
+                                "LocalizedShortDescriptionStringID": "Reload: 60s - 6s, 2nd burst added to artillery bombardment, Range: 3500m - 2400m",
                                 "StatusEffectsToApply": {
                                     "K_Missiles_4_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -6682,7 +6773,6 @@
                                                         "Value": 1
                                                     },
                                                     "1": {
-
                                                         "Mode": "Set",
                                                         "Value": 60
                                                     },
@@ -6691,15 +6781,45 @@
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
                                                         "Value": 3500
+                                                    },
+                                                    "3": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Mode": "Set",
+                                                        "Value": 2
+                                                    },
+                                                    "4": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "WeaponRange_DistanceLong",
+                                                        "Mode": "Set",
+                                                        "Value": 2300
+                                                    },
+                                                    "5": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 500
+                                                    },
+                                                    "6": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 6000
                                                     }
                                                 }
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         }
                                     }
                                 }
                             },
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Reload: 50s, Range: 4269m",
+                                "LocalizedShortDescriptionStringID": "Reload: 50s - 5s, Range: 4269m - 2500m",
                                 "StatusEffectsToApply": {
                                     "K_Missiles_5_StatusEffect": {
                                         "BuffsToApplyToTarget": {
@@ -6709,7 +6829,6 @@
                                                         "Value": 1
                                                     },
                                                     "1": {
-
                                                         "Mode": "Set",
                                                         "Value": 50
                                                     },
@@ -6718,8 +6837,38 @@
                                                         "Attribute": "WeaponRange_DistanceLong",
                                                         "Mode": "Set",
                                                         "Value": 4269
+                                                    },
+                                                    "3": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_RateOfFire",
+                                                        "Mode": "Set",
+                                                        "Value": 2
+                                                    },
+                                                    "4": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "WeaponRange_DistanceLong",
+                                                        "Mode": "Set",
+                                                        "Value": 2500
+                                                    },
+                                                    "5": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 500
+                                                    },
+                                                    "6": {
+                                                        "Name": "ANTI-AIR",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 5000
                                                     }
                                                 }
+                                            }
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "ModifierType": "EnableWeapon",
+                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         }
                                     }
@@ -6823,11 +6972,11 @@
                         "PowerLevels": {
 
                             "0": {
-                                "LocalizedShortDescriptionStringID": "Point Defence Rate of Fire: 1, Artillery pod offline, Anti-Air offline."
+                                "LocalizedShortDescriptionStringID": "Point Defence Rate of Fire: 1, Anti-Air offline."
                             },
 
                             "1": {
-                                "LocalizedShortDescriptionStringID": "Anti-Air online, PD Rate of Fire: 2, Artillery pod Rate of Fire: 3, AA Rate of Fire: 5",
+                                "LocalizedShortDescriptionStringID": "Anti-Air online, PD Rate of Fire: 2, AA Rate of Fire: 5",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_1_StatusEffect": {
                                         "Modifiers": {
@@ -6892,8 +7041,8 @@
                                                         "Value": 0
                                                     }, // TURRET_FR
                                                     "5": {
-                                                        "Mode": "Set",
-                                                        "Value": 3
+                                                        "Mode": "Add",
+                                                        "Value": 0
                                                     },
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -6927,7 +7076,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 3, Artillery pod Rate of Fire: 4, AA Rate of Fire: 7",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 3, AA Rate of Fire: 7",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_2_StatusEffect": {
                                         "Modifiers": {
@@ -6962,10 +7111,6 @@
                                             "7": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
-                                            },
-                                            "8": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         },
                                         "BuffsToApplyToTarget": {
@@ -6988,8 +7133,8 @@
                                                         "Value": 2
                                                     }, // TURRET_FR
                                                     "5": {
-                                                        "Mode": "Set",
-                                                        "Value": 4
+                                                        "Mode": "Add",
+                                                        "Value": 0
                                                     },
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -7023,7 +7168,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 4, Artillery pod Rate of Fire: 5, of Fire: 12",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 4, of Fire: 12",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_3_StatusEffect": {
 
@@ -7059,10 +7204,6 @@
                                             "7": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
-                                            },
-                                            "8": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         },
                                         "BuffsToApplyToTarget": {
@@ -7085,8 +7226,8 @@
                                                         "Value": 3
                                                     }, // TURRET_FR
                                                     "5": {
-                                                        "Mode": "Set",
-                                                        "Value": 5
+                                                        "Mode": "Add",
+                                                        "Value": 0
                                                     },
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -7120,7 +7261,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 6, Artillery pod Rate of Fire: 7, AA Rate of Fire: 20",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 6, AA Rate of Fire: 20",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_4_StatusEffect": {
 
@@ -7156,10 +7297,6 @@
                                             "7": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_BL_APBULLETS"
-                                            },
-                                            "8": {
-                                                "ModifierType": "EnableWeapon",
-                                                "EnableWeapon_WeaponID": "ANTI-AIR"
                                             }
                                         },
                                         "BuffsToApplyToTarget": {
@@ -7182,8 +7319,8 @@
                                                         "Value": 2
                                                     }, // TURRET_FR
                                                     "5": {
-                                                        "Mode": "Set",
-                                                        "Value": 7
+                                                        "Mode": "Add",
+                                                        "Value": 0
                                                     },
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -7241,7 +7378,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 8, Artillery pod Rate of Fire: 9, AA Rate of Fire: 20.",
+                                "LocalizedShortDescriptionStringID": "PD Rate of Fire: 6, AA Rate of Fire: 20. -50% Close range weapons cooldown and reload time.",
                                 "StatusEffectsToApply": {
                                     "K_Weapons_5_StatusEffect": {
                                         "Modifiers": {
@@ -7289,31 +7426,31 @@
                                                         "Name": "TURRET_FR",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3
+                                                        "Value": 2
                                                     }, // TURRET_BR
                                                     "1": {
                                                         "Name": "TURRET_FL",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3
+                                                        "Value": 2
                                                     }, // TURRET_BL
                                                     "2": {
                                                         "Name": "TURRET_BR",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3
+                                                        "Value": 2
                                                     }, // TURRET_FL
                                                     "3": {
                                                         "Name": "TURRET_BL",
                                                         "Attribute": "UnitWeapon_RateOfFire",
                                                         "Mode": "Set",
-                                                        "Value": 3
+                                                        "Value": 2
                                                     }, // TURRET_FR
                                                     "5": {
                                                         "Name": "ANTI-AIR",
                                                         "Attribute": "UnitWeapon_RateOfFire",
-                                                        "Mode": "Set",
-                                                        "Value": 9
+                                                        "Mode": "Add",
+                                                        "Value": 0
                                                     },
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -7367,6 +7504,78 @@
                                                         "Attribute": "Unit_FireRateDisplay",
                                                         "Mode": "Set",
                                                         "Value": 5
+                                                    },
+                                                    "15": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 1175
+                                                    },
+                                                    "16": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 1175
+                                                    },
+                                                    "17": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 1175
+                                                    },
+                                                    "18": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 1175
+                                                    },
+                                                    "19": {
+                                                        "Name": "TURRET_FR",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 3250
+                                                    },
+                                                    "20": {
+                                                        "Name": "TURRET_FL",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 3250
+                                                    },
+                                                    "21": {
+                                                        "Name": "TURRET_BR",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 3250
+                                                    },
+                                                    "22": {
+                                                        "Name": "TURRET_BL",
+                                                        "Attribute": "UnitWeapon_ReloadTime",
+                                                        "Mode": "Set",
+                                                        "Value": 3250
+                                                    },
+                                                    "23": {
+                                                        "Name": "TURRET_FR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 775
+                                                    },
+                                                    "24": {
+                                                        "Name": "TURRET_FL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 775
+                                                    },
+                                                    "25": {
+                                                        "Name": "TURRET_BR_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 775
+                                                    },
+                                                    "26": {
+                                                        "Name": "TURRET_BL_APBULLETS",
+                                                        "Attribute": "UnitWeapon_CooldownTime",
+                                                        "Mode": "Set",
+                                                        "Value": 775
                                                     }
                                                 }
                                             }
@@ -10082,13 +10291,13 @@
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Sentinel: +6 armor, +1 production line",
+                        "BuffTooltipLocID": "Sentinel: +3 armor, +1 production line",
                         "RequiredExperience": 1750,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
                                 "Mode": "Add",
-                                "Value": 6
+                                "Value": 3
                             },
                             "1": {
                                 "Attribute": 65544,
@@ -12256,7 +12465,7 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": { "MaxSpeed": 75 },
-                "Combat": { "MaxDesiredCombatRange": 780 }
+                "Combat": { "MaxDesiredCombatRange": 700 }
             },
             "WeaponAttributes": {
                 "C_Railgun_Weapon_G2G_MP": {
