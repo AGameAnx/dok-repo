@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.08.41",
-        "LastUpdate": "2023-11-29",
+        "Version": "1.09.00",
+        "LastUpdate": "2023-11-30",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
@@ -881,10 +881,10 @@
                 "C_Carrier_Weapon_G2All_MP": {
                     "OutputDPS": true,
                     "BaseDamagePerRound": 155,
-                    "ReloadTimeMS": 6500,
+                    "ReloadTimeMS": 8500,
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
-                    "CooldownTimeMS": 6500,
+                    "CooldownTimeMS": 8500,
                     "BurstPeriodMinTimeMS": 1500,
                     "BurstPeriodMaxTimeMS": 1500,
                     "ProjectileEntityTypeToSpawn": "C_Battlecruiser_AA_ProjectileAssetContainer",
@@ -1007,7 +1007,7 @@
                     "BurstPeriodMaxTimeMS": 50,
                     "NumberOfBursts": 1,
                     "WindDownTimeMS": 0,
-                    "ReloadTimeMS": 10000,
+                    "ReloadTimeMS": 15000,
                     "CooldownTimeMS": 0,
                     "RangeAttributesShort": {
                         "Remove": true
@@ -2690,13 +2690,13 @@
                     "BaseWreckDamagePerRound": 100
                 },
                 "C_Sob_Carrier_Weapon_G2All_Dummy_MP": {
-                    "BaseDamagePerRound": 195,
+                    "BaseDamagePerRound": 155,
                     "DamagePacketsPerShot": 0,
                     "ExcludeFromHeightAdvantage": true
                 },
                 "C_Sob_Carrier_Railgun_Weapon_G2G_MP": {
                     "OutputDPS": true,
-                    "BaseDamagePerRound": 195,
+                    "BaseDamagePerRound": 155,
                     "DamagePacketsPerShot": 0,
                     "ExcludeFromHeightAdvantage": true,
                     "BurstPeriodMaxTimeMS": 100,
@@ -2786,7 +2786,7 @@
                     "BurstPeriodMaxTimeMS": 50,
                     "NumberOfBursts": 1,
                     "WindDownTimeMS": 0,
-                    "ReloadTimeMS": 20000,
+                    "ReloadTimeMS": 25000,
                     "EntityTypesToSpawnOnImpact": {
                         "0": {
                             "EntityTypeToSpawn": "C_Sob_NukeEmitter_MP"
@@ -2805,7 +2805,7 @@
                     "RangeAttributesLong": {
                         "Accuracy": 0,
                         "MinDistance": 350,
-                        "Distance": 700
+                        "Distance": 900
                     },
                     "ExcludeFromHeightAdvantage": true
                 },
@@ -4670,12 +4670,12 @@
                     "OutputDPS": true,
                     "BaseDamagePerRound": 75,
                     "TargetStyle": "Flak",
-                    "ReloadTimeMS": 5000,
+                    "ReloadTimeMS": 6500,
                     "CooldownTimeMS": 0,
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
-                    "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
+                    "BurstPeriodMinTimeMS": 500,
+                    "BurstPeriodMaxTimeMS": 500,
                     "ProjectileEntityTypeToSpawn": "G_BattleCruiserDefault_ProjectileAssetContainer",
                     "IsTracer": false,
                     "TracerSpeed": 0,
@@ -4683,7 +4683,7 @@
                     "AreaOfEffectRadius": 75,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "LeadsTarget": 1,
-                    "RateOfFire": 2,
+                    "RateOfFire": 4,
                     "TracerLength": 5,
                     "ExcludeFromHeightAdvantage": true,
                     "RangeAttributesShort": {
@@ -4796,7 +4796,7 @@
                     "BurstPeriodMaxTimeMS": 50,
 
                     "WindDownTimeMS": 0,
-                    "ReloadTimeMS": 10000,
+                    "ReloadTimeMS": 15000,
                     "CooldownTimeMS": 0,
                     "RangeAttributesShort": {
                         "Remove": true
@@ -4979,10 +4979,10 @@
                     "1": { // Weapon Systems
                         "PowerLevels": {
                             "0": {
-                                "LocalizedShortDescriptionStringID": "PDC Rate of Fire: 2, reload time 6 seconds, anti-air offline"
+                                "LocalizedShortDescriptionStringID": "PDC Rate of Fire: 2, reload time 6.5 seconds, anti-air offline"
                             },
                             "1": {
-                                "LocalizedShortDescriptionStringID": " Anti-air online, PDC reload time: 4 seconds, AA Rate of Fire: 5",
+                                "LocalizedShortDescriptionStringID": " Anti-air online, PDC reload time: 5 seconds, AA Rate of Fire: 5",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_1_StatusEffect": {
                                         "Modifiers": {
@@ -5029,22 +5029,22 @@
                                                     "1": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3000
+                                                        "Value": 4000
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3000
+                                                        "Value": 4000
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3000
+                                                        "Value": 4000
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 3000
+                                                        "Value": 4000
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -5083,7 +5083,7 @@
                             },
 
                             "2": {
-                                "LocalizedShortDescriptionStringID": "PDC reload time: 3 seconds, AA Rate of Fire: 7",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 4 seconds, AA Rate of Fire: 7",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_2_StatusEffect": {
                                         "Modifiers": {
@@ -5130,22 +5130,22 @@
                                                     "1": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2000
+                                                        "Value": 3000
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2000
+                                                        "Value": 3000
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2000
+                                                        "Value": 3000
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 2000
+                                                        "Value": 3000
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -5184,7 +5184,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "PDC reload time: 2 seconds, AA Rate of Fire: 12",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 3 seconds, AA Rate of Fire: 12",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_3_StatusEffect": {
                                         "Modifiers": {
@@ -5231,22 +5231,22 @@
                                                     "1": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1000
+                                                        "Value": 2000
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1000
+                                                        "Value": 2000
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1000
+                                                        "Value": 2000
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 1000
+                                                        "Value": 2000
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -5285,7 +5285,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "PDC reload time: 1 second, AA Rate of Fire: 20",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 2 second, AA Rate of Fire: 20",
                                 "StatusEffectsToApply": {
                                     "G_Weapons_4_StatusEffect": {
                                         "Modifiers": {
@@ -5332,22 +5332,22 @@
                                                     "1": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 0
+                                                        "Value": 1000
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 0
+                                                        "Value": 1000
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 0
+                                                        "Value": 1000
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Mode": "Set",
                                                         "Attribute": "UnitWeapon_ReloadTime",
-                                                        "Value": 0
+                                                        "Value": 1000
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -5386,7 +5386,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "PDC reload time: 1 second, AA Rate of Fire: 20. Missiles Enabled...",
+                                "LocalizedShortDescriptionStringID": "PDC reload time: 2 second, AA Rate of Fire: 20. Missiles Enabled...",
                                 "StatusEffectsToApply": {
 
                                     "G_Weapons_MoreDamage_StatusEffect": {
@@ -5456,25 +5456,25 @@
                                                         "Name": "TURRET_FR",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 0
+                                                        "Value": 1000
                                                     }, // TURRET_BR
                                                     "2": {
                                                         "Name": "TURRET_FL",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 0
+                                                        "Value": 1000
                                                     }, // TURRET_BL
                                                     "3": {
                                                         "Name": "TURRET_BR",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 0
+                                                        "Value": 1000
                                                     }, // TURRET_FL
                                                     "4": {
                                                         "Name": "TURRET_BL",
                                                         "Attribute": "UnitWeapon_ReloadTime",
                                                         "Mode": "Set",
-                                                        "Value": 0
+                                                        "Value": 1000
                                                     }, // TURRET_FR
                                                     "6": {
                                                         "Name": "TURRET_FR_APBULLETS",
@@ -6096,10 +6096,10 @@
                 },
                 "K_Carrier_Weapon_G2All_MP": {
                     "BaseDamagePerRound": 125,
-                    "ReloadTimeMS": 6500,
+                    "ReloadTimeMS": 8500,
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
-                    "CooldownTimeMS": 6500,
+                    "CooldownTimeMS": 8500,
                     "BurstPeriodMinTimeMS": 1500,
                     "BurstPeriodMaxTimeMS": 1500,
                     "ProjectileEntityTypeToSpawn": "K_DirectFire_Shell_ProjectileAssetContainer_MP",
@@ -7886,7 +7886,7 @@
                     "BurstPeriodMinTimeMS": 750,
                     "BurstPeriodMaxTimeMS": 1250,
                     "CooldownTimeMS": 0,
-                    "ReloadTimeMS": 1250,
+                    "ReloadTimeMS": 2250,
                     "LeadsTarget": 1,
                     "RangeAttributesShort": {
                         "Distance": 1000
@@ -8218,7 +8218,7 @@
                     "TracerLength": 5,
                     "BaseDamagePerRound": 100,
                     "DamagePacketsPerShot": 1,
-                    "NumberOfBursts": 6,
+                    "NumberOfBursts": 2,
                     "FriendlyFireDamageScalar": 1,
                     "WindUpTimeMS": 250,
                     "CooldownTimeMS": 1,
@@ -8297,7 +8297,7 @@
                     "WindUpTimeMS": 0,
                     "WindDownTimeMS": 0,
                     "NumberOfBursts": 1,
-                    "RateOfFire": 150,
+                    "RateOfFire": 100,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
                     "BaseDamagePerRound": 1,
@@ -8369,7 +8369,7 @@
             "UnitAttributes": {
                 "ExcludeFromUnitStats": false,
                 "AccuracyReceivedMultiplier": 2.0,
-                "ExperienceValue": 1500,
+                "ExperienceValue": 500,
                 "MaxHealth": 10000,
                 "SensorRadius": 3000
             },
@@ -8441,13 +8441,13 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 80,
+                    "MaxSpeed": 110,
                     "BrakingTime": 2
                 }
             },
             "WeaponAttributes": {
                 "K_ExplodingSkimmer_WeaponDefault_G2G_MP": { // apperently a gun that deals damage activated by abil... but not the explosion... will be used in replacement of explosion, since explosion works like shit
-                    "BaseDamagePerRound": 1000, //If you add damage bd will deal extra damage when abil is pressed
+                    "BaseDamagePerRound": 250, //If you add damage bd will deal extra damage when abil is pressed
                     "ProjectileEntityTypeToSpawn": "K_ExplodingSkimmer_Shell_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
@@ -8462,11 +8462,11 @@
                     "ReloadTimeMS": 5000 //2nd thing you must edit to set cooldown of the explosion
                 },
                 "K_ExplodingSkimmer_Weapon_G2G_MP": { //apperently a weapon dummy
-                    "BaseDamagePerRound": 1000
+                    "BaseDamagePerRound": 250
 
                 },
                 "K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
-                    "BaseDamagePerRound": 1000,
+                    "BaseDamagePerRound": 250,
                     "DamagePacketsPerShot": 1,
                     "FriendlyFireDamageScalar": 1,
                     "AreaOfEffectRadius": 500,
@@ -8674,7 +8674,7 @@
                     "ExcludeFromHeightAdvantage": true,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "AreaOfEffectRadius": 300,
-                    "BaseDamagePerRound": 1200
+                    "BaseDamagePerRound": 600
                 }
             },
             "UnitAttributes": {
@@ -8856,7 +8856,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 10,
+                    "RateOfFire": 6,
                     "DamagePacketsPerShot": 1,
                     "RangeAttributesShort": {
                         "Accuracy": 100,
@@ -9048,7 +9048,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 10,
+                    "RateOfFire": 6,
                     "DamagePacketsPerShot": 1,
                     "RangeAttributesShort": {
                         "Accuracy": 100,
@@ -9217,7 +9217,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 10,
+                    "RateOfFire": 6,
                     "DamagePacketsPerShot": 1,
                     "RangeAttributesShort": {
                         "Accuracy": 100,
@@ -9395,7 +9395,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 10,
+                    "RateOfFire": 6,
                     "DamagePacketsPerShot": 1,
                     "RangeAttributesShort": {
                         "Accuracy": 100,
@@ -9662,7 +9662,7 @@
                     "CooldownTimeMS": 0,
                     "WindUpTimeMS": 50,
                     "RateOfFire": 0,
-                    "ReloadTimeMS": 5000,
+                    "ReloadTimeMS": 6000,
                     "AreaOfEffectRadius": 60,
                     "RangeAttributesShort": {
                         "Distance": 600,
@@ -9692,7 +9692,7 @@
                     "TracerSpeed": 0,
                     "ReloadTimeMS": 15000,
                     "TracerLength": 5,
-                    "BaseDamagePerRound": 100,
+                    "BaseDamagePerRound": 50,
                     "ExcludeFromHeightAdvantage": true,
                     "RateOfFire": 1,
                     "StatusEffectsSets": {
@@ -10006,13 +10006,13 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Novice: +10 firerate",
+                        "BuffTooltipLocID": "Novice: +5 firerate",
                         "RequiredExperience": 800,
                         "Buff": {
                             "0": {
                                 "Attribute": 262149,
                                 "Mode": "Add",
-                                "Value": 10
+                                "Value": 5
                             },
                             "1": {
                                 "Attribute": "Unit_FireRateDisplay",
@@ -10034,7 +10034,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +150m range, +1 production line",
-                        "RequiredExperience": 1750,
+                        "RequiredExperience": 2750,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554434,
@@ -10060,7 +10060,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +20 speed",
-                        "RequiredExperience": 2250,
+                        "RequiredExperience": 4250,
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -10072,7 +10072,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: AP bullets removed, turrets fire rate overcharged",
-                        "RequiredExperience": 3500,
+                        "RequiredExperience": 7000,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -10177,7 +10177,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 10,
+                    "RateOfFire": 5,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 50,
                     "WindDownTimeMS": 500,
@@ -10214,7 +10214,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 10,
+                    "RateOfFire": 5,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 50,
                     "WindDownTimeMS": 500,
@@ -10264,7 +10264,7 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Novice: +10 firerate",
+                        "BuffTooltipLocID": "Novice: +5 firerate",
                         "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
@@ -10281,7 +10281,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +2 damage",
-                        "RequiredExperience": 1250,
+                        "RequiredExperience": 1750,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -10292,7 +10292,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +3 armor, +1 production line",
-                        "RequiredExperience": 1750,
+                        "RequiredExperience": 2750,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -10308,7 +10308,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +1500 hull",
-                        "RequiredExperience": 2250,
+                        "RequiredExperience": 4250,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -10319,7 +10319,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: AP bullets removed, turrets fire rate overcharged",
-                        "RequiredExperience": 3500,
+                        "RequiredExperience": 4000,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -10418,7 +10418,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 10,
+                    "RateOfFire": 5,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 50,
                     "WindDownTimeMS": 500,
@@ -10455,7 +10455,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 10,
+                    "RateOfFire": 5,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 50,
                     "WindDownTimeMS": 500,
@@ -10563,7 +10563,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: +190 to smoke grenade damage",
-                        "RequiredExperience": 500,
+                        "RequiredExperience": 1500,
                         "Buff": {
                             "0": {
                                 "Name": "SMOKE",
@@ -10575,7 +10575,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: +10 speed",
-                        "RequiredExperience": 750,
+                        "RequiredExperience": 2750,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitDynamics_MaxSpeed",
@@ -10586,7 +10586,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Commander: Scope added, accuracy is now consistant for AA weapon",
-                        "RequiredExperience": 1500,
+                        "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
                                 "Name": "C_HAC_Weapon_G2G_MP",
@@ -10604,7 +10604,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Smoke General: -75% cooldown on smoke grenade ability",
-                        "RequiredExperience": 2500,
+                        "RequiredExperience": 5500,
                         "Buff": {
                             "0": {
                                 "Name": "Ability_C_SmokeGrenade_MP",
@@ -10648,15 +10648,15 @@
                     "TracerSpeed": 1500,
                     "LineOfSightRequired": false,
                     "ExcludeFromHeightAdvantage": true,
-                    "BaseDamagePerRound": 30,
+                    "BaseDamagePerRound": 15,
                     "RateOfFire": 100,
                     "NumberOfBursts": 4,
-                    "CooldownTimeMS": 1000,
+                    "CooldownTimeMS": 2000,
                     "BurstPeriodMinTimeMS": 950,
                     "BurstPeriodMaxTimeMS": 1050,
                     "WindUpTimeMS": 0,
                     "WindDownTimeMS": 0,
-                    "ReloadTimeMS": 2500,
+                    "ReloadTimeMS": 3500,
                     "AreaOfEffectRadius": 0,
                     "FriendlyFireDamageScalar": 1,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
@@ -10669,7 +10669,7 @@
                         "Accuracy": 15
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1100,
+                        "Distance": 1200,
                         "Accuracy": 10
                     },
                     "OutputDPS": true,
@@ -10678,13 +10678,13 @@
                             "TargetClass": "Ground",
                             "ClassOperator": "Or",
                             "Modifier": "DamagePercent",
-                            "Amount": 15
+                            "Amount": 5
                         },
                         "1": {
                             "TargetClass": "Air",
                             "ClassOperator": "Or",
                             "Modifier": "DamagePercent",
-                            "Amount": 50
+                            "Amount": 100
                         }
                     }
                 },
@@ -10990,7 +10990,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Novice: +200 hull",
-                        "RequiredExperience": 250,
+                        "RequiredExperience": 650,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11001,7 +11001,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +100 hull, +2 armor",
-                        "RequiredExperience": 500,
+                        "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11017,7 +11017,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +5 damage",
-                        "RequiredExperience": 750,
+                        "RequiredExperience": 1750,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -11028,7 +11028,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +100 hull, +2 armor",
-                        "RequiredExperience": 1000,
+                        "RequiredExperience": 2500,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11044,7 +11044,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: +60 speed",
-                        "RequiredExperience": 2500,
+                        "RequiredExperience": 4500,
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -11081,9 +11081,10 @@
                     "BurstPeriodMinTimeMS": 100,
                     "BurstPeriodMaxTimeMS": 100,
                     "RateOfFire": 1,
-                    "ReloadTimeMS": 25,
+                    "ReloadTimeMS": 125,
                     "CooldownTimeMS": 0,
                     "AreaOfEffectRadius": 30,
+                    "NumberOfBursts": 2,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesShort": {
                         "Distance": 450
@@ -11117,7 +11118,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Novice: +200 hull",
-                        "RequiredExperience": 250,
+                        "RequiredExperience": 650,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11128,7 +11129,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +100 hull, +2 armor",
-                        "RequiredExperience": 500,
+                        "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11144,7 +11145,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +5 damage",
-                        "RequiredExperience": 750,
+                        "RequiredExperience": 1750,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -11155,7 +11156,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +100 hull, +2 armor",
-                        "RequiredExperience": 1000,
+                        "RequiredExperience": 2500,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11171,7 +11172,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: +60 speed",
-                        "RequiredExperience": 2500,
+                        "RequiredExperience": 4500,
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -11205,10 +11206,11 @@
                 "G_Catamaran_Weapon_G2G_MP": {
                     "BaseDamagePerRound": 20,
                     "FriendlyFireDamageScalar": 1,
+                    "NumberOfBursts": 2,
                     "BurstPeriodMinTimeMS": 100,
                     "BurstPeriodMaxTimeMS": 100,
                     "RateOfFire": 1,
-                    "ReloadTimeMS": 25,
+                    "ReloadTimeMS": 125,
                     "CooldownTimeMS": 0,
                     "AreaOfEffectRadius": 30,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -11392,6 +11394,7 @@
                     "RateOfFire": 1,
                     "NumberOfBursts": 1,
                     "FriendlyFireDamageScalar": 1,
+                    "ReloadTimeMS": 1500,
                     "BurstPeriodMinTimeMS": 950,
                     "BurstPeriodMaxTimeMS": 1050,
                     "RangeAttributesShort": {
@@ -11440,7 +11443,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Officer: +10 damage",
-                        "RequiredExperience": 100,
+                        "RequiredExperience": 400,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -11454,7 +11457,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: +400 hull",
-                        "RequiredExperience": 200,
+                        "RequiredExperience": 1000,
 
                         "Buff": {
                             "0": {
@@ -11467,7 +11470,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: +30 speed, +3 armor",
-                        "RequiredExperience": 400,
+                        "RequiredExperience": 1500,
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -11483,7 +11486,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Commander: +400m range",
-                        "RequiredExperience": 800,
+                        "RequiredExperience": 2500,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554434,
@@ -11504,7 +11507,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Captain: +500 hull, +4 armor",
-                        "RequiredExperience": 1600,
+                        "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11567,6 +11570,7 @@
                 "C_Escort_Weapon_G2G_MP": {
                     "OutputDPS": true,
                     "BaseDamagePerRound": 50,
+                    "ReloadTimeMS": 1500,
                     "DamagePacketsPerShot": 6,
                     "ProjectileEntityTypeToSpawn": "C_GunShip_DefaultBombs_ProjectileAssetContainer_MP",
                     "IsTracer": false,
@@ -11626,7 +11630,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Officer: +10 damage",
-                        "RequiredExperience": 100,
+                        "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -11640,7 +11644,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: +10 damage again",
-                        "RequiredExperience": 600,
+                        "RequiredExperience": 2600,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -11651,7 +11655,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: +400 hull, +3 armor",
-                        "RequiredExperience": 750,
+                        "RequiredExperience": 3750,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11667,7 +11671,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Commander: +400m range",
-                        "RequiredExperience": 1000,
+                        "RequiredExperience": 5000,
                         "Buff": {
                             "0": {
                                 "Attribute": "WeaponRange_DistanceLong",
@@ -11678,7 +11682,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Captain: +500 hull, +4 armor",
-                        "RequiredExperience": 1600,
+                        "RequiredExperience": 6600,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11731,7 +11735,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Novice: +200m range",
-                        "RequiredExperience": 100,
+                        "RequiredExperience": 500,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554434,
@@ -11742,7 +11746,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +75m area of effect radius",
-                        "RequiredExperience": 200,
+                        "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
                                 "Attribute": 262152,
@@ -11753,7 +11757,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +5 armor, +20 speed",
-                        "RequiredExperience": 500,
+                        "RequiredExperience": 2500,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -11769,7 +11773,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +500 hull",
-                        "RequiredExperience": 1000,
+                        "RequiredExperience": 3000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11780,7 +11784,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: +200 damage",
-                        "RequiredExperience": 2000,
+                        "RequiredExperience": 4500,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -11828,6 +11832,8 @@
                     "IsTracer": false,
                     "TracerSpeed": 0,
                     "TracerLength": 5,
+                    "ReloadTimeMS": 1000,
+                    "NumberOfBursts": 1,
                     "RateOfFire": 1,
                     "BaseDamagePerRound": 100,
                     "LineOfSightRequired": false,
@@ -11861,7 +11867,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Novice: +200m range",
-                        "RequiredExperience": 100,
+                        "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554434,
@@ -11872,7 +11878,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +75m area of effect radius",
-                        "RequiredExperience": 200,
+                        "RequiredExperience": 2000,
                         "Buff": {
                             "0": {
                                 "Attribute": 262152,
@@ -11883,7 +11889,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +5 armor, +20 speed",
-                        "RequiredExperience": 500,
+                        "RequiredExperience": 3000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -11899,7 +11905,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +500 hull",
-                        "RequiredExperience": 1000,
+                        "RequiredExperience": 4000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -11910,7 +11916,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: +200 damage",
-                        "RequiredExperience": 2000,
+                        "RequiredExperience": 5000,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -11947,6 +11953,8 @@
             "WeaponAttributes": {
                 "G_SandSkimmer_Weapon_G2G_MP": {
                     "FriendlyFireDamageScalar": 1,
+                    "ReloadTimeMS": 1000,
+                    "NumberOfBursts": 1,
                     "ExcludeFromHeightAdvantage": true,
                     "ProjectileEntityTypeToSpawn": "K_Artillery_Shell_ProjectileAssetContainer_MP",
                     "IsTracer": false,
@@ -12403,7 +12411,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Officer: +200m range",
-                        "RequiredExperience": 450,
+                        "RequiredExperience": 650,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554432,
@@ -12414,7 +12422,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: +15 damage",
-                        "RequiredExperience": 900,
+                        "RequiredExperience": 1500,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -12425,7 +12433,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: +400 hull, +3 armor",
-                        "RequiredExperience": 1300,
+                        "RequiredExperience": 2500,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -12441,7 +12449,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Commander: +200m range",
-                        "RequiredExperience": 1750,
+                        "RequiredExperience": 3750,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554432,
@@ -12452,7 +12460,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Captain: +300m range",
-                        "RequiredExperience": 2250,
+                        "RequiredExperience": 5250,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554432,
@@ -12476,9 +12484,9 @@
                     "BaseDamagePerRound": 25,
                     "DamagePacketsPerShot": 0,
                     "WindDownTimeMS": 50,
-                    "WindUpTimeMS": 1050,
+                    "WindUpTimeMS": 850,
                     "CooldownTimeMS": 0,
-                    "ReloadTimeMS": 3400,
+                    "ReloadTimeMS": 3600,
                     "BurstPeriodMinTimeMS": 60,
                     "BurstPeriodMaxTimeMS": 140,
                     "AreaOfEffectFalloffType": "Linear",
@@ -12589,7 +12597,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Officer: +2 armor",
-                        "RequiredExperience": 450,
+                        "RequiredExperience": 1050,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -12600,7 +12608,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: +10 damage",
-                        "RequiredExperience": 900,
+                        "RequiredExperience": 2900,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -12611,7 +12619,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: +300 hull, +2 armor",
-                        "RequiredExperience": 1300,
+                        "RequiredExperience": 3300,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -12627,7 +12635,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Commander: +100 hull, +10 speed",
-                        "RequiredExperience": 1750,
+                        "RequiredExperience": 4750,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -12643,7 +12651,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Captain: +600m range",
-                        "RequiredExperience": 2250,
+                        "RequiredExperience": 6250,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554434,
@@ -12707,11 +12715,11 @@
                     "NumberOfBursts": 1,
                     "WindUpTimeMS": 600,
                     "WindDownTimeMS": 100,
-                    "BaseDamagePerRound": 30,
+                    "BaseDamagePerRound": 15,
                     "DamagePacketsPerShot": 0,
                     "BurstPeriodMinTimeMS": 500,
                     "BurstPeriodMaxTimeMS": 500,
-                    "ReloadTimeMS": 100,
+                    "ReloadTimeMS": 0,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "AreaOfEffectRadius": 0,
                     "RangeAttributesShort": {
@@ -12841,10 +12849,10 @@
             "ResearchItemAttributes": {
                 "Resource1Cost": 150,
                 "Resource2Cost": 250,
-                "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 60.",
+                "LocalizedLongDescriptionStringID": "Improves the Railgun's combat capabilities.\n\n[84a1e8]Primary weapons damage increased by 45.",
                 "UnitTypeBuffs": {
-                    "0": { "BuffSet": { "0": { "Value": 60 } } },
-                    "1": { "BuffSet": { "0": { "Value": 60 } } }
+                    "0": { "BuffSet": { "0": { "Value": 45 } } },
+                    "1": { "BuffSet": { "0": { "Value": 45 } } }
                 }
             }
         },
@@ -12867,7 +12875,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Novice: +100 to max hull",
-                        "RequiredExperience": 450,
+                        "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
@@ -12878,7 +12886,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +200m range",
-                        "RequiredExperience": 700,
+                        "RequiredExperience": 2700,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554434,
@@ -12899,7 +12907,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +500 hull",
-                        "RequiredExperience": 1200,
+                        "RequiredExperience": 3200,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -12910,7 +12918,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +20 speed, -50% max speed turn radius",
-                        "RequiredExperience": 1800,
+                        "RequiredExperience": 3800,
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -12926,7 +12934,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: +50 damage, +25% area of effect radius of shotgun",
-                        "RequiredExperience": 2500,
+                        "RequiredExperience": 5500,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -13042,7 +13050,7 @@
                     "StatusEffectsExcludeTargetType": "None",
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
-                    "BaseDamagePerRound": 180,
+                    "BaseDamagePerRound": 90,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "DamagePacketsPerShot": 0,
                     "WindUpTimeMS": 500,
@@ -13090,7 +13098,7 @@
                 "G_StarHull_Weapon_G2GEMP_MP": {
                     "StatusEffectsExcludeTargetType": "All",
                     "ExcludeFromHeightAdvantage": true,
-                    "BaseDamagePerRound": 75,
+                    "BaseDamagePerRound": 50,
                     "RateOfFire": 16,
                     "BurstPeriodMinTimeMS": 250,
                     "FriendlyFireDamageScalar": 1,
@@ -13130,7 +13138,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Novice: +100 to max hull",
-                        "RequiredExperience": 450,
+                        "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
@@ -13141,7 +13149,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +200m range",
-                        "RequiredExperience": 700,
+                        "RequiredExperience": 2700,
                         "Buff": {
                             "0": {
                                 "Attribute": 33554434,
@@ -13162,7 +13170,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +500 hull",
-                        "RequiredExperience": 1200,
+                        "RequiredExperience": 3200,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -13173,7 +13181,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +20 speed, -50% max speed turn radius",
-                        "RequiredExperience": 1800,
+                        "RequiredExperience": 4800,
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -13189,7 +13197,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: +50 damage, +25% area of effect radius of shotgun",
-                        "RequiredExperience": 2500,
+                        "RequiredExperience": 5500,
                         "Buff": {
                             "0": {
                                 "Attribute": 262148,
@@ -13301,7 +13309,7 @@
             "WeaponAttributes": {
                 "G_StarHull_Weapon_G2G_MP": {
                     "StatusEffectsExcludeTargetType": "None",
-                    "BaseDamagePerRound": 180,
+                    "BaseDamagePerRound": 90,
                     "DamagePacketsPerShot": 0,
                     "WindUpTimeMS": 500,
                     "ReloadTimeMS": 1200,
@@ -13348,7 +13356,7 @@
                 "G_StarHull_Weapon_G2GEMP_MP": {
                     "StatusEffectsExcludeTargetType": "All",
                     "ExcludeFromHeightAdvantage": true,
-                    "BaseDamagePerRound": 75,
+                    "BaseDamagePerRound": 50,
                     "RateOfFire": 16,
                     "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMinTimeMS": 250,
@@ -13495,6 +13503,16 @@
                                 "Mode": "Set",
                                 "Value": 1
                             },
+                            "2": {
+                                "Attribute": "UnitDynamics_AccelerationTime",
+                                "Mode": "Set",
+                                "Value": 0
+                            },
+                            "3": {
+                                "Attribute": "UnitDynamics_BrakingTime",
+                                "Mode": "Set",
+                                "Value": 0
+                            },
                             "1": {
                                 "Name": "Ability_G_RailGun_Dash_Move_To_MP",
                                 "Attribute": "Ability_CooldownTimeSecs",
@@ -13578,8 +13596,8 @@
                     "NumberOfBursts": 3,
                     "WindUpTimeMS": 200,
                     "WindDownTimeMS": 50,
-                    "ReloadTimeMS": 500,
-                    "CooldownTimeMS": 250,
+                    "ReloadTimeMS": 1000,
+                    "CooldownTimeMS": 500,
                     "RangeAttributesShort": {
                         "Accuracy": 70,
                         "Distance": 1000
@@ -13669,6 +13687,16 @@
                                 "Mode": "Set",
                                 "Value": 1
                             },
+                            "2": {
+                                "Attribute": "UnitDynamics_AccelerationTime",
+                                "Mode": "Set",
+                                "Value": 0
+                            },
+                            "3": {
+                                "Attribute": "UnitDynamics_BrakingTime",
+                                "Mode": "Set",
+                                "Value": 0
+                            },
                             "1": {
                                 "Name": "Ability_G_RailGun_Dash_Move_To_MP",
                                 "Attribute": "Ability_CooldownTimeSecs",
@@ -13752,8 +13780,8 @@
                     "NumberOfBursts": 3,
                     "WindUpTimeMS": 200,
                     "WindDownTimeMS": 50,
-                    "ReloadTimeMS": 500,
-                    "CooldownTimeMS": 250,
+                    "ReloadTimeMS": 1000,
+                    "CooldownTimeMS": 500,
                     "RangeAttributesShort": {
                         "Accuracy": 70,
                         "Distance": 1000
@@ -13915,7 +13943,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Officer: +25% weapon range",
-                        "RequiredExperience": 700,
+                        "RequiredExperience": 1700,
                         "Buff": {
                             "0": {
                                 "Attribute": "WeaponRange_DistanceShort",
@@ -13936,7 +13964,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: +50m damage",
-                        "RequiredExperience": 900,
+                        "RequiredExperience": 2900,
                         "Buff": {
                             "0": {
                                 "Name": "ANTI-AIR",
@@ -13954,7 +13982,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: +10 speed",
-                        "RequiredExperience": 1100,
+                        "RequiredExperience": 3100,
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -13965,7 +13993,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Commander: +100 to area of effect of weapons",
-                        "RequiredExperience": 1300,
+                        "RequiredExperience": 4300,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_AreaOfEffect",
@@ -13976,7 +14004,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Captain Sonic: replaces tracks with race car tracks.",
-                        "RequiredExperience": 1800,
+                        "RequiredExperience": 5800,
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -14031,7 +14059,7 @@
                     "FriendlyFireDamageScalar": 1,
                     "ProjectileEntityTypeToSpawn": "Carrier_ShuntWeapon_ProjectileAssetContainer_MP 1",
                     "OutputDPS": true,
-                    "ReloadTimeMS": 3000,
+                    "ReloadTimeMS": 4000,
                     "RangeAttributesShort": {
                         "Distance": 600
                     },
@@ -14592,22 +14620,7 @@
         // GAALSIEN/KHAANEPH MISSILE SHIP DIRECT FIRE UPGRADE
         "Research_Buff_G_CatamaranAA_AOE": {
             "ResearchItemAttributes": {
-
                 "ResearchTime": 20
-                //"UnitTypeBuffs": { didn't work :(
-                //  "0": {
-                //    "UnitClass": -1,
-                //    "ClassOperator": "Or",
-                //    "BuffSet": {
-                //      "0": {
-                //        "Attribute": "Ability_CooldownTimeSecs",
-                //        "Name": "Ability_G_MissileCraft_CrowdControl",
-                //        "Mode": "Set",
-                //        "Value": 5
-                //      }
-                //    }
-                //  }
-                //}
             }
         },
 
@@ -14617,7 +14630,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Officer: +25% sensor range",
-                        "RequiredExperience": 300,
+                        "RequiredExperience": 500,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_SensorRadius",
@@ -14633,7 +14646,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: +3 armor",
-                        "RequiredExperience": 600,
+                        "RequiredExperience": 900,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -14644,7 +14657,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: +575 to bombercraft hull",
-                        "RequiredExperience": 1200,
+                        "RequiredExperience": 1800,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -14655,7 +14668,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Matrix Commander: +50% to dodge chance",
-                        "RequiredExperience": 1400,
+                        "RequiredExperience": 2400,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_AccuracyReceivedMultiplier",
@@ -14666,7 +14679,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Captain: Double the bomb amount",
-                        "RequiredExperience": 1650,
+                        "RequiredExperience": 3650,
                         "Buff": {
                             "0": {
                                 "Attribute": "Inventory_Capacity",
@@ -14835,7 +14848,7 @@
                 "Levels": { //names of actual flying fish XD
                     "1": {
                         "BuffTooltipLocID": "Fodiator: +150 weapon range",
-                        "RequiredExperience": 850,
+                        "RequiredExperience": 1050,
                         "Buff": {
                             "0": {
                                 "Attribute": "WeaponRange_DistanceShort",
@@ -14849,7 +14862,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Parexocoetus: +1 rate of fire",
-                        "RequiredExperience": 1000,
+                        "RequiredExperience": 2200,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_RateOfFire",
@@ -14868,7 +14881,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Exocoetus: +5 armor",
-                        "RequiredExperience": 1300,
+                        "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -14882,7 +14895,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Cheilopogon: +400 fishcraft hull",
-                        "RequiredExperience": 1600,
+                        "RequiredExperience": 4900,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -14899,7 +14912,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Prognichthys: +50% chance to slip away",
-                        "RequiredExperience": 1900,
+                        "RequiredExperience": 5900,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_AccuracyReceivedMultiplier",
@@ -14964,7 +14977,7 @@
                     "BurstPeriodMinTimeMS": 750,
                     "BurstPeriodMaxTimeMS": 1250,
                     "CooldownTimeMS": 0,
-                    "ReloadTimeMS": 250,
+                    "ReloadTimeMS": 450,
                     "LeadsTarget": 1,
                     "RangeAttributesShort": {
                         "Distance": 1000
@@ -15028,7 +15041,7 @@
                 "Levels": { //names of actual flying fish XD
                     "1": {
                         "BuffTooltipLocID": "Fodiator: +5 armor",
-                        "RequiredExperience": 650,
+                        "RequiredExperience": 1250,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -15042,7 +15055,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Parexocoetus: +400 fishcraft hull",
-                        "RequiredExperience": 800,
+                        "RequiredExperience": 2800,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -15059,7 +15072,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Exocoetus: +150 weapon range",
-                        "RequiredExperience": 1300,
+                        "RequiredExperience": 4300,
                         "Buff": {
                             "0": {
                                 "Attribute": "WeaponRange_DistanceShort",
@@ -15073,7 +15086,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Cheilopogon: +1 rate of fire",
-                        "RequiredExperience": 1600,
+                        "RequiredExperience": 5600,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_RateOfFire",
@@ -15092,7 +15105,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Prognichthys: +50% chance to slip away",
-                        "RequiredExperience": 1900,
+                        "RequiredExperience": 6900,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_AccuracyReceivedMultiplier",
@@ -15157,7 +15170,7 @@
                     "BurstPeriodMinTimeMS": 750,
                     "BurstPeriodMaxTimeMS": 1250,
                     "CooldownTimeMS": 0,
-                    "ReloadTimeMS": 250,
+                    "ReloadTimeMS": 450,
                     "LeadsTarget": 1,
                     "RangeAttributesShort": {
                         "Distance": 1000
@@ -15785,7 +15798,7 @@
         "Research_Buff_G_Bomber_Hold": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "FLYING FORTRESS - AMMO CAPACITY",
-                "LocalizedLongDescriptionStringID": "Flying Fortress carries more ammo per sortie.\n\n[84a1e8]Increases burst count from 4 to 10.",
+                "LocalizedLongDescriptionStringID": "Flying Fortress carries more ammo per sortie.\n\n[84a1e8]Increases burst count from 4 to 8.",
                 "Resource1Cost": 400,
                 "Resource2Cost": 150,
                 "UnitTypeBuffs": {
@@ -15793,11 +15806,11 @@
                         "BuffSet": {
                             "0": {
                                 "Mode": "Add",
-                                "Value": 18
+                                "Value": 12
                             },
                             "1": {
                                 "Mode": "Add",
-                                "Value": 18
+                                "Value": 12
                             }
                         }
                     },
@@ -15805,11 +15818,11 @@
                         "BuffSet": {
                             "0": {
                                 "Mode": "Add",
-                                "Value": 18
+                                "Value": 12
                             },
                             "1": {
                                 "Mode": "Add",
-                                "Value": 18
+                                "Value": 12
                             }
                         }
                     }
@@ -15979,6 +15992,7 @@
                     "RateOfFire": 2,
                     "TracerSpeed": 0,
                     "TracerLength": 5,
+                    "CooldownTimeMS": 750,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 144,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -16104,7 +16118,7 @@
                     "BurstPeriodMaxTimeMS": 700,
                     "FriendlyFireDamageScalar": 1,
                     "RateOfFire": 3,
-                    "NumberOfBursts": 4,
+                    "NumberOfBursts": 2,
                     "WindUpTimeMS": 250,
                     "ReloadTimeMS": 3500,
                     "OutputDPS": true
@@ -16127,7 +16141,7 @@
                     "FriendlyFireDamageScalar": 1,
                     "NumberOfBursts": 3,
                     "RateOfFire": 5,
-                    "CooldownTimeMS": 500,
+                    "CooldownTimeMS": 750,
                     "BurstPeriodMinTimeMS": 800,
                     "BurstPeriodMaxTimeMS": 800,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -16535,14 +16549,13 @@
                 }
             }
         },
-
         // GAALSIEN HONORGUARD
         "G_HonorGuard_MP": {
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Novice: : +10 speed",
-                        "RequiredExperience": 500,
+                        "RequiredExperience": 1500,
                         "Buff": {
                             "0": {
                                 "Attribute": 131072,
@@ -16553,7 +16566,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +30% sensor range",
-                        "RequiredExperience": 750,
+                        "RequiredExperience": 2750,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_SensorRadius",
@@ -16569,7 +16582,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +50% to area of effect radius of weapons",
-                        "RequiredExperience": 1500,
+                        "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_AreaOfEffect",
@@ -16580,7 +16593,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +25 speed",
-                        "RequiredExperience": 2000,
+                        "RequiredExperience": 4000,
 
                         "Buff": {
                             "0": {
@@ -16593,7 +16606,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: +1 fire rate to every weapon...",
-                        "RequiredExperience": 3500,
+                        "RequiredExperience": 6500,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_RateOfFire",
@@ -16646,10 +16659,10 @@
                 "G_HonorGuardRailgun_Weapon_G2G_MP": {
                     "TracerSpeed": 2000,
                     "BaseDamagePerRound": 250,
-                    "ReloadTimeMS": 4000,
+                    "ReloadTimeMS": 6000,
                     "RateOfFire": 2,
                     "NumberOfBursts": 3,
-                    "CooldownTimeMS": 2000,
+                    "CooldownTimeMS": 3000,
                     "BurstPeriodMinTimeMS": 1500,
                     "BurstPeriodMaxTimeMS": 1500,
                     "WindUpTimeMS": 1000,
@@ -16752,7 +16765,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Novice: : +4 armor",
-                        "RequiredExperience": 500,
+                        "RequiredExperience": 1500,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_Armour",
@@ -16763,7 +16776,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +500 to cruiser hull",
-                        "RequiredExperience": 750,
+                        "RequiredExperience": 2750,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
@@ -16774,7 +16787,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: +50% to area of effect radius of weapons",
-                        "RequiredExperience": 1500,
+                        "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_AreaOfEffect",
@@ -16785,7 +16798,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +1500 to cruiser hull",
-                        "RequiredExperience": 2000,
+                        "RequiredExperience": 4500,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
@@ -16797,7 +16810,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: +1 fire rate to every weapon...",
-                        "RequiredExperience": 3500,
+                        "RequiredExperience": 6500,
                         "Buff": {
                             "0": {
                                 "Attribute": "UnitWeapon_RateOfFire",
@@ -16891,10 +16904,10 @@
                 "G_HonorGuardRailgun_Weapon_G2G_MP": {
                     "TracerSpeed": 2000,
                     "BaseDamagePerRound": 250,
-                    "ReloadTimeMS": 4000,
+                    "ReloadTimeMS": 6000,
                     "RateOfFire": 2,
                     "NumberOfBursts": 3,
-                    "CooldownTimeMS": 2000,
+                    "CooldownTimeMS": 3000,
                     "BurstPeriodMinTimeMS": 1500,
                     "BurstPeriodMaxTimeMS": 1500,
                     "WindUpTimeMS": 1000,
@@ -17103,7 +17116,7 @@
                     "FriendlyFireDamageScalar": 1,
                     "NumberOfBursts": 1,
                     "RateOfFire": 2,
-                    "ReloadTimeMS": 10000,
+                    "ReloadTimeMS": 15000,
                     "RangeAttributesLong": {
                         "Distance": 3000,
                         "MinDistance": 350,
@@ -17247,7 +17260,7 @@
             },
             "WeaponAttributes": {
                 "C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
-                    "BaseDamagePerRound": 100,
+                    "BaseDamagePerRound": 50,
                     "FiringRecoil": 1000000,
                     "DamagePacketsPerShot": 0,
                     "TargetPrioritizationAttributes": {
@@ -17557,7 +17570,7 @@
                     },
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer_MP",
                     "FriendlyFireDamageScalar": 1,
-                    "BaseDamagePerRound": 1000,
+                    "BaseDamagePerRound": 800,
                     "AreaOfEffectRadius": 100,
                     "NumberOfBursts": 3,
                     "RateOfFire": 1,
@@ -17588,21 +17601,21 @@
                     "RateOfFire": 100,
                     "NumberOfBursts": 4,
                     "CooldownTimeMS": 1000,
-                    "BurstPeriodMinTimeMS": 950,
-                    "BurstPeriodMaxTimeMS": 1050,
+                    "BurstPeriodMinTimeMS": 900,
+                    "BurstPeriodMaxTimeMS": 1100,
                     "WindUpTimeMS": 0,
                     "WindDownTimeMS": 0,
                     "ReloadTimeMS": 2500,
                     "RangeAttributesShort": {
-                        "Accuracy": 10,
+                        "Accuracy": 5,
                         "Distance": 1400
                     },
                     "RangeAttributesMedium": {
-                        "Accuracy": 5,
+                        "Accuracy": 3,
                         "Distance": 1800
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 3,
+                        "Accuracy": 1,
                         "Distance": 2250
                     },
                     "Modifiers": {
@@ -17620,7 +17633,7 @@
                         "RotationSpeed": 1
                     },
                     "ProjectileEntityTypeToSpawn": "G_Carrier_Barrage_ProjectileAssetContainer",
-                    "BaseDamagePerRound": 1200,
+                    "BaseDamagePerRound": 800,
                     "DamagePacketsPerShot": 1,
                     "RateOfFire": 1,
                     "ExcludeFromHeightAdvantage": true,
@@ -17638,7 +17651,7 @@
                 },
                 "C_ArtilleryCruiser_Weapon_G2G_MP": {
                     "FriendlyFireDamageScalar": 1,
-                    "NumberOfBursts": 4,
+                    "NumberOfBursts": 1,
                     "RateOfFire": 1,
                     "TargetPrioritizationAttributes": {
                         "AutoTargetStickyBias": 0.0001,
@@ -17731,7 +17744,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +1000 to cruiser hull",
-                        "RequiredExperience": 1100,
+                        "RequiredExperience": 2100,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
@@ -17760,7 +17773,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: 6 armor",
-                        "RequiredExperience": 1500,
+                        "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_Armour",
@@ -17774,7 +17787,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +9 armor, + 2000 hull",
-                        "RequiredExperience": 2500,
+                        "RequiredExperience": 4500,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_Armour",
@@ -17805,7 +17818,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: EMP barrage, target set, fire.",
-                        "RequiredExperience": 4000,
+                        "RequiredExperience": 6000,
                         "Buff": {
                             "0": {
                                 "Name": "EMP",
@@ -17971,10 +17984,10 @@
                     "NumberOfBursts": 4,
                     "CooldownTimeMS": 500,
                     "BurstPeriodMinTimeMS": 400,
-                    "BurstPeriodMaxTimeMS": 600,
+                    "BurstPeriodMaxTimeMS": 800,
                     "WindUpTimeMS": 0,
                     "WindDownTimeMS": 0,
-                    "ReloadTimeMS": 1500,
+                    "ReloadTimeMS": 2500,
                     "RangeAttributesShort": {
                         "Accuracy": 35,
                         "Distance": 800
@@ -18011,7 +18024,7 @@
                     "RateOfFire": 5,
                     "WindUpTimeMS": 100,
                     "WindDownTimeMS": 500,
-                    "BaseDamagePerRound": 240,
+                    "BaseDamagePerRound": 200,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 180,
                     "AreaOfEffectFalloffType": "Linear",
@@ -18058,8 +18071,8 @@
                     "LeadsTarget": 1,
                     "WindUpTimeMS": 0,
                     "WindDownTimeMS": 200,
-                    "BurstPeriodMinTimeMS": 500,
-                    "BurstPeriodMaxTimeMS": 500,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
                     "RateOfFire": 1,
                     "CooldownTimeMS": 1000,
                     "DamagePacketsPerShot": 1,
@@ -18089,7 +18102,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Novice: : +1000 to cruiser hull",
-                        "RequiredExperience": 900,
+                        "RequiredExperience": 2000,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
@@ -18121,7 +18134,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +1500 to cruiser hull",
-                        "RequiredExperience": 1100,
+                        "RequiredExperience": 3100,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
@@ -18150,7 +18163,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: 6 armor",
-                        "RequiredExperience": 1500,
+                        "RequiredExperience": 4500,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_Armour",
@@ -18164,7 +18177,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +9 armor, + 2000 hull",
-                        "RequiredExperience": 2500,
+                        "RequiredExperience": 5500,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_Armour",
@@ -18195,7 +18208,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: EMP barrage, target set, fire.",
-                        "RequiredExperience": 4000,
+                        "RequiredExperience":6000,
                         "Buff": {
                             "0": {
                                 "Name": "EMP",
@@ -18238,8 +18251,8 @@
             "UnitMovementAttributes": {
                 "Dynamics": {
                     "MaxSpeed": 120,
-                    "AccelerationTime": 5,
-                    "BrakingTime": 8,
+                    "AccelerationTime": 2,
+                    "BrakingTime": 4,
                     "MaxSpeedTurnRadius": 500
                 }
             },
@@ -18285,10 +18298,10 @@
                     "NumberOfBursts": 4,
                     "CooldownTimeMS": 500,
                     "BurstPeriodMinTimeMS": 400,
-                    "BurstPeriodMaxTimeMS": 600,
+                    "BurstPeriodMaxTimeMS": 800,
                     "WindUpTimeMS": 0,
                     "WindDownTimeMS": 0,
-                    "ReloadTimeMS": 1500,
+                    "ReloadTimeMS": 3500,
                     "RangeAttributesShort": {
                         "Accuracy": 35,
                         "Distance": 800
@@ -18321,11 +18334,13 @@
                     "AreaOfEffectRadius": 180,
                     "FriendlyFireDamageScalar": 1,
                     "BaseDamagePerRound": 350,
-                    "ReloadTimeMS": 4500,
-                    "NumberOfBursts": 3,
+                    "BurstPeriodMinTimeMS":500,
+                    "BurstPeriodMaxTimeMS": 500,
+                    "ReloadTimeMS": 5000,
+                    "NumberOfBursts": 1,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesLong": {
-                        "Distance": 450
+                        "Distance": 650
                     }
                 },
                 "K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
@@ -18342,7 +18357,7 @@
                     "RateOfFire": 10,
                     "WindUpTimeMS": 100,
                     "WindDownTimeMS": 500,
-                    "BaseDamagePerRound": 240,
+                    "BaseDamagePerRound": 200,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 180,
                     "AreaOfEffectFalloffType": "Linear",
@@ -18586,7 +18601,7 @@
                 "InvertFillCooldown": true,
                 "IconName": "Icon-Command-Stance",
                 "LocalizedTitleStringID": "SHOTGUN BLAST",
-                "LocalizedLongDescriptionStringID": "Fire 4 shotgun shots at the target area, dealing 300 total damage."
+                "LocalizedLongDescriptionStringID": "Fire 4 shotgun shots at the target area, dealing 200 total damage."
             }
         },
         "Ability_G_DeployScanner_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
