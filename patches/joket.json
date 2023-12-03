@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.09.00",
-        "LastUpdate": "2023-11-30",
+        "Version": "1.09.01",
+        "LastUpdate": "2023-12-03",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     "Global": {
@@ -31,7 +31,7 @@
 				//"CooldownTimeSecsMult": 0.01
 			}
 		}
-	},
+	},  
 
 
 
@@ -8216,7 +8216,7 @@
                     "IsTracer": false,
                     "TracerSpeed": 0,
                     "TracerLength": 5,
-                    "BaseDamagePerRound": 100,
+                    "BaseDamagePerRound": 150,
                     "DamagePacketsPerShot": 1,
                     "NumberOfBursts": 2,
                     "FriendlyFireDamageScalar": 1,
@@ -8225,7 +8225,7 @@
                     "BurstPeriodMinTimeMS": 264,
                     "BurstPeriodMaxTimeMS": 264,
                     "RateOfFire": 1,
-                    "ReloadTimeMS": 2500,
+                    "ReloadTimeMS": 2000,
                     "LeadsTarget": 1,
                     "AreaOfEffectRadius": 125,
                     "AreaOfEffectFalloffType": "Quadratic",
@@ -12481,7 +12481,7 @@
                     "TracerSpeed": 2500,
                     "FriendlyFireDamageScalar": 1,
                     "RateOfFire": 100,
-                    "BaseDamagePerRound": 25,
+                    "BaseDamagePerRound": 20,
                     "DamagePacketsPerShot": 0,
                     "WindDownTimeMS": 50,
                     "WindUpTimeMS": 850,
@@ -13050,7 +13050,7 @@
                     "StatusEffectsExcludeTargetType": "None",
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
-                    "BaseDamagePerRound": 90,
+                    "BaseDamagePerRound": 100,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "DamagePacketsPerShot": 0,
                     "WindUpTimeMS": 500,
@@ -13309,7 +13309,7 @@
             "WeaponAttributes": {
                 "G_StarHull_Weapon_G2G_MP": {
                     "StatusEffectsExcludeTargetType": "None",
-                    "BaseDamagePerRound": 90,
+                    "BaseDamagePerRound": 100,
                     "DamagePacketsPerShot": 0,
                     "WindUpTimeMS": 500,
                     "ReloadTimeMS": 1200,
@@ -16124,7 +16124,15 @@
                     "OutputDPS": true
                 },
                 "G_Battlecruiser_Weapon_G2A_MP": {
-                    "RangeAttributesLong": { "Distance": 1000 },
+                    "RangeAttributesShort": {
+                        "Distance": 1000
+                    },
+                    "RangeAttributesMedium": {
+                        "Distance": 1000
+                    },
+                    "RangeAttributesLong": {
+                        "Distance": 1000
+                    },
                     "RateOfFire": 0,
                     "FriendlyFireDamageScalar": 1,
                     "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
