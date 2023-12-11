@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.09.01",
-        "LastUpdate": "2023-12-03",
+        "Version": "1.09.02",
+        "LastUpdate": "2023-12-11",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     /*"Global": {
@@ -841,7 +841,7 @@
                         "MaxCount": 12,
                         "UndockSpeed": 550
                     },
-                    "Gunship": { "UndockSpeed": 0 },
+                    "Gunship": { "UndockSpeed": 1 },
                     "Ground": { "UndockSpeed": 150 }
                 }
             },
@@ -2569,7 +2569,7 @@
             },
             "UnitHangarAttributes": {
                 "HangarBays": {
-                    "Gunship": { "UndockSpeed": 0 },
+                    "Gunship": { "UndockSpeed": 1 },
                     "Interceptor": {
                         "MaxCount": 12,
                         "UndockSpeed": 550
@@ -9250,7 +9250,7 @@
                     "BaseWreckDamagePerRound": 1,
                     "RateOfFire": 25,
                     "DamageType": "Damage",
-                    "BaseDamagePerRound": 4,
+                    "BaseDamagePerRound": 3,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
                     "CooldownTimeMS": 0,
@@ -11383,7 +11383,7 @@
                 "C_Escort_Weapon_G2G_MP": {
                     "OutputDPS": true,
                     "BaseDamagePerRound": 50,
-                    "DamagePacketsPerShot": 6,
+                    "DamagePacketsPerShot": 4,
                     "ProjectileEntityTypeToSpawn": "C_GunShip_DefaultBombs_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
@@ -11571,7 +11571,7 @@
                     "OutputDPS": true,
                     "BaseDamagePerRound": 50,
                     "ReloadTimeMS": 1500,
-                    "DamagePacketsPerShot": 6,
+                    "DamagePacketsPerShot": 4,
                     "ProjectileEntityTypeToSpawn": "C_GunShip_DefaultBombs_ProjectileAssetContainer_MP",
                     "IsTracer": false,
                     "TracerSpeed": 0,
@@ -15883,7 +15883,7 @@
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Commander: +25% maneuverability", //and thats a buff, it stays longer on target
+                        "BuffTooltipLocID": "Commander: +25% maneuverability", 
                         "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
@@ -15971,7 +15971,7 @@
                 },
                 "Dynamics": {
                     "FishTailingTimeIntervals": 0,
-                    "MaxSpeed": 150,
+                    "MaxSpeed": 200,
                     "BrakingTime": 1.0,
                     "AccelerationTime": 2.0,
                     "MaxEaseIntoTurnTime": 1,
@@ -16015,35 +16015,45 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: +500 hull",
-                        "RequiredExperience": 750,
+                        "BuffTooltipLocID": "Officer: +250 hull but -5 speed",
+                        "RequiredExperience": 1250,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
                                 "Mode": "Add",
-                                "Value": 500
+                                "Value": 250
+                            },
+                            "1": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": -5
                             }
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Lieutenant: -15 speed",
-                        "RequiredExperience": 1500,
-                        "Buff": {
-                            "0": {
-                                "Attribute": 131072,
-                                "Mode": "Add",
-                                "Value": -15
-                            }
-                        }
-                    },
-                    "3": {
-                        "BuffTooltipLocID": "Lt. Commander: +500 hull, -50% cooldown on ability",
-                        "RequiredExperience": 3000,
+                        "BuffTooltipLocID": "Lieutenant: +250 hull but -10 speed",
+                        "RequiredExperience": 2500,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
                                 "Mode": "Add",
-                                "Value": 500
+                                "Value": 250
+                            },
+                            "1": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": -10
+                            }
+                        }
+                    },
+                    "3": {
+                        "BuffTooltipLocID": "Lt. Commander: +250 hull, -50% cooldown on ability",
+                        "RequiredExperience": 4000,
+                        "Buff": {
+                            "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 250
                             },
                             "1": {
                                 "Name": "Ability_G_BattleCruiser_ArmorBonus_MP",
@@ -16069,19 +16079,24 @@
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Commander: -20 speed",
-                        "RequiredExperience": 4500,
+                        "BuffTooltipLocID": "Commander: +250 hull but -15 speed",
+                        "RequiredExperience": 6500,
                         "Buff": {
                             "0": {
+                                "Attribute": 65536,
+                                "Mode": "Add",
+                                "Value": 250
+                            },
+                            "1": {
                                 "Attribute": 131072,
                                 "Mode": "Add",
-                                "Value": -20
+                                "Value": -15
                             }
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Captain: +1000 hull, +5 armor",
-                        "RequiredExperience": 6000,
+                        "BuffTooltipLocID": "Captain: +1000 hull, +5 armor, but -15 speed",
+                        "RequiredExperience": 8000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -16092,6 +16107,11 @@
                                 "Attribute": "Unit_Armour",
                                 "Mode": "Add",
                                 "Value": 5
+                            },
+                            "2": {
+                                "Attribute": 131072,
+                                "Mode": "Add",
+                                "Value": -15
                             }
                         }
                     }
@@ -17752,7 +17772,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +1000 to cruiser hull",
-                        "RequiredExperience": 2100,
+                        "RequiredExperience": 3100,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
@@ -17781,7 +17801,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: 6 armor",
-                        "RequiredExperience": 3500,
+                        "RequiredExperience": 4500,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_Armour",
@@ -17795,7 +17815,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +9 armor, + 2000 hull",
-                        "RequiredExperience": 4500,
+                        "RequiredExperience": 7000,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_Armour",
@@ -17826,7 +17846,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: EMP barrage, target set, fire.",
-                        "RequiredExperience": 6000,
+                        "RequiredExperience": 9000,
                         "Buff": {
                             "0": {
                                 "Name": "EMP",
@@ -18115,7 +18135,7 @@
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
-                                "Value": 1000
+                                "Value": 2000
                             },
                             "1": {
                                 "Remove": true
@@ -18142,7 +18162,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Acolyte: +1500 to cruiser hull",
-                        "RequiredExperience": 3100,
+                        "RequiredExperience": 4100,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_MaxHealth",
@@ -18171,7 +18191,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Sentinel: 6 armor",
-                        "RequiredExperience": 4500,
+                        "RequiredExperience": 5500,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_Armour",
@@ -18185,7 +18205,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Guardian: +9 armor, + 2000 hull",
-                        "RequiredExperience": 5500,
+                        "RequiredExperience": 7500,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_Armour",
@@ -18216,7 +18236,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: EMP barrage, target set, fire.",
-                        "RequiredExperience":6000,
+                        "RequiredExperience":9000,
                         "Buff": {
                             "0": {
                                 "Name": "EMP",
