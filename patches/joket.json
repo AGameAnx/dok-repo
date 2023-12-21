@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.09.02",
-        "LastUpdate": "2023-12-11",
+        "Version": "1.09.10",
+        "LastUpdate": "2023-12-21",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     "Global": {
@@ -10544,7 +10544,7 @@
                 "MaxHealth": 970,
                 "SensorRadius": 1100,
                 "ProductionTime": 17,
-                "Armour": 7,
+                "Armour": 3,
                 "PopCapCost": 2,
                 "AggroRange": 1100
             },
@@ -15883,7 +15883,7 @@
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Commander: +25% maneuverability", 
+                        "BuffTooltipLocID": "Commander: +25% maneuverability",
                         "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
@@ -17732,6 +17732,58 @@
                 "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
             }
         },
+        "N_DemoCharge": {
+            "UnitAttributes": {
+                "MaxHealth": 690000,
+                "Controllable": false,
+                "Targetable": false,
+                "NonAutoTargetable": true
+            },
+            "AbilityAttributes": {
+                "Ability_Common_ActivateDemoCharge": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
+                    "WarmupTimeSecs": 0
+                },
+                "Ability_Common_ActivatePassiveBlowUPDemo": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
+                    "WarmupTimeSecs": 0
+                }
+            },
+            "WeaponAttributes": {
+                "N_DemoCharge_Weapon_G2G": {
+                    "TracerLength": 5,
+                    "FriendlyFireDamageScalar": 0,
+                    "IsTracer": false,
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "EMP_ArtilleryCruiser" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "None",
+                    "TracerSpeed": 0,
+                    "WeaponOwnerFriendlyFireDamageScalar": 100000,
+                    "WindUpTimeMS": 0,
+                    "WindDownTimeMS": 0,
+                    "NumberOfBursts": 1,
+                    "ProjectileEntityTypeToSpawn": "G_ArtilleryEMP_ProjectileAssetContainer_MP",
+                    "RateOfFire": 1,
+                    "BurstPeriodMinTimeMS": 1,
+                    "BurstPeriodMaxTimeMS": 1,
+                    "BaseDamagePerRound": 100,
+                    "DamagePacketsPerShot": 0,
+                    "AreaOfEffectRadius": 150,
+                    "AreaOfEffectFalloffType": "Linear",
+                    "CooldownTimeMS": 0,
+                    "ReloadTimeMS": 10000,
+                    "BaseWreckDamagePerRound": 1000
+                }
+            }
+        },
         // GAALSIEN SIEGE CRUISER
         "G_ArtilleryCruiser_MP": {
             "ExperienceAttributes": {
@@ -17856,15 +17908,15 @@
                             },
                             "1": {
                                 "Name": "EMP",
-                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Attribute": "UnitWeapon_AreaOfEffect",
                                 "Mode": "AddPercent",
-                                "Value": -75
+                                "Value": 150
                             },
                             "2": {
-                                "Name": "Ability_G_Artillery_EMP_MP",
-                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Name": "EMP",
+                                "Attribute": "WeaponRange_AccuracyLong",
                                 "Mode": "AddPercent",
-                                "Value": -75
+                                "Value": -100
                             }
                         }
                     }
@@ -17879,7 +17931,7 @@
                 "Resource1Cost": 550,
                 "Resource2Cost": 180,
                 "MaxHealth": 3100,
-                "Armour": 16,
+                "Armour": 12,
                 "ProductionTime": 45,
                 "PopCapCost": 5,
                 "SensorRadius": 1400,
@@ -17967,7 +18019,7 @@
                     "CooldownTimeSecs": 40
                 },
                 "Ability_G_ArtilleryBarrage_01_MP": {
-                    "CooldownTimeSecs": 80
+                    "CooldownTimeSecs": 60
                     //"RequiredResearch": [ "Research_Buff_G_Artillery_Barrage" ] // works but botton still shows up as active so fuck it
 
                 }
@@ -17982,16 +18034,31 @@
             "WeaponAttributes": {
                 "G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
                     "FriendlyFireDamageScalar": 1,
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "EntityTypeToSpawn": "N_DemoCharge"
+                        }
+                    },
+                    "RateOfFire": 1,
+                    "ProjectileEntityTypeToSpawn": "G_Artillery_Shell_ProjectileAssetContainer_MP",
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
+                    "AreaOfEffectRadius": 150,
                     "Turret": {
                         "FieldOfFire": 135.0,
                         "FieldOfView": 135.0
 
                     },
-                    "BaseDamagePerRound": 400,
-                    "StatusEffectsExcludeTargetType": "Carrier",
+                    "BaseDamagePerRound": 1,
+                    "StatusEffectsExcludeTargetType": "All",
+                    "RangeAttributesShort": {
+                        "Remove": true
+                    },
+                    "RangeAttributesMedium": {
+                        "Remove": true
+                    },
                     "RangeAttributesLong": {
+                        "Accuracy": 100,
                         "Distance": 1250
                     }
                 },
@@ -18021,11 +18088,11 @@
                         "Distance": 800
                     },
                     "RangeAttributesMedium": {
-                        "Accuracy": 30,
+                        "Accuracy": 20,
                         "Distance": 1000
                     },
                     "RangeAttributesLong": {
-                        "Accuracy": 25,
+                        "Accuracy": 15,
                         "Distance": 1200
                     },
                     "TargetPrioritizationAttributes": {
@@ -18049,18 +18116,18 @@
                     "LineOfSightRequired": false,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 5,
+                    "RateOfFire": 3,
                     "WindUpTimeMS": 100,
                     "WindDownTimeMS": 500,
-                    "BaseDamagePerRound": 200,
+                    "BaseDamagePerRound": 125   ,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 180,
                     "AreaOfEffectFalloffType": "Linear",
                     "NumberOfBursts": 2,
-                    "CooldownTimeMS": 1000,
+                    "CooldownTimeMS": 1500,
                     "ReloadTimeMS": 3000,
-                    "BurstPeriodMinTimeMS": 600,
-                    "BurstPeriodMaxTimeMS": 600,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
                     "RangeAttributesShort": {
                         "Remove": true
                     },
@@ -18236,7 +18303,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Elder: EMP barrage, target set, fire.",
-                        "RequiredExperience":9000,
+                        "RequiredExperience": 9000,
                         "Buff": {
                             "0": {
                                 "Name": "EMP",
@@ -18246,15 +18313,15 @@
                             },
                             "1": {
                                 "Name": "EMP",
-                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Attribute": "UnitWeapon_AreaOfEffect",
                                 "Mode": "AddPercent",
-                                "Value": -75
+                                "Value": 150
                             },
                             "2": {
-                                "Name": "Ability_G_Artillery_EMP_MP",
-                                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                                "Name": "EMP",
+                                "Attribute": "WeaponRange_AccuracyLong",
                                 "Mode": "AddPercent",
-                                "Value": -75
+                                "Value": -100
                             }
                         }
                     }
@@ -18264,7 +18331,7 @@
                 "Resource1Cost": 700,
                 "Resource2Cost": 280,
                 "MaxHealth": 4100,
-                "Armour": 16,
+                "Armour": 12,
                 "PopCapCost": 6,
                 "SensorRadius": 1400,
                 "ContactRadius": 1550,
@@ -18303,7 +18370,7 @@
                     }
                 },
                 "Ability_K_ArtilleryBarrage_01_MP": {
-                    "CooldownTimeSecs": 80
+                    "CooldownTimeSecs": 60
                 },
                 "Ability_K_Artillery_EMP_MP": {
                     "CooldownTimeSecs": 40
@@ -18362,7 +18429,7 @@
                     "AreaOfEffectRadius": 180,
                     "FriendlyFireDamageScalar": 1,
                     "BaseDamagePerRound": 350,
-                    "BurstPeriodMinTimeMS":500,
+                    "BurstPeriodMinTimeMS": 500,
                     "BurstPeriodMaxTimeMS": 500,
                     "ReloadTimeMS": 5000,
                     "NumberOfBursts": 1,
@@ -18382,18 +18449,18 @@
                     "LineOfSightRequired": false,
                     "WeaponOwnerFriendlyFireDamageScalar": 1,
                     "ExcludeFromHeightAdvantage": true,
-                    "RateOfFire": 10,
+                    "RateOfFire": 6,
                     "WindUpTimeMS": 100,
                     "WindDownTimeMS": 500,
-                    "BaseDamagePerRound": 200,
+                    "BaseDamagePerRound": 125,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 180,
                     "AreaOfEffectFalloffType": "Linear",
                     "NumberOfBursts": 2,
-                    "CooldownTimeMS": 1000,
+                    "CooldownTimeMS": 1500,
                     "ReloadTimeMS": 3000,
-                    "BurstPeriodMinTimeMS": 600,
-                    "BurstPeriodMaxTimeMS": 600,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
                     "RangeAttributesShort": {
                         "Remove": true
                     },
@@ -18420,17 +18487,32 @@
                     }
                 },
                 "G_ArtilleryCruiser_Weapon_EMPBarrage_MP": {
-                    "Turret": {
-                        "FieldOfFire": 145.0,
-                        "FieldOfView": 145.0
-
+                    "FriendlyFireDamageScalar": 1,
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "EntityTypeToSpawn": "N_DemoCharge"
+                        }
                     },
+                    "RateOfFire": 1,
+                    "ProjectileEntityTypeToSpawn": "G_Artillery_Shell_ProjectileAssetContainer_MP",
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
-                    "ExcludeFromHeightAdvantage": true,
-                    "StatusEffectsExcludeTargetType": "Carrier",
-                    "BaseDamagePerRound": 400,
+                    "AreaOfEffectRadius": 150,
+                    "Turret": {
+                        "FieldOfFire": 135.0,
+                        "FieldOfView": 135.0
+
+                    },
+                    "BaseDamagePerRound": 1,
+                    "StatusEffectsExcludeTargetType": "All",
+                    "RangeAttributesShort": {
+                        "Remove": true
+                    },
+                    "RangeAttributesMedium": {
+                        "Remove": true
+                    },
                     "RangeAttributesLong": {
+                        "Accuracy": 100,
                         "Distance": 1250
                     }
                 }
