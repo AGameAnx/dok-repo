@@ -1586,7 +1586,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Siege cruiser barrage falloff: `Linear => Quadratic`
 
 ## 2020-10-18
-*Not yet reflected in the main changelog.*
 * General:
 	* Baserunner priority as target: `reduced`
 * Coalition/Soban:
@@ -1595,7 +1594,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Hitpoints: `1100 => 900`
 
 ## 2020-11-21 (Jaraci Cup #9)
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* LAV armor: `2 => 1`
 	* AAV turret rotation: `120 => 190`
@@ -1604,7 +1602,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Production cruiser ROF: `12 => 11`
 
 ## 2020-12-18
-*Not yet reflected in the main changelog.*
 * General:
 	* Carrier PDs:
 		* Damage: `20 => 30`
@@ -1620,7 +1617,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Suppression slow effect: `42% => 55%`
 	* Railgun:
 		* RU cost: `80 => 85`
-		* Max movement speed: `70 => 73` 
+		* Max movement speed: `70 => 73`
 		* Accuracy: `7%/6.5%/6% => 40%/100%/65%`
 		* Damage vs small: `100% => 60%`
 	* Fighter and gunship:
@@ -1673,7 +1670,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 			* Level 2: `9s => 8s`
 			* Level 3: `8s => 7s`
 			* Level 4: `7s => 6s`
-			* Level 5: `6s => 5s` 
+			* Level 5: `6s => 5s`
 	* Blast Drone armor: `0 => 1`
 	* Siege cruiser:
 		* Tech cost: `500CU 250RU => 600CU 250RU`
@@ -1681,7 +1678,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Main weapon AOE: `250 => 230`
 
 ## 2020-12-19
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Carrier movement dynamics:
 		* Turn radius: `65 => 130`
@@ -1699,18 +1695,15 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* EMP round upgrade cost: `300CU 100RU => 400CU 100RU`
 
 ## 2020-12-21
-*Not yet reflected in the main changelog.*
 * General:
 	* Strike craft armor upgrades hitpoints granted per upgrade: `30 => 20`
 
 ## 2021-01-05
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Baserunner max ease into turn time: `1s => 0.6s`
 	* LAV accuracy: `92%/88%/65% => 90%/85%/63%`
 
 ## 2021-01-06
-*Not yet reflected in the main changelog.*
 * General:
 	* Increased all railgun priority as target
 * Coalition/Soban:
@@ -1755,12 +1748,10 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Heavy railgun ranged calibration research time: `45s => 55s`
 
 ## 2021-01-06 (2)
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Level 1 production upgrade cost: `300CU 40RU => 350CU 40RU`
 
 ## 2021-01-09
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* AAV armor: `6 => 7`
 * Gaalsien/Khaaneph:
@@ -1771,7 +1762,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Honourguard cruiser reload: `4.5s => 5s`
 
 ## 2021-01-30
-*Not yet reflected in the main changelog.*
 * General:
 	* Added updated carrier power shunt descriptions (was commented out due to a bug in Subsystem that recently got fixed)
 	* Carrier weapon systems missile damage: `200 => 175`
@@ -1785,7 +1775,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Damage: `200 => 240`
 		* AOE: `100 => 92`
 * Coalition:
-	* Carrier
+	* Carrier:
 		* Hitpoints: `9000 => 8700`
 		* PD ROF: `2 => 3`
 		* Armor power shunt:
@@ -1839,12 +1829,10 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Siege cruiser area of effect: `240 => 230`
 
 ## 2021-01-31 (Jaraci Cup #10)
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* AAV hitpoints: `920 => 970`
 
 ## 2021-03-09 11.0
-*Not yet reflected in the main changelog.*
 * General:
 	* Carrier power upgrades:
 		* Renamed from 'POWER RESERVE #' to 'CARRIER SYSTEMS #'
@@ -1911,7 +1899,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 			* Level 2: `+30 => +25`
 			* Level 3: `+45 => +40`
 			* Level 4: `+60 => +55`
-			* Level 4: `+75 => +70`
+			* Level 5: `+75 => +70`
 	* Baserunner:
 		* Base speed: `70 => 80` (matches Khaaneph)
 		* Repair ability:
@@ -1935,7 +1923,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Blast Drone cost: `150CU => 120CU`
 
 ## 2021-03-12 11.1
-*Not yet reflected in the main changelog.*
 * General:
 	* Baserunner cost: `250CU 50RU => 250CU 40RU`
 * Coalition/Soban:
@@ -1982,7 +1969,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Baserunner heal aura ability cooldown: `50s => 65s`
 
 ## 2021-03-14 11.2
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Railgun cost: `250CU 80RU => 280CU 70RU`
 	* Artillery cruiser:
@@ -2002,7 +1988,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* EMP damage: `450 => 400`
 
 ## 2021-03-15 11.3
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Logistics module: Deployment ability cost now matches unit cost (for units lost statistics)
 	* LAV boost cooldown: `40s => 45s`
@@ -2040,7 +2025,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Heavy railgun EMP AOE: `145 => 135` (Fixed inconsistency)
 
 ## 2021-03-16 11.4
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Railgun armor: `4 => 2`
 	* Gunship:
@@ -2059,7 +2043,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* AOE: `210 => 195`
 
 ## 2021-03-16 11.5
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* LAV long range accuracy: `60% => 56%`
 	* Artillery cruiser barrage & precision barrage max range: `2650 => 2750`
@@ -2071,19 +2054,16 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Heavy railgun EMP recharge time: `90s => 75s`
 
 ## 2021-03-17 11.6
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Bomber armor: `20 => 15`
 * Soban:
 	* Fixed an issue where artillery cruiser tech was inaccessible
 
 ## 2021-03-20 11.7 (Jaraci Cup #11)
-*Not yet reflected in the main changelog.*
 * Gaalsien/Khaaneph:
 	* Fixed missile ship radar missiles tech cost modified to 50CU 50RU instead of direct barrage
 
 ## 2021-03-27 12.1
-*Not yet reflected in the main changelog.*
 * General:
 	* Railgun damage: `155/180 => 210/260`:
 		* Breakpoints vs HR: `6/6/7 => 4/5/5`
@@ -2159,7 +2139,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Blast drone hitpoints: `540 => 600`
 
 ## 2021-03-28 12.2
-*Not yet reflected in the main changelog.*
 * General:
 	* Railgun:
 		* Damage: `210/260 => 155/180` (reverted)
@@ -2209,7 +2188,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Reload: `5.5s => 6s`
 
 ## 2021-03-29 12.3
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* LAV:
 		* Turret rotation: `250 => 390`
@@ -2230,7 +2208,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Hitpoints: `2000 => 1850`
 
 ## 2021-03-30 12.4
-*Not yet reflected in the main changelog.*
 * General:
 	* Sunder armor reduction: `5 => 7`
 * Coalition/Soban:
@@ -2292,7 +2269,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Hover turn acceleration: `10 => 70`
 
 ## 2021-04-01 12.5
-*Not yet reflected in the main changelog.*
 * General:
 	* Salvager target priority: `reduced`
 	* Target prioritization adjustments for low damage units (AAV, AS, Sandskimmer, LAV)
@@ -2321,7 +2297,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 			* Level 2: `20 => 25`
 	* Fixed an issue where carrier mobility required carrier systems 1
 * Gaalsien/Khaaneph:
-	* Carrier super-sonic missile barrage damage: `240 => 260`
+	* Carrier hyper-sonic missile barrage damage: `240 => 260`
 	* Sandskimmer hitpoints: `480 => 500`
 	* Dart maneuver cost: `50CU 80RU => 150CU 80RU`
 	* Heavy railgun:
@@ -2332,21 +2308,18 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* AOE: `210 => 200` (Fixed inconsistency for K variant)
 
 ## 2021-04-01 12.6
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* LAV burst duration: `0.95-0.115s => 0.95-0.105s`
 * Gaalsien/Khaaneph:
 	* Assault ship damage: `26 => 27`
 
 ## 2021-04-01 12.7
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* LAV accuracy: `88%/85%/56% => 85%/82%/55%`
 * Gaalsien/Khaaneph:
 	* Assault ship tech research time: `65s => 60s`
 
 ## 2021-04-02 12.8
-*Not yet reflected in the main changelog.*
 * General:
 	* Railgun:
 		* Max range: `1750 => 1850`
@@ -2369,13 +2342,11 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Honourguard cruiser anti-air research cost: `300CU 300RU => 300CU 200RU`
 
 ## 2021-04-03 12.9
-*Not yet reflected in the main changelog.*
 * Gaalsien/Khaaneph:
 	* Assault ship damage: `26 => 27`
 	* Assault railgun cost: `220CU 55RU => 250CU 55RU`
 
 ## 2021-04-04 12.10
-*Not yet reflected in the main changelog.*
 * General:
 	* Salvager population cost: `1 => 2`
 	* Railgun damage modifier against strike craft: `60% => 50%`
@@ -2447,7 +2418,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Siege cruiser cost: `700CU 250RU => 700CU 280RU`
 
 ## 2021-04-08 12.11
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Support cruiser build time: `35s => 40s`
 	* AAV:
@@ -2456,7 +2426,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* ROF: `14 => 13`
 		* Suppression slow effect: `55% => 40%`
 	* Railgun:
-		* Reload: `0.5s => 0s`
 		* Range: `1850 => 1900`
 		* Aggro range: `1850 => 1900`
 		* Max desired combat range: `1780 => 1830`
@@ -2470,13 +2439,11 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Range: `1100 => 1050`
 		* Aggro range: `1100 => 1050`
 	* Heavy railgun:
-		* Reload: `0.5s => 0s`
 		* Range: `1850 => 1700`
 		* Movement speed: `58 => 61`
 	* Honourguard cruiser hover turn acceleration: `1.5 => 50`
 
 ## 2021-04-09 12.12
-*Not yet reflected in the main changelog.*
 * General:
 	* Salvager CU mining (Extends CU patch duration):
 		* Collected from patch per cycle: `2 => 1`
@@ -2511,7 +2478,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Precision barrage damage: `200 => 180`
 
 ## 2021-04-10 12.13
-*Not yet reflected in the main changelog.*
 * General:
 	* Salvager RU mining (Extends RU patch duration):
 		* Cycle duration multiplier: `1 => 2`
@@ -2520,7 +2486,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Assault cruiser ability cooldown: `30s => 40s`
 
 ## 2021-04-11 12.14
-*Not yet reflected in the main changelog.*
 * General:
 	* "Incoming missile" (nuke) indicators:
 		* No longer provide sight in the targeted area
@@ -2545,7 +2510,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Siege cruiser EMP cooldown: `45s => 75s` (To match G)
 
 ## 2021-04-14 12.15
-*Not yet reflected in the main changelog.*
 * General:
 	* Salvager mining:
 		* CU:
@@ -2570,17 +2534,16 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Movement speed: `80 => 84`
 
 ## 2021-04-15 12.16
-*Not yet reflected in the main changelog.*
 * General:
 	* Baserunner:
-		* Cost: `160CU 40RU => 220CCU 40RU`
+		* Cost: `160CU 40RU => 220CU 40RU`
 		* Speed penalty while holding an artifact: `65% => 25%`
 	* Reduced carrier priority as target
 	* Reduced salvager priority as target
 * Coalition/Soban:
 	* Strike fighter damage per rocket: `120 => 110`
 	* Reduced support cruiser priority as target
-	* Assault cruiser
+	* Assault cruiser:
 		* Cost: `550CU 260RU => 600CU 250RU`
 		* Damage: `54 => 52`
 	* Battlecruiser cost: `700CU 400RU => 850CU 350RU`
@@ -2592,7 +2555,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Assault ship cost: `300CU 35RU => 300CU 30RU`
 
 ## 2021-04-24 12.17
-*Not yet reflected in the main changelog.*
 * General:
 	* Reduced salvager priority as target
 	* Reduced strike craft priority as target
@@ -2607,14 +2569,12 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Fixed an issue where blast drone displayed damage & packets incorrectly
 
 ## 2022-02-02 12.18 (Jaraci Cup #12 and #13)
-*Not yet reflected in the main changelog.*
 * General:
 	* Fixed an issue where carriers will lose power from the reserve pool if the available power ever exceeds 30
 * Khaaneph:
 	* Fixed an issue where Blast Drones fail to destroy themselves when detonating
 
 ## 2022-02-02 13.0
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Support cruiser cost: `450CU 50RU => 480CU 50RU`
 	* LAV:
@@ -2639,7 +2599,7 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Population cost: `7 => 6`
 		* AOE: `170 => 180`
 		* Wind-up time: `1.6s => 1.7s`
-		* Reload time: `5s => 4.85s`
+		* Reload: `5s => 4.85s`
 		* Max range: `1850 => 2100`
 * Gaalsien:
 	* Siege cruiser:
@@ -2649,12 +2609,10 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Fixed an issue where heavy railguns reload statistics weren't matching with gaalsien variant
 
 ## 2022-03-20 13.1 (Jaraci Cup #14)
-*Not yet reflected in the main changelog.*
 * Gaalsien/Khaaneph:
 	* Heavy Railgun - fixed an issue where sunder was not being applied to carriers.
 
 ## 2022-05-12 14.0
-*Not yet reflected in the main changelog.*
 *Thanks Just_carrier and Bozocow for most of the bug fixes in this patch!*
 * General:
 	* Units lost tab improvements for replay viewing:
@@ -2699,7 +2657,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Fixed an issue where interceptor cost didn't match Gaalsien variant: `300CU 100RU => 250CU 100RU`
 
 ## 2022-05-22 14.1
-*Not yet reflected in the main changelog.*
 * General:
 	* Baserunner:
 		* Slow down when carrying an artifact: `25% => 35%`
@@ -2752,7 +2709,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* PD field of fire: `130 => 200` (Now matches other carriers. Thanks Just_carrier)
 
 ## 2022-05-24 14.2
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* AAV (DPS: `81.9 => 77.5`):
 		* AOE: `35 => 42`
@@ -2762,7 +2718,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* ALM AOE: `86 => 78`
 
 ## 2022-05-25 14.3
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Fixed an issue where salvager armor wasn't updated as intended: `0 => 1`
 * Gaalsien:
@@ -2771,7 +2726,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Fixed an issue where salvager armor wasn't updated as intended: `5 => 4`
 
 ## 2022-05-29 14.4 (Jaraci Cup #15)
-*Not yet reflected in the main changelog.*
 * Gaalsien:
 	* Carrier hangar bay parameters:
 		* Interceptor undock animation seconds: `3s => 2.66s`
@@ -2782,7 +2736,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Bomber undock animation seconds: `3.33s => 2.75s` (matches Gaalsien)
 
 ## 2022-07-08 15.0
-*Not yet reflected in the main changelog.*
 * General:
 	* Carrier power systems level 1:
 		* Cost: `200CU 100RU => 150CU 50RU`
@@ -2937,7 +2890,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Fixed an issue where honourguard cost didn't match G variant: `500CU 250RU => 550CU 250RU`
 
 ## 2022-07-13 15.1
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Strike Fighter:
 		* Cost: `270CU 85RU => 270CU 75RU`
@@ -2953,26 +2905,22 @@ Full combined changelog can be found [HERE](jaraci.md)
 		* Damage against small: `100% => 60%`
 
 ## 2023-01-09 16.0 (Jaraci Cup #16)
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Minor housekeeping changes to Support Cruiser AA to unify functionality between factions (Thanks Just_carrier)
 * Soban:
 	* Assault cruiser now has a soban-specific appearance (Thanks Just_carrier)
 
 ## 2023-03-08 17.0
-*Not yet reflected in the main changelog.*
 * Soban:
 	* Battlecruiser range: `1650 => 1630`
 * Gaalsien/Khaaneph:
 	* Heavy Railgun max desired combat range: `1620 => 1730` (These are targeted changes to prevent heavy railguns from driving into range of soban battlecruisers on their own)
 
 ## 2023-03-09 17.1 (Jaraci Cup #17)
-*Not yet reflected in the main changelog.*
 * Coalition:
 	* Fixed incorrect carrier penetrating shots damage display (UI visual only): `75 => 70` (Thanks Just_carrier)
 
 ## 2023-04-06 18.0
-*Not yet reflected in the main changelog.*
 * Coalition/Soban:
 	* Artillery cruiser (QOL, allows choosing autofire targets and using a-move without closing in):
 		* Active combat approach mode: `Snipe => Hold`
@@ -2989,7 +2937,6 @@ Full combined changelog can be found [HERE](jaraci.md)
 	* Siege cruiser active combat approach mode: `Snipe => Hold` (QOL, allows choosing autofire targets and using a-move without closing in)
 
 ## 2023-08-29 18.1
-*Not yet reflected in the main changelog.*
 * General:
 	* Railgun damage modifier against small: `50% => 35%`
 * Coalition/Soban:
