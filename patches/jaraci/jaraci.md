@@ -1062,7 +1062,7 @@ Changelog can be found in a [sister document](jaraci_recent_changes.md).
     * Level 5: `610CU => 700CU`
 * Research time:
     * Level 1 : `10s => 5s`
-    * Level 1 : `10s => 7s`
+    * Level 2 : `10s => 7s`
 
 ## Salvager
 
