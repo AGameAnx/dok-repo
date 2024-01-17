@@ -8,7 +8,7 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.09.11",
+        "Version": "1.09.12",
         "LastUpdate": "2024-01-17",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
@@ -967,12 +967,18 @@
                     "0": {
                         "PowerLevels": {
                             "2": {
-                                "LocalizedShortDescriptionStringID": "Repair Beams Online, +50% repair and range",
+                                "LocalizedShortDescriptionStringID": "Repair Beams Online, +25% repair and range",
                                 "StatusEffectsToApply": {
                                     "RepairShunt_2_StatusEffect": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
+                                                    "2": {
+                                                        "Value": 2
+                                                    },
+                                                    "5": {
+                                                        "Value": 2
+                                                    },
                                                     "6": {
                                                         "Attribute": 33554432,
                                                         "Mode": "Set",
@@ -986,12 +992,18 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Repair Beams Online, +100% repair and +1000 range",
+                                "LocalizedShortDescriptionStringID": "Repair Beams Online, +50% repair and +1000 range",
                                 "StatusEffectsToApply": {
                                     "RepairShunt_3_StatusEffect": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
+                                                    "2": {
+                                                        "Value": 5
+                                                    },
+                                                    "5": {
+                                                        "Value": 5
+                                                    },
                                                     "6": {
                                                         "Attribute": 33554432,
                                                         "Mode": "Set",
@@ -1005,12 +1017,18 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Repair Beams Online, +150% repair and +1900 range",
+                                "LocalizedShortDescriptionStringID": "Repair Beams Online, +75% repair and +1900 range",
                                 "StatusEffectsToApply": {
                                     "RepairShunt_4_StatusEffect": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
+                                                    "2": {
+                                                        "Value": 8
+                                                    },
+                                                    "5": {
+                                                        "Value": 8
+                                                    },
                                                     "6": {
                                                         "Attribute": 33554432,
                                                         "Mode": "Set",
@@ -1024,12 +1042,18 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Repair Beams Online, +200% repair and based sattelite uplink to increase range",
+                                "LocalizedShortDescriptionStringID": "Repair Beams Online, +100% repair and based sattelite uplink to increase range",
                                 "StatusEffectsToApply": {
                                     "RepairShunt_5_StatusEffect": {
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
+                                                    "2": {
+                                                        "Value": 10
+                                                    },
+                                                    "5": {
+                                                        "Value": 10
+                                                    },
                                                     "6": {
                                                         "Attribute": 33554432,
                                                         "Mode": "Set",
@@ -2404,7 +2428,7 @@
                     "LineOfSightRequired": false,
                     "TracerSpeed": 100000,
                     "RangeAttributesShort": {
-                        "Distance": 1000
+                        "Distance": 800
                     },
                     "Modifiers": {
                         "0": {
@@ -2757,13 +2781,13 @@
                                                     "5": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BL5_HEAL",
-                                                        "Value": 50,
+                                                        "Value": 25,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     },
                                                     "6": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BR5_HEAL",
-                                                        "Value": 50,
+                                                        "Value": 25,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     }
                                                 }
@@ -2834,13 +2858,13 @@
                                                     "5": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BL5_HEAL",
-                                                        "Value": 100,
+                                                        "Value": 50,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     },
                                                     "6": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BR5_HEAL",
-                                                        "Value": 100,
+                                                        "Value": 50,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     }
                                                 }
@@ -2907,13 +2931,13 @@
                                                     "5": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BL5_HEAL",
-                                                        "Value": 150,
+                                                        "Value": 75,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     },
                                                     "6": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BR5_HEAL",
-                                                        "Value": 150,
+                                                        "Value": 75,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     }
                                                 }
@@ -2980,19 +3004,19 @@
                                                     "5": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BL5_HEAL",
-                                                        "Value": 200,
+                                                        "Value": 100,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     },
                                                     "6": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BR5_HEAL",
-                                                        "Value": 200,
+                                                        "Value": 100,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     }
                                                 }
                                             }
                                         },
-                                        "Modifiers": {
+                                        "Modifiers": {  
                                             "0": {
                                                 "ModifierType": "EnableWeapon",
                                                 "EnableWeapon_WeaponID": "TURRET_BR5_HEAL"
@@ -10141,7 +10165,7 @@
                 "SensorRadius": 1100,
                 "ContactRadius": 1250,
                 "Armour": 7,
-                "MaxHealth": 300,
+                "MaxHealth": 400,
                 "FireRateDisplay": 5
             },
             "UnitMovementAttributes": {
@@ -10267,7 +10291,7 @@
                 "SensorRadius": 1100,
                 "ContactRadius": 1250,
                 "Armour": 7,
-                "MaxHealth": 300,
+                "MaxHealth": 400,
                 "FireRateDisplay": 5
             },
             "UnitMovementAttributes": {
@@ -11489,7 +11513,7 @@
                 "Resource1Cost": 300,
                 "Resource2Cost": 80,
                 "MaxHealth": 1650,
-                "Armour": 9,
+                "Armour": 7,
                 "ExperienceValue": 470,
                 "ProductionTime": 22,
                 "PriorityAsTarget": 12,
@@ -11943,7 +11967,7 @@
                 "Resource1Cost": 360,
                 "Resource2Cost": 100,
                 "MaxHealth": 1700,
-                "Armour": 11,
+                "Armour": 9,
                 "ProductionTime": 20,
                 "PopCapCost": 3,
                 "ExperienceValue": 650,
@@ -12204,7 +12228,7 @@
                 "Resource1Cost": 360,
                 "Resource2Cost": 100,
                 "MaxHealth": 1700,
-                "Armour": 11,
+                "Armour": 9,
                 "ProductionTime": 20,
                 "PopCapCost": 3,
                 "ExperienceValue": 650,
@@ -13083,7 +13107,7 @@
             "UnitAttributes": {
                 "Resource1Cost": 300,
                 "Resource2Cost": 75,
-                "Armour": 10,
+                "Armour": 8,
                 "MaxHealth": 1400,
                 "ProductionTime": 20,
                 "PriorityAsTarget": -10,
@@ -13109,7 +13133,8 @@
                     "FriendlyFireDamageScalar": 1,
                     "ProjectileEntityTypeToSpawn": "Carrier_ShuntWeapon_ProjectileAssetContainer_MP 1",
                     "OutputDPS": true,
-                    "ReloadTimeMS": 4000,
+                    "ReloadTimeMS": 2500,
+                    "BaseDamagePerRound": 125,
                     "RangeAttributesShort": {
                         "Distance": 600
                     },
@@ -16776,7 +16801,8 @@
                         "Distance": 1200
                     },
                     "TargetPrioritizationAttributes": {
-                        "TargetPriorityWeight": 150
+                        "TargetPriorityWeight": 150,
+                        "TargetSameCommanderBias": -1
                     },
                     "Modifiers": {
                         "0": {
@@ -17077,7 +17103,8 @@
                         "Distance": 1200
                     },
                     "TargetPrioritizationAttributes": {
-                        "TargetPriorityWeight": 150
+                        "TargetPriorityWeight": 150,
+                        "TargetSameCommanderBias": -1
                     },
                     "Modifiers": {
                         "0": {
