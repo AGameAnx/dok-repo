@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.09.23",
-        "LastUpdate": "2024-03-4",
+        "Version": "1.10.00",
+        "LastUpdate": "2024-03-06",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     //"Global": {
@@ -10181,7 +10181,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 5,
+                    "RateOfFire": 7,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 50,
                     "WindDownTimeMS": 500,
@@ -10218,7 +10218,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 5,
+                    "RateOfFire": 7,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 50,
                     "WindDownTimeMS": 500,
@@ -10422,7 +10422,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 5,
+                    "RateOfFire": 7,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 50,
                     "WindDownTimeMS": 500,
@@ -10459,7 +10459,7 @@
                     "ExcludeFromHeightAdvantage": false,
                     "LineOfSightRequired": true,
                     "BaseDamagePerRound": 10,
-                    "RateOfFire": 5,
+                    "RateOfFire": 7,
                     "DamagePacketsPerShot": 1,
                     "WindUpTimeMS": 50,
                     "WindDownTimeMS": 500,
@@ -13419,7 +13419,8 @@
                 "Resource1Cost": 300,
                 "Resource2Cost": 100,
                 "ResearchTime": 50,
-                "LocalizedLongDescriptionStringID": "Heavy Railguns gain the RANGED CALIBRATION ability - Increasing fire rate at the cost of range.\n\n[84a1e8]Fire rate greatly increased.\nRange reduced to 700."
+                "LocalizedResearchTitleStringID": "HEAVY RAILGUN - WEAPON OVERCHARGE",
+                "LocalizedLongDescriptionStringID": "Heavy Railguns gain the WEAPON OVERCHARGE ability - Increasing fire rate at the cost of range.\n\n[84a1e8]Fire rate greatly increased.\nRange reduced to 700."
             }
         },
 
@@ -14084,7 +14085,7 @@
         },
         "MortarSuppress_StatusEffect": {
             "StatusEffectAttributes": {
-                "Duration":3,
+                "Duration": 3,
                 "BuffsToApplyToTarget": {
                     "0": {
                         "UnitClass": "Ground",
@@ -14813,7 +14814,7 @@
         // COALITION FIGHTER AND GUNSHIP TECH
         "Tier_3_C_Interceptor_Bomber": {
             "ResearchItemAttributes": {
-                "LocalizedResearchTitleStringID": "PEANUT LIGTH BOMBER AND ATTACK HELICOPTER FABRICATION",
+                "LocalizedResearchTitleStringID": "PEANUT LIGHT BOMBER AND ATTACK HELICOPTER FABRICATION",
                 "LocalizedLongDescriptionStringID": "Fast and slow moving aircrafts, effective at blowing up ground units.\n\n[84a1e8]Unlock Peanut Light Bomber and Attack Helicopter for fabrication.",
                 "Resource1Cost": 500,
                 "Resource2Cost": 200
@@ -14823,7 +14824,7 @@
         // SOBAN FIGHTER AND GUNSHIP TECH
         "Tier_3_S_Interceptor_Bomber": {
             "ResearchItemAttributes": {
-                "LocalizedResearchTitleStringID": "PEANUT LIGTH BOMBER AND HELICOPTER FABRICATION",
+                "LocalizedResearchTitleStringID": "PEANUT LIGHT BOMBER AND HELICOPTER FABRICATION",
                 "LocalizedLongDescriptionStringID": "Fast and slow moving aircrafts, effective at blowing up ground units.\n\n[84a1e8]Unlock Peanut Light Bomber and Attack Helicopter for fabrication.",
                 "Resource1Cost": 500,
                 "Resource2Cost": 200
@@ -15612,13 +15613,13 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Novice: +6 armor",
+                        "BuffTooltipLocID": "Novice: +2 armor",
                         "RequiredExperience": 1400,
                         "Buff": {
                             "0": {
                                 "Attribute": "Unit_Armour",
                                 "Mode": "Add",
-                                "Value": 6
+                                "Value": 2
                             },
                             "1": {
                                 "Remove": true
@@ -16024,20 +16025,23 @@
             }
         },
         // COALITION ASSAULT CRUISER
+
+        // COALITION ASSAULT CRUISER
         "G_BattleCruiser_MP": {
             "UnitAttributes": {
+                "AggroRange": 1300,
                 "Resource1Cost": 550,
                 "Resource2Cost": 240,
-                "MaxHealth": 1000,
+                "MaxHealth": 3250,
                 "PopCapCost": 6,
                 "ProductionTime": 57,
-                "Armour": 5
+                "Armour": 10
             },
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Officer: +250 hull but -5 speed",
-                        "RequiredExperience": 1250,
+                        "RequiredExperience": 12500,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -16053,7 +16057,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: +250 hull but -10 speed",
-                        "RequiredExperience": 2500,
+                        "RequiredExperience": 25000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -16069,7 +16073,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: +250 hull, -50% cooldown on ability",
-                        "RequiredExperience": 4000,
+                        "RequiredExperience": 40000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -16101,7 +16105,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Commander: +250 hull but -15 speed",
-                        "RequiredExperience": 6500,
+                        "RequiredExperience": 65000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -16117,7 +16121,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Captain: +1000 hull, +5 armor, but -15 speed",
-                        "RequiredExperience": 8000,
+                        "RequiredExperience": 80000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -16139,44 +16143,57 @@
                 }
             },
             "WeaponAttributes": {
-                /*"G_BattleCruiser_Weapon_MovemenBonus_MP": { // i need this weapon id
-                    "StatusEffectsTargetAlignment": "Friend",
-                    "DamageType": "Heal",
-                    "BaseDamagePerRound": 75,
-                    "AreaOfEffectRadius": 500,
-                    "ProjectileEntityTypeToSpawn": "C_HAC_Smoke_SceneEntity_MP",
-                    "StatusEffectsSets": {
-                        "0": { "StatusEffects": [ "ArmorBonus_StatusEffect" ] }
-                    },
-                    "ReloadTimeMS": 3500,
-                    "StatusEffectsExcludeTargetType": "Air"
-                },*/
                 "G_Battlecruiser_Weapon_G2G_MP": {
-                    //"ProjectileEntityTypeToSpawn": "C_Battlecruiser_TacticalMissile_ProjectileAssetContainer_MP",
-                    "BaseDamagePerRound": 75,
-                    "AreaOfEffectRadius": 75,
-                    "BurstPeriodMinTimeMS": 700,
-                    "BurstPeriodMaxTimeMS": 700,
+                    "LineOfSightRequired": false,
+                    "ExcludeFromHeightAdvantage": true,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Arc_ProjectileAssetContainer_MP",
+                    "BaseDamagePerRound": 90,
+                    "AreaOfEffectRadius": 70,
+                    "BurstPeriodMinTimeMS": 200,
+                    "BurstPeriodMaxTimeMS": 200,
                     "FriendlyFireDamageScalar": 1,
-                    "RateOfFire": 3,
-                    "NumberOfBursts": 2,
+                    "RateOfFire": 10,
+                    "NumberOfBursts": 1,
+                    "RangeAttributesShort": {
+                        "Accuracy": 0,
+                        "Distance": 1350
+                    },
+                    "RangeAttributesMedium": {
+                        "Accuracy": 0,
+                        "Distance": 1350
+                    },
+                    "RangeAttributesLong": {
+                        "Accuracy": 0,
+                        "Distance": 1350
+                    },
                     "WindUpTimeMS": 250,
-                    "ReloadTimeMS": 3500,
+                    "ReloadTimeMS": 3750,
                     "OutputDPS": true
                 },
                 "G_Battlecruiser_Weapon_G2A_MP": {
+                    "LineOfSightRequired": true,
+                    "ExcludeFromHeightAdvantage": false,
+                    "BaseDamagePerRound": 150,
+                    "LeadsTarget": 1,
+                    "ReloadTimeMS": 6000,
+                    "AreaOfEffectRadius": 70,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
                     "RangeAttributesShort": {
-                        "Distance": 1000
+                        "Accuracy": 100,
+                        "Distance": 1450
                     },
                     "RangeAttributesMedium": {
-                        "Distance": 1000
+                        "Accuracy": 100,
+                        "Distance": 1450
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1000
+                        "Accuracy": 100,
+                        "Distance": 1450
                     },
                     "RateOfFire": 0,
                     "FriendlyFireDamageScalar": 1,
-                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer",
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Air"
@@ -16184,68 +16201,82 @@
                     }
                 },
                 "G_BattleCruiser_Weapon_Missile_MP": {
-                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Arc_ProjectileAssetContainer_MP",
-                    "BaseDamagePerRound": 125,
-                    "AreaOfEffectRadius": 150,
+                    "ProjectileEntityTypeToSpawn": "C_Artillery_Shell_ProjectileAssetContainer_MP",
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "EntityTypeToSpawn": "N_DemoCharge_AI"
+                        }
+                    },
+                    "BaseDamagePerRound": 1,
+                    "AreaOfEffectRadius": 1,
                     "FriendlyFireDamageScalar": 1,
-                    "NumberOfBursts": 3,
-                    "RateOfFire": 5,
+                    "NumberOfBursts": 1,
+                    "RateOfFire": 8,
                     "CooldownTimeMS": 750,
-                    "BurstPeriodMinTimeMS": 800,
-                    "BurstPeriodMaxTimeMS": 800,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesLong": {
-                        "Distance": 1550
+                        "Accuracy": 0,
+                        "Distance": 2750
                     },
 
                     "ExcludeFromHeightAdvantage": true,
                     "RangeAttributesShort": {
+                        "Accuracy": 0,
                         "Distance": 600
                     },
                     "RangeAttributesMedium": {
+                        "Accuracy": 0,
                         "Distance": 750
                     }
 
                 }
             },
             "UnitMovementAttributes": {
-                "Dynamics": { "MaxSpeed": 150 }
+                "Dynamics": { "MaxSpeed": 35 }
             },
             "AbilityAttributes": {
                 "Ability_G_BattleCruiser_EnableAir_MP": {
+                    "Resource1Cost": 0,
                     "RequiredResearch": []
                 },
                 "Ability_G_BattleCruiser_ArmorBonus_MP": {
+                    "Resource1Cost": 0,
+                    "IsToggleable": true,
                     "SharedCooldownChannel": 0,
-                    "CooldownTimeSecs": 50,
+                    "CooldownTimeSecs": 60,
                     "ApplyStatusEffect": {
                         "ArmorBonus_StatusEffect": {
-                            "Lifetime": "Finite",
-                            "Duration": 10.00,
-                            "MaxStacks": 1,
-                            "StackingBehaviour": "Replace",
+                            "Lifetime": "Indefinite",
                             "BuffsToApplyToTarget": {
                                 "0": {
                                     "BuffSet": {
                                         "0": {
-                                            "Attribute": "Unit_Armour",
+                                            "Name": "",
+                                            "Attribute": "UnitWeapon_ReloadTime",
                                             "Mode": "AddPercent",
-                                            "Value": 400
+                                            "Value": 200
                                         },
                                         "1": {
                                             "Attribute": "UnitDynamics_MaxSpeed",
-                                            "Mode": "AddPercent",
-                                            "Value": 50
+                                            "Mode": "Add",
+                                            "Value": 35
                                         },
                                         "2": {
                                             "Attribute": "UnitDynamics_AccelerationTime",
                                             "Mode": "AddPercent",
-                                            "Value": 50
+                                            "Value": 100
                                         },
                                         "3": {
                                             "Attribute": "UnitDynamics_MaxSpeedTurnRadius",
                                             "Mode": "AddPercent",
-                                            "Value": 50
+                                            "Value": 100
+                                        },
+                                        "4": {
+                                            "Attribute": "Unit_FireRateDisplay",
+                                            "Mode": "Add",
+                                            "Value": -2
                                         }
                                     }
                                 }
@@ -16258,27 +16289,22 @@
                 "Ability_G_BattleCruiser_Missile_MP": {
                     "SharedCooldownChannel": 0,
                     "Resource1Cost": 0,
-                    "CooldownTimeSecs": 50
+                    "CooldownTimeSecs": 75
                 },
                 "Ability_G_BattleCruiserActiveRegen": {
+                    "Resource1Cost": 0,
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
                     "ApplyStatusEffect": {
                         "Regen_BattleCruiser_StatusEffect_Campaign": {
-                            //"BuffsToApplyToTarget": { this crap doesn't work
-                            //  "0": {
-                            //    "UnitType": "G_BattleCruiser_MP",
-                            //    "BuffSet": {
-                            //      "0": { 
-                            //        "Attribute": "UnitDynamics_MaxSpeed",
-                            //        "Value": -20
-                            //      }
-                            //    }
-                            //  }
-                            //},
+                            "Duration": 1.1,
                             "Modifiers": {
                                 "0": {
                                     "HealthOverTimeAttributes": {
                                         "Amount": 1,
-                                        "MSTickDuration": 33
+                                        "MSTickDuration": 50
                                     }
                                 },
                                 "1": { // disable weapon
@@ -16295,8 +16321,25 @@
                         }
                     },
                     "SharedCooldownChannel": 0,
-                    "CooldownTimeSecs": 50
+                    "ActivationDependencies": {
+                        "TakeNoDamageForMS": 15000
+                    },
+                    "CooldownTimeSecs": 0
                 }
+            }
+
+        },
+        "Ability_G_BattleCruiser_ArmorBonus_MP": {
+            "AbilityViewAttributes": {
+                "IconName": "Shunt_Move_off",
+                "ToggledIconName": "Shunt_Armour_off",
+                "LocalizedTitleStringID": "ENGAGE TRAVEL MODE",
+                "LocalizedShortDescriptionStringID": "TOGGLE",
+                "LocalizedLongDescriptionStringID": "Divert power from weapons to engines: +35 speed, Reload time incresed by a factor of 3.",
+                "LocalizedToggledTitleStringID": "BATTLESTATIONS",
+                "LocalizedToggledShortDescriptionStringID": "TOGGLE",
+                "LocalizedToggledLongDescriptionStringID": "Shunts main power from engines into weapons."
+
             }
 
         },
@@ -16536,12 +16579,16 @@
         // COALITION/SOBAN ASSAULT CRUISER FABRICATION
         "Tier_3_C_AssaultCruiser": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "BATTLESHIP FABRICATION",
+                "LocalizedLongDescriptionStringID": "Heavily armored medium range indirect fire line capital ship. Slow.",
                 "Resource1Cost": 450,
                 "Resource2Cost": 200
             }
         },
         "Tier_3_S_AssaultCruiser": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "BATTLESHIP FABRICATION",
+                "LocalizedLongDescriptionStringID": "Heavily armored medium range indirect fire line capital ship. Slow.",
                 "Resource1Cost": 450,
                 "Resource2Cost": 200
             }
@@ -16550,8 +16597,8 @@
         // COALITION/SOBAN ASSAULT CRUISER ANTI-AIR
         "Research_Buff_G_BattleCruiser_AntiAir": {
             "ResearchItemAttributes": {
-                "LocalizedResearchTitleStringID": "GAALSIEN BATTLECRUISER ANTI-GROUND",
-                "LocalizedLongDescriptionStringID": "Unlock Gaalsien Battlecruiser missiles.\n\n[84a1e8]Enables undirect autofire capabilities.",
+                "LocalizedResearchTitleStringID": "BATTLESHIP - TORPEDO TUBES",
+                "LocalizedLongDescriptionStringID": "Unlock Battleship''s high damage direct fire torpedos.\n\n[84a1e8]Enables direct autofire capabilities.",
                 "Resource1Cost": 300,
                 "Resource2Cost": 150,
                 "ResearchTime": 45,
@@ -16566,7 +16613,7 @@
                                 "Name": "AA_RIGHT",
                                 "Attribute": "UnitWeapon_RateOfFire",
                                 "Mode": "Add",
-                                "Value": 1
+                                "Value": 4
                             }
                         }
                     }
@@ -16575,8 +16622,8 @@
         },
         "Research_Buff_S_AssaultCruiser_AntiAir": {
             "ResearchItemAttributes": {
-                "LocalizedResearchTitleStringID": "ASSAULT CRUISER ANTI-GROUND",
-                "LocalizedLongDescriptionStringID": "Unlock Assault Cruiser missiles.\n\n[84a1e8]Enables undirect autofire capabilities.",
+                "LocalizedResearchTitleStringID": "BATTLESHIP - TORPEDO TUBES",
+                "LocalizedLongDescriptionStringID": "Unlock Battleship''s high damage direct fire torpedos.\n\n[84a1e8]Enables direct autofire capabilities.",
                 "Resource1Cost": 300,
                 "Resource2Cost": 150,
                 "ResearchTime": 45,
@@ -16591,7 +16638,7 @@
                                 "Name": "AA_RIGHT",
                                 "Attribute": "UnitWeapon_RateOfFire",
                                 "Mode": "Add",
-                                "Value": 1
+                                "Value": 4
                             }
                         }
                     }
@@ -17031,9 +17078,9 @@
         // BATTLECRUISER FIELD REPAIR TOOLTIP
         "Ability_C_SmokeGrenade_BattleCruiser": {
             "AbilityViewAttributes": {
-                "IconName": "Icon-Command-OrbitalWeapon_Broad",
-                "LocalizedTitleStringID": "PURGE!",
-                "LocalizedLongDescriptionStringID": "Call down an EXTERMINATUS on BattleCruiser location. 'YES! FIRE DIRECTLY ON OUR LOCATION! MUHAHAHAHAH'"
+                "IconName": "Icon-Command-Overdrive",
+                "LocalizedTitleStringID": "REACTOR OVERDRIVE",
+                "LocalizedLongDescriptionStringID": "Overcharges nearby allied unit's reactors for 10 seconds in 600m area. Improves reactive armor and drive systems. effects:\nTo small units: +15 speed, +2 armor\nTo medium units: +15 speed, +4 armor\nTo cruisers: +5 speed, +4 armor."
             }
         },
 
@@ -17042,22 +17089,22 @@
             "UnitAttributes": {
                 "Resource1Cost": 850,
                 "Resource2Cost": 350,
-                "MaxHealth": 40000,
+                "MaxHealth": 1350,
                 "PopCapCost": 8,
                 "ProductionTime": 65,
-                "Armour": 1,
-                "AggroRange": 500,
-                "FireRateDisplay": 1
+                "Armour": 2,
+                "AggroRange": 1600,
+                "FireRateDisplay": 2
             },
             "UnitMovementAttributes": {
                 "Combat": {
-                    "MinDesiredCombatRange": 1000,
-                    "MaxDesiredCombatRange": 3000,
+                    "MinDesiredCombatRange": 800,
+                    "MaxDesiredCombatRange": 1500,
                     "ActiveCombatApproachMode": "Snipe"
                 },
                 "Dynamics": {
-                    "MaxSpeed": 25,
-                    "MaxSpeedTurnRadius": 100,
+                    "MaxSpeed": 100,
+                    "MaxSpeedTurnRadius": 200,
                     "AccelerationTime": 0.9,
                     "BrakingTime": 0.9
                 }
@@ -17066,7 +17113,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Officer: 3 armor, +5 speed",
-                        "RequiredExperience": 1000,
+                        "RequiredExperience": 10000,
                         "Buff": {
                             "0": {
                                 "Mode": "Set",
@@ -17081,7 +17128,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: 9 armor, +5 speed",
-                        "RequiredExperience": 3000,
+                        "RequiredExperience": 30000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -17098,7 +17145,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: 27 armor, +5 speed",
-                        "RequiredExperience": 6000,
+                        "RequiredExperience": 60000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -17115,7 +17162,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Commander: 81 armor, +5 speed",
-                        "RequiredExperience": 8000,
+                        "RequiredExperience": 80000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -17131,7 +17178,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Captain: 243 armor, +5 speed",
-                        "RequiredExperience": 10000,
+                        "RequiredExperience": 100000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -17149,33 +17196,66 @@
             },
             "AbilityAttributes": {
                 "Ability_C_SmokeGrenade_BattleCruiser": {
+                    "CooldownTimeSecs": 100,
                     "AbilityType": "UseWeapon",
                     "TargetingType": "Self"
                 }
             },
             "WeaponAttributes": {
                 "C_Battlecruiser_Weapon_G2G_MP": {
-                    "ExcludeFromHeightAdvantage": true,
-                    "FiringRecoil": 1000000,
-                    "LineOfSightRequired": false,
-                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Arc_ProjectileAssetContainer_MP",
-                    "BaseDamagePerRound": 100,
+                    "BurstPeriodMinTimeMS": 3000,
+                    "BurstPeriodMaxTimeMS": 3000,
+                    "ExcludeFromHeightAdvantage": false,
+                    "LineOfSightRequired": true,
+                    "ProjectileEntityTypeToSpawn": "C_Battlecruiser_AA_ProjectileAssetContainer",
+                    "BaseDamagePerRound": 75,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "AreaOfEffectRadius": 125,
+                    "AreaOfEffectRadius": 25,
                     "FriendlyFireDamageScalar": 1,
                     "NumberOfBursts": 1,
                     "RateOfFire": 2,
-                    "ReloadTimeMS": 15000,
+                    "Turret": {
+                        "RotationSpeed": 200,
+                        "FieldOfFire": 20
+                    },
+                    "Modifiers": {
+                        "1": {
+                            "TargetClass": "Medium",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyMediumPercent",
+                            "Amount": 200
+                        },
+                        "2": {
+                            "TargetClass": "Medium",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyLongPercent",
+                            "Amount": 200
+                        },
+                        "3": {
+                            "TargetClass": "Large, XLarge",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyMediumPercent",
+                            "Amount": 200
+                        },
+                        "4": {
+                            "TargetClass": "Large, XLarge",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyLongPercent",
+                            "Amount": 400
+                        }
+                    },
+                    "ReloadTimeMS": 7000,
                     "RangeAttributesLong": {
-                        "Distance": 3000,
-                        "MinDistance": 350,
-                        "Accuracy": 0
+                        "Distance": 1600,
+                        "Accuracy": 25
                     },
                     "RangeAttributesMedium": {
-                        "Remove": true
+                        "Distance": 1200,
+                        "Accuracy": 50
                     },
                     "RangeAttributesShort": {
-                        "Remove": true
+                        "Distance": 800,
+                        "Accuracy": 100
                     }
                 },
                 "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
@@ -17184,14 +17264,20 @@
                             "Remove": true
                         }
                     },
+                    "StatusEffectsTargetAlignment": "Friend",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "Air",
                     "FriendlyFireDamageScalar": 1,
-                    "ProjectileEntityTypeToSpawn": "SuperWeapon_Broad_New_ProjectileAssetContainer",
+                    "BurstPeriodMinTimeMS": 500,
+                    "RateOfFire": 20,
+                    "BurstPeriodMaxTimeMS": 500,
+                    "ProjectileEntityTypeToSpawn": "G_BaserunnerHealing_ProjectileAssetContainer_MP",
                     "WindUpTimeMS": 0,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "BaseDamagePerRound": 1500,
+                    "BaseDamagePerRound": 0,
                     "AreaOfEffectRadius": 600,
-                    "FiringRecoil": 1000000,
-                    "BaseWreckDamagePerRound": 100,
                     "DamagePacketsPerShot": 0
                 }
             }
@@ -17199,22 +17285,30 @@
 
         // SOBAN BATTLECRUISER
         "C_Sob_Battlecruiser_MP": {
+            "AbilityAttributes": {
+                "Ability_C_SmokeGrenade_BattleCruiser": {
+                    "CooldownTimeSecs": 100
+                }
+            },
             "UnitAttributes": {
                 "Resource1Cost": 850,
                 "Resource2Cost": 350,
-                "MaxHealth": 40000,
+                "MaxHealth": 1350,
                 "PopCapCost": 8,
                 "ProductionTime": 65,
-                "Armour": 1,
-                "AggroRange": 3000,
-                "FireRateDisplay": 2
+                "Armour": 2,
+                "AggroRange": 1500,
+                "FireRateDisplay": 1
             },
             "UnitMovementAttributes": {
-                "Combat": { "MaxDesiredCombatRange": 2950 },
+                "Combat": {
+                    "MinDesiredCombatRange": 800,
+                    "MaxDesiredCombatRange": 1500,
+                    "ActiveCombatApproachMode": "Snipe"
+                },
                 "Dynamics": {
-
-                    "MaxSpeed": 25,
-                    "MaxSpeedTurnRadius": 100,
+                    "MaxSpeed": 100,
+                    "MaxSpeedTurnRadius": 200,
                     "AccelerationTime": 0.9,
                     "BrakingTime": 0.9
                 }
@@ -17226,7 +17320,7 @@
                 "Levels": {
                     "1": {
                         "BuffTooltipLocID": "Officer: 3 armor, +5 speed",
-                        "RequiredExperience": 1000,
+                        "RequiredExperience": 10000,
                         "Buff": {
                             "0": {
                                 "Mode": "Set",
@@ -17241,7 +17335,7 @@
                     },
                     "2": {
                         "BuffTooltipLocID": "Lieutenant: 9 armor, +5 speed",
-                        "RequiredExperience": 3000,
+                        "RequiredExperience": 30000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -17258,7 +17352,7 @@
                     },
                     "3": {
                         "BuffTooltipLocID": "Lt. Commander: 27 armor, +5 speed",
-                        "RequiredExperience": 6000,
+                        "RequiredExperience": 60000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -17275,7 +17369,7 @@
                     },
                     "4": {
                         "BuffTooltipLocID": "Commander: 81 armor, +5 speed",
-                        "RequiredExperience": 8000,
+                        "RequiredExperience": 80000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -17291,7 +17385,7 @@
                     },
                     "5": {
                         "BuffTooltipLocID": "Captain: 243 armor, +5 speed",
-                        "RequiredExperience": 10000,
+                        "RequiredExperience": 100000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65540,
@@ -17309,8 +17403,8 @@
             },
             "WeaponAttributes": {
                 "C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
-                    "BaseDamagePerRound": 50,
-                    "FiringRecoil": 1000000,
+                    "TracerSpeed": 2500,
+                    "BaseDamagePerRound": 100,
                     "DamagePacketsPerShot": 0,
                     "TargetPrioritizationAttributes": {
                         "WeaponEffectivenessWeight": 500,
@@ -17318,17 +17412,91 @@
                         "AngleWeight": 25,
                         "DistanceWeight": 0.05
                     },
-                    "RangeAttributesShort": {
-                        "Accuracy": 50,
-                        "Distance": 1000
+                    "Modifiers": {
+                        "0": {
+                            "Modifier": "CanNotTarget"
+                        },
+                        "1": {
+                            "TargetClass": "Medium",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyMediumPercent",
+                            "Amount": 200
+                        },
+                        "2": {
+                            "TargetClass": "Medium",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyLongPercent",
+                            "Amount": 200
+                        },
+                        "3": {
+                            "TargetClass": "Large, XLarge",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyMediumPercent",
+                            "Amount": 200
+                        },
+                        "4": {
+                            "TargetClass": "Large, XLarge",
+                            "ClassOperator": "Or",
+                            "Modifier": "AccuracyLongPercent",
+                            "Amount": 400
+                        },
+                        "5": {
+                            "Remove": true
+                        },
+                        "6": {
+                            "Remove": true
+                        },
+                        "7": {
+                            "Remove": true
+                        },
+                        "8": {
+                            "Remove": true
+                        },
+                        "9": {
+                            "Remove": true
+                        },
+                        "10": {
+                            "Remove": true
+                        },
+                        "11": {
+                            "Remove": true
+                        },
+                        "12": {
+                            "Remove": true
+                        },
+                        "13": {
+                            "Remove": true
+                        },
+                        "14": {
+                            "Remove": true
+                        },
+                        "15": {
+                            "Remove": true
+                        },
+                        "16": {
+                            "Remove": true
+                        }
+                    },
+                    "ReloadTimeMS": 5000,
+                    "WindUpTimeMS": 1000,
+                    "Turret": {
+                        "RotationSpeed": 200,
+                        "FieldOfFire": 20
+                    },
+                    "RateOfFire": 2,
+                    "BurstPeriodMinTimeMS": 1500,
+                    "BurstPeriodMaxTimeMS": 1500,
+                    "RangeAttributesLong": {
+                        "Distance": 1600,
+                        "Accuracy": 25
                     },
                     "RangeAttributesMedium": {
-                        "Accuracy": 70,
-                        "Distance": 2000
+                        "Distance": 1200,
+                        "Accuracy": 50
                     },
-                    "RangeAttributesLong": {
-                        "Accuracy": 90,
-                        "Distance": 3000
+                    "RangeAttributesShort": {
+                        "Distance": 800,
+                        "Accuracy": 100
                     },
                     "OutputDPS": true
                 },
@@ -17338,14 +17506,20 @@
                             "Remove": true
                         }
                     },
+                    "StatusEffectsTargetAlignment": "Friend",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "Air",
                     "FriendlyFireDamageScalar": 1,
-                    "FiringRecoil": 1000000,
-                    "ProjectileEntityTypeToSpawn": "SuperWeapon_Broad_New_ProjectileAssetContainer",
+                    "BurstPeriodMinTimeMS": 500,
+                    "RateOfFire": 20,
+                    "BurstPeriodMaxTimeMS": 500,
+                    "ProjectileEntityTypeToSpawn": "G_BaserunnerHealing_ProjectileAssetContainer_MP",
                     "WindUpTimeMS": 0,
                     "AreaOfEffectFalloffType": "Quadratic",
-                    "BaseDamagePerRound": 1500,
+                    "BaseDamagePerRound": 0,
                     "AreaOfEffectRadius": 600,
-                    "BaseWreckDamagePerRound": 100,
                     "DamagePacketsPerShot": 0
                 }
             }
@@ -17354,7 +17528,8 @@
         // COALITION BATTLECRUISER FABRICATION
         "Tier_3_C_BattleCruiser": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "God-Emperor level heavy, unaramored undirect fire artillery platform. Effective at PURGING HERETICS from long range with pellets of faith in our God-Emperor of Mainkind.",
+                "LocalizedResearchTitleStringID": "ASSAULT BATTLECRUISER FABRICATION",
+                "LocalizedLongDescriptionStringID": "Fast moving, lightly armored cruiser carrying capital grade weapons.",
                 "Resource1Cost": 500,
                 "Resource2Cost": 250,
                 "ResearchTime": 100
@@ -17365,7 +17540,8 @@
         // SOBAN BATTLECRUISER FABRICATION
         "Tier_3_S_BattleCruiser": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "God-Emperor level heavy, unaramored direct fire artillery platform.  Effective at PURGING HERETICS from long range with supersonic slag of faith in our God-Emperor of Mainkind from holy railguns.",
+                "LocalizedResearchTitleStringID": "ASSAULT BATTLECRUISER FABRICATION",
+                "LocalizedLongDescriptionStringID": "Fast moving, lightly armored cruiser carrying capital grade weapons.",
                 "Resource1Cost": 500,
                 "Resource2Cost": 250,
                 "ResearchTime": 100
@@ -17379,18 +17555,77 @@
                 "Duration": 10,
                 "MaxStacks": 1,
                 "StackingBehaviour": "Replace",
-                "Modifiers": {
+                "BuffsToApplyToTarget": {
                     "0": {
-                        "ModifierType": "Immobilize"
+                        "UnitClass": "Small",
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "1": {
+                                "Name": "",
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 2
+                            }
+                        }
                     },
                     "1": {
-                        "ModifierType": "HealthOverTime",
-                        "HealthOverTimeAttributes": {
-                            "ID": "SmokeGrenade_BattleCruiser",
-                            "Amount": -50,
-                            "MSTickDuration": 500,
-                            "DamageType": "Heal"
+                        "UnitClass": "Medium",
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Add",
+                                "Value": 15
+                            },
+                            "1": {
+                                "Name": "",
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 4
+                            }
                         }
+                    },
+                    "2": {
+                        "UnitClass": "Large, XLarge",
+                        "UseAsPrefix": true,
+                        "UnitType": "",
+                        "BuffSet": {
+                            "0": {
+                                "Attribute": "UnitDynamics_MaxSpeed",
+                                "Mode": "Add",
+                                "Value": 5
+                            },
+                            "1": {
+                                "Name": "",
+                                "Attribute": "Unit_Armour",
+                                "Mode": "Add",
+                                "Value": 4
+                            }
+                        }
+                    }
+                },
+                "Modifiers": {
+                    "0": {
+                        "Remove": true
+                    },
+                    "1": {
+                        "Remove": true
+                    },
+                    "2": {
+                        "Remove": true
+                    },
+                    "3": {
+                        "Remove": true
+                    },
+                    "4": {
+                        "Remove": true
                     }
                 }
             }
@@ -18140,7 +18375,7 @@
                     "RateOfFire": 3,
                     "WindUpTimeMS": 100,
                     "WindDownTimeMS": 500,
-                    "BaseDamagePerRound": 125   ,
+                    "BaseDamagePerRound": 125,
                     "DamagePacketsPerShot": 1,
                     "AreaOfEffectRadius": 180,
                     "AreaOfEffectFalloffType": "Linear",
@@ -18681,9 +18916,9 @@
         "Ability_G_BattleCruiser_Missile_MP": {
             "AbilityViewAttributes": {
                 "InvertFillCooldown": true,
-                "IconName": "Icon-Command-GroundTargetAA",
-                "LocalizedTitleStringID": "UNDIRECT FIRE BARRAGE",
-                "LocalizedLongDescriptionStringID": "Fires punishing Timmy class HE shells, damaging (what a surprise) enemies in small area."
+                "IconName": "Icon-Command-AreaBarrage",
+                "LocalizedTitleStringID": "SMOKE BARRAGE",
+                "LocalizedLongDescriptionStringID": "Cover large area with poison smoke.\n\n Deals 370 damage over 10 seconds. Does not stack."
             }
         },
         "Ability_C_ArtilleryBarrage_Precise": {
@@ -18732,7 +18967,13 @@
             }
         },
         "Ability_G_ArtilleryBarrage_01_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
-        "Ability_G_RailGun_Scope_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
+        "Ability_G_RailGun_Scope_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedLongDescriptionStringID": "Calibrate weapon for short range combat. Fire rate doubled, reload time greatly reduced, range reduced to 700.",
+                "LocalizedTitleStringID": "WEAPON OVERCHARGE",
+                "InvertFillCooldown": true
+            }
+        },
         "Ability_Produce_G_StarHull_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD STARHULL TANK",
@@ -18791,7 +19032,18 @@
                 "LocalizedLongDescriptionStringID": "Moderately armored and heavily armed attack helicopter. Strong against ground targets."
             }
         },
-        "Ability_G_ProduceBattlecruiser_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD GAALSIEN BATTLECRUISER" } },
+        "Ability_G_ProduceBattlecruiser_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "BUILD BATTLESHIP",
+                "LocalizedLongDescriptionStringID": "Heavily armored medium range indirect fire line capital ship. Has to shunt power between weapons and engines. Can be equiped with direct fire torpedo tubes."
+            }
+        },
+        "Ability_C_Sob_ProduceAssaultCruiser_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "BUILD BATTLESHIP",
+                "LocalizedLongDescriptionStringID": "Heavily armored medium range indirect fire line capital ship. Has to shunt power between weapons and engines. Can be equiped with direct fire torpedo tubes."
+            }
+        },
         "Ability_G_ProduceSupportCruiser_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD SUPPORT CRUISER",
@@ -18813,24 +19065,34 @@
         "Ability_K_ProduceExplodingSkimmer_MP": { "AbilityViewAttributes": { "LocalizedTitleStringID": "BUILD CLAYMORE ROOMBA" } },
         "Ability_C_Sob_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Armed with special weapon and sensor disrupting sandbang grenades, AA PDCs and stolen Gaalsien supersonic missiles. Strong against air targets, carriers, humongos groups of units." } },
         "Ability_C_ProduceArtilleryCruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "Heavy ranged weapons platform. Armed with special weapon and sensor disrupting sandbang grenades, AA PDCs and stolen Gaalsien supersonic missiles. Strong against air targets, carriers, humongos groups of units." } },
-        "Ability_C_ProduceBattlecruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "God-Emperor level heavy, unaramored undirect fire artillery weapons platform. Effective at PURGING HERETICS from long range with pellets of faith in our God-Emperor of Mainkind." } },
-        "Ability_C_Sob_ProduceBattlecruiser_MP": { "AbilityViewAttributes": { "LocalizedLongDescriptionStringID": "God-Emperor level heavy, unaramored direct fire artillery platform. Effective at PURGING HERETICS from long range with supersonic slag of faith in our God-Emperor of Mainkind from holy railguns." } },
+        "Ability_C_ProduceBattlecruiser_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "BUILD ASSAULT BATTLECRUISER",
+                "LocalizedLongDescriptionStringID": "Fast, lightly armored cruiser. Armed with heavy weapons, effective at engaging large targets over long distance, flanking. Weak vs strikecraft tye units."
+            }
+        },
+        "Ability_C_Sob_ProduceBattlecruiser_MP": {
+            "AbilityViewAttributes": {
+                "LocalizedTitleStringID": "BUILD ASSAULT BATTLECRUISER",
+                "LocalizedLongDescriptionStringID": "Fast, lightly armored cruiser. Armed with heavy weapons, effective at engaging large targets over long distance, flanking. Weak vs strikecraft tye units."
+            }
+        },
         "Ability_G_ProduceArtilleryCruiser_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD ARTILLERY CRUISER",
-                "LocalizedLongDescriptionStringID": "Heavely armored medium range siegebraking platform. Strong against all ground targets."
+                "LocalizedLongDescriptionStringID": "Heavily armored medium range siegebraking platform. Strong against all ground targets."
             }
         },
         "Ability_K_ProduceArtilleryCruiser": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD ARTILLERY CRUISER",
-                "LocalizedLongDescriptionStringID": "Heavely armored short range siegebraking platform. Strong against all ground targets."
+                "LocalizedLongDescriptionStringID": "Heavily armored short range siegebraking platform. Strong against all ground targets."
             }
         },
         "Ability_Produce_G_Bomber_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD FLYING FORTRESS",
-                "LocalizedLongDescriptionStringID": "Heavely armored anti air Strikecraft. Capable of striking ground targets and exelent at air superioroty duty."
+                "LocalizedLongDescriptionStringID": "Heavily armored anti air Strikecraft. Capable of striking ground targets and exelent at air superioroty duty."
             }
         },
         "Ability_Produce_K_Bomber": {
