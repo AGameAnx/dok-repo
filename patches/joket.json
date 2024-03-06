@@ -16024,7 +16024,63 @@
                 }
             }
         },
-        // COALITION ASSAULT CRUISER
+        "N_DemoCharge_AI": {
+            "UnitAttributes": {
+                "MaxHealth": 690000,
+                "Controllable": false,
+                "Targetable": false,
+                "NonAutoTargetable": true
+            },
+            "AbilityAttributes": {
+                "Ability_Common_ActivateDemoCharge_AI": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
+                    "WarmupTimeSecs": 0
+                },
+                "Ability_Common_ActivatePassiveBlowUPDemo": {
+                    "Autocast": {
+                        "IsAutocastable": true,
+                        "AutocastEnabledOnSpawn": true
+                    },
+                    "WarmupTimeSecs": 0
+                }
+            },
+            "WeaponAttributes": {
+                "N_DemoCharge_Weapon_G2G_MP": {
+                    "EntityTypesToSpawnOnImpact": {
+                        "0": {
+                            "EntityTypeToSpawn": "C_HAC_Smoke_SceneEntity_MP"
+                        }
+                    },
+                    "TracerLength": 5,
+                    "FriendlyFireDamageScalar": 0,
+                    "IsTracer": false,
+                    "StatusEffectsTargetAlignment": "None",
+                    "StatusEffectsSets": {
+                        "0": { "StatusEffects": [ "EMP_CoalitionArtillery_StatusEffect" ] }
+                    },
+                    "StatusEffectsExcludeTargetType": "None",
+                    "TracerSpeed": 0,
+                    "WeaponOwnerFriendlyFireDamageScalar": 6900000,
+                    "WindUpTimeMS": 0,
+                    "WindDownTimeMS": 0,
+                    "NumberOfBursts": 1,
+                    "ProjectileEntityTypeToSpawn": "C_HAC_Smoke_ProjectileAssetContainer",
+                    "RateOfFire": 1,
+                    "BurstPeriodMinTimeMS": 1,
+                    "BurstPeriodMaxTimeMS": 1,
+                    "BaseDamagePerRound": 1,
+                    "DamagePacketsPerShot": 0,
+                    "AreaOfEffectRadius": 160,
+                    "AreaOfEffectFalloffType": "Linear",
+                    "CooldownTimeMS": 0,
+                    "ReloadTimeMS": 10000,
+                    "BaseWreckDamagePerRound": 1
+                }
+            }
+        },
 
         // COALITION ASSAULT CRUISER
         "G_BattleCruiser_MP": {
