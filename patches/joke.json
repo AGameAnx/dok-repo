@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.10.00",
-        "LastUpdate": "2024-03-06",
+        "Version": "1.10.01",
+        "LastUpdate": "2024-03-08",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     //"Global": {
@@ -10626,13 +10626,11 @@
                     }
                 }
             },
-            //"AbilityAttributes": {
-            //    "Ability_C_SmokeGrenade_MP": {
-            //        "UseWeapon": {
-            //            "WeaponID": "yourmom"
-            //        }
-            //    }
-            // },
+            "AbilityAttributes": {
+                "Ability_C_SmokeGrenade_MP": {
+                    "CooldownTimeSecs": 75
+                }
+             },
             "UnitMovementAttributes": {
                 "Combat": {
                     "MaxDesiredCombatRange": 1030
@@ -16096,8 +16094,8 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: +250 hull but -5 speed",
-                        "RequiredExperience": 12500,
+                        "BuffTooltipLocID": "Officer: +250 hull, +3 armor",
+                        "RequiredExperience": 1250,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
@@ -16105,84 +16103,79 @@
                                 "Value": 250
                             },
                             "1": {
-                                "Attribute": 131072,
+                                "Attribute": "Unit_Armour",
                                 "Mode": "Add",
-                                "Value": -5
+                                "Value": 3
                             }
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Lieutenant: +250 hull but -10 speed",
-                        "RequiredExperience": 25000,
+                        "BuffTooltipLocID": "Lieutenant: +250m range to all weapons",
+                        "RequiredExperience": 2500,
                         "Buff": {
                             "0": {
-                                "Attribute": 65536,
+                                "Attribute": "WeaponRange_DistanceLong",
                                 "Mode": "Add",
                                 "Value": 250
-                            },
-                            "1": {
-                                "Attribute": 131072,
-                                "Mode": "Add",
-                                "Value": -10
                             }
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Lt. Commander: +250 hull, -50% cooldown on ability",
-                        "RequiredExperience": 40000,
+                        "BuffTooltipLocID": "Lt. Commander: +750 hull",
+                        "RequiredExperience": 4000,
                         "Buff": {
                             "0": {
                                 "Attribute": 65536,
                                 "Mode": "Add",
-                                "Value": 250
+                                "Value": 750
                             },
                             "1": {
-                                "Name": "Ability_G_BattleCruiser_ArmorBonus_MP",
-                                "Attribute": 16777216,
-                                "Mode": "AddPercent",
-                                "Value": -50
+                                "Remove": true
 
                             },
                             "2": {
-                                "Name": "Ability_G_BattleCruiserActiveRegen",
-                                "Attribute": 16777216,
-                                "Mode": "AddPercent",
-                                "Value": -50
-
+                                "Remove": true
                             },
                             "3": {
-                                "Name": "Ability_G_BattleCruiser_Missile_MP",
-                                "Attribute": 16777216,
-                                "Mode": "AddPercent",
-                                "Value": -50
-
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
                             }
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Commander: +250 hull but -15 speed",
-                        "RequiredExperience": 65000,
+                        "BuffTooltipLocID": "Commander: +250m range to all weapons",
+                        "RequiredExperience": 6500,
                         "Buff": {
                             "0": {
-                                "Attribute": 65536,
+                                "Attribute": "WeaponRange_DistanceLong",
                                 "Mode": "Add",
                                 "Value": 250
                             },
                             "1": {
-                                "Attribute": 131072,
-                                "Mode": "Add",
-                                "Value": -15
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
                             }
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Captain: +1000 hull, +5 armor, but -15 speed",
-                        "RequiredExperience": 80000,
+                        "BuffTooltipLocID": "Smoke Captain: -75% cooldown on smoke barrage",
+                        "RequiredExperience": 8000,
                         "Buff": {
                             "0": {
-                                "Attribute": 65536,
-                                "Mode": "Add",
-                                "Value": 1000
+                                "Name": "Ability_G_BattleCruiser_Missile_MP",
+                                "Attribute": "Ability_CooldownTimeSecs",
+                                "Mode": "AddPercent",
+                                "Value": -75
                             },
                             "1": {
                                 "Attribute": "Unit_Armour",
@@ -16204,7 +16197,8 @@
                     "ExcludeFromHeightAdvantage": true,
                     "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Arc_ProjectileAssetContainer_MP",
                     "BaseDamagePerRound": 90,
-                    "AreaOfEffectRadius": 70,
+                    "AreaOfEffectRadius": 90,
+                    "LeadsTarget": 1,
                     "BurstPeriodMinTimeMS": 200,
                     "BurstPeriodMaxTimeMS": 200,
                     "FriendlyFireDamageScalar": 1,
@@ -16232,7 +16226,7 @@
                     "BaseDamagePerRound": 150,
                     "LeadsTarget": 1,
                     "ReloadTimeMS": 6000,
-                    "AreaOfEffectRadius": 70,
+                    "AreaOfEffectRadius": 90,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
                     "RangeAttributesShort": {
@@ -16317,7 +16311,7 @@
                                         "1": {
                                             "Attribute": "UnitDynamics_MaxSpeed",
                                             "Mode": "Add",
-                                            "Value": 35
+                                            "Value": 45
                                         },
                                         "2": {
                                             "Attribute": "UnitDynamics_AccelerationTime",
@@ -16332,7 +16326,7 @@
                                         "4": {
                                             "Attribute": "Unit_FireRateDisplay",
                                             "Mode": "Add",
-                                            "Value": -2
+                                            "Value": -3
                                         }
                                     }
                                 }
@@ -16391,7 +16385,7 @@
                 "ToggledIconName": "Shunt_Armour_off",
                 "LocalizedTitleStringID": "ENGAGE TRAVEL MODE",
                 "LocalizedShortDescriptionStringID": "TOGGLE",
-                "LocalizedLongDescriptionStringID": "Divert power from weapons to engines: +35 speed, Reload time incresed by a factor of 3.",
+                "LocalizedLongDescriptionStringID": "Divert power from weapons to engines: +45 speed, Reload time incresed by a factor of 3.",
                 "LocalizedToggledTitleStringID": "BATTLESTATIONS",
                 "LocalizedToggledShortDescriptionStringID": "TOGGLE",
                 "LocalizedToggledLongDescriptionStringID": "Shunts main power from engines into weapons."
@@ -17168,83 +17162,91 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: 3 armor, +5 speed",
-                        "RequiredExperience": 10000,
+                        "BuffTooltipLocID": "Officer: +2 armor",
+                        "RequiredExperience": 1000,
                         "Buff": {
                             "0": {
-                                "Mode": "Set",
-                                "Value": 3
-                            },
-                            "1": {
-                                "Attribute": 131072,
+                                "Attribute": "Unit_Armour",
                                 "Mode": "Add",
-                                "Value": 5
+                                "Value": 2
                             }
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Lieutenant: 9 armor, +5 speed",
-                        "RequiredExperience": 30000,
+                        "BuffTooltipLocID": "Lieutenant: +250 to cruiser hull integrity",
+                        "RequiredExperience": 3000,
                         "Buff": {
                             "0": {
-                                "Attribute": 65540,
-                                "Mode": "Set",
-                                "Value": 9
-
-                            },
-                            "1": {
-                                "Attribute": 131072,
+                                "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
-                                "Value": 5
+                                "Value": 250
                             }
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Lt. Commander: 27 armor, +5 speed",
-                        "RequiredExperience": 60000,
+                        "BuffTooltipLocID": "Lt. Commander: +10 weapon damage",
+                        "RequiredExperience": 6000,
                         "Buff": {
                             "0": {
-                                "Attribute": 65540,
-                                "Mode": "Set",
-                                "Value": 27
-                            },
-
-                            "1": {
-                                "Attribute": 131072,
                                 "Mode": "Add",
-                                "Value": 5
+                                "Value": 10
+                            },
+                            "1": {
+                                "Mode": "Add",
+                                "Value": 10
+                            },
+                            "2": {
+                                "Mode": "Add",
+                                "Value": 10
+                            },
+                            "3": {
+                                "Mode": "Add",
+                                "Value": 10
+                            },
+                            "4": {
+                                "Mode": "Add",
+                                "Value": 10
                             }
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Commander: 81 armor, +5 speed",
-                        "RequiredExperience": 80000,
+                        "BuffTooltipLocID": "Commander: +500 to cruiser hull integrity",
+                        "RequiredExperience": 8000,
                         "Buff": {
                             "0": {
-                                "Attribute": 65540,
-                                "Mode": "Set",
-                                "Value": 81
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 500
                             },
                             "1": {
-                                "Attribute": 131072,
-                                "Mode": "Add",
-                                "Value": 5
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
                             }
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Captain: 243 armor, +5 speed",
-                        "RequiredExperience": 100000,
+                        "BuffTooltipLocID": "Captain: Perfect accuracy on weapons",
+                        "RequiredExperience": 10000,
                         "Buff": {
                             "0": {
-                                "Attribute": 65540,
-                                "Mode": "Set",
-                                "Value": 243
+                                "Name": "",
+                                "Attribute": "WeaponRange_AccuracyLong",
+                                "Mode": "Add",
+                                "Value": 75
                             },
                             "1": {
-                                "Attribute": 131072,
+                                "Name": "",
+                                "Attribute": "WeaponRange_AccuracyMedium",
                                 "Mode": "Add",
-                                "Value": 5
+                                "Value": 50
                             }
                         }
                     }
@@ -17259,6 +17261,7 @@
             },
             "WeaponAttributes": {
                 "C_Battlecruiser_Weapon_G2G_MP": {
+                    "OutputDPS": true,
                     "BurstPeriodMinTimeMS": 3000,
                     "BurstPeriodMaxTimeMS": 3000,
                     "ExcludeFromHeightAdvantage": false,
@@ -17327,7 +17330,7 @@
                     "StatusEffectsExcludeTargetType": "Air",
                     "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMinTimeMS": 500,
-                    "RateOfFire": 20,
+                    "RateOfFire": 10,
                     "BurstPeriodMaxTimeMS": 500,
                     "ProjectileEntityTypeToSpawn": "G_BaserunnerHealing_ProjectileAssetContainer_MP",
                     "WindUpTimeMS": 0,
@@ -17375,83 +17378,91 @@
             "ExperienceAttributes": {
                 "Levels": {
                     "1": {
-                        "BuffTooltipLocID": "Officer: 3 armor, +5 speed",
-                        "RequiredExperience": 10000,
+                        "BuffTooltipLocID": "Officer: +3 armor",
+                        "RequiredExperience": 500,
                         "Buff": {
                             "0": {
-                                "Mode": "Set",
-                                "Value": 3
-                            },
-                            "1": {
-                                "Attribute": 131072,
+                                "Attribute": "Unit_Armour",
                                 "Mode": "Add",
-                                "Value": 5
+                                "Value": 3
                             }
                         }
                     },
                     "2": {
-                        "BuffTooltipLocID": "Lieutenant: 9 armor, +5 speed",
-                        "RequiredExperience": 30000,
+                        "BuffTooltipLocID": "Lieutenant: +300 to cruiser hull integrity",
+                        "RequiredExperience": 3500,
                         "Buff": {
                             "0": {
-                                "Attribute": 65540,
-                                "Mode": "Set",
-                                "Value": 9
-
-                            },
-                            "1": {
-                                "Attribute": 131072,
+                                "Attribute": "Unit_MaxHealth",
                                 "Mode": "Add",
-                                "Value": 5
+                                "Value": 300
                             }
                         }
                     },
                     "3": {
-                        "BuffTooltipLocID": "Lt. Commander: 27 armor, +5 speed",
-                        "RequiredExperience": 60000,
+                        "BuffTooltipLocID": "Lt. Commander: +20 weapon damage",
+                        "RequiredExperience": 7000,
                         "Buff": {
                             "0": {
-                                "Attribute": 65540,
-                                "Mode": "Set",
-                                "Value": 27
-                            },
-
-                            "1": {
-                                "Attribute": 131072,
                                 "Mode": "Add",
-                                "Value": 5
+                                "Value": 20
+                            },
+                            "1": {
+                                "Mode": "Add",
+                                "Value": 20
+                            },
+                            "2": {
+                                "Mode": "Add",
+                                "Value": 20
+                            },
+                            "3": {
+                                "Mode": "Add",
+                                "Value": 20
+                            },
+                            "4": {
+                                "Mode": "Add",
+                                "Value": 20
                             }
                         }
                     },
                     "4": {
-                        "BuffTooltipLocID": "Commander: 81 armor, +5 speed",
-                        "RequiredExperience": 80000,
+                        "BuffTooltipLocID": "Commander: +600 to cruiser hull integrity",
+                        "RequiredExperience": 9000,
                         "Buff": {
                             "0": {
-                                "Attribute": 65540,
-                                "Mode": "Set",
-                                "Value": 81
+                                "Attribute": "Unit_MaxHealth",
+                                "Mode": "Add",
+                                "Value": 600
                             },
                             "1": {
-                                "Attribute": 131072,
-                                "Mode": "Add",
-                                "Value": 5
+                                "Remove": true
+                            },
+                            "2": {
+                                "Remove": true
+                            },
+                            "3": {
+                                "Remove": true
+                            },
+                            "4": {
+                                "Remove": true
                             }
                         }
                     },
                     "5": {
-                        "BuffTooltipLocID": "Captain: 243 armor, +5 speed",
-                        "RequiredExperience": 100000,
+                        "BuffTooltipLocID": "Captain: Perfect accuracy on weapons",
+                        "RequiredExperience": 10000,
                         "Buff": {
                             "0": {
-                                "Attribute": 65540,
-                                "Mode": "Set",
-                                "Value": 243
+                                "Name": "",
+                                "Attribute": "WeaponRange_AccuracyLong",
+                                "Mode": "Add",
+                                "Value": 75
                             },
                             "1": {
-                                "Attribute": 131072,
+                                "Name": "",
+                                "Attribute": "WeaponRange_AccuracyMedium",
                                 "Mode": "Add",
-                                "Value": 5
+                                "Value": 50
                             }
                         }
                     }
@@ -17460,7 +17471,7 @@
             "WeaponAttributes": {
                 "C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
                     "TracerSpeed": 2500,
-                    "BaseDamagePerRound": 100,
+                    "BaseDamagePerRound": 150,
                     "DamagePacketsPerShot": 0,
                     "TargetPrioritizationAttributes": {
                         "WeaponEffectivenessWeight": 500,
@@ -17533,15 +17544,15 @@
                             "Remove": true
                         }
                     },
-                    "ReloadTimeMS": 5000,
+                    "ReloadTimeMS": 3000,
                     "WindUpTimeMS": 1000,
                     "Turret": {
                         "RotationSpeed": 200,
                         "FieldOfFire": 20
                     },
-                    "RateOfFire": 2,
-                    "BurstPeriodMinTimeMS": 1500,
-                    "BurstPeriodMaxTimeMS": 1500,
+                    "RateOfFire": 1,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
                     "RangeAttributesLong": {
                         "Distance": 1600,
                         "Accuracy": 25
@@ -17569,7 +17580,7 @@
                     "StatusEffectsExcludeTargetType": "Air",
                     "FriendlyFireDamageScalar": 1,
                     "BurstPeriodMinTimeMS": 500,
-                    "RateOfFire": 20,
+                    "RateOfFire": 10,
                     "BurstPeriodMaxTimeMS": 500,
                     "ProjectileEntityTypeToSpawn": "G_BaserunnerHealing_ProjectileAssetContainer_MP",
                     "WindUpTimeMS": 0,
@@ -19124,13 +19135,13 @@
         "Ability_C_ProduceBattlecruiser_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD ASSAULT BATTLECRUISER",
-                "LocalizedLongDescriptionStringID": "Fast, lightly armored cruiser. Armed with heavy weapons, effective at engaging large targets over long distance, flanking. Weak vs strikecraft tye units."
+                "LocalizedLongDescriptionStringID": "Fast, lightly armored cruiser. Armed with heavy weapons, effective at engaging large targets over long distance, flanking. Weak vs strikecraft type units."
             }
         },
         "Ability_C_Sob_ProduceBattlecruiser_MP": {
             "AbilityViewAttributes": {
                 "LocalizedTitleStringID": "BUILD ASSAULT BATTLECRUISER",
-                "LocalizedLongDescriptionStringID": "Fast, lightly armored cruiser. Armed with heavy weapons, effective at engaging large targets over long distance, flanking. Weak vs strikecraft tye units."
+                "LocalizedLongDescriptionStringID": "Fast, lightly armored cruiser. Armed with heavy weapons, effective at engaging large targets over long distance, flanking. Weak vs strikecraft type units."
             }
         },
         "Ability_G_ProduceArtilleryCruiser_MP": {
