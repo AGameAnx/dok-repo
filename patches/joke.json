@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.10.01",
-        "LastUpdate": "2024-03-08",
+        "Version": "1.10.02",
+        "LastUpdate": "2024-03-09",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     //"Global": {
@@ -8097,12 +8097,12 @@
         // When the nuke is used, spawn an entity here that gives vision to teammates.
         "N_CruiseMissile_Sight": {
             "UnitAttributes": {
-                "MaxHealth": 10000,
+                "MaxHealth": 5000,
                 "PopCapCost": 0,
                 "ContactRadius": 0,
                 "SensorRadius": 0,
                 "DamageReceivedMultiplier": 1,
-                "AccuracyReceivedMultiplier": 0
+                "AccuracyReceivedMultiplier": 1
             },
             "AbilityAttributes": {
                 "Ability_C_CruiseSightSelfDestruct": {
@@ -16176,16 +16176,6 @@
                                 "Attribute": "Ability_CooldownTimeSecs",
                                 "Mode": "AddPercent",
                                 "Value": -75
-                            },
-                            "1": {
-                                "Attribute": "Unit_Armour",
-                                "Mode": "Add",
-                                "Value": 5
-                            },
-                            "2": {
-                                "Attribute": 131072,
-                                "Mode": "Add",
-                                "Value": -15
                             }
                         }
                     }
@@ -16868,6 +16858,7 @@
                     },
                     "ProjectileEntityTypeToSpawn": "G_Artillery_Shell_ProjectileAssetContainer_MP",
                     "IsTracer": false,
+                    "LeadsTarget": 1,
                     "TracerSpeed": 0,
                     "FriendlyFireDamageScalar": 1,
                     "TracerLength": 5,
@@ -16898,7 +16889,7 @@
                     "LineOfSightRequired": false,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesShort": {
-                        "Distance": 2000,
+                        "Distance": 2300,
                         "Accuracy": 100
                     }
                 }
@@ -17015,6 +17006,7 @@
                     "IsTracer": false,
                     "FriendlyFireDamageScalar": 1,
                     "TracerSpeed": 0,
+                    "LeadsTarget": 1,
                     "TracerLength": 5,
                     "BaseDamagePerRound": 150,
                     "DamagePacketsPerShot": 2,
@@ -17043,7 +17035,7 @@
                     "LineOfSightRequired": false,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesShort": {
-                        "Distance": 2000,
+                        "Distance": 2300,
                         "Accuracy": 100
                     }
                 },
