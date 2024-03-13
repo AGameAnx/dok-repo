@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.10.02",
-        "LastUpdate": "2024-03-09",
+        "Version": "1.10.03",
+        "LastUpdate": "2024-03-13",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     //"Global": {
@@ -1031,9 +1031,9 @@
                         "0": { "StatusEffects": [ "C_Rachel_EMP_StatusEffect" ] }
                     },
                     "StatusEffectsExcludeTargetType": "None",
-                    "BaseDamagePerRound": 20000,
+                    "BaseDamagePerRound": 10000,
                     "AreaOfEffectRadius": 1000,
-                    "DamagePacketsPerShot": 10,
+                    "DamagePacketsPerShot": 20,
                     "AreaOfEffectFalloffType": "Linear",
                     "ExcludeFromHeightAdvantage": true,
                     "Modifiers": {
@@ -1047,7 +1047,7 @@
                             "TargetClass": "Carrier",
                             "ClassOperator": "Or",
                             "Modifier": "DamagePercent",
-                            "Amount": 50
+                            "Amount": 90
                         }
                     },
                     "RangeAttributesLong": {
@@ -13107,7 +13107,7 @@
                     "BurstPeriodMaxTimeMS": 250,
                     "AreaOfEffectRadius": 200,
                     "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
-                    "WindUpTimeMS": 750,
+                    "WindUpTimeMS": 500,
                     "RangeAttributesShort": {
                         "Accuracy": 0
                     },
@@ -13365,7 +13365,7 @@
                     "BurstPeriodMaxTimeMS": 250,
                     "AreaOfEffectRadius": 200,
                     "ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
-                    "WindUpTimeMS": 750,
+                    "WindUpTimeMS": 500,
                     "RangeAttributesShort": {
                         "Accuracy": 0
                     },
@@ -18657,10 +18657,9 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 120,
-                    "AccelerationTime": 2,
-                    "BrakingTime": 4,
-                    "MaxSpeedTurnRadius": 500
+                    "MaxSpeed": 60,
+                    "AccelerationTime": 1,
+                    "BrakingTime": 1
                 }
             },
             "AbilityAttributes": {
