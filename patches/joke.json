@@ -9095,7 +9095,7 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 65
+                    "MaxSpeed": 60
                 }
             },
             "ExperienceAttributes": {
@@ -14955,7 +14955,8 @@
             "UnitMovementAttributes": {
                 "Dynamics": {
                     "MaxSpeed": 110,
-                    "MaxSpeedTurnRadius": 10
+                    "MaxSpeedTurnRadius": 10,
+                    "MinCruiseSpeed": 110
                 }
             },
             "StorageAttributes": {
@@ -15148,7 +15149,8 @@
             "UnitMovementAttributes": {
                 "Dynamics": {
                     "MaxSpeed": 150,
-                    "MaxSpeedTurnRadius": 10
+                    "MaxSpeedTurnRadius": 10,
+                    "MinCruiseSpeed": 110
                 }
             },
             "StorageAttributes": {
@@ -16785,6 +16787,9 @@
                 "Hover": { "TurnAcceleration": 5 }
             },
             "AbilityAttributes": {
+                "Ability_G_HonorSwitchMode": {
+                    "CooldownTimeSecs": 115
+                },
                 "Ability_G_HonorCruiserRegen": {
                     "ApplyStatusEffect": {
                         "Regen_HonorGuard_StatusEffect": {
@@ -16842,44 +16847,33 @@
                     }
                 },
                 "G_HonorGuard_Weapon_G2A_MP": {
-                    "WindUpTimeMS": 500,
+                    "BaseDamagePerRound": 150,
+                    "DamagePacketsPerShot": 2,
+                    "ReloadTimeMS": 9000,
+                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectFalloffType": "None",
+                    "RateOfFire": 2,
+                    "NumberOfBursts": 1,
+                    "WindUpTimeMS": 0,
                     "FriendlyFireDamageScalar": 1,
-                    "BaseDamagePerRound": 125,
-                    "ReloadTimeMS": 4000,
-                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
+                    "ProjectileEntityTypeToSpawn": "G_Artillery_Shell_ProjectileAssetContainer_MP",
                     "RangeAttributesShort": {
-                        "Distance": 600
+                        "Distance": 2300,
+                        "Accuracy": 0
                     },
                     "RangeAttributesMedium": {
-                        "Distance": 750
+                        "Distance": 2300,
+                        "Accuracy": 0
                     },
                     "RangeAttributesLong": {
-                        "Distance": 1000
+                        "Distance": 2300,
+                        "Accuracy": 0
                     },
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Air",
                             "ClassOperator": "Or"
-                        }
-                    }
-                },
-                "G_HonorGuard_Weapon_G2G_CAT_MP": {
-                    "Turret": {
-                        "FieldOfView": 360,
-                        "FieldOfFire": 30
-                    },
-                    "ProjectileEntityTypeToSpawn": "G_Artillery_Shell_ProjectileAssetContainer_MP",
-                    "IsTracer": false,
-                    "LeadsTarget": 1,
-                    "TracerSpeed": 0,
-                    "FriendlyFireDamageScalar": 1,
-                    "TracerLength": 5,
-                    "BaseDamagePerRound": 150,
-                    "DamagePacketsPerShot": 2,
-                    "ReloadTimeMS": 9000,
-                    "CooldownTimeMS": 1000,
-                    "NumberOfBursts": 1,
-                    "Modifiers": {
+                        },
                         "1": {
                             "TargetClass": "Small",
                             "ClassOperator": "Or",
@@ -16892,17 +16886,30 @@
                             "Modifier": "DamagePercent",
                             "Amount": 60
                         }
-                    },
+                    }
+                },
+                "G_HonorGuard_Weapon_G2G_CAT_MP": {
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
+                    "IsTracer": false,
+                    "FriendlyFireDamageScalar": 1,
+                    "TracerSpeed": 0,
+                    "LeadsTarget": 0,
+                    "TracerLength": 5,
+                    "BaseDamagePerRound": 125,
+                    "DamagePacketsPerShot": 1,
+                    "RateOfFire": 1,
+                    "ReloadTimeMS": 4000,
+                    "CooldownTimeMS": 1000,
+                    "NumberOfBursts": 1,
                     "BurstPeriodMinTimeMS": 1000,
                     "BurstPeriodMaxTimeMS": 1000,
-                    "RateOfFire": 1,
-                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectRadius": 50,
                     "ExcludeFromHeightAdvantage": true,
                     "LineOfSightRequired": false,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesShort": {
-                        "Distance": 2300,
-                        "Accuracy": 100
+                        "Accuracy": 100,
+                        "Distance": 1000
                     }
                 }
             }
@@ -16990,6 +16997,9 @@
                 "Hover": { "TurnAcceleration": 5 }
             },
             "AbilityAttributes": {
+                "Ability_G_HonorSwitchMode": {
+                    "CooldownTimeSecs": 115
+                },
                 "Ability_G_HonorCruiserRegen": {
                     "ApplyStatusEffect": {
                         "Regen_HonorGuard_StatusEffect": {
@@ -17009,48 +17019,6 @@
                 }
             },
             "WeaponAttributes": {
-                "G_HonorGuard_Weapon_G2G_CAT_MP": {
-                    "Turret": {
-                        "FieldOfView": 360,
-                        "FieldOfFire": 30
-                    },
-                    "ProjectileEntityTypeToSpawn": "K_Artillery_Shell_ProjectileAssetContainer_MP",
-                    "IsTracer": false,
-                    "FriendlyFireDamageScalar": 1,
-                    "TracerSpeed": 0,
-                    "LeadsTarget": 1,
-                    "TracerLength": 5,
-                    "BaseDamagePerRound": 150,
-                    "DamagePacketsPerShot": 2,
-                    "ReloadTimeMS": 9000,
-                    "CooldownTimeMS": 1000,
-                    "NumberOfBursts": 1,
-                    "Modifiers": {
-                        "1": {
-                            "TargetClass": "Small",
-                            "ClassOperator": "Or",
-                            "Modifier": "DamagePercent",
-                            "Amount": 50
-                        },
-                        "2": {
-                            "TargetClass": "Carrier",
-                            "ClassOperator": "Or",
-                            "Modifier": "DamagePercent",
-                            "Amount": 60
-                        }
-                    },
-                    "BurstPeriodMinTimeMS": 1000,
-                    "BurstPeriodMaxTimeMS": 1000,
-                    "RateOfFire": 1,
-                    "AreaOfEffectRadius": 100,
-                    "ExcludeFromHeightAdvantage": true,
-                    "LineOfSightRequired": false,
-                    "AreaOfEffectFalloffType": "Quadratic",
-                    "RangeAttributesShort": {
-                        "Distance": 2300,
-                        "Accuracy": 100
-                    }
-                },
                 "G_HonorGuardRailgun_Weapon_G2G_MP": {
                     "TracerSpeed": 2000,
                     "BaseDamagePerRound": 250,
@@ -17084,24 +17052,68 @@
                     }
                 },
                 "G_HonorGuard_Weapon_G2A_MP": {
-                    "WindUpTimeMS": 500,
+                    "BaseDamagePerRound": 150,
+                    "DamagePacketsPerShot": 2,
+                    "AreaOfEffectRadius": 100,
+                    "AreaOfEffectFalloffType": "None",
+                    "ReloadTimeMS": 9000,
+                    "RateOfFire": 2,
+                    "NumberOfBursts": 1,
+                    "WindUpTimeMS": 0,
                     "FriendlyFireDamageScalar": 1,
-                    "ReloadTimeMS": 4000,
-                    "BaseDamagePerRound": 125,
-                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
+                    "ProjectileEntityTypeToSpawn": "K_Artillery_Shell_ProjectileAssetContainer_MP",
+                    "RangeAttributesShort": {
+                        "Distance": 2300,
+                        "Accuracy": 0
+                    },
+                    "RangeAttributesMedium": {
+                        "Distance": 2300,
+                        "Accuracy": 0
+                    },
+                    "RangeAttributesLong": {
+                        "Distance": 2300,
+                        "Accuracy": 0
+                    },
                     "Modifiers": {
                         "0": {
                             "TargetClass": "Air",
                             "ClassOperator": "Or"
+                        },
+                        "1": {
+                            "TargetClass": "Small",
+                            "ClassOperator": "Or",
+                            "Modifier": "DamagePercent",
+                            "Amount": 50
+                        },
+                        "2": {
+                            "TargetClass": "Carrier",
+                            "ClassOperator": "Or",
+                            "Modifier": "DamagePercent",
+                            "Amount": 60
                         }
-                    },
+                    }
+                },
+                "G_HonorGuard_Weapon_G2G_CAT_MP": {
+                    "ProjectileEntityTypeToSpawn": "G_Carrier_DefaultMissiles_ProjectileAssetContainer_MP",
+                    "IsTracer": false,
+                    "FriendlyFireDamageScalar": 1,
+                    "TracerSpeed": 0,
+                    "LeadsTarget": 0,
+                    "TracerLength": 5,
+                    "BaseDamagePerRound": 125,
+                    "DamagePacketsPerShot": 1,
+                    "RateOfFire": 1,
+                    "ReloadTimeMS": 4000,
+                    "CooldownTimeMS": 1000,
+                    "NumberOfBursts": 1,
+                    "BurstPeriodMinTimeMS": 1000,
+                    "BurstPeriodMaxTimeMS": 1000,
+                    "AreaOfEffectRadius": 50,
+                    "ExcludeFromHeightAdvantage": true,
+                    "LineOfSightRequired": false,
+                    "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesShort": {
-                        "Distance": 600
-                    },
-                    "RangeAttributesMedium": {
-                        "Distance": 750
-                    },
-                    "RangeAttributesLong": {
+                        "Accuracy": 100,
                         "Distance": 1000
                     }
                 }
@@ -17111,7 +17123,7 @@
         // GAALSIEN/KHAANEPH HONORGUARD FABRICATION
         "Tier_3_G_HonorCruiser": {
             "ResearchItemAttributes": {
-                "LocalizedLongDescriptionStringID": "Ultra-heavy weapons platform. Effective against air targets everywhere.\n\n[84a1e8]Unlocks Honorguard Cruiser for fabrication.",
+                "LocalizedLongDescriptionStringID": "Ultra-heavy weapons platform. Effective against air targets. Can be upgraded to serve as artillery platform.\n\n[84a1e8]Unlocks Honorguard Cruiser for fabrication.",
                 "Resource1Cost": 550,
                 "Resource2Cost": 200,
                 "ResearchTime": 60
@@ -17121,8 +17133,8 @@
         // GAALSIEN/KHAANEPH HONORGUARD ANTI AIR UPGRADE
         "Research_Buff_G_HonorCruiser_Defenses": {
             "ResearchItemAttributes": {
-                "LocalizedResearchTitleStringID": "HONORGUARD CLOSE RANGE DEFENSES",
-                "LocalizedLongDescriptionStringID": "[84a1e8]Unlocks an ability to reroute power form main weapon to close range anti-ground undirect fire missile weapons for 25 seconds.\n\n cough cough... What is that you smoking dude? Our armor?",
+                "LocalizedResearchTitleStringID": "HONORGUARD CRUISER - ARTILLERY MODE",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Unlocks an ability to reroute power from main weapon to long artillery anti-ground undirect fire weapons for 25 seconds.\n\n cough cough... What is that you smoking dude? Our armor?",
                 "Resource1Cost": 300,
                 "Resource2Cost": 200,
                 "ResearchTime": 45
@@ -19035,8 +19047,9 @@
         "Ability_G_HonorSwitchMode": {
             "AbilityViewAttributes": {
                 "InvertFillCooldown": true,
-                "LocalizedTitleStringID": "ENABLE DEFENCE SYSTEMS",
-                "LocalizedLongDescriptionStringID": "For 25 seconds power from main weapon rerouted to anti-ground missile defences."
+                "IconName": "Icon-Command-AreaBarrage",
+                "LocalizedTitleStringID": "ENABLE LONG RANGE ARTILLERY",
+                "LocalizedLongDescriptionStringID": "For 25 seconds power from main weapon rerouted to artillery weapons."
             }
         },
         "Ability_G_ArtilleryBarrage_01_MP": { "AbilityViewAttributes": { "InvertFillCooldown": true } },
