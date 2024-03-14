@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.10.03",
-        "LastUpdate": "2024-03-13",
+        "Version": "1.10.04",
+        "LastUpdate": "2024-03-14",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     //"Global": {
@@ -13394,11 +13394,23 @@
             "StatusEffectAttributes": {
                 "Duration": 4,
                 "Modifiers": {
+                    "0": {
+                        "ModifierType": "DisableAllWeapons"
+                    },
                     "1": {
-                        "ModifierType": "DisableAbilities"
+                        "Remove": true
                     },
                     "2": {
-                        "ModifierType": "DisableAllWeapons"
+                        "Remove": true
+                    },
+                    "3": {
+                        "Remove": true
+                    },
+                    "4": {
+                        "Remove": true
+                    },
+                    "5": {
+                        "Remove": true
                     }
                 }
             }
@@ -14942,7 +14954,7 @@
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
-                    "MaxSpeed": 150,
+                    "MaxSpeed": 110,
                     "MaxSpeedTurnRadius": 10
                 }
             },
