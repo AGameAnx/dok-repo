@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.10.04",
-        "LastUpdate": "2024-03-14",
+        "Version": "1.10.05",
+        "LastUpdate": "2024-03-25",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     //"Global": {
@@ -9088,6 +9088,8 @@
             "UnitAttributes": {
                 "Resource1Cost": 200,
                 "Resource2Cost": 30,
+                "SensorRadius": 1500,
+                "ContactRadius": 1700,
                 "MaxHealth": 1600,
                 "PriorityAsTarget": -250,
                 "Armour": 1,
@@ -9282,6 +9284,7 @@
                 "Resource1Cost": 200,
                 "Resource2Cost": 30,
                 "MaxHealth": 1500,
+                "ContactRadius": 1500,
                 "PriorityAsTarget": -220,
                 "Armour": 1,
                 "FireRateDisplay": 3
@@ -9580,7 +9583,9 @@
                 "MaxHealth": 2900,
                 "Armour": 5,
                 "PopCapCost": 5,
-                "PriorityAsTarget": -10
+                "PriorityAsTarget": -10,
+                "SensorRadius": 1500,
+                "ContactRadius": 2000
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -9998,8 +10003,8 @@
                 "MaxHealth": 4000,
                 "Armour": 4,
                 "ProductionTime": 50,
-                "SensorRadius": 1450,
-                "ContactRadius": 1600,
+                "SensorRadius": 1650,
+                "ContactRadius": 1800,
                 "FireRateDisplay": 3
             },
             "UnitMovementAttributes": {
@@ -10546,11 +10551,11 @@
                 "Resource1Cost": 270,
                 "Resource2Cost": 20,
                 "MaxHealth": 1570,
-                "SensorRadius": 1100,
+                "SensorRadius": 1500,
                 "ProductionTime": 17,
                 "Armour": 3,
                 "PopCapCost": 2,
-                "AggroRange": 1100
+                "AggroRange": 1200
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -10633,7 +10638,7 @@
              },
             "UnitMovementAttributes": {
                 "Combat": {
-                    "MaxDesiredCombatRange": 1030
+                    "MaxDesiredCombatRange": 1130
                 },
                 "Dynamics": {
                     "MaxSpeed": 83
@@ -10979,8 +10984,8 @@
                 "Resource1Cost": 300,
                 "Resource2Cost": 30,
                 "ProductionTime": 18,
-                "SensorRadius": 1100,
-                "ContactRadius": 1250,
+                "SensorRadius": 1300,
+                "ContactRadius": 1550,
                 "Armour": 7,
                 "MaxHealth": 400,
                 "FireRateDisplay": 5
@@ -11344,6 +11349,8 @@
             "UnitAttributes": {
                 "AggroRange": 1300,
                 "MaxHealth": 470,
+                "SensorRadius": 900,
+                "ContactRadius": 1150,
                 "Armour": 2,
                 "ProductionTime": 12,
                 "PriorityAsTarget": 2
@@ -11532,6 +11539,8 @@
             "UnitAttributes": {
                 "MaxHealth": 470,
                 "Armour": 2,
+                "SensorRadius": 900,
+                "ContactRadius": 1150,
                 "ProductionTime": 12,
                 "PriorityAsTarget": 2
             },
@@ -11727,8 +11736,8 @@
         "G_SandSkimmer_MP": {
             "UnitAttributes": {
                 "MaxHealth": 500,
-                "SensorRadius": 1200,
-                "ContactRadius": 1300,
+                "SensorRadius": 1000,
+                "ContactRadius": 1100,
                 "ProductionTime": 10,
                 "PriorityAsTarget": 3,
                 "FireRateDisplay": 3
@@ -11859,8 +11868,8 @@
         "K_Sandskimmer_MP": {
             "UnitAttributes": {
                 "MaxHealth": 500,
-                "SensorRadius": 1200,
-                "ContactRadius": 1300,
+                "SensorRadius": 1000,
+                "ContactRadius": 1100,
                 "ProductionTime": 10,
                 "PriorityAsTarget": 3,
                 "FireRateDisplay": 3
@@ -14031,6 +14040,8 @@
                 "Armour": 8,
                 "MaxHealth": 1400,
                 "ProductionTime": 20,
+                "SensorRadius": 1100,
+                "ContactRadius": 1250,
                 "PriorityAsTarget": -10,
                 "AggroRange": 1001,
                 "UnitPositionReaggroConditions": "TargetWithinAggroRange"
@@ -14172,8 +14183,8 @@
                 "ProductionTime": 22,
                 "Armour": 0,
                 "PriorityAsTarget": -10,
-                "SensorRadius": 1600,
-                "ContactRadius": 1800
+                "SensorRadius": 1800,
+                "ContactRadius": 2000
             },
             "AbilityAttributes": {
                 /*"Ability_G_MissileCraft_GlobalAA_MP": {
@@ -14403,8 +14414,8 @@
                 "ProductionTime": 22,
                 "Armour": 0,
                 "PriorityAsTarget": -10,
-                "SensorRadius": 1600,
-                "ContactRadius": 1800
+                "SensorRadius": 1800,
+                "ContactRadius": 2000
             },
             "AbilityAttributes": {
                 /*"Ability_G_MissileCraft_GlobalAA_MP": {
@@ -15523,7 +15534,9 @@
                 "Resource2Cost": 140,
                 "PopCapCost": 3,
                 "ProductionTime": 22,
-                "FireRateDisplay": 4
+                "FireRateDisplay": 4,
+                "SensorRadius": 2400,
+                "ContactRadius": 2800
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -15710,7 +15723,9 @@
                 "Resource2Cost": 140,
                 "PopCapCost": 3,
                 "ProductionTime": 22,
-                "FireRateDisplay": 4
+                "FireRateDisplay": 4,
+                "SensorRadius": 2400,
+                "ContactRadius": 2800
             },
             "UnitMovementAttributes": {
                 "Dynamics": {
@@ -16773,7 +16788,9 @@
                 "MaxHealth": 2400,
                 "PopCapCost": 6,
                 "ProductionTime": 50,
-                "FireRateDisplay": 4
+                "FireRateDisplay": 4,
+                "SensorRadius": 2000,
+                "ContactRadius": 2800
             },
             "DetectableAttributes": {
                 "TimeVisibleAfterFiring": 4500
@@ -16898,7 +16915,7 @@
                     "BaseDamagePerRound": 125,
                     "DamagePacketsPerShot": 1,
                     "RateOfFire": 1,
-                    "ReloadTimeMS": 4000,
+                    "ReloadTimeMS": 5500,
                     "CooldownTimeMS": 1000,
                     "NumberOfBursts": 1,
                     "BurstPeriodMinTimeMS": 1000,
@@ -16983,7 +17000,9 @@
                 "MaxHealth": 2400,
                 "PopCapCost": 6,
                 "ProductionTime": 50,
-                "FireRateDisplay": 4
+                "FireRateDisplay": 4,
+                "SensorRadius": 1500,
+                "ContactRadius": 2800
             },
             "DetectableAttributes": {
                 "TimeVisibleAfterFiring": 4500
@@ -17103,7 +17122,7 @@
                     "BaseDamagePerRound": 125,
                     "DamagePacketsPerShot": 1,
                     "RateOfFire": 1,
-                    "ReloadTimeMS": 4000,
+                    "ReloadTimeMS": 5500,
                     "CooldownTimeMS": 1000,
                     "NumberOfBursts": 1,
                     "BurstPeriodMinTimeMS": 1000,
@@ -18276,8 +18295,8 @@
                 "Armour": 12,
                 "ProductionTime": 45,
                 "PopCapCost": 5,
-                "SensorRadius": 1400,
-                "ContactRadius": 1550,
+                "SensorRadius": 1500,
+                "ContactRadius": 1650,
                 "FireRateDisplay": 4
             },
             "AbilityAttributes": {
