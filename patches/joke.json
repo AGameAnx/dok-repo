@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.10.05",
-        "LastUpdate": "2024-03-25",
+        "Version": "1.10.06",
+        "LastUpdate": "2024-03-31",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     //"Global": {
@@ -12827,6 +12827,7 @@
         // COALITION RAILGUN FABRICATION
         "Tier_2_C_RailGun": {
             "ResearchItemAttributes": {
+                "LocalizedResearchTitleStringID": "RAIL-SHOTGUN FABRICATION",
                 "Resource1Cost": 200,
                 "Resource2Cost": 100,
                 "ResearchTime": 45
@@ -14186,23 +14187,7 @@
                 "SensorRadius": 1800,
                 "ContactRadius": 2000
             },
-            "AbilityAttributes": {
-                /*"Ability_G_MissileCraft_GlobalAA_MP": {
-                    "ApplyStatusEffect": {
-                        "Upgraded_AARadio_StatusEffect": {
-                            "Modifiers": {
-                                "0": {
-                                    "SwapFromWeaponID": "af",
-                                    "SwapToWeaponID": "das"
-                                },
-                                "1": {
-                                    "SwapFromWeaponID": "das",
-                                    "SwapToWeaponID": "dqw"
-                                }
-                            }
-                        }
-                    }
-                },*/
+            "AbilityAttributes": {                
                 "Ability_G_MissileShipRegen": {
                     "ApplyStatusEffect": {
                         "Regen_MissileShip_StatusEffect": {
@@ -16667,7 +16652,7 @@
         "Research_Buff_G_BattleCruiser_AntiAir": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "BATTLESHIP - TORPEDO TUBES",
-                "LocalizedLongDescriptionStringID": "Unlock Battleship''s high damage direct fire torpedos.\n\n[84a1e8]Enables direct autofire capabilities.",
+                "LocalizedLongDescriptionStringID": "Unlock Battleship's high damage direct fire torpedos.\n\n[84a1e8]Enables direct autofire capabilities.",
                 "Resource1Cost": 300,
                 "Resource2Cost": 150,
                 "ResearchTime": 45,
@@ -16692,7 +16677,7 @@
         "Research_Buff_S_AssaultCruiser_AntiAir": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "BATTLESHIP - TORPEDO TUBES",
-                "LocalizedLongDescriptionStringID": "Unlock Battleship''s high damage direct fire torpedos.\n\n[84a1e8]Enables direct autofire capabilities.",
+                "LocalizedLongDescriptionStringID": "Unlock Battleship's high damage direct fire torpedos.\n\n[84a1e8]Enables direct autofire capabilities.",
                 "Resource1Cost": 300,
                 "Resource2Cost": 150,
                 "ResearchTime": 45,
@@ -16788,9 +16773,7 @@
                 "MaxHealth": 2400,
                 "PopCapCost": 6,
                 "ProductionTime": 50,
-                "FireRateDisplay": 4,
-                "SensorRadius": 2000,
-                "ContactRadius": 2800
+                "FireRateDisplay": 4
             },
             "DetectableAttributes": {
                 "TimeVisibleAfterFiring": 4500
@@ -17000,9 +16983,7 @@
                 "MaxHealth": 2400,
                 "PopCapCost": 6,
                 "ProductionTime": 50,
-                "FireRateDisplay": 4,
-                "SensorRadius": 1500,
-                "ContactRadius": 2800
+                "FireRateDisplay": 4
             },
             "DetectableAttributes": {
                 "TimeVisibleAfterFiring": 4500
@@ -17153,7 +17134,7 @@
         "Research_Buff_G_HonorCruiser_Defenses": {
             "ResearchItemAttributes": {
                 "LocalizedResearchTitleStringID": "HONORGUARD CRUISER - ARTILLERY MODE",
-                "LocalizedLongDescriptionStringID": "[84a1e8]Unlocks an ability to reroute power from main weapon to long artillery anti-ground undirect fire weapons for 25 seconds.\n\n cough cough... What is that you smoking dude? Our armor?",
+                "LocalizedLongDescriptionStringID": "[84a1e8]Unlocks an ability to reroute power from main weapon to long range artillery weapons for 25 seconds.\n\n cough cough... What is that you smoking dude? Our armor?",
                 "Resource1Cost": 300,
                 "Resource2Cost": 200,
                 "ResearchTime": 45
@@ -17165,7 +17146,7 @@
             "AbilityViewAttributes": {
                 "IconName": "Icon-Command-Overdrive",
                 "LocalizedTitleStringID": "REACTOR OVERDRIVE",
-                "LocalizedLongDescriptionStringID": "Overcharges nearby allied unit's reactors for 10 seconds in 600m area. Improves reactive armor and drive systems. effects:\nTo small units: +15 speed, +2 armor\nTo medium units: +15 speed, +4 armor\nTo cruisers: +5 speed, +4 armor."
+                "LocalizedLongDescriptionStringID": "Overcharges nearby allied unit's reactors for 10 seconds in 600m area. Improves reactive armor and drive systems. effects:\nTo small units: +15 speed, +2 armor\nTo medium units: +15 speed, +4 armor\nTo cruisers: +5 speed, +4 armor\nTo carriers: no shit."
             }
         },
 
@@ -18789,7 +18770,7 @@
                     "NumberOfBursts": 1,
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesLong": {
-                        "Distance": 650
+                        "Distance": 900
                     }
                 },
                 "K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
@@ -19248,7 +19229,9 @@
                 "ForcePassiveVisuals": true,
                 "WillToggleDialIndicator": false,
                 "ForceHideAutocastSprite": true,
-                "LocalizedLongDescriptionStringID": "Passsive self repair system."
+                "LocalizedTitleStringID": "PASSIVE SELF-REPAIR",
+                "LocalizedShortDescriptionStringID": "PASSIVE ABILITY",
+                "LocalizedLongDescriptionStringID": "Passive self repair system."
             }
         },
         "Ability_C_Sob_SupportCruiser_AA": {
