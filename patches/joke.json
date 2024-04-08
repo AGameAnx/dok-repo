@@ -8,7 +8,7 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.10.08",
+        "Version": "1.10.09",
         "LastUpdate": "2024-04-08",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
@@ -13445,7 +13445,7 @@
                 "Duration": 4,
                 "Modifiers": {
                     "0": {
-                        "ModifierType": "DisableAllWeapons"
+                        "ModifierType": "Immobilize"
                     },
                     "1": {
                         "Remove": true
@@ -16250,14 +16250,17 @@
                     "NumberOfBursts": 1,
                     "RangeAttributesShort": {
                         "Accuracy": 0,
+                        "MinDistance": 150,
                         "Distance": 1350
                     },
                     "RangeAttributesMedium": {
                         "Accuracy": 0,
+                        "MinDistance": 150,
                         "Distance": 1350
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 0,
+                        "MinDistance": 150,
                         "Distance": 1350
                     },
                     "WindUpTimeMS": 250,
@@ -16312,16 +16315,19 @@
                     "AreaOfEffectFalloffType": "Quadratic",
                     "RangeAttributesLong": {
                         "Accuracy": 0,
+                        "MinDistance": 550,
                         "Distance": 2750
                     },
 
                     "ExcludeFromHeightAdvantage": true,
                     "RangeAttributesShort": {
                         "Accuracy": 0,
+                        "MinDistance": 550,
                         "Distance": 600
                     },
                     "RangeAttributesMedium": {
                         "Accuracy": 0,
+                        "MinDistance": 550,
                         "Distance": 750
                     }
 
