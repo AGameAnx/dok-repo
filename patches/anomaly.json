@@ -8,8 +8,8 @@
     "Meta": {
         "Name": "Anomaly DOK",
         "Author": "Bozocow, Just_Carrier",
-        "Version": "1.10.09",
-        "LastUpdate": "2024-04-08",
+        "Version": "1.11.00",
+        "LastUpdate": "2024-05-08",
         "Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/anomaly.json"
     },
     //"Global": {
@@ -1123,6 +1123,12 @@
                                                 // ===================================================== //
 
                                                 "BuffSet": {
+                                                    "2": {
+                                                        "Value": 2
+                                                    },
+                                                    "5": {
+                                                        "Value": 2
+                                                    },
                                                     "6": {
                                                         "Attribute": 33554432,
                                                         "Mode": "Set",
@@ -1142,6 +1148,12 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
+                                                    "2": {
+                                                        "Value": 5
+                                                    },
+                                                    "5": {
+                                                        "Value": 5
+                                                    },
                                                     "6": {
                                                         "Attribute": 33554432,
                                                         "Mode": "Set",
@@ -1161,6 +1173,12 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
+                                                    "2": {
+                                                        "Value": 8
+                                                    },
+                                                    "5": {
+                                                        "Value": 8
+                                                    },
                                                     "6": {
                                                         "Attribute": 33554432,
                                                         "Mode": "Set",
@@ -1180,6 +1198,12 @@
                                         "BuffsToApplyToTarget": {
                                             "0": {
                                                 "BuffSet": {
+                                                    "2": {
+                                                        "Value": 10
+                                                    },
+                                                    "5": {
+                                                        "Value": 10
+                                                    },
                                                     "6": {
                                                         "Attribute": 33554432,
                                                         "Mode": "Set",
@@ -2625,7 +2649,7 @@
                     "LineOfSightRequired": false,
                     "TracerSpeed": 100000, // why do repair beams take time to reach their target... wtf???
                     "RangeAttributesShort": {
-                        "Distance": 1000
+                        "Distance": 800
                     },
                     "Modifiers": {
                         "0": {
@@ -2991,13 +3015,13 @@
                                                     "5": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BL5_HEAL",
-                                                        "Value": 50,
+                                                        "Value": 25,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     },
                                                     "6": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BR5_HEAL",
-                                                        "Value": 50,
+                                                        "Value": 25,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     }
                                                 } // Deployment range
@@ -3068,13 +3092,13 @@
                                                     "5": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BL5_HEAL",
-                                                        "Value": 100,
+                                                        "Value": 50,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     },
                                                     "6": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BR5_HEAL",
-                                                        "Value": 100,
+                                                        "Value": 50,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     }
                                                 }
@@ -3141,13 +3165,13 @@
                                                     "5": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BL5_HEAL",
-                                                        "Value": 150,
+                                                        "Value": 75,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     },
                                                     "6": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BR5_HEAL",
-                                                        "Value": 150,
+                                                        "Value": 75,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     }
                                                 }
@@ -3214,13 +3238,13 @@
                                                     "5": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BL5_HEAL",
-                                                        "Value": 200,
+                                                        "Value": 100,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     },
                                                     "6": {
                                                         "Mode": "AddPercent",
                                                         "Name": "TURRET_BR5_HEAL",
-                                                        "Value": 200,
+                                                        "Value": 100,
                                                         "Attribute": "UnitWeapon_RateOfFire"
                                                     }
                                                 }
@@ -4649,14 +4673,14 @@
                 "HangarBays": {
                     "Interceptor": {
                         "MaxCount": 12,
-                        "UndockSpeed": 150,
+                        "UndockSpeed": 110,
                         "UndockAnimationSeconds": 2.66
                     },
                     "Bomber": {
                         "UndockTotalSeconds": 2.7
                     },
                     "Ground": {
-                        "UndockSpeed": 150,
+                        "UndockSpeed": 110,
                         "UndockTotalSeconds": 1,
                         "UndockAnimationSeconds": 1
                     }
@@ -5843,7 +5867,7 @@
                             },
 
                             "3": {
-                                "LocalizedShortDescriptionStringID": "Turret Range: 1400m, Missile Range: 1100m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1400m, Missile Range: 1150m",
                                 "StatusEffectsToApply": {
                                     "Range_3_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -5875,11 +5899,11 @@
                                                     "23": { "Value": 700 },
                                                     "24": {
                                                         "Mode": "Set",
-                                                        "Value": 1100
+                                                        "Value": 1150
                                                     }, // ANTI-AIR, Add
                                                     "25": {
                                                         "Mode": "Set",
-                                                        "Value": 1100
+                                                        "Value": 1150
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
@@ -5902,7 +5926,7 @@
                             },
 
                             "4": {
-                                "LocalizedShortDescriptionStringID": "Turret Range: 1800m, Missile Range: 1200m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 1800m, Missile Range: 1300m",
                                 "StatusEffectsToApply": {
                                     "Range_4_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -5934,11 +5958,11 @@
                                                     "23": { "Value": 900 },
                                                     "24": {
                                                         "Mode": "Set",
-                                                        "Value": 1200
+                                                        "Value": 1300
                                                     }, // ANTI-AIR, Add
                                                     "25": {
                                                         "Mode": "Set",
-                                                        "Value": 1200
+                                                        "Value": 1300
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
@@ -5961,7 +5985,7 @@
                             },
 
                             "5": {
-                                "LocalizedShortDescriptionStringID": "Turret Range: 2300m, Missile Range: 1300m",
+                                "LocalizedShortDescriptionStringID": "Turret Range: 2300m, Missile Range: 1600m",
                                 "StatusEffectsToApply": {
                                     "Range_5_StatusEffect_Gaalsi_MP": {
                                         "BuffsToApplyToTarget": {
@@ -5993,11 +6017,11 @@
                                                     "23": { "Value": 1150 },
                                                     "24": {
                                                         "Mode": "Set",
-                                                        "Value": 1300
+                                                        "Value": 1600
                                                     }, // ANTI-AIR, Add
                                                     "25": {
                                                         "Mode": "Set",
-                                                        "Value": 1300
+                                                        "Value": 1600
                                                     }, // MAIN_MISSILES, Add
                                                     "26": { // CONTACT RAD
                                                         "Mode": "Set",
@@ -6047,14 +6071,14 @@
                 "HangarBays": {
                     "Interceptor": {
                         "MaxCount": 12,
-                        "UndockSpeed": 150,
+                        "UndockSpeed": 110,
                         "UndockAnimationSeconds": 2.66
                     },
                     "Bomber": {
                         "UndockAnimationSeconds": 2.7
                     },
                     "Ground": {
-                        "UndockSpeed": 150,
+                        "UndockSpeed": 110,
                         "UndockTotalSeconds": 1,
                         "UndockAnimationSeconds": 1
                     }
@@ -10595,7 +10619,7 @@
                 "ProductionTime": 17,
                 "Armour": 3,
                 "PopCapCost": 2,
-                "AggroRange": 1200
+                "AggroRange": 1300
             },
             "ExperienceAttributes": {
                 "Levels": {
@@ -11398,7 +11422,7 @@
             "UnitMovementAttributes": {
                 "Combat": {
                     "MinDesiredCombatRange": 1000,
-                    "MaxDesiredCombatRange": 1300,
+                    "MaxDesiredCombatRange": 1500,
                     "PassiveCombatApproachMode": "Hold",
                     "ActiveCombatApproachMode": "Snipe"
                 },
@@ -11456,7 +11480,7 @@
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 70,
-                        "Distance": 1300
+                        "Distance": 1450
                     },
                     "Turret": { "RotationSpeed": 390 },
                     "Modifiers": {
@@ -11587,7 +11611,7 @@
             "UnitMovementAttributes": {
                 "Combat": {
                     "MinDesiredCombatRange": 1000,
-                    "MaxDesiredCombatRange": 1300,
+                    "MaxDesiredCombatRange": 1500,
                     "PassiveCombatApproachMode": "Hold",
                     "ActiveCombatApproachMode": "Snipe"
                 },
@@ -11645,7 +11669,7 @@
                     },
                     "RangeAttributesLong": {
                         "Accuracy": 70,
-                        "Distance": 1300
+                        "Distance": 1450
                     },
                     "Turret": { "RotationSpeed": 390 },
                     "Modifiers": {
@@ -18320,7 +18344,7 @@
                 "Resource1Cost": 550,
                 "Resource2Cost": 180,
                 "MaxHealth": 3100,
-                "Armour": 12,
+                "Armour": 10,
                 "ProductionTime": 45,
                 "PopCapCost": 5,
                 "SensorRadius": 1500,
@@ -18485,7 +18509,8 @@
                         "Distance": 1200
                     },
                     "TargetPrioritizationAttributes": {
-                        "TargetPriorityWeight": 150
+                        "TargetPriorityWeight": 150,
+                        "TargetSameCommanderBias": -1
                     },
                     "Modifiers": {
                         "0": {
@@ -18714,7 +18739,7 @@
                 "Resource1Cost": 700,
                 "Resource2Cost": 280,
                 "MaxHealth": 3600,
-                "Armour": 12,
+                "Armour": 11,
                 "PopCapCost": 6,
                 "SensorRadius": 1400,
                 "ContactRadius": 1550,
@@ -18792,7 +18817,8 @@
                         "Distance": 1200
                     },
                     "TargetPrioritizationAttributes": {
-                        "TargetPriorityWeight": 150
+                        "TargetPriorityWeight": 150,
+                        "TargetSameCommanderBias": -1
                     },
                     "Modifiers": {
                         "0": {
