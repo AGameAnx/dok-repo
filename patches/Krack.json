@@ -1,12 +1,70 @@
 {
- "Entities" : { 
- "C_Baserunner_MP": {
-        "UnitAttributes": {},
-        "UnitMovementAttributes": {},
-        "DetectableAttributes": {},
-        "AbilityAttributes": {},
-        "WeaponAttributes": {
-			"C_Baserunner_Weapon_G2G_MP": {
+	"Entities": {
+
+			"C_Baserunner_MP": {
+				"UnitAttributes": {
+				"Resource1Cost": 325,
+				"Resource2Cost": 20,
+				"MaxHealth": 6700,
+				"PopCapCost": 3,
+				"Armour": 15,
+				"PriorityAsTarget": -250,
+				"ProductionTime": 16
+			},
+				"ExperienceAttributes": {
+				"Levels": {
+					"2": {
+						"BuffTooltipLocID": "Lieutenant: +25% to baserunner armor",
+						"Buff": {
+							"0": {
+								"Attribute": "Unit_Armour",
+								"Mode": "AddPercent",
+								"Value": 25
+							}
+						}
+					},
+					"5": {
+						"BuffTooltipLocID": "Captain: -50% cooldown on ability",
+						"Buff": {
+							"0": {
+								"Name": "Ability_C_DeployTurret_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							},
+							"1": {
+								"Name": "Ability_C_DeployTurret_AA_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							},
+							"2": {
+								"Name": "Ability_C_ProduceProbe_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							},
+							"3": {
+								"Name": "Ability_C_LaunchProbe_MP",
+								"Attribute": 16777216,
+								"Mode": "AddPercent",
+								"Value": -50
+
+							}
+						}
+					}
+				}
+			},
+			"UnitMovementAttributes": {
+				"Dynamics": {
+					"MaxSpeed": 100
+				}
+			},
+			"WeaponAttributes": {
+				"C_Baserunner_Weapon_G2G_MP": {
 					"ExcludeFromHeightAdvantage": false,
 					"LineOfSightRequired": true,
 					"BaseDamagePerRound": 65,
@@ -26,14 +84,14 @@
 					"Turret": {
 						"RotationSpeed": 280
 					},
-					"Modifiers" : {
+					"Modifiers": {
 						"0": {
 							"TargetClass": "All",
 							"Modifier": "CanTarget"
 						},
 						"1": {
 							"TargetClass": "Air, Small, Support",
-							"ClassOperator": "And"
+							"ClassOperator": "And",
 							"Modifier": "DamagePercent",
 							"Amount": 50
 						},
@@ -42,7 +100,17 @@
 						"4": { "Remove": true }
 					}
 				}
+			},
+			"AbilityAttributes": {
+				"Ability_C_DeployTurret_MP": {
+					"CooldownTimeSecs": 90
+				},
+				"Ability_C_DeployTurret_BeginCooldown_MP": {
+					"CooldownTimeSecs": 30
+				},
+				"Ability_C_LaunchProbe_MP": {
+					"Resource1Cost": 50
+				}
 			}
 		}
-	}
 }
