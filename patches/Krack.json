@@ -3,17 +3,16 @@
     "C_Baserunner_MP": {
       "WeaponAttributes": {
         "C_Baserunner_Weapon_G2G_MP": {
-          "ExcludeFromHeightAdvantage": false,
-          "LineOfSightRequired": true,
-          "BaseDamagePerRound": 65,
+          "BaseDamagePerRound": 120,
           "RateOfFire": 9,
           "DamagePacketsPerShot": 1,
+          "LineOfSightRequired": true,
           "RangeAttributesShort": {
-            "Accuracy": 90,
+            "Accuracy": 85,
             "Distance": 700
           },
           "RangeAttributesMedium": {
-            "Accuracy": 80,
+            "Accuracy": 70,
             "Distance": 1200
           },
           "RangeAttributesLong": {
@@ -24,9 +23,18 @@
           },
           "Modifiers": {
             "0": {
-              "TargetClass": "All",
+              "TargetClass": "Ground, All",
               "Modifier": "CanTarget"
-            }
+            },
+            "1": {
+              "TargetClass": "Air, Small, Support",
+              "ClassOperator": "And",
+              "Modifier": "DamagePercent",
+              "Amount": 50
+            },
+            "2": { "Remove": true },
+            "3": { "Remove": true },
+            "4": { "Remove": true }
           }
         }
       }
