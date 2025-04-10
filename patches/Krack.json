@@ -1,48 +1,48 @@
 {
- "Entities":{ 
- "C_Baserunner_MP": {
-        "UnitAttributes": {},
-        "UnitMovementAttributes": {},
-        "DetectableAttributes": {},
-        "AbilityAttributes": {},
-        			"WeaponAttributes": {
-				"C_Baserunner_Weapon_G2G_MP": {
-					"ExcludeFromHeightAdvantage": false,
-					"LineOfSightRequired": true,
-					"BaseDamagePerRound": 65,
-					"RateOfFire": 9,
-					"DamagePacketsPerShot": 1,
-					"RangeAttributesShort": {
-						"Accuracy": 90,
-						"Distance": 700
-					},
-					"RangeAttributesMedium": {
-						"Accuracy": 80,
-						"Distance": 1200
-					},
-					"RangeAttributesLong": {
-						"Remove": true
-					},
-					"Turret": {
-						"RotationSpeed": 280
-					},
-					"Modifiers": {
-						"0": {
-							"TargetClass": "All",
-							"Modifier": "CanTarget"
-						},
-						"1": {
-							"TargetClass": "Air, Small, Support",
-							"ClassOperator": "And",
-							"Modifier": "DamagePercent",
-							"Amount": 50
-						},
-						"2": { "Remove": true },
-						"3": { "Remove": true },
-						"4": { "Remove": true }
-					}
-				}
-			},
-		}
-	}
+  "Entities": {
+    "C_Baserunner_MP": {
+      "UnitAttributes": {},
+      "UnitMovementAttributes": {},
+      "DetectableAttributes": {},
+      "AbilityAttributes": {},
+      "WeaponAttributes": {
+        "C_Baserunner_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": false,
+          "LineOfSightRequired": true,
+          "BaseDamagePerRound": 65,
+          "RateOfFire": 9,
+          "DamagePacketsPerShot": 1,
+          "RangeAttributesShort": {
+            "Accuracy": 90,
+            "Distance": 700
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 80,
+            "Distance": 1200
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          },
+          "Turret": {
+            "RotationSpeed": 280
+          },
+          "Modifiers": [
+            {
+              "TargetClass": "All",
+              "Modifier": "CanTarget"
+            },
+            {
+              "TargetClass": "Air, Small, Support",
+              "ClassOperator": "And",
+              "Modifier": "DamagePercent",
+              "Amount": 50
+            },
+            { "Remove": true },
+            { "Remove": true },
+            { "Remove": true }
+          ]
+        }
+      }
+    }
+  }
 }
