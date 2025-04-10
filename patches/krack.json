@@ -178,6 +178,43 @@
 				  }
 			  }
 		  }
-	  }
+	  },
+	  "N_ECMField_MP": {
+			"UnitAttributes": {
+				
+			},
+			"WeaponAttributes": {
+				"N_ECMField_Weapon_G2G": {
+					"BaseDamagePerRound": 380,
+					"RateOfFire": 2
+				}
+			},
+			"DetectableAttributes": {
+				"MinimumStateAfterDetection": "Hidden"
+			}
+		},
+		"ECMField_StatusEffect": {
+			"StatusEffectAttributes": {
+				"BuffsToApplyToTarget": {
+					"0": {
+						"BuffSet": {
+							"4": { "Value": -45 },
+							"5": { "Value": -45 },
+							"6": {
+								"Attribute": "UnitDynamics_AccelerationTime",
+								"Mode": "AddPercent",
+								"Value": 25
+							},
+							"7": {
+								"Attribute": "UnitCombatBehaviour_MinDesiredCombatRange",
+								"Mode": "Set",
+								"Value": 400
+							}
+						}
+					}
+				}
+			}
+		
+		}
   }
 }
