@@ -27,11 +27,44 @@
               "Modifier": "CanTarget"
             },
             "1": {
-              "TargetClass": "Air, Small, Support",
-              "ClassOperator": "And",
-              "Modifier": "DamagePercent",
-              "Amount": 50
+  "Entities": {
+    "C_Baserunner_MP": {
+      "WeaponAttributes": {
+        "C_Baserunner_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 10,
+          "RateOfFire": 1,
+          "DamagePacketsPerShot": 1,
+          "LineOfSightRequired": true,
+          "RangeAttributesShort": {
+            "Accuracy": 85,
+            "Distance": 700
+          },
+          "RangeAttributesMedium": {
+            "Accuracy": 70,
+            "Distance": 1200
+          },
+          "RangeAttributesLong": {
+            "Remove": true
+          },
+          "Turret": {
+            "RotationSpeed": 280
+          },
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Ground, All",
+              "Modifier": "CanTarget"
             },
+            "1": { "Remove": true },
+            "2": { "Remove": true },
+            "3": { "Remove": true },
+            "4": { "Remove": true }
+          }
+        }
+      }
+    }
+  }
+}
+,
             "2": { "Remove": true },
             "3": { "Remove": true },
             "4": { "Remove": true }
