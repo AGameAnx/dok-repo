@@ -162,7 +162,7 @@
 	  },
 	  "K_ExplodingSkimmer_MP": {
 		  "UnitAttributes": {
-			  "Resource1Cost": 75
+			  "Resource1Cost": 125
 		  },
 		  "WeaponAttributes": {
 			  "K_ExplodingSkimmer_Weapon_G2G_MP": { //apperently a weapon dummy
@@ -173,8 +173,14 @@
 //					"DamagePacketsPerShot": 1,
 //					"AreaOfEffectRadius": 600,
 //					"AreaOfEffectFalloffType": "Quadratic"
-				}
+			  },
+			  "Modifiers": {
+				  "0": {
+					  "TargetClass": "C_Harvester_MP,G_Harvester_MP,K_Harvester_MP", // Trying to Reduce Damage Done to Harvesters
+					  "Modifier": "DamagePercent",
+					  "Amount": 25
+				  }
+			  }
 		  }
 	  }
-  }
-} 
+  } 
