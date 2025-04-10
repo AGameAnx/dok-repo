@@ -1,29 +1,27 @@
 {
- "Entities":{ 
- "C_Baserunner_MP":     {
-        "UnitAttributes": {},
-        "UnitMovementAttributes": {},
-        "DetectableAttributes": {},
-        "AbilityAttributes": {},
-        "WeaponAttributes": {
-			"C_Baserunner_Weapon_G2G_MP": {
-							
-					"Modifiers" : {
-						"0": {
-							"TargetClass": "All",
-							"Modifier": "CanTarget"
-						},
-						"1": {
-							"TargetClass": "Air, Small, Support",
-							"ClassOperator": "And",
-						},
-						"2": { "Remove": true },
-						"3": { "Remove": true },
-						"4": { "Remove": true }
-					}
-				
-		}
+  "Entities": {
+    "C_Baserunner_MP": {
+      "UnitAttributes": {},
+      "UnitMovementAttributes": {},
+      "DetectableAttributes": {},
+      "AbilityAttributes": {},
+      "WeaponAttributes": {
+        "C_Baserunner_Weapon_G2G_MP": {
+          "Modifiers": [
+            {
+              "TargetClass": "All",
+              "Modifier": "CanTarget"
+            },
+            {
+              "TargetClass": "Air, Small, Support",
+              "ClassOperator": "And"
+            },
+            { "Remove": true },
+            { "Remove": true },
+            { "Remove": true }
+          ]
+        }
+      }
     }
   }
- }
 }
