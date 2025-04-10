@@ -205,13 +205,100 @@
 			  "Armour": 5
 			  },
 			  "WeaponAttributes": {
-				  "C_SupportCruiser_Weapon_Repair_Small_MP": { //RepairBeam
-				  
-				  },
-				  "C_SupportCruiser_Weapon_G2A_MP": {
-					  //MainWeapon
-					  "BaseDamagePerRound": 25
-				  }
+				"C_SupportCruiser_Weapon_Repair_Small_MP": {
+//					"LineOfSightRequired": false,
+//					"RateOfFire": 14,
+//					"TracerSpeed": 150000,
+//					"RangeAttributesShort": {
+//						"MinDistance": 0,
+//						"Distance": 6000
+//					},
+//					"RangeAttributesMedium": {
+//						"MinDistance": 0,
+//						"Distance": 6000
+//					},
+//					"RangeAttributesLong": {
+//						"MinDistance": 0,
+//						"Distance": 6000
+//					}
+				},
+				"C_SupportCruiser_Weapon_G2A_MP": {
+					"LineOfSightRequired": false,
+					"BaseDamagePerRound": 20,
+					"NumberOfBursts": 4,
+					"BurstPeriodMinTimeMS": 300,
+					"BurstPeriodMaxTimeMS": 300,
+					"CooldownTimeMS": 700,
+					"ExcludeFromAutoTargetAcquisition": true,
+					"ExcludeFromAutoFire": true,
+					"WindUpTimeMS": 0,
+					"ProjectileEntityTypeToSpawn": "C_Battlecruiser_AA_ProjectileAssetContainer",
+					"RateOfFire": 1, //4
+					"ReloadTimeMS": 4400,
+					"AreaOfEffectRadius": 60,
+					"RangeAttributesLong": {
+						"Distance": 1600
+					}
+				},
+				"C_SupportCruiser_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": false,
+					"StatusEffectsTargetAlignment": "None",
+					"StatusEffectsSets": {
+						"0": { "StatusEffects": [ "Suppress_StatusEffect" ] }
+					},
+					"StatusEffectsExcludeTargetType": "Air",
+					"TracerSpeed": 1500,
+					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
+					"BaseDamagePerRound": 50,
+					"RateOfFire": 15,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 900,
+					"CooldownTimeMS": 500,
+					"ReloadTimeMS": 2000,
+					"RangeAttributesShort": {
+						"Distance": 400,
+						"Accuracy": 45
+					},
+					"RangeAttributesLong": {
+						"Distance": 1350,
+						"Accuracy": 15
+					},
+					"Turret": {
+						"FieldOfView": 360,
+						"FieldOfFire": 360,
+						"RotationSpeed": 160
+					},
+					"Modifiers": {
+						"0": {
+							"Remove": true
+						},
+						"1": {
+							"Modifier": "AccuracyShortPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						},
+						"2": {
+							"Modifier": "AccuracyMediumPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						},
+						"3": {
+							"Modifier": "AccuracyLongPercent",
+							"TargetClass": "Medium, Large, XLarge",
+							"ClassOperator": "Or",
+							"Amount": 150
+						},
+						"4": {
+							"TargetClass": "All",
+							"Modifier": "CanTarget"
+						}
+
+					},
+					"OutputDPS": true
+				}
 			  }
 	  }
   }
