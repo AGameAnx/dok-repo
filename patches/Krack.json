@@ -1,118 +1,119 @@
 {
   "Entities": {
-    "C_Baserunner_MP": {
-      "WeaponAttributes": {
-        "C_Baserunner_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 5,
-          "LineOfSightRequired": true,
-          "RangeAttributesShort": {
-		  "Accuracy": 60,
-		  "Distance": 700
+	  "C_Baserunner_MP": {
+		  "WeaponAttributes": {
+			  "C_Baserunner_Weapon_G2G_MP": {
+				  "BaseDamagePerRound": 5,
+				  "LineOfSightRequired": true,
+				  "RangeAttributesShort": {
+					  "Accuracy": 60,
+					  "Distance": 700
+				  },
+				  "RangeAttributesMedium": {
+					  "Accuracy": 80,
+					  "Distance": 1200
+				  },
+				  "RangeAttributesLong": {
+					  "Remove": true
+				  },
+				  "Turret": {
+					  "RotationSpeed": 280
+				  },
+				  "Modifiers": {
+					  "0": {
+						  "TargetClass": "Ground, All",  // Ensures all ground units can be targeted
+						  "Modifier": "CanTarget"
+					  },
+					  "1": {
+						  "TargetClass": "Air, Small",
+						  "ClassOperator": "And",
+						  "Modifier": "DamagePercent",
+						  "Amount": 100
+					  },
+					  "2": {"Remove": true},
+					  "3": { "Remove": true},
+					  "4": { "Remove": true }
+				  }
+			  }
+		  }
+	  },"C_Sob_Baserunner_MP": {
+		  "WeaponAttributes": {
+			  "C_Sob_Baserunner_Weapon_G2G_MP": {
+				  "BaseDamagePerRound": 5,
+				  "LineOfSightRequired": true,
+				  "RangeAttributesShort": {
+					  "Accuracy": 60,
+					  "Distance": 700
+				  },
+				  "RangeAttributesMedium": {
+					  "Accuracy": 80,
+					  "Distance": 1200
+				  },
+				  "RangeAttributesLong": {
+					  "Remove": true
+				  },
+				  "Turret": {
+					  "RotationSpeed": 280
+				  },
+				  "Modifiers": {
+					  "0": {
+						  "TargetClass": "Ground, All",  // Ensures all ground units can be targeted
+						  "Modifier": "CanTarget"
+					  },
+					  "1": {
+						  "TargetClass": "Air, Small",
+						  "ClassOperator": "And",
+						  "Modifier": "DamagePercent",
+						  "Amount": 100
+					  },
+					  "2": {"Remove": true},
+					  "3": { "Remove": true},
+					  "4": { "Remove": true }
+				  }
+			  }
+		  }
 	  },
-		"RangeAttributesMedium": {
-			"Accuracy": 80,
-			"Distance": 1200
-		},
-		"RangeAttributesLong": {
-			"Remove": true
-		},
-          "Turret": {
-            "RotationSpeed": 280
-          },
-          "Modifiers": {
-            "0": {
-              "TargetClass": "Ground, All",  // Ensures all ground units can be targeted
-              "Modifier": "CanTarget"
-            },
-            "1": {
-              "TargetClass": "Air, Small",
-              "ClassOperator": "And",
-              "Modifier": "DamagePercent",
-              "Amount": 100
-            },
-            "2": {"Remove": true},
-            "3": { "Remove": true},
-            "4": { "Remove": true }
-          }
-        }
-      }
-    },"C_Sob_Baserunner_MP": {
-	    "WeaponAttributes": {
-		    "C_Sob_Baserunner_Weapon_G2G_MP": {
-			    "BaseDamagePerRound": 5,
-			    "LineOfSightRequired": true,
-			    "RangeAttributesShort": {
-				    "Accuracy": 60,
-				    "Distance": 700
-			    },
-			    "RangeAttributesMedium": {
-				    "Accuracy": 80,
-				    "Distance": 1200
-			    },
-			    "RangeAttributesLong": {
-				    "Remove": true
-			    },
-			    "Turret": {
-				    "RotationSpeed": 280
-			    },
-			    "Modifiers": {
-				    "0": {
-					    "TargetClass": "Ground, All",  // Ensures all ground units can be targeted
-					    "Modifier": "CanTarget"
-				    },
-				    "1": {
-					    "TargetClass": "Air, Small",
-					    "ClassOperator": "And",
-					    "Modifier": "DamagePercent",
-					    "Amount": 100
-				    },
-				    "2": {"Remove": true},
-				    "3": { "Remove": true},
-				    "4": { "Remove": true }
-			    }
-		    }
-	    }
-    },"G_Baserunner_MP": {
-	    "AbilityAttributes": {
-		    "Ability_G_DeployScanner_MP": {
-			    "Resource1Cost": 100}
-	    },
-	    "WeaponAttributes": {
-		    "G_Baserunner_Weapon_G2G_MP": {
-			    "BaseDamagePerRound": 5,
-			    "LineOfSightRequired": true,
-			    "RangeAttributesShort": {
-				    "Accuracy": 60,
-				    "Distance": 700
-			    },
-			    "RangeAttributesMedium": {
-				    "Accuracy": 80,
-				    "Distance": 1200
-			    },
-			    "RangeAttributesLong": {
-				    "Remove": true
-			    },
-			    "Turret": {
-				    "RotationSpeed": 280
-			    },
-			    "Modifiers": {
-				    "0": {
-					    "TargetClass": "Ground, All",  // Ensures all ground units can be targeted
-					    "Modifier": "CanTarget"
-				    },
-				    "1": {
-					    "TargetClass": "Air, Small",
-					    "ClassOperator": "And",
-					    "Modifier": "DamagePercent",
-					    "Amount": 100
-				    },
-				    "2": {"Remove": true},
-				    "3": { "Remove": true},
-				    "4": { "Remove": true }
-			    }
-		    }
-	    }
-    },
+	  "G_Baserunner_MP": {
+		  "AbilityAttributes": {
+			  "Ability_G_DeployScanner_MP": {
+				  "Resource1Cost": 100}
+		  },
+		  "WeaponAttributes": {
+			  "G_Baserunner_Weapon_G2G_MP": {
+				  "BaseDamagePerRound": 5,
+				  "LineOfSightRequired": true,
+				  "RangeAttributesShort": {
+					  "Accuracy": 60,
+					  "Distance": 700
+				  },
+				  "RangeAttributesMedium": {
+					  "Accuracy": 80,
+					  "Distance": 1200
+				  },
+				  "RangeAttributesLong": {
+					  "Remove": true
+				  },
+				  "Turret": {
+					  "RotationSpeed": 280
+				  },
+				  "Modifiers": {
+					  "0": {
+						  "TargetClass": "Ground, All",  // Ensures all ground units can be targeted
+						  "Modifier": "CanTarget"
+					  },
+					  "1": {
+						  "TargetClass": "Air, Small",
+						  "ClassOperator": "And",
+						  "Modifier": "DamagePercent",
+						  "Amount": 100
+					  },
+					  "2": {"Remove": true},
+					  "3": { "Remove": true},
+					  "4": { "Remove": true }
+				  }
+			  }
+		  }
+	  },
 	  "K_Baserunner_MP": {
 		  "WeaponAttributes": {
 			  "G_Baserunner_Weapon_G2G_MP": {
