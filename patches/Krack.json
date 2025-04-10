@@ -1,47 +1,15 @@
 {
   "Entities": {
     "C_Baserunner_MP": {
-      "UnitAttributes": {
-        "MaxHealth": 1
-      },
-      "UnitMovementAttributes": {
-        "Dynamics": {
-          "MaxSpeed": 1
-        }
-      },
-      "ExperienceAttributes": {
-        "Levels": {
-          "1": {
-            "Buff": {
-              "0": {
-                "Attribute": "Unit_Armour",
-                "Mode": "AddPercent",
-                "Value": 0
-              }
-            }
-          }
-        }
-      },
       "WeaponAttributes": {
-        "Dummy_Weapon": {
-          "BaseDamagePerRound": 1,
-          "RateOfFire": 1,
-          "DamagePacketsPerShot": 1,
-          "RangeAttributesShort": {
-            "Accuracy": 1,
-            "Distance": 1
-          },
+        "C_Baserunner_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 120,  // your custom damage value
           "Modifiers": {
             "0": {
               "TargetClass": "All",
               "Modifier": "CanTarget"
             }
           }
-        }
-      },
-      "AbilityAttributes": {
-        "Dummy_Ability": {
-          "CooldownTimeSecs": 1
         }
       }
     }
