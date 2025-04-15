@@ -205,11 +205,11 @@
 			  "Resource1Cost": 300,
 			  "ProductionTime": 0,
 			  "Armour": 5
-		  },
-		  "WeaponAttributes": {
-			  "C_SupportCruiser_Weapon_G2A_MP": {
-				  "LineOfSightRequired": false,
-					"BaseDamagePerRound": 755,
+			  },
+			  "WeaponAttributes": {
+				"C_SupportCruiser_Weapon_G2A_MP": {
+					"LineOfSightRequired": false,
+					"BaseDamagePerRound": 8,
 					"NumberOfBursts": 4,
 					"BurstPeriodMinTimeMS": 300,
 					"BurstPeriodMaxTimeMS": 300,
@@ -218,43 +218,53 @@
 					"ExcludeFromAutoFire": true,
 					"WindUpTimeMS": 0,
 					"ProjectileEntityTypeToSpawn": "C_Battlecruiser_AA_ProjectileAssetContainer",
-					"RateOfFire": 1, //4
+					"RateOfFire": 1,
 					"ReloadTimeMS": 4400,
 					"AreaOfEffectRadius": 60,
 					"RangeAttributesLong": {
 						"Distance": 1600
-					}
-			  },
-			  "C_SupportCruiser_Weapon_G2G_MP": {
-					  "ExcludeFromHeightAdvantage": false,
-					  "StatusEffectsTargetAlignment": "None",
-					  "StatusEffectsSets": {
+					},
+					"Turret": {
+					  "RotationSpeed": 280
+					},
+					"Modifiers": {
+						"0": {
+							"TargetClass": "Ground, All",
+							"Modifier": "CanTarget"
+
+						}
+					}			
+				},
+				  "C_SupportCruiser_Weapon_G2G_MP": {
+					"ExcludeFromHeightAdvantage": false,
+					"StatusEffectsTargetAlignment": "None",
+					"StatusEffectsSets": {
 						"0": { "StatusEffects": [ "Suppress_StatusEffect" ] }
 					},
-					  "StatusEffectsExcludeTargetType": "Air",
-					  "TracerSpeed": 1500,
-					  "LineOfSightRequired": true,
-					  "TargetStyle": "Flak",
-					  "BaseDamagePerRound": 8,
-					  "RateOfFire": 15,
-					  "BurstPeriodMinTimeMS": 800,
-					  "BurstPeriodMaxTimeMS": 900,
-					  "CooldownTimeMS": 500,
-					  "ReloadTimeMS": 2000,
-					  "RangeAttributesShort": {
+					"StatusEffectsExcludeTargetType": "Air",
+					"TracerSpeed": 1500,
+					"LineOfSightRequired": true,
+					"TargetStyle": "Flak",
+					"BaseDamagePerRound": 8,
+					"RateOfFire": 15,
+					"BurstPeriodMinTimeMS": 800,
+					"BurstPeriodMaxTimeMS": 900,
+					"CooldownTimeMS": 500,
+					"ReloadTimeMS": 2000,
+					"RangeAttributesShort": {
 						"Distance": 400,
 						"Accuracy": 45
 					},
-					  "RangeAttributesLong": {
+					"RangeAttributesLong": {
 						"Distance": 1350,
 						"Accuracy": 15
 					},
-					  "Turret": {
+					"Turret": {
 						"FieldOfView": 360,
 						"FieldOfFire": 360,
 						"RotationSpeed": 160
 					},
-					  "Modifiers": {
+					"Modifiers": {
 						"0": {
 							"Remove": true
 						},
@@ -280,9 +290,10 @@
 							"TargetClass": "All",
 							"Modifier": "CanTarget"
 						}
+
 					},
-					  "OutputDPS": true
-				  }
+					"OutputDPS": true
+				}
 			  }
 	  }
   }
