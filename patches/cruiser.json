@@ -1,0 +1,4354 @@
+// hammersnake //
+{
+  "Meta": {
+    "Name": "Brawl Cruisers",
+    "Author": "HammerSnake",
+    "Version": "3.2",
+    "LastUpdate": "2024-02-28"
+  },
+  "Entities": {
+    "Tier_1_G_Sandskimmers": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 99999,
+        "ResearchTime": 99999
+      }
+    },
+    "Tier_2_G_Railgun_U1": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": []
+      }
+    },
+    "Tier_1_S_Escorts": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 99999,
+        "ResearchTime": 99999,
+        "Dependencies": []
+      }
+    },
+    "Tier_1_C_Escorts": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 99999,
+        "ResearchTime": 99999,
+        "Dependencies": []
+      }
+    },
+    "Tier_2_S_ArmouredAssault": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
+      }
+    },
+    "Tier_3_S_Artillery": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": []
+      }
+    },
+    "Tier_3_S_AssaultCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": []
+      }
+    },
+    "Tier_3_S_BattleCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": []
+      }
+    },
+    "Tier_3_C_Artillery": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": []
+      }
+    },
+    "Tier_3_C_AssaultCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": []
+      }
+    },
+    "Tier_3_C_BattleCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": []
+      }
+    },
+    "Tier_3_G_Artillery_BattleCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": []
+      }
+    },
+    "Tier_3_G_HonorCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": []
+      }
+    },
+    "Tier_3_K_ArtilleryCruiser": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": []
+      }
+    },
+    "C_AssaultCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 10
+      }
+    },
+    "C_Sob_AssaultCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +500 hull",
+            "RequiredExperience": 750,
+            "Buff": {
+              "0": {
+                "Attribute": 65536,
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: -15 speed",
+            "RequiredExperience": 1500,
+            "Buff": {
+              "0": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": -15
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: +500 hull, -50% cooldown on ability",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "0": {
+                "Attribute": 65536,
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Name": "Ability_G_BattleCruiser_ArmorBonus_MP",
+                "Attribute": 16777216,
+                "Mode": "AddPercent",
+                "Value": -50
+
+              },
+              "2": {
+                "Name": "Ability_G_BattleCruiserActiveRegen",
+                "Attribute": 16777216,
+                "Mode": "AddPercent",
+                "Value": -50
+
+              },
+              "3": {
+                "Name": "Ability_G_BattleCruiser_Missile_MP",
+                "Attribute": 16777216,
+                "Mode": "AddPercent",
+                "Value": -50
+
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: -20 speed",
+            "RequiredExperience": 4500,
+            "Buff": {
+              "0": {
+                "Attribute": 131072,
+                "Mode": "Add",
+                "Value": -20
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +1000 hull, +5 armor",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "0": {
+                "Attribute": 65536,
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 5
+              }
+            }
+          }
+        }
+      }
+    },
+    "C_Sob_Carrier_MP": {
+      "UnitAttributes": {
+        "Armour": 99999,
+        "MaxHealth": 99999,
+        "PriorityAsTarget": -10000,
+        "Resource1Cost": 0,
+        "Resource2Cost": 0
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "DriveType": "Hover",
+          "MaxSpeed": 60,
+          "PermanentlyImmobile": true
+        },
+        "Hover": { "TurnAcceleration": 0.1 }
+      },
+      "AbilityAttributes": {
+        "Ability_C_Sob_DeployPopCapCarrier_MP": {
+          "Resource1Cost": 6666
+        },
+        "Ability_C_Sob_SobanNuke_MP": {
+          "Resource1Cost": 6666
+        },
+        "Ability_C_Sob_ProduceSupportCruiser_MP": {
+          "ProduceUnit": {
+            "UnitTypeToProduce": "C_SupportCruiser_MP"
+
+          }
+        },
+        "Ability_C_Sob_ProduceAssaultCruiser_MP": {
+          "ProduceUnit": {
+            "UnitTypeToProduce": "G_BattleCruiser_MP"
+          }
+        },
+        "Ability_C_ProduceHarvester_MP": {
+          "ProduceUnit": {
+            "UnitTypeToProduce": "G_BattleCruiser_MP"
+
+          }
+        }
+      }
+    },
+    "C_Carrier_MP": {
+      "UnitAttributes": {
+        "Armour": 99999,
+        "MaxHealth": 99999,
+        "PriorityAsTarget": -10000,
+        "Resource1Cost": 0,
+        "Resource2Cost": 0
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "DriveType": "Hover",
+          "PermanentlyImmobile": true
+        },
+        "Hover": { "TurnAcceleration": 0.1 }
+      },
+      "AbilityAttributes": {
+        "Ability_C_DeployPopCapCarrier_MP": {
+          "Resource1Cost": 6666
+        },
+        "Ability_C_CruiseMissile_MP": {
+          "Resource1Cost": 6666
+        },
+        "Ability_C_Sob_ProduceBattlecruiser_MP": {
+          "RequiredResearch": [],
+          "ProduceUnit": {
+            "UnitTypeToProduce": "C_Sob_BattleCruiser_MP"
+
+          }
+        },
+        "Ability_C_ProduceAssaultCruiser_MP": {
+          "RequiredResearch": [],
+          "ProduceUnit": {
+            "UnitTypeToProduce": "G_BattleCruiser_MP"
+
+          }
+        },
+        "Ability_C_ProduceHarvester_MP": {
+          "ProduceUnit": {
+            "UnitTypeToProduce": "G_BattleCruiser_MP"
+
+          }
+        }
+      }
+    },
+    "K_Carrier_MP": {
+      "UnitAttributes": {
+        "Armour": 99999,
+        "MaxHealth": 99999,
+        "PriorityAsTarget": -10000,
+        "Resource1Cost": 0,
+        "Resource2Cost": 0
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "PermanentlyImmobile": true
+        }
+      },
+      /*
+      "PowerShuntAttributes": {
+        "PowerSystems": {
+
+          "0": {
+            "PowerLevels": {
+              "6": {
+                "LocalizedShortDescriptionStringID": "Mobility: 25% speed.",
+                "StatusEffectsToApply": {
+                  "K_MovementShuntCarrier_1_StatusEffect": {
+                    "BuffsToApplyToTarget": {
+                      "0": {
+                        "UnitType": "",
+                        "UseAsPrefix": true,
+                        "BuffSet": {
+                          "0": {
+                            "Attribute": "UnitDynamics_MaxSpeed",
+                            "Mode": "Add",
+                            "Value": 25
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      */
+      "AbilityAttributes": {
+        "Ability_Produce_K_Harvester": {
+          "ProduceUnit": {
+            "UnitTypeToProduce": "G_BattleCruiser_MP"
+          }
+        }
+        /* "Ability_G_ProduceAssaultCruiser_MP": {
+          "ProduceUnit": {
+            "UnitTypeToProduce": "G_BattleCruiser_MP"
+          }
+        }*/
+      }
+    },
+    "G_Carrier_MP": {
+      "UnitAttributes": {
+        "Armour": 99999,
+        "MaxHealth": 99999,
+        "PriorityAsTarget": -10000,
+        "Resource1Cost": 0,
+        "Resource2Cost": 0
+      },
+      "UnitMovementAttributes": {
+        "Dynamics": {
+          "PermanentlyImmobile": true
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_G_MissileBarrage": {
+          "Resource1Cost": 6666
+        },
+        "Ability_G_ProduceHarvester_MP": {
+          "ProduceUnit": {
+            "UnitTypeToProduce": "G_BattleCruiser_MP"
+
+          }
+        },
+        "Ability_G_ProduceSupportCruiser_MP": {
+          "ProduceUnit": {
+            "UnitTypeToProduce": "G_SupportCruiser_MP"
+
+          }
+        }
+      }
+    },
+
+    "Research_Buff_C_TrackedUnits_Armor01": {
+      "ResearchItemAttributes": {
+        "Dependencies": [],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
+        "LocalizedResearchTitleStringID": "CRUISER ARMOR UPGRADE",
+        "LocalizedLongDescriptionStringID": "Improve armor chassis of all Cruisers.\n\n[84a1e8]Increase armor by 10 and hull integrity by 1000",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "Research_Buff_C_TrackedUnits_Armor02": {
+      "ResearchItemAttributes": {
+        "Dependencies": [],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
+        "LocalizedResearchTitleStringID": "CRUISER RANGE UPGRADE",
+        "LocalizedLongDescriptionStringID": "Improve primary weapon damage and range of all Cruisers.\n\n[84a1e8]Increase damage by 20% and range by 20%",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "2": {
+                "Name": "BACK",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "3": {
+                "Name": "FRONT",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "2": {
+                "Name": "BACK",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "3": {
+                "Name": "FRONT",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "ANTI-AIR",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "1": {
+                "Name": "ANTI-AIR",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "MisslePods_FL",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "1": {
+                "Name": "MisslePods_FL",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_C_TrackedUnits_Armor03": {
+      "ResearchItemAttributes": {
+        "Dependencies": [],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
+        "LocalizedResearchTitleStringID": "CRUISER ASSAULT UPGRADE",
+        "LocalizedLongDescriptionStringID": "Improve movespeed and primary weapon fire rate of all Cruisers.\n\n[84a1e8]Increase speed by 10 and fire rate by 25%",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -2210
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -2210
+              },
+              "2": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -910
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -910
+              },
+              "2": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "ANTI-AIR",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1000
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "MisslePods_FL",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1500
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "Research_Buff_S_TrackedUnits_Armor01": {
+      "ResearchItemAttributes": {
+        "Dependencies": [],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
+        "LocalizedResearchTitleStringID": "CRUISER ARMOR UPGRADE",
+        "LocalizedLongDescriptionStringID": "Improve armor chassis of all Cruisers.\n\n[84a1e8]Increase armor by 10 and hull integrity by 1000",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_Sob_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "Research_Buff_S_TrackedUnits_Armor02": {
+      "ResearchItemAttributes": {
+        "Dependencies": [],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
+        "LocalizedResearchTitleStringID": "CRUISER PRECISION UPGRADE",
+        "LocalizedLongDescriptionStringID": "Improve primary weapon fire rate and range of all Cruisers.\n\n[84a1e8]Increase fire rate by 25% and range by 20%",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_Sob_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -2210
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -2210
+              },
+              "2": {
+                "Name": "BACK",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "3": {
+                "Name": "FRONT",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -910
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -910
+              },
+              "2": {
+                "Name": "BACK",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "3": {
+                "Name": "FRONT",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "ANTI-AIR",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1000
+              },
+              "1": {
+                "Name": "ANTI-AIR",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "MisslePods_FL",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1500
+              },
+              "1": {
+                "Name": "MisslePods_FL",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_S_TrackedUnits_Armor03": {
+      "ResearchItemAttributes": {
+        "Dependencies": [],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
+        "LocalizedResearchTitleStringID": "CRUISER TATICAL UPGRADE",
+        "LocalizedLongDescriptionStringID": "Reduce abilitis cooldown and improve primary weapon damage of all Cruisers.\n\n[84a1e8]Reduce 25% cooldown of abilitis (add supportCruiser repair gun rate by 30%) and increase damage by 20%",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_Sob_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "2": {
+                "Name": "Ability_C_SmokeGrenade_BattleCruiser",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -25
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "2": {
+                "Name": "Ability_G_BattleCruiser_Missile_MP",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -25
+              },
+              "3": {
+                "Name": "Ability_G_BattleCruiser_ArmorBonus_MP",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -25
+              },
+              "4": {
+                "Name": "Ability_G_BattleCruiserActiveRegen",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -25
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "ANTI-AIR",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "1": {
+                "Name": "ANTI-AIR",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "2": {
+                "Name": "REPAIR",
+                "Attribute": "UnitWeapon_RateOfFire",
+                "Mode": "AddPercent",
+                "Value": 30
+              },
+              "3": {
+                "Name": "REPAIR_FL",
+                "Attribute": "UnitWeapon_RateOfFire",
+                "Mode": "AddPercent",
+                "Value": 30
+              },
+              "4": {
+                "Name": "REPAIR_BL",
+                "Attribute": "UnitWeapon_RateOfFire",
+                "Mode": "AddPercent",
+                "Value": 30
+              },
+              "5": {
+                "Name": "REPAIR_BR",
+                "Attribute": "UnitWeapon_RateOfFire",
+                "Mode": "AddPercent",
+                "Value": 30
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "MisslePods_FL",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "1": {
+                "Name": "Ability_C_ArtilleryBarrage",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -25
+              },
+              "2": {
+                "Name": "Ability_C_ArtilleryBarrage_Precise",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -25
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_G_ShipUnits_Armor1": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Research_Buff_G_Artillery_EMP_Barrage" ],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
+        "LocalizedResearchTitleStringID": "CRUISER GOVERNOR MODE",
+        "LocalizedLongDescriptionStringID": "Add sensors range and primary weapon range of all Cruisers.\n\n[84a1e8]+300 Sensors. +20% Range",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_HonorGuard_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "1": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "2": {
+                "Name": "DEFAULT",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "1": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "2": {
+                "Name": "BACK",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "3": {
+                "Name": "FRONT",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "1": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "2": {
+                //"Name": "G_SupportCruiser_Weapon_G2G_MP",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "1": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "2": {
+                "Name": "MisslePods_Front",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "3": {
+                "Name": "MisslePods_Back",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_G_ShipUnits_Armor2": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Research_Buff_G_Artillery_EMP_Barrage" ],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
+        "LocalizedResearchTitleStringID": "CRUISER ASCETIC MODE",
+        "LocalizedLongDescriptionStringID": "Add hull integrity and move speed of all Cruisers.\n\n[84a1e8]+1000 Hull. +10 Speed",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_HonorGuard_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_G_ShipUnits_Armor3": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Research_Buff_G_Artillery_EMP_Barrage" ],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
+        "LocalizedResearchTitleStringID": "CRUISER PALADIN MODE",
+        "LocalizedLongDescriptionStringID": "Add armor and primary weapon damage of all Cruisers.\n\n[84a1e8]+10 Armor. +20% Damage",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_HonorGuard_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                "Name": "DEFAULT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "2": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                //"Name": "G_SupportCruiser_Weapon_G2G_MP",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                "Name": "MisslePods_Front",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "2": {
+                "Name": "MisslePods_Back",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "Research_Buff_G_RailGunUnits_Armor1": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Research_Buff_K_Artillery_EMP_Barrage" ],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "LocalizedResearchTitleStringID": "CRUISER GOVERNOR MODE",
+        "LocalizedLongDescriptionStringID": "Add sensors range and primary weapon range of all Cruisers.\n\n[84a1e8]+300 Sensors. +20% Range",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "K_HonorGuard_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "1": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "2": {
+                "Name": "DEFAULT",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "1": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "2": {
+                "Name": "BACK",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "3": {
+                "Name": "FRONT",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "K_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "1": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "2": {
+                //"Name": "G_SupportCruiser_Weapon_G2G_MP",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "K_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "1": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "2": {
+                "Name": "MisslePods_Front",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "3": {
+                "Name": "MisslePods_Back",
+                "Attribute": "WeaponRange_DistanceLong",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_G_RailGunUnits_Armor2": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Research_Buff_K_Artillery_EMP_Barrage" ],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "LocalizedResearchTitleStringID": "CRUISER MARAUDER MODE",
+        "LocalizedLongDescriptionStringID": "Add move speed and primary weapon damage of all Cruisers.\n\n[84a1e8]+10 Speed. +20% Damage",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "K_HonorGuard_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                "Name": "DEFAULT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "2": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "K_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                //"Name": "G_SupportCruiser_Weapon_G2G_MP",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "K_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                "Name": "MisslePods_Front",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              },
+              "2": {
+                "Name": "MisslePods_Back",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 20
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "Research_Buff_G_RailGunUnits_Armor3": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Research_Buff_K_Artillery_EMP_Barrage" ],
+        "Resource1Cost": 350,
+        "Resource2Cost": 0,
+        "ResearchTime": 10,
+        "LocalizedResearchTitleStringID": "CRUISER BERSERKER MODE",
+        "LocalizedLongDescriptionStringID": "Add armor and primary weapon fire rate of all Cruisers..\n\n[84a1e8]+10 Armor. +20% Rof",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "K_HonorGuard_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                "Name": "DEFAULT",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1700
+              }
+            }
+          },
+          "1": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -910
+              },
+              "2": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -910
+              }
+            }
+          },
+          "2": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "K_SupportCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                //"Name": "AA_LEFT",
+                "Attribute": "UnitWeapon_RateOfFire",
+                "Mode": "Add",
+                "Value": 4
+              }
+            }
+          },
+          "3": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "K_ArtilleryCruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 10
+              },
+              "1": {
+                "Name": "MisslePods_Front",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1140
+              },
+              "2": {
+                "Name": "MisslePods_Back",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -1140
+              }
+            }
+          }
+        }
+      }
+    },
+
+
+
+    "Research_S_Buff_Power_1": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_Power_1": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_Power_1": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_S_Buff_Power_2": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_Power_2": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_Power_2": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_S_Buff_Power_3": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_Power_3": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_Power_3": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_S_Buff_Power_4": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_Power_4": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_Power_4": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_S_Buff_Power_5": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_Power_5": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_Power_5": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_S_Buff_Power_6": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_Power_6": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_Power_6": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_S_Buff_Power_7": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_Power_7": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_Power_7": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_C_Sob_CruiseMissileUnlock": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_Fleet_Popcap_1": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 99999,
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
+      }
+    },
+    "Research_Buff_S_SupportCruiser_AA": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ],
+        "LocalizedResearchTitleStringID": "SUPPORT CRUISER ANTI-GROUND",
+        "LocalizedLongDescriptionStringID": "Enables anti-ground capabilities.",
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_SupportCruiser_MP",
+            "BuffSet": {
+              "3": {
+                "Name": "AA_RIGHT",
+                "Attribute": "UnitWeapon_RateOfFire",
+                "Mode": "Add",
+                "Value": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_S_AssaultCruiser_AntiAir": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ],
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "ClassOperator": "Or",
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "3": {
+                "Name": "ANTI-AIR",
+                "Attribute": "UnitWeapon_RateOfFire",
+                "Mode": "Add",
+                "Value": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_K_Artillery_EMP_Barrage": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_Artillery_EMP_Barrage": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_K_Artillery_Barrage": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_Artillery_Barrage": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_HonorCruiser_Defenses": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_K_HonorCruiser_Defenses": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_G_BattleCruiser_AntiAir": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_K_BattleCruiser_AntiAir": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_SupportCruiser_AA": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ],
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0
+      }
+    },
+    "Research_Buff_AssaultCruiser_AntiAir": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ],
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "ClassOperator": "Or",
+            "UnitType": "G_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "ANTI-AIR",
+                "Attribute": "UnitWeapon_RateOfFire",
+                "Mode": "Add",
+                "Value": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "Research_Buff_C_DeployableTurretsNoInitialCooldown": {
+      "ResearchItemAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ResearchTime": 0,
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
+      }
+    },
+    "Research_Buff_G_ProductionCruiserResourcer": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
+      }
+    },
+    "Research_Buff_K_ProductionCruiserResourcer": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
+      }
+    },
+    "Research_Buff_G_RailGunScope": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ],
+        "LocalizedLongDescriptionStringID": "Heavy Railguns gain the RANGED CALIBRATION ability - Increasing range at the cost of mobility.\n\n[84a1e8]Weapon and sight range increased by 300.\nMovement speed reduced by 66%."
+      }
+    },
+    "Research_Buff_G_RailGunStun": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
+      }
+    },
+    "Research_Buff_G_RailGun_Ability": {
+      "ResearchItemAttributes": {
+        "Dependencies": [ "Tier_2_S_ArmouredAssault" ]
+      }
+    },
+    "C_Baserunner_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "PopCapCost": 12,
+        "ProductionTime": 30,
+        "ExperienceValue": 500
+      },
+      "WeaponAttributes": {
+        "C_Baserunner_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": true
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_C_LaunchProbe_MP": {
+          "Resource1Cost": 0,
+          "Resource2Cost": 0
+        }
+      }
+    },
+    "C_Sob_Baserunner_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "PopCapCost": 12,
+        "ProductionTime": 30,
+        "ExperienceValue": 500
+      },
+      "WeaponAttributes": {
+        "C_Baserunner_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": true
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_C_Baserunner_ECMField": {
+          "Resource1Cost": 0,
+          "Resource2Cost": 0
+        },
+        "Ability_C_LaunchProbe_MP": {
+          "Resource1Cost": 0,
+          "Resource2Cost": 0
+        }
+      }
+    },
+    "G_Baserunner_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "PopCapCost": 12,
+        "ProductionTime": 30,
+        "ExperienceValue": 500
+      },
+      "WeaponAttributes": {
+        "G_Baserunner_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": true
+        },
+        "G_Baserunner_Weapon_HealingAura_MP": {
+          "NumberOfBursts": 5,
+          "BaseDamagePerRound": 160,
+          "BurstPeriodMinTimeMS": 1000,
+          "BurstPeriodMaxTimeMS": 1000
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_G_DeployScanner_MP": {
+          "CooldownTimeSecs": 120
+
+        },
+        "Ability_G_BaseRunnerPassiveRegen": {
+          "CooldownTimeSecs": 50,
+          "ApplyStatusEffect": {
+            "Regen_BaseRunnerPassive_StatusEffect": {
+              "Lifetime": "Finite",
+              "Duration": 5.00,
+              "MaxStacks": 1,
+              "StackingBehaviour": "Replace"
+            }
+          }
+        }
+      }
+    },
+    "K_Baserunner_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "PopCapCost": 12,
+        "ProductionTime": 30,
+        "ExperienceValue": 500
+      },
+      "WeaponAttributes": {
+        "G_Baserunner_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": true
+        }
+      }
+    },
+    "K_ExplodingSkimmer_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ExperienceValue": 0,
+        "ProductionTime": 40
+      },
+      "WeaponAttributes": {
+        "K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
+          "DamagePacketsPerShot": 5,
+          "Modifiers": {
+            "0": {
+              "TargetClass": "Large",
+              "ClassOperator": "Or",
+              "Modifier": "DamagePercent",
+              "Amount": 60
+            }
+          }
+        }
+      }
+    },
+    "G_HonorGuard_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000
+      },
+      "WeaponAttributes": {
+        "G_HonorGuardRailgun_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 600,
+          "RangeAttributesLong": { "Distance": 2000 }
+        },
+        "G_HonorGuard_Weapon_G2G_CAT_MP": {
+          "BaseDamagePerRound": 20,
+          "Modifiers": {
+            "0": { "Remove": true }
+          }
+        },
+        "G_HonorGuard_Weapon_G2A_MP": {
+          "ExcludeFromHeightAdvantage": true,
+          "LineOfSightRequired": false,
+          "BaseDamagePerRound": 100,
+          "AreaOfEffectFalloffType": "None",
+          "AreaOfEffectRadius": 60,
+          //"ProjectileEntityTypeToSpawn": "K_Artillery_Shell_ProjectileAssetContainer_MP",
+          //"LeadsTarget": "LeadTarget",
+          "RangeAttributesShort": {
+            "Distance": 400,
+            "Accuracy": 45
+          },
+          "RangeAttributesMedium": {
+            "Distance": 900,
+            "Accuracy": 80
+          },
+          "RangeAttributesLong": {
+            "Distance": 1400,
+            "Accuracy": 65
+          },
+          "Modifiers": {
+            "0": { "TargetClass": "Air" }
+          }
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_G_HonorSwitchMode": {
+          "RequiredResearch": []
+        }
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: -50% reload time of primary weapon",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "DEFAULT",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "AddPercent",
+                "Value": -50
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 4000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -10 speed",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "DEFAULT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "K_HonorGuard_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000
+      },
+      "WeaponAttributes": {
+        "G_HonorGuardRailgun_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 600,
+          "RangeAttributesLong": { "Distance": 2000 }
+        },
+        "G_HonorGuard_Weapon_G2G_CAT_MP": {
+          "BaseDamagePerRound": 20,
+          "Modifiers": {
+            "0": { "Remove": true }
+          }
+        },
+        "G_HonorGuard_Weapon_G2A_MP": {
+          "ExcludeFromHeightAdvantage": true,
+          "LineOfSightRequired": false,
+          "BaseDamagePerRound": 100,
+          "AreaOfEffectFalloffType": "None",
+          "AreaOfEffectRadius": 60,
+          //"LeadsTarget": "LeadTarget",
+          //"ProjectileEntityTypeToSpawn": "G_Artillery_Shell_ProjectileAssetContainer_MP",
+          //"ProjectileEntityTypeToSpawn": "G_Missile_Shell_ProjectileAssetContainer_MP",
+          "RangeAttributesShort": {
+            "Distance": 600,
+            "Accuracy": 45
+          },
+          "RangeAttributesMedium": {
+            "Distance": 1000,
+            "Accuracy": 80
+          },
+          "RangeAttributesLong": {
+            "Distance": 1400,
+            "Accuracy": 65
+          },
+          "Modifiers": {
+            "0": { "TargetClass": "Air" }
+          }
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_G_HonorSwitchMode": {
+          "RequiredResearch": []
+        }
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: -50% reload time of primary weapon",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "G_HonorGuardRailgun_Weapon_G2G_MP",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "AddPercent",
+                "Value": -50
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 4000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -10 speed",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "DEFAULT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "G_SupportCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "MaxHealth": 3700,
+        "PriorityAsTarget": 10000,
+        "SensorRadius": 1250,
+        "ContactRadius": 1400,
+        "ExperienceValue": 1000
+      },
+      "WeaponAttributes": {
+        "G_SupportCruiser_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": false,
+          "BaseDamagePerRound": 20,
+          "LineOfSightRequired": true,
+          //"ProjectileEntityTypeToSpawn": "C_Battlecruiser_Default_ProjectileAssetContainer_MP",
+          //"EntityTypeToSpawn": "C_Battlecruiser_MP",
+          "Modifiers": {
+            "0": { "Remove": true }
+          }
+          /*
+          "EntityTypesToSpawnOnImpact": {
+            "0": {
+              "EntityTypeToSpawn": "C_HAC_Smoke_SceneEntity_MP"
+            }
+          },
+          "ProjectileEntityTypeToSpawn": "C_HAC_Smoke_ProjectileAssetContainer",
+          "StatusEffectsTargetAlignment": "None",
+          "StatusEffectsSets": {
+            "0": { "StatusEffects": [ "EMP_CoalitionArtillery_StatusEffect" ] }
+          },
+          "StatusEffectsExcludeTargetType": "None"*/
+        }
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 500,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: +25% sensor range",
+            "RequiredExperience": 1500,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "AddPercent",
+                "Value": 25
+              },
+              "1": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "AddPercent",
+                "Value": 25
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -10 speed",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "0": {
+                //"Name": "G_SupportCruiser_Weapon_Front_MP",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "G_SupportCruiser": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "SensorRadius": 1300,
+        "ContactRadius": 1500,
+        "ExperienceValue": 1000
+      },
+      "AbilityAttributes": {
+        "Ability_G_SupportCruiserRegen": {
+          "ApplyStatusEffect": {
+            "Regen_SupportCruiserRegen_StatusEffect": {
+              "Modifiers": {
+                "0": {
+                  "HealthOverTimeAttributes": {
+                    "Amount": 48,
+                    "MSTickDuration": 1000
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "WeaponAttributes": {
+        "G_SupportCruiser_Weapon_G2G": {
+          "ExcludeFromHeightAdvantage": false,
+          "BaseDamagePerRound": 20,
+          "LineOfSightRequired": true,
+          "Modifiers": {
+            "0": { "Remove": true }
+          }
+        }
+      }
+    },
+    "K_SupportCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "MaxHealth": 3700,
+        "SensorRadius": 800,
+        "ContactRadius": 1000,
+        "ExperienceValue": 1000
+      },
+      "WeaponAttributes": {
+        "G_SupportCruiser_Weapon_G2G_MP": {
+          "ExcludeFromHeightAdvantage": false,
+          "BaseDamagePerRound": 20,
+          "LineOfSightRequired": true,
+          "Modifiers": {
+            "0": { "Remove": true }
+          }
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_G_SupportCruiserRegen": {
+          "ApplyStatusEffect": {
+            "Regen_SupportCruiserRegen_StatusEffect": {
+              "Modifiers": {
+                "0": {
+                  "HealthOverTimeAttributes": {
+                    "Amount": 48,
+                    "MSTickDuration": 1000
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 500,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: +25% sensor range",
+            "RequiredExperience": 1500,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "AddPercent",
+                "Value": 25
+              },
+              "1": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "AddPercent",
+                "Value": 25
+              }
+              /*"0": {
+                "Name": "MOVEMENTSHUNT",
+                "Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
+                "Mode": "Add",
+                "Value": 1
+              },
+              "1": {
+                "Name": "MOVEMENTSHUNT",
+                "Attribute": "UnitWeapon_ExcludeFromAutoFire",
+                "Mode": "Set",
+                "Value": -1
+              },
+              "2": {
+                "Name": "MOVEMENTSHUNT",
+                "Attribute": "UnitWeapon_RateOfFire",
+                "Mode": "Set",
+                "Value": 1
+              }*/
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -10 speed",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "0": {
+                //"Name": "G_SupportCruiser_Weapon_Front_MP",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "G_ArtilleryCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000
+      },
+      "WeaponAttributes": {
+        "G_ArtilleryCruiser_Weapon_PD_MP": {
+          "BaseDamagePerRound": 20
+        },
+        "G_ArtilleryCruiser_Weapon_Barrage_01_MP": {
+          "BaseDamagePerRound": 250,
+          "DamagePacketsPerShot": 1,
+          "ExcludeFromHeightAdvantage": true
+        },
+        "G_ArtilleryCruiser_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 250,
+          "DamagePacketsPerShot": 1,
+          "ExcludeFromHeightAdvantage": true
+        }
+
+      },
+      "AbilityAttributes": {
+        "Ability_G_Artillery_EMP_MP": {
+          "RequiredResearch": []
+          //"ActivationDependencies": { "TakeNoDamageForMS": 0 }
+        },
+        "Ability_G_ArtilleryBarrage_01_MP": {
+          "RequiredResearch": []
+        }
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: -25% cooldown of ability",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "Ability_G_Artillery_EMP_MP",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -25
+              },
+              "1": {
+                "Name": "Ability_G_ArtilleryBarrage_01_MP",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -25
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 4000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -10 speed",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "MisslePods_Front",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Name": "MisslePods_Back",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "2": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "K_ArtilleryCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000
+      },
+      "WeaponAttributes": {
+        "G_ArtilleryCruiser_Weapon_PD_MP": {
+          "BaseDamagePerRound": 20
+        },
+        "K_ArtilleryCruiser_Weapon_Barrage_01_MP": {
+          //"BaseDamagePerRound": 185,
+          "DamagePacketsPerShot": 1
+        },
+        "K_ArtilleryCruiser_Weapon_BarrageOverDunes_01_MP": {
+          "BaseDamagePerRound": 200,
+          "DamagePacketsPerShot": 1,
+          "ExcludeFromHeightAdvantage": true
+        }
+
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: -25% cooldown of ability",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "Ability_K_Artillery_EMP_MP",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -25
+              },
+              "1": {
+                "Name": "Ability_K_ArtilleryBarrage_01_MP",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -25
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 4000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -10 speed",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "MisslePods_Front",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Name": "MisslePods_Back",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "2": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "C_Sob_BattleCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000,
+        "MaxHealth": 4500,
+        "Armour": 20
+      },
+      "WeaponAttributes": {
+        "C_Sob_Battlecruiser_Railgun_Weapon_G2G_MP": {
+          "RangeAttributesShort": { "Accuracy": 5.5 },
+          "RangeAttributesMedium": { "Accuracy": 5 },
+          "RangeAttributesLong": { "Accuracy": 4.5 }
+
+        },
+        "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+          "StatusEffectsTargetAlignment": "Friend",
+          "AreaOfEffectRadius": 1,
+          "StatusEffectsSets": {
+            "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
+          },
+          "StatusEffectsExcludeTargetType": "Air"
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_C_SmokeGrenade_BattleCruiser": {
+          "CasterMovesToTarget": false
+          /*
+          "ApplyStatusEffect": {
+            "Regen_ArtilleryCruiser_StatusEffect": {
+              "Modifiers": {
+                "0": {
+                  "HealthOverTimeAttributes": {
+                    "Amount": 50,
+                    "MSTickDuration": 1000
+                  }
+                }
+              }
+            }
+          },
+          "ActivationDependencies": {
+            "TakeNoDamageForMS": 5000
+          }
+          */
+        }
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: +1000 hull",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                //"Name": "C_BattleCruiser_Weapon_Ballistic_Smoke_MP",
+                //"Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
+                //"Mode": "Set",
+                //"Value": 1
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 4000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -10 speed",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "2": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "C_BattleCruiser": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 0,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000,
+        "MaxHealth": 5500,
+        "Armour": 20
+      }
+    },
+    "C_BattleCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000,
+        "MaxHealth": 4500,
+        "Armour": 20
+      },
+
+      "WeaponAttributes": {
+        "C_BattleCruiser_Weapon_Ballistic_Smoke_MP": {
+          "StatusEffectsTargetAlignment": "Friend",
+          "AreaOfEffectRadius": 1,
+          "StatusEffectsSets": {
+            "0": { "StatusEffects": [ "Regen_BattleCruiser_StatusEffect" ] }
+          },
+          "StatusEffectsExcludeTargetType": "Air"
+        }
+      },
+
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: +1000 hull",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                //"Name": "C_BattleCruiser_Weapon_Ballistic_Smoke_MP",
+                //"Attribute": "UnitWeapon_ActiveStatusEffectsIndex",
+                //"Mode": "Set",
+                //"Value": 1
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 1000
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 4000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -10 speed",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "2": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "C_SupportCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000
+      },
+      "WeaponAttributes": {
+        "C_SupportCruiser_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 20,
+          "RateOfFire": 12
+        },
+        "C_SupportCruiser_Weapon_Repair_Small_MP": {
+          "BaseDamagePerRound": 2
+        },
+        "C_SupportCruiser_Weapon_G2A_MP": {
+          "ExcludeFromHeightAdvantage": true,
+          //"BaseDamagePerRound": 200,
+          "RateOfFire": 1,
+          "LineOfSightRequired": true,
+          "Modifiers": {
+            "0": { "Remove": true }
+          }
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_C_SupportCruiser_AA": {
+          "CooldownTimeSecs": 2,
+          "RequiredResearch": []
+        }
+        /*
+        "Ability_Common_DisableResourceController": {
+          //"CooldownTimeSecs": 2,
+          "ApplyStatusEffect": {
+            "DisableResourceController_StatusEffect": {
+              "BuffsToApplyToTarget": {
+                "0": {
+                  "UnitClass": -1,
+                  "UseAsPrefix": true,
+                  "UnitType": "C_SupportCruiser_MP",
+                  "BuffSet": {
+                    "0": {
+                      "Attribute": "WeaponRange_DistanceLong",
+                      "Mode": "Add",
+                      "Value": 400
+                    },
+                    "1": {
+                      "Attribute": "UnitDynamics_MaxSpeed",
+                      "Mode": "Add",
+                      "Value": 10
+                    },
+                    "2": {
+                      "Name": "REPAIR",
+                      "Attribute": "UnitWeapon_RateOfFire",
+                      "Mode": "Add",
+                      "Value": -2
+                    },
+                    "3": {
+                      "Name": "REPAIR_FL",
+                      "Attribute": "UnitWeapon_RateOfFire",
+                      "Mode": "Add",
+                      "Value": -2
+                    },
+                    "4": {
+                      "Name": "REPAIR_BR",
+                      "Attribute": "UnitWeapon_RateOfFire",
+                      "Mode": "Set",
+                      "Value": -2
+                    },
+                    "5": {
+                      "Name": "REPAIR_BL",
+                      "Attribute": "UnitWeapon_RateOfFire",
+                      "Mode": "Add",
+                      "Value": -2
+                    }
+
+                  }
+
+                }
+              }
+            }
+          }
+        }
+        */
+
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 500,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: +50% repair speed",
+            "RequiredExperience": 1500,
+            "Buff": {
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "REPAIR",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 50
+              },
+              "1": {
+                "Name": "REPAIR_FL",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 50
+              },
+              "2": {
+                "Name": "REPAIR_BL",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 50
+              },
+              "3": {
+                "Name": "REPAIR_BR",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 50
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -10 speed",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "ANTI-AIR",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "C_Sob_SupportCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000
+      },
+      "WeaponAttributes": {
+        "C_SupportCruiser_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 20,
+          "RateOfFire": 12
+        },
+        "C_SupportCruiser_Weapon_Repair_Small_MP": {
+          "BaseDamagePerRound": 2
+        },
+        "C_SupportCruiser_Weapon_G2A_MP": {
+          "ExcludeFromHeightAdvantage": false,
+          "BaseDamagePerRound": 200,
+          "RateOfFire": 1,
+          "LineOfSightRequired": true,
+          "Modifiers": {
+            "0": { "Remove": true }
+          }
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_C_SupportCruiser_AA": {
+          "RequiredResearch": [],
+          "WarmupTimeSecs": 2
+        }
+      }
+    },
+    "C_ArtilleryCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000
+      },
+      "AbilityAttributes": {
+        "Ability_C_ArtilleryBarrage": {
+          "Resource1Cost": 0,
+          "Resource2Cost": 0,
+          "SharedCooldownChannel": 0
+          //"CooldownTimeSecs": 30
+        },
+        "Ability_C_ArtilleryBarrage_Precise": {
+          "Resource1Cost": 0,
+          "Resource2Cost": 0,
+          "SharedCooldownChannel": 0
+          //"CooldownTimeSecs": 30
+        }
+      },
+      "WeaponAttributes": {
+        "C_ArtilleryCruiser_Weapon_PointDefense_MP": {
+          "BaseDamagePerRound": 20
+        },
+        "C_ArtilleryCruiser_Weapon_Barrage_MP": {
+          "BaseDamagePerRound": 300,
+          "DamagePacketsPerShot": 2,
+          "ExcludeFromHeightAdvantage": true
+        },
+        "C_ArtilleryCruiser_Weapon_PreciseBarrage_MP": {
+          "BaseDamagePerRound": 300,
+          "DamagePacketsPerShot": 2,
+          "ExcludeFromHeightAdvantage": true
+        },
+        "C_ArtilleryCruiser_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 300,
+          "DamagePacketsPerShot": 2,
+          "ExcludeFromHeightAdvantage": true
+        }
+        /*"C_ArtilleryCruiser_Weapon_G2G_Disabled_MP": {
+          "BaseDamagePerRound": 200,
+          "AreaOfEffectFalloffType": "None",
+          "AreaOfEffectRadius": 150,
+          "RateOfFire": 4,
+          "DamagePacketsPerShot": 2,
+          "NumberOfBursts": 1
+        }*/
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: +50% AOE of primary weapon",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "MisslePods_FL",
+                "Attribute": "UnitWeapon_AreaOfEffect",
+                "Mode": "AddPercent",
+                "Value": 50
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 4000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -10 speed",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "MisslePods_FL",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "G_BattleCruiser_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "ProductionTime": 20,
+        "PopCapCost": 13,
+        "PriorityAsTarget": 10000,
+        "ExperienceValue": 1000,
+        "Armour": 15
+      },
+      "WeaponAttributes": {
+        "G_Battlecruiser_Weapon_G2G_MP": {
+          "BaseDamagePerRound": 70
+        },
+        "G_BattleCruiser_Weapon_Missile_MP": {
+          "BaseDamagePerRound": 300,
+          "ExcludeFromHeightAdvantage": true
+        }
+      },
+      //"WeaponAttributes": {
+      //"G_Battlecruiser_Weapon_G2A_MP": {
+      //"ExcludeFromAutoFire": 0,
+      //"ExcludeFromAutoTargetAcquisition": 0
+      // }
+      // },
+      "AbilityAttributes": {
+        "Ability_G_BattleCruiser_EnableAir_MP": {
+          "RequiredResearch": []
+        },
+        "Ability_G_BattleCruiser_ArmorBonus_MP": {
+          //"Autocast": {
+          //  "IsAutocastable": true,
+          //  "AutocastEnabledOnSpawn": true
+          //},
+          "SharedCooldownChannel": 0,
+          //"CooldownTimeSecs": 10,
+          "ApplyStatusEffect": {
+            "ArmorBonus_StatusEffect": {
+              "Lifetime": "Finite",
+              "Duration": 10.00,
+              "MaxStacks": 1,
+              "StackingBehaviour": "Replace",
+              "BuffsToApplyToTarget": {
+                "0": {
+                  "BuffSet": {
+                    "0": {
+                      "Attribute": "Unit_Armour",
+                      "Mode": "AddPercent",
+                      "Value": 100
+                    },
+                    "1": {
+                      "Attribute": "UnitDynamics_MaxSpeed",
+                      "Mode": "AddPercent",
+                      "Value": 50
+                    },
+                    "2": {
+                      "Attribute": "UnitDynamics_AccelerationTime",
+                      "Mode": "AddPercent",
+                      "Value": 50
+                    },
+                    "3": {
+                      "Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+                      "Mode": "AddPercent",
+                      "Value": 50
+                    }
+                  }
+                }
+              }
+
+
+            }
+          }
+        },
+        "Ability_G_BattleCruiser_Missile_MP": {
+          "SharedCooldownChannel": 0,
+          "Resource1Cost": 0
+        },
+        "Ability_G_BattleCruiserActiveRegen": {
+          "SharedCooldownChannel": 0
+        }
+      },
+      "ExperienceAttributes": {
+        "Levels": {
+          "1": {
+            "BuffTooltipLocID": "Officer: +3 armour",
+            "RequiredExperience": 1000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 3
+              }
+            }
+          },
+          "2": {
+            "BuffTooltipLocID": "Lieutenant: +500 hull",
+            "RequiredExperience": 2000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              }
+            }
+          },
+          "3": {
+            "BuffTooltipLocID": "Lt. Commander: +20 speed",
+            "RequiredExperience": 3000,
+            "Buff": {
+              "1": { "Remove": true },
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": 20
+              }
+            }
+          },
+          "4": {
+            "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
+            "RequiredExperience": 4000,
+            "Buff": {
+              "2": { "Remove": true },
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "Add",
+                "Value": 500
+              },
+              "1": {
+                "Attribute": "Unit_Armour",
+                "Mode": "Add",
+                "Value": 2
+              }
+            }
+          },
+          "5": {
+            "BuffTooltipLocID": "Captain: +75% primary weapon damage, -10 speed",
+            "RequiredExperience": 6000,
+            "Buff": {
+              "3": { "Remove": true },
+              "4": { "Remove": true },
+              "5": { "Remove": true },
+              "6": { "Remove": true },
+              "7": { "Remove": true },
+              "8": { "Remove": true },
+              "9": { "Remove": true },
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": 75
+              },
+              "2": {
+                "Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "Add",
+                "Value": -10
+              }
+            }
+          }
+        }
+      }
+    },
+    "C_Harvester_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "PopCapCost": 13,
+        "ExperienceValue": 0
+      },
+      "StorageAttributes": {
+        "C_Harvester_StorageAttributesAsset_MP": {
+          "InventoryLoadout": {
+            "Resource1": { "Capacity": 0 },
+            "Resource2": { "Capacity": 0 }
+          }
+        }
+      },
+      "HarvesterAttributes": {
+        "SalvageCycles": {
+          "0": {
+            "ResourcesLoadedPerCycle": 0
+          }
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_Common_DemoChargeLay_MP": {
+          "Resource1Cost": 0,
+          "TargetAlignment": "Self",
+          "TargetingType": "Self, Passive",
+          "AbilityMapTargetLayers": "Ground"
+        }
+      }
+    },
+    "G_Harvester_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "PopCapCost": 13,
+        "ExperienceValue": 0
+      },
+      "StorageAttributes": {
+        "G_Harvester_StorageAttributesAsset_MP": {
+          "InventoryLoadout": {
+            "Resource1": { "Capacity": 0 },
+            "Resource2": { "Capacity": 0 }
+          }
+        }
+      },
+      "HarvesterAttributes": {
+        "SalvageCycles": {
+          "0": {
+            "ResourcesLoadedPerCycle": 0
+          }
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_Common_DemoChargeLay_MP": {
+          "Resource1Cost": 0,
+          "TargetAlignment": "Self",
+          "TargetingType": "Self, Passive",
+          "AbilityMapTargetLayers": "Ground"
+        }
+      }
+    },
+    "K_Harvester_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "PopCapCost": 13,
+        "ExperienceValue": 0
+      },
+      "StorageAttributes": {
+        "K_Harvester_StorageAttributesAsset_MP": {
+          "InventoryLoadout": {
+            "Resource1": { "Capacity": 0 },
+            "Resource2": { "Capacity": 0 }
+          }
+        }
+      },
+      "HarvesterAttributes": {
+        "SalvageCycles": {
+          "0": {
+            "ResourcesLoadedPerCycle": 0
+            //"ResourcesExtractedPerCycle": 4,
+            //"CycleDuration": 1.25
+          }
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_Common_DemoChargeLay_MP": {
+          "Resource1Cost": 0,
+          "TargetAlignment": "Self",
+          "TargetingType": "Self, Passive",
+          "AbilityMapTargetLayers": "Ground"
+        }
+      }
+    },
+    "S_Harvester_MP": {
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "Resource2Cost": 0,
+        "PopCapCost": 13,
+        "ExperienceValue": 0
+      },
+      "StorageAttributes": {
+        "S_Harvester_StorageAttributesAsset_MP": {
+          "InventoryLoadout": {
+            "Resource1": { "Capacity": 0 },
+            "Resource2": { "Capacity": 0 }
+          }
+        }
+      },
+      "HarvesterAttributes": {
+        "SalvageCycles": {
+          "0": {
+            "ResourcesLoadedPerCycle": 0
+          }
+        }
+      },
+      "AbilityAttributes": {
+        "Ability_Common_DemoChargeLay_MP": {
+          "Resource1Cost": 0,
+          "TargetAlignment": "Self",
+          "TargetingType": "Self, Passive",
+          "AbilityMapTargetLayers": "Ground"
+        }
+      }
+    },
+    "N_DemoCharge_MP": {
+      "WeaponAttributes": {
+        "N_DemoCharge_Weapon_G2G_MP": {
+          "FriendlyFireDamageScalar": 1,
+          "AreaOfEffectFalloffType": "None",
+          "BaseDamagePerRound": 1200
+        }
+      },
+      "UnitAttributes": {
+        "Resource1Cost": 0,
+        "ExcludeFromUnitStats": false
+      }
+    },
+    //"Resource_Wreck_MP": {
+    //  "ResourceAttributes": {
+    //    "MaxHarvesters": 0
+    //  }
+    // },
+    "C_Sob_PopcapScanner": {
+      "UnitAttributes": {
+        "Resource1Cost": 99999,
+        "Armour": 999999,
+        "MaxHealth": 99999,
+        "PriorityAsTarget": -15000
+      }
+    },
+    "C_PopcapScanner": {
+      "UnitAttributes": {
+        "Resource1Cost": 99999,
+        "MaxHealth": 99999,
+        "Armour": 99999,
+        "PriorityAsTarget": -15000
+      }
+    },
+    "N_ECMField_MP": {
+      "UnitAttributes": {
+        "PopCapCost": 0,
+        "Resource1Cost": 0,
+        "Resource2Cost": 0
+      }
+    },
+    "N_Gun_Turret_MP": {
+      "UnitAttributes": {
+        "PopCapCost": 0,
+        "Resource1Cost": 0,
+        "Resource2Cost": 0
+      }
+    },
+    "N_Missle_Turret_MP": {
+      "UnitAttributes": {
+        "PopCapCost": 0,
+        "Resource1Cost": 0,
+        "Resource2Cost": 0
+      },
+      "WeaponAttributes": {
+        "N_Missle_Turret_Weapon_G2A_MP": {
+          "BaseDamagePerRound": 120,
+          "LineOfSightRequired": true,
+          "Modifiers": {
+            "0": {
+              "Remove": true
+            }
+          }
+        }
+      }
+    },
+    "Ability_C_SupportCruiser_AA": {
+      "AbilityViewAttributes": {
+        //"IconName": "Icon-Command-GroundTargetAA",
+        "LocalizedTitleStringID": "MISSILE",
+        "LocalizedLongDescriptionStringID": "Enable Support Cruiser missile systems. Can attack air and ground."
+        //"LocalizedShortDescriptionStringID": "[f1c232]passive skill."
+      }
+    },
+    "Ability_G_HonorSwitchMode": {
+      "AbilityViewAttributes": {
+        "IconName": "Icon-Command-GroundTargetAA",
+        "LocalizedTitleStringID": "ENABLE ROKET DEFENSES",
+        "LocalizedLongDescriptionStringID": "After a 3 second delay, guided rocket pods become active for 25 seconds.The main weapon is disabled while roket pods are active"
+        //"LocalizedShortDescriptionStringID": "[f1c232]APHE ROCKETS , long range, large area."
+      }
+    },
+    "Ability_Produce_K_Harvester": {
+      "AbilityViewAttributes": {
+        "IconName": "Icon-Command-Production-G_BattleCruiser",
+        "LocalizedTitleStringID": "BUILD ASSAULT CRUISER",
+        "LocalizedLongDescriptionStringID": "Rapid assault cruiser, effective at engaging and disengaging quickly. Strong against ground targets.",
+        "LocalizedShortDescriptionStringID": "ARMORED"
+      }
+    },
+    "Ability_G_ProduceHarvester_MP": {
+      "AbilityViewAttributes": {
+        "IconName": "Icon-Command-Production-G_BattleCruiser",
+        "LocalizedTitleStringID": "BUILD ASSAULT CRUISER",
+        "LocalizedLongDescriptionStringID": "Rapid assault cruiser, effective at engaging and disengaging quickly. Strong against ground targets.",
+        "LocalizedShortDescriptionStringID": "ARMORED"
+      }
+    },
+    "Ability_C_ProduceHarvester_MP": {
+      "AbilityViewAttributes": {
+        "IconName": "Icon-Command-Production-G_BattleCruiser",
+        "LocalizedTitleStringID": "BUILD ASSAULT CRUISER",
+        "LocalizedLongDescriptionStringID": "Rapid assault cruiser, effective at engaging and disengaging quickly. Strong against ground targets.",
+        "LocalizedShortDescriptionStringID": "ARMORED"
+      }
+    },
+    "Ability_G_ProduceAssaultCruiser_MP": {
+      "AbilityViewAttributes": {
+        "IconName": "Icon-Command-Production-G_BattleCruiser",
+        "LocalizedTitleStringID": "BUILD ASSAULT CRUISER",
+        "LocalizedLongDescriptionStringID": "Rapid assault cruiser, effective at engaging and disengaging quickly. Strong against ground targets.",
+        "LocalizedShortDescriptionStringID": "ARMORED"
+      }
+    },
+    "Ability_C_SmokeGrenade_BattleCruiser": {
+      "AbilityViewAttributes": {
+        "LocalizedLongDescriptionStringID": "Deploy covering smoke around the Battlecruiser and regen 500 Health immediately. Smoke lasts for 10 seconds."
+      }
+    },
+    /*
+    "Ability_Common_DisableResourceController": {
+      "AbilityViewAttributes": {
+        "IconName": "Shunt_Armour_off",
+        "ToggledIconName": "Shunt_Armour",
+        "LocalizedTitleStringID": "SELF-REPAIR MODE",
+        "LocalizedToggledTitleStringID": "DISABLE SELF-REPAIR MODE",
+        "LocalizedLongDescriptionStringID": "Activate self-repair system and disable repair gun.",
+        "LocalizedToggledLongDescriptionStringID": "Disable self-repair system and activate repair gun."
+      }
+    },
+    */
+
+    /*
+    "Ability_G_BattleShipRegen": {
+      "AbilityViewAttributes": {
+        "IconName": "Icon-Command-Production-G_BattleCruiser",
+        "LocalizedTitleStringID": "SELF-REPAIR",
+        "LocalizedLongDescriptionStringID": "Baserunner spews out nanits that feed on any surounding unit hull to restore baserunner health. Capable of repairing even without units around it using sand power. Opens wrecks as byproduct.\n\n[999da0]Nanomachines son."
+      }
+    },
+    */
+    "ArmorDebuff_StatusEffect": {
+      "StatusEffectAttributes": {
+        //"Duration": 15,
+        "BuffsToApplyToTarget": {
+          "0": {
+            "BuffSet": {
+              "0": {
+                "Value": -12
+              }
+            }
+          }
+        }
+      }
+    },
+    "Regen_BattleCruiser_StatusEffect": {
+      "CloneFrom": "Regen_BattleCruiser_StatusEffect",
+      "StatusEffectAttributes": {
+        "Lifetime": "Finite",
+        "Duration": 1,
+        "MaxStacks": 1,
+        "StackingBehaviour": "Replace",
+        "WeaponFireTriggerEndEvent": "None",
+        "Modifiers": {
+          "0": {
+            "ModifierType": "HealthOverTime",
+            "HealthOverTimeAttributes": {
+              "ID": "SmokeGrenade_BattleCruiser",
+              "Amount": 500,
+              "MSTickDuration": 1000,
+              "DamageType": "Heal"
+            }
+          },
+          "1": { "Remove": true },
+          "2": { "Remove": true },
+          "3": { "Remove": true },
+          "4": { "Remove": true }
+        }
+      }
+    }
+    /*
+    "Regen_BaseRunnerPassive_StatusEffect": {
+      "StatusEffectAttributes": {
+        "Lifetime": "Finite",
+        "Duration": 5.00,
+        "MaxStacks": 1,
+        "StackingBehaviour": "Replace",
+        "Modifiers": {
+          "0": {
+            "ModifierType": "HealthOverTime",
+            "HealthOverTimeAttributes": {
+              "ID": "Regen_BaseRunnerPassive_StatusEffect",
+              "Amount": 160,
+              "MSTickDuration": 1000,
+              "DamageType": "Damage"
+            }
+          }
+        }
+      }
+    }
+    */
+
+
+
+  }
+}
