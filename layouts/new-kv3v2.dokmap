@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<meta name="Kalash 3v2 [5,5]"
+	      authors="HammerSnake"
+	      description="3v2 map"/>
+		  
+	<layout map="M05" mode="Team" players="2, 3, 4, 5, 6">
+		<bounds top="10000" right="9000" bottom="-8000" left="-9000"/>
+		
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="-1080" y="2960" angle="330" camera="180"/>
+			<spawn team="0" index="1" x="-2400" y="2500" angle="350" camera="180"/>
+
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="6300" y="-1500" angle="0" camera="0"/>
+			<spawn team="1" index="1" x="2000" y="-4800" angle="0" camera="0"/>
+			<spawn team="1" index="2" x="-3000" y="-6000" angle="0" camera="10"/>
+		</spawns>
+		
+		<resources> 
+			<!-- team 1 -->
+			<resource x="-1500" y="3000" type="cu" amount="30000" collectors="6"/>
+			<resource x="-1430" y="2860" type="ru" amount="10000" collectors="4"/>
+
+			<resource x="-2070" y="2840" type="cu" amount="30000" collectors="6"/>
+			<resource x="-2070" y="2640" type="ru" amount="10000" collectors="4"/>
+
+
+			<!-- team 2 -->
+			<resource x="6100" y="-1430" type="cu" amount="30000" collectors="6"/>
+			<resource x="6100" y="-1570" type="ru" amount="10000" collectors="4"/>
+
+			<resource x="1800" y="-4730" type="cu" amount="30000" collectors="6"/>
+			<resource x="1800" y="-4870" type="ru" amount="10000" collectors="4"/>
+
+
+			<resource x="-3200" y="-5930" type="cu" amount="30000" collectors="6"/>
+			<resource x="-3200" y="-6070" type="ru" amount="10000" collectors="4"/>
+
+			
+			
+		</resources>
+		
+		<wrecks>
+			<!-- team 1 -->
+			<wreck x="-1200" y="6200" angle="0">
+				<resource x="-1300" y="6050" type="cu" amount="10500"/>
+				<resource x="-1100" y="6050" type="ru" amount="4000"/>
+			</wreck>
+			
+			<wreck x="-4700" y="4700" angle="30">
+				<resource x="-4665" y="4615" type="cu" amount="10500"/>
+				<resource x="-4635" y="4685" type="ru" amount="4000"/>
+			</wreck>
+			
+			<!-- team 2 -->
+			<wreck x="6390" y="2680" angle="182">
+				<resource x="6350" y="2865" type="cu" amount="10500"/>
+				<resource x="6440" y="2852" type="ru" amount="4000"/>
+			</wreck>
+			
+			<wreck x="1000" y="-400" angle="235">
+				<resource x="960" y="-600" type="cu" amount="10500"/>
+				<resource x="1060" y="-550" type="ru" amount="4000"/>
+			</wreck>
+
+			<wreck x="-4850" y="-2300" angle="105">
+				<resource x="-4990" y="-2410" type="cu" amount="10500"/>
+				<resource x="-4900" y="-2440" type="ru" amount="4000"/>
+			</wreck>
+		</wrecks>
+		
+		<artifacts>
+			<artifact x="-2000" y="3700"/>
+			<artifact x="-1400" y="1500"/>
+			<artifact x="550" y="-250"/>
+			<artifact x="5900" y="2600"/>
+
+		</artifacts>
+		
+		<ezs>
+			<!-- extraction yones -->
+			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+			<ez team="0" x="-6200" y="8500" radius="1000"/>
+			<ez team="1" x="7500" y="-6500" radius="1000"/>
+			
+		</ezs>
+
+		<blockers existing="false">
+			
+			<!-- hill 0 -->
+			<blocker class="Ground" blocklof="true" verts="
+					  -800,10000;
+					 -1400,9000;
+					 -1400,6700;
+					 250,5750;
+					 150,5750;				 
+					 900,6300;
+					 1200,8000;
+					 1300,9000;
+					 200,10000
+					 "/>
+
+			<!-- hill 10 a -->
+			<blocker class="Ground" blocklof="true" verts="
+					 1000,3150;
+					 1400,5050;
+					 1100,5400; 
+					 700,5200;
+					 200,5150;
+					 -200,3400			 
+					 "/>
+			<!-- hill 10 b -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -200,3400;
+					 -130,2350;
+					 850,1600;
+					 1750,1450;
+					 1750,1550;
+					 1000,3150
+					 "/>
+			<!-- hill center extra 1 -->
+			<blocker class="Ground" blocklof="true" verts="
+					 1300,-440;
+					 1350,-330;
+					 600,500;
+					 300,100
+					 "/>
+			<!-- hill center extra 2 -->
+			<blocker class="Ground" blocklof="true" verts="
+					 400,-500;
+					 300,-200;
+					 -1250,1250;
+					 -1000,-380
+					 "/>
+			<!-- hill center extra 3 -->
+			<blocker class="Small,Medium,Large" blocklof="true" verts="
+					 -1180,-2290;
+					 -985,-2310;
+					 -940,-2230;
+					 -1050,-2080;
+					 -1200,-2100
+					 "/>
+			<!-- hill center extra 4 -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -3700,-150;
+					 -3620,250;
+					 -4150,450;
+					 -4350,350;
+					 -3950,0
+					 "/>					
+			<!-- hill center a -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -1100,-500;
+					 300,-200;
+					 1300,850;
+					 1100,1150;
+					 -320,2250;
+					 -500,2250;
+					 -1250,1150
+					 "/>
+			<!-- hill center b -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -1000,-380;
+					 -1250,1250;
+					 -2450,1650;
+					 -2600,1100;
+					 -3350,600;
+					 -3250,-330;
+					 -1450,-1850
+					 "/>			
+			<!-- hill center c -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -4000,-2000;
+					 -2750,-1750;
+					 -2650,-1600;
+					 -4900,250;
+					 -5200,50;
+					 -4300,-1600
+					 "/>
+			
+			<!-- hill center 240 a -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -9000,-4000;
+					 -7500,-4000;
+					 -5000,-6400;
+					 -4500,-7400;
+					 -5000,-8000;
+					 -9000,-8000
+					 "/>
+			<!-- hill center 240 b -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -9000,1000;
+					 -8000,0;
+					 -7200,-3000;
+					 -7500,-4000;
+					 -9000,-4000
+					 "/>
+
+			<!-- hill 310 a -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -5450,3650;
+					 -5200,4400;
+					 -3800,3300;
+					 -3000,2500;
+					 -2900,1700;
+					 -3700,670;
+					 -5000,1600;
+					 -5400,2700
+					 "/>			
+			<!-- hill 310 a-b -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -5200,4400;
+					 -5450,3650;
+					 -5750,3750;
+					 -5600,5000
+					 "/>
+			<!-- hill 310 b -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -8150,5000;
+					 -8100,3900;
+					 -7000,2700;
+					 -5750,3750;
+					 -5600,5000;
+					 -5500,5900;
+					 -7800,8200
+					 "/>
+			<!-- hill 310 b-c -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -8150,5000;
+					 -7800,8200;
+					 -8500,8500;
+					 -8500,5100
+					 "/>
+			<!-- hill 310 c -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -8500,5100;
+					 -8550,4150;
+					 -9000,4100;
+					 -9000,9000;
+					 -8500,8500
+					 "/>
+			
+			<!-- hill 340 a -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -2600,8350;
+					 -2300,8300;
+					 -2000,6500;
+					 -2400,6500;
+					 -3000,6800;
+					 -2800,7900
+					 "/>
+			<!-- hill 340 a-b -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -3000,6800;
+					 -2800,7900;
+					 -3000,8000;
+					 -3600,6600
+					 "/>			
+			<!-- hill 340 b -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -3000,8200;
+					 -3000,8000;
+					 -3600,6600;
+					 -4500,9550;
+					 -3850,9550
+					 "/>
+			<!-- hill 340 c -->
+			<blocker class="Ground" blocklof="true" verts="
+					 -2800,6000;
+					 -2650,6000;
+					 -2500,6300;
+					 -2800,6450
+					 "/>
+
+
+			<!-- carrier block Left-->
+			<blocker class="Carrier" blocklof="false" verts="
+					 -9000,9000;
+					 -9000,4150;
+					 -4000,0;
+					 -2900,1700
+					 "/>
+			<blocker class="Carrier" blocklof="false" verts="
+					 -2900,1700;
+					 -4000,0;
+					 -1450,-1850;
+					 -2450,1650
+					 "/>
+			<!-- carrier block Top -->
+			<blocker class="Carrier" blocklof="false" verts="
+					 -3600,6600;
+					 -2800,6000;
+					 -2650,6000;
+					 -2000,6500;
+					 -2600,8350;
+					 -3000,8200
+					 "/>
+			<!-- carrier block right down -->
+			<blocker class="Carrier" blocklof="false" verts="
+					 6050,-2900;
+					 7650,-2230;
+					 6950,-1950;
+					 5750,-2450
+					 "/>
+			<blocker class="Carrier" blocklof="false" verts="
+					 7450,-1500;
+					 7650,-2230;
+					 6950,-1950;
+					 7000,-1270
+					 "/>
+			<!-- carrier block right top -->
+			<blocker class="Carrier" blocklof="false" verts="
+					 1000,8000;
+					 2650,7200;
+					 2800,7200;
+					 3200,7700;
+					 3100,8100;
+					 1500,8800;
+					 0,8800
+					 "/>
+
+			
+			<!-- rook 1 -->
+			<blocker class="Ground" blocklof="false" verts="
+					 -6750,2400;
+					 -6700,2200;
+					 -6550,2100;
+					 -6200,2300;
+					 -6150,2450;
+					 -6500,2650
+					 "/>
+			<blocker class="Ground" blocklof="false" verts="
+					 -6000,1750;
+					 -6150,1850;
+					 -6100,1950;
+					 -6000,1950;
+					 -5900,1750
+					 "/>
+			<!-- rook 2 -->
+			<blocker class="Ground" blocklof="false" verts="
+					 -5500,1700;
+					 -5400,1800;
+					 -5650,2250;
+					 -5800,2200;
+					 -5900,2100;
+					 -5700,1600
+					 "/>
+			<!-- rook 3 -->
+			<blocker class="Ground" blocklof="false" verts="
+					 6050,-2900;
+					 5750,-2900;
+					 5650,-2650;
+					 5650,-2450;
+					 5750,-2450;
+					 5900,-2600;
+					 6050,-2800
+					 "/>
+			<!-- rook 4 -->
+			<blocker class="Ground" blocklof="false" verts="
+					 6200,-2400;
+					 6300,-2650;
+					 6650,-2650;
+					 7650,-2230;
+					 6950,-1950
+					 "/>
+			<!-- rook 5 -->
+			<blocker class="Ground" blocklof="false" verts="
+					 7000,-1270;
+					 7100,-1090;
+					 7300,-1150;
+					 7450,-1500;
+					 7150,-1600
+					 "/>
+			<!-- rook 6 -->
+			<blocker class="Ground" blocklof="false" verts="
+					 8000,-500;
+					 8100,-500;
+					 8350,-400;
+					 8350,-300;
+					 8000,0;
+					 7900,-250;
+					 7900,-350
+					 "/>
+			<!-- rook 7 -->
+			<blocker class="Ground" blocklof="false" verts="
+					 6000,2200;
+					 6400,2000;
+					 6500,2200;
+					 6150,2650
+					 "/>
+			<!-- rook 8 -->
+			<blocker class="Ground" blocklof="false" verts="
+					 3100,7500;
+					 3100,8000;
+					 2950,8000;
+					 2850,7800
+					 "/>
+			<!-- rook 9 -->
+			<blocker class="Ground" blocklof="false" verts="
+					 2600,7300;
+					 2800,7300;
+					 2850,7500;
+					 2750,7550;
+					 2600,7450
+					 "/>
+			<!-- rook 10 -->
+			<blocker class="Ground" blocklof="false" verts="
+					 2200,7650;
+					 2450,7650;
+					 2450,7900;
+					 2000,8400;
+					 1500,8600;
+					 1500,8250
+					 "/>
+
+			<!-- kalash wreck -->
+			<blocker class="Ground" blocklof="false" verts="
+					 -1250,2500;
+					 -1800,3300;
+					 -2000,3250;
+					 -2000,2850;
+					 -1950,2300;
+					 -1850,2250;
+					 -1750,2250
+					 "/>
+			<blocker class="Ground" blocklof="false" verts="
+					 -1450,1700;
+					 -1150,1750;
+					 -1250,2500;
+					 -1750,2250
+					 "/>
+			<blocker class="Ground" blocklof="false" verts="
+					 -1750,1680;
+					 -1660,1750;
+					 -1660,1910;
+					 -1750,1980
+					 "/>
+			
+			
+
+		</blockers>
+		<units>
+		</units>
+	</layout>
+</dokmap>
