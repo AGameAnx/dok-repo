@@ -1,0 +1,16 @@
+-- Artifact-from-wreck logic for oes.dokmap
+
+local artifactSpawned = false
+local targetWreck = nil
+
+function OnInit()
+    -- Find the wreck closest to (5000, -5000); adjust as needed
+    targetWreck = Wreck.GetClosest(5000, -5000)
+end
+
+function OnUpdate(time)
+    if not artifactSpawned and targetWreck and targetWreck:IsDestroyed() then
+        Game.SpawnArtifact(5000, -5000) -- Spawn artifact where the wreck was
+        artifactSpawned = true
+    end
+end
