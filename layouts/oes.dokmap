@@ -79,10 +79,10 @@
 			</wreck>
 			<!-- 2Cu4 -->				
 			<wreck x="0" y="-7000" angle="0">
-				<resource x="200" y="7000" type="cu" amount="750" collectors="3"/>
-				<resource x="-200" y="7000" type="cu" amount="750" collectors="3"/>
-				<resource x="0" y="7200" type="cu" amount="750" collectors="3"/>
-				<resource x="0" y="6800" type="cu" amount="750" collectors="3"/>
+				<resource x="200" y="-7000" type="cu" amount="750" collectors="3"/>
+				<resource x="-200" y="-7000" type="cu" amount="750" collectors="3"/>
+				<resource x="0" y="-7200" type="cu" amount="750" collectors="3"/>
+				<resource x="0" y="-6800" type="cu" amount="750" collectors="3"/>
 			</wreck>
 			<!-- 2Ru1 -->
 				<wreck x="8500" y="8500" angle="0">
@@ -202,7 +202,7 @@
 			</wreck>
 				<!-- CUsW3 -->
 			<wreck x="-4800" y="7000" angle="0">
-				<resource x="-5000" y="700" type="cu" amount="1000" collectors="6"/>
+				<resource x="-5000" y="7000" type="cu" amount="1000" collectors="6"/>
 				<resource x="-4600" y="7000" type="cu" amount="1000" collectors="6"/>
 			</wreck>
 				<!-- CUsW4 -->
@@ -259,10 +259,10 @@
 			</wreck>
 			<!-- 2Cu1 -->
 			<wreck x="-9000" y="-9000" angle="0">
-				<resource x="-9200" y="9000" type="cu" amount="750" collectors="3"/>
-				<resource x="-8800" y="9000" type="cu" amount="750" collectors="3"/>
-				<resource x="-9000" y="9200" type="cu" amount="750" collectors="3"/>
-				<resource x="-9000" y="8800" type="cu" amount="750" collectors="3"/>
+				<resource x="-9200" y="-9000" type="cu" amount="750" collectors="3"/>
+				<resource x="-8800" y="-9000" type="cu" amount="750" collectors="3"/>
+				<resource x="-9000" y="-9200" type="cu" amount="750" collectors="3"/>
+				<resource x="-9000" y="-8800" type="cu" amount="750" collectors="3"/>
 			</wreck>
 			<!-- 2Cu3 -->
 			<wreck x="-200" y="-9000" angle="0">
@@ -282,12 +282,12 @@
 			</wreck>
 			<!-- 2Cu1Ru3 -->
 			<wreck x="-3000" y="-11500" angle="0">
-				<resource x="-3000" y="10500" type="cu" amount="1200" collectors="3"/>
-				<resource x="-3000" y="11250" type="cu" amount="1200" collectors="3"/>
-				<resource x="-3000" y="10500" type="cu" amount="1200" collectors="3"/>
-				<resource x="-3000" y="11250" type="cu" amount="1200" collectors="3"/>
-				<resource x="-3000" y="10500" type="ru" amount="1200" collectors="3"/>
-				<resource x="-3000" y="11250" type="ru" amount="1200" collectors="3"/>
+				<resource x="-3200" y="-11500" type="cu" amount="1200" collectors="3"/>
+				<resource x="-2800" y="-11550" type="cu" amount="1200" collectors="3"/>
+				<resource x="-3000" y="-11700" type="cu" amount="1200" collectors="3"/>
+				<resource x="-3000" y="-11300" type="cu" amount="1200" collectors="3"/>
+				<resource x="-3100" y="-11650" type="ru" amount="1200" collectors="3"/>
+				<resource x="-2900" y="-11350" type="ru" amount="1200" collectors="3"/>
 			</wreck>
 			<!-- 2RuMW3 -->
 			<wreck x="-3000" y="-8000" angle="0">
@@ -347,23 +347,28 @@
 			</wreck>
 		</wrecks>
 		<artifacts>
-			
+			<artifact x="0" y="0"/>
+			<artifact x="-500" y="0"/>
+			<artifact x="500" y="0"/>
 		</artifacts>
 
 		<ezs>
 			<!-- extraction zones -->
 			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
-			<ez team="0" x="-3500" y="-3500" radius="200"/>
-			<ez team="1" x="3500" y="3500" radius="200"/>
+			<ez team="0" x="10000" y="-10000" radius="500"/>
+			<ez team="1" x="-10000" y="10000" radius="500"/>
 			<!-- Border LU -->
 
 
 		</ezs>
-
 		<blockers existing="false">
-
+			<!-- top wreck -->
+			<blocker class="Ground" blocklof="true" verts="-300,140;-300,2150;810,2140;810,140"/>
+			<!-- bottom wreck -->
+			<blocker class="Ground" blocklof="true" verts="-300,-270;-300,-1630;810,-810;810,-270"/>
+			<!-- block carrier -->
+			<blocker class="Carrier" blocklof="true" verts="-300,-140;-300,140;810,140;810,-140"/>
 		</blockers>
-
 	</layout>
 
 </dokmap>
