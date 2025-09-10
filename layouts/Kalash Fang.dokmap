@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<meta name="Kalash Wreck [2,2]"
+	      authors="Begil"
+	      description="A 1v1 next to the Kalash Wreck"/>
+		  
+	<layout map="M05" mode="Team" players="2, 3, 4, 5, 6">
+		<bounds top="10000" right="2000" bottom="0" left="-8000"/>
+		
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="0" y="0" angle="0" camera="270"/>
+			<spawn team="0" index="1" x="0" y="0" angle="0" camera="270"/>
+			<spawn team="0" index="2" x="0" y="0" angle="0" camera="270"/>
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="0" y="0" angle="128" camera="38"/>
+			<spawn team="1" index="1" x="0" y="0" angle="128" camera="38"/>
+			<spawn team="1" index="2" x="0" y="0" angle="128" camera="38"/>
+		</spawns>
+		
+		<resources> 
+			<!-- team 1 -->
+			<resource x="-800" y="4100" type="cu" amount="7500"/>
+			<resource x="-800" y="4000" type="ru" amount="3000"/>
+			<resource x="-800" y="3900" type="cu" amount="7500"/>
+
+			<!-- team 2 -->
+			<resource x="-6250" y="7075" type="cu" amount="7500"/>
+			<resource x="-6200" y="7025" type="ru" amount="3000"/>
+			<resource x="-6150" y="6975" type="cu" amount="7500"/>
+		</resources>
+		
+		<wrecks>
+			<!-- team 1 -->
+			<wreck x="-1050" y="2000" angle="60">
+				<resource x="-1000" y="2130" type="cu" amount="10500"/>
+				<resource x="-1100" y="2130" type="ru" amount="4000"/>
+			</wreck>
+			
+			<wreck x="-3100" y="2150" angle="30">
+				<resource x="-3035" y="2285" type="cu" amount="10500"/>
+				<resource x="-2965" y="2215" type="ru" amount="4000"/>
+			</wreck>
+			
+			<!-- team 2 -->
+			<wreck x="-4500" y="8750" angle="100">
+				<resource x="-4565" y="8615" type="cu" amount="10500"/>
+				<resource x="-4635" y="8685" type="ru" amount="4000"/>
+			</wreck>
+			
+			<wreck x="-7100" y="9150" angle="320">
+				<resource x="-7050" y="9000" type="cu" amount="10500"/>
+				<resource x="-7150" y="9000" type="ru" amount="4000"/>
+			</wreck>
+		</wrecks>
+		
+		<artifacts>
+			<artifact x="-4000" y="6000"/>
+			<artifact x="-3000" y="5500"/>
+			<artifact x="-2000" y="5000"/>
+		</artifacts>
+		
+		<ezs>
+			<!-- extraction yones -->
+			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
+			<ez team="0" x="-5000" y="4500" radius="500"/>
+			<ez team="1" x="-1500" y="6500" radius="500"/>
+		</ezs>
+	</layout>
+</dokmap>
