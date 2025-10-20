@@ -342,20 +342,48 @@
 			<artifact x="850" y="0"/>
 			<artifact x="-400" y="0"/>
 		</artifacts>	
-		<units>  
-            <!-- Team 1 Player 1  -->
-		        <unit team="0" index="0" type="C_Sob_Carrier_MP" x="8500" y="-7000" angle="180"/>    
-            <!-- Team 1 Player 2  -->
-				<unit team="0" index="1" type="C_Carrier_MP" x="8000" y="-8000" angle="180"/>
-             <!-- Team 1 Player 3  -->
-		        <unit team="0" index="2" type="C_Sob_Carrier_MP" x="6500" y="-8000" angle="180"/>
-			 <!-- Team 2 Player 1  -->
-		        <unit team="1" index="0" type="G_Carrier_MP" x="-8500" y="7000" angle="180"/> 
-            <!-- Team 2 Player 2  -->
-				<unit team="1" index="1" type="G_Carrier_MP" x="-8000" y="8000" angle="180"/>
-             <!-- Team 2 Player 3  -->
-		        <unit team="1" index="2" type="G_Carrier_MP" x="-6500" y="8000" angle="180"/>
-</units>
+		 <!-- UNITS SECTION: Faction-Specific Variants -->
+        <!-- Replace <unit> types with the faction you want to spawn -->
+
+        <!-- COALITION -->
+        <units faction="Coalition">  
+            <unit team="0" index="0" type="C_Carrier_MP" x="8500" y="-7000" angle="180"/>    
+            <unit team="0" index="1" type="C_Carrier_MP" x="8000" y="-8000" angle="180"/>
+            <unit team="0" index="2" type="C_Carrier_MP" x="6500" y="-8000" angle="180"/>
+            <unit team="1" index="0" type="C_Carrier_MP" x="-8500" y="7000" angle="180"/> 
+            <unit team="1" index="1" type="C_Carrier_MP" x="-8000" y="8000" angle="180"/>
+            <unit team="1" index="2" type="C_Carrier_MP" x="-6500" y="8000" angle="180"/>
+        </units>
+
+        <!-- SOBAN -->
+        <units faction="Soban">  
+            <unit team="0" index="0" type="C_Sob_Carrier_MP" x="8500" y="-7000" angle="180"/>    
+            <unit team="0" index="1" type="C_Sob_Carrier_MP" x="8000" y="-8000" angle="180"/>
+            <unit team="0" index="2" type="C_Sob_Carrier_MP" x="6500" y="-8000" angle="180"/>
+            <unit team="1" index="0" type="C_Sob_Carrier_MP" x="-8500" y="7000" angle="180"/> 
+            <unit team="1" index="1" type="C_Sob_Carrier_MP" x="-8000" y="8000" angle="180"/>
+            <unit team="1" index="2" type="C_Sob_Carrier_MP" x="-6500" y="8000" angle="180"/>
+        </units>
+
+        <!-- GAALSIEN -->
+        <units faction="Gaalsien">  
+            <unit team="0" index="0" type="G_Carrier_MP" x="8500" y="-7000" angle="180"/>    
+            <unit team="0" index="1" type="G_Carrier_MP" x="8000" y="-8000" angle="180"/>
+            <unit team="0" index="2" type="G_Carrier_MP" x="6500" y="-8000" angle="180"/>
+            <unit team="1" index="0" type="G_Carrier_MP" x="-8500" y="7000" angle="180"/> 
+            <unit team="1" index="1" type="G_Carrier_MP" x="-8000" y="8000" angle="180"/>
+            <unit team="1" index="2" type="G_Carrier_MP" x="-6500" y="8000" angle="180"/>
+        </units>
+
+        <!-- KHAANEPH -->
+        <units faction="Khaaneph">  
+            <unit team="0" index="0" type="K_Carrier_MP" x="8500" y="-7000" angle="180"/>    
+            <unit team="0" index="1" type="K_Carrier_MP" x="8000" y="-8000" angle="180"/>
+            <unit team="0" index="2" type="K_Carrier_MP" x="6500" y="-8000" angle="180"/>
+            <unit team="1" index="0" type="K_Carrier_MP" x="-8500" y="7000" angle="180"/> 
+            <unit team="1" index="1" type="K_Carrier_MP" x="-8000" y="8000" angle="180"/>
+            <unit team="1" index="2" type="K_Carrier_MP" x="-6500" y="8000" angle="180"/>
+        </units>
 <ezs>
 			<!-- extraction zones -->
 			<!-- Kalash Teeth has extraction zones of radius 500 for reference -->
