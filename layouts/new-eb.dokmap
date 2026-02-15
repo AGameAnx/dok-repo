@@ -1,0 +1,1651 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<meta name="Epsilon Base [2,4]"
+	      authors="SSSS"
+	      description="Close quarters 1v1 and 2v2 map"/>
+	<layout map="M01" mode="Team" players="1, 2">
+		<bounds top="4000" bottom="-4000" left="-4000" right="4000"/>
+
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="-3600" y="2100" angle="180" camera="150"/>
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="900" y="-2400" angle="-90" camera="300"/>
+		</spawns>
+
+		<resources>
+			<!-- team 1 -->
+			<resource x="-3900" y="2200" type="cu" amount="10500"/>
+			<resource x="-3900" y="2100" type="ru" amount="4000"/>
+			<resource x="-3900" y="2000" type="cu" amount="10500"/>
+
+			<resource x="-3900" y="3150" type="cu" amount="15500"/>
+			<resource x="-3900" y="3050" type="ru" amount="6000"/>
+
+			<!--resource x="-3900" y="1350" type="cu" amount="10500"/>
+			<resource x="-3900" y="1250" type="ru" amount="4000"/>
+
+			<resource x="-3900" y="550" type="cu" amount="10500"/>
+			<resource x="-3900" y="450" type="ru" amount="4000"/-->
+
+			<!-- team 2 -->
+			<resource x="1000" y="-2700" type="cu" amount="10500"/>
+			<resource x="900" y="-2700" type="ru" amount="4000"/>
+			<resource x="800" y="-2700" type="cu" amount="10500"/>
+
+			<resource x="1950" y="-2700" type="cu" amount="15500"/>
+			<resource x="1850" y="-2700" type="ru" amount="6000"/>
+
+			<!--resource x="150" y="-2700" type="cu" amount="10500"/>
+			<resource x="50" y="-2700" type="ru" amount="4000"/>
+
+			<resource x="-650" y="-2700" type="cu" amount="10500"/>
+			<resource x="-750" y="-2700" type="ru" amount="4000"/-->
+
+		</resources>
+
+		<wrecks>
+			<wreck x="-3700" y="-2500" angle="45">
+				<resource x="-3660" y="-2340" type="ru" amount="6000" collectors="2"/>
+				<resource x="-3540" y="-2460" type="cu" amount="15500" collectors="2"/>
+			</wreck>
+			<!--wreck x="1500" y="2700" angle="45">
+				<resource x="1460" y="2540" type="ru" amount="6000" collectors="2"/>
+				<resource x="1340" y="2660" type="cu" amount="15500" collectors="2"/>
+			</wreck-->
+		</wrecks>
+
+		<artifacts>
+			<artifact x="500" y="2700"/>
+			<artifact x="1500" y="1700"/>
+			<artifact x="1000" y="2200"/>
+
+		</artifacts>
+
+		<ezs>
+			<ez team="0" x="-1000" y="-400" radius="300"/>
+			<ez team="1" x="-1400" y="0" radius="300"/>
+
+		</ezs>
+
+		<blockers existing="false">
+			<!--blocker class="Carrier" blocklof="false" verts="-1380,1135;-1920,4000;4000,4000;4000,80;1050,-632"/-->
+			<!--Base top carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 -2000,4050;
+				 -1600,2450;
+				 50,2750;
+				 300,3100
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 300,3100;
+				 1000,3200;
+				 2000,4050;
+				 -2000,4050
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 1000,4050;
+				 1200,3000;
+				 4050,3100;
+				 4050,4050
+				 "/>
+			<!--Base right carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 1200,3000;
+				 2000,-300;
+				 2300,-1050;
+				 2700,-1200;
+				 4050,-1700;
+				 4050,4050
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 2700,-1200;
+				 2500,-2500;
+				 4050,-1700;
+				 4050,-1000
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 2700,-1200;
+				 3250,-3000;
+				 4050,-1700
+				 "/>
+			<!--Base mid carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 -1540,2100;
+				 -1430,1140;
+				 -650,560;
+				 500,2250;
+				 400,2380
+				 "/>
+			<!--Base bottom carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 -350,350;
+				 1050,-600;
+				 1660,-480;
+				 1210,1340;
+				 620,1690
+				 "/>
+
+			<!-- Top-->
+			<!-- Wall top-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1440,3690;
+				 -1550,4000;
+				 -1860,4000;
+				 -1700,3600
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1440,3690;
+				 -1700,3600;
+				 -1540,2470;
+				 -1250,2500
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1250,2500;
+				 -950,2590;
+				 -950,2610;
+				 -1300,2580
+				 "/>
+			<!-- Building top-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1440,3690;
+				 -1350,2700;
+				 -100,2900;
+				 -250,3500;
+				 -500,3800
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 -1350,2820;
+				 -1300,2620;
+				 -1070,2650;
+				 -1040,2700;
+				 -1050,2850
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 -1250,3050;
+				 -1190,2750;
+				 -520,2870;
+				 -450,3100;
+				 -470,3190;
+				 -750,3400;
+				 -1040,3360
+				 "/>
+			<!-- Building top 2-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -220,2850;
+				 -200,2720;
+				 60,2760;
+				 40,2900
+				 "/>
+			<!-- Aircraft mid-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 50,3450;
+				 100,3200;
+				 800,3350;
+				 750,3600
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 306,3400;
+				 334,3250;
+				 566,3300;
+				 536,3450
+				 "/>
+			<!-- Aircraft right-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 1045,3560;
+				 1085,3350;
+				 1135,3355;
+				 1095,3565
+				 "/>
+
+			<!-- Mid-->
+			<!-- Wall mid -->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1540,2100;
+				 -1400,1170;
+				 -1060,1380;
+				 -1190,2140
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1400,1170;
+				 -630,600;
+				 -410,900;
+				 -1060,1380
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1190,2140;
+				 -880,2145;
+				 -880,2125;
+				 -1190,2070
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -410,900;
+				 -280,1160;
+				 -295,1175;
+				 -480,930
+				 "/>
+			<!--Mid building small 1-->
+			<blocker class="Ground" blocklof="true" verts="				
+				 -1190,2000;
+				 -1160,1800;
+				 -910,1840;
+				 -940,2040
+				 "/>
+			<!--Mid tower-->
+			<blocker class="Ground" blocklof="true" verts="				
+				 -850,2125;
+				 -810,2070;
+				 -780,2140
+				 "/>
+			<!--Mid building small 2-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 50,2260;
+				 50,2200;
+				 230,2000;
+				 280,2005;
+				 460,2290;
+				 430,2330
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 290,2240;
+				 390,2270;
+				 340,2160
+				 "/>
+			<!--Mid cargo-->
+			<blocker class="None" blocklof="false" verts="				
+				 -70,1990;
+				 130,1850;
+				 170,1900;
+				 190,1970;
+				 140,2020;
+				 -40,2040
+				 "/>
+			<!--Mid main building-->
+			<blocker class="Ground" blocklof="true" verts="				
+				 -250,2000;
+				 -400,2120;
+				 -500,2070;
+				 -630,1900;
+				 -710,1800;
+				 -1000,1300;
+				 -700,1100;
+				 -400,1100;
+				 -100,1550
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 -710,1800;
+				 -790,1850;
+				 -1060,1600;
+				 -1000,1300
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+			     -790,1850;
+				 -680,2000;
+				 -770,2010;
+				 -1060,1600
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 -250,2000;
+				 -100,1550;
+				 -20,1830
+				 "/>
+
+			<!--Bottom-->
+			<!--Wall bottom-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 -330,370;
+				 1050,-580;
+				 1120,-210;
+				 -130,680
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1050,-580;
+				 1650,-460;
+				 1580,-120;
+				 1120,-210
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 80,900;
+				 100,890;
+				 -50,600;
+				 -130,680
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1470,160;
+				 1450,155;
+				 1500,-150;
+				 1580,-120
+				 "/>
+			<!--Bottom building small -->
+			<blocker class="Ground" blocklof="false" verts="		
+				 1120,-210;
+				 1330,-150;
+				 1250,60;
+				 1060,20
+				 "/>
+			<!--Bottom building main -->
+			<blocker class="Ground" blocklof="true" verts="		
+				 440,1150;
+				 140,740;
+				 230,400;
+				 900,660;
+				 1050,870;
+				 1080,1030;
+				 930,1130
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 230,400;
+				 600,140;
+				 900,660
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 600,140;
+				 940,150;
+				 1090,520;
+				 900,660
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 940,150;
+				 1240,560;
+				 1200,620;
+				 1140,590;
+				 1090,520
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 440,1150;
+				 930,1130;
+				 1050,1300;
+				 750,1500
+				 "/>
+
+			<!--Right-->
+			<!--Right wall-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 2010,-350;
+				 2450,-240;
+				 2700,180;
+				 1920,-10
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1920,-10;
+				 1890,270;
+				 1910,275;
+				 2000,0
+				 "/>
+			<!--Right Building main top-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 1160,4000;
+				 1210,3740;
+				 1500,3600;
+				 4000,4000
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 1160,4000;
+				 1200,3790;
+				 1500,3600
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1500,3600;
+				 1600,3040;
+				 4000,3000;
+				 4000,4000
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1600,3040;
+				 1450,3000;
+				 1480,2780;
+				 1700,2620;
+				 2300,2720
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 1600,3040;
+				 1490,3980;
+				 1510,2880;
+				 1750,2700;
+				 2300,2720
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1600,3040;
+				 4000,3000;
+				 2300,2720
+				 "/>
+			<!--Right Building main bottom-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 2300,2720;
+				 2410,2240;
+				 4000,2000;
+				 4000,3000
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2410,2240;
+				 1650,2100;
+				 1760,1550;
+				 2380,1670
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 2410,2240;
+				 1690,2030;
+				 1760,1650;
+				 2380,1670
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2410,2240;
+				 2380,1670;
+				 2410,1470;
+				 4000,0;
+				 4000,2000
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2410,1470;
+				 1790,1350;
+				 2040,0;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 2410,1470;
+				 1830,1280;
+				 1900,900;
+				 2520,1020
+				 "/>
+			<!--Right tower-->
+			<blocker class="Ground" blocklof="true" verts="		
+				 1255,2870;
+				 1310,2910;
+				 1320,2860
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 1635,2065;
+				 1580,2055;
+				 1590,2000;
+				 1640,2005
+				 "/>
+			<!--Right rock-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 2700,180;
+				 2450,-240;
+				 2450,-700;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2450,-700;
+				 2350,-1000;
+				 2800,-1100;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2800,-1100;
+				 2600,-1900;
+				 2510,-2450;
+				 3040,-1900
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     2800,-1100;
+				 3040,-1900;
+				 3150,-1900;
+				 4000,-1700;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+				 3150,-1900;
+				 3250,-3000;
+				 4000,-1700
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     3200,-3180;
+				 3130,-3400;
+				 3190,-3640;
+				 3300,-3300
+				 "/>
+			<!--Edge-->
+			<blocker class="Ground" blocklof="false" verts="
+			     -4000,4000;
+				 4000,4000;
+				 4100,4100;
+				 -4100,4100
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     -4000,4000;
+				 -4000,-4000;
+				 -4100,-4100;
+				 -4100,4100
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     -4000,-4000;
+				 4000,-4000;
+				 4100,-4100;
+				 -4100,-4100
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     4000,4000;
+				 4000,-4000;
+				 4100,-4100;
+				 4100,4100
+				 "/>
+		</blockers>
+	</layout>
+	<layout map="M01" mode="Team" players="3, 4">
+		<bounds top="4000" bottom="-4000" left="-4000" right="4000"/>
+
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="-3600" y="2100" angle="180" camera="150"/>
+			<spawn team="0" index="1" x="-2000" y="2900" angle="180" camera="120"/>
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="900" y="-2400" angle="-90" camera="300"/>
+			<spawn team="1" index="1" x="1700" y="-800" angle="-90" camera="330"/>
+		</spawns>
+
+		<resources>
+			<!-- team 1 -->
+			<resource x="-3900" y="2200" type="cu" amount="10500"/>
+			<resource x="-3900" y="2100" type="ru" amount="4000"/>
+			<resource x="-3900" y="2000" type="cu" amount="10500"/>
+
+			<resource x="-3900" y="3150" type="cu" amount="15500"/>
+			<resource x="-3900" y="3050" type="ru" amount="6000"/>
+
+			<!--resource x="-3900" y="1350" type="cu" amount="10500"/>
+			<resource x="-3900" y="1250" type="ru" amount="4000"/>
+
+			<resource x="-3900" y="550" type="cu" amount="10500"/>
+			<resource x="-3900" y="450" type="ru" amount="4000"/-->
+
+			<resource x="-2300" y="3000" type="cu" amount="10500"/>
+			<resource x="-2300" y="2900" type="ru" amount="4000"/>
+			<resource x="-2300" y="2800" type="cu" amount="10500"/>
+
+			<resource x="-2300" y="3950" type="cu" amount="15500"/>
+			<resource x="-2300" y="3850" type="ru" amount="6000"/>
+
+			<!--resource x="-2300" y="3750" type="cu" amount="10500"/>
+			<resource x="-2300" y="3650" type="ru" amount="4000"/>
+
+			<resource x="-2300" y="2150" type="cu" amount="10500"/>
+			<resource x="-2300" y="2050" type="ru" amount="4000"/-->
+
+
+			<!-- team 2 -->
+			<resource x="1000" y="-2700" type="cu" amount="10500"/>
+			<resource x="900" y="-2700" type="ru" amount="4000"/>
+			<resource x="800" y="-2700" type="cu" amount="10500"/>
+
+			<resource x="1950" y="-2700" type="cu" amount="15500"/>
+			<resource x="1850" y="-2700" type="ru" amount="6000"/>
+
+			<!--resource x="150" y="-2700" type="cu" amount="10500"/>
+			<resource x="50" y="-2700" type="ru" amount="4000"/>
+
+			<resource x="-650" y="-2700" type="cu" amount="10500"/>
+			<resource x="-750" y="-2700" type="ru" amount="4000"/-->
+
+			<resource x="1800" y="-1100" type="cu" amount="10500"/>
+			<resource x="1700" y="-1100" type="ru" amount="4000"/>
+			<resource x="1600" y="-1100" type="cu" amount="10500"/>
+
+			<resource x="2750" y="-1100" type="cu" amount="15500"/>
+			<resource x="2650" y="-1100" type="ru" amount="6000"/>
+
+			<!--resource x="950" y="-1100" type="cu" amount="10500"/>
+			<resource x="850" y="-1100" type="ru" amount="4000"/>
+
+			<resource x="2550" y="-1100" type="cu" amount="10500"/>
+			<resource x="2450" y="-1100" type="ru" amount="4000"/-->
+		</resources>
+
+		<wrecks>
+			<wreck x="-3700" y="-2500" angle="45">
+				<resource x="-3660" y="-2340" type="ru" amount="6000" collectors="2"/>
+				<resource x="-3540" y="-2460" type="cu" amount="15500" collectors="2"/>
+			</wreck>
+			<!--wreck x="1500" y="2700" angle="45">
+				<resource x="1460" y="2540" type="ru" amount="6000" collectors="2"/>
+				<resource x="1340" y="2660" type="cu" amount="15500" collectors="2"/>
+			</wreck-->
+		</wrecks>
+
+		<artifacts>
+			<artifact x="500" y="2700"/>
+			<artifact x="1500" y="1700"/>
+			<artifact x="1000" y="2200"/>
+
+		</artifacts>
+
+		<ezs>
+			<ez team="0" x="-1000" y="-400" radius="300"/>
+			<ez team="1" x="-1400" y="0" radius="300"/>
+
+		</ezs>
+
+		<blockers existing="false">
+			<!--blocker class="Carrier" blocklof="false" verts="-1380,1135;-1920,4000;4000,4000;4000,80;1050,-632"/-->
+			<!--Base top carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 -2000,4050;
+				 -1600,2450;
+				 50,2750;
+				 300,3100
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 300,3100;
+				 1000,3200;
+				 2000,4050;
+				 -2000,4050
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 1000,4050;
+				 1200,3000;
+				 4050,3100;
+				 4050,4050
+				 "/>
+			<!--Base right carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 1200,3000;
+				 2000,-300;
+				 2300,-1050;
+				 2700,-1200;
+				 4050,-1700;
+				 4050,4050
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 2700,-1200;
+				 2500,-2500;
+				 4050,-1700;
+				 4050,-1000
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 2700,-1200;
+				 3250,-3000;
+				 4050,-1700
+				 "/>
+			<!--Base mid carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 -1540,2100;
+				 -1430,1140;
+				 -650,560;
+				 500,2250;
+				 400,2380
+				 "/>
+			<!--Base bottom carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 -350,350;
+				 1050,-600;
+				 1660,-480;
+				 1210,1340;
+				 620,1690
+				 "/>
+
+			<!-- Top-->
+			<!-- Wall top-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1440,3690;
+				 -1550,4000;
+				 -1860,4000;
+				 -1700,3600
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1440,3690;
+				 -1700,3600;
+				 -1540,2470;
+				 -1250,2500
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1250,2500;
+				 -950,2590;
+				 -950,2610;
+				 -1300,2580
+				 "/>
+			<!-- Building top-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1440,3690;
+				 -1350,2700;
+				 -100,2900;
+				 -250,3500;
+				 -500,3800
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 -1350,2820;
+				 -1300,2620;
+				 -1070,2650;
+				 -1040,2700;
+				 -1050,2850
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 -1250,3050;
+				 -1190,2750;
+				 -520,2870;
+				 -450,3100;
+				 -470,3190;
+				 -750,3400;
+				 -1040,3360
+				 "/>
+			<!-- Building top 2-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -220,2850;
+				 -200,2720;
+				 60,2760;
+				 40,2900
+				 "/>
+			<!-- Aircraft mid-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 50,3450;
+				 100,3200;
+				 800,3350;
+				 750,3600
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 306,3400;
+				 334,3250;
+				 566,3300;
+				 536,3450
+				 "/>
+			<!-- Aircraft right-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 1045,3560;
+				 1085,3350;
+				 1135,3355;
+				 1095,3565
+				 "/>
+
+			<!-- Mid-->
+			<!-- Wall mid -->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1540,2100;
+				 -1400,1170;
+				 -1060,1380;
+				 -1190,2140
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1400,1170;
+				 -630,600;
+				 -410,900;
+				 -1060,1380
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1190,2140;
+				 -880,2145;
+				 -880,2125;
+				 -1190,2070
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -410,900;
+				 -280,1160;
+				 -295,1175;
+				 -480,930
+				 "/>
+			<!--Mid building small 1-->
+			<blocker class="Ground" blocklof="true" verts="				
+				 -1190,2000;
+				 -1160,1800;
+				 -910,1840;
+				 -940,2040
+				 "/>
+			<!--Mid tower-->
+			<blocker class="Ground" blocklof="true" verts="				
+				 -850,2125;
+				 -810,2070;
+				 -780,2140
+				 "/>
+			<!--Mid building small 2-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 50,2260;
+				 50,2200;
+				 230,2000;
+				 280,2005;
+				 460,2290;
+				 430,2330
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 290,2240;
+				 390,2270;
+				 340,2160
+				 "/>
+			<!--Mid cargo-->
+			<blocker class="None" blocklof="false" verts="				
+				 -70,1990;
+				 130,1850;
+				 170,1900;
+				 190,1970;
+				 140,2020;
+				 -40,2040
+				 "/>
+			<!--Mid main building-->
+			<blocker class="Ground" blocklof="true" verts="				
+				 -250,2000;
+				 -400,2120;
+				 -500,2070;
+				 -630,1900;
+				 -710,1800;
+				 -1000,1300;
+				 -700,1100;
+				 -400,1100;
+				 -100,1550
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 -710,1800;
+				 -790,1850;
+				 -1060,1600;
+				 -1000,1300
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+			     -790,1850;
+				 -680,2000;
+				 -770,2010;
+				 -1060,1600
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 -250,2000;
+				 -100,1550;
+				 -20,1830
+				 "/>
+
+			<!--Bottom-->
+			<!--Wall bottom-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 -330,370;
+				 1050,-580;
+				 1120,-210;
+				 -130,680
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1050,-580;
+				 1650,-460;
+				 1580,-120;
+				 1120,-210
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 80,900;
+				 100,890;
+				 -50,600;
+				 -130,680
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1470,160;
+				 1450,155;
+				 1500,-150;
+				 1580,-120
+				 "/>
+			<!--Bottom building small -->
+			<blocker class="Ground" blocklof="false" verts="		
+				 1120,-210;
+				 1330,-150;
+				 1250,60;
+				 1060,20
+				 "/>
+			<!--Bottom building main -->
+			<blocker class="Ground" blocklof="true" verts="		
+				 440,1150;
+				 140,740;
+				 230,400;
+				 900,660;
+				 1050,870;
+				 1080,1030;
+				 930,1130
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 230,400;
+				 600,140;
+				 900,660
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 600,140;
+				 940,150;
+				 1090,520;
+				 900,660
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 940,150;
+				 1240,560;
+				 1200,620;
+				 1140,590;
+				 1090,520
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 440,1150;
+				 930,1130;
+				 1050,1300;
+				 750,1500
+				 "/>
+
+			<!--Right-->
+			<!--Right wall-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 2010,-350;
+				 2450,-240;
+				 2700,180;
+				 1920,-10
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1920,-10;
+				 1890,270;
+				 1910,275;
+				 2000,0
+				 "/>
+			<!--Right Building main top-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 1160,4000;
+				 1210,3740;
+				 1500,3600;
+				 4000,4000
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 1160,4000;
+				 1200,3790;
+				 1500,3600
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1500,3600;
+				 1600,3040;
+				 4000,3000;
+				 4000,4000
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1600,3040;
+				 1450,3000;
+				 1480,2780;
+				 1700,2620;
+				 2300,2720
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 1600,3040;
+				 1490,3980;
+				 1510,2880;
+				 1750,2700;
+				 2300,2720
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1600,3040;
+				 4000,3000;
+				 2300,2720
+				 "/>
+			<!--Right Building main bottom-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 2300,2720;
+				 2410,2240;
+				 4000,2000;
+				 4000,3000
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2410,2240;
+				 1650,2100;
+				 1760,1550;
+				 2380,1670
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 2410,2240;
+				 1690,2030;
+				 1760,1650;
+				 2380,1670
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2410,2240;
+				 2380,1670;
+				 2410,1470;
+				 4000,0;
+				 4000,2000
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2410,1470;
+				 1790,1350;
+				 2040,0;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 2410,1470;
+				 1830,1280;
+				 1900,900;
+				 2520,1020
+				 "/>
+			<!--Right tower-->
+			<blocker class="Ground" blocklof="true" verts="		
+				 1255,2870;
+				 1310,2910;
+				 1320,2860
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 1635,2065;
+				 1580,2055;
+				 1590,2000;
+				 1640,2005
+				 "/>
+			<!--Right rock-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 2700,180;
+				 2450,-240;
+				 2450,-700;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2450,-700;
+				 2350,-1000;
+				 2800,-1100;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2800,-1100;
+				 2600,-1900;
+				 2510,-2450;
+				 3040,-1900
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     2800,-1100;
+				 3040,-1900;
+				 3150,-1900;
+				 4000,-1700;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+				 3150,-1900;
+				 3250,-3000;
+				 4000,-1700
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     3200,-3180;
+				 3130,-3400;
+				 3190,-3640;
+				 3300,-3300
+				 "/>
+			<!--Edge-->
+			<blocker class="Ground" blocklof="false" verts="
+			     -4000,4000;
+				 4000,4000;
+				 4100,4100;
+				 -4100,4100
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     -4000,4000;
+				 -4000,-4000;
+				 -4100,-4100;
+				 -4100,4100
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     -4000,-4000;
+				 4000,-4000;
+				 4100,-4100;
+				 -4100,-4100
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     4000,4000;
+				 4000,-4000;
+				 4100,-4100;
+				 4100,4100
+				 "/>
+		</blockers>
+	</layout>	
+	<layout map="M01" mode="Team" players="5, 6">
+		<bounds top="4000" bottom="-4000" left="-4000" right="4000"/>
+		
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="-3600" y="2100" angle="180" camera="150"/>
+			<spawn team="0" index="1" x="-2000" y="2900" angle="180" camera="120"/>
+			<spawn team="0" index="2" x="-2800" y="2500" angle="180" camera="145"/>
+			
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="900" y="-2400" angle="-90" camera="300"/>
+			<spawn team="1" index="1" x="1700" y="-800" angle="-90" camera="330"/>
+			<spawn team="1" index="2" x="1300" y="-1600" angle="-90" camera="315"/>
+		</spawns>
+		
+		<resources>
+			<!-- team 1 -->
+			<resource x="-3900" y="2200" type="cu" amount="10500"/>
+			<resource x="-3900" y="2100" type="ru" amount="4000"/>
+			<resource x="-3900" y="2000" type="cu" amount="10500"/>
+
+			<resource x="-3900" y="3150" type="cu" amount="15500"/>
+			<resource x="-3900" y="3050" type="ru" amount="6000"/>
+
+			<!--resource x="-3900" y="1350" type="cu" amount="10500"/>
+			<resource x="-3900" y="1250" type="ru" amount="4000"/>
+
+			<resource x="-3900" y="550" type="cu" amount="10500"/>
+			<resource x="-3900" y="450" type="ru" amount="4000"/-->
+								
+			<resource x="-2300" y="3000" type="cu" amount="10500"/>
+			<resource x="-2300" y="2900" type="ru" amount="4000"/>
+			<resource x="-2300" y="2800" type="cu" amount="10500"/>
+
+			<resource x="-2300" y="3950" type="cu" amount="15500"/>
+			<resource x="-2300" y="3850" type="ru" amount="6000"/>
+
+			<!--resource x="-2300" y="3750" type="cu" amount="10500"/>
+			<resource x="-2300" y="3650" type="ru" amount="4000"/>
+
+			<resource x="-2300" y="2150" type="cu" amount="10500"/>
+			<resource x="-2300" y="2050" type="ru" amount="4000"/-->
+
+			<resource x="-3100" y="2600" type="cu" amount="10500"/>
+			<resource x="-3100" y="2500" type="ru" amount="4000"/>
+			<resource x="-3100" y="2400" type="cu" amount="10500"/>
+			
+			<resource x="-3100" y="3550" type="cu" amount="15500"/>
+			<resource x="-3100" y="3450" type="ru" amount="6000"/>
+
+			<!--resource x="-3100" y="2150" type="cu" amount="10500"/>
+			<resource x="-3100" y="2050" type="ru" amount="4000"/>
+
+			<resource x="-3100" y="1350" type="cu" amount="10500"/>
+			<resource x="-3100" y="1250" type="ru" amount="4000"/-->
+			
+			<!-- team 2 -->
+			<resource x="1000" y="-2700" type="cu" amount="10500"/>
+			<resource x="900" y="-2700" type="ru" amount="4000"/>
+			<resource x="800" y="-2700" type="cu" amount="10500"/>
+
+			<resource x="1950" y="-2700" type="cu" amount="15500"/>
+			<resource x="1850" y="-2700" type="ru" amount="6000"/>
+
+			<!--resource x="150" y="-2700" type="cu" amount="10500"/>
+			<resource x="50" y="-2700" type="ru" amount="4000"/>
+
+			<resource x="-650" y="-2700" type="cu" amount="10500"/>
+			<resource x="-750" y="-2700" type="ru" amount="4000"/-->
+			
+			<resource x="1800" y="-1100" type="cu" amount="10500"/>
+			<resource x="1700" y="-1100" type="ru" amount="4000"/>
+			<resource x="1600" y="-1100" type="cu" amount="10500"/>
+			
+			<resource x="2750" y="-1100" type="cu" amount="15500"/>
+			<resource x="2650" y="-1100" type="ru" amount="6000"/>
+
+			<!--resource x="950" y="-1100" type="cu" amount="10500"/>
+			<resource x="850" y="-1100" type="ru" amount="4000"/>
+
+			<resource x="2550" y="-1100" type="cu" amount="10500"/>
+			<resource x="2450" y="-1100" type="ru" amount="4000"/-->
+
+			<resource x="1400" y="-1900" type="cu" amount="10500"/>
+			<resource x="1300" y="-1900" type="ru" amount="4000"/>
+			<resource x="1200" y="-1900" type="cu" amount="10500"/>
+
+			<resource x="2350" y="-1900" type="cu" amount="15500"/>
+			<resource x="2250" y="-1900" type="ru" amount="6000"/>
+
+			<!--resource x="950" y="-1900" type="cu" amount="10500"/>
+			<resource x="850" y="-1900" type="ru" amount="4000"/>
+
+			<resource x="150" y="-1900" type="cu" amount="10500"/>
+			<resource x="50" y="-1900" type="ru" amount="4000"/-->
+
+		</resources>
+		
+		<wrecks>
+			<wreck x="-3700" y="-2500" angle="45">
+				<resource x="-3660" y="-2340" type="ru" amount="6000" collectors="2"/>
+				<resource x="-3540" y="-2460" type="cu" amount="15500" collectors="2"/>
+			</wreck>
+			<!--wreck x="1500" y="2700" angle="45">
+				<resource x="1460" y="2540" type="ru" amount="6000" collectors="2"/>
+				<resource x="1340" y="2660" type="cu" amount="15500" collectors="2"/>
+			</wreck-->
+		</wrecks>
+		
+		<artifacts>
+			<artifact x="500" y="2700"/>
+			<artifact x="1500" y="1700"/>
+			<artifact x="1000" y="2200"/>	
+			
+		</artifacts>
+		
+		<ezs>
+			<ez team="0" x="-1000" y="-400" radius="300"/>
+			<ez team="1" x="-1400" y="0" radius="300"/>
+
+		</ezs>
+		
+		<blockers existing="false">
+			<!--blocker class="Carrier" blocklof="false" verts="-1380,1135;-1920,4000;4000,4000;4000,80;1050,-632"/-->
+			<!--Base top carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 -2000,4050;
+				 -1600,2450;
+				 50,2750;
+				 300,3100
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 300,3100;
+				 1000,3200;
+				 2000,4050;
+				 -2000,4050
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 1000,4050;
+				 1200,3000;
+				 4050,3100;
+				 4050,4050
+				 "/>			
+			<!--Base right carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 1200,3000;
+				 2000,-300;
+				 2300,-1050;
+				 2700,-1200;
+				 4050,-1700;
+				 4050,4050
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 2700,-1200;
+				 2500,-2500;
+				 4050,-1700;
+				 4050,-1000
+				 "/>
+			<blocker class="Carrier" blocklof="false" verts="				
+				 2700,-1200;
+				 3250,-3000;
+				 4050,-1700
+				 "/>
+			<!--Base mid carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 -1540,2100;
+				 -1430,1140;
+				 -650,560;
+				 500,2250;
+				 400,2380
+				 "/>
+			<!--Base bottom carrier ban -->
+			<blocker class="Carrier" blocklof="false" verts="				
+				 -350,350;
+				 1050,-600;
+				 1660,-480;
+				 1210,1340;
+				 620,1690
+				 "/>
+			
+			<!-- Top-->
+			<!-- Wall top-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1440,3690;
+				 -1550,4000;
+				 -1860,4000;
+				 -1700,3600
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1440,3690;
+				 -1700,3600;
+				 -1540,2470;
+				 -1250,2500
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1250,2500;
+				 -950,2590;
+				 -950,2610;
+				 -1300,2580
+				 "/>		
+			<!-- Building top-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1440,3690;
+				 -1350,2700;
+				 -100,2900;
+				 -250,3500;
+				 -500,3800
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 -1350,2820;
+				 -1300,2620;
+				 -1070,2650;
+				 -1040,2700;
+				 -1050,2850
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 -1250,3050;
+				 -1190,2750;
+				 -520,2870;
+				 -450,3100;
+				 -470,3190;
+				 -750,3400;
+				 -1040,3360
+				 "/>
+			<!-- Building top 2-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -220,2850;
+				 -200,2720;
+				 60,2760;
+				 40,2900
+				 "/>
+			<!-- Aircraft mid-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 50,3450;
+				 100,3200;
+				 800,3350;
+				 750,3600
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 306,3400;
+				 334,3250;
+				 566,3300;
+				 536,3450
+				 "/>
+			<!-- Aircraft right-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 1045,3560;
+				 1085,3350;
+				 1135,3355;
+				 1095,3565
+				 "/>
+			
+			<!-- Mid-->
+			<!-- Wall mid -->
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1540,2100;
+				 -1400,1170;
+				 -1060,1380;
+				 -1190,2140
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1400,1170;
+				 -630,600;
+				 -410,900;
+				 -1060,1380
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -1190,2140;
+				 -880,2145;
+				 -880,2125;
+				 -1190,2070
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="				
+				 -410,900;
+				 -280,1160;
+				 -295,1175;
+				 -480,930
+				 "/>
+			<!--Mid building small 1-->
+			<blocker class="Ground" blocklof="true" verts="				
+				 -1190,2000;
+				 -1160,1800;
+				 -910,1840;
+				 -940,2040
+				 "/>
+			<!--Mid tower-->
+			<blocker class="Ground" blocklof="true" verts="				
+				 -850,2125;
+				 -810,2070;
+				 -780,2140
+				 "/>
+			<!--Mid building small 2-->
+			<blocker class="Ground" blocklof="false" verts="				
+				 50,2260;
+				 50,2200;
+				 230,2000;
+				 280,2005;
+				 460,2290;
+				 430,2330
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 290,2240;
+				 390,2270;
+				 340,2160
+				 "/>
+			<!--Mid cargo-->
+			<blocker class="None" blocklof="false" verts="				
+				 -70,1990;
+				 130,1850;
+				 170,1900;
+				 190,1970;
+				 140,2020;
+				 -40,2040
+				 "/>
+			<!--Mid main building-->
+			<blocker class="Ground" blocklof="true" verts="				
+				 -250,2000;
+				 -400,2120;
+				 -500,2070;
+				 -630,1900;
+				 -710,1800;
+				 -1000,1300;
+				 -700,1100;
+				 -400,1100;
+				 -100,1550
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="				
+				 -710,1800;
+				 -790,1850;
+				 -1060,1600;
+				 -1000,1300
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+			     -790,1850;
+				 -680,2000;
+				 -770,2010;
+				 -1060,1600
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 -250,2000;
+				 -100,1550;
+				 -20,1830
+				 "/>
+			
+			<!--Bottom-->
+			<!--Wall bottom-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 -330,370;
+				 1050,-580;
+				 1120,-210;
+				 -130,680
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1050,-580;
+				 1650,-460;
+				 1580,-120;
+				 1120,-210
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 80,900;
+				 100,890;
+				 -50,600;
+				 -130,680
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1470,160;
+				 1450,155;
+				 1500,-150;
+				 1580,-120
+				 "/>
+			<!--Bottom building small -->
+			<blocker class="Ground" blocklof="false" verts="		
+				 1120,-210;
+				 1330,-150;
+				 1250,60;
+				 1060,20
+				 "/>
+			<!--Bottom building main -->
+			<blocker class="Ground" blocklof="true" verts="		
+				 440,1150;
+				 140,740;
+				 230,400;
+				 900,660;
+				 1050,870;
+				 1080,1030;
+				 930,1130
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 230,400;
+				 600,140;
+				 900,660
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 600,140;
+				 940,150;
+				 1090,520;
+				 900,660
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 940,150;
+				 1240,560;
+				 1200,620;
+				 1140,590;
+				 1090,520
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 440,1150;
+				 930,1130;
+				 1050,1300;
+				 750,1500
+				 "/>
+
+			<!--Right-->
+			<!--Right wall-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 2010,-350;
+				 2450,-240;
+				 2700,180;
+				 1920,-10
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1920,-10;
+				 1890,270;
+				 1910,275;
+				 2000,0
+				 "/>
+			<!--Right Building main top-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 1160,4000;
+				 1210,3740;
+				 1500,3600;
+				 4000,4000
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 1160,4000;
+				 1200,3790;
+				 1500,3600
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1500,3600;
+				 1600,3040;
+				 4000,3000;
+				 4000,4000
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1600,3040;
+				 1450,3000;
+				 1480,2780;
+				 1700,2620;
+				 2300,2720
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 1600,3040;
+				 1490,3980;
+				 1510,2880;
+				 1750,2700;
+				 2300,2720
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 1600,3040;
+				 4000,3000;
+				 2300,2720
+				 "/>
+			<!--Right Building main bottom-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 2300,2720;
+				 2410,2240;
+				 4000,2000;
+				 4000,3000
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2410,2240;
+				 1650,2100;
+				 1760,1550;
+				 2380,1670
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 2410,2240;
+				 1690,2030;
+				 1760,1650;
+				 2380,1670
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2410,2240;
+				 2380,1670;
+				 2410,1470;
+				 4000,0;
+				 4000,2000
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2410,1470;
+				 1790,1350;
+				 2040,0;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 2410,1470;
+				 1830,1280;
+				 1900,900;
+				 2520,1020
+				 "/>
+			<!--Right tower-->
+			<blocker class="Ground" blocklof="true" verts="		
+				 1255,2870;
+				 1310,2910;
+				 1320,2860
+				 "/>
+			<blocker class="Ground" blocklof="true" verts="		
+				 1635,2065;
+				 1580,2055;
+				 1590,2000;
+				 1640,2005
+				 "/>
+			<!--Right rock-->
+			<blocker class="Ground" blocklof="false" verts="		
+				 2700,180;
+				 2450,-240;
+				 2450,-700;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2450,-700;
+				 2350,-1000;
+				 2800,-1100;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="		
+				 2800,-1100;
+				 2600,-1900;
+				 2510,-2450;
+				 3040,-1900
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     2800,-1100;
+				 3040,-1900;
+				 3150,-1900;
+				 4000,-1700;
+				 4000,0
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+				 3150,-1900;
+				 3250,-3000;
+				 4000,-1700
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     3200,-3180;
+				 3130,-3400;
+				 3190,-3640;
+				 3300,-3300
+				 "/>
+			<!--Edge-->
+			<blocker class="Ground" blocklof="false" verts="
+			     -4000,4000;
+				 4000,4000;
+				 4100,4100;
+				 -4100,4100
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     -4000,4000;
+				 -4000,-4000;
+				 -4100,-4100;
+				 -4100,4100
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     -4000,-4000;
+				 4000,-4000;
+				 4100,-4100;
+				 -4100,-4100
+				 "/>
+			<blocker class="Ground" blocklof="false" verts="
+			     4000,4000;
+				 4000,-4000;
+				 4100,-4100;
+				 4100,4100
+				 "/>
+		</blockers>
+	</layout>
+</dokmap>
