@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<meta name="The Shallows brawl[TH]"
+	      authors="HammerSnake"
+	      description="Second Treasure Hunt map for the brawl patch"/>
+
+	<layout map="MP_17_1v1_2" mode="Team" players="2, 3, 4, 5, 6">
+		<bounds top="3950" bottom="-3950" left="-3950" right="3950"/>
+
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="-2500" y="2600" angle="-45" camera="135" />
+			<spawn team="0" index="1" x="-2300" y="2800" angle="-45" camera="135" />
+            <spawn team="0" index="2" x="-2700" y="2400" angle="-45" camera="135" />
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="2600" y="-2500" angle="135" camera="-45"/>
+			<spawn team="1" index="1" x="2800" y="-2300" angle="135" camera="-45"/>
+			<spawn team="1" index="2" x="2400" y="-2700" angle="135" camera="-45"/>
+		</spawns>
+        <resources>
+            <!-- team 1 -->
+            <resource x="-2500" y="2600" type="cu" amount="1" collectors="0"/>
+            <resource x="-2300" y="2800" type="cu" amount="2" collectors="0"/>
+            <resource x="-2700" y="2400" type="cu" amount="3" collectors="0"/>
+            
+            <!-- team 2-->
+            <resource x="2600" y="-2500" type="ru" amount="1" collectors="0"/>
+            <resource x="2800" y="-2300" type="ru" amount="2" collectors="0"/>
+            <resource x="2400" y="-2700" type="ru" amount="3" collectors="0"/> 
+        </resources>
+		<artifacts>
+			<artifact x="0" y="0"/>
+			<artifact x="3300" y="3300"/>
+			<artifact x="-3300" y="-3300"/>
+		</artifacts>
+		<ezs>
+			<ez team="0" x="-2500" y="2600" radius="900"/>
+			<ez team="1" x="2600" y="-2500" radius="900"/>
+
+		</ezs>
+	</layout>
+
+</dokmap>
