@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<meta name="The Shallows brawl 2[CP]"
+	      authors="HammerSnake"
+	      description="The second Control Point map for the brawl patch"/>
+
+	<layout map="MP_17_2v2" mode="Team" players="2, 3, 4, 5, 6">
+		<bounds top="3950" bottom="-3950" left="-3950" right="3950"/>
+
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="-2000" y="3500" angle="0" camera="180" />
+			<spawn team="0" index="1" x="-1750" y="3500" angle="0" camera="180" />
+			<spawn team="0" index="2" x="-2250" y="3500" angle="0" camera="180" />
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="3500" y="-2000" angle="90" camera="-90" />
+			<spawn team="1" index="1" x="3500" y="-1750" angle="90" camera="-90" />
+			<spawn team="1" index="2" x="3500" y="-2250" angle="90" camera="-90" />
+		</spawns>
+        <resources>
+            <!-- team 1 -->
+            <resource x="3300" y="3300" type="cu" amount="1" collectors="0"/>
+            <resource x="3150" y="3450" type="cu" amount="2" collectors="0"/>
+            <resource x="3450" y="3150" type="cu" amount="3" collectors="0"/>
+            
+            <!-- team 2-->
+            <resource x="-3300" y="-3300" type="ru" amount="1" collectors="0"/>
+            <resource x="-3150" y="-3450" type="ru" amount="2" collectors="0"/>
+            <resource x="-3450" y="-3150" type="ru" amount="3" collectors="0"/> 
+        </resources>
+		<artifacts>
+			<artifact x="0" y="0"/>
+		</artifacts>
+		<ezs>
+			<ez team="0" x="0" y="0" radius="300"/>
+			<ez team="1" x="0" y="0" radius="320"/>
+
+		</ezs>
+	</layout>
+</dokmap>
