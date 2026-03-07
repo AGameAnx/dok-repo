@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dokmap version="1.1">
-	<meta name="The Shallows brawl 2[CP]"
+	<meta name="The Shallows brawl [PR]"
 	      authors="HammerSnake"
-	      description="The second Control Point map for the brawl patch"/>
+	      description="Payload Race map for the brawl patch"/>
 
 	<layout map="MP_17_2v2" mode="Team" players="2, 3, 4, 5, 6">
 		<bounds top="3950" bottom="-3950" left="-3950" right="3950"/>
@@ -19,21 +19,22 @@
 		</spawns>
         <resources>
             <!-- team 1 -->
-            <resource x="3300" y="3300" type="cu" amount="1" collectors="0"/>
-            <resource x="3150" y="3450" type="cu" amount="2" collectors="0"/>
-            <resource x="3450" y="3150" type="cu" amount="3" collectors="0"/>
+            <resource x="-1500" y="3400" type="cu" amount="1" collectors="0"/>
+            <resource x="-1750" y="3400" type="cu" amount="2" collectors="0"/>
+            <resource x="-1250" y="3400" type="cu" amount="3" collectors="0"/>
             
             <!-- team 2-->
-            <resource x="-3300" y="-3300" type="ru" amount="1" collectors="0"/>
-            <resource x="-3150" y="-3450" type="ru" amount="2" collectors="0"/>
-            <resource x="-3450" y="-3150" type="ru" amount="3" collectors="0"/> 
+            <resource x="3400" y="-1500" type="ru" amount="1" collectors="0"/>
+            <resource x="3400" y="-1750" type="ru" amount="2" collectors="0"/>
+            <resource x="3400" y="-1250" type="ru" amount="3" collectors="0"/> 
         </resources>
 		<artifacts>
-			<artifact x="0" y="0"/>
-		</artifacts>
+			<artifact x="-1000" y="2500"/>
+	        <artifact x="2500" y="-1000"/>
+        </artifacts>
 		<ezs>
-			<ez team="0" x="0" y="0" radius="300"/>
-			<ez team="1" x="0" y="0" radius="320"/>
+			<ez team="0" x="1000" y="-2500" radius="300"/>
+			<ez team="1" x="-2500" y="1000" radius="300"/>
 
 		</ezs>
 	</layout>
