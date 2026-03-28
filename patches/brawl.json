@@ -2426,10 +2426,40 @@
         }
       },
       "AbilityAttributes": {
-        "Ability_K_BaseRunnerSmoke": {
-          
-        }
-      }
+                "Ability_K_BaseRunnerSmoke": {
+                    "CooldownTimeSecs": 35
+                },
+                "Ability_G_BaseRunnerPassiveRegen": {
+                    "TargetAlignment": "Self",
+                    "TargetingType": "Self, Passive",
+                    "AbilityMapTargetLayers": "Ground",
+                    "ApplyStatusEffect": {
+                        "Regen_BaseRunnerPassive_StatusEffect": {
+                            "Lifetime": "Indefinite",
+                            "Duration": 0,
+                            "Modifiers": {
+                                "0": {
+                                    "ModifierType": "HealthOverTime",
+                                    "HealthOverTimeAttributes": {
+                                        "MSTickDuration": 1000,
+                                        "Amount": 20,
+                                        "DamageType": "Heal"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "ActivationDependencies": {
+                        "TakeNoDamageForMS": 10000
+                    },
+                    "AutoToggleOffConditions": {
+                        "TakeDamage": true
+                    },
+                    "ChainCasting": {
+                        "QueuedAbility": ""
+                    }
+                }
+            }
     },
     "K_ExplodingSkimmer_MP": {
       "UnitAttributes": {
