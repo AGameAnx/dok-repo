@@ -2312,37 +2312,19 @@
         "ResearchTime": 10,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
         "LocalizedResearchTitleStringID": "BASERUNNER SMOKE IMPROVEMENT",
-        "LocalizedLongDescriptionStringID": "Improve the sensor and movespeed of blast drone.\n\n[84a1e8]Add 350 sensor and 20 speed.\n[00ff00]\"Catch you!\"",
+        "LocalizedLongDescriptionStringID": "Reduce the recharge time of Smoke.\n\n[84a1e8]Add 350 sensor and 20 speed.\n[00ff00]\"Smoke in your face!\"",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": -1,
             "UseAsPrefix": false,
-            "UnitType": "K_ExplodingSkimmer_MP",
+            "UnitType": "K_Baserunner_MP",
             "BuffSet": {
               "0": {
-                "Attribute": "Unit_SensorRadius",
-                "Mode": "Add",
-                "Value": 350
-              },
-              "1": {
-                "Attribute": "Unit_ContactRadius",
-                "Mode": "Add",
-                "Value": 350
+                "Name": "Ability_K_BaseRunnerSmoke",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -50
               }
-
-            }
-          },
-          "1": {
-            "UnitClass": -1,
-            "UseAsPrefix": false,
-            "UnitType": "K_ExplodingSkimmer_MP",
-            "BuffSet": {
-              "0": {
-                "Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "Add",
-                "Value": 20
-              }
-
             }
           }
 
