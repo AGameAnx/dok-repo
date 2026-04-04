@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dokmap version="1.1">
+	<meta name="The Shallows brawl[CP]"
+	      authors="HammerSnake"
+	      description="Control Point map for the brawl patch"/>
+
+	<layout map="MP_11-DuneSea" mode="Team" players="2, 3, 4, 5, 6">
+		<bounds top="5950" bottom="-5950" left="-5950" right="5950"/>
+
+		<spawns>
+			<!-- team 1 -->
+			<spawn team="0" index="0" x="1340" y="5000" angle="15" camera="-165" />
+			<spawn team="0" index="1" x="3660" y="-3660" angle="135" camera="-45" />
+			<spawn team="0" index="2" x="-5000" y="-1340" angle="-105" camera="85" />
+			<!-- team 2 -->
+			<spawn team="1" index="0" x="-1340" y="-5000" angle="-165" camera="15"/>
+			<spawn team="1" index="1" x="-3660" y="3660" angle="-45" camera="135"/>
+			<spawn team="1" index="2" x="5000" y="1340" angle="85" camera="-105"/>
+		</spawns>
+		<resources>
+			<!-- team 1 -->
+			<resource x="1340" y="5000" type="cu" amount="1" collectors="0"/>
+			<resource x="3660" y="-3660" type="cu" amount="2" collectors="0"/>
+			<resource x="-5000" y="-1340" type="cu" amount="3" collectors="0"/>
+
+			<!-- team 2-->
+			<resource x="-1340" y="-5000" type="ru" amount="1" collectors="0"/>
+			<resource x="-3660" y="3660" type="ru" amount="2" collectors="0"/>
+			<resource x="5000" y="1340" type="ru" amount="3" collectors="0"/>
+		</resources>
+		<artifacts>
+			<artifact x="0" y="0"/>
+		</artifacts>
+		<ezs>
+			<ez team="0" x="0" y="0" radius="300"/>
+			<ez team="1" x="0" y="0" radius="320"/>
+
+		</ezs>
+	</layout>
+</dokmap>
