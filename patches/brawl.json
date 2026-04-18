@@ -2826,7 +2826,7 @@
         "Levels": {
           "1": {
             "BuffTooltipLocID": "Officer: +3 armour",
-            "RequiredExperience": 500,
+            "RequiredExperience": 1000,
             "Buff": {
               "1": { "Remove": true },
               "2": { "Remove": true },
@@ -2846,7 +2846,7 @@
           },
           "2": {
             "BuffTooltipLocID": "Lieutenant: +500 hull",
-            "RequiredExperience": 1000,
+            "RequiredExperience": 2000,
             "Buff": {
               "1": { "Remove": true },
               "2": { "Remove": true },
@@ -2866,7 +2866,7 @@
           },
           "3": {
             "BuffTooltipLocID": "Lt. Commander: +25% sensor range",
-            "RequiredExperience": 1500,
+            "RequiredExperience": 3000,
             "Buff": {
               "2": { "Remove": true },
               "3": { "Remove": true },
@@ -2890,7 +2890,7 @@
           },
           "4": {
             "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
-            "RequiredExperience": 2000,
+            "RequiredExperience": 4000,
             "Buff": {
               "2": { "Remove": true },
               "3": { "Remove": true },
@@ -2914,7 +2914,7 @@
           },
           "5": {
             "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -20% speed",
-            "RequiredExperience": 3000,
+            "RequiredExperience": 6000,
             "Buff": {
               "2": { "Remove": true },
               "3": { "Remove": true },
@@ -3016,7 +3016,7 @@
         "Levels": {
           "1": {
             "BuffTooltipLocID": "Officer: +3 armour",
-            "RequiredExperience": 500,
+            "RequiredExperience": 1000,
             "Buff": {
               "1": { "Remove": true },
               "2": { "Remove": true },
@@ -3036,7 +3036,7 @@
           },
           "2": {
             "BuffTooltipLocID": "Lieutenant: +500 hull",
-            "RequiredExperience": 1000,
+            "RequiredExperience": 2000,
             "Buff": {
               "1": { "Remove": true },
               "2": { "Remove": true },
@@ -3056,7 +3056,7 @@
           },
           "3": {
             "BuffTooltipLocID": "Lt. Commander: +25% sensor range",
-            "RequiredExperience": 1500,
+            "RequiredExperience": 3000,
             "Buff": {
               "2": { "Remove": true },
               "3": { "Remove": true },
@@ -3098,7 +3098,7 @@
           },
           "4": {
             "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
-            "RequiredExperience": 2000,
+            "RequiredExperience": 4000,
             "Buff": {
               "2": { "Remove": true },
               "3": { "Remove": true },
@@ -3122,7 +3122,7 @@
           },
           "5": {
             "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -20% speed",
-            "RequiredExperience": 3000,
+            "RequiredExperience": 6000,
             "Buff": {
               "2": { "Remove": true },
               "3": { "Remove": true },
@@ -3136,7 +3136,7 @@
               },
               "1": {
                 "Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "Add",
+                "Mode": "AddPercent",
                 "Value": -20
               }
             }
@@ -3873,7 +3873,7 @@
         "Levels": {
           "1": {
             "BuffTooltipLocID": "Officer: +3 armour",
-            "RequiredExperience": 500,
+            "RequiredExperience": 1000,
             "Buff": {
               "1": { "Remove": true },
               "2": { "Remove": true },
@@ -3893,7 +3893,7 @@
           },
           "2": {
             "BuffTooltipLocID": "Lieutenant: +500 hull",
-            "RequiredExperience": 1000,
+            "RequiredExperience": 2000,
             "Buff": {
               "1": { "Remove": true },
               "2": { "Remove": true },
@@ -3913,7 +3913,7 @@
           },
           "3": {
             "BuffTooltipLocID": "Lt. Commander: +50% repair speed",
-            "RequiredExperience": 1500,
+            "RequiredExperience": 3000,
             "Buff": {
               "4": { "Remove": true },
               "5": { "Remove": true },
@@ -3949,7 +3949,7 @@
           },
           "4": {
             "BuffTooltipLocID": "Commander: +500 hull, +2 armor",
-            "RequiredExperience": 2000,
+            "RequiredExperience": 4000,
             "Buff": {
               "2": { "Remove": true },
               "3": { "Remove": true },
@@ -3973,7 +3973,7 @@
           },
           "5": {
             "BuffTooltipLocID": "Captain: +75% damage of primary weapon, -20% speed",
-            "RequiredExperience": 3000,
+            "RequiredExperience": 6000,
             "Buff": {
               "2": { "Remove": true },
               "3": { "Remove": true },
@@ -4212,7 +4212,7 @@
       },
       "WeaponAttributes": {
         "G_Battlecruiser_Weapon_G2G_MP": {
-          "BaseDamagePerRound": 70
+          "BaseDamagePerRound": 80
         },
         "G_BattleCruiser_Weapon_Missile_MP": {
           "BaseDamagePerRound": 300,
@@ -4280,6 +4280,28 @@
         "Ability_G_BattleCruiserActiveRegen": {
           "Resource1Cost": 0,
           "SharedCooldownChannel": 0
+          "ApplyStatusEffect": {
+                        "Regen_BattleCruiser_StatusEffect_Campaign": {        
+                            "Modifiers": {
+                                "0": {
+                                    "HealthOverTimeAttributes": {
+                                        "Amount": 100
+                                      
+                                    }
+                                },
+                                "1": { // disable weapon
+                                    
+                                },
+                                "2": { // disable ability
+                                    //"Remove": true
+                                },
+                                "3": { // immobilize
+                                    /*"Remove": true*/
+                                }
+
+                            }
+                        }
+                    }
         }
       },
       "ExperienceAttributes": {
