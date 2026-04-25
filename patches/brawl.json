@@ -2404,31 +2404,21 @@
       }
     },
     "K_ExplodingSkimmer_MP": {
-			"UnitAttributes": {
-				"Resource1Cost": 0,
-				"MaxHealth": 1200,
-				"ProductionTime": 2,
-				"Armour": 8,
-				"PopCapCost": 0
-			},
-			"UnitMovementAttributes": {
-				"Dynamics": {
-					"MaxSpeed": 200,
-					"BrakingTime": 0.1
-				}
-			},
-			"WeaponAttributes": {
-				"K_ExplodingSkimmer_Weapon_G2G_MP": { //apperently a weapon dummy
-					"BaseDamagePerRound": 1550
-				},
-				"K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
-					"BaseDamagePerRound": 1550,
-					"DamagePacketsPerShot": 1,
-					"AreaOfEffectRadius": 600,
-					"AreaOfEffectFalloffType": "Quadratic"
-				}
-			}
+      "UnitAttributes": {
+		"Resource1Cost": 0,
+		"ProductionTime": 2,
+		"PopCapCost": 0
+	  },
+	  "WeaponAttributes": {
+		"K_ExplodingSkimmer_Weapon_G2G_MP": { //apperently a weapon dummy
+			"BaseDamagePerRound": 700
 		},
+		"K_ExplodingSkimmerSelfDestruct_Weapon_G2G_MP": {
+		  "BaseDamagePerRound": 600,
+		  "DamagePacketsPerShot": 5
+	    }
+	  }	
+	},
     "G_HonorGuard_MP": {
       "UnitAttributes": {
         "Resource1Cost": 0,
