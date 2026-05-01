@@ -2188,13 +2188,20 @@
             "UseAsPrefix": false,
             "UnitType": "G_Baserunner_MP",
             "BuffSet": {
+			  "0": {
+                "Name": "Ability_G_BaseRunnerPassiveRegen",
+                "Attribute": "Ability_CooldownTimeSecs",
+                "Mode": "AddPercent",
+                "Value": -50
+              }
+			  /*
               "0": {
                 "Name": "G_Baserunner_Weapon_HealingAura_MP",
                 "Attribute": "UnitWeapon_BaseDamagePerRound",
                 "Mode": "AddPercent",
                 "Value": 100
               }
-              /*
+             
               "0": {
                 "Name": "G_Baserunner_Weapon_HealingAura_MP",
                 "Attribute": "UnitWeapon_NumberOfBursts",
@@ -4273,7 +4280,19 @@
           "Resource1Cost": 0
         },
         "Ability_G_BattleCruiserActiveRegen": {
-		  
+		  "ApplyStatusEffect": {
+						"Regen_BattleCruiser_StatusEffect_Campaign": {
+							"Modifiers": {
+								"0": {
+									"HealthOverTimeAttributes": {
+										"Amount": 100,
+										"MSTickDuration": 1000
+									}
+								}	
+
+							}
+						}
+					},
           "Resource1Cost": 0,
           "SharedCooldownChannel": 0
 
