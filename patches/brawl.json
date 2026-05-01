@@ -4668,7 +4668,27 @@
         }
       }
     },
-	
+	"Regen_BattleCruiser_StatusEffect_Campaign": {
+      //"CloneFrom": "Regen_BattleCruiser_StatusEffect",
+      "StatusEffectAttributes": {
+        "Lifetime": "Finite",
+        "Duration": 20,
+        "MaxStacks": 1,
+        "StackingBehaviour": 0,
+        "WeaponFireTriggerEndEvent": "None",
+        "Modifiers": {
+          "0": {
+            "ModifierType": "HealthOverTime",
+            "HealthOverTimeAttributes": {
+              "ID": "SmokeGrenade_BattleCruiser",
+              "Amount": 100,
+              "MSTickDuration": 1000,
+              "DamageType": "Heal"
+            }
+          }
+        }
+      }
+    },
 	"Regen_BattleCruiser_StatusEffect": {
       //"CloneFrom": "Regen_BattleCruiser_StatusEffect",
       "StatusEffectAttributes": {
