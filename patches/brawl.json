@@ -4229,8 +4229,9 @@
           //  "IsAutocastable": true,
           //  "AutocastEnabledOnSpawn": true
           //},
-          "SharedCooldownChannel": 0,
+          "SharedCooldownChannel": 0
           //"CooldownTimeSecs": 10,
+		  /*
           "ApplyStatusEffect": {
             "ArmorBonus_StatusEffect": {
               "Lifetime": "Finite",
@@ -4266,14 +4267,14 @@
 
 
             }
-          }
+          }*/
         },
         "Ability_G_BattleCruiser_Missile_MP": {
           "SharedCooldownChannel": 0,
           "Resource1Cost": 0
         },
         "Ability_G_BattleCruiserActiveRegen": {
-			"ApplyStatusEffect": {
+			/*"ApplyStatusEffect": {
 						"Regen_BattleCruiser_StatusEffect": {
 							"Modifiers": {
 								"0": {
@@ -4285,7 +4286,7 @@
 
 							}
 						}
-					},
+					},*/
           "Resource1Cost": 0,
           "SharedCooldownChannel": 0
 
@@ -4669,25 +4670,13 @@
     "Regen_BattleCruiser_StatusEffect_Campaign": {
       //"CloneFrom": "Regen_BattleCruiser_StatusEffect",
       "StatusEffectAttributes": {
-        "Lifetime": "Finite",
-        "Duration": 1,
-        "MaxStacks": 1,
-        "StackingBehaviour": "Replace",
-        "WeaponFireTriggerEndEvent": "None",
         "Modifiers": {
           "0": {
-            "ModifierType": "HealthOverTime",
-            "HealthOverTimeAttributes": {
-              "ID": "SmokeGrenade_BattleCruiser",
-              "Amount": 1000,
-              "MSTickDuration": 1000,
-              "DamageType": "Heal"
-            }
-          },
-          "1": { "Remove": true },
-          "2": { "Remove": true },
-          "3": { "Remove": true },
-          "4": { "Remove": true }
+									"HealthOverTimeAttributes": {
+										"Amount": 100,
+										"MSTickDuration": 1000
+									}
+								}	
         }
       }
     },
