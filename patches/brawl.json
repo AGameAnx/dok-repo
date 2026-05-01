@@ -2188,20 +2188,13 @@
             "UseAsPrefix": false,
             "UnitType": "G_Baserunner_MP",
             "BuffSet": {
-			  "0": {
-                "Name": "Ability_G_BaseRunnerPassiveRegen",
-                "Attribute": "Ability_CooldownTimeSecs",
-                "Mode": "AddPercent",
-                "Value": -50
-              }
-			  /*
               "0": {
                 "Name": "G_Baserunner_Weapon_HealingAura_MP",
                 "Attribute": "UnitWeapon_BaseDamagePerRound",
                 "Mode": "AddPercent",
                 "Value": 100
               }
-             
+              /*
               "0": {
                 "Name": "G_Baserunner_Weapon_HealingAura_MP",
                 "Attribute": "UnitWeapon_NumberOfBursts",
@@ -4238,7 +4231,41 @@
           //},
           "SharedCooldownChannel": 0,
           //"CooldownTimeSecs": 10,
- 
+          "ApplyStatusEffect": {
+            "ArmorBonus_StatusEffect": {
+              "Lifetime": "Finite",
+              "Duration": 10.00,
+              "MaxStacks": 1,
+              "StackingBehaviour": "Replace",
+              "BuffsToApplyToTarget": {
+                "0": {
+                  "BuffSet": {
+                    "0": {
+                      "Attribute": "Unit_Armour",
+                      "Mode": "AddPercent",
+                      "Value": 100
+                    },
+                    "1": {
+                      "Attribute": "UnitDynamics_MaxSpeed",
+                      "Mode": "AddPercent",
+                      "Value": 50
+                    },
+                    "2": {
+                      "Attribute": "UnitDynamics_AccelerationTime",
+                      "Mode": "AddPercent",
+                      "Value": 50
+                    },
+                    "3": {
+                      "Attribute": "UnitDynamics_MaxSpeedTurnRadius",
+                      "Mode": "AddPercent",
+                      "Value": 50
+                    }
+                  }
+                }
+              }
+
+
+            }
           }
         },
         "Ability_G_BattleCruiser_Missile_MP": {
@@ -4246,6 +4273,19 @@
           "Resource1Cost": 0
         },
         "Ability_G_BattleCruiserActiveRegen": {
+			"ApplyStatusEffect": {
+						"Regen_BattleCruiser_StatusEffect_Campaign": {
+							"Modifiers": {
+								"0": {
+									"HealthOverTimeAttributes": {
+										"Amount": 100,
+										"MSTickDuration": 1000
+									}
+								}	
+
+							}
+						}
+					},
           "Resource1Cost": 0,
           "SharedCooldownChannel": 0
 
@@ -4651,22 +4691,7 @@
         }
       }
     }
-	/*
-	Regen_BattleCruiser_StatusEffect_Campaign
-    "Regen_BattleCruiser_StatusEffect": {
-		"CloneFrom": "Regen_BattleCruiser_StatusEffect",
-		"StatusEffectAttributes": {
-		  "Modifiers": {
-			 "0": {
-				"HealthOverTimeAttributes": {
-					"Amount": 100,
-					"MSTickDuration": 1000
-				}
-			 }	
-		  }
-		}
-	}
-    
+    /*
     "Regen_BaseRunnerPassive_StatusEffect": {
       "StatusEffectAttributes": {
         "Lifetime": "Finite",
@@ -4686,28 +4711,9 @@
         }
       }
     }
-	"CloneFrom": "Regen_BattleCruiser_StatusEffect",
     */
 
 
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
