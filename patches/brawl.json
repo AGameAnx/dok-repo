@@ -4673,8 +4673,8 @@
         }
       }
     },
-    "Regen_BattleCruiser_StatusEffect": {
-      "CloneFrom": "Regen_BattleCruiser_StatusEffect",
+    "Regen_BattleCruiser_StatusEffect_Campaign": {
+      //"CloneFrom": "Regen_BattleCruiser_StatusEffect",
       "StatusEffectAttributes": {
         "Lifetime": "Finite",
         "Duration": 1,
@@ -4697,7 +4697,17 @@
           "4": { "Remove": true }
         }
       }
-    }
+    },
+    "Regen_BattleCruiser_StatusEffect": {
+		"Modifiers": {
+			"0": {
+				"HealthOverTimeAttributes": {
+					"Amount": 100,
+					"MSTickDuration": 1000
+				}
+			}	
+		}
+	}
     /*
     "Regen_BaseRunnerPassive_StatusEffect": {
       "StatusEffectAttributes": {
