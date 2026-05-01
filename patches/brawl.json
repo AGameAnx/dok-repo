@@ -4275,7 +4275,7 @@
           "Resource1Cost": 0
         },
         "Ability_G_BattleCruiserActiveRegen": {
-			"ApplyStatusEffect": {
+			/*"ApplyStatusEffect": {
 						"Regen_BattleCruiser_StatusEffect_Campaign": {
 							"Duration": 5.0,
 							"Modifiers": {
@@ -4289,7 +4289,7 @@
 
 							}
 						}
-					},
+					},*/
           "Resource1Cost": 0,
           "SharedCooldownChannel": 0
 
@@ -4670,6 +4670,26 @@
         }
       }
     },
+	"Regen_BattleCruiser_StatusEffect_Campaign": {
+      //"CloneFrom": "Regen_BattleCruiser_StatusEffect",
+      "StatusEffectAttributes": {
+        "Lifetime": "Finite",
+        "Duration": 5,
+        "MaxStacks": 1,
+        "StackingBehaviour": 0,
+        "WeaponFireTriggerEndEvent": "None",
+        "Modifiers": {
+          "9": {
+            "ModifierType": "HealthOverTime",
+            "HealthOverTimeAttributes": {
+              "ID": "Passive_Regeneration",
+              "Amount": 100,
+              "MSTickDuration": 1000
+            }
+          }
+        }
+      }
+    },
 	"Regen_BattleCruiser_StatusEffect": {
       //"CloneFrom": "Regen_BattleCruiser_StatusEffect",
       "StatusEffectAttributes": {
@@ -4696,27 +4716,7 @@
       }
     }
     /*
-	  "Regen_BattleCruiser_StatusEffect_Campaign": {
-      //"CloneFrom": "Regen_BattleCruiser_StatusEffect",
-      "StatusEffectAttributes": {
-        "Lifetime": "Finite",
-        "Duration": 5,
-        "MaxStacks": 1,
-        "StackingBehaviour": 0,
-        "WeaponFireTriggerEndEvent": "None",
-        "Modifiers": {
-          "0": {
-            "ModifierType": "HealthOverTime",
-            "HealthOverTimeAttributes": {
-              "ID": "Passive_Regeneration",
-              "Amount": 100,
-              "MSTickDuration": 1000,
-              "DamageType": "Heal"
-            }
-          }
-        }
-      }
-    },
+	  
     "Regen_BaseRunnerPassive_StatusEffect": {
       "StatusEffectAttributes": {
         "Lifetime": "Finite",
