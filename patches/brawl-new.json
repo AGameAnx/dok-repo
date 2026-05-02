@@ -1,4 +1,3 @@
-
 {
   "Meta": {
     "Name": "Brawl Cruisers",
@@ -7,6 +6,38 @@
     "LastUpdate": "2026-04-26"
   },
   "Entities": {
+	"Research_Buff_S_Railgun": {
+      "ResearchItemAttributes": {
+        "Dependencies": [],
+        "Resource1Cost": 400,
+        "Resource2Cost": 0,
+        "ResearchTime": 20,
+        "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
+        "LocalizedResearchTitleStringID": "[FFD700]MOUNTAIN",
+        "LocalizedLongDescriptionStringID": "Improve 100% fire rate of all units, But [ff2121]disable ability.\n\n[84a1e8]Not a must-options",
+        "UnitTypeBuffs": {
+          "0": {
+            "UnitClass": -1,
+            "UseAsPrefix": false,
+            "UnitType": "C_Sob_Battlecruiser_MP",
+            "BuffSet": {
+              "0": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -5000
+              },
+              "1": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": -5000
+              }
+            }
+          }
+        }
+      }
+    },
     "Tier_1_G_Sandskimmers": {
       "ResearchItemAttributes": {
         "Resource1Cost": 99999,
