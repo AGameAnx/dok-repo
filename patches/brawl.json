@@ -4275,21 +4275,16 @@
           "Resource1Cost": 0
         },
         "Ability_G_BattleCruiserActiveRegen": {
-			/*"ApplyStatusEffect": {
+                   "ApplyStatusEffect": {
 						"Regen_BattleCruiser_StatusEffect_Campaign": {
-							"Duration": 5.0,
 							"Modifiers": {
-								"8": {
-									"HealthOverTimeAttributes": {
-										"ID": "Passive_Regeneration",
-										"Amount": 100,
-										"MSTickDuration": 1000
-									}
-								}	
-
+								"3": { // immobilize
+									"Remove": true
+								}
+								
 							}
 						}
-					},*/
+					},
           "Resource1Cost": 0,
           "SharedCooldownChannel": 0
 
@@ -4670,6 +4665,7 @@
         }
       }
     },
+	  /*
 	"Regen_BattleCruiser_StatusEffect_Campaign": {
       //"CloneFrom": "Regen_BattleCruiser_StatusEffect",
       "StatusEffectAttributes": {
@@ -4690,6 +4686,7 @@
         }
       }
     },
+	  */
 	"Regen_BattleCruiser_StatusEffect": {
       //"CloneFrom": "Regen_BattleCruiser_StatusEffect",
       "StatusEffectAttributes": {
