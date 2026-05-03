@@ -422,7 +422,7 @@
         "ResearchTime": 30,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
         "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"FOREST\"",
-        "LocalizedLongDescriptionStringID": "-Add 500 sensor of all cruisers. \n[ff2121]CURSE: \n-Reduce 20 speed of cruisers.\n\n[84a1e8]Gentle as forest",
+        "LocalizedLongDescriptionStringID": "-Add 500 sensor of all cruisers. \n[ff2121]CURSE: \n-Reduce 35% speed of cruisers.\n\n[84a1e8]Gentle as forest",
         "UnitTypeBuffs": {
           "0": {
             "ClassOperator": "Or",
@@ -442,8 +442,8 @@
               },
               "2": {
                 "Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "Add",
-                "Value": -20
+                "Mode": "AddPercent",
+                "Value": -35
               }
             }
           },
@@ -464,8 +464,8 @@
               },
               "2": {
                 "Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "Add",
-                "Value": -20
+                "Mode": "AddPercent",
+                "Value": -35
               }
             }
           },
@@ -487,8 +487,8 @@
               },
               "2": {
                 "Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "Add",
-                "Value": -20
+                "Mode": "AddPercent",
+                "Value": -35
               }
             }
           },
@@ -508,9 +508,9 @@
                 "Value": 600
               },
               "2": {
-                "Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "Add",
-                "Value": -20
+				"Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "AddPercent",
+                "Value": -35
               }
             }
           }
