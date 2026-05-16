@@ -14,7 +14,7 @@
         "ResearchTime": 30,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
         "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"FOREST\"",
-        "LocalizedLongDescriptionStringID": "-Reduce 50% cooldown time of all ability.\n-Increase 50% support cruiser repair speed.\n[ff2121]CURSE: \n-Reduce 20% speed. \n\n[84a1e8]Swift as wind",
+        "LocalizedLongDescriptionStringID": "-Reduce 50% cooldown time of all ability.\n-Increase 50% support cruiser repair speed.\n[ff2121]CURSE: \n-Reduce 20% speed of cruisers.. \n\n[84a1e8]Unhurried as forest",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": -1,
@@ -224,14 +224,14 @@
               "0": {
                 "Name": "BACK",
                 "Attribute": "UnitWeapon_RateOfFire",
-                "Mode": "Add",
-                "Value": 2
+                "Mode": "AddPercent",
+                "Value": 100
               },
               "1": {
                 "Name": "FRONT",
                 "Attribute": "UnitWeapon_RateOfFire",
-                "Mode": "Add",
-                "Value": 2
+                "Mode": "AddPercent",
+                "Value": 100
               },
               "2": {
                 "Name": "Ability_G_BattleCruiser_Missile_MP",
@@ -271,11 +271,11 @@
             "UseAsPrefix": false,
             "UnitType": "C_SupportCruiser_MP",
             "BuffSet": {
-              "0": {
+			  "0": {
                 "Name": "ANTI-AIR",
-                "Attribute": "UnitWeapon_ReloadTime",
-                "Mode": "Add",
-                "Value": 0
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": -20
               },
               "1": {
                 "Name": "ANTI-AIR",
@@ -306,12 +306,6 @@
                 "Attribute": "UnitWeapon_BaseDamagePerRound",
                 "Mode": "Add",
                 "Value": -2
-              },
-			  "6": {
-                "Name": "ANTI-AIR",
-                "Attribute": "UnitWeapon_BaseDamagePerRound",
-                "Mode": "AddPercent",
-                "Value": -20
               }
             }
           },
@@ -338,7 +332,7 @@
                 "Mode": "Set",
                 "Value": 600
               },
-			  "6": {
+			  "3": {
                 "Name": "MisslePods_FL",
                 "Attribute": "UnitWeapon_BaseDamagePerRound",
                 "Mode": "AddPercent",
@@ -452,7 +446,7 @@
         "ResearchTime": 30,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
         "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"WIND\"",
-        "LocalizedLongDescriptionStringID": "-Add 500 sensor of all cruisers. \n[ff2121]CURSE: \n-Reduce 33% speed of cruisers.\n\n[84a1e8]Gentle as forest",
+        "LocalizedLongDescriptionStringID": "-Add 500 sensor of all cruisers. \n[ff2121]CURSE: \n-Reduce 33% speed of cruisers.\n\n[84a1e8]Swift as wind",
         "UnitTypeBuffs": {
           "0": {
             "ClassOperator": "Or",
