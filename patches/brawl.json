@@ -13,8 +13,8 @@
         "Resource2Cost": 0,
         "ResearchTime": 30,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
-        "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"WIND\"",
-        "LocalizedLongDescriptionStringID": "-Reduce 50% cooldown time of all ability.\n-Increase 50% support cruiser repair speed.\n[ff2121]CURSE: \n-Reduce 40% main weapon range. \n\n[84a1e8]Swift as wind",
+        "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"FOREST\"",
+        "LocalizedLongDescriptionStringID": "-Reduce 50% cooldown time of all ability.\n-Increase 50% support cruiser repair speed.\n[ff2121]CURSE: \n-Reduce 20% speed. \n\n[84a1e8]Swift as wind",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": -1,
@@ -38,6 +38,11 @@
                 "Attribute": "Ability_CooldownTimeSecs",
                 "Mode": "AddPercent",
                 "Value": -50
+              },
+			  "3": {
+				"Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "AddPercent",
+                "Value": -20
               }
               //"2": {
               //  "Attribute": "Unit_ProductionTime",
@@ -80,6 +85,11 @@
                 "Attribute": "Ability_CooldownTimeSecs",
                 "Mode": "AddPercent",
                 "Value": -50
+              },
+			  "5": {
+				"Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "AddPercent",
+                "Value": -20
               }
             }
           },
@@ -118,6 +128,11 @@
                 "Attribute": "UnitWeapon_BaseDamagePerRound",
                 "Mode": "Add",
                 "Value": 1
+              },
+			  "5": {
+				"Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "AddPercent",
+                "Value": -20
               }
             }
           },
@@ -143,6 +158,11 @@
                 "Attribute": "Ability_CooldownTimeSecs",
                 "Mode": "AddPercent",
                 "Value": -50
+              },
+			  "3": {
+				"Attribute": "UnitDynamics_MaxSpeed",
+                "Mode": "AddPercent",
+                "Value": -20
               }
             }
           }
@@ -431,7 +451,7 @@
         "Resource2Cost": 0,
         "ResearchTime": 30,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
-        "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"FOREST\"",
+        "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"WIND\"",
         "LocalizedLongDescriptionStringID": "-Add 500 sensor of all cruisers. \n[ff2121]CURSE: \n-Reduce 33% speed of cruisers.\n\n[84a1e8]Gentle as forest",
         "UnitTypeBuffs": {
           "0": {
