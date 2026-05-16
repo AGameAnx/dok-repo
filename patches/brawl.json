@@ -2,7 +2,7 @@
   "Meta": {
     "Name": "Brawl Cruisers",
     "Author": "HammerSnake",
-    "Version": "5.0",
+    "Version": "5.1",
     "LastUpdate": "2026-05-03"
   },
   "Entities": {
@@ -157,7 +157,7 @@
         "ResearchTime": 30,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
         "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"FIRE\"",
-        "LocalizedLongDescriptionStringID": "-Improve 100% fire rate of all cruisers. \n[ff2121]CURSE: \n-Set the ability recharge time to 666 seconds, \n-Reduce support cruiser repair by 100%.\n\n[84a1e8]Fierce as fire",
+        "LocalizedLongDescriptionStringID": "-Improve 100% fire rate of all cruisers. \n[ff2121]CURSE: \n-Reduce 20% main weapon damage.\n-Set the ability recharge time to 666 seconds, \n-Reduce support cruiser repair by 100%.\n\n[84a1e8]Fierce as fire",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": -1,
@@ -181,6 +181,18 @@
                 "Attribute": "Ability_CooldownTimeSecs",
                 "Mode": "Set",
                 "Value": 600
+              },
+			  "3": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": -20
+              },
+			  "4": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": -20
               }
             }
           },
@@ -218,6 +230,18 @@
                 "Attribute": "Ability_CooldownTimeSecs",
                 "Mode": "Set",
                 "Value": 600
+              },
+			  "5": {
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": -20
+              },
+			  "6": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": -20
               }
             }
           },
@@ -262,6 +286,12 @@
                 "Attribute": "UnitWeapon_BaseDamagePerRound",
                 "Mode": "Add",
                 "Value": -2
+              },
+			  "6": {
+                "Name": "ANTI-AIR",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": -20
               }
             }
           },
@@ -287,6 +317,12 @@
                 "Attribute": "Ability_CooldownTimeSecs",
                 "Mode": "Set",
                 "Value": 600
+              },
+			  "6": {
+                "Name": "MisslePods_FL",
+                "Attribute": "UnitWeapon_BaseDamagePerRound",
+                "Mode": "AddPercent",
+                "Value": -20
               }
             }
           }
@@ -301,7 +337,7 @@
         "ResearchTime": 30,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
         "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"MOUNTAIN\"",
-        "LocalizedLongDescriptionStringID": "-Add 30 armor of all cruisers. \n[ff2121]CURSE: \n-Add 200% respown time of cruisers.\n\n[84a1e8]Steady as mountain",
+        "LocalizedLongDescriptionStringID": "-Add 30 armor of all cruisers. \n[ff2121]CURSE: \n-Reduce 40% fire rate of cruisers.\n\n[84a1e8]Steady as mountain",
         "UnitTypeBuffs": {
           "0": {
             "ClassOperator": "Or",
