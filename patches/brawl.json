@@ -351,7 +351,7 @@
         "ResearchTime": 30,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
         "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"MOUNTAIN\"",
-        "LocalizedLongDescriptionStringID": "-Add 30 armor of all cruisers. \n[ff2121]CURSE: \n-Reduce 40% fire rate of cruisers.\n\n[84a1e8]Steady as mountain",
+        "LocalizedLongDescriptionStringID": "-Add 30 armor of all cruisers. \n[ff2121]CURSE: \n-Reduce 33% fire rate of cruisers.\n\n[84a1e8]Steady as mountain",
         "UnitTypeBuffs": {
           "0": {
             "ClassOperator": "Or",
@@ -365,9 +365,10 @@
                 "Value": 30
               },
               "1": {
-                "Attribute": "Unit_ProductionTime",
-                "Mode": "AddPercent",
-                "Value": 200
+                "Name": "DEFAULT",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": 3400
               }
             }
           },
@@ -382,9 +383,16 @@
                 "Value": 30
               },
               "1": {
-                "Attribute": "Unit_ProductionTime",
-                "Mode": "AddPercent",
-                "Value": 200
+                "Name": "BACK",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": 1820
+              },
+              "2": {
+                "Name": "FRONT",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": 1820
               }
             }
           },
@@ -400,9 +408,9 @@
                 "Value": 30
               },
               "1": {
-                "Attribute": "Unit_ProductionTime",
-                "Mode": "AddPercent",
-                "Value": 200
+                "Attribute": "UnitWeapon_RateOfFire",
+                "Mode": "Add",
+                "Value": -8
               }
             }
           },
@@ -417,9 +425,16 @@
                 "Value": 30
               },
               "1": {
-                "Attribute": "Unit_ProductionTime",
-                "Mode": "AddPercent",
-                "Value": 200
+                "Name": "MisslePods_Front",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": 2280
+              },
+              "2": {
+                "Name": "MisslePods_Back",
+                "Attribute": "UnitWeapon_ReloadTime",
+                "Mode": "Add",
+                "Value": 2280
               }
             }
           },
@@ -446,7 +461,7 @@
         "ResearchTime": 30,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
         "LocalizedResearchTitleStringID": "[FFD700]TACTIC \"WIND\"",
-        "LocalizedLongDescriptionStringID": "-Add 500 sensor of all cruisers. \n[ff2121]CURSE: \n-Reduce 33% speed of cruisers.\n\n[84a1e8]Swift as wind",
+        "LocalizedLongDescriptionStringID": "-Add 20 speed of cruisers. \n[ff2121]CURSE: \n-Reduce 40% hull of cruisers.\n\n[84a1e8]Swift as wind",
         "UnitTypeBuffs": {
           "0": {
             "ClassOperator": "Or",
@@ -455,19 +470,14 @@
             "UnitType": "K_HonorGuard_MP",
             "BuffSet": {
               "0": {
-                "Attribute": "Unit_SensorRadius",
-                "Mode": "Add",
-                "Value": 500
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "AddPercent",
+                "Value": -40%
               },
               "1": {
-                "Attribute": "Unit_ContactRadius",
-                "Mode": "Add",
-                "Value": 600
-              },
-              "2": {
                 "Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "AddPercent",
-                "Value": -33
+                "Mode": "Add",
+                "Value": 20
               }
             }
           },
@@ -477,19 +487,14 @@
             "UnitType": "G_Battlecruiser_MP",
             "BuffSet": {
               "0": {
-                "Attribute": "Unit_SensorRadius",
-                "Mode": "Add",
-                "Value": 500
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "AddPercent",
+                "Value": -40%
               },
               "1": {
-                "Attribute": "Unit_ContactRadius",
-                "Mode": "Add",
-                "Value": 600
-              },
-              "2": {
                 "Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "AddPercent",
-                "Value": -33
+                "Mode": "Add",
+                "Value": 20
               }
             }
           },
@@ -500,19 +505,14 @@
             "UnitType": "K_SupportCruiser_MP",
             "BuffSet": {
               "0": {
-                "Attribute": "Unit_SensorRadius",
-                "Mode": "Add",
-                "Value": 500
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "AddPercent",
+                "Value": -40%
               },
               "1": {
-                "Attribute": "Unit_ContactRadius",
-                "Mode": "Add",
-                "Value": 600
-              },
-              "2": {
                 "Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "AddPercent",
-                "Value": -33
+                "Mode": "Add",
+                "Value": 20
               }
             }
           },
@@ -522,19 +522,14 @@
             "UnitType": "K_ArtilleryCruiser_MP",
             "BuffSet": {
               "0": {
-                "Attribute": "Unit_SensorRadius",
-                "Mode": "Add",
-                "Value": 500
+                "Attribute": "Unit_MaxHealth",
+                "Mode": "AddPercent",
+                "Value": -40%
               },
               "1": {
-                "Attribute": "Unit_ContactRadius",
+                "Attribute": "UnitDynamics_MaxSpeed",
                 "Mode": "Add",
-                "Value": 600
-              },
-              "2": {
-				"Attribute": "UnitDynamics_MaxSpeed",
-                "Mode": "AddPercent",
-                "Value": -33
+                "Value": 20
               }
             }
           }
