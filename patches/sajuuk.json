@@ -4,7 +4,7 @@
 		"Author": "xxx",
 		"Version": "0.1",
 		"LastUpdate": "2026-07-26",
-		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/sajuuk"
+		"Link": "https://github.com/AGameAnx/dok-repo/blob/master/patches/sajuuk.json"
 	},
 	/*"Global": {
 		"UnitAttributes": {
@@ -353,7 +353,7 @@
 		},
 		"Research_Buff_Power_5": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 1200,
+				"Resource1Cost": 1250,
 				"Resource2Cost": 650,
 				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
@@ -381,7 +381,7 @@
 		},
 		"Research_S_Buff_Power_5": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 1200,
+				"Resource1Cost": 1250,
 				"Resource2Cost": 550,
 				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 4",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
@@ -438,7 +438,7 @@
 		},
 		"Research_Buff_Power_6": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 1300,
+				"Resource1Cost": 1600,
 				"Resource2Cost": 700,
 				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
@@ -458,6 +458,11 @@
 								"Attribute": "UnitDynamics_MaxSpeed",
 								"Mode": "Add",
 								"Value": 1
+							},
+							"2": {
+								"Attribute": "MaxPowerPoints",
+								"Mode": "Add",
+								"Value": 6
 							}
 						}
 					}
@@ -470,7 +475,7 @@
 				"Resource2Cost": 700,
 				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 5",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"LocalizedLongDescriptionStringID": "Adds 150 hitpoints, 1 extra max speed and 6 extra power to the carrier reserves",
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -523,11 +528,11 @@
 		},
 		"Research_Buff_Power_7": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 1400,
+				"Resource1Cost": 2000,
 				"Resource2Cost": 850,
 				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
-				"LocalizedLongDescriptionStringID": "Adds 5400 hitpoints, 1 extra max speed and 5 extra power to the carrier reserves",
+				"LocalizedLongDescriptionStringID": "Adds 5400 hitpoints, 1 extra max speed and 7 extra power to the carrier reserves",
 				"UnitTypeBuffs": {
 					"0": {
 						"UnitClass": "Carrier",
@@ -537,12 +542,17 @@
 							"0": {
 								"Attribute": "Unit_MaxHealth",
 								"Mode": "Add",
-								"Value": 150
+								"Value": 5400
 							},
 							"1": {
 								"Attribute": "UnitDynamics_MaxSpeed",
 								"Mode": "Add",
 								"Value": 1
+							},
+							"2": {
+								"Attribute": "MaxPowerPoints",
+								"Mode": "Add",
+								"Value": 7
 							}
 						}
 					}
@@ -551,7 +561,7 @@
 		},
 		"Research_S_Buff_Power_7": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 1400,
+				"Resource1Cost": 1600,
 				"Resource2Cost": 850,
 				"LocalizedResearchTitleStringID": "CARRIER SYSTEMS 6",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier combat capability",
@@ -571,7 +581,11 @@
 								"Attribute": "UnitDynamics_MaxSpeed",
 								"Mode": "Add",
 								"Value": 1
-							}
+							},
+							"2": {
+								"Attribute": "MaxPowerPoints",
+								"Mode": "Add",
+								"Value": 7
 						}
 					}
 				}
@@ -581,11 +595,11 @@
 		// Carrier mobility
 		"Research_Buff_Power_2": {
 			"ResearchItemAttributes": {
-				"Resource1Cost": 550,
+				"Resource1Cost": 600,
 				"Resource2Cost": 250,
 				"LocalizedResearchTitleStringID": "CARRIER MOBILITY",
 				"LocalizedShortDescriptionStringID": "Upgrade carrier mobility",
-				"LocalizedLongDescriptionStringID": "Adds 13 extra max speed and 2 extra power to the carrier reserves",
+				"LocalizedLongDescriptionStringID": "Adds 11 extra max speed and 2 extra power to the carrier reserves",
 				"Dependencies": [],
 				"UnitTypeBuffs": {
 					"0": {
@@ -639,10 +653,10 @@
 			"UnitMovementAttributes": {
 				"Dynamics": {
 					"MaxSpeed": 33,
-					"MaxSpeedTurnRadius": 35,
+					"MaxSpeedTurnRadius": 150,
 					"BrakingTime": 2,
 					"AccelerationTime": 2,
-					"MaxEaseIntoTurnTime": 0.50
+					"MaxEaseIntoTurnTime": 1.0
 				}
 			},
 			"DetectableAttributes": {
@@ -677,9 +691,9 @@
 			},
 			"WeaponAttributes": {
 				"C_Carrier_Weapon_G2All_MP": {
-					"BaseDamagePerRound": 30,
+					"BaseDamagePerRound": 25,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 4,
+					"RateOfFire": 5,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 60 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -715,12 +729,12 @@
 					}
 				},
 				"C_Carrier_Weapon_G2All_Dummy_MP": {
-					"BaseDamagePerRound": 30
+					"BaseDamagePerRound": 25
 				},
 				"C_Carrier_Weapon_G2All_PenetrationShots_MP": {
-					"BaseDamagePerRound": 70,
+					"BaseDamagePerRound": 35,
 					"ExcludeFromHeightAdvantage": true,
-					"RateOfFire": 4,
+					"RateOfFire": 6,
 					"TargetStyle": "Flak",
 					"RangeAttributesShort": { "Accuracy": 60 },
 					"RangeAttributesMedium": { "Accuracy": 45 },
@@ -762,4 +776,497 @@
 					"WindUpTimeMS": 500,
 					"RangeAttributesLong": { "Distance": 700 },
 					"ExcludeFromHeightAdvantage": true
+				},
+				"C_Carrier_Weapon_CruiseMissile_MP": {
+					"BaseDamagePerRound": 750,
+					"AreaOfEffectRadius": 750,
+					"ExcludeFromHeightAdvantage": true,
+					"Modifiers": {
+						"1": {
+							"TargetClass": "Carrier, Large, XLarge",
+							"ClassOperator": "Or",
+							"Modifier": "DamagePercent",
+							"Amount": 500
+						}
+					},
+					"RangeAttributesLong": {
+						"Distance": 5000
+					}
+				},
+				"C_Carrier_Weapon_Repair_MP": {
+					"RangeAttributesShort": {
+						"Distance": 200
+					}
+				}
+			},
+			"PowerShuntAttributes": {
+				"ReservePowerPool": {
+					"HasUnlimitedCapacity": true
+				},
+				"PowerSystems": {
+
+					"1": { // Weapon Systems
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Missiles Disabled. Rate of Fire: 2"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Missiles Enabled. 20% PD ROF Bonus",
+								"StatusEffectsToApply": {
+									"C_Weapons_1_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 20 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 20 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 20 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 20 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "40% PD ROF Bonus, 2 Missiles",
+								"StatusEffectsToApply": {
+									"C_Weapons_2_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 40 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 40 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 40 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 40 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "60% PD ROF Bonus, 3 Missiles",
+								"StatusEffectsToApply": {
+									"C_Weapons_3_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 60 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 60 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 60 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 60 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "80% PD ROF Bonus, 4 Missiles",
+								"StatusEffectsToApply": {
+									"C_Weapons_4_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 80 }, // TURRET_BR
+													"2": { "Mode": "AddPercent", "Value": 80 }, // TURRET_BL
+													"3": { "Mode": "AddPercent", "Value": 80 }, // TURRET_FL
+													"4": { "Mode": "AddPercent", "Value": 80 }  // TURRET_FR
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Armor Piercing Rounds: 140% Damage, 100% PD ROF Bonus, 4 Missiles",
+								"StatusEffectsToApply": {
+									"C_Weapons_5_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"1": { "Mode": "AddPercent", "Value": 100 }, // TURRET_BR_APBULLETS
+													"2": { "Mode": "AddPercent", "Value": 100 }, // TURRET_BL_APBULLETS
+													"3": { "Mode": "AddPercent", "Value": 100 }, // TURRET_FL_APBULLETS
+													"4": { "Mode": "AddPercent", "Value": 100 }, // TURRET_FR_APBULLETS
+													"5": { "Value": 2 } // Fire rate display
+												}
+											}
+										}
+									},
+									
+									"C_Weapons_MoreDamage_StatusEffect": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 40 }
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+
+					"2": { // Reactive Armor
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Armor: 20"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Armor: 25",
+								"StatusEffectsToApply": {
+									"Armour_2_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 5 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "Armor: 30",
+								"StatusEffectsToApply": {
+									"Armour_3_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 10 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Armor: 35",
+								"StatusEffectsToApply": {
+									"Armour_4_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 15 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "Armor: 40",
+								"StatusEffectsToApply": {
+									"Armour_5_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 20 }
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"StatusEffectsToApply": {
+									"Armour_6_StatusEffect_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 20 }
+                                                 } 
+                                             } 
+                                        },
+                                        "Modifiers": {
+                                            "0": {
+                                                "HealthOverTimeAttributes": {
+                                                    "Amount": 5,
+                                                    "MSTickDuration": 20
+									            }
+								            }
+							            }
+									}
+						        }
+							}
+						}	
+					},
+
+					"3": { // Range Systems
+						"PowerLevels": {
+
+							"0": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 800m"
+							},
+
+							"1": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 900m",
+								"StatusEffectsToApply": {
+									"Range_1_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 900 }, // TURRET_BR, Set
+													"1": { "Value": 900 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 900 }, // TURRET_BL, Set
+													"7": { "Value": 900 }, // TURRET_BL_APBULLETS, Set
+													"12": { "Value": 900 }, // TURRET_FL, Set
+													"13": { "Value": 900 }, // TURRET_FL_APBULLETS, Set
+													"18": { "Value": 900 }, // TURRET_FR, Set
+													"19": { "Value": 900 }, // TURRET_FR_APBULLETS, Set
+													"24": { "Value": 100 }, // ANTI-AIR, Add
+													"25": { "Value": 100 } // MAIN_MISSILES, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"2": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1050m",
+								"StatusEffectsToApply": {
+									"Range_2_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1050 }, // TURRET_BR, Set
+													"1": { "Value": 1050 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 1050 }, // TURRET_BL, Set
+													"7": { "Value": 1050 }, // TURRET_BL_APBULLETS, Set
+													"12": { "Value": 1050 }, // TURRET_FL, Set
+													"13": { "Value": 1050 }, // TURRET_FL_APBULLETS, Set
+													"18": { "Value": 1050 }, // TURRET_FR, Set
+													"19": { "Value": 1050 }, // TURRET_FR_APBULLETS, Set
+													"24": { "Value": 250 }, // ANTI-AIR, Add
+													"25": { "Value": 250 } // MAIN_MISSILES, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"3": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1250m",
+								"StatusEffectsToApply": {
+									"Range_3_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1250 }, // TURRET_BR, Set
+													"1": { "Value": 1250 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 1250 }, // TURRET_BL, Set
+													"7": { "Value": 1250 }, // TURRET_BL_APBULLETS, Set
+													"12": { "Value": 1250 }, // TURRET_FL, Set
+													"13": { "Value": 1250 }, // TURRET_FL_APBULLETS, Set
+													"18": { "Value": 1250 }, // TURRET_FR, Set
+													"19": { "Value": 1250 }, // TURRET_FR_APBULLETS, Set
+													"24": { "Value": 450 }, // ANTI-AIR, Add
+													"25": { "Value": 450 }, // MAIN_MISSILES, Add
+													"26": { "Value": 550 }, // ContactRadius, Add
+													"27": { "Value": 550 } // SensorRadius, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"4": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1450m",
+								"StatusEffectsToApply": {
+									"Range_4_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1450 }, // TURRET_BR, Set
+													"1": { "Value": 1450 }, // TURRET_BR_APBULLETS, Set
+													"6": { "Value": 1450 }, // TURRET_FL, Set
+													"7": { "Value": 1450 }, // TURRET_FL_APBULLETS, Set
+													"12": { "Value": 1450 }, // TURRET_FR, Set
+													"13": { "Value": 1450 }, // TURRET_FR_APBULLETS, Set
+													"18": { "Value": 1450 }, // TURRET_BR, Set
+													"19": { "Value": 1450 }, // TURRET_BR_APBULLETS, Set
+													"24": { "Value": 650 }, // ANTI-AIR, Add
+													"25": { "Value": 650 }, // MAIN_MISSILES, Add
+													"26": { "Value": 800 }, // ContactRadius, Add
+													"27": { "Value": 800 } // SensorRadius, Add
+												}
+											}
+										}
+									}
+								}
+							},
+
+							"5": {
+								"LocalizedShortDescriptionStringID": "Turret / Missile Range: 1650m",
+								"StatusEffectsToApply": {
+									"Range_5_StatusEffect_Gaalsi_MP": {
+										"BuffsToApplyToTarget": {
+											"0": {
+												"BuffSet": {
+													"0": { "Value": 1650 }, // TURRET_FL, Set
+													"1": { "Value": 1650 }, // TURRET_FL_APBULLETS, Set
+													"6": { "Value": 1650 }, // TURRET_FR, Set
+													"7": { "Value": 1650 }, // TURRET_FR_APBULLETS, Set
+													"12": { "Value": 1650 }, // TURRET_BL, Set
+													"13": { "Value": 1650 }, // TURRET_BL_APBULLETS, Set
+													"18": { "Value": 1650 }, // TURRET_BR, Set
+													"19": { "Value": 1650 }, // TURRET_BR_APBULLETS, Set
+													"24": { "Value": 850 }, // ANTI-AIR, Add
+													"25": { "Value": 850 }, // MAIN_MISSILES, Add
+													"26": { "Value": 1050 }, // ContactRadius, Add
+													"27": { "Value": 1050 } // SensorRadius, Add
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+				   },                    
+				   
+				   "0": { // PowerLevels
+                            "1": {
+                                "LocalizedShortDescriptionStringID": "Repair Beams Online, 10 repair and 200 range",
+                                "StatusEffectsToApply": {
+                                    "RepairShunt_1_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "2": {
+                                                        "Value": 10
+                                                    },
+                                                    "5": {
+                                                        "Value": 10
+                                                    },
+                                                    "6": {
+                                                        "Attribute": 33554432,
+                                                        "Mode": "Set",
+                                                        "Value": 200
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+
+                            "2": {
+                                "LocalizedShortDescriptionStringID": "Repair Beams Online, 30 repair and 400 range",
+                                "StatusEffectsToApply": {
+                                    "RepairShunt_2_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "2": {
+                                                        "Value": 30
+                                                    },
+                                                    "5": {
+                                                        "Value": 30
+                                                    },
+                                                    "6": {
+                                                        "Attribute": 33554432,
+                                                        "Mode": "Set",
+                                                        "Value": 400
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+					
+                            "3": {
+                                "LocalizedShortDescriptionStringID": "Repair Beams Online, 60 repair and 600 range",
+                                "StatusEffectsToApply": {
+                                    "RepairShunt_3_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "2": {
+                                                        "Value": 60
+                                                    },
+                                                    "5": {
+                                                        "Value": 60
+                                                    },
+                                                    "6": {
+                                                        "Attribute": 33554432,
+                                                        "Mode": "Set",
+                                                        "Value": 600
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+
+                            "4": {
+                                "LocalizedShortDescriptionStringID": "Repair Beams Online, 100 repair and 800 range",
+                                "StatusEffectsToApply": {
+                                    "RepairShunt_4_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "2": {
+                                                        "Value": 100
+                                                    },
+                                                    "5": {
+                                                        "Value": 100
+                                                    },
+                                                    "6": {
+                                                        "Attribute": 33554432,
+                                                        "Mode": "Set",
+                                                        "Value": 800
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+
+                            "5": {
+                                "LocalizedShortDescriptionStringID": "Repair Beams Online, 150 repair and 1000 range",
+                                "StatusEffectsToApply": {
+                                    "RepairShunt_5_StatusEffect": {
+                                        "BuffsToApplyToTarget": {
+                                            "0": {
+                                                "BuffSet": {
+                                                    "2": {
+                                                        "Value": 150
+                                                    },
+                                                    "5": {
+                                                        "Value": 150
+                                                    },
+                                                    "6": {
+                                                        "Attribute": 33554432,
+                                                        "Mode": "Set",
+                                                        "Value": 1000
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+
 
