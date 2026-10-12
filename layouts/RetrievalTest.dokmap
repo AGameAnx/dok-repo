@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layout name="RetrievalTest" description="Minimal layout that forces the ExtractionZoneViewController to be created – used to test the EZ‑busy‑wait guard.">
+  <!-- Objects that the map spawns at start. Only the ExtractionZone is required for the guard. -->
+  <Objects>
+    <!-- The ExtractionZoneViewController is the component that the original game busy‑waits for at frame 10. -->
+    <Object name="ExtractionZone" type="ExtractionZoneViewController" />
+  </Objects>
+
+  <!-- (Optional) You can add a plain ground tile so the map isn’t completely empty.
+       This is not required for the guard, but makes the map look a little nicer in‑game. -->
+  <Terrain>
+    <Tile id="0" texture="terrain/grass_diffuse.tga" />
+    <Layer>
+      <Row>0 0 0 0 0 0 0 0 0 0</Row>
+      <Row>0 0 0 0 0 0 0 0 0 0</Row>
+      <Row>0 0 0 0 0 0 0 0 0 0</Row>
+      <Row>0 0 0 0 0 0 0 0 0 0</Row>
+      <Row>0 0 0 0 0 0 0 0 0 0</Row>
+      <Row>0 0 0 0 0 0 0 0 0 0</Row>
+      <Row>0 0 0 0 0 0 0 0 0 0</Row>
+      <Row>0 0 0 0 0 0 0 0 0 0</Row>
+      <Row>0 0 0 0 0 0 0 0 0 0</Row>
+      <Row>0 0 0 0 0 0 0 0 0 0</Row>
+    </Layer>
+  </Terrain>
+
+  <!-- (Optional) Light & camera settings – keep defaults. -->
+</Layout>
