@@ -878,7 +878,7 @@
         "ResearchTime": 10,
         "IconSpriteName": "Icon-Command-Production-C_SupportCruiser",
         "LocalizedResearchTitleStringID": "CRUISER TATICAL UPGRADE",
-        "LocalizedLongDescriptionStringID": "Reduce abilitis cooldown and improve primary weapon damage of all Cruisers.\n\n[84a1e8]Reduce 25% cooldown of abilitis (add supportCruiser repair gun rate by 30%) and increase damage by 20%",
+        "LocalizedLongDescriptionStringID": "Improve sensor and primary weapon damage of all Cruisers.\n\n[84a1e8]Add 300 sensor to all cruisers (add supportCruiser repair gun rate by 30%) and increase damage by 20%",
         "UnitTypeBuffs": {
           "0": {
             "UnitClass": -1,
@@ -898,10 +898,14 @@
                 "Value": 20
               },
               "2": {
-                "Name": "Ability_C_SmokeGrenade_BattleCruiser",
-                "Attribute": "Ability_CooldownTimeSecs",
-                "Mode": "AddPercent",
-                "Value": -25
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
+              },
+              "3": {
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
               }
             }
           },
@@ -923,22 +927,14 @@
                 "Value": 20
               },
               "2": {
-                "Name": "Ability_G_BattleCruiser_Missile_MP",
-                "Attribute": "Ability_CooldownTimeSecs",
-                "Mode": "AddPercent",
-                "Value": -25
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
               },
               "3": {
-                "Name": "Ability_G_BattleCruiser_ArmorBonus_MP",
-                "Attribute": "Ability_CooldownTimeSecs",
-                "Mode": "AddPercent",
-                "Value": -25
-              },
-              "4": {
-                "Name": "Ability_G_BattleCruiserActiveRegen",
-                "Attribute": "Ability_CooldownTimeSecs",
-                "Mode": "AddPercent",
-                "Value": -25
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
               }
             }
           },
@@ -953,29 +949,15 @@
                 "Mode": "AddPercent",
                 "Value": 20
               },
-              "1": {
-                "Name": "REPAIR",
-                "Attribute": "UnitWeapon_RateOfFire",
-                "Mode": "AddPercent",
-                "Value": 30
+			  "1": {
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
               },
               "2": {
-                "Name": "REPAIR_FL",
-                "Attribute": "UnitWeapon_RateOfFire",
-                "Mode": "AddPercent",
-                "Value": 30
-              },
-              "3": {
-                "Name": "REPAIR_BL",
-                "Attribute": "UnitWeapon_RateOfFire",
-                "Mode": "AddPercent",
-                "Value": 30
-              },
-              "4": {
-                "Name": "REPAIR_BR",
-                "Attribute": "UnitWeapon_RateOfFire",
-                "Mode": "AddPercent",
-                "Value": 30
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
               }
             }
           },
@@ -991,16 +973,14 @@
                 "Value": 20
               },
               "1": {
-                "Name": "Ability_C_ArtilleryBarrage",
-                "Attribute": "Ability_CooldownTimeSecs",
-                "Mode": "AddPercent",
-                "Value": -25
+                "Attribute": "Unit_SensorRadius",
+                "Mode": "Add",
+                "Value": 300
               },
               "2": {
-                "Name": "Ability_C_ArtilleryBarrage_Precise",
-                "Attribute": "Ability_CooldownTimeSecs",
-                "Mode": "AddPercent",
-                "Value": -25
+                "Attribute": "Unit_ContactRadius",
+                "Mode": "Add",
+                "Value": 300
               }
             }
           }
